@@ -1,11 +1,53 @@
 grammar org.xtext.grl.tgrl.TGRL with org.eclipse.xtext.common.Terminals
 
+import "http:///urncore.ecore" as urncoreModel
+import "http:///urn.ecore" as urnModel
+import "http:///asd.ecore" as asdModel
 import "http:///grl.ecore" as grlModel
-
-generate tGRL "http://www.xtext.org/grl/tgrl/TGRL"
-
-Model:
-	greetings+= Greeting*;
+URNspec returns urnModel::URNspec: 
+	'urnspec' name= ID '{'
+		urndef=URNdefinition
+		asdspec=ASDspec
+		grlspec=GRLspec
+	'}'
 	
-Greeting:
-	'Hello' name=ID '!';
+;
+URNdefinition returns urncoreModel::URNdefinition: 
+	'URNdefinition' 
+;
+ASDspec returns asdModel::ASDspec: 
+	'asdspec' 
+;
+
+
+GRLspec returns grlModel::GRLspec: 
+	links+=ElementLink*
+	actors+=Actor*
+	intElements+=IntentionalElement*
+	(impactModel=ImpactModel)?	
+;
+
+ElementLink returns grlModel::ElementLink: 
+	'elementtLink' name= ID '{'
+	
+	'}'
+;
+Actor returns grlModel::Actor: 
+	'actor' name= ID '{'
+		
+	'}'
+;
+IntentionalElement returns grlModel::IntentionalElement: 
+	'intentionalElement' name = ID '{'
+	
+	'}'
+;
+ImpactModel returns grlModel::ImpactModel: 
+	'impactModel' name= ID '{'
+	
+	'}'
+;
+
+
+
+

@@ -24,9 +24,6 @@ Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.xtext.grl.tgrl,
  org.xtext.grl.tgrl.services,
- org.xtext.grl.tgrl.tGRL,
- org.xtext.grl.tgrl.tGRL.impl,
- org.xtext.grl.tgrl.tGRL.util,
  org.xtext.grl.tgrl.serializer,
  org.xtext.grl.tgrl.parser.antlr,
  org.xtext.grl.tgrl.parser.antlr.internal,

@@ -3,22 +3,22 @@ package org.xtext.grl.tgrl.serializer;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import grl.Actor;
+import grl.ElementLink;
+import grl.GRLspec;
 import grl.GrlPackage;
+import grl.ImpactModel;
+import grl.IntentionalElement;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
-import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
 import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
-import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEObjectProvider;
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
-import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.grl.tgrl.services.TGRLGrammarAccess;
-import org.xtext.grl.tgrl.tGRL.Greeting;
-import org.xtext.grl.tgrl.tGRL.Model;
-import org.xtext.grl.tgrl.tGRL.TGRLPackage;
+import urn.URNspec;
+import urn.UrnPackage;
 
 @SuppressWarnings("all")
 public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -34,17 +34,35 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			}
-		else if(semanticObject.eClass().getEPackage() == TGRLPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
-			case TGRLPackage.GREETING:
-				if(context == grammarAccess.getGreetingRule()) {
-					sequence_Greeting(context, (Greeting) semanticObject); 
+			case GrlPackage.ELEMENT_LINK:
+				if(context == grammarAccess.getElementLinkRule()) {
+					sequence_ElementLink(context, (ElementLink) semanticObject); 
 					return; 
 				}
 				else break;
-			case TGRLPackage.MODEL:
-				if(context == grammarAccess.getModelRule()) {
-					sequence_Model(context, (Model) semanticObject); 
+			case GrlPackage.GR_LSPEC:
+				if(context == grammarAccess.getGRLspecRule()) {
+					sequence_GRLspec(context, (GRLspec) semanticObject); 
+					return; 
+				}
+				else break;
+			case GrlPackage.IMPACT_MODEL:
+				if(context == grammarAccess.getImpactModelRule()) {
+					sequence_ImpactModel(context, (ImpactModel) semanticObject); 
+					return; 
+				}
+				else break;
+			case GrlPackage.INTENTIONAL_ELEMENT:
+				if(context == grammarAccess.getIntentionalElementRule()) {
+					sequence_IntentionalElement(context, (IntentionalElement) semanticObject); 
+					return; 
+				}
+				else break;
+			}
+		else if(semanticObject.eClass().getEPackage() == UrnPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case UrnPackage.UR_NSPEC:
+				if(context == grammarAccess.getURNspecRule()) {
+					sequence_URNspec(context, (URNspec) semanticObject); 
 					return; 
 				}
 				else break;
@@ -65,23 +83,43 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     name=ID
 	 */
-	protected void sequence_Greeting(EObject context, Greeting semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, TGRLPackage.Literals.GREETING__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TGRLPackage.Literals.GREETING__NAME));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.finish();
+	protected void sequence_ElementLink(EObject context, ElementLink semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (greetings+=Greeting | greetings+=Actor)*
+	 *     (links+=ElementLink* actors+=Actor* intElements+=IntentionalElement* impactModel=ImpactModel?)
 	 */
-	protected void sequence_Model(EObject context, Model semanticObject) {
+	protected void sequence_GRLspec(EObject context, GRLspec semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_ImpactModel(EObject context, ImpactModel semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_IntentionalElement(EObject context, IntentionalElement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID urndef=URNdefinition asdspec=ASDspec grlspec=GRLspec)
+	 */
+	protected void sequence_URNspec(EObject context, URNspec semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 }

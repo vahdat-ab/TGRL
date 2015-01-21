@@ -25,7 +25,7 @@ public class TGRLParser extends org.eclipse.xtext.parser.antlr.AbstractAntlrPars
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Model";
+		return "URNspec";
 	}
 	
 	public TGRLGrammarAccess getGrammarAccess() {

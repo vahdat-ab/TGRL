@@ -18,47 +18,30 @@ import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
-	public class ModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
-		private final Assignment cGreetingsAssignment = (Assignment)rule.eContents().get(1);
-		private final Alternatives cGreetingsAlternatives_0 = (Alternatives)cGreetingsAssignment.eContents().get(0);
-		private final RuleCall cGreetingsGreetingParserRuleCall_0_0 = (RuleCall)cGreetingsAlternatives_0.eContents().get(0);
-		private final RuleCall cGreetingsActorParserRuleCall_0_1 = (RuleCall)cGreetingsAlternatives_0.eContents().get(1);
-		
-		//Model:
-		//	greetings+=(Greeting | Actor)*;
-		public ParserRule getRule() { return rule; }
-
-		//greetings+=(Greeting | Actor)*
-		public Assignment getGreetingsAssignment() { return cGreetingsAssignment; }
-
-		//Greeting | Actor
-		public Alternatives getGreetingsAlternatives_0() { return cGreetingsAlternatives_0; }
-
-		//Greeting
-		public RuleCall getGreetingsGreetingParserRuleCall_0_0() { return cGreetingsGreetingParserRuleCall_0_0; }
-
-		//Actor
-		public RuleCall getGreetingsActorParserRuleCall_0_1() { return cGreetingsActorParserRuleCall_0_1; }
-	}
-
-	public class GreetingElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Greeting");
+	public class URNspecElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "URNspec");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cHelloKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cUrnspecKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cExclamationMarkKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cUrndefAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cUrndefURNdefinitionParserRuleCall_3_0 = (RuleCall)cUrndefAssignment_3.eContents().get(0);
+		private final Assignment cAsdspecAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cAsdspecASDspecParserRuleCall_4_0 = (RuleCall)cAsdspecAssignment_4.eContents().get(0);
+		private final Assignment cGrlspecAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cGrlspecGRLspecParserRuleCall_5_0 = (RuleCall)cGrlspecAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		//Greeting:
-		//	"Hello" name=ID "!";
+		//URNspec returns urnModel::URNspec:
+		//	"urnspec" name=ID "{" urndef=URNdefinition asdspec=ASDspec grlspec=GRLspec "}";
 		public ParserRule getRule() { return rule; }
 
-		//"Hello" name=ID "!"
+		//"urnspec" name=ID "{" urndef=URNdefinition asdspec=ASDspec grlspec=GRLspec "}"
 		public Group getGroup() { return cGroup; }
 
-		//"Hello"
-		public Keyword getHelloKeyword_0() { return cHelloKeyword_0; }
+		//"urnspec"
+		public Keyword getUrnspecKeyword_0() { return cUrnspecKeyword_0; }
 
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -66,8 +49,129 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"!"
-		public Keyword getExclamationMarkKeyword_2() { return cExclamationMarkKeyword_2; }
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//urndef=URNdefinition
+		public Assignment getUrndefAssignment_3() { return cUrndefAssignment_3; }
+
+		//URNdefinition
+		public RuleCall getUrndefURNdefinitionParserRuleCall_3_0() { return cUrndefURNdefinitionParserRuleCall_3_0; }
+
+		//asdspec=ASDspec
+		public Assignment getAsdspecAssignment_4() { return cAsdspecAssignment_4; }
+
+		//ASDspec
+		public RuleCall getAsdspecASDspecParserRuleCall_4_0() { return cAsdspecASDspecParserRuleCall_4_0; }
+
+		//grlspec=GRLspec
+		public Assignment getGrlspecAssignment_5() { return cGrlspecAssignment_5; }
+
+		//GRLspec
+		public RuleCall getGrlspecGRLspecParserRuleCall_5_0() { return cGrlspecGRLspecParserRuleCall_5_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+	}
+
+	public class URNdefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "URNdefinition");
+		private final Keyword cURNdefinitionKeyword = (Keyword)rule.eContents().get(1);
+		
+		//URNdefinition returns urncoreModel::URNdefinition:
+		//	"URNdefinition";
+		public ParserRule getRule() { return rule; }
+
+		//"URNdefinition"
+		public Keyword getURNdefinitionKeyword() { return cURNdefinitionKeyword; }
+	}
+
+	public class ASDspecElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ASDspec");
+		private final Keyword cAsdspecKeyword = (Keyword)rule.eContents().get(1);
+		
+		//ASDspec returns asdModel::ASDspec:
+		//	"asdspec";
+		public ParserRule getRule() { return rule; }
+
+		//"asdspec"
+		public Keyword getAsdspecKeyword() { return cAsdspecKeyword; }
+	}
+
+	public class GRLspecElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "GRLspec");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cLinksAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cLinksElementLinkParserRuleCall_0_0 = (RuleCall)cLinksAssignment_0.eContents().get(0);
+		private final Assignment cActorsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cActorsActorParserRuleCall_1_0 = (RuleCall)cActorsAssignment_1.eContents().get(0);
+		private final Assignment cIntElementsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cIntElementsIntentionalElementParserRuleCall_2_0 = (RuleCall)cIntElementsAssignment_2.eContents().get(0);
+		private final Assignment cImpactModelAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cImpactModelImpactModelParserRuleCall_3_0 = (RuleCall)cImpactModelAssignment_3.eContents().get(0);
+		
+		//GRLspec returns grlModel::GRLspec:
+		//	links+=ElementLink* actors+=Actor* intElements+=IntentionalElement* impactModel=ImpactModel?;
+		public ParserRule getRule() { return rule; }
+
+		//links+=ElementLink* actors+=Actor* intElements+=IntentionalElement* impactModel=ImpactModel?
+		public Group getGroup() { return cGroup; }
+
+		//links+=ElementLink*
+		public Assignment getLinksAssignment_0() { return cLinksAssignment_0; }
+
+		//ElementLink
+		public RuleCall getLinksElementLinkParserRuleCall_0_0() { return cLinksElementLinkParserRuleCall_0_0; }
+
+		//actors+=Actor*
+		public Assignment getActorsAssignment_1() { return cActorsAssignment_1; }
+
+		//Actor
+		public RuleCall getActorsActorParserRuleCall_1_0() { return cActorsActorParserRuleCall_1_0; }
+
+		//intElements+=IntentionalElement*
+		public Assignment getIntElementsAssignment_2() { return cIntElementsAssignment_2; }
+
+		//IntentionalElement
+		public RuleCall getIntElementsIntentionalElementParserRuleCall_2_0() { return cIntElementsIntentionalElementParserRuleCall_2_0; }
+
+		//impactModel=ImpactModel?
+		public Assignment getImpactModelAssignment_3() { return cImpactModelAssignment_3; }
+
+		//ImpactModel
+		public RuleCall getImpactModelImpactModelParserRuleCall_3_0() { return cImpactModelImpactModelParserRuleCall_3_0; }
+	}
+
+	public class ElementLinkElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ElementLink");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cElementtLinkKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//ElementLink returns grlModel::ElementLink:
+		//	"elementtLink" name=ID "{" "}";
+		public ParserRule getRule() { return rule; }
+
+		//"elementtLink" name=ID "{" "}"
+		public Group getGroup() { return cGroup; }
+
+		//"elementtLink"
+		public Keyword getElementtLinkKeyword_0() { return cElementtLinkKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 
 	public class ActorElements extends AbstractParserRuleElementFinder {
@@ -76,12 +180,14 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cActorKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Actor returns grlModel::Actor:
-		//	"actor" name=ID;
+		//	"actor" name=ID "{" "}";
 		public ParserRule getRule() { return rule; }
 
-		//"actor" name=ID
+		//"actor" name=ID "{" "}"
 		public Group getGroup() { return cGroup; }
 
 		//"actor"
@@ -92,12 +198,87 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
+	}
+
+	public class IntentionalElementElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "IntentionalElement");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cIntentionalElementKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//IntentionalElement returns grlModel::IntentionalElement:
+		//	"intentionalElement" name=ID "{" "}";
+		public ParserRule getRule() { return rule; }
+
+		//"intentionalElement" name=ID "{" "}"
+		public Group getGroup() { return cGroup; }
+
+		//"intentionalElement"
+		public Keyword getIntentionalElementKeyword_0() { return cIntentionalElementKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
+	}
+
+	public class ImpactModelElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ImpactModel");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cImpactModelKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//ImpactModel returns grlModel::ImpactModel:
+		//	"impactModel" name=ID "{" "}";
+		public ParserRule getRule() { return rule; }
+
+		//"impactModel" name=ID "{" "}"
+		public Group getGroup() { return cGroup; }
+
+		//"impactModel"
+		public Keyword getImpactModelKeyword_0() { return cImpactModelKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 	
 	
-	private final ModelElements pModel;
-	private final GreetingElements pGreeting;
+	private final URNspecElements pURNspec;
+	private final URNdefinitionElements pURNdefinition;
+	private final ASDspecElements pASDspec;
+	private final GRLspecElements pGRLspec;
+	private final ElementLinkElements pElementLink;
 	private final ActorElements pActor;
+	private final IntentionalElementElements pIntentionalElement;
+	private final ImpactModelElements pImpactModel;
 	
 	private final Grammar grammar;
 
@@ -108,9 +289,14 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
-		this.pModel = new ModelElements();
-		this.pGreeting = new GreetingElements();
+		this.pURNspec = new URNspecElements();
+		this.pURNdefinition = new URNdefinitionElements();
+		this.pASDspec = new ASDspecElements();
+		this.pGRLspec = new GRLspecElements();
+		this.pElementLink = new ElementLinkElements();
 		this.pActor = new ActorElements();
+		this.pIntentionalElement = new IntentionalElementElements();
+		this.pImpactModel = new ImpactModelElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -140,34 +326,84 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Model:
-	//	greetings+=(Greeting | Actor)*;
-	public ModelElements getModelAccess() {
-		return pModel;
+	//URNspec returns urnModel::URNspec:
+	//	"urnspec" name=ID "{" urndef=URNdefinition asdspec=ASDspec grlspec=GRLspec "}";
+	public URNspecElements getURNspecAccess() {
+		return pURNspec;
 	}
 	
-	public ParserRule getModelRule() {
-		return getModelAccess().getRule();
+	public ParserRule getURNspecRule() {
+		return getURNspecAccess().getRule();
 	}
 
-	//Greeting:
-	//	"Hello" name=ID "!";
-	public GreetingElements getGreetingAccess() {
-		return pGreeting;
+	//URNdefinition returns urncoreModel::URNdefinition:
+	//	"URNdefinition";
+	public URNdefinitionElements getURNdefinitionAccess() {
+		return pURNdefinition;
 	}
 	
-	public ParserRule getGreetingRule() {
-		return getGreetingAccess().getRule();
+	public ParserRule getURNdefinitionRule() {
+		return getURNdefinitionAccess().getRule();
+	}
+
+	//ASDspec returns asdModel::ASDspec:
+	//	"asdspec";
+	public ASDspecElements getASDspecAccess() {
+		return pASDspec;
+	}
+	
+	public ParserRule getASDspecRule() {
+		return getASDspecAccess().getRule();
+	}
+
+	//GRLspec returns grlModel::GRLspec:
+	//	links+=ElementLink* actors+=Actor* intElements+=IntentionalElement* impactModel=ImpactModel?;
+	public GRLspecElements getGRLspecAccess() {
+		return pGRLspec;
+	}
+	
+	public ParserRule getGRLspecRule() {
+		return getGRLspecAccess().getRule();
+	}
+
+	//ElementLink returns grlModel::ElementLink:
+	//	"elementtLink" name=ID "{" "}";
+	public ElementLinkElements getElementLinkAccess() {
+		return pElementLink;
+	}
+	
+	public ParserRule getElementLinkRule() {
+		return getElementLinkAccess().getRule();
 	}
 
 	//Actor returns grlModel::Actor:
-	//	"actor" name=ID;
+	//	"actor" name=ID "{" "}";
 	public ActorElements getActorAccess() {
 		return pActor;
 	}
 	
 	public ParserRule getActorRule() {
 		return getActorAccess().getRule();
+	}
+
+	//IntentionalElement returns grlModel::IntentionalElement:
+	//	"intentionalElement" name=ID "{" "}";
+	public IntentionalElementElements getIntentionalElementAccess() {
+		return pIntentionalElement;
+	}
+	
+	public ParserRule getIntentionalElementRule() {
+		return getIntentionalElementAccess().getRule();
+	}
+
+	//ImpactModel returns grlModel::ImpactModel:
+	//	"impactModel" name=ID "{" "}";
+	public ImpactModelElements getImpactModelAccess() {
+		return pImpactModel;
+	}
+	
+	public ParserRule getImpactModelRule() {
+		return getImpactModelAccess().getRule();
 	}
 
 	//terminal ID:
