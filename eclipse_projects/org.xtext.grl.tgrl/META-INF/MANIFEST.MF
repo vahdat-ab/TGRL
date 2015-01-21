@@ -11,6 +11,25 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.apache.commons.logging;bundle-version="1.0.4";resolution:=optional,
  org.eclipse.emf.codegen.ecore;resolution:=optional,
  org.eclipse.emf.mwe.utils;resolution:=optional,
- org.eclipse.emf.mwe2.launch;resolution:=optional
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types,
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.xtext.grl.tgrl,
+ org.xtext.grl.tgrl.services,
+ org.xtext.grl.tgrl.tGRL,
+ org.xtext.grl.tgrl.tGRL.impl,
+ org.xtext.grl.tgrl.tGRL.util,
+ org.xtext.grl.tgrl.serializer,
+ org.xtext.grl.tgrl.parser.antlr,
+ org.xtext.grl.tgrl.parser.antlr.internal,
+ org.xtext.grl.tgrl.validation,
+ org.xtext.grl.tgrl.scoping,
+ org.xtext.grl.tgrl.generator,
+ org.xtext.grl.tgrl.formatting
