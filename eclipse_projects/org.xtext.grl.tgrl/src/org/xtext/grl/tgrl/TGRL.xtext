@@ -1,5 +1,6 @@
 grammar org.xtext.grl.tgrl.TGRL with org.eclipse.xtext.common.Terminals
 
+import "http:///grl.ecore" as grlModel
 
 generate tGRL "http://www.xtext.org/grl/tgrl/TGRL"
 
