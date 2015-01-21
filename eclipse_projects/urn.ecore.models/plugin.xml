@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated urn -->
+      <package
+            uri="http:///urn.ecore"
+            class="urn.UrnPackage"
+            genModel="model/urn.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated urn -->
+      <package
+            uri="http:///ucm.ecore"
+            class="ucm.UcmPackage"
+            genModel="model/urn.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated urn -->
+      <package
+            uri="http:///ucm/performance.ecore"
+            class="ucm.performance.PerformancePackage"
+            genModel="model/urn.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated urn -->
+      <package
+            uri="http:///ucm/map.ecore"
+            class="ucm.map.MapPackage"
+            genModel="model/urn.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated urn -->
+      <package
+            uri="http:///ucm/scenario.ecore"
+            class="ucm.scenario.ScenarioPackage"
+            genModel="model/urn.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated urn -->
+      <package
+            uri="http:///grl.ecore"
+            class="grl.GrlPackage"
+            genModel="model/urn.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated urn -->
+      <package
+            uri="http:///grl/kpimodel.ecore"
+            class="grl.kpimodel.KpimodelPackage"
+            genModel="model/urn.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated urn -->
+      <package
+            uri="http:///urncore.ecore"
+            class="urncore.UrncorePackage"
+            genModel="model/urn.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated urn -->
+      <package
+            uri="http:///asd.ecore"
+            class="asd.AsdPackage"
+            genModel="model/urn.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated urn -->
+      <package
+            uri="http://cs.mcgill.ca/sel/core/1.0"
+            class="core.CorePackage"
+            genModel="model/urn.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated urn -->
+      <package
+            uri="http:///fm.ecore"
+            class="fm.FmPackage"
+            genModel="model/urn.genmodel"/>
+   </extension>
+
+</plugin>

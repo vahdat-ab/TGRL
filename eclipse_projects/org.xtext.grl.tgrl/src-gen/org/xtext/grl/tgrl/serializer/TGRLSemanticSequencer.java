@@ -2,6 +2,8 @@ package org.xtext.grl.tgrl.serializer;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import grl.Actor;
+import grl.GrlPackage;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
@@ -25,7 +27,15 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	private TGRLGrammarAccess grammarAccess;
 	
 	public void createSequence(EObject context, EObject semanticObject) {
-		if(semanticObject.eClass().getEPackage() == TGRLPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+		if(semanticObject.eClass().getEPackage() == GrlPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case GrlPackage.ACTOR:
+				if(context == grammarAccess.getActorRule()) {
+					sequence_Actor(context, (Actor) semanticObject); 
+					return; 
+				}
+				else break;
+			}
+		else if(semanticObject.eClass().getEPackage() == TGRLPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case TGRLPackage.GREETING:
 				if(context == grammarAccess.getGreetingRule()) {
 					sequence_Greeting(context, (Greeting) semanticObject); 
@@ -46,6 +56,15 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     name=ID
 	 */
+	protected void sequence_Actor(EObject context, Actor semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=ID
+	 */
 	protected void sequence_Greeting(EObject context, Greeting semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, TGRLPackage.Literals.GREETING__NAME) == ValueTransient.YES)
@@ -60,7 +79,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     greetings+=Greeting*
+	 *     (greetings+=Greeting | greetings+=Actor)*
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

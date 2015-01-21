@@ -21,17 +21,25 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
 		private final Assignment cGreetingsAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cGreetingsGreetingParserRuleCall_0 = (RuleCall)cGreetingsAssignment.eContents().get(0);
+		private final Alternatives cGreetingsAlternatives_0 = (Alternatives)cGreetingsAssignment.eContents().get(0);
+		private final RuleCall cGreetingsGreetingParserRuleCall_0_0 = (RuleCall)cGreetingsAlternatives_0.eContents().get(0);
+		private final RuleCall cGreetingsActorParserRuleCall_0_1 = (RuleCall)cGreetingsAlternatives_0.eContents().get(1);
 		
 		//Model:
-		//	greetings+=Greeting*;
+		//	greetings+=(Greeting | Actor)*;
 		public ParserRule getRule() { return rule; }
 
-		//greetings+=Greeting*
+		//greetings+=(Greeting | Actor)*
 		public Assignment getGreetingsAssignment() { return cGreetingsAssignment; }
 
+		//Greeting | Actor
+		public Alternatives getGreetingsAlternatives_0() { return cGreetingsAlternatives_0; }
+
 		//Greeting
-		public RuleCall getGreetingsGreetingParserRuleCall_0() { return cGreetingsGreetingParserRuleCall_0; }
+		public RuleCall getGreetingsGreetingParserRuleCall_0_0() { return cGreetingsGreetingParserRuleCall_0_0; }
+
+		//Actor
+		public RuleCall getGreetingsActorParserRuleCall_0_1() { return cGreetingsActorParserRuleCall_0_1; }
 	}
 
 	public class GreetingElements extends AbstractParserRuleElementFinder {
@@ -61,10 +69,35 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//"!"
 		public Keyword getExclamationMarkKeyword_2() { return cExclamationMarkKeyword_2; }
 	}
+
+	public class ActorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Actor");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cActorKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		
+		//Actor returns grlModel::Actor:
+		//	"actor" name=ID;
+		public ParserRule getRule() { return rule; }
+
+		//"actor" name=ID
+		public Group getGroup() { return cGroup; }
+
+		//"actor"
+		public Keyword getActorKeyword_0() { return cActorKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+	}
 	
 	
 	private final ModelElements pModel;
 	private final GreetingElements pGreeting;
+	private final ActorElements pActor;
 	
 	private final Grammar grammar;
 
@@ -77,6 +110,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
 		this.pGreeting = new GreetingElements();
+		this.pActor = new ActorElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -107,7 +141,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	greetings+=Greeting*;
+	//	greetings+=(Greeting | Actor)*;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -124,6 +158,16 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getGreetingRule() {
 		return getGreetingAccess().getRule();
+	}
+
+	//Actor returns grlModel::Actor:
+	//	"actor" name=ID;
+	public ActorElements getActorAccess() {
+		return pActor;
+	}
+	
+	public ParserRule getActorRule() {
+		return getActorAccess().getRule();
 	}
 
 	//terminal ID:

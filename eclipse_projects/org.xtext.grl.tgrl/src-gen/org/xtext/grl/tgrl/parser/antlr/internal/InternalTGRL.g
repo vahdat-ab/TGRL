@@ -79,20 +79,38 @@ ruleModel returns [EObject current=null]
     @after { leaveRule(); }:
 (
 (
+(
 		{ 
-	        newCompositeNode(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0()); 
+	        newCompositeNode(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0_0()); 
 	    }
-		lv_greetings_0_0=ruleGreeting		{
+		lv_greetings_0_1=ruleGreeting		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getModelRule());
 	        }
        		add(
        			$current, 
        			"greetings",
-        		lv_greetings_0_0, 
+        		lv_greetings_0_1, 
         		"Greeting");
 	        afterParserOrEnumRuleCall();
 	    }
+
+    |		{ 
+	        newCompositeNode(grammarAccess.getModelAccess().getGreetingsActorParserRuleCall_0_1()); 
+	    }
+		lv_greetings_0_2=ruleActor		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getModelRule());
+	        }
+       		add(
+       			$current, 
+       			"greetings",
+        		lv_greetings_0_2, 
+        		"Actor");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
 
 )
 )*
@@ -143,6 +161,49 @@ ruleGreeting returns [EObject current=null]
     	newLeafNode(otherlv_2, grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2());
     }
 )
+;
+
+
+
+
+
+// Entry rule entryRuleActor
+entryRuleActor returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getActorRule()); }
+	 iv_ruleActor=ruleActor 
+	 { $current=$iv_ruleActor.current; } 
+	 EOF 
+;
+
+// Rule Actor
+ruleActor returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='actor' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getActorAccess().getActorKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getActorAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActorRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
+	    }
+
+)
+))
 ;
 
 

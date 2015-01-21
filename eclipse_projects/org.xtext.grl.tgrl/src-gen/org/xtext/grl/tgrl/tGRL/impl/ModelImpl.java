@@ -9,6 +9,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -16,7 +17,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.xtext.grl.tgrl.tGRL.Greeting;
 import org.xtext.grl.tgrl.tGRL.Model;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
@@ -43,7 +43,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @generated
    * @ordered
    */
-  protected EList<Greeting> greetings;
+  protected EList<EObject> greetings;
 
   /**
    * <!-- begin-user-doc -->
@@ -71,11 +71,11 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Greeting> getGreetings()
+  public EList<EObject> getGreetings()
   {
     if (greetings == null)
     {
-      greetings = new EObjectContainmentEList<Greeting>(Greeting.class, this, TGRLPackage.MODEL__GREETINGS);
+      greetings = new EObjectContainmentEList<EObject>(EObject.class, this, TGRLPackage.MODEL__GREETINGS);
     }
     return greetings;
   }
@@ -125,7 +125,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case TGRLPackage.MODEL__GREETINGS:
         getGreetings().clear();
-        getGreetings().addAll((Collection<? extends Greeting>)newValue);
+        getGreetings().addAll((Collection<? extends EObject>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

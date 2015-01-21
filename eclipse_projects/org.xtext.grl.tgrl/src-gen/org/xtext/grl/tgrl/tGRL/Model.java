@@ -26,7 +26,7 @@ public interface Model extends EObject
 {
   /**
    * Returns the value of the '<em><b>Greetings</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.Greeting}.
+   * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Greetings</em>' containment reference list isn't clear,
@@ -38,6 +38,6 @@ public interface Model extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Greeting> getGreetings();
+  EList<EObject> getGreetings();
 
 } // Model

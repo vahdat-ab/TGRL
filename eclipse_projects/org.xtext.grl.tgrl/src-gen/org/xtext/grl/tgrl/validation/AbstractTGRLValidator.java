@@ -13,6 +13,7 @@ public class AbstractTGRLValidator extends org.eclipse.xtext.validation.Abstract
 	protected List<EPackage> getEPackages() {
 	    List<EPackage> result = new ArrayList<EPackage>();
 	    result.add(org.xtext.grl.tgrl.tGRL.TGRLPackage.eINSTANCE);
+	    result.add(EPackage.Registry.INSTANCE.getEPackage("http:///grl.ecore"));
 		return result;
 	}
 }

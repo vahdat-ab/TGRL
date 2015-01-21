@@ -5,7 +5,7 @@ import "http:///grl.ecore" as grlModel
 generate tGRL "http://www.xtext.org/grl/tgrl/TGRL"
 
 Model:
-	greetings+=Greeting*;
+	greetings+= Greeting*;
 	
 Greeting:
 	'Hello' name=ID '!';
