@@ -225,13 +225,79 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cImportanceKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cImportanceAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cImportanceImportanceTypeEnumRuleCall_3_2_0 = (RuleCall)cImportanceAssignment_3_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cImportanceQuantitativeKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
+		private final Assignment cImportanceQuantitativeAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final RuleCall cImportanceQuantitativeINTTerminalRuleCall_4_2_0 = (RuleCall)cImportanceQuantitativeAssignment_4_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_4_3 = (Keyword)cGroup_4.eContents().get(3);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cLineColorKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
+		private final Assignment cLineColorAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
+		private final RuleCall cLineColorSTRINGTerminalRuleCall_5_2_0 = (RuleCall)cLineColorAssignment_5_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_5_3 = (Keyword)cGroup_5.eContents().get(3);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cFillColorKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
+		private final Assignment cFillColorAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
+		private final RuleCall cFillColorSTRINGTerminalRuleCall_6_2_0 = (RuleCall)cFillColorAssignment_6_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_6_3 = (Keyword)cGroup_6.eContents().get(3);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cFilledKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
+		private final Assignment cFilledAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
+		private final RuleCall cFilledBOOLEANTerminalRuleCall_7_2_0 = (RuleCall)cFilledAssignment_7_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_7_3 = (Keyword)cGroup_7.eContents().get(3);
+		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
+		private final Keyword cIdKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_8_1 = (Keyword)cGroup_8.eContents().get(1);
+		private final Assignment cIdAssignment_8_2 = (Assignment)cGroup_8.eContents().get(2);
+		private final RuleCall cIdIDTerminalRuleCall_8_2_0 = (RuleCall)cIdAssignment_8_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_8_3 = (Keyword)cGroup_8.eContents().get(3);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cDescriptionKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_9_1 = (Keyword)cGroup_9.eContents().get(1);
+		private final Assignment cDescriptionAssignment_9_2 = (Assignment)cGroup_9.eContents().get(2);
+		private final RuleCall cDescriptionSTRINGTerminalRuleCall_9_2_0 = (RuleCall)cDescriptionAssignment_9_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_9_3 = (Keyword)cGroup_9.eContents().get(3);
+		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
+		private final Keyword cIncludingActorKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
+		private final Assignment cIncludedActorsAssignment_10_2 = (Assignment)cGroup_10.eContents().get(2);
+		private final CrossReference cIncludedActorsActorCrossReference_10_2_0 = (CrossReference)cIncludedActorsAssignment_10_2.eContents().get(0);
+		private final RuleCall cIncludedActorsActorIDTerminalRuleCall_10_2_0_1 = (RuleCall)cIncludedActorsActorCrossReference_10_2_0.eContents().get(1);
+		private final Group cGroup_10_3 = (Group)cGroup_10.eContents().get(3);
+		private final Keyword cCommaKeyword_10_3_0 = (Keyword)cGroup_10_3.eContents().get(0);
+		private final Assignment cIncludedActorsAssignment_10_3_1 = (Assignment)cGroup_10_3.eContents().get(1);
+		private final CrossReference cIncludedActorsActorCrossReference_10_3_1_0 = (CrossReference)cIncludedActorsAssignment_10_3_1.eContents().get(0);
+		private final RuleCall cIncludedActorsActorIDTerminalRuleCall_10_3_1_0_1 = (RuleCall)cIncludedActorsActorCrossReference_10_3_1_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_10_4 = (Keyword)cGroup_10.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//Actor returns grlModel::Actor:
-		//	"actor" name=ID "{" "}";
+		//	"actor" name=ID "{" ("importance" "=" importance=ImportanceType ";")? / *
+		//		 *TODO I must give a default value, which is zero, to this attribute.
+		//		 * 		This can be done through the post processing mechanism in xText 
+		//		 * / ("importanceQuantitative" "=" importanceQuantitative=INT ";")? ("lineColor" "=" lineColor=STRING ";")?
+		//	("fillColor" "=" fillColor=STRING ";")? ("filled" "=" filled=BOOLEAN ";")? ("id" "=" id=ID ";")? ("description" "="
+		//	description=STRING ";")? ("includingActor" "=" includedActors+=[grlModel::Actor] (","
+		//	includedActors+=[grlModel::Actor])* ";")? "}";
 		public ParserRule getRule() { return rule; }
 
-		//"actor" name=ID "{" "}"
+		//"actor" name=ID "{" ("importance" "=" importance=ImportanceType ";")? / *
+		//		 *TODO I must give a default value, which is zero, to this attribute.
+		//		 * 		This can be done through the post processing mechanism in xText 
+		//		 * / ("importanceQuantitative" "=" importanceQuantitative=INT ";")? ("lineColor" "=" lineColor=STRING ";")?
+		//("fillColor" "=" fillColor=STRING ";")? ("filled" "=" filled=BOOLEAN ";")? ("id" "=" id=ID ";")? ("description" "="
+		//description=STRING ";")? ("includingActor" "=" includedActors+=[grlModel::Actor] (","
+		//includedActors+=[grlModel::Actor])* ";")? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"actor"
@@ -246,8 +312,170 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
+		//("importance" "=" importance=ImportanceType ";")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"importance"
+		public Keyword getImportanceKeyword_3_0() { return cImportanceKeyword_3_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_3_1() { return cEqualsSignKeyword_3_1; }
+
+		//importance=ImportanceType
+		public Assignment getImportanceAssignment_3_2() { return cImportanceAssignment_3_2; }
+
+		//ImportanceType
+		public RuleCall getImportanceImportanceTypeEnumRuleCall_3_2_0() { return cImportanceImportanceTypeEnumRuleCall_3_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3_3() { return cSemicolonKeyword_3_3; }
+
+		//("importanceQuantitative" "=" importanceQuantitative=INT ";")?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"importanceQuantitative"
+		public Keyword getImportanceQuantitativeKeyword_4_0() { return cImportanceQuantitativeKeyword_4_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_4_1() { return cEqualsSignKeyword_4_1; }
+
+		//importanceQuantitative=INT
+		public Assignment getImportanceQuantitativeAssignment_4_2() { return cImportanceQuantitativeAssignment_4_2; }
+
+		//INT
+		public RuleCall getImportanceQuantitativeINTTerminalRuleCall_4_2_0() { return cImportanceQuantitativeINTTerminalRuleCall_4_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_4_3() { return cSemicolonKeyword_4_3; }
+
+		//("lineColor" "=" lineColor=STRING ";")?
+		public Group getGroup_5() { return cGroup_5; }
+
+		//"lineColor"
+		public Keyword getLineColorKeyword_5_0() { return cLineColorKeyword_5_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_5_1() { return cEqualsSignKeyword_5_1; }
+
+		//lineColor=STRING
+		public Assignment getLineColorAssignment_5_2() { return cLineColorAssignment_5_2; }
+
+		//STRING
+		public RuleCall getLineColorSTRINGTerminalRuleCall_5_2_0() { return cLineColorSTRINGTerminalRuleCall_5_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_5_3() { return cSemicolonKeyword_5_3; }
+
+		//("fillColor" "=" fillColor=STRING ";")?
+		public Group getGroup_6() { return cGroup_6; }
+
+		//"fillColor"
+		public Keyword getFillColorKeyword_6_0() { return cFillColorKeyword_6_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_6_1() { return cEqualsSignKeyword_6_1; }
+
+		//fillColor=STRING
+		public Assignment getFillColorAssignment_6_2() { return cFillColorAssignment_6_2; }
+
+		//STRING
+		public RuleCall getFillColorSTRINGTerminalRuleCall_6_2_0() { return cFillColorSTRINGTerminalRuleCall_6_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_6_3() { return cSemicolonKeyword_6_3; }
+
+		//("filled" "=" filled=BOOLEAN ";")?
+		public Group getGroup_7() { return cGroup_7; }
+
+		//"filled"
+		public Keyword getFilledKeyword_7_0() { return cFilledKeyword_7_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_7_1() { return cEqualsSignKeyword_7_1; }
+
+		//filled=BOOLEAN
+		public Assignment getFilledAssignment_7_2() { return cFilledAssignment_7_2; }
+
+		//BOOLEAN
+		public RuleCall getFilledBOOLEANTerminalRuleCall_7_2_0() { return cFilledBOOLEANTerminalRuleCall_7_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_7_3() { return cSemicolonKeyword_7_3; }
+
+		//("id" "=" id=ID ";")?
+		public Group getGroup_8() { return cGroup_8; }
+
+		//"id"
+		public Keyword getIdKeyword_8_0() { return cIdKeyword_8_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_8_1() { return cEqualsSignKeyword_8_1; }
+
+		//id=ID
+		public Assignment getIdAssignment_8_2() { return cIdAssignment_8_2; }
+
+		//ID
+		public RuleCall getIdIDTerminalRuleCall_8_2_0() { return cIdIDTerminalRuleCall_8_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_8_3() { return cSemicolonKeyword_8_3; }
+
+		//("description" "=" description=STRING ";")?
+		public Group getGroup_9() { return cGroup_9; }
+
+		//"description"
+		public Keyword getDescriptionKeyword_9_0() { return cDescriptionKeyword_9_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_9_1() { return cEqualsSignKeyword_9_1; }
+
+		//description=STRING
+		public Assignment getDescriptionAssignment_9_2() { return cDescriptionAssignment_9_2; }
+
+		//STRING
+		public RuleCall getDescriptionSTRINGTerminalRuleCall_9_2_0() { return cDescriptionSTRINGTerminalRuleCall_9_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_9_3() { return cSemicolonKeyword_9_3; }
+
+		//("includingActor" "=" includedActors+=[grlModel::Actor] ("," includedActors+=[grlModel::Actor])* ";")?
+		public Group getGroup_10() { return cGroup_10; }
+
+		//"includingActor"
+		public Keyword getIncludingActorKeyword_10_0() { return cIncludingActorKeyword_10_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_10_1() { return cEqualsSignKeyword_10_1; }
+
+		//includedActors+=[grlModel::Actor]
+		public Assignment getIncludedActorsAssignment_10_2() { return cIncludedActorsAssignment_10_2; }
+
+		//[grlModel::Actor]
+		public CrossReference getIncludedActorsActorCrossReference_10_2_0() { return cIncludedActorsActorCrossReference_10_2_0; }
+
+		//ID
+		public RuleCall getIncludedActorsActorIDTerminalRuleCall_10_2_0_1() { return cIncludedActorsActorIDTerminalRuleCall_10_2_0_1; }
+
+		//("," includedActors+=[grlModel::Actor])*
+		public Group getGroup_10_3() { return cGroup_10_3; }
+
+		//","
+		public Keyword getCommaKeyword_10_3_0() { return cCommaKeyword_10_3_0; }
+
+		//includedActors+=[grlModel::Actor]
+		public Assignment getIncludedActorsAssignment_10_3_1() { return cIncludedActorsAssignment_10_3_1; }
+
+		//[grlModel::Actor]
+		public CrossReference getIncludedActorsActorCrossReference_10_3_1_0() { return cIncludedActorsActorCrossReference_10_3_1_0; }
+
+		//ID
+		public RuleCall getIncludedActorsActorIDTerminalRuleCall_10_3_1_0_1() { return cIncludedActorsActorIDTerminalRuleCall_10_3_1_0_1; }
+
+		//";"
+		public Keyword getSemicolonKeyword_10_4() { return cSemicolonKeyword_10_4; }
+
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
+		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
 	}
 
 	public class IntentionalElementElements extends AbstractParserRuleElementFinder {
@@ -633,7 +861,13 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Actor returns grlModel::Actor:
-	//	"actor" name=ID "{" "}";
+	//	"actor" name=ID "{" ("importance" "=" importance=ImportanceType ";")? / *
+	//		 *TODO I must give a default value, which is zero, to this attribute.
+	//		 * 		This can be done through the post processing mechanism in xText 
+	//		 * / ("importanceQuantitative" "=" importanceQuantitative=INT ";")? ("lineColor" "=" lineColor=STRING ";")?
+	//	("fillColor" "=" fillColor=STRING ";")? ("filled" "=" filled=BOOLEAN ";")? ("id" "=" id=ID ";")? ("description" "="
+	//	description=STRING ";")? ("includingActor" "=" includedActors+=[grlModel::Actor] (","
+	//	includedActors+=[grlModel::Actor])* ";")? "}";
 	public ActorElements getActorAccess() {
 		return pActor;
 	}

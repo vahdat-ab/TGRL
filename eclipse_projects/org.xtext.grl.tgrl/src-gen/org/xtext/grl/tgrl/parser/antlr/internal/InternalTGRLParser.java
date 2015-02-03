@@ -22,25 +22,40 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalTGRLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_BOOLEAN", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'urnspec'", "'{'", "'}'", "'URNdefinition'", "'asdspec'", "'grl'", "'elementtLink'", "'actor'", "'intentionalElement'", "'impactModel'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_BOOLEAN", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'urnspec'", "'{'", "'}'", "'URNdefinition'", "'asdspec'", "'grl'", "'elementtLink'", "'actor'", "'importance'", "'='", "';'", "'importanceQuantitative'", "'lineColor'", "'fillColor'", "'filled'", "'id'", "'description'", "'includingActor'", "','", "'intentionalElement'", "'impactModel'", "'none'", "'high'", "'medium'", "'low'"
     };
-    public static final int RULE_BOOLEAN=5;
-    public static final int RULE_STRING=7;
+    public static final int RULE_BOOLEAN=7;
+    public static final int RULE_STRING=6;
     public static final int RULE_SL_COMMENT=9;
     public static final int T__19=19;
     public static final int T__15=15;
     public static final int T__16=16;
     public static final int T__17=17;
     public static final int T__18=18;
+    public static final int T__33=33;
     public static final int T__12=12;
+    public static final int T__34=34;
     public static final int T__13=13;
+    public static final int T__35=35;
     public static final int T__14=14;
+    public static final int T__36=36;
     public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
     public static final int RULE_ID=4;
     public static final int RULE_WS=10;
     public static final int RULE_ANY_OTHER=11;
-    public static final int RULE_INT=6;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int RULE_INT=5;
+    public static final int T__29=29;
+    public static final int T__22=22;
     public static final int RULE_ML_COMMENT=8;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
     public static final int T__20=20;
     public static final int T__21=21;
 
@@ -673,7 +688,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                 int alt4=2;
                 int LA4_0 = input.LA(1);
 
-                if ( (LA4_0==20) ) {
+                if ( (LA4_0==31) ) {
                     alt4=1;
                 }
 
@@ -720,7 +735,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==21) ) {
+            if ( (LA5_0==32) ) {
                 alt5=1;
             }
             switch (alt5) {
@@ -932,7 +947,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleActor"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:416:1: ruleActor returns [EObject current=null] : (otherlv_0= 'actor' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:416:1: ruleActor returns [EObject current=null] : (otherlv_0= 'actor' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'importance' otherlv_4= '=' ( (lv_importance_5_0= ruleImportanceType ) ) otherlv_6= ';' )? (otherlv_7= 'importanceQuantitative' otherlv_8= '=' ( (lv_importanceQuantitative_9_0= RULE_INT ) ) otherlv_10= ';' )? (otherlv_11= 'lineColor' otherlv_12= '=' ( (lv_lineColor_13_0= RULE_STRING ) ) otherlv_14= ';' )? (otherlv_15= 'fillColor' otherlv_16= '=' ( (lv_fillColor_17_0= RULE_STRING ) ) otherlv_18= ';' )? (otherlv_19= 'filled' otherlv_20= '=' ( (lv_filled_21_0= RULE_BOOLEAN ) ) otherlv_22= ';' )? (otherlv_23= 'id' otherlv_24= '=' ( (lv_id_25_0= RULE_ID ) ) otherlv_26= ';' )? (otherlv_27= 'description' otherlv_28= '=' ( (lv_description_29_0= RULE_STRING ) ) otherlv_30= ';' )? (otherlv_31= 'includingActor' otherlv_32= '=' ( (otherlv_33= RULE_ID ) ) (otherlv_34= ',' ( (otherlv_35= RULE_ID ) ) )* otherlv_36= ';' )? otherlv_37= '}' ) ;
     public final EObject ruleActor() throws RecognitionException {
         EObject current = null;
 
@@ -940,15 +955,50 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
         Token lv_name_1_0=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
+        Token otherlv_4=null;
+        Token otherlv_6=null;
+        Token otherlv_7=null;
+        Token otherlv_8=null;
+        Token lv_importanceQuantitative_9_0=null;
+        Token otherlv_10=null;
+        Token otherlv_11=null;
+        Token otherlv_12=null;
+        Token lv_lineColor_13_0=null;
+        Token otherlv_14=null;
+        Token otherlv_15=null;
+        Token otherlv_16=null;
+        Token lv_fillColor_17_0=null;
+        Token otherlv_18=null;
+        Token otherlv_19=null;
+        Token otherlv_20=null;
+        Token lv_filled_21_0=null;
+        Token otherlv_22=null;
+        Token otherlv_23=null;
+        Token otherlv_24=null;
+        Token lv_id_25_0=null;
+        Token otherlv_26=null;
+        Token otherlv_27=null;
+        Token otherlv_28=null;
+        Token lv_description_29_0=null;
+        Token otherlv_30=null;
+        Token otherlv_31=null;
+        Token otherlv_32=null;
+        Token otherlv_33=null;
+        Token otherlv_34=null;
+        Token otherlv_35=null;
+        Token otherlv_36=null;
+        Token otherlv_37=null;
+        Enumerator lv_importance_5_0 = null;
+
 
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:419:28: ( (otherlv_0= 'actor' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:420:1: (otherlv_0= 'actor' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:419:28: ( (otherlv_0= 'actor' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'importance' otherlv_4= '=' ( (lv_importance_5_0= ruleImportanceType ) ) otherlv_6= ';' )? (otherlv_7= 'importanceQuantitative' otherlv_8= '=' ( (lv_importanceQuantitative_9_0= RULE_INT ) ) otherlv_10= ';' )? (otherlv_11= 'lineColor' otherlv_12= '=' ( (lv_lineColor_13_0= RULE_STRING ) ) otherlv_14= ';' )? (otherlv_15= 'fillColor' otherlv_16= '=' ( (lv_fillColor_17_0= RULE_STRING ) ) otherlv_18= ';' )? (otherlv_19= 'filled' otherlv_20= '=' ( (lv_filled_21_0= RULE_BOOLEAN ) ) otherlv_22= ';' )? (otherlv_23= 'id' otherlv_24= '=' ( (lv_id_25_0= RULE_ID ) ) otherlv_26= ';' )? (otherlv_27= 'description' otherlv_28= '=' ( (lv_description_29_0= RULE_STRING ) ) otherlv_30= ';' )? (otherlv_31= 'includingActor' otherlv_32= '=' ( (otherlv_33= RULE_ID ) ) (otherlv_34= ',' ( (otherlv_35= RULE_ID ) ) )* otherlv_36= ';' )? otherlv_37= '}' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:420:1: (otherlv_0= 'actor' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'importance' otherlv_4= '=' ( (lv_importance_5_0= ruleImportanceType ) ) otherlv_6= ';' )? (otherlv_7= 'importanceQuantitative' otherlv_8= '=' ( (lv_importanceQuantitative_9_0= RULE_INT ) ) otherlv_10= ';' )? (otherlv_11= 'lineColor' otherlv_12= '=' ( (lv_lineColor_13_0= RULE_STRING ) ) otherlv_14= ';' )? (otherlv_15= 'fillColor' otherlv_16= '=' ( (lv_fillColor_17_0= RULE_STRING ) ) otherlv_18= ';' )? (otherlv_19= 'filled' otherlv_20= '=' ( (lv_filled_21_0= RULE_BOOLEAN ) ) otherlv_22= ';' )? (otherlv_23= 'id' otherlv_24= '=' ( (lv_id_25_0= RULE_ID ) ) otherlv_26= ';' )? (otherlv_27= 'description' otherlv_28= '=' ( (lv_description_29_0= RULE_STRING ) ) otherlv_30= ';' )? (otherlv_31= 'includingActor' otherlv_32= '=' ( (otherlv_33= RULE_ID ) ) (otherlv_34= ',' ( (otherlv_35= RULE_ID ) ) )* otherlv_36= ';' )? otherlv_37= '}' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:420:1: (otherlv_0= 'actor' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:420:3: otherlv_0= 'actor' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:420:1: (otherlv_0= 'actor' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'importance' otherlv_4= '=' ( (lv_importance_5_0= ruleImportanceType ) ) otherlv_6= ';' )? (otherlv_7= 'importanceQuantitative' otherlv_8= '=' ( (lv_importanceQuantitative_9_0= RULE_INT ) ) otherlv_10= ';' )? (otherlv_11= 'lineColor' otherlv_12= '=' ( (lv_lineColor_13_0= RULE_STRING ) ) otherlv_14= ';' )? (otherlv_15= 'fillColor' otherlv_16= '=' ( (lv_fillColor_17_0= RULE_STRING ) ) otherlv_18= ';' )? (otherlv_19= 'filled' otherlv_20= '=' ( (lv_filled_21_0= RULE_BOOLEAN ) ) otherlv_22= ';' )? (otherlv_23= 'id' otherlv_24= '=' ( (lv_id_25_0= RULE_ID ) ) otherlv_26= ';' )? (otherlv_27= 'description' otherlv_28= '=' ( (lv_description_29_0= RULE_STRING ) ) otherlv_30= ';' )? (otherlv_31= 'includingActor' otherlv_32= '=' ( (otherlv_33= RULE_ID ) ) (otherlv_34= ',' ( (otherlv_35= RULE_ID ) ) )* otherlv_36= ';' )? otherlv_37= '}' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:420:3: otherlv_0= 'actor' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'importance' otherlv_4= '=' ( (lv_importance_5_0= ruleImportanceType ) ) otherlv_6= ';' )? (otherlv_7= 'importanceQuantitative' otherlv_8= '=' ( (lv_importanceQuantitative_9_0= RULE_INT ) ) otherlv_10= ';' )? (otherlv_11= 'lineColor' otherlv_12= '=' ( (lv_lineColor_13_0= RULE_STRING ) ) otherlv_14= ';' )? (otherlv_15= 'fillColor' otherlv_16= '=' ( (lv_fillColor_17_0= RULE_STRING ) ) otherlv_18= ';' )? (otherlv_19= 'filled' otherlv_20= '=' ( (lv_filled_21_0= RULE_BOOLEAN ) ) otherlv_22= ';' )? (otherlv_23= 'id' otherlv_24= '=' ( (lv_id_25_0= RULE_ID ) ) otherlv_26= ';' )? (otherlv_27= 'description' otherlv_28= '=' ( (lv_description_29_0= RULE_STRING ) ) otherlv_30= ';' )? (otherlv_31= 'includingActor' otherlv_32= '=' ( (otherlv_33= RULE_ID ) ) (otherlv_34= ',' ( (otherlv_35= RULE_ID ) ) )* otherlv_36= ';' )? otherlv_37= '}'
             {
             otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleActor871); 
 
@@ -984,9 +1034,498 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_2, grammarAccess.getActorAccess().getLeftCurlyBracketKeyword_2());
                 
-            otherlv_3=(Token)match(input,14,FOLLOW_14_in_ruleActor917); 
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:446:1: (otherlv_3= 'importance' otherlv_4= '=' ( (lv_importance_5_0= ruleImportanceType ) ) otherlv_6= ';' )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-                	newLeafNode(otherlv_3, grammarAccess.getActorAccess().getRightCurlyBracketKeyword_3());
+            if ( (LA6_0==20) ) {
+                alt6=1;
+            }
+            switch (alt6) {
+                case 1 :
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:446:3: otherlv_3= 'importance' otherlv_4= '=' ( (lv_importance_5_0= ruleImportanceType ) ) otherlv_6= ';'
+                    {
+                    otherlv_3=(Token)match(input,20,FOLLOW_20_in_ruleActor918); 
+
+                        	newLeafNode(otherlv_3, grammarAccess.getActorAccess().getImportanceKeyword_3_0());
+                        
+                    otherlv_4=(Token)match(input,21,FOLLOW_21_in_ruleActor930); 
+
+                        	newLeafNode(otherlv_4, grammarAccess.getActorAccess().getEqualsSignKeyword_3_1());
+                        
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:454:1: ( (lv_importance_5_0= ruleImportanceType ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:455:1: (lv_importance_5_0= ruleImportanceType )
+                    {
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:455:1: (lv_importance_5_0= ruleImportanceType )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:456:3: lv_importance_5_0= ruleImportanceType
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getActorAccess().getImportanceImportanceTypeEnumRuleCall_3_2_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleImportanceType_in_ruleActor951);
+                    lv_importance_5_0=ruleImportanceType();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getActorRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"importance",
+                            		lv_importance_5_0, 
+                            		"ImportanceType");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+
+                    otherlv_6=(Token)match(input,22,FOLLOW_22_in_ruleActor963); 
+
+                        	newLeafNode(otherlv_6, grammarAccess.getActorAccess().getSemicolonKeyword_3_3());
+                        
+
+                    }
+                    break;
+
+            }
+
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:476:3: (otherlv_7= 'importanceQuantitative' otherlv_8= '=' ( (lv_importanceQuantitative_9_0= RULE_INT ) ) otherlv_10= ';' )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
+
+            if ( (LA7_0==23) ) {
+                alt7=1;
+            }
+            switch (alt7) {
+                case 1 :
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:476:5: otherlv_7= 'importanceQuantitative' otherlv_8= '=' ( (lv_importanceQuantitative_9_0= RULE_INT ) ) otherlv_10= ';'
+                    {
+                    otherlv_7=(Token)match(input,23,FOLLOW_23_in_ruleActor978); 
+
+                        	newLeafNode(otherlv_7, grammarAccess.getActorAccess().getImportanceQuantitativeKeyword_4_0());
+                        
+                    otherlv_8=(Token)match(input,21,FOLLOW_21_in_ruleActor990); 
+
+                        	newLeafNode(otherlv_8, grammarAccess.getActorAccess().getEqualsSignKeyword_4_1());
+                        
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:484:1: ( (lv_importanceQuantitative_9_0= RULE_INT ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:485:1: (lv_importanceQuantitative_9_0= RULE_INT )
+                    {
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:485:1: (lv_importanceQuantitative_9_0= RULE_INT )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:486:3: lv_importanceQuantitative_9_0= RULE_INT
+                    {
+                    lv_importanceQuantitative_9_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleActor1007); 
+
+                    			newLeafNode(lv_importanceQuantitative_9_0, grammarAccess.getActorAccess().getImportanceQuantitativeINTTerminalRuleCall_4_2_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getActorRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"importanceQuantitative",
+                            		lv_importanceQuantitative_9_0, 
+                            		"INT");
+                    	    
+
+                    }
+
+
+                    }
+
+                    otherlv_10=(Token)match(input,22,FOLLOW_22_in_ruleActor1024); 
+
+                        	newLeafNode(otherlv_10, grammarAccess.getActorAccess().getSemicolonKeyword_4_3());
+                        
+
+                    }
+                    break;
+
+            }
+
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:506:3: (otherlv_11= 'lineColor' otherlv_12= '=' ( (lv_lineColor_13_0= RULE_STRING ) ) otherlv_14= ';' )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
+
+            if ( (LA8_0==24) ) {
+                alt8=1;
+            }
+            switch (alt8) {
+                case 1 :
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:506:5: otherlv_11= 'lineColor' otherlv_12= '=' ( (lv_lineColor_13_0= RULE_STRING ) ) otherlv_14= ';'
+                    {
+                    otherlv_11=(Token)match(input,24,FOLLOW_24_in_ruleActor1039); 
+
+                        	newLeafNode(otherlv_11, grammarAccess.getActorAccess().getLineColorKeyword_5_0());
+                        
+                    otherlv_12=(Token)match(input,21,FOLLOW_21_in_ruleActor1051); 
+
+                        	newLeafNode(otherlv_12, grammarAccess.getActorAccess().getEqualsSignKeyword_5_1());
+                        
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:514:1: ( (lv_lineColor_13_0= RULE_STRING ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:515:1: (lv_lineColor_13_0= RULE_STRING )
+                    {
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:515:1: (lv_lineColor_13_0= RULE_STRING )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:516:3: lv_lineColor_13_0= RULE_STRING
+                    {
+                    lv_lineColor_13_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleActor1068); 
+
+                    			newLeafNode(lv_lineColor_13_0, grammarAccess.getActorAccess().getLineColorSTRINGTerminalRuleCall_5_2_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getActorRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"lineColor",
+                            		lv_lineColor_13_0, 
+                            		"STRING");
+                    	    
+
+                    }
+
+
+                    }
+
+                    otherlv_14=(Token)match(input,22,FOLLOW_22_in_ruleActor1085); 
+
+                        	newLeafNode(otherlv_14, grammarAccess.getActorAccess().getSemicolonKeyword_5_3());
+                        
+
+                    }
+                    break;
+
+            }
+
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:536:3: (otherlv_15= 'fillColor' otherlv_16= '=' ( (lv_fillColor_17_0= RULE_STRING ) ) otherlv_18= ';' )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
+
+            if ( (LA9_0==25) ) {
+                alt9=1;
+            }
+            switch (alt9) {
+                case 1 :
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:536:5: otherlv_15= 'fillColor' otherlv_16= '=' ( (lv_fillColor_17_0= RULE_STRING ) ) otherlv_18= ';'
+                    {
+                    otherlv_15=(Token)match(input,25,FOLLOW_25_in_ruleActor1100); 
+
+                        	newLeafNode(otherlv_15, grammarAccess.getActorAccess().getFillColorKeyword_6_0());
+                        
+                    otherlv_16=(Token)match(input,21,FOLLOW_21_in_ruleActor1112); 
+
+                        	newLeafNode(otherlv_16, grammarAccess.getActorAccess().getEqualsSignKeyword_6_1());
+                        
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:544:1: ( (lv_fillColor_17_0= RULE_STRING ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:545:1: (lv_fillColor_17_0= RULE_STRING )
+                    {
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:545:1: (lv_fillColor_17_0= RULE_STRING )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:546:3: lv_fillColor_17_0= RULE_STRING
+                    {
+                    lv_fillColor_17_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleActor1129); 
+
+                    			newLeafNode(lv_fillColor_17_0, grammarAccess.getActorAccess().getFillColorSTRINGTerminalRuleCall_6_2_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getActorRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"fillColor",
+                            		lv_fillColor_17_0, 
+                            		"STRING");
+                    	    
+
+                    }
+
+
+                    }
+
+                    otherlv_18=(Token)match(input,22,FOLLOW_22_in_ruleActor1146); 
+
+                        	newLeafNode(otherlv_18, grammarAccess.getActorAccess().getSemicolonKeyword_6_3());
+                        
+
+                    }
+                    break;
+
+            }
+
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:566:3: (otherlv_19= 'filled' otherlv_20= '=' ( (lv_filled_21_0= RULE_BOOLEAN ) ) otherlv_22= ';' )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
+
+            if ( (LA10_0==26) ) {
+                alt10=1;
+            }
+            switch (alt10) {
+                case 1 :
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:566:5: otherlv_19= 'filled' otherlv_20= '=' ( (lv_filled_21_0= RULE_BOOLEAN ) ) otherlv_22= ';'
+                    {
+                    otherlv_19=(Token)match(input,26,FOLLOW_26_in_ruleActor1161); 
+
+                        	newLeafNode(otherlv_19, grammarAccess.getActorAccess().getFilledKeyword_7_0());
+                        
+                    otherlv_20=(Token)match(input,21,FOLLOW_21_in_ruleActor1173); 
+
+                        	newLeafNode(otherlv_20, grammarAccess.getActorAccess().getEqualsSignKeyword_7_1());
+                        
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:574:1: ( (lv_filled_21_0= RULE_BOOLEAN ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:575:1: (lv_filled_21_0= RULE_BOOLEAN )
+                    {
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:575:1: (lv_filled_21_0= RULE_BOOLEAN )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:576:3: lv_filled_21_0= RULE_BOOLEAN
+                    {
+                    lv_filled_21_0=(Token)match(input,RULE_BOOLEAN,FOLLOW_RULE_BOOLEAN_in_ruleActor1190); 
+
+                    			newLeafNode(lv_filled_21_0, grammarAccess.getActorAccess().getFilledBOOLEANTerminalRuleCall_7_2_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getActorRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"filled",
+                            		lv_filled_21_0, 
+                            		"BOOLEAN");
+                    	    
+
+                    }
+
+
+                    }
+
+                    otherlv_22=(Token)match(input,22,FOLLOW_22_in_ruleActor1207); 
+
+                        	newLeafNode(otherlv_22, grammarAccess.getActorAccess().getSemicolonKeyword_7_3());
+                        
+
+                    }
+                    break;
+
+            }
+
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:596:3: (otherlv_23= 'id' otherlv_24= '=' ( (lv_id_25_0= RULE_ID ) ) otherlv_26= ';' )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
+
+            if ( (LA11_0==27) ) {
+                alt11=1;
+            }
+            switch (alt11) {
+                case 1 :
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:596:5: otherlv_23= 'id' otherlv_24= '=' ( (lv_id_25_0= RULE_ID ) ) otherlv_26= ';'
+                    {
+                    otherlv_23=(Token)match(input,27,FOLLOW_27_in_ruleActor1222); 
+
+                        	newLeafNode(otherlv_23, grammarAccess.getActorAccess().getIdKeyword_8_0());
+                        
+                    otherlv_24=(Token)match(input,21,FOLLOW_21_in_ruleActor1234); 
+
+                        	newLeafNode(otherlv_24, grammarAccess.getActorAccess().getEqualsSignKeyword_8_1());
+                        
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:604:1: ( (lv_id_25_0= RULE_ID ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:605:1: (lv_id_25_0= RULE_ID )
+                    {
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:605:1: (lv_id_25_0= RULE_ID )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:606:3: lv_id_25_0= RULE_ID
+                    {
+                    lv_id_25_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleActor1251); 
+
+                    			newLeafNode(lv_id_25_0, grammarAccess.getActorAccess().getIdIDTerminalRuleCall_8_2_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getActorRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"id",
+                            		lv_id_25_0, 
+                            		"ID");
+                    	    
+
+                    }
+
+
+                    }
+
+                    otherlv_26=(Token)match(input,22,FOLLOW_22_in_ruleActor1268); 
+
+                        	newLeafNode(otherlv_26, grammarAccess.getActorAccess().getSemicolonKeyword_8_3());
+                        
+
+                    }
+                    break;
+
+            }
+
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:626:3: (otherlv_27= 'description' otherlv_28= '=' ( (lv_description_29_0= RULE_STRING ) ) otherlv_30= ';' )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
+
+            if ( (LA12_0==28) ) {
+                alt12=1;
+            }
+            switch (alt12) {
+                case 1 :
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:626:5: otherlv_27= 'description' otherlv_28= '=' ( (lv_description_29_0= RULE_STRING ) ) otherlv_30= ';'
+                    {
+                    otherlv_27=(Token)match(input,28,FOLLOW_28_in_ruleActor1283); 
+
+                        	newLeafNode(otherlv_27, grammarAccess.getActorAccess().getDescriptionKeyword_9_0());
+                        
+                    otherlv_28=(Token)match(input,21,FOLLOW_21_in_ruleActor1295); 
+
+                        	newLeafNode(otherlv_28, grammarAccess.getActorAccess().getEqualsSignKeyword_9_1());
+                        
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:634:1: ( (lv_description_29_0= RULE_STRING ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:635:1: (lv_description_29_0= RULE_STRING )
+                    {
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:635:1: (lv_description_29_0= RULE_STRING )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:636:3: lv_description_29_0= RULE_STRING
+                    {
+                    lv_description_29_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleActor1312); 
+
+                    			newLeafNode(lv_description_29_0, grammarAccess.getActorAccess().getDescriptionSTRINGTerminalRuleCall_9_2_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getActorRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"description",
+                            		lv_description_29_0, 
+                            		"STRING");
+                    	    
+
+                    }
+
+
+                    }
+
+                    otherlv_30=(Token)match(input,22,FOLLOW_22_in_ruleActor1329); 
+
+                        	newLeafNode(otherlv_30, grammarAccess.getActorAccess().getSemicolonKeyword_9_3());
+                        
+
+                    }
+                    break;
+
+            }
+
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:656:3: (otherlv_31= 'includingActor' otherlv_32= '=' ( (otherlv_33= RULE_ID ) ) (otherlv_34= ',' ( (otherlv_35= RULE_ID ) ) )* otherlv_36= ';' )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
+
+            if ( (LA14_0==29) ) {
+                alt14=1;
+            }
+            switch (alt14) {
+                case 1 :
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:656:5: otherlv_31= 'includingActor' otherlv_32= '=' ( (otherlv_33= RULE_ID ) ) (otherlv_34= ',' ( (otherlv_35= RULE_ID ) ) )* otherlv_36= ';'
+                    {
+                    otherlv_31=(Token)match(input,29,FOLLOW_29_in_ruleActor1344); 
+
+                        	newLeafNode(otherlv_31, grammarAccess.getActorAccess().getIncludingActorKeyword_10_0());
+                        
+                    otherlv_32=(Token)match(input,21,FOLLOW_21_in_ruleActor1356); 
+
+                        	newLeafNode(otherlv_32, grammarAccess.getActorAccess().getEqualsSignKeyword_10_1());
+                        
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:664:1: ( (otherlv_33= RULE_ID ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:665:1: (otherlv_33= RULE_ID )
+                    {
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:665:1: (otherlv_33= RULE_ID )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:666:3: otherlv_33= RULE_ID
+                    {
+
+                    			if (current==null) {
+                    	            current = createModelElement(grammarAccess.getActorRule());
+                    	        }
+                            
+                    otherlv_33=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleActor1376); 
+
+                    		newLeafNode(otherlv_33, grammarAccess.getActorAccess().getIncludedActorsActorCrossReference_10_2_0()); 
+                    	
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:677:2: (otherlv_34= ',' ( (otherlv_35= RULE_ID ) ) )*
+                    loop13:
+                    do {
+                        int alt13=2;
+                        int LA13_0 = input.LA(1);
+
+                        if ( (LA13_0==30) ) {
+                            alt13=1;
+                        }
+
+
+                        switch (alt13) {
+                    	case 1 :
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:677:4: otherlv_34= ',' ( (otherlv_35= RULE_ID ) )
+                    	    {
+                    	    otherlv_34=(Token)match(input,30,FOLLOW_30_in_ruleActor1389); 
+
+                    	        	newLeafNode(otherlv_34, grammarAccess.getActorAccess().getCommaKeyword_10_3_0());
+                    	        
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:681:1: ( (otherlv_35= RULE_ID ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:682:1: (otherlv_35= RULE_ID )
+                    	    {
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:682:1: (otherlv_35= RULE_ID )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:683:3: otherlv_35= RULE_ID
+                    	    {
+
+                    	    			if (current==null) {
+                    	    	            current = createModelElement(grammarAccess.getActorRule());
+                    	    	        }
+                    	            
+                    	    otherlv_35=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleActor1409); 
+
+                    	    		newLeafNode(otherlv_35, grammarAccess.getActorAccess().getIncludedActorsActorCrossReference_10_3_1_0()); 
+                    	    	
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop13;
+                        }
+                    } while (true);
+
+                    otherlv_36=(Token)match(input,22,FOLLOW_22_in_ruleActor1423); 
+
+                        	newLeafNode(otherlv_36, grammarAccess.getActorAccess().getSemicolonKeyword_10_4());
+                        
+
+                    }
+                    break;
+
+            }
+
+            otherlv_37=(Token)match(input,14,FOLLOW_14_in_ruleActor1437); 
+
+                	newLeafNode(otherlv_37, grammarAccess.getActorAccess().getRightCurlyBracketKeyword_11());
                 
 
             }
@@ -1009,7 +1548,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIntentionalElement"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:458:1: entryRuleIntentionalElement returns [EObject current=null] : iv_ruleIntentionalElement= ruleIntentionalElement EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:710:1: entryRuleIntentionalElement returns [EObject current=null] : iv_ruleIntentionalElement= ruleIntentionalElement EOF ;
     public final EObject entryRuleIntentionalElement() throws RecognitionException {
         EObject current = null;
 
@@ -1017,17 +1556,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:459:2: (iv_ruleIntentionalElement= ruleIntentionalElement EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:460:2: iv_ruleIntentionalElement= ruleIntentionalElement EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:711:2: (iv_ruleIntentionalElement= ruleIntentionalElement EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:712:2: iv_ruleIntentionalElement= ruleIntentionalElement EOF
             {
              newCompositeNode(grammarAccess.getIntentionalElementRule()); 
-            pushFollow(FOLLOW_ruleIntentionalElement_in_entryRuleIntentionalElement953);
+            pushFollow(FOLLOW_ruleIntentionalElement_in_entryRuleIntentionalElement1473);
             iv_ruleIntentionalElement=ruleIntentionalElement();
 
             state._fsp--;
 
              current =iv_ruleIntentionalElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIntentionalElement963); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIntentionalElement1483); 
 
             }
 
@@ -1045,7 +1584,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIntentionalElement"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:467:1: ruleIntentionalElement returns [EObject current=null] : (otherlv_0= 'intentionalElement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:719:1: ruleIntentionalElement returns [EObject current=null] : (otherlv_0= 'intentionalElement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' ) ;
     public final EObject ruleIntentionalElement() throws RecognitionException {
         EObject current = null;
 
@@ -1057,23 +1596,23 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:470:28: ( (otherlv_0= 'intentionalElement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:471:1: (otherlv_0= 'intentionalElement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:722:28: ( (otherlv_0= 'intentionalElement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:723:1: (otherlv_0= 'intentionalElement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:471:1: (otherlv_0= 'intentionalElement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:471:3: otherlv_0= 'intentionalElement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:723:1: (otherlv_0= 'intentionalElement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:723:3: otherlv_0= 'intentionalElement' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}'
             {
-            otherlv_0=(Token)match(input,20,FOLLOW_20_in_ruleIntentionalElement1000); 
+            otherlv_0=(Token)match(input,31,FOLLOW_31_in_ruleIntentionalElement1520); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getIntentionalElementAccess().getIntentionalElementKeyword_0());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:475:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:476:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:727:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:728:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:476:1: (lv_name_1_0= RULE_ID )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:477:3: lv_name_1_0= RULE_ID
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:728:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:729:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleIntentionalElement1017); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleIntentionalElement1537); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getIntentionalElementAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -1093,11 +1632,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,13,FOLLOW_13_in_ruleIntentionalElement1034); 
+            otherlv_2=(Token)match(input,13,FOLLOW_13_in_ruleIntentionalElement1554); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getIntentionalElementAccess().getLeftCurlyBracketKeyword_2());
                 
-            otherlv_3=(Token)match(input,14,FOLLOW_14_in_ruleIntentionalElement1046); 
+            otherlv_3=(Token)match(input,14,FOLLOW_14_in_ruleIntentionalElement1566); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getIntentionalElementAccess().getRightCurlyBracketKeyword_3());
                 
@@ -1122,7 +1661,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleImpactModel"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:509:1: entryRuleImpactModel returns [EObject current=null] : iv_ruleImpactModel= ruleImpactModel EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:761:1: entryRuleImpactModel returns [EObject current=null] : iv_ruleImpactModel= ruleImpactModel EOF ;
     public final EObject entryRuleImpactModel() throws RecognitionException {
         EObject current = null;
 
@@ -1130,17 +1669,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:510:2: (iv_ruleImpactModel= ruleImpactModel EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:511:2: iv_ruleImpactModel= ruleImpactModel EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:762:2: (iv_ruleImpactModel= ruleImpactModel EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:763:2: iv_ruleImpactModel= ruleImpactModel EOF
             {
              newCompositeNode(grammarAccess.getImpactModelRule()); 
-            pushFollow(FOLLOW_ruleImpactModel_in_entryRuleImpactModel1082);
+            pushFollow(FOLLOW_ruleImpactModel_in_entryRuleImpactModel1602);
             iv_ruleImpactModel=ruleImpactModel();
 
             state._fsp--;
 
              current =iv_ruleImpactModel; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleImpactModel1092); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleImpactModel1612); 
 
             }
 
@@ -1158,7 +1697,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImpactModel"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:518:1: ruleImpactModel returns [EObject current=null] : (otherlv_0= 'impactModel' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:770:1: ruleImpactModel returns [EObject current=null] : (otherlv_0= 'impactModel' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' ) ;
     public final EObject ruleImpactModel() throws RecognitionException {
         EObject current = null;
 
@@ -1170,23 +1709,23 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:521:28: ( (otherlv_0= 'impactModel' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:522:1: (otherlv_0= 'impactModel' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:773:28: ( (otherlv_0= 'impactModel' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:774:1: (otherlv_0= 'impactModel' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:522:1: (otherlv_0= 'impactModel' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:522:3: otherlv_0= 'impactModel' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:774:1: (otherlv_0= 'impactModel' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:774:3: otherlv_0= 'impactModel' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}'
             {
-            otherlv_0=(Token)match(input,21,FOLLOW_21_in_ruleImpactModel1129); 
+            otherlv_0=(Token)match(input,32,FOLLOW_32_in_ruleImpactModel1649); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getImpactModelAccess().getImpactModelKeyword_0());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:526:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:527:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:778:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:779:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:527:1: (lv_name_1_0= RULE_ID )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:528:3: lv_name_1_0= RULE_ID
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:779:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:780:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleImpactModel1146); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleImpactModel1666); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getImpactModelAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -1206,11 +1745,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,13,FOLLOW_13_in_ruleImpactModel1163); 
+            otherlv_2=(Token)match(input,13,FOLLOW_13_in_ruleImpactModel1683); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getImpactModelAccess().getLeftCurlyBracketKeyword_2());
                 
-            otherlv_3=(Token)match(input,14,FOLLOW_14_in_ruleImpactModel1175); 
+            otherlv_3=(Token)match(input,14,FOLLOW_14_in_ruleImpactModel1695); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getImpactModelAccess().getRightCurlyBracketKeyword_3());
                 
@@ -1232,6 +1771,140 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
         return current;
     }
     // $ANTLR end "ruleImpactModel"
+
+
+    // $ANTLR start "ruleImportanceType"
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:814:1: ruleImportanceType returns [Enumerator current=null] : ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'high' ) | (enumLiteral_2= 'medium' ) | (enumLiteral_3= 'low' ) ) ;
+    public final Enumerator ruleImportanceType() throws RecognitionException {
+        Enumerator current = null;
+
+        Token enumLiteral_0=null;
+        Token enumLiteral_1=null;
+        Token enumLiteral_2=null;
+        Token enumLiteral_3=null;
+
+         enterRule(); 
+        try {
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:816:28: ( ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'high' ) | (enumLiteral_2= 'medium' ) | (enumLiteral_3= 'low' ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:817:1: ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'high' ) | (enumLiteral_2= 'medium' ) | (enumLiteral_3= 'low' ) )
+            {
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:817:1: ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'high' ) | (enumLiteral_2= 'medium' ) | (enumLiteral_3= 'low' ) )
+            int alt15=4;
+            switch ( input.LA(1) ) {
+            case 33:
+                {
+                alt15=1;
+                }
+                break;
+            case 34:
+                {
+                alt15=2;
+                }
+                break;
+            case 35:
+                {
+                alt15=3;
+                }
+                break;
+            case 36:
+                {
+                alt15=4;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 15, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt15) {
+                case 1 :
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:817:2: (enumLiteral_0= 'none' )
+                    {
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:817:2: (enumLiteral_0= 'none' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:817:4: enumLiteral_0= 'none'
+                    {
+                    enumLiteral_0=(Token)match(input,33,FOLLOW_33_in_ruleImportanceType1747); 
+
+                            current = grammarAccess.getImportanceTypeAccess().getNoneEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_0, grammarAccess.getImportanceTypeAccess().getNoneEnumLiteralDeclaration_0()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:823:6: (enumLiteral_1= 'high' )
+                    {
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:823:6: (enumLiteral_1= 'high' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:823:8: enumLiteral_1= 'high'
+                    {
+                    enumLiteral_1=(Token)match(input,34,FOLLOW_34_in_ruleImportanceType1764); 
+
+                            current = grammarAccess.getImportanceTypeAccess().getHighEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_1, grammarAccess.getImportanceTypeAccess().getHighEnumLiteralDeclaration_1()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:829:6: (enumLiteral_2= 'medium' )
+                    {
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:829:6: (enumLiteral_2= 'medium' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:829:8: enumLiteral_2= 'medium'
+                    {
+                    enumLiteral_2=(Token)match(input,35,FOLLOW_35_in_ruleImportanceType1781); 
+
+                            current = grammarAccess.getImportanceTypeAccess().getMediumEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_2, grammarAccess.getImportanceTypeAccess().getMediumEnumLiteralDeclaration_2()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:835:6: (enumLiteral_3= 'low' )
+                    {
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:835:6: (enumLiteral_3= 'low' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:835:8: enumLiteral_3= 'low'
+                    {
+                    enumLiteral_3=(Token)match(input,36,FOLLOW_36_in_ruleImportanceType1798); 
+
+                            current = grammarAccess.getImportanceTypeAccess().getLowEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_3, grammarAccess.getImportanceTypeAccess().getLowEnumLiteralDeclaration_3()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleImportanceType"
 
     // Delegated rules
 
@@ -1260,10 +1933,10 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleGRLspec_in_entryRuleGRLspec500 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleGRLspec510 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_17_in_ruleGRLspec547 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleGRLspec559 = new BitSet(new long[]{0x00000000003C4000L});
-    public static final BitSet FOLLOW_ruleElementLink_in_ruleGRLspec580 = new BitSet(new long[]{0x00000000003C4000L});
-    public static final BitSet FOLLOW_ruleActor_in_ruleGRLspec602 = new BitSet(new long[]{0x0000000000384000L});
-    public static final BitSet FOLLOW_ruleIntentionalElement_in_ruleGRLspec624 = new BitSet(new long[]{0x0000000000304000L});
+    public static final BitSet FOLLOW_13_in_ruleGRLspec559 = new BitSet(new long[]{0x00000001800C4000L});
+    public static final BitSet FOLLOW_ruleElementLink_in_ruleGRLspec580 = new BitSet(new long[]{0x00000001800C4000L});
+    public static final BitSet FOLLOW_ruleActor_in_ruleGRLspec602 = new BitSet(new long[]{0x0000000180084000L});
+    public static final BitSet FOLLOW_ruleIntentionalElement_in_ruleGRLspec624 = new BitSet(new long[]{0x0000000180004000L});
     public static final BitSet FOLLOW_ruleImpactModel_in_ruleGRLspec646 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_14_in_ruleGRLspec659 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleElementLink_in_entryRuleElementLink695 = new BitSet(new long[]{0x0000000000000000L});
@@ -1276,19 +1949,57 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleActor834 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_19_in_ruleActor871 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleActor888 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleActor905 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleActor917 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIntentionalElement_in_entryRuleIntentionalElement953 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIntentionalElement963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleIntentionalElement1000 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleIntentionalElement1017 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleIntentionalElement1034 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleIntentionalElement1046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImpactModel_in_entryRuleImpactModel1082 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleImpactModel1092 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_ruleImpactModel1129 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleImpactModel1146 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleImpactModel1163 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleImpactModel1175 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_ruleActor905 = new BitSet(new long[]{0x000000003F904000L});
+    public static final BitSet FOLLOW_20_in_ruleActor918 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleActor930 = new BitSet(new long[]{0x0000001E00000000L});
+    public static final BitSet FOLLOW_ruleImportanceType_in_ruleActor951 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22_in_ruleActor963 = new BitSet(new long[]{0x000000003F804000L});
+    public static final BitSet FOLLOW_23_in_ruleActor978 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleActor990 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleActor1007 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22_in_ruleActor1024 = new BitSet(new long[]{0x000000003F004000L});
+    public static final BitSet FOLLOW_24_in_ruleActor1039 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleActor1051 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleActor1068 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22_in_ruleActor1085 = new BitSet(new long[]{0x000000003E004000L});
+    public static final BitSet FOLLOW_25_in_ruleActor1100 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleActor1112 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleActor1129 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22_in_ruleActor1146 = new BitSet(new long[]{0x000000003C004000L});
+    public static final BitSet FOLLOW_26_in_ruleActor1161 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleActor1173 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_BOOLEAN_in_ruleActor1190 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22_in_ruleActor1207 = new BitSet(new long[]{0x0000000038004000L});
+    public static final BitSet FOLLOW_27_in_ruleActor1222 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleActor1234 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleActor1251 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22_in_ruleActor1268 = new BitSet(new long[]{0x0000000030004000L});
+    public static final BitSet FOLLOW_28_in_ruleActor1283 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleActor1295 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleActor1312 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22_in_ruleActor1329 = new BitSet(new long[]{0x0000000020004000L});
+    public static final BitSet FOLLOW_29_in_ruleActor1344 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleActor1356 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleActor1376 = new BitSet(new long[]{0x0000000040400000L});
+    public static final BitSet FOLLOW_30_in_ruleActor1389 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleActor1409 = new BitSet(new long[]{0x0000000040400000L});
+    public static final BitSet FOLLOW_22_in_ruleActor1423 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleActor1437 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIntentionalElement_in_entryRuleIntentionalElement1473 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIntentionalElement1483 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleIntentionalElement1520 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleIntentionalElement1537 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_ruleIntentionalElement1554 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleIntentionalElement1566 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImpactModel_in_entryRuleImpactModel1602 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleImpactModel1612 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleImpactModel1649 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleImpactModel1666 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_ruleImpactModel1683 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleImpactModel1695 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleImportanceType1747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_ruleImportanceType1764 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleImportanceType1781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleImportanceType1798 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -443,9 +443,261 @@ ruleActor returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getActorAccess().getLeftCurlyBracketKeyword_2());
     }
-	otherlv_3='}' 
+(	otherlv_3='importance' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getActorAccess().getRightCurlyBracketKeyword_3());
+    	newLeafNode(otherlv_3, grammarAccess.getActorAccess().getImportanceKeyword_3_0());
+    }
+	otherlv_4='=' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getActorAccess().getEqualsSignKeyword_3_1());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getActorAccess().getImportanceImportanceTypeEnumRuleCall_3_2_0()); 
+	    }
+		lv_importance_5_0=ruleImportanceType		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getActorRule());
+	        }
+       		set(
+       			$current, 
+       			"importance",
+        		lv_importance_5_0, 
+        		"ImportanceType");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_6=';' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getActorAccess().getSemicolonKeyword_3_3());
+    }
+)?(	otherlv_7='importanceQuantitative' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getActorAccess().getImportanceQuantitativeKeyword_4_0());
+    }
+	otherlv_8='=' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getActorAccess().getEqualsSignKeyword_4_1());
+    }
+(
+(
+		lv_importanceQuantitative_9_0=RULE_INT
+		{
+			newLeafNode(lv_importanceQuantitative_9_0, grammarAccess.getActorAccess().getImportanceQuantitativeINTTerminalRuleCall_4_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActorRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"importanceQuantitative",
+        		lv_importanceQuantitative_9_0, 
+        		"INT");
+	    }
+
+)
+)	otherlv_10=';' 
+    {
+    	newLeafNode(otherlv_10, grammarAccess.getActorAccess().getSemicolonKeyword_4_3());
+    }
+)?(	otherlv_11='lineColor' 
+    {
+    	newLeafNode(otherlv_11, grammarAccess.getActorAccess().getLineColorKeyword_5_0());
+    }
+	otherlv_12='=' 
+    {
+    	newLeafNode(otherlv_12, grammarAccess.getActorAccess().getEqualsSignKeyword_5_1());
+    }
+(
+(
+		lv_lineColor_13_0=RULE_STRING
+		{
+			newLeafNode(lv_lineColor_13_0, grammarAccess.getActorAccess().getLineColorSTRINGTerminalRuleCall_5_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActorRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"lineColor",
+        		lv_lineColor_13_0, 
+        		"STRING");
+	    }
+
+)
+)	otherlv_14=';' 
+    {
+    	newLeafNode(otherlv_14, grammarAccess.getActorAccess().getSemicolonKeyword_5_3());
+    }
+)?(	otherlv_15='fillColor' 
+    {
+    	newLeafNode(otherlv_15, grammarAccess.getActorAccess().getFillColorKeyword_6_0());
+    }
+	otherlv_16='=' 
+    {
+    	newLeafNode(otherlv_16, grammarAccess.getActorAccess().getEqualsSignKeyword_6_1());
+    }
+(
+(
+		lv_fillColor_17_0=RULE_STRING
+		{
+			newLeafNode(lv_fillColor_17_0, grammarAccess.getActorAccess().getFillColorSTRINGTerminalRuleCall_6_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActorRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"fillColor",
+        		lv_fillColor_17_0, 
+        		"STRING");
+	    }
+
+)
+)	otherlv_18=';' 
+    {
+    	newLeafNode(otherlv_18, grammarAccess.getActorAccess().getSemicolonKeyword_6_3());
+    }
+)?(	otherlv_19='filled' 
+    {
+    	newLeafNode(otherlv_19, grammarAccess.getActorAccess().getFilledKeyword_7_0());
+    }
+	otherlv_20='=' 
+    {
+    	newLeafNode(otherlv_20, grammarAccess.getActorAccess().getEqualsSignKeyword_7_1());
+    }
+(
+(
+		lv_filled_21_0=RULE_BOOLEAN
+		{
+			newLeafNode(lv_filled_21_0, grammarAccess.getActorAccess().getFilledBOOLEANTerminalRuleCall_7_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActorRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"filled",
+        		lv_filled_21_0, 
+        		"BOOLEAN");
+	    }
+
+)
+)	otherlv_22=';' 
+    {
+    	newLeafNode(otherlv_22, grammarAccess.getActorAccess().getSemicolonKeyword_7_3());
+    }
+)?(	otherlv_23='id' 
+    {
+    	newLeafNode(otherlv_23, grammarAccess.getActorAccess().getIdKeyword_8_0());
+    }
+	otherlv_24='=' 
+    {
+    	newLeafNode(otherlv_24, grammarAccess.getActorAccess().getEqualsSignKeyword_8_1());
+    }
+(
+(
+		lv_id_25_0=RULE_ID
+		{
+			newLeafNode(lv_id_25_0, grammarAccess.getActorAccess().getIdIDTerminalRuleCall_8_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActorRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"id",
+        		lv_id_25_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_26=';' 
+    {
+    	newLeafNode(otherlv_26, grammarAccess.getActorAccess().getSemicolonKeyword_8_3());
+    }
+)?(	otherlv_27='description' 
+    {
+    	newLeafNode(otherlv_27, grammarAccess.getActorAccess().getDescriptionKeyword_9_0());
+    }
+	otherlv_28='=' 
+    {
+    	newLeafNode(otherlv_28, grammarAccess.getActorAccess().getEqualsSignKeyword_9_1());
+    }
+(
+(
+		lv_description_29_0=RULE_STRING
+		{
+			newLeafNode(lv_description_29_0, grammarAccess.getActorAccess().getDescriptionSTRINGTerminalRuleCall_9_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActorRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"description",
+        		lv_description_29_0, 
+        		"STRING");
+	    }
+
+)
+)	otherlv_30=';' 
+    {
+    	newLeafNode(otherlv_30, grammarAccess.getActorAccess().getSemicolonKeyword_9_3());
+    }
+)?(	otherlv_31='includingActor' 
+    {
+    	newLeafNode(otherlv_31, grammarAccess.getActorAccess().getIncludingActorKeyword_10_0());
+    }
+	otherlv_32='=' 
+    {
+    	newLeafNode(otherlv_32, grammarAccess.getActorAccess().getEqualsSignKeyword_10_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActorRule());
+	        }
+        }
+	otherlv_33=RULE_ID
+	{
+		newLeafNode(otherlv_33, grammarAccess.getActorAccess().getIncludedActorsActorCrossReference_10_2_0()); 
+	}
+
+)
+)(	otherlv_34=',' 
+    {
+    	newLeafNode(otherlv_34, grammarAccess.getActorAccess().getCommaKeyword_10_3_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActorRule());
+	        }
+        }
+	otherlv_35=RULE_ID
+	{
+		newLeafNode(otherlv_35, grammarAccess.getActorAccess().getIncludedActorsActorCrossReference_10_3_1_0()); 
+	}
+
+)
+))*	otherlv_36=';' 
+    {
+    	newLeafNode(otherlv_36, grammarAccess.getActorAccess().getSemicolonKeyword_10_4());
+    }
+)?	otherlv_37='}' 
+    {
+    	newLeafNode(otherlv_37, grammarAccess.getActorAccess().getRightCurlyBracketKeyword_11());
     }
 )
 ;
@@ -557,6 +809,35 @@ ruleImpactModel returns [EObject current=null]
 
 
 
+
+// Rule ImportanceType
+ruleImportanceType returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='none' 
+	{
+        $current = grammarAccess.getImportanceTypeAccess().getNoneEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getImportanceTypeAccess().getNoneEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='high' 
+	{
+        $current = grammarAccess.getImportanceTypeAccess().getHighEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getImportanceTypeAccess().getHighEnumLiteralDeclaration_1()); 
+    }
+)
+    |(	enumLiteral_2='medium' 
+	{
+        $current = grammarAccess.getImportanceTypeAccess().getMediumEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getImportanceTypeAccess().getMediumEnumLiteralDeclaration_2()); 
+    }
+)
+    |(	enumLiteral_3='low' 
+	{
+        $current = grammarAccess.getImportanceTypeAccess().getLowEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_3, grammarAccess.getImportanceTypeAccess().getLowEnumLiteralDeclaration_3()); 
+    }
+));
 
 
 

@@ -101,7 +101,17 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     (
+	 *         name=ID 
+	 *         importance=ImportanceType? 
+	 *         importanceQuantitative=INT? 
+	 *         lineColor=STRING? 
+	 *         fillColor=STRING? 
+	 *         filled=BOOLEAN? 
+	 *         id=ID? 
+	 *         description=STRING? 
+	 *         (includedActors+=[Actor|ID] includedActors+=[Actor|ID]*)?
+	 *     )
 	 */
 	protected void sequence_Actor(EObject context, Actor semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -12,23 +12,38 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalTGRLLexer extends Lexer {
-    public static final int RULE_BOOLEAN=5;
-    public static final int RULE_STRING=7;
+    public static final int RULE_BOOLEAN=7;
+    public static final int RULE_STRING=6;
     public static final int RULE_SL_COMMENT=9;
     public static final int T__19=19;
     public static final int T__15=15;
     public static final int T__16=16;
     public static final int T__17=17;
     public static final int T__18=18;
+    public static final int T__33=33;
     public static final int T__12=12;
+    public static final int T__34=34;
     public static final int T__13=13;
+    public static final int T__35=35;
     public static final int T__14=14;
+    public static final int T__36=36;
     public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
     public static final int RULE_ID=4;
     public static final int RULE_WS=10;
     public static final int RULE_ANY_OTHER=11;
-    public static final int RULE_INT=6;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int RULE_INT=5;
+    public static final int T__29=29;
+    public static final int T__22=22;
     public static final int RULE_ML_COMMENT=8;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
     public static final int T__20=20;
     public static final int T__21=21;
 
@@ -216,10 +231,10 @@ public class InternalTGRLLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:19:7: ( 'intentionalElement' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:19:9: 'intentionalElement'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:19:7: ( 'importance' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:19:9: 'importance'
             {
-            match("intentionalElement"); 
+            match("importance"); 
 
 
             }
@@ -237,8 +252,236 @@ public class InternalTGRLLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:20:7: ( 'impactModel' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:20:9: 'impactModel'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:20:7: ( '=' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:20:9: '='
+            {
+            match('='); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__21"
+
+    // $ANTLR start "T__22"
+    public final void mT__22() throws RecognitionException {
+        try {
+            int _type = T__22;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:21:7: ( ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:21:9: ';'
+            {
+            match(';'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__22"
+
+    // $ANTLR start "T__23"
+    public final void mT__23() throws RecognitionException {
+        try {
+            int _type = T__23;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:22:7: ( 'importanceQuantitative' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:22:9: 'importanceQuantitative'
+            {
+            match("importanceQuantitative"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__23"
+
+    // $ANTLR start "T__24"
+    public final void mT__24() throws RecognitionException {
+        try {
+            int _type = T__24;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:23:7: ( 'lineColor' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:23:9: 'lineColor'
+            {
+            match("lineColor"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__24"
+
+    // $ANTLR start "T__25"
+    public final void mT__25() throws RecognitionException {
+        try {
+            int _type = T__25;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:24:7: ( 'fillColor' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:24:9: 'fillColor'
+            {
+            match("fillColor"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__25"
+
+    // $ANTLR start "T__26"
+    public final void mT__26() throws RecognitionException {
+        try {
+            int _type = T__26;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:25:7: ( 'filled' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:25:9: 'filled'
+            {
+            match("filled"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__26"
+
+    // $ANTLR start "T__27"
+    public final void mT__27() throws RecognitionException {
+        try {
+            int _type = T__27;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:26:7: ( 'id' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:26:9: 'id'
+            {
+            match("id"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__27"
+
+    // $ANTLR start "T__28"
+    public final void mT__28() throws RecognitionException {
+        try {
+            int _type = T__28;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:27:7: ( 'description' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:27:9: 'description'
+            {
+            match("description"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__28"
+
+    // $ANTLR start "T__29"
+    public final void mT__29() throws RecognitionException {
+        try {
+            int _type = T__29;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:28:7: ( 'includingActor' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:28:9: 'includingActor'
+            {
+            match("includingActor"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__29"
+
+    // $ANTLR start "T__30"
+    public final void mT__30() throws RecognitionException {
+        try {
+            int _type = T__30;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:29:7: ( ',' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:29:9: ','
+            {
+            match(','); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__30"
+
+    // $ANTLR start "T__31"
+    public final void mT__31() throws RecognitionException {
+        try {
+            int _type = T__31;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:30:7: ( 'intentionalElement' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:30:9: 'intentionalElement'
+            {
+            match("intentionalElement"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__31"
+
+    // $ANTLR start "T__32"
+    public final void mT__32() throws RecognitionException {
+        try {
+            int _type = T__32;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:31:7: ( 'impactModel' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:31:9: 'impactModel'
             {
             match("impactModel"); 
 
@@ -251,17 +494,101 @@ public class InternalTGRLLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__21"
+    // $ANTLR end "T__32"
+
+    // $ANTLR start "T__33"
+    public final void mT__33() throws RecognitionException {
+        try {
+            int _type = T__33;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:32:7: ( 'none' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:32:9: 'none'
+            {
+            match("none"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__33"
+
+    // $ANTLR start "T__34"
+    public final void mT__34() throws RecognitionException {
+        try {
+            int _type = T__34;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:33:7: ( 'high' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:33:9: 'high'
+            {
+            match("high"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__34"
+
+    // $ANTLR start "T__35"
+    public final void mT__35() throws RecognitionException {
+        try {
+            int _type = T__35;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:34:7: ( 'medium' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:34:9: 'medium'
+            {
+            match("medium"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__35"
+
+    // $ANTLR start "T__36"
+    public final void mT__36() throws RecognitionException {
+        try {
+            int _type = T__36;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:35:7: ( 'low' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:35:9: 'low'
+            {
+            match("low"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__36"
 
     // $ANTLR start "RULE_BOOLEAN"
     public final void mRULE_BOOLEAN() throws RecognitionException {
         try {
             int _type = RULE_BOOLEAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:567:14: ( ( 'false' | 'true' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:567:16: ( 'false' | 'true' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:848:14: ( ( 'false' | 'true' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:848:16: ( 'false' | 'true' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:567:16: ( 'false' | 'true' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:848:16: ( 'false' | 'true' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -279,7 +606,7 @@ public class InternalTGRLLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:567:17: 'false'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:848:17: 'false'
                     {
                     match("false"); 
 
@@ -287,7 +614,7 @@ public class InternalTGRLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:567:25: 'true'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:848:25: 'true'
                     {
                     match("true"); 
 
@@ -313,10 +640,10 @@ public class InternalTGRLLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:569:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:569:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:850:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:850:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:569:11: ( '^' )?
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:850:11: ( '^' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -325,7 +652,7 @@ public class InternalTGRLLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:569:11: '^'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:850:11: '^'
                     {
                     match('^'); 
 
@@ -343,7 +670,7 @@ public class InternalTGRLLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:569:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:850:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -392,10 +719,10 @@ public class InternalTGRLLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:571:10: ( ( '0' .. '9' )+ )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:571:12: ( '0' .. '9' )+
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:852:10: ( ( '0' .. '9' )+ )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:852:12: ( '0' .. '9' )+
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:571:12: ( '0' .. '9' )+
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:852:12: ( '0' .. '9' )+
             int cnt4=0;
             loop4:
             do {
@@ -409,7 +736,7 @@ public class InternalTGRLLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:571:13: '0' .. '9'
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:852:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -441,10 +768,10 @@ public class InternalTGRLLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:573:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:573:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:854:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:854:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:573:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:854:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -462,10 +789,10 @@ public class InternalTGRLLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:573:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:854:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:573:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:854:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -481,7 +808,7 @@ public class InternalTGRLLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:573:21: '\\\\' .
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:854:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -489,7 +816,7 @@ public class InternalTGRLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:573:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:854:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -514,10 +841,10 @@ public class InternalTGRLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:573:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:854:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:573:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:854:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -533,7 +860,7 @@ public class InternalTGRLLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:573:54: '\\\\' .
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:854:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -541,7 +868,7 @@ public class InternalTGRLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:573:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:854:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -584,12 +911,12 @@ public class InternalTGRLLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:575:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:575:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:856:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:856:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:575:24: ( options {greedy=false; } : . )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:856:24: ( options {greedy=false; } : . )*
             loop8:
             do {
                 int alt8=2;
@@ -614,7 +941,7 @@ public class InternalTGRLLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:575:52: .
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:856:52: .
             	    {
             	    matchAny(); 
 
@@ -644,12 +971,12 @@ public class InternalTGRLLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:577:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:577:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:858:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:858:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:577:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:858:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop9:
             do {
                 int alt9=2;
@@ -662,7 +989,7 @@ public class InternalTGRLLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:577:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:858:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -682,7 +1009,7 @@ public class InternalTGRLLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:577:40: ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:858:40: ( ( '\\r' )? '\\n' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -691,9 +1018,9 @@ public class InternalTGRLLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:577:41: ( '\\r' )? '\\n'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:858:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:577:41: ( '\\r' )?
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:858:41: ( '\\r' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -702,7 +1029,7 @@ public class InternalTGRLLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:577:41: '\\r'
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:858:41: '\\r'
                             {
                             match('\r'); 
 
@@ -734,10 +1061,10 @@ public class InternalTGRLLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:579:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:579:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:860:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:860:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:579:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:860:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt12=0;
             loop12:
             do {
@@ -791,8 +1118,8 @@ public class InternalTGRLLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:581:16: ( . )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:581:18: .
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:862:16: ( . )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:862:18: .
             {
             matchAny(); 
 
@@ -807,8 +1134,8 @@ public class InternalTGRLLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | RULE_BOOLEAN | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt13=18;
+        // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | RULE_BOOLEAN | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt13=33;
         alt13 = dfa13.predict(input);
         switch (alt13) {
             case 1 :
@@ -882,56 +1209,161 @@ public class InternalTGRLLexer extends Lexer {
                 }
                 break;
             case 11 :
-                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:70: RULE_BOOLEAN
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:70: T__22
+                {
+                mT__22(); 
+
+                }
+                break;
+            case 12 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:76: T__23
+                {
+                mT__23(); 
+
+                }
+                break;
+            case 13 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:82: T__24
+                {
+                mT__24(); 
+
+                }
+                break;
+            case 14 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:88: T__25
+                {
+                mT__25(); 
+
+                }
+                break;
+            case 15 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:94: T__26
+                {
+                mT__26(); 
+
+                }
+                break;
+            case 16 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:100: T__27
+                {
+                mT__27(); 
+
+                }
+                break;
+            case 17 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:106: T__28
+                {
+                mT__28(); 
+
+                }
+                break;
+            case 18 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:112: T__29
+                {
+                mT__29(); 
+
+                }
+                break;
+            case 19 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:118: T__30
+                {
+                mT__30(); 
+
+                }
+                break;
+            case 20 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:124: T__31
+                {
+                mT__31(); 
+
+                }
+                break;
+            case 21 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:130: T__32
+                {
+                mT__32(); 
+
+                }
+                break;
+            case 22 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:136: T__33
+                {
+                mT__33(); 
+
+                }
+                break;
+            case 23 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:142: T__34
+                {
+                mT__34(); 
+
+                }
+                break;
+            case 24 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:148: T__35
+                {
+                mT__35(); 
+
+                }
+                break;
+            case 25 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:154: T__36
+                {
+                mT__36(); 
+
+                }
+                break;
+            case 26 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:160: RULE_BOOLEAN
                 {
                 mRULE_BOOLEAN(); 
 
                 }
                 break;
-            case 12 :
-                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:83: RULE_ID
+            case 27 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:173: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 13 :
-                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:91: RULE_INT
+            case 28 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:181: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 14 :
-                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:100: RULE_STRING
+            case 29 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:190: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 15 :
-                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:112: RULE_ML_COMMENT
+            case 30 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:202: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 16 :
-                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:128: RULE_SL_COMMENT
+            case 31 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:218: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 17 :
-                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:144: RULE_WS
+            case 32 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:234: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 18 :
-                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:152: RULE_ANY_OTHER
+            case 33 :
+                // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:1:242: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -945,129 +1377,138 @@ public class InternalTGRLLexer extends Lexer {
 
     protected DFA13 dfa13 = new DFA13(this);
     static final String DFA13_eotS =
-        "\1\uffff\1\24\2\uffff\7\24\1\22\2\uffff\3\22\2\uffff\1\24\3\uffff"+
-        "\11\24\5\uffff\4\24\1\63\11\24\1\uffff\4\24\1\101\3\24\1\105\3\24"+
-        "\1\101\1\uffff\3\24\1\uffff\3\24\1\117\1\24\1\121\3\24\1\uffff\1"+
-        "\24\1\uffff\16\24\1\144\1\24\1\146\1\24\1\uffff\1\150\1\uffff\1"+
-        "\24\1\uffff\4\24\1\156\1\uffff";
+        "\1\uffff\1\34\2\uffff\5\34\2\uffff\3\34\1\uffff\4\34\1\32\2\uffff"+
+        "\3\32\2\uffff\1\34\3\uffff\6\34\1\77\1\34\2\uffff\5\34\1\uffff\4"+
+        "\34\5\uffff\4\34\1\117\2\34\1\uffff\3\34\1\126\13\34\1\uffff\6\34"+
+        "\1\uffff\3\34\1\154\1\155\1\34\1\157\3\34\1\163\10\34\1\157\1\34"+
+        "\2\uffff\1\34\1\uffff\3\34\1\uffff\7\34\1\u0088\1\34\1\u008a\1\u008b"+
+        "\1\34\1\u008d\7\34\1\uffff\1\34\2\uffff\1\34\1\uffff\16\34\1\u00a5"+
+        "\1\u00a6\3\34\1\u00ab\3\34\2\uffff\4\34\1\uffff\1\u00b3\2\34\1\u00b6"+
+        "\1\34\1\u00b8\1\34\1\uffff\2\34\1\uffff\1\u00bc\1\uffff\3\34\1\uffff"+
+        "\1\34\1\u00c1\2\34\1\uffff\6\34\1\u00ca\1\34\1\uffff\2\34\1\u00ce"+
+        "\1\uffff";
     static final String DFA13_eofS =
-        "\157\uffff";
+        "\u00cf\uffff";
     static final String DFA13_minS =
-        "\1\0\1\162\2\uffff\1\122\1\143\1\162\1\154\1\155\1\141\1\162\1"+
-        "\101\2\uffff\2\0\1\52\2\uffff\1\156\3\uffff\1\116\1\144\1\164\1"+
-        "\154\1\145\1\164\1\160\1\154\1\165\5\uffff\1\163\1\144\1\163\1\157"+
-        "\1\60\1\155\1\145\1\141\1\163\1\145\1\160\1\145\1\160\1\162\1\uffff"+
-        "\1\145\1\156\1\143\1\145\1\60\1\145\1\146\1\145\1\60\1\156\2\164"+
-        "\1\60\1\uffff\1\143\1\151\1\143\1\uffff\1\164\1\151\1\115\1\60\1"+
-        "\156\1\60\1\164\2\157\1\uffff\1\151\1\uffff\1\114\1\156\1\144\1"+
-        "\164\1\151\1\141\1\145\1\151\1\156\2\154\1\157\1\153\1\105\1\60"+
-        "\1\156\1\60\1\154\1\uffff\1\60\1\uffff\1\145\1\uffff\1\155\1\145"+
-        "\1\156\1\164\1\60\1\uffff";
+        "\1\0\1\162\2\uffff\1\122\1\143\1\162\1\154\1\144\2\uffff\1\151"+
+        "\1\141\1\145\1\uffff\1\157\1\151\1\145\1\162\1\101\2\uffff\2\0\1"+
+        "\52\2\uffff\1\156\3\uffff\1\116\1\144\1\164\1\154\1\145\1\160\1"+
+        "\60\1\143\2\uffff\1\156\1\167\2\154\1\163\1\uffff\1\156\1\147\1"+
+        "\144\1\165\5\uffff\1\163\1\144\1\163\1\157\1\60\1\155\1\141\1\uffff"+
+        "\1\154\2\145\1\60\1\154\1\163\1\143\1\145\1\150\1\151\1\145\1\160"+
+        "\1\145\1\160\1\162\1\uffff\1\145\1\162\1\143\1\165\1\156\1\103\1"+
+        "\uffff\1\103\1\145\1\162\2\60\1\165\1\60\1\145\1\146\1\145\1\60"+
+        "\1\156\2\164\1\144\1\164\2\157\1\144\1\60\1\151\2\uffff\1\155\1"+
+        "\uffff\1\143\1\151\1\143\1\uffff\1\164\1\141\1\115\2\151\2\154\1"+
+        "\60\1\160\2\60\1\156\1\60\1\164\1\156\1\157\1\156\3\157\1\uffff"+
+        "\1\164\2\uffff\1\151\1\uffff\1\114\1\143\1\144\1\147\1\156\2\162"+
+        "\1\151\1\164\1\151\2\145\1\101\1\141\2\60\1\157\1\151\1\156\1\60"+
+        "\1\154\1\143\1\154\2\uffff\1\156\1\157\1\153\1\165\1\uffff\1\60"+
+        "\1\164\1\105\1\60\1\156\1\60\1\141\1\uffff\1\157\1\154\1\uffff\1"+
+        "\60\1\uffff\1\156\1\162\1\145\1\uffff\1\164\1\60\1\155\1\151\1\uffff"+
+        "\1\145\1\164\1\156\1\141\2\164\1\60\1\151\1\uffff\1\166\1\145\1"+
+        "\60\1\uffff";
     static final String DFA13_maxS =
-        "\1\uffff\1\162\2\uffff\1\122\1\163\1\162\1\154\1\156\1\141\1\162"+
-        "\1\172\2\uffff\2\uffff\1\57\2\uffff\1\156\3\uffff\1\116\1\144\1"+
-        "\164\1\154\1\145\1\164\1\160\1\154\1\165\5\uffff\1\163\1\144\1\163"+
-        "\1\157\1\172\1\155\1\145\1\141\1\163\1\145\1\160\1\145\1\160\1\162"+
-        "\1\uffff\1\145\1\156\1\143\1\145\1\172\1\145\1\146\1\145\1\172\1"+
-        "\156\2\164\1\172\1\uffff\1\143\1\151\1\143\1\uffff\1\164\1\151\1"+
-        "\115\1\172\1\156\1\172\1\164\2\157\1\uffff\1\151\1\uffff\1\114\1"+
-        "\156\1\144\1\164\1\151\1\141\1\145\1\151\1\156\2\154\1\157\1\153"+
-        "\1\105\1\172\1\156\1\172\1\154\1\uffff\1\172\1\uffff\1\145\1\uffff"+
-        "\1\155\1\145\1\156\1\164\1\172\1\uffff";
+        "\1\uffff\1\162\2\uffff\1\122\1\163\1\162\1\154\1\156\2\uffff\1"+
+        "\157\1\151\1\145\1\uffff\1\157\1\151\1\145\1\162\1\172\2\uffff\2"+
+        "\uffff\1\57\2\uffff\1\156\3\uffff\1\116\1\144\1\164\1\154\1\145"+
+        "\1\160\1\172\1\164\2\uffff\1\156\1\167\2\154\1\163\1\uffff\1\156"+
+        "\1\147\1\144\1\165\5\uffff\1\163\1\144\1\163\1\157\1\172\1\155\1"+
+        "\157\1\uffff\1\154\2\145\1\172\1\154\1\163\1\143\1\145\1\150\1\151"+
+        "\1\145\1\160\1\145\1\160\1\162\1\uffff\1\145\1\162\1\143\1\165\1"+
+        "\156\1\103\1\uffff\2\145\1\162\2\172\1\165\1\172\1\145\1\146\1\145"+
+        "\1\172\1\156\2\164\1\144\1\164\2\157\1\144\1\172\1\151\2\uffff\1"+
+        "\155\1\uffff\1\143\1\151\1\143\1\uffff\1\164\1\141\1\115\2\151\2"+
+        "\154\1\172\1\160\2\172\1\156\1\172\1\164\1\156\1\157\1\156\3\157"+
+        "\1\uffff\1\164\2\uffff\1\151\1\uffff\1\114\1\143\1\144\1\147\1\156"+
+        "\2\162\1\151\1\164\1\151\2\145\1\101\1\141\2\172\1\157\1\151\1\156"+
+        "\1\172\1\154\1\143\1\154\2\uffff\1\156\1\157\1\153\1\165\1\uffff"+
+        "\1\172\1\164\1\105\1\172\1\156\1\172\1\141\1\uffff\1\157\1\154\1"+
+        "\uffff\1\172\1\uffff\1\156\1\162\1\145\1\uffff\1\164\1\172\1\155"+
+        "\1\151\1\uffff\1\145\1\164\1\156\1\141\2\164\1\172\1\151\1\uffff"+
+        "\1\166\1\145\1\172\1\uffff";
     static final String DFA13_acceptS =
-        "\2\uffff\1\2\1\3\10\uffff\1\14\1\15\3\uffff\1\21\1\22\1\uffff\1"+
-        "\14\1\2\1\3\11\uffff\1\15\1\16\1\17\1\20\1\21\16\uffff\1\6\15\uffff"+
-        "\1\13\3\uffff\1\10\11\uffff\1\1\1\uffff\1\5\22\uffff\1\12\1\uffff"+
-        "\1\7\1\uffff\1\4\5\uffff\1\11";
+        "\2\uffff\1\2\1\3\5\uffff\1\12\1\13\3\uffff\1\23\5\uffff\1\33\1"+
+        "\34\3\uffff\1\40\1\41\1\uffff\1\33\1\2\1\3\10\uffff\1\12\1\13\5"+
+        "\uffff\1\23\4\uffff\1\34\1\35\1\36\1\37\1\40\7\uffff\1\20\17\uffff"+
+        "\1\6\6\uffff\1\31\25\uffff\1\26\1\27\1\uffff\1\32\3\uffff\1\10\24"+
+        "\uffff\1\17\1\uffff\1\30\1\1\1\uffff\1\5\27\uffff\1\15\1\16\4\uffff"+
+        "\1\11\7\uffff\1\25\2\uffff\1\21\1\uffff\1\7\3\uffff\1\4\4\uffff"+
+        "\1\22\10\uffff\1\24\3\uffff\1\14";
     static final String DFA13_specialS =
-        "\1\1\15\uffff\1\0\1\2\137\uffff}>";
+        "\1\1\25\uffff\1\0\1\2\u00b7\uffff}>";
     static final String[] DFA13_transitionS = {
-            "\11\22\2\21\2\22\1\21\22\22\1\21\1\22\1\16\4\22\1\17\7\22\1"+
-            "\20\12\15\7\22\24\14\1\4\5\14\3\22\1\13\1\14\1\22\1\5\3\14\1"+
-            "\7\1\11\1\6\1\14\1\10\12\14\1\12\1\1\5\14\1\2\1\22\1\3\uff82"+
-            "\22",
-            "\1\23",
-            "",
-            "",
-            "\1\27",
-            "\1\31\17\uffff\1\30",
-            "\1\32",
+            "\11\32\2\31\2\32\1\31\22\32\1\31\1\32\1\26\4\32\1\27\4\32\1"+
+            "\16\2\32\1\30\12\25\1\32\1\12\1\32\1\11\3\32\24\24\1\4\5\24"+
+            "\3\32\1\23\1\24\1\32\1\5\2\24\1\15\1\7\1\14\1\6\1\20\1\10\2"+
+            "\24\1\13\1\21\1\17\5\24\1\22\1\1\5\24\1\2\1\32\1\3\uff82\32",
             "\1\33",
-            "\1\35\1\34",
-            "\1\36",
+            "",
+            "",
             "\1\37",
-            "\32\24\4\uffff\1\24\1\uffff\32\24",
+            "\1\41\17\uffff\1\40",
+            "\1\42",
+            "\1\43",
+            "\1\45\10\uffff\1\44\1\46",
             "",
             "",
-            "\0\41",
-            "\0\41",
-            "\1\42\4\uffff\1\43",
-            "",
-            "",
-            "\1\45",
-            "",
-            "",
-            "",
-            "\1\46",
-            "\1\47",
-            "\1\50",
-            "\1\51",
-            "\1\52",
-            "\1\53",
-            "\1\54",
+            "\1\51\5\uffff\1\52",
+            "\1\54\7\uffff\1\53",
             "\1\55",
-            "\1\56",
-            "",
-            "",
-            "",
-            "",
             "",
             "\1\57",
             "\1\60",
             "\1\61",
             "\1\62",
-            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
-            "\1\64",
-            "\1\65",
-            "\1\66",
-            "\1\67",
+            "\32\34\4\uffff\1\34\1\uffff\32\34",
+            "",
+            "",
+            "\0\64",
+            "\0\64",
+            "\1\65\4\uffff\1\66",
+            "",
+            "",
             "\1\70",
+            "",
+            "",
+            "",
             "\1\71",
             "\1\72",
             "\1\73",
             "\1\74",
-            "",
             "\1\75",
             "\1\76",
-            "\1\77",
-            "\1\100",
-            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\100\20\uffff\1\101",
+            "",
+            "",
             "\1\102",
             "\1\103",
             "\1\104",
-            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+            "\1\105",
             "\1\106",
+            "",
             "\1\107",
             "\1\110",
-            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
-            "",
             "\1\111",
             "\1\112",
-            "\1\113",
             "",
+            "",
+            "",
+            "",
+            "",
+            "\1\113",
             "\1\114",
             "\1\115",
             "\1\116",
-            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\120",
-            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
-            "\1\122",
+            "\1\122\15\uffff\1\121",
+            "",
             "\1\123",
             "\1\124",
-            "",
             "\1\125",
-            "",
-            "\1\126",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\127",
             "\1\130",
             "\1\131",
@@ -1079,22 +1520,134 @@ public class InternalTGRLLexer extends Lexer {
             "\1\137",
             "\1\140",
             "\1\141",
+            "",
             "\1\142",
             "\1\143",
-            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+            "\1\144",
             "\1\145",
-            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+            "\1\146",
             "\1\147",
             "",
-            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
-            "",
-            "\1\151",
-            "",
+            "\1\150\41\uffff\1\151",
             "\1\152",
             "\1\153",
-            "\1\154",
-            "\1\155",
-            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\156",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\160",
+            "\1\161",
+            "\1\162",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\164",
+            "\1\165",
+            "\1\166",
+            "\1\167",
+            "\1\170",
+            "\1\171",
+            "\1\172",
+            "\1\173",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\174",
+            "",
+            "",
+            "\1\175",
+            "",
+            "\1\176",
+            "\1\177",
+            "\1\u0080",
+            "",
+            "\1\u0081",
+            "\1\u0082",
+            "\1\u0083",
+            "\1\u0084",
+            "\1\u0085",
+            "\1\u0086",
+            "\1\u0087",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u0089",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u008c",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u008e",
+            "\1\u008f",
+            "\1\u0090",
+            "\1\u0091",
+            "\1\u0092",
+            "\1\u0093",
+            "\1\u0094",
+            "",
+            "\1\u0095",
+            "",
+            "",
+            "\1\u0096",
+            "",
+            "\1\u0097",
+            "\1\u0098",
+            "\1\u0099",
+            "\1\u009a",
+            "\1\u009b",
+            "\1\u009c",
+            "\1\u009d",
+            "\1\u009e",
+            "\1\u009f",
+            "\1\u00a0",
+            "\1\u00a1",
+            "\1\u00a2",
+            "\1\u00a3",
+            "\1\u00a4",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u00a7",
+            "\1\u00a8",
+            "\1\u00a9",
+            "\12\34\7\uffff\20\34\1\u00aa\11\34\4\uffff\1\34\1\uffff\32"+
+            "\34",
+            "\1\u00ac",
+            "\1\u00ad",
+            "\1\u00ae",
+            "",
+            "",
+            "\1\u00af",
+            "\1\u00b0",
+            "\1\u00b1",
+            "\1\u00b2",
+            "",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u00b4",
+            "\1\u00b5",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u00b7",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u00b9",
+            "",
+            "\1\u00ba",
+            "\1\u00bb",
+            "",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "",
+            "\1\u00bd",
+            "\1\u00be",
+            "\1\u00bf",
+            "",
+            "\1\u00c0",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u00c2",
+            "\1\u00c3",
+            "",
+            "\1\u00c4",
+            "\1\u00c5",
+            "\1\u00c6",
+            "\1\u00c7",
+            "\1\u00c8",
+            "\1\u00c9",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u00cb",
+            "",
+            "\1\u00cc",
+            "\1\u00cd",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             ""
     };
 
@@ -1128,19 +1681,19 @@ public class InternalTGRLLexer extends Lexer {
             this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | RULE_BOOLEAN | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | RULE_BOOLEAN | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA13_14 = input.LA(1);
+                        int LA13_22 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA13_14>='\u0000' && LA13_14<='\uFFFF')) ) {s = 33;}
+                        if ( ((LA13_22>='\u0000' && LA13_22<='\uFFFF')) ) {s = 52;}
 
-                        else s = 18;
+                        else s = 26;
 
                         if ( s>=0 ) return s;
                         break;
@@ -1164,35 +1717,51 @@ public class InternalTGRLLexer extends Lexer {
 
                         else if ( (LA13_0=='i') ) {s = 8;}
 
-                        else if ( (LA13_0=='f') ) {s = 9;}
+                        else if ( (LA13_0=='=') ) {s = 9;}
 
-                        else if ( (LA13_0=='t') ) {s = 10;}
+                        else if ( (LA13_0==';') ) {s = 10;}
 
-                        else if ( (LA13_0=='^') ) {s = 11;}
+                        else if ( (LA13_0=='l') ) {s = 11;}
 
-                        else if ( ((LA13_0>='A' && LA13_0<='T')||(LA13_0>='V' && LA13_0<='Z')||LA13_0=='_'||(LA13_0>='b' && LA13_0<='d')||LA13_0=='h'||(LA13_0>='j' && LA13_0<='s')||(LA13_0>='v' && LA13_0<='z')) ) {s = 12;}
+                        else if ( (LA13_0=='f') ) {s = 12;}
 
-                        else if ( ((LA13_0>='0' && LA13_0<='9')) ) {s = 13;}
+                        else if ( (LA13_0=='d') ) {s = 13;}
 
-                        else if ( (LA13_0=='\"') ) {s = 14;}
+                        else if ( (LA13_0==',') ) {s = 14;}
 
-                        else if ( (LA13_0=='\'') ) {s = 15;}
+                        else if ( (LA13_0=='n') ) {s = 15;}
 
-                        else if ( (LA13_0=='/') ) {s = 16;}
+                        else if ( (LA13_0=='h') ) {s = 16;}
 
-                        else if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r'||LA13_0==' ') ) {s = 17;}
+                        else if ( (LA13_0=='m') ) {s = 17;}
 
-                        else if ( ((LA13_0>='\u0000' && LA13_0<='\b')||(LA13_0>='\u000B' && LA13_0<='\f')||(LA13_0>='\u000E' && LA13_0<='\u001F')||LA13_0=='!'||(LA13_0>='#' && LA13_0<='&')||(LA13_0>='(' && LA13_0<='.')||(LA13_0>=':' && LA13_0<='@')||(LA13_0>='[' && LA13_0<=']')||LA13_0=='`'||LA13_0=='|'||(LA13_0>='~' && LA13_0<='\uFFFF')) ) {s = 18;}
+                        else if ( (LA13_0=='t') ) {s = 18;}
+
+                        else if ( (LA13_0=='^') ) {s = 19;}
+
+                        else if ( ((LA13_0>='A' && LA13_0<='T')||(LA13_0>='V' && LA13_0<='Z')||LA13_0=='_'||(LA13_0>='b' && LA13_0<='c')||(LA13_0>='j' && LA13_0<='k')||(LA13_0>='o' && LA13_0<='s')||(LA13_0>='v' && LA13_0<='z')) ) {s = 20;}
+
+                        else if ( ((LA13_0>='0' && LA13_0<='9')) ) {s = 21;}
+
+                        else if ( (LA13_0=='\"') ) {s = 22;}
+
+                        else if ( (LA13_0=='\'') ) {s = 23;}
+
+                        else if ( (LA13_0=='/') ) {s = 24;}
+
+                        else if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r'||LA13_0==' ') ) {s = 25;}
+
+                        else if ( ((LA13_0>='\u0000' && LA13_0<='\b')||(LA13_0>='\u000B' && LA13_0<='\f')||(LA13_0>='\u000E' && LA13_0<='\u001F')||LA13_0=='!'||(LA13_0>='#' && LA13_0<='&')||(LA13_0>='(' && LA13_0<='+')||(LA13_0>='-' && LA13_0<='.')||LA13_0==':'||LA13_0=='<'||(LA13_0>='>' && LA13_0<='@')||(LA13_0>='[' && LA13_0<=']')||LA13_0=='`'||LA13_0=='|'||(LA13_0>='~' && LA13_0<='\uFFFF')) ) {s = 26;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA13_15 = input.LA(1);
+                        int LA13_23 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA13_15>='\u0000' && LA13_15<='\uFFFF')) ) {s = 33;}
+                        if ( ((LA13_23>='\u0000' && LA13_23<='\uFFFF')) ) {s = 52;}
 
-                        else s = 18;
+                        else s = 26;
 
                         if ( s>=0 ) return s;
                         break;

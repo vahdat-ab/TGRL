@@ -28,9 +28,9 @@ ASDspec returns asdModel::ASDspec:
 
 GRLspec returns grlModel::GRLspec: 
 	'grl' '{'
-		links+=ElementLink*
-		actors+=Actor*
-		intElements+=IntentionalElement*
+		(links+=ElementLink*)
+		(actors+=Actor*)
+		(intElements+=IntentionalElement*)
 		(impactModel=ImpactModel)?
 	'}'	
 ;
@@ -42,7 +42,18 @@ ElementLink returns grlModel::ElementLink:
 ;
 Actor returns grlModel::Actor: 
 	'actor' name= ID '{'
-		
+		('importance' '=' importance=ImportanceType ';')?
+		/*
+		 *TODO I must give a default value, which is zero, to this attribute.
+		 * 		This can be done through the post processing mechanism in xText 
+		 */
+		('importanceQuantitative' '=' importanceQuantitative=INT ';')? 
+		('lineColor' '=' lineColor=STRING ';')?
+		('fillColor' '=' fillColor=STRING ';')?
+		('filled' '=' filled = BOOLEAN ';')?
+		('id' '=' id=ID ';')?
+		('description' '=' description=STRING ';')?
+		('includingActor' '=' includedActors+=[grlModel::Actor](',' includedActors+=[grlModel::Actor])* ';')?		
 	'}'
 ;
 IntentionalElement returns grlModel::IntentionalElement: 
