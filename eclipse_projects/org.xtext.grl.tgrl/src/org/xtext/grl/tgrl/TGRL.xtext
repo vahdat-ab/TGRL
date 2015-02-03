@@ -32,6 +32,9 @@ GRLspec returns grlModel::GRLspec:
 		(actors+=Actor*)
 		(intElements+=IntentionalElement*)
 		(impactModel=ImpactModel)?
+		(groups+=StrategiesGroup*)
+		(contributionContexts+=ContributionContext*)
+		(contributionGroups+=ContributionContextGroup*)		
 	'}'	
 ;
 
@@ -56,6 +59,18 @@ Actor returns grlModel::Actor:
 		('includingActor' '=' includedActors+=[grlModel::Actor](',' includedActors+=[grlModel::Actor])* ';')?		
 	'}'
 ;
+Belief returns grlModel::Belief: 
+	'belief' name=ID '{'
+		('author' '=' author=STRING ';')?&
+		('x' x=INT ';')?&
+		('y' y=INT ';')?&
+		('id' '=' id=ID ';')?&
+		('description' description=STRING ';')?		
+	'}'
+;
+
+
+
 IntentionalElement returns grlModel::IntentionalElement: 
 	'intentionalElement' name = ID '{'
 	
@@ -66,6 +81,23 @@ ImpactModel returns grlModel::ImpactModel:
 	
 	'}'
 ;
+StrategiesGroup returns grlModel::StrategiesGroup: 
+	'strategiesGroup' name=ID '{'
+	'}'
+;
+ContributionContext returns grlModel::ContributionContext: 
+	'contributionContext' name= ID '{'
+	'}'
+;
+ContributionContextGroup returns grlModel::ContributionContextGroup: 
+	'contributionContextGroup' name=ID '{'
+	'}'
+;
+EvaluationStrategy returns grlModel::EvaluationStrategy: 
+	'EvaluationStrategy' name=ID '{'
+	'}'
+;
+
 
 
 

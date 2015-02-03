@@ -341,9 +341,63 @@ ruleGRLspec returns [EObject current=null]
 	    }
 
 )
-)?	otherlv_6='}' 
+)?(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getGRLspecAccess().getGroupsStrategiesGroupParserRuleCall_6_0()); 
+	    }
+		lv_groups_6_0=ruleStrategiesGroup		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getGRLspecRule());
+	        }
+       		add(
+       			$current, 
+       			"groups",
+        		lv_groups_6_0, 
+        		"StrategiesGroup");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getGRLspecAccess().getContributionContextsContributionContextParserRuleCall_7_0()); 
+	    }
+		lv_contributionContexts_7_0=ruleContributionContext		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getGRLspecRule());
+	        }
+       		add(
+       			$current, 
+       			"contributionContexts",
+        		lv_contributionContexts_7_0, 
+        		"ContributionContext");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getGRLspecAccess().getContributionGroupsContributionContextGroupParserRuleCall_8_0()); 
+	    }
+		lv_contributionGroups_8_0=ruleContributionContextGroup		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getGRLspecRule());
+	        }
+       		add(
+       			$current, 
+       			"contributionGroups",
+        		lv_contributionGroups_8_0, 
+        		"ContributionContextGroup");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*	otherlv_9='}' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getGRLspecAccess().getRightCurlyBracketKeyword_6());
+    	newLeafNode(otherlv_9, grammarAccess.getGRLspecAccess().getRightCurlyBracketKeyword_9());
     }
 )
 ;
@@ -706,6 +760,8 @@ ruleActor returns [EObject current=null]
 
 
 
+
+
 // Entry rule entryRuleIntentionalElement
 entryRuleIntentionalElement returns [EObject current=null] 
 	:
@@ -803,6 +859,161 @@ ruleImpactModel returns [EObject current=null]
     }
 )
 ;
+
+
+
+
+
+// Entry rule entryRuleStrategiesGroup
+entryRuleStrategiesGroup returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getStrategiesGroupRule()); }
+	 iv_ruleStrategiesGroup=ruleStrategiesGroup 
+	 { $current=$iv_ruleStrategiesGroup.current; } 
+	 EOF 
+;
+
+// Rule StrategiesGroup
+ruleStrategiesGroup returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='strategiesGroup' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getStrategiesGroupAccess().getStrategiesGroupKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getStrategiesGroupAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getStrategiesGroupRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_2='{' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getStrategiesGroupAccess().getLeftCurlyBracketKeyword_2());
+    }
+	otherlv_3='}' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getStrategiesGroupAccess().getRightCurlyBracketKeyword_3());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleContributionContext
+entryRuleContributionContext returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getContributionContextRule()); }
+	 iv_ruleContributionContext=ruleContributionContext 
+	 { $current=$iv_ruleContributionContext.current; } 
+	 EOF 
+;
+
+// Rule ContributionContext
+ruleContributionContext returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='contributionContext' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getContributionContextAccess().getContributionContextKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getContributionContextAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getContributionContextRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_2='{' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getContributionContextAccess().getLeftCurlyBracketKeyword_2());
+    }
+	otherlv_3='}' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getContributionContextAccess().getRightCurlyBracketKeyword_3());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleContributionContextGroup
+entryRuleContributionContextGroup returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getContributionContextGroupRule()); }
+	 iv_ruleContributionContextGroup=ruleContributionContextGroup 
+	 { $current=$iv_ruleContributionContextGroup.current; } 
+	 EOF 
+;
+
+// Rule ContributionContextGroup
+ruleContributionContextGroup returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='contributionContextGroup' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getContributionContextGroupAccess().getContributionContextGroupKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getContributionContextGroupAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getContributionContextGroupRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_2='{' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getContributionContextGroupAccess().getLeftCurlyBracketKeyword_2());
+    }
+	otherlv_3='}' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getContributionContextGroupAccess().getRightCurlyBracketKeyword_3());
+    }
+)
+;
+
+
 
 
 

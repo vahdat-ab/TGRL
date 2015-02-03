@@ -5,11 +5,16 @@ import asd.AsdPackage;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import grl.Actor;
+import grl.Belief;
+import grl.ContributionContext;
+import grl.ContributionContextGroup;
 import grl.ElementLink;
+import grl.EvaluationStrategy;
 import grl.GRLspec;
 import grl.GrlPackage;
 import grl.ImpactModel;
 import grl.IntentionalElement;
+import grl.StrategiesGroup;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
 import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
@@ -46,9 +51,33 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case GrlPackage.BELIEF:
+				if(context == grammarAccess.getBeliefRule()) {
+					sequence_Belief(context, (Belief) semanticObject); 
+					return; 
+				}
+				else break;
+			case GrlPackage.CONTRIBUTION_CONTEXT:
+				if(context == grammarAccess.getContributionContextRule()) {
+					sequence_ContributionContext(context, (ContributionContext) semanticObject); 
+					return; 
+				}
+				else break;
+			case GrlPackage.CONTRIBUTION_CONTEXT_GROUP:
+				if(context == grammarAccess.getContributionContextGroupRule()) {
+					sequence_ContributionContextGroup(context, (ContributionContextGroup) semanticObject); 
+					return; 
+				}
+				else break;
 			case GrlPackage.ELEMENT_LINK:
 				if(context == grammarAccess.getElementLinkRule()) {
 					sequence_ElementLink(context, (ElementLink) semanticObject); 
+					return; 
+				}
+				else break;
+			case GrlPackage.EVALUATION_STRATEGY:
+				if(context == grammarAccess.getEvaluationStrategyRule()) {
+					sequence_EvaluationStrategy(context, (EvaluationStrategy) semanticObject); 
 					return; 
 				}
 				else break;
@@ -67,6 +96,12 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case GrlPackage.INTENTIONAL_ELEMENT:
 				if(context == grammarAccess.getIntentionalElementRule()) {
 					sequence_IntentionalElement(context, (IntentionalElement) semanticObject); 
+					return; 
+				}
+				else break;
+			case GrlPackage.STRATEGIES_GROUP:
+				if(context == grammarAccess.getStrategiesGroupRule()) {
+					sequence_StrategiesGroup(context, (StrategiesGroup) semanticObject); 
 					return; 
 				}
 				else break;
@@ -120,6 +155,40 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     (
+	 *         name=ID 
+	 *         author=STRING? 
+	 *         x=INT? 
+	 *         y=INT? 
+	 *         id=ID? 
+	 *         description=STRING?
+	 *     )
+	 */
+	protected void sequence_Belief(EObject context, Belief semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_ContributionContextGroup(EObject context, ContributionContextGroup semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_ContributionContext(EObject context, ContributionContext semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     name=ID
 	 */
 	protected void sequence_ElementLink(EObject context, ElementLink semanticObject) {
@@ -129,7 +198,24 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (links+=ElementLink* actors+=Actor* intElements+=IntentionalElement* impactModel=ImpactModel?)
+	 *     name=ID
+	 */
+	protected void sequence_EvaluationStrategy(EObject context, EvaluationStrategy semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         links+=ElementLink* 
+	 *         actors+=Actor* 
+	 *         intElements+=IntentionalElement* 
+	 *         impactModel=ImpactModel? 
+	 *         groups+=StrategiesGroup* 
+	 *         contributionContexts+=ContributionContext* 
+	 *         contributionGroups+=ContributionContextGroup*
+	 *     )
 	 */
 	protected void sequence_GRLspec(EObject context, GRLspec semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -150,6 +236,15 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     name=ID
 	 */
 	protected void sequence_IntentionalElement(EObject context, IntentionalElement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_StrategiesGroup(EObject context, StrategiesGroup semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
