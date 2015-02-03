@@ -24,6 +24,7 @@ import org.eclipse.xtext.parser.*;
 import org.eclipse.xtext.parser.impl.*;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.xtext.parser.antlr.AbstractInternalAntlrParser;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream.HiddenTokens;
@@ -157,7 +158,7 @@ ruleURNspec returns [EObject current=null]
 	    }
 
 )
-)	otherlv_6='}' 
+)?	otherlv_6='}' 
     {
     	newLeafNode(otherlv_6, grammarAccess.getURNspecAccess().getRightCurlyBracketKeyword_6());
     }
@@ -182,11 +183,25 @@ ruleURNdefinition returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-	otherlv_0='URNdefinition' 
+(	otherlv_0='URNdefinition' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getURNdefinitionAccess().getURNdefinitionKeyword());
+    	newLeafNode(otherlv_0, grammarAccess.getURNdefinitionAccess().getURNdefinitionKeyword_0());
     }
-
+	otherlv_1='{' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getURNdefinitionAccess().getLeftCurlyBracketKeyword_1());
+    }
+(
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getURNdefinitionAccess().getURNdefinitionAction_2(),
+            $current);
+    }
+)	otherlv_3='}' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getURNdefinitionAccess().getRightCurlyBracketKeyword_3());
+    }
+)
 ;
 
 
@@ -207,11 +222,25 @@ ruleASDspec returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-	otherlv_0='asdspec' 
+(	otherlv_0='asdspec' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getASDspecAccess().getAsdspecKeyword());
+    	newLeafNode(otherlv_0, grammarAccess.getASDspecAccess().getAsdspecKeyword_0());
     }
-
+	otherlv_1='{' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getASDspecAccess().getLeftCurlyBracketKeyword_1());
+    }
+(
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getASDspecAccess().getASDspecAction_2(),
+            $current);
+    }
+)	otherlv_3='}' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getASDspecAccess().getRightCurlyBracketKeyword_3());
+    }
+)
 ;
 
 
@@ -232,19 +261,27 @@ ruleGRLspec returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
+(	otherlv_0='grl' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getGRLspecAccess().getGrlKeyword_0());
+    }
+	otherlv_1='{' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getGRLspecAccess().getLeftCurlyBracketKeyword_1());
+    }
+(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getGRLspecAccess().getLinksElementLinkParserRuleCall_0_0()); 
+	        newCompositeNode(grammarAccess.getGRLspecAccess().getLinksElementLinkParserRuleCall_2_0()); 
 	    }
-		lv_links_0_0=ruleElementLink		{
+		lv_links_2_0=ruleElementLink		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getGRLspecRule());
 	        }
        		add(
        			$current, 
        			"links",
-        		lv_links_0_0, 
+        		lv_links_2_0, 
         		"ElementLink");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -253,16 +290,16 @@ ruleGRLspec returns [EObject current=null]
 )*(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getGRLspecAccess().getActorsActorParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getGRLspecAccess().getActorsActorParserRuleCall_3_0()); 
 	    }
-		lv_actors_1_0=ruleActor		{
+		lv_actors_3_0=ruleActor		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getGRLspecRule());
 	        }
        		add(
        			$current, 
        			"actors",
-        		lv_actors_1_0, 
+        		lv_actors_3_0, 
         		"Actor");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -271,16 +308,16 @@ ruleGRLspec returns [EObject current=null]
 )*(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getGRLspecAccess().getIntElementsIntentionalElementParserRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getGRLspecAccess().getIntElementsIntentionalElementParserRuleCall_4_0()); 
 	    }
-		lv_intElements_2_0=ruleIntentionalElement		{
+		lv_intElements_4_0=ruleIntentionalElement		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getGRLspecRule());
 	        }
        		add(
        			$current, 
        			"intElements",
-        		lv_intElements_2_0, 
+        		lv_intElements_4_0, 
         		"IntentionalElement");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -289,22 +326,26 @@ ruleGRLspec returns [EObject current=null]
 )*(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getGRLspecAccess().getImpactModelImpactModelParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getGRLspecAccess().getImpactModelImpactModelParserRuleCall_5_0()); 
 	    }
-		lv_impactModel_3_0=ruleImpactModel		{
+		lv_impactModel_5_0=ruleImpactModel		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getGRLspecRule());
 	        }
        		set(
        			$current, 
        			"impactModel",
-        		lv_impactModel_3_0, 
+        		lv_impactModel_5_0, 
         		"ImpactModel");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)?)
+)?	otherlv_6='}' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getGRLspecAccess().getRightCurlyBracketKeyword_6());
+    }
+)
 ;
 
 
@@ -514,6 +555,16 @@ ruleImpactModel returns [EObject current=null]
 
 
 
+
+
+
+
+
+
+
+
+
+RULE_BOOLEAN : ('false'|'true');
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

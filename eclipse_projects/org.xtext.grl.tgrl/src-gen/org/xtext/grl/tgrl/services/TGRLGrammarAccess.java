@@ -34,10 +34,10 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//URNspec returns urnModel::URNspec:
-		//	"urnspec" name=ID "{" urndef=URNdefinition asdspec=ASDspec grlspec=GRLspec "}";
+		//	"urnspec" name=ID "{" urndef=URNdefinition asdspec=ASDspec grlspec=GRLspec? "}";
 		public ParserRule getRule() { return rule; }
 
-		//"urnspec" name=ID "{" urndef=URNdefinition asdspec=ASDspec grlspec=GRLspec "}"
+		//"urnspec" name=ID "{" urndef=URNdefinition asdspec=ASDspec grlspec=GRLspec? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"urnspec"
@@ -64,7 +64,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//ASDspec
 		public RuleCall getAsdspecASDspecParserRuleCall_4_0() { return cAsdspecASDspecParserRuleCall_4_0; }
 
-		//grlspec=GRLspec
+		//grlspec=GRLspec?
 		public Assignment getGrlspecAssignment_5() { return cGrlspecAssignment_5; }
 
 		//GRLspec
@@ -76,70 +76,114 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class URNdefinitionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "URNdefinition");
-		private final Keyword cURNdefinitionKeyword = (Keyword)rule.eContents().get(1);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cURNdefinitionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Action cURNdefinitionAction_2 = (Action)cGroup.eContents().get(2);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//URNdefinition returns urncoreModel::URNdefinition:
-		//	"URNdefinition";
+		//	"URNdefinition" "{" {urncoreModel::URNdefinition} "}";
 		public ParserRule getRule() { return rule; }
 
+		//"URNdefinition" "{" {urncoreModel::URNdefinition} "}"
+		public Group getGroup() { return cGroup; }
+
 		//"URNdefinition"
-		public Keyword getURNdefinitionKeyword() { return cURNdefinitionKeyword; }
+		public Keyword getURNdefinitionKeyword_0() { return cURNdefinitionKeyword_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+
+		//{urncoreModel::URNdefinition}
+		public Action getURNdefinitionAction_2() { return cURNdefinitionAction_2; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 
 	public class ASDspecElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ASDspec");
-		private final Keyword cAsdspecKeyword = (Keyword)rule.eContents().get(1);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cAsdspecKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Action cASDspecAction_2 = (Action)cGroup.eContents().get(2);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//ASDspec returns asdModel::ASDspec:
-		//	"asdspec";
+		//	"asdspec" "{" {asdModel::ASDspec} "}";
 		public ParserRule getRule() { return rule; }
 
+		//"asdspec" "{" {asdModel::ASDspec} "}"
+		public Group getGroup() { return cGroup; }
+
 		//"asdspec"
-		public Keyword getAsdspecKeyword() { return cAsdspecKeyword; }
+		public Keyword getAsdspecKeyword_0() { return cAsdspecKeyword_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+
+		//{asdModel::ASDspec}
+		public Action getASDspecAction_2() { return cASDspecAction_2; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 
 	public class GRLspecElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "GRLspec");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cLinksAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cLinksElementLinkParserRuleCall_0_0 = (RuleCall)cLinksAssignment_0.eContents().get(0);
-		private final Assignment cActorsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cActorsActorParserRuleCall_1_0 = (RuleCall)cActorsAssignment_1.eContents().get(0);
-		private final Assignment cIntElementsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIntElementsIntentionalElementParserRuleCall_2_0 = (RuleCall)cIntElementsAssignment_2.eContents().get(0);
-		private final Assignment cImpactModelAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cImpactModelImpactModelParserRuleCall_3_0 = (RuleCall)cImpactModelAssignment_3.eContents().get(0);
+		private final Keyword cGrlKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cLinksAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cLinksElementLinkParserRuleCall_2_0 = (RuleCall)cLinksAssignment_2.eContents().get(0);
+		private final Assignment cActorsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cActorsActorParserRuleCall_3_0 = (RuleCall)cActorsAssignment_3.eContents().get(0);
+		private final Assignment cIntElementsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cIntElementsIntentionalElementParserRuleCall_4_0 = (RuleCall)cIntElementsAssignment_4.eContents().get(0);
+		private final Assignment cImpactModelAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cImpactModelImpactModelParserRuleCall_5_0 = (RuleCall)cImpactModelAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//GRLspec returns grlModel::GRLspec:
-		//	links+=ElementLink* actors+=Actor* intElements+=IntentionalElement* impactModel=ImpactModel?;
+		//	"grl" "{" links+=ElementLink* actors+=Actor* intElements+=IntentionalElement* impactModel=ImpactModel? "}";
 		public ParserRule getRule() { return rule; }
 
-		//links+=ElementLink* actors+=Actor* intElements+=IntentionalElement* impactModel=ImpactModel?
+		//"grl" "{" links+=ElementLink* actors+=Actor* intElements+=IntentionalElement* impactModel=ImpactModel? "}"
 		public Group getGroup() { return cGroup; }
 
+		//"grl"
+		public Keyword getGrlKeyword_0() { return cGrlKeyword_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+
 		//links+=ElementLink*
-		public Assignment getLinksAssignment_0() { return cLinksAssignment_0; }
+		public Assignment getLinksAssignment_2() { return cLinksAssignment_2; }
 
 		//ElementLink
-		public RuleCall getLinksElementLinkParserRuleCall_0_0() { return cLinksElementLinkParserRuleCall_0_0; }
+		public RuleCall getLinksElementLinkParserRuleCall_2_0() { return cLinksElementLinkParserRuleCall_2_0; }
 
 		//actors+=Actor*
-		public Assignment getActorsAssignment_1() { return cActorsAssignment_1; }
+		public Assignment getActorsAssignment_3() { return cActorsAssignment_3; }
 
 		//Actor
-		public RuleCall getActorsActorParserRuleCall_1_0() { return cActorsActorParserRuleCall_1_0; }
+		public RuleCall getActorsActorParserRuleCall_3_0() { return cActorsActorParserRuleCall_3_0; }
 
 		//intElements+=IntentionalElement*
-		public Assignment getIntElementsAssignment_2() { return cIntElementsAssignment_2; }
+		public Assignment getIntElementsAssignment_4() { return cIntElementsAssignment_4; }
 
 		//IntentionalElement
-		public RuleCall getIntElementsIntentionalElementParserRuleCall_2_0() { return cIntElementsIntentionalElementParserRuleCall_2_0; }
+		public RuleCall getIntElementsIntentionalElementParserRuleCall_4_0() { return cIntElementsIntentionalElementParserRuleCall_4_0; }
 
 		//impactModel=ImpactModel?
-		public Assignment getImpactModelAssignment_3() { return cImpactModelAssignment_3; }
+		public Assignment getImpactModelAssignment_5() { return cImpactModelAssignment_5; }
 
 		//ImpactModel
-		public RuleCall getImpactModelImpactModelParserRuleCall_3_0() { return cImpactModelImpactModelParserRuleCall_3_0; }
+		public RuleCall getImpactModelImpactModelParserRuleCall_5_0() { return cImpactModelImpactModelParserRuleCall_5_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class ElementLinkElements extends AbstractParserRuleElementFinder {
@@ -271,6 +315,208 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
+	public class IntentionalElementTypeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "IntentionalElementType");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cSoftgoalEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cSoftgoalSoftGoalKeyword_0_0 = (Keyword)cSoftgoalEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cGoalEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cGoalGoalKeyword_1_0 = (Keyword)cGoalEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cTaskEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cTaskTaskKeyword_2_0 = (Keyword)cTaskEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cRessourceEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cRessourceResourceKeyword_3_0 = (Keyword)cRessourceEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cIndicatorEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cIndicatorIndicatorKeyword_4_0 = (Keyword)cIndicatorEnumLiteralDeclaration_4.eContents().get(0);
+		
+		//enum IntentionalElementType returns grlModel::IntentionalElementType:
+		//	Softgoal="softGoal" | Goal="goal" | Task | Ressource="resource" | Indicator="indicator";
+		public EnumRule getRule() { return rule; }
+
+		//Softgoal="softGoal" | Goal="goal" | Task | Ressource="resource" | Indicator="indicator"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//Softgoal="softGoal"
+		public EnumLiteralDeclaration getSoftgoalEnumLiteralDeclaration_0() { return cSoftgoalEnumLiteralDeclaration_0; }
+
+		//"softGoal"
+		public Keyword getSoftgoalSoftGoalKeyword_0_0() { return cSoftgoalSoftGoalKeyword_0_0; }
+
+		//Goal="goal"
+		public EnumLiteralDeclaration getGoalEnumLiteralDeclaration_1() { return cGoalEnumLiteralDeclaration_1; }
+
+		//"goal"
+		public Keyword getGoalGoalKeyword_1_0() { return cGoalGoalKeyword_1_0; }
+
+		//Task
+		public EnumLiteralDeclaration getTaskEnumLiteralDeclaration_2() { return cTaskEnumLiteralDeclaration_2; }
+
+		//"Task"
+		public Keyword getTaskTaskKeyword_2_0() { return cTaskTaskKeyword_2_0; }
+
+		//Ressource="resource"
+		public EnumLiteralDeclaration getRessourceEnumLiteralDeclaration_3() { return cRessourceEnumLiteralDeclaration_3; }
+
+		//"resource"
+		public Keyword getRessourceResourceKeyword_3_0() { return cRessourceResourceKeyword_3_0; }
+
+		//Indicator="indicator"
+		public EnumLiteralDeclaration getIndicatorEnumLiteralDeclaration_4() { return cIndicatorEnumLiteralDeclaration_4; }
+
+		//"indicator"
+		public Keyword getIndicatorIndicatorKeyword_4_0() { return cIndicatorIndicatorKeyword_4_0; }
+	}
+
+	public class ImportanceTypeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "ImportanceType");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cNoneEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cNoneNoneKeyword_0_0 = (Keyword)cNoneEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cHighEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cHighHighKeyword_1_0 = (Keyword)cHighEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cMediumEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cMediumMediumKeyword_2_0 = (Keyword)cMediumEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cLowEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cLowLowKeyword_3_0 = (Keyword)cLowEnumLiteralDeclaration_3.eContents().get(0);
+		
+		//enum ImportanceType returns grlModel::ImportanceType:
+		//	None="none" | High="high" | Medium="medium" | Low="low";
+		public EnumRule getRule() { return rule; }
+
+		//None="none" | High="high" | Medium="medium" | Low="low"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//None="none"
+		public EnumLiteralDeclaration getNoneEnumLiteralDeclaration_0() { return cNoneEnumLiteralDeclaration_0; }
+
+		//"none"
+		public Keyword getNoneNoneKeyword_0_0() { return cNoneNoneKeyword_0_0; }
+
+		//High="high"
+		public EnumLiteralDeclaration getHighEnumLiteralDeclaration_1() { return cHighEnumLiteralDeclaration_1; }
+
+		//"high"
+		public Keyword getHighHighKeyword_1_0() { return cHighHighKeyword_1_0; }
+
+		//Medium="medium"
+		public EnumLiteralDeclaration getMediumEnumLiteralDeclaration_2() { return cMediumEnumLiteralDeclaration_2; }
+
+		//"medium"
+		public Keyword getMediumMediumKeyword_2_0() { return cMediumMediumKeyword_2_0; }
+
+		//Low="low"
+		public EnumLiteralDeclaration getLowEnumLiteralDeclaration_3() { return cLowEnumLiteralDeclaration_3; }
+
+		//"low"
+		public Keyword getLowLowKeyword_3_0() { return cLowLowKeyword_3_0; }
+	}
+
+	public class DecompositionTypeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "DecompositionType");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cAndEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cAndAndKeyword_0_0 = (Keyword)cAndEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cOrEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cOrOrKeyword_1_0 = (Keyword)cOrEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cXorEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cXorXorKeyword_2_0 = (Keyword)cXorEnumLiteralDeclaration_2.eContents().get(0);
+		
+		//enum DecompositionType returns grlModel::DecompositionType:
+		//	And="and" | Or="or" | Xor="xor";
+		public EnumRule getRule() { return rule; }
+
+		//And="and" | Or="or" | Xor="xor"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//And="and"
+		public EnumLiteralDeclaration getAndEnumLiteralDeclaration_0() { return cAndEnumLiteralDeclaration_0; }
+
+		//"and"
+		public Keyword getAndAndKeyword_0_0() { return cAndAndKeyword_0_0; }
+
+		//Or="or"
+		public EnumLiteralDeclaration getOrEnumLiteralDeclaration_1() { return cOrEnumLiteralDeclaration_1; }
+
+		//"or"
+		public Keyword getOrOrKeyword_1_0() { return cOrOrKeyword_1_0; }
+
+		//Xor="xor"
+		public EnumLiteralDeclaration getXorEnumLiteralDeclaration_2() { return cXorEnumLiteralDeclaration_2; }
+
+		//"xor"
+		public Keyword getXorXorKeyword_2_0() { return cXorXorKeyword_2_0; }
+	}
+
+	public class ContributionTypeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "ContributionType");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cMakeEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cMakeMakeKeyword_0_0 = (Keyword)cMakeEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cHelpEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cHelpHelpKeyword_1_0 = (Keyword)cHelpEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cSomePositiveEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cSomePositiveSomePositiveKeyword_2_0 = (Keyword)cSomePositiveEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cUnknownEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cUnknownUnknownKeyword_3_0 = (Keyword)cUnknownEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cSomeNegativeEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cSomeNegativeSomeNegativeKeyword_4_0 = (Keyword)cSomeNegativeEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cHurtEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cHurtHurtKeyword_5_0 = (Keyword)cHurtEnumLiteralDeclaration_5.eContents().get(0);
+		private final EnumLiteralDeclaration cBreakEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
+		private final Keyword cBreakBreakKeyword_6_0 = (Keyword)cBreakEnumLiteralDeclaration_6.eContents().get(0);
+		
+		//enum ContributionType returns grlModel::ContributionType:
+		//	Make="make" | Help="help" | SomePositive="somePositive" | Unknown="unknown" | SomeNegative="someNegative" |
+		//	Hurt="hurt" | Break="break";
+		public EnumRule getRule() { return rule; }
+
+		//Make="make" | Help="help" | SomePositive="somePositive" | Unknown="unknown" | SomeNegative="someNegative" | Hurt="hurt"
+		//| Break="break"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//Make="make"
+		public EnumLiteralDeclaration getMakeEnumLiteralDeclaration_0() { return cMakeEnumLiteralDeclaration_0; }
+
+		//"make"
+		public Keyword getMakeMakeKeyword_0_0() { return cMakeMakeKeyword_0_0; }
+
+		//Help="help"
+		public EnumLiteralDeclaration getHelpEnumLiteralDeclaration_1() { return cHelpEnumLiteralDeclaration_1; }
+
+		//"help"
+		public Keyword getHelpHelpKeyword_1_0() { return cHelpHelpKeyword_1_0; }
+
+		//SomePositive="somePositive"
+		public EnumLiteralDeclaration getSomePositiveEnumLiteralDeclaration_2() { return cSomePositiveEnumLiteralDeclaration_2; }
+
+		//"somePositive"
+		public Keyword getSomePositiveSomePositiveKeyword_2_0() { return cSomePositiveSomePositiveKeyword_2_0; }
+
+		//Unknown="unknown"
+		public EnumLiteralDeclaration getUnknownEnumLiteralDeclaration_3() { return cUnknownEnumLiteralDeclaration_3; }
+
+		//"unknown"
+		public Keyword getUnknownUnknownKeyword_3_0() { return cUnknownUnknownKeyword_3_0; }
+
+		//SomeNegative="someNegative"
+		public EnumLiteralDeclaration getSomeNegativeEnumLiteralDeclaration_4() { return cSomeNegativeEnumLiteralDeclaration_4; }
+
+		//"someNegative"
+		public Keyword getSomeNegativeSomeNegativeKeyword_4_0() { return cSomeNegativeSomeNegativeKeyword_4_0; }
+
+		//Hurt="hurt"
+		public EnumLiteralDeclaration getHurtEnumLiteralDeclaration_5() { return cHurtEnumLiteralDeclaration_5; }
+
+		//"hurt"
+		public Keyword getHurtHurtKeyword_5_0() { return cHurtHurtKeyword_5_0; }
+
+		//Break="break"
+		public EnumLiteralDeclaration getBreakEnumLiteralDeclaration_6() { return cBreakEnumLiteralDeclaration_6; }
+
+		//"break"
+		public Keyword getBreakBreakKeyword_6_0() { return cBreakBreakKeyword_6_0; }
+	}
+	
 	private final URNspecElements pURNspec;
 	private final URNdefinitionElements pURNdefinition;
 	private final ASDspecElements pASDspec;
@@ -279,6 +525,11 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	private final ActorElements pActor;
 	private final IntentionalElementElements pIntentionalElement;
 	private final ImpactModelElements pImpactModel;
+	private final IntentionalElementTypeElements unknownRuleIntentionalElementType;
+	private final ImportanceTypeElements unknownRuleImportanceType;
+	private final DecompositionTypeElements unknownRuleDecompositionType;
+	private final ContributionTypeElements unknownRuleContributionType;
+	private final TerminalRule tBOOLEAN;
 	
 	private final Grammar grammar;
 
@@ -297,6 +548,11 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pActor = new ActorElements();
 		this.pIntentionalElement = new IntentionalElementElements();
 		this.pImpactModel = new ImpactModelElements();
+		this.unknownRuleIntentionalElementType = new IntentionalElementTypeElements();
+		this.unknownRuleImportanceType = new ImportanceTypeElements();
+		this.unknownRuleDecompositionType = new DecompositionTypeElements();
+		this.unknownRuleContributionType = new ContributionTypeElements();
+		this.tBOOLEAN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BOOLEAN");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -327,7 +583,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//URNspec returns urnModel::URNspec:
-	//	"urnspec" name=ID "{" urndef=URNdefinition asdspec=ASDspec grlspec=GRLspec "}";
+	//	"urnspec" name=ID "{" urndef=URNdefinition asdspec=ASDspec grlspec=GRLspec? "}";
 	public URNspecElements getURNspecAccess() {
 		return pURNspec;
 	}
@@ -337,7 +593,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//URNdefinition returns urncoreModel::URNdefinition:
-	//	"URNdefinition";
+	//	"URNdefinition" "{" {urncoreModel::URNdefinition} "}";
 	public URNdefinitionElements getURNdefinitionAccess() {
 		return pURNdefinition;
 	}
@@ -347,7 +603,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ASDspec returns asdModel::ASDspec:
-	//	"asdspec";
+	//	"asdspec" "{" {asdModel::ASDspec} "}";
 	public ASDspecElements getASDspecAccess() {
 		return pASDspec;
 	}
@@ -357,7 +613,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//GRLspec returns grlModel::GRLspec:
-	//	links+=ElementLink* actors+=Actor* intElements+=IntentionalElement* impactModel=ImpactModel?;
+	//	"grl" "{" links+=ElementLink* actors+=Actor* intElements+=IntentionalElement* impactModel=ImpactModel? "}";
 	public GRLspecElements getGRLspecAccess() {
 		return pGRLspec;
 	}
@@ -405,6 +661,53 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	public ParserRule getImpactModelRule() {
 		return getImpactModelAccess().getRule();
 	}
+
+	//enum IntentionalElementType returns grlModel::IntentionalElementType:
+	//	Softgoal="softGoal" | Goal="goal" | Task | Ressource="resource" | Indicator="indicator";
+	public IntentionalElementTypeElements getIntentionalElementTypeAccess() {
+		return unknownRuleIntentionalElementType;
+	}
+	
+	public EnumRule getIntentionalElementTypeRule() {
+		return getIntentionalElementTypeAccess().getRule();
+	}
+
+	//enum ImportanceType returns grlModel::ImportanceType:
+	//	None="none" | High="high" | Medium="medium" | Low="low";
+	public ImportanceTypeElements getImportanceTypeAccess() {
+		return unknownRuleImportanceType;
+	}
+	
+	public EnumRule getImportanceTypeRule() {
+		return getImportanceTypeAccess().getRule();
+	}
+
+	//enum DecompositionType returns grlModel::DecompositionType:
+	//	And="and" | Or="or" | Xor="xor";
+	public DecompositionTypeElements getDecompositionTypeAccess() {
+		return unknownRuleDecompositionType;
+	}
+	
+	public EnumRule getDecompositionTypeRule() {
+		return getDecompositionTypeAccess().getRule();
+	}
+
+	//enum ContributionType returns grlModel::ContributionType:
+	//	Make="make" | Help="help" | SomePositive="somePositive" | Unknown="unknown" | SomeNegative="someNegative" |
+	//	Hurt="hurt" | Break="break";
+	public ContributionTypeElements getContributionTypeAccess() {
+		return unknownRuleContributionType;
+	}
+	
+	public EnumRule getContributionTypeRule() {
+		return getContributionTypeAccess().getRule();
+	}
+
+	//terminal BOOLEAN returns ecore::EBoolean:
+	//	"false" | "true";
+	public TerminalRule getBOOLEANRule() {
+		return tBOOLEAN;
+	} 
 
 	//terminal ID:
 	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;

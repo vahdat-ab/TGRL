@@ -1,5 +1,7 @@
 package org.xtext.grl.tgrl.serializer;
 
+import asd.ASDspec;
+import asd.AsdPackage;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import grl.Actor;
@@ -19,6 +21,8 @@ import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.xtext.grl.tgrl.services.TGRLGrammarAccess;
 import urn.URNspec;
 import urn.UrnPackage;
+import urncore.URNdefinition;
+import urncore.UrncorePackage;
 
 @SuppressWarnings("all")
 public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -27,7 +31,15 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	private TGRLGrammarAccess grammarAccess;
 	
 	public void createSequence(EObject context, EObject semanticObject) {
-		if(semanticObject.eClass().getEPackage() == GrlPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+		if(semanticObject.eClass().getEPackage() == AsdPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case AsdPackage.AS_DSPEC:
+				if(context == grammarAccess.getASDspecRule()) {
+					sequence_ASDspec(context, (ASDspec) semanticObject); 
+					return; 
+				}
+				else break;
+			}
+		else if(semanticObject.eClass().getEPackage() == GrlPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case GrlPackage.ACTOR:
 				if(context == grammarAccess.getActorRule()) {
 					sequence_Actor(context, (Actor) semanticObject); 
@@ -67,8 +79,25 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			}
+		else if(semanticObject.eClass().getEPackage() == UrncorePackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case UrncorePackage.UR_NDEFINITION:
+				if(context == grammarAccess.getURNdefinitionRule()) {
+					sequence_URNdefinition(context, (URNdefinition) semanticObject); 
+					return; 
+				}
+				else break;
+			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * Constraint:
+	 *     {ASDspec}
+	 */
+	protected void sequence_ASDspec(EObject context, ASDspec semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
 	
 	/**
 	 * Constraint:
@@ -117,7 +146,16 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID urndef=URNdefinition asdspec=ASDspec grlspec=GRLspec)
+	 *     {URNdefinition}
+	 */
+	protected void sequence_URNdefinition(EObject context, URNdefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID urndef=URNdefinition asdspec=ASDspec grlspec=GRLspec?)
 	 */
 	protected void sequence_URNspec(EObject context, URNspec semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
