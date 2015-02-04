@@ -30,6 +30,7 @@ import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.xtext.grl.tgrl.services.TGRLGrammarAccess;
 import urn.URNspec;
 import urn.UrnPackage;
+import urncore.Metadata;
 import urncore.URNdefinition;
 import urncore.UrncorePackage;
 
@@ -146,6 +147,12 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				else break;
 			}
 		else if(semanticObject.eClass().getEPackage() == UrncorePackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case UrncorePackage.METADATA:
+				if(context == grammarAccess.getMetadataRule()) {
+					sequence_Metadata(context, (Metadata) semanticObject); 
+					return; 
+				}
+				else break;
 			case UrncorePackage.UR_NDEFINITION:
 				if(context == grammarAccess.getURNdefinitionRule()) {
 					sequence_URNdefinition(context, (URNdefinition) semanticObject); 
@@ -174,10 +181,11 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         lineColor=STRING? 
 	 *         fillColor=STRING? 
 	 *         filled=BOOLEAN? 
-	 *         id=ID? 
+	 *         id=STRING? 
 	 *         description=STRING? 
 	 *         (includedActors+=[Actor|ID] includedActors+=[Actor|ID]*)? 
-	 *         (collapsedRefs+=[CollapsedActorRef|ID] collapsedRefs+=[CollapsedActorRef|ID]*)?
+	 *         (collapsedRefs+=[CollapsedActorRef|ID] collapsedRefs+=[CollapsedActorRef|ID]*)? 
+	 *         (contRefs+=[IURNContainerRef|ID] contRefs+=[IURNContainerRef|ID]*)?
 	 *     )
 	 */
 	protected void sequence_Actor(EObject context, Actor semanticObject) {
@@ -192,7 +200,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         author=STRING? 
 	 *         x=INT? 
 	 *         y=INT? 
-	 *         id=ID? 
+	 *         id=STRING? 
 	 *         description=STRING?
 	 *     )
 	 */
@@ -207,7 +215,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         x=INT? 
 	 *         y=INT? 
-	 *         id=ID? 
+	 *         id=STRING? 
 	 *         description=STRING? 
 	 *         actor=[Actor|ID]?
 	 *     )
@@ -244,6 +252,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         correlation=BOOLEAN? 
 	 *         id=STRING? 
 	 *         description=STRING? 
+	 *         (refs+=[LinkRef|ID] refs+=[LinkRef|ID]*)? 
 	 *         src=[GRLLinkableElement|ID] 
 	 *         dest=[GRLLinkableElement|ID]
 	 *     )
@@ -255,7 +264,14 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID src=[GRLLinkableElement|ID] dest=[GRLLinkableElement|ID] id=STRING? description=STRING?)
+	 *     (
+	 *         name=ID 
+	 *         src=[GRLLinkableElement|ID] 
+	 *         dest=[GRLLinkableElement|ID] 
+	 *         id=STRING? 
+	 *         description=STRING? 
+	 *         (refs+=[LinkRef|ID] refs+=[LinkRef|ID]*)?
+	 *     )
 	 */
 	protected void sequence_Decomposition(EObject context, Decomposition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -264,7 +280,14 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID src=[GRLLinkableElement|ID] dest=[GRLLinkableElement|ID] id=STRING? description=STRING?)
+	 *     (
+	 *         name=ID 
+	 *         id=STRING? 
+	 *         description=STRING? 
+	 *         (refs+=[LinkRef|ID] refs+=[LinkRef|ID]*)? 
+	 *         src=[GRLLinkableElement|ID] 
+	 *         dest=[GRLLinkableElement|ID]
+	 *     )
 	 */
 	protected void sequence_Dependency(EObject context, Dependency semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -326,12 +349,21 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         lineColor=STRING? 
 	 *         fillColor=STRING? 
 	 *         filled=BOOLEAN? 
-	 *         id=ID? 
+	 *         id=STRING? 
 	 *         description=STRING? 
 	 *         (refs+=[IntentionalElementRef|ID] refs+=[IntentionalElementRef|ID]*)?
 	 *     )
 	 */
 	protected void sequence_IntentionalElement(EObject context, IntentionalElement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID value=STRING?)
+	 */
+	protected void sequence_Metadata(EObject context, Metadata semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -356,7 +388,15 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID urndef=URNdefinition asdspec=ASDspec grlspec=GRLspec?)
+	 *     (
+	 *         name=ID 
+	 *         urndef=URNdefinition 
+	 *         grlspec=GRLspec? 
+	 *         metadata+=Metadata* 
+	 *         ucmspec=UCMspec? 
+	 *         urnLinks+=URNlink* 
+	 *         asdspec=ASDspec
+	 *     )
 	 */
 	protected void sequence_URNspec(EObject context, URNspec semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

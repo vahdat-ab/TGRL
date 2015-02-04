@@ -15,6 +15,7 @@ public class AbstractTGRLValidator extends org.eclipse.xtext.validation.Abstract
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("http:///urn.ecore"));
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("http:///urncore.ecore"));
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("http:///asd.ecore"));
+	    result.add(EPackage.Registry.INSTANCE.getEPackage("http:///ucm.ecore"));
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("http:///grl.ecore"));
 		return result;
 	}
