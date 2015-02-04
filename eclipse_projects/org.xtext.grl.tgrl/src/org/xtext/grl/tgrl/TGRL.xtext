@@ -28,35 +28,74 @@ ASDspec returns asdModel::ASDspec:
 
 GRLspec returns grlModel::GRLspec: 
 	'grl' '{'
-		(links+=ElementLink*)
-		(actors+=Actor*)
-		(intElements+=IntentionalElement*)
-		(impactModel=ImpactModel)?
-		(groups+=StrategiesGroup*)
-		(contributionContexts+=ContributionContext*)
-		(contributionGroups+=ContributionContextGroup*)		
+		(
+		(links+=ElementLink*)&
+		(actors+=Actor*)&
+		(intElements+=IntentionalElement*)&
+		(impactModel=ImpactModel)?&
+		(groups+=StrategiesGroup*)&
+		(contributionContexts+=ContributionContext*)&
+		(contributionGroups+=ContributionContextGroup*)
+		)		
 	'}'	
 ;
 
+//**************************************************************************************
 ElementLink returns grlModel::ElementLink: 
-	'elementtLink' name= ID '{'
-	
+	Decomposition | Contribution | Dependency
+;
+Decomposition returns grlModel::Decomposition: 
+	'decomposition' name=ID '{'	
+		(
+		(src=[grlModel::GRLLinkableElement] '->' dest=[grlModel::GRLLinkableElement] ';')&
+		('id' '=' id=STRING ';')?&
+		('description' '=' description=STRING ';')?
+		)
 	'}'
 ;
-Actor returns grlModel::Actor: 
-	'actor' name= ID '{'
-		('importance' '=' importance=ImportanceType ';')?
+Contribution returns grlModel::Contribution: 
+	'contribution' name=ID '{'
+		(
+		('contribution' '=' contribution=ContributionType ';')?&
 		/*
 		 *TODO I must give a default value, which is zero, to this attribute.
 		 * 		This can be done through the post processing mechanism in xText 
 		 */
-		('importanceQuantitative' '=' importanceQuantitative=INT ';')? 
-		('lineColor' '=' lineColor=STRING ';')?
-		('fillColor' '=' fillColor=STRING ';')?
-		('filled' '=' filled = BOOLEAN ';')?
-		('id' '=' id=ID ';')?
+		('quantitativeContribution' '=' quantitativeContribution=INT ';')?&
+		('correlation' '=' correlation=BOOLEAN ';')?&
+		('id' '=' id=STRING ';')?&
+		('description' '=' description=STRING ';')?&
+		(src=[grlModel::GRLLinkableElement] '->' dest=[grlModel::GRLLinkableElement] ';')
+		)
+	'}'
+;
+Dependency returns grlModel::Dependency:
+	'dependency' name=ID '{'
+		(
+		(src=[grlModel::GRLLinkableElement] '->' dest=[grlModel::GRLLinkableElement] ';')&
+		('id' '=' id=STRING ';')?&
 		('description' '=' description=STRING ';')?
-		('includingActor' '=' includedActors+=[grlModel::Actor](',' includedActors+=[grlModel::Actor])* ';')?		
+		)
+	'}' 
+;
+
+//**************************************************************************************
+
+Actor returns grlModel::Actor: 
+	'actor' name= ID '{'
+		(('importance' '=' importance=ImportanceType ';')?&
+		/*
+		 *TODO I must give a default value, which is zero, to this attribute.
+		 * 		This can be done through the post processing mechanism in xText 
+		 */
+		('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
+		('lineColor' '=' lineColor=STRING ';')?&
+		('fillColor' '=' fillColor=STRING ';')?&
+		('filled' '=' filled = BOOLEAN ';')?&
+		('id' '=' id=ID ';')?&
+		('description' '=' description=STRING ';')?&
+		('includingActor' '=' includedActors+=[grlModel::Actor](',' includedActors+=[grlModel::Actor])* ';')?&		
+		('collapsedRefs' '=' collapsedRefs+=[grlModel::CollapsedActorRef](',' collapsedRefs+=[grlModel::CollapsedActorRef])* ';')?)
 	'}'
 ;
 Belief returns grlModel::Belief: 
@@ -68,12 +107,41 @@ Belief returns grlModel::Belief:
 		('description' description=STRING ';')?		
 	'}'
 ;
+CollapsedActorRef returns grlModel::CollapsedActorRef: 
+	'collapsedActorRef' name=ID '{'
+		('x' x=INT ';')?&
+		('y' y=INT ';')?&
+		('id' '=' id=ID ';')?&
+		('description' description=STRING ';')?	
+		('actor' '=' actor=[grlModel::Actor]';')?
+	'}'
+;
 
-
+IntentionalElementRef returns grlModel::IntentionalElementRef: 
+	'IntentionalElementRef' name=ID '{'
+		('criticality' '=' criticality=Criticality ';')?&
+		('priority' '=' priority=Priority';')?&
+		('def' '=' def=[grlModel::IntentionalElement] ';')?
+	'}'
+;
 
 IntentionalElement returns grlModel::IntentionalElement: 
 	'intentionalElement' name = ID '{'
-	
+		('type' '=' type=IntentionalElementType';')?
+		('decompositionType' '='decompositionType=DecompositionType ';')?
+		('importance' '=' importance=ImportanceType ';')?
+		
+		/*
+		 *TODO I must give a default value, which is zero, to this attribute.
+		 * 		This can be done through the post processing mechanism in xText 
+		 */
+		('importanceQuantitative' '=' importanceQuantitative=INT ';')? 
+		('lineColor' '=' lineColor=STRING ';')?
+		('fillColor' '=' fillColor=STRING ';')?
+		('filled' '=' filled = BOOLEAN ';')?
+		('id' '=' id=ID ';')?
+		('description' '=' description=STRING ';')?	
+		('ref' '=' refs+=[grlModel::IntentionalElementRef](',' refs+=[grlModel::IntentionalElementRef] )* ';')?
 	'}'
 ;
 ImpactModel returns grlModel::ImpactModel: 
@@ -106,8 +174,6 @@ EvaluationStrategy returns grlModel::EvaluationStrategy:
 
 
 
-
-
 enum IntentionalElementType returns grlModel::IntentionalElementType:
 	Softgoal = 'softGoal' | Goal = 'goal' | Task = 'Task' | 
 	Ressource = 'resource'| Indicator = 'indicator'  
@@ -119,10 +185,19 @@ enum DecompositionType returns grlModel::DecompositionType:
 	And = 'and' | Or = 'or' | Xor = 'xor' 
 ;
 enum ContributionType returns grlModel::ContributionType: 
-	Make = 'make' | Help = 'help' | SomePositive = 'somePositive' |
+	Help = 'help' | Make = 'make' | SomePositive = 'somePositive' |
 	Unknown = 'unknown' | SomeNegative = 'someNegative' | Hurt = 'hurt' |
 	Break = 'break'  
 ;
+//Deprecated
+enum Criticality returns grlModel::Criticality:
+	None ='none' | High = 'high' | Medium = 'medium' | Low = 'low' 
+;
+//Deprecated
+enum Priority returns grlModel::Priority:
+	None ='none' | High = 'high' | Medium = 'medium' | Low = 'low' 
+;
+
 terminal BOOLEAN returns ecore::EBoolean:
 'false' | 'true'
 ;
