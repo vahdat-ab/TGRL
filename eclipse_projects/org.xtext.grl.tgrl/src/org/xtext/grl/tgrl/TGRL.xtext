@@ -1,6 +1,6 @@
 grammar org.xtext.grl.tgrl.TGRL with org.eclipse.xtext.common.Terminals
 
-//import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 //import "http:///ucm.ecore" as ucmModel
 //import "http:///urncore.ecore" as urncoreModel
 //import "http:///urn.ecore" as urnModel
@@ -14,7 +14,7 @@ Model:
 
 GRLModelElement:
 	GRLNode | GRLLinkableElement | ElementLink | StrategiesGroup | EvaluationStrategy | 
-	ContributionContextGroup | ContributionContext
+	ContributionContextGroup | ContributionContext | KPIConversion | KPIInformationElement | KPIModelLink
 ;
 GRLNode:
 	Belief | CollapsedActorRef | IntentionalElementRef
@@ -28,6 +28,10 @@ IntentionalElement:
 ElementLink: 
 	Decomposition | Contribution | Dependency
 ;
+KPIConversion:
+	QualitativeMappings
+;
+
 GRLspec: 
 	'grl' '{'
 		(
@@ -35,7 +39,8 @@ GRLspec:
 			(
 				links+=ElementLink | actors+=Actor | intElements+=IntentionalElement | groups+=StrategiesGroup | 
 				strategies+=EvaluationStrategy | contributionGroups+=ContributionContextGroup |
-				contributionContexts+=ContributionContext 	
+				contributionContexts+=ContributionContext | kpiConv+=KPIConversion	| kpiInformationElements+=KPIInformationElement |
+				kpiModelLinks+=KPIModelLink
 			)*	
 		)
 	'}'	
@@ -75,9 +80,7 @@ Softgoal :
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
 			('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
-			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?&
-			('evals' '=' evals+=[Evaluation](',' evals+=[Evaluation] )* ';')?
-			
+			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?	
 		)
 	'}'
 ;
@@ -129,9 +132,7 @@ Ressource:
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
 			('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
-			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?&
-			('evals' '=' evals+=[Evaluation](',' evals+=[Evaluation] )* ';')?
-			
+			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?			
 		)		
 	'}'
 ; 
@@ -148,8 +149,7 @@ Indicator:
 			 */
 			('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
 			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?&
-			('evals' '=' evals+=[Evaluation](',' evals+=[Evaluation] )* ';')?
-			
+			('kpiModelLinksDest' '=' kpiModelLinksDest+=[KPIModelLink](',' kpiModelLinksDest+=[KPIModelLink] )* ';')?			
 		)		
 	'}'
 ;  
@@ -170,14 +170,15 @@ Contribution:
 			('name' '=' label = STRING)?&
 			('contribution' '=' contribution=ContributionType ';')?&
 			/*
-			 *TODO I must give a default value, which is zero, to this attribute.
+			 *TODO I must give a default value, which is 25, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
 			('quantitativeContribution' '=' quantitativeContribution=INT ';')?&
 			('correlation' '=' correlation=BOOLEAN ';')?&
 			('description' '=' description=STRING ';')?&
+			('changes' '=' changes+=[ContributionChange](',' changes+=[ContributionChange])* ';')?&
 	//		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?&
-			(src=[GRLLinkableElement] '->' dest=[GRLLinkableElement] ';')
+			(src=[GRLLinkableElement] '->' dest=[GRLLinkableElement] ';')					
 		)
 	'}'
 ;
@@ -234,7 +235,8 @@ EvaluationStrategy:
 		(
 			(
 				('evaluations' '=' evaluations+=Evaluation';') | 
-				('includedStrategies' '=' includedStrategies+=[EvaluationStrategy](',' includedStrategies+=[EvaluationStrategy])* ';')
+				('includedStrategies' '=' includedStrategies+=[EvaluationStrategy](',' includedStrategies+=[EvaluationStrategy])* ';') |
+				('kipInforConfig' '='kipInforConfig+=KPIInformationConfig ';')
 			)*
 		)
 	'}'
@@ -249,7 +251,10 @@ Evaluation:
 			('evaluation' '=' evaluation = INT ';')?&
 			('qualitativeEvaluation' '=' qualitativeEvaluation=QualitativeLabel ';')?&
 			('exceeds' '=' exceeds = BOOLEAN)?&
-			('evalRange' '=' evalRange=EvaluationRange ';')? 
+			('evalRange' '=' evalRange=EvaluationRange ';')?&
+			('kpiEvalValueSet' '=' kpiEvalValueSet = KPIEvalValueSet ';')?&
+			('kpiNewEvalValue' '=' kpiNewEvalValue = KPINewEvalValue)?&
+			('inElement' '=' inElement=[IntentionalElement] ';') 
 		) 
 	'}'
 ;
@@ -305,17 +310,87 @@ ContributionRange:
 		)
 	'}'
 ;
-Contribub:
-	'contrib' name=ID '{'
+QualitativeMappings:
+	'qualitativeMappings' name=ID '{'
 		(
-			('contribution' '=' contribution=ContributionType)?&
+			('kpiEvalValueSet' '=' kpiEvalValueSet+=[KPIEvalValueSet](',' kpiEvalValueSet+=[KPIEvalValueSet])* ';')*&	
+			(mappin+=QualitativeMapping)*	
+		)
+		
+	'}'
+;
+
+KPIEvalValueSet:
+	'kpiEvalValueSet' name=ID '{'
+		(
 			/*
-			 *TODO I must give a default value, which is 25, to this attribute.
+			 *TODO I must give a default value, which is 0, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
-			 */				
-			('quantitativeContribution' '=' quantitativeContribution=INT)?&
-			('correlation' '=' correlation=BOOLEAN)?&
-			('changes' '=' changes+=[ContributionChange](',' changes+=[ContributionChange])* ';')?	
+			 */	
+			('targetValue' '=' targetValue=DOUBLE ';')?&
+			/*
+			 *TODO I must give a default value, which is 0, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */	
+			('thresholdValue' '=' thresholdValue=DOUBLE ';')?&
+			/*
+			 *TODO I must give a default value, which is 0, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */	
+			('worstValue' '=' worstValue=DOUBLE ';')?&
+			/*
+			 *TODO I must give a default value, which is 0, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */	
+			('evaluationValue' '=' evaluationValue=DOUBLE ';')?&	
+			('unit' '=' unit=STRING ';')?&
+			('qualitativeEvaluationValue' '=' qualitativeEvaluationValue=STRING ';')?						
+		)
+	'}'
+;
+QualitativeMapping:
+
+	'qualitativeMapping' name=ID '{'
+		(
+			('realWorldLabel' '=' realWorldLabel=STRING ';')?&
+			('evaluation' '=' evaluation=INT ';')?&
+			('qualitativeEvaluation' '=' qualitativeEvaluation=QualitativeLabel ';')?&
+			('exceeds' '=' exceeds=BOOLEAN ';')?				
+		)
+	'}'
+;
+KPINewEvalValue:
+	'kpiNewEvalValue' name=ID '{'
+		/*
+		 *TODO I must give a default value, which is 0, to this attribute.
+		 * 		This can be done through the post processing mechanism in xText 
+		 */	
+		'evaluationValue' '=' evaluationValue=DOUBLE ';'
+	'}'
+;
+KPIInformationConfig:
+	'kpiInformationConfig' name=ID '{'
+		(
+			('levelOfDimension' '=' levelOfDimension = STRING ';')?&
+			('valueOfDimension' '=' valueOfDimension=STRING ';')?&
+			('kpiInfoElement' '=' kpiInfoElement=[KPIInformationElement])
+		)
+	'}'
+;
+KPIInformationElement:
+	'kpiInformationElement' name=ID '{'
+		(
+			('name' '=' label = STRING ';')?&
+			('description' '=' description=STRING ';')?&
+			('kpiModelLinksSrc' '=' kpiModelLinksSrc+=[KPIModelLink](',' kpiModelLinksSrc+=[KPIModelLink] )* ';')?	
+		)
+	'}'
+;
+KPIModelLink:
+	'kpiModelLink' name=ID '{'
+		(
+			('name' '=' label = STRING ';')?&
+			('description' '=' description=STRING ';')?
 		)
 	'}'
 ;
@@ -393,10 +468,6 @@ enum QualitativeLabel:
 	Conflict = 'conflict' | Unknown = 'unknown' | None = 'none' 
 ;
 
-terminal BOOLEAN:
-'false' | 'true'
-;
-
 //Deprecated
 enum Criticality:
 	None ='none' | High = 'high' | Medium = 'medium' | Low = 'low' 
@@ -405,3 +476,14 @@ enum Criticality:
 enum Priority:
 	None ='none' | High = 'high' | Medium = 'medium' | Low = 'low' 
 ;
+//Terminals
+terminal BOOLEAN:
+'false' | 'true'
+;
+terminal fragment DIGIT: '0'..'9';
+terminal fragment HEX_DIGIT: (DIGIT |'a'..'f'|'A'..'F');
+terminal fragment ALPHANUM: ('a'..'z'|'A'..'Z'|'_'|DIGIT);
+terminal HEXINT: '0' ('x'|'X') HEX_DIGIT+;
+terminal OCTINT: '0' ('0'..'7')+;
+terminal DOUBLE returns ecore::EDouble: DECINT (('.' DIGIT*) | (('.' DIGIT*)? ('E'|'e') ('-'|'+')? DECINT));  // Use terminal to avoid 'e' turning into a keyword
+terminal DECINT: '0' | ('1'..'9' DIGIT*);
