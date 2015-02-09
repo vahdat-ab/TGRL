@@ -12,8 +12,10 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getEvaluations <em>Evaluations</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getIncludedStrategies <em>Included Strategies</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getKipInforConfig <em>Kip Infor Config</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,6 +25,32 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface EvaluationStrategy extends GRLModelElement
 {
+  /**
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getEvaluationStrategy_Name()
+   * @model
+   * @generated
+   */
+  String getName();
+
+  /**
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
+  void setName(String value);
+
   /**
    * Returns the value of the '<em><b>Evaluations</b></em>' containment reference list.
    * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.Evaluation}.
@@ -54,5 +82,21 @@ public interface EvaluationStrategy extends GRLModelElement
    * @generated
    */
   EList<EvaluationStrategy> getIncludedStrategies();
+
+  /**
+   * Returns the value of the '<em><b>Kip Infor Config</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.KPIInformationConfig}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Kip Infor Config</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Kip Infor Config</em>' containment reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getEvaluationStrategy_KipInforConfig()
+   * @model containment="true"
+   * @generated
+   */
+  EList<KPIInformationConfig> getKipInforConfig();
 
 } // EvaluationStrategy

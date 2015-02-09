@@ -25,7 +25,11 @@ import org.xtext.grl.tgrl.tGRL.ElementLink;
 import org.xtext.grl.tgrl.tGRL.EvaluationStrategy;
 import org.xtext.grl.tgrl.tGRL.GRLspec;
 import org.xtext.grl.tgrl.tGRL.ImpactModel;
+import org.xtext.grl.tgrl.tGRL.IndicatorGroup;
 import org.xtext.grl.tgrl.tGRL.IntentionalElement;
+import org.xtext.grl.tgrl.tGRL.KPIConversion;
+import org.xtext.grl.tgrl.tGRL.KPIInformationElement;
+import org.xtext.grl.tgrl.tGRL.KPIModelLink;
 import org.xtext.grl.tgrl.tGRL.StrategiesGroup;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
@@ -44,6 +48,10 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GRLspecImpl#getStrategies <em>Strategies</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GRLspecImpl#getContributionGroups <em>Contribution Groups</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GRLspecImpl#getContributionContexts <em>Contribution Contexts</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GRLspecImpl#getKpiConv <em>Kpi Conv</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GRLspecImpl#getKpiInformationElements <em>Kpi Information Elements</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GRLspecImpl#getKpiModelLinks <em>Kpi Model Links</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GRLspecImpl#getIndicatorGroup <em>Indicator Group</em>}</li>
  * </ul>
  * </p>
  *
@@ -130,6 +138,46 @@ public class GRLspecImpl extends MinimalEObjectImpl.Container implements GRLspec
    * @ordered
    */
   protected EList<ContributionContext> contributionContexts;
+
+  /**
+   * The cached value of the '{@link #getKpiConv() <em>Kpi Conv</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getKpiConv()
+   * @generated
+   * @ordered
+   */
+  protected EList<KPIConversion> kpiConv;
+
+  /**
+   * The cached value of the '{@link #getKpiInformationElements() <em>Kpi Information Elements</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getKpiInformationElements()
+   * @generated
+   * @ordered
+   */
+  protected EList<KPIInformationElement> kpiInformationElements;
+
+  /**
+   * The cached value of the '{@link #getKpiModelLinks() <em>Kpi Model Links</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getKpiModelLinks()
+   * @generated
+   * @ordered
+   */
+  protected EList<KPIModelLink> kpiModelLinks;
+
+  /**
+   * The cached value of the '{@link #getIndicatorGroup() <em>Indicator Group</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIndicatorGroup()
+   * @generated
+   * @ordered
+   */
+  protected EList<IndicatorGroup> indicatorGroup;
 
   /**
    * <!-- begin-user-doc -->
@@ -303,6 +351,62 @@ public class GRLspecImpl extends MinimalEObjectImpl.Container implements GRLspec
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<KPIConversion> getKpiConv()
+  {
+    if (kpiConv == null)
+    {
+      kpiConv = new EObjectContainmentEList<KPIConversion>(KPIConversion.class, this, TGRLPackage.GR_LSPEC__KPI_CONV);
+    }
+    return kpiConv;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<KPIInformationElement> getKpiInformationElements()
+  {
+    if (kpiInformationElements == null)
+    {
+      kpiInformationElements = new EObjectContainmentEList<KPIInformationElement>(KPIInformationElement.class, this, TGRLPackage.GR_LSPEC__KPI_INFORMATION_ELEMENTS);
+    }
+    return kpiInformationElements;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<KPIModelLink> getKpiModelLinks()
+  {
+    if (kpiModelLinks == null)
+    {
+      kpiModelLinks = new EObjectContainmentEList<KPIModelLink>(KPIModelLink.class, this, TGRLPackage.GR_LSPEC__KPI_MODEL_LINKS);
+    }
+    return kpiModelLinks;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<IndicatorGroup> getIndicatorGroup()
+  {
+    if (indicatorGroup == null)
+    {
+      indicatorGroup = new EObjectContainmentEList<IndicatorGroup>(IndicatorGroup.class, this, TGRLPackage.GR_LSPEC__INDICATOR_GROUP);
+    }
+    return indicatorGroup;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -324,6 +428,14 @@ public class GRLspecImpl extends MinimalEObjectImpl.Container implements GRLspec
         return ((InternalEList<?>)getContributionGroups()).basicRemove(otherEnd, msgs);
       case TGRLPackage.GR_LSPEC__CONTRIBUTION_CONTEXTS:
         return ((InternalEList<?>)getContributionContexts()).basicRemove(otherEnd, msgs);
+      case TGRLPackage.GR_LSPEC__KPI_CONV:
+        return ((InternalEList<?>)getKpiConv()).basicRemove(otherEnd, msgs);
+      case TGRLPackage.GR_LSPEC__KPI_INFORMATION_ELEMENTS:
+        return ((InternalEList<?>)getKpiInformationElements()).basicRemove(otherEnd, msgs);
+      case TGRLPackage.GR_LSPEC__KPI_MODEL_LINKS:
+        return ((InternalEList<?>)getKpiModelLinks()).basicRemove(otherEnd, msgs);
+      case TGRLPackage.GR_LSPEC__INDICATOR_GROUP:
+        return ((InternalEList<?>)getIndicatorGroup()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -354,6 +466,14 @@ public class GRLspecImpl extends MinimalEObjectImpl.Container implements GRLspec
         return getContributionGroups();
       case TGRLPackage.GR_LSPEC__CONTRIBUTION_CONTEXTS:
         return getContributionContexts();
+      case TGRLPackage.GR_LSPEC__KPI_CONV:
+        return getKpiConv();
+      case TGRLPackage.GR_LSPEC__KPI_INFORMATION_ELEMENTS:
+        return getKpiInformationElements();
+      case TGRLPackage.GR_LSPEC__KPI_MODEL_LINKS:
+        return getKpiModelLinks();
+      case TGRLPackage.GR_LSPEC__INDICATOR_GROUP:
+        return getIndicatorGroup();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -400,6 +520,22 @@ public class GRLspecImpl extends MinimalEObjectImpl.Container implements GRLspec
         getContributionContexts().clear();
         getContributionContexts().addAll((Collection<? extends ContributionContext>)newValue);
         return;
+      case TGRLPackage.GR_LSPEC__KPI_CONV:
+        getKpiConv().clear();
+        getKpiConv().addAll((Collection<? extends KPIConversion>)newValue);
+        return;
+      case TGRLPackage.GR_LSPEC__KPI_INFORMATION_ELEMENTS:
+        getKpiInformationElements().clear();
+        getKpiInformationElements().addAll((Collection<? extends KPIInformationElement>)newValue);
+        return;
+      case TGRLPackage.GR_LSPEC__KPI_MODEL_LINKS:
+        getKpiModelLinks().clear();
+        getKpiModelLinks().addAll((Collection<? extends KPIModelLink>)newValue);
+        return;
+      case TGRLPackage.GR_LSPEC__INDICATOR_GROUP:
+        getIndicatorGroup().clear();
+        getIndicatorGroup().addAll((Collection<? extends IndicatorGroup>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -438,6 +574,18 @@ public class GRLspecImpl extends MinimalEObjectImpl.Container implements GRLspec
       case TGRLPackage.GR_LSPEC__CONTRIBUTION_CONTEXTS:
         getContributionContexts().clear();
         return;
+      case TGRLPackage.GR_LSPEC__KPI_CONV:
+        getKpiConv().clear();
+        return;
+      case TGRLPackage.GR_LSPEC__KPI_INFORMATION_ELEMENTS:
+        getKpiInformationElements().clear();
+        return;
+      case TGRLPackage.GR_LSPEC__KPI_MODEL_LINKS:
+        getKpiModelLinks().clear();
+        return;
+      case TGRLPackage.GR_LSPEC__INDICATOR_GROUP:
+        getIndicatorGroup().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -468,6 +616,14 @@ public class GRLspecImpl extends MinimalEObjectImpl.Container implements GRLspec
         return contributionGroups != null && !contributionGroups.isEmpty();
       case TGRLPackage.GR_LSPEC__CONTRIBUTION_CONTEXTS:
         return contributionContexts != null && !contributionContexts.isEmpty();
+      case TGRLPackage.GR_LSPEC__KPI_CONV:
+        return kpiConv != null && !kpiConv.isEmpty();
+      case TGRLPackage.GR_LSPEC__KPI_INFORMATION_ELEMENTS:
+        return kpiInformationElements != null && !kpiInformationElements.isEmpty();
+      case TGRLPackage.GR_LSPEC__KPI_MODEL_LINKS:
+        return kpiModelLinks != null && !kpiModelLinks.isEmpty();
+      case TGRLPackage.GR_LSPEC__INDICATOR_GROUP:
+        return indicatorGroup != null && !indicatorGroup.isEmpty();
     }
     return super.eIsSet(featureID);
   }

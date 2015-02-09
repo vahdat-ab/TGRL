@@ -2,6 +2,7 @@
  */
 package org.xtext.grl.tgrl.tGRL;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +15,7 @@ package org.xtext.grl.tgrl.tGRL;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Contribution#getContribution <em>Contribution</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Contribution#getQuantitativeContribution <em>Quantitative Contribution</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Contribution#getCorrelation <em>Correlation</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Contribution#getChanges <em>Changes</em>}</li>
  * </ul>
  * </p>
  *
@@ -103,5 +105,21 @@ public interface Contribution extends ElementLink
    * @generated
    */
   void setCorrelation(String value);
+
+  /**
+   * Returns the value of the '<em><b>Changes</b></em>' reference list.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.ContributionChange}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Changes</em>' reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Changes</em>' reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContribution_Changes()
+   * @model
+   * @generated
+   */
+  EList<ContributionChange> getChanges();
 
 } // Contribution

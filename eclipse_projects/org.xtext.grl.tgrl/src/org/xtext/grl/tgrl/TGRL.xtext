@@ -14,10 +14,10 @@ Model:
 
 GRLModelElement:
 	GRLNode | GRLLinkableElement | ElementLink | StrategiesGroup | EvaluationStrategy | 
-	ContributionContextGroup | ContributionContext | KPIConversion | KPIInformationElement | KPIModelLink
+	ContributionContextGroup | ContributionContext | KPIConversion | KPIInformationElement | KPIModelLink | IndicatorGroup 
 ;
 GRLNode:
-	Belief | CollapsedActorRef | IntentionalElementRef
+	Belief | CollapsedActorRef | IntentionalElementRef | KPIInformationElementRef
 ;
 GRLLinkableElement:
 	IntentionalElement | Actor
@@ -40,7 +40,7 @@ GRLspec:
 				links+=ElementLink | actors+=Actor | intElements+=IntentionalElement | groups+=StrategiesGroup | 
 				strategies+=EvaluationStrategy | contributionGroups+=ContributionContextGroup |
 				contributionContexts+=ContributionContext | kpiConv+=KPIConversion	| kpiInformationElements+=KPIInformationElement |
-				kpiModelLinks+=KPIModelLink
+				kpiModelLinks+=KPIModelLink | indicatorGroup+=IndicatorGroup
 			)*	
 		)
 	'}'	
@@ -149,7 +149,8 @@ Indicator:
 			 */
 			('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
 			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?&
-			('kpiModelLinksDest' '=' kpiModelLinksDest+=[KPIModelLink](',' kpiModelLinksDest+=[KPIModelLink] )* ';')?			
+			('kpiModelLinksDest' '=' kpiModelLinksDest+=[KPIModelLink](',' kpiModelLinksDest+=[KPIModelLink] )* ';')?&
+			('groups''=' groups+=[IndicatorGroup](',' groups+=[IndicatorGroup] )* ';')?			
 		)		
 	'}'
 ;  
@@ -382,7 +383,16 @@ KPIInformationElement:
 		(
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
-			('kpiModelLinksSrc' '=' kpiModelLinksSrc+=[KPIModelLink](',' kpiModelLinksSrc+=[KPIModelLink] )* ';')?	
+			('kpiModelLinksSrc' '=' kpiModelLinksSrc+=[KPIModelLink](',' kpiModelLinksSrc+=[KPIModelLink] )* ';')?&
+			('refs' '=' refs+=[KPIInformationElementRef](',' refs+=[KPIInformationElementRef] )* ';')?
+		)
+	'}'
+;
+KPIInformationElementRef:
+	'kpiInformationElementRef' name=ID '{'
+		(
+			('name' '=' label = STRING ';')?&
+			('description' '=' description=STRING ';')?
 		)
 	'}'
 ;
@@ -391,6 +401,16 @@ KPIModelLink:
 		(
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?
+		)
+	'}'
+;
+IndicatorGroup :
+		'indicatorGroup' name=ID '{'
+		(
+			('name' '=' label = STRING ';')?&
+			('description' '=' description=STRING ';')?&
+			('isRedesignCategory' '=' isRedesignCategory=BOOLEAN ';')?&
+			('indicators''=' indicators+=[Indicator](',' indicators+=[Indicator] )* ';')?
 		)
 	'}'
 ;

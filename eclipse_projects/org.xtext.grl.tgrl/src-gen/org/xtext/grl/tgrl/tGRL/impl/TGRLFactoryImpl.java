@@ -71,6 +71,7 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
       case TGRLPackage.GRL_LINKABLE_ELEMENT: return createGRLLinkableElement();
       case TGRLPackage.INTENTIONAL_ELEMENT: return createIntentionalElement();
       case TGRLPackage.ELEMENT_LINK: return createElementLink();
+      case TGRLPackage.KPI_CONVERSION: return createKPIConversion();
       case TGRLPackage.GR_LSPEC: return createGRLspec();
       case TGRLPackage.ACTOR: return createActor();
       case TGRLPackage.SOFTGOAL: return createSoftgoal();
@@ -93,7 +94,15 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
       case TGRLPackage.CONTRIBUTION_CONTEXT: return createContributionContext();
       case TGRLPackage.CONTRIBUTION_CHANGE: return createContributionChange();
       case TGRLPackage.CONTRIBUTION_RANGE: return createContributionRange();
-      case TGRLPackage.CONTRIBUB: return createContribub();
+      case TGRLPackage.QUALITATIVE_MAPPINGS: return createQualitativeMappings();
+      case TGRLPackage.KPI_EVAL_VALUE_SET: return createKPIEvalValueSet();
+      case TGRLPackage.QUALITATIVE_MAPPING: return createQualitativeMapping();
+      case TGRLPackage.KPI_NEW_EVAL_VALUE: return createKPINewEvalValue();
+      case TGRLPackage.KPI_INFORMATION_CONFIG: return createKPIInformationConfig();
+      case TGRLPackage.KPI_INFORMATION_ELEMENT: return createKPIInformationElement();
+      case TGRLPackage.KPI_INFORMATION_ELEMENT_REF: return createKPIInformationElementRef();
+      case TGRLPackage.KPI_MODEL_LINK: return createKPIModelLink();
+      case TGRLPackage.INDICATOR_GROUP: return createIndicatorGroup();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -217,6 +226,17 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
   {
     ElementLinkImpl elementLink = new ElementLinkImpl();
     return elementLink;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public KPIConversion createKPIConversion()
+  {
+    KPIConversionImpl kpiConversion = new KPIConversionImpl();
+    return kpiConversion;
   }
 
   /**
@@ -466,10 +486,98 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Contribub createContribub()
+  public QualitativeMappings createQualitativeMappings()
   {
-    ContribubImpl contribub = new ContribubImpl();
-    return contribub;
+    QualitativeMappingsImpl qualitativeMappings = new QualitativeMappingsImpl();
+    return qualitativeMappings;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public KPIEvalValueSet createKPIEvalValueSet()
+  {
+    KPIEvalValueSetImpl kpiEvalValueSet = new KPIEvalValueSetImpl();
+    return kpiEvalValueSet;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public QualitativeMapping createQualitativeMapping()
+  {
+    QualitativeMappingImpl qualitativeMapping = new QualitativeMappingImpl();
+    return qualitativeMapping;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public KPINewEvalValue createKPINewEvalValue()
+  {
+    KPINewEvalValueImpl kpiNewEvalValue = new KPINewEvalValueImpl();
+    return kpiNewEvalValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public KPIInformationConfig createKPIInformationConfig()
+  {
+    KPIInformationConfigImpl kpiInformationConfig = new KPIInformationConfigImpl();
+    return kpiInformationConfig;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public KPIInformationElement createKPIInformationElement()
+  {
+    KPIInformationElementImpl kpiInformationElement = new KPIInformationElementImpl();
+    return kpiInformationElement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public KPIInformationElementRef createKPIInformationElementRef()
+  {
+    KPIInformationElementRefImpl kpiInformationElementRef = new KPIInformationElementRefImpl();
+    return kpiInformationElementRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public KPIModelLink createKPIModelLink()
+  {
+    KPIModelLinkImpl kpiModelLink = new KPIModelLinkImpl();
+    return kpiModelLink;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IndicatorGroup createIndicatorGroup()
+  {
+    IndicatorGroupImpl indicatorGroup = new IndicatorGroupImpl();
+    return indicatorGroup;
   }
 
   /**

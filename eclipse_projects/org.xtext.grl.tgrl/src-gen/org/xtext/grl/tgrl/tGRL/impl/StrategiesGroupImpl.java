@@ -4,9 +4,13 @@ package org.xtext.grl.tgrl.tGRL.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
@@ -21,6 +25,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.StrategiesGroupImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.StrategiesGroupImpl#getStrategies <em>Strategies</em>}</li>
  * </ul>
  * </p>
@@ -29,6 +34,26 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  */
 public class StrategiesGroupImpl extends GRLModelElementImpl implements StrategiesGroup
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getStrategies() <em>Strategies</em>}' reference list.
    * <!-- begin-user-doc -->
@@ -65,6 +90,29 @@ public class StrategiesGroupImpl extends GRLModelElementImpl implements Strategi
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.STRATEGIES_GROUP__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<EvaluationStrategy> getStrategies()
   {
     if (strategies == null)
@@ -84,6 +132,8 @@ public class StrategiesGroupImpl extends GRLModelElementImpl implements Strategi
   {
     switch (featureID)
     {
+      case TGRLPackage.STRATEGIES_GROUP__NAME:
+        return getName();
       case TGRLPackage.STRATEGIES_GROUP__STRATEGIES:
         return getStrategies();
     }
@@ -101,6 +151,9 @@ public class StrategiesGroupImpl extends GRLModelElementImpl implements Strategi
   {
     switch (featureID)
     {
+      case TGRLPackage.STRATEGIES_GROUP__NAME:
+        setName((String)newValue);
+        return;
       case TGRLPackage.STRATEGIES_GROUP__STRATEGIES:
         getStrategies().clear();
         getStrategies().addAll((Collection<? extends EvaluationStrategy>)newValue);
@@ -119,6 +172,9 @@ public class StrategiesGroupImpl extends GRLModelElementImpl implements Strategi
   {
     switch (featureID)
     {
+      case TGRLPackage.STRATEGIES_GROUP__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case TGRLPackage.STRATEGIES_GROUP__STRATEGIES:
         getStrategies().clear();
         return;
@@ -136,10 +192,29 @@ public class StrategiesGroupImpl extends GRLModelElementImpl implements Strategi
   {
     switch (featureID)
     {
+      case TGRLPackage.STRATEGIES_GROUP__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case TGRLPackage.STRATEGIES_GROUP__STRATEGIES:
         return strategies != null && !strategies.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //StrategiesGroupImpl

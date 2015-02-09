@@ -77,6 +77,15 @@ public interface TGRLFactory extends EFactory
   ElementLink createElementLink();
 
   /**
+   * Returns a new object of class '<em>KPI Conversion</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>KPI Conversion</em>'.
+   * @generated
+   */
+  KPIConversion createKPIConversion();
+
+  /**
    * Returns a new object of class '<em>GR Lspec</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -275,13 +284,85 @@ public interface TGRLFactory extends EFactory
   ContributionRange createContributionRange();
 
   /**
-   * Returns a new object of class '<em>Contribub</em>'.
+   * Returns a new object of class '<em>Qualitative Mappings</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Contribub</em>'.
+   * @return a new object of class '<em>Qualitative Mappings</em>'.
    * @generated
    */
-  Contribub createContribub();
+  QualitativeMappings createQualitativeMappings();
+
+  /**
+   * Returns a new object of class '<em>KPI Eval Value Set</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>KPI Eval Value Set</em>'.
+   * @generated
+   */
+  KPIEvalValueSet createKPIEvalValueSet();
+
+  /**
+   * Returns a new object of class '<em>Qualitative Mapping</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Qualitative Mapping</em>'.
+   * @generated
+   */
+  QualitativeMapping createQualitativeMapping();
+
+  /**
+   * Returns a new object of class '<em>KPI New Eval Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>KPI New Eval Value</em>'.
+   * @generated
+   */
+  KPINewEvalValue createKPINewEvalValue();
+
+  /**
+   * Returns a new object of class '<em>KPI Information Config</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>KPI Information Config</em>'.
+   * @generated
+   */
+  KPIInformationConfig createKPIInformationConfig();
+
+  /**
+   * Returns a new object of class '<em>KPI Information Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>KPI Information Element</em>'.
+   * @generated
+   */
+  KPIInformationElement createKPIInformationElement();
+
+  /**
+   * Returns a new object of class '<em>KPI Information Element Ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>KPI Information Element Ref</em>'.
+   * @generated
+   */
+  KPIInformationElementRef createKPIInformationElementRef();
+
+  /**
+   * Returns a new object of class '<em>KPI Model Link</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>KPI Model Link</em>'.
+   * @generated
+   */
+  KPIModelLink createKPIModelLink();
+
+  /**
+   * Returns a new object of class '<em>Indicator Group</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Indicator Group</em>'.
+   * @generated
+   */
+  IndicatorGroup createIndicatorGroup();
 
   /**
    * Returns the package supported by this factory.

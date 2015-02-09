@@ -18,26 +18,27 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.xtext.grl.tgrl.tGRL.ContributionChange;
-import org.xtext.grl.tgrl.tGRL.ContributionContext;
+import org.xtext.grl.tgrl.tGRL.KPIEvalValueSet;
+import org.xtext.grl.tgrl.tGRL.QualitativeMapping;
+import org.xtext.grl.tgrl.tGRL.QualitativeMappings;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Contribution Context</b></em>'.
+ * An implementation of the model object '<em><b>Qualitative Mappings</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionContextImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionContextImpl#getIncludedContexts <em>Included Contexts</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionContextImpl#getChanges <em>Changes</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.QualitativeMappingsImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.QualitativeMappingsImpl#getKpiEvalValueSet <em>Kpi Eval Value Set</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.QualitativeMappingsImpl#getMappin <em>Mappin</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ContributionContextImpl extends GRLModelElementImpl implements ContributionContext
+public class QualitativeMappingsImpl extends KPIConversionImpl implements QualitativeMappings
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -60,31 +61,31 @@ public class ContributionContextImpl extends GRLModelElementImpl implements Cont
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getIncludedContexts() <em>Included Contexts</em>}' reference list.
+   * The cached value of the '{@link #getKpiEvalValueSet() <em>Kpi Eval Value Set</em>}' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIncludedContexts()
+   * @see #getKpiEvalValueSet()
    * @generated
    * @ordered
    */
-  protected EList<ContributionContext> includedContexts;
+  protected EList<KPIEvalValueSet> kpiEvalValueSet;
 
   /**
-   * The cached value of the '{@link #getChanges() <em>Changes</em>}' containment reference list.
+   * The cached value of the '{@link #getMappin() <em>Mappin</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getChanges()
+   * @see #getMappin()
    * @generated
    * @ordered
    */
-  protected EList<ContributionChange> changes;
+  protected EList<QualitativeMapping> mappin;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ContributionContextImpl()
+  protected QualitativeMappingsImpl()
   {
     super();
   }
@@ -97,7 +98,7 @@ public class ContributionContextImpl extends GRLModelElementImpl implements Cont
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.CONTRIBUTION_CONTEXT;
+    return TGRLPackage.Literals.QUALITATIVE_MAPPINGS;
   }
 
   /**
@@ -120,7 +121,7 @@ public class ContributionContextImpl extends GRLModelElementImpl implements Cont
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION_CONTEXT__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.QUALITATIVE_MAPPINGS__NAME, oldName, name));
   }
 
   /**
@@ -128,13 +129,13 @@ public class ContributionContextImpl extends GRLModelElementImpl implements Cont
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ContributionContext> getIncludedContexts()
+  public EList<KPIEvalValueSet> getKpiEvalValueSet()
   {
-    if (includedContexts == null)
+    if (kpiEvalValueSet == null)
     {
-      includedContexts = new EObjectResolvingEList<ContributionContext>(ContributionContext.class, this, TGRLPackage.CONTRIBUTION_CONTEXT__INCLUDED_CONTEXTS);
+      kpiEvalValueSet = new EObjectResolvingEList<KPIEvalValueSet>(KPIEvalValueSet.class, this, TGRLPackage.QUALITATIVE_MAPPINGS__KPI_EVAL_VALUE_SET);
     }
-    return includedContexts;
+    return kpiEvalValueSet;
   }
 
   /**
@@ -142,13 +143,13 @@ public class ContributionContextImpl extends GRLModelElementImpl implements Cont
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ContributionChange> getChanges()
+  public EList<QualitativeMapping> getMappin()
   {
-    if (changes == null)
+    if (mappin == null)
     {
-      changes = new EObjectContainmentEList<ContributionChange>(ContributionChange.class, this, TGRLPackage.CONTRIBUTION_CONTEXT__CHANGES);
+      mappin = new EObjectContainmentEList<QualitativeMapping>(QualitativeMapping.class, this, TGRLPackage.QUALITATIVE_MAPPINGS__MAPPIN);
     }
-    return changes;
+    return mappin;
   }
 
   /**
@@ -161,8 +162,8 @@ public class ContributionContextImpl extends GRLModelElementImpl implements Cont
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION_CONTEXT__CHANGES:
-        return ((InternalEList<?>)getChanges()).basicRemove(otherEnd, msgs);
+      case TGRLPackage.QUALITATIVE_MAPPINGS__MAPPIN:
+        return ((InternalEList<?>)getMappin()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -177,12 +178,12 @@ public class ContributionContextImpl extends GRLModelElementImpl implements Cont
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION_CONTEXT__NAME:
+      case TGRLPackage.QUALITATIVE_MAPPINGS__NAME:
         return getName();
-      case TGRLPackage.CONTRIBUTION_CONTEXT__INCLUDED_CONTEXTS:
-        return getIncludedContexts();
-      case TGRLPackage.CONTRIBUTION_CONTEXT__CHANGES:
-        return getChanges();
+      case TGRLPackage.QUALITATIVE_MAPPINGS__KPI_EVAL_VALUE_SET:
+        return getKpiEvalValueSet();
+      case TGRLPackage.QUALITATIVE_MAPPINGS__MAPPIN:
+        return getMappin();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -198,16 +199,16 @@ public class ContributionContextImpl extends GRLModelElementImpl implements Cont
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION_CONTEXT__NAME:
+      case TGRLPackage.QUALITATIVE_MAPPINGS__NAME:
         setName((String)newValue);
         return;
-      case TGRLPackage.CONTRIBUTION_CONTEXT__INCLUDED_CONTEXTS:
-        getIncludedContexts().clear();
-        getIncludedContexts().addAll((Collection<? extends ContributionContext>)newValue);
+      case TGRLPackage.QUALITATIVE_MAPPINGS__KPI_EVAL_VALUE_SET:
+        getKpiEvalValueSet().clear();
+        getKpiEvalValueSet().addAll((Collection<? extends KPIEvalValueSet>)newValue);
         return;
-      case TGRLPackage.CONTRIBUTION_CONTEXT__CHANGES:
-        getChanges().clear();
-        getChanges().addAll((Collection<? extends ContributionChange>)newValue);
+      case TGRLPackage.QUALITATIVE_MAPPINGS__MAPPIN:
+        getMappin().clear();
+        getMappin().addAll((Collection<? extends QualitativeMapping>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -223,14 +224,14 @@ public class ContributionContextImpl extends GRLModelElementImpl implements Cont
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION_CONTEXT__NAME:
+      case TGRLPackage.QUALITATIVE_MAPPINGS__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case TGRLPackage.CONTRIBUTION_CONTEXT__INCLUDED_CONTEXTS:
-        getIncludedContexts().clear();
+      case TGRLPackage.QUALITATIVE_MAPPINGS__KPI_EVAL_VALUE_SET:
+        getKpiEvalValueSet().clear();
         return;
-      case TGRLPackage.CONTRIBUTION_CONTEXT__CHANGES:
-        getChanges().clear();
+      case TGRLPackage.QUALITATIVE_MAPPINGS__MAPPIN:
+        getMappin().clear();
         return;
     }
     super.eUnset(featureID);
@@ -246,12 +247,12 @@ public class ContributionContextImpl extends GRLModelElementImpl implements Cont
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION_CONTEXT__NAME:
+      case TGRLPackage.QUALITATIVE_MAPPINGS__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TGRLPackage.CONTRIBUTION_CONTEXT__INCLUDED_CONTEXTS:
-        return includedContexts != null && !includedContexts.isEmpty();
-      case TGRLPackage.CONTRIBUTION_CONTEXT__CHANGES:
-        return changes != null && !changes.isEmpty();
+      case TGRLPackage.QUALITATIVE_MAPPINGS__KPI_EVAL_VALUE_SET:
+        return kpiEvalValueSet != null && !kpiEvalValueSet.isEmpty();
+      case TGRLPackage.QUALITATIVE_MAPPINGS__MAPPIN:
+        return mappin != null && !mappin.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -273,4 +274,4 @@ public class ContributionContextImpl extends GRLModelElementImpl implements Cont
     return result.toString();
   }
 
-} //ContributionContextImpl
+} //QualitativeMappingsImpl

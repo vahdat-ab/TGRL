@@ -22,6 +22,10 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.GRLspec#getStrategies <em>Strategies</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.GRLspec#getContributionGroups <em>Contribution Groups</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.GRLspec#getContributionContexts <em>Contribution Contexts</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.GRLspec#getKpiConv <em>Kpi Conv</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.GRLspec#getKpiInformationElements <em>Kpi Information Elements</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.GRLspec#getKpiModelLinks <em>Kpi Model Links</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.GRLspec#getIndicatorGroup <em>Indicator Group</em>}</li>
  * </ul>
  * </p>
  *
@@ -168,5 +172,69 @@ public interface GRLspec extends EObject
    * @generated
    */
   EList<ContributionContext> getContributionContexts();
+
+  /**
+   * Returns the value of the '<em><b>Kpi Conv</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.KPIConversion}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Kpi Conv</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Kpi Conv</em>' containment reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getGRLspec_KpiConv()
+   * @model containment="true"
+   * @generated
+   */
+  EList<KPIConversion> getKpiConv();
+
+  /**
+   * Returns the value of the '<em><b>Kpi Information Elements</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.KPIInformationElement}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Kpi Information Elements</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Kpi Information Elements</em>' containment reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getGRLspec_KpiInformationElements()
+   * @model containment="true"
+   * @generated
+   */
+  EList<KPIInformationElement> getKpiInformationElements();
+
+  /**
+   * Returns the value of the '<em><b>Kpi Model Links</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.KPIModelLink}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Kpi Model Links</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Kpi Model Links</em>' containment reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getGRLspec_KpiModelLinks()
+   * @model containment="true"
+   * @generated
+   */
+  EList<KPIModelLink> getKpiModelLinks();
+
+  /**
+   * Returns the value of the '<em><b>Indicator Group</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.IndicatorGroup}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Indicator Group</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Indicator Group</em>' containment reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getGRLspec_IndicatorGroup()
+   * @model containment="true"
+   * @generated
+   */
+  EList<IndicatorGroup> getIndicatorGroup();
 
 } // GRLspec

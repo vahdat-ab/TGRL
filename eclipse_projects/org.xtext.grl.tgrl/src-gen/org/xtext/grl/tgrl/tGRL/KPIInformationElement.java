@@ -2,28 +2,29 @@
  */
 package org.xtext.grl.tgrl.tGRL;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Element Link</b></em>'.
+ * A representation of the model object '<em><b>KPI Information Element</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.ElementLink#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.ElementLink#getLabel <em>Label</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.ElementLink#getDescription <em>Description</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.ElementLink#getSrc <em>Src</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.ElementLink#getDest <em>Dest</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.KPIInformationElement#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.KPIInformationElement#getLabel <em>Label</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.KPIInformationElement#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.KPIInformationElement#getKpiModelLinksSrc <em>Kpi Model Links Src</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.KPIInformationElement#getRefs <em>Refs</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getElementLink()
+ * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getKPIInformationElement()
  * @model
  * @generated
  */
-public interface ElementLink extends GRLModelElement
+public interface KPIInformationElement extends GRLModelElement
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -35,14 +36,14 @@ public interface ElementLink extends GRLModelElement
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getElementLink_Name()
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getKPIInformationElement_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ElementLink#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.KPIInformationElement#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -61,14 +62,14 @@ public interface ElementLink extends GRLModelElement
    * <!-- end-user-doc -->
    * @return the value of the '<em>Label</em>' attribute.
    * @see #setLabel(String)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getElementLink_Label()
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getKPIInformationElement_Label()
    * @model
    * @generated
    */
   String getLabel();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ElementLink#getLabel <em>Label</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.KPIInformationElement#getLabel <em>Label</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Label</em>' attribute.
@@ -87,14 +88,14 @@ public interface ElementLink extends GRLModelElement
    * <!-- end-user-doc -->
    * @return the value of the '<em>Description</em>' attribute.
    * @see #setDescription(String)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getElementLink_Description()
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getKPIInformationElement_Description()
    * @model
    * @generated
    */
   String getDescription();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ElementLink#getDescription <em>Description</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.KPIInformationElement#getDescription <em>Description</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Description</em>' attribute.
@@ -104,55 +105,35 @@ public interface ElementLink extends GRLModelElement
   void setDescription(String value);
 
   /**
-   * Returns the value of the '<em><b>Src</b></em>' reference.
+   * Returns the value of the '<em><b>Kpi Model Links Src</b></em>' reference list.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.KPIModelLink}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Src</em>' reference isn't clear,
+   * If the meaning of the '<em>Kpi Model Links Src</em>' reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Src</em>' reference.
-   * @see #setSrc(GRLLinkableElement)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getElementLink_Src()
+   * @return the value of the '<em>Kpi Model Links Src</em>' reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getKPIInformationElement_KpiModelLinksSrc()
    * @model
    * @generated
    */
-  GRLLinkableElement getSrc();
+  EList<KPIModelLink> getKpiModelLinksSrc();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ElementLink#getSrc <em>Src</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Src</em>' reference.
-   * @see #getSrc()
-   * @generated
-   */
-  void setSrc(GRLLinkableElement value);
-
-  /**
-   * Returns the value of the '<em><b>Dest</b></em>' reference.
+   * Returns the value of the '<em><b>Refs</b></em>' reference list.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.KPIInformationElementRef}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Dest</em>' reference isn't clear,
+   * If the meaning of the '<em>Refs</em>' reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Dest</em>' reference.
-   * @see #setDest(GRLLinkableElement)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getElementLink_Dest()
+   * @return the value of the '<em>Refs</em>' reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getKPIInformationElement_Refs()
    * @model
    * @generated
    */
-  GRLLinkableElement getDest();
+  EList<KPIInformationElementRef> getRefs();
 
-  /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ElementLink#getDest <em>Dest</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Dest</em>' reference.
-   * @see #getDest()
-   * @generated
-   */
-  void setDest(GRLLinkableElement value);
-
-} // ElementLink
+} // KPIInformationElement

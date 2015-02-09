@@ -5,32 +5,28 @@ package org.xtext.grl.tgrl.tGRL.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.xtext.grl.tgrl.tGRL.ElementLink;
-import org.xtext.grl.tgrl.tGRL.GRLLinkableElement;
+import org.xtext.grl.tgrl.tGRL.KPIModelLink;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Element Link</b></em>'.
+ * An implementation of the model object '<em><b>KPI Model Link</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ElementLinkImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ElementLinkImpl#getLabel <em>Label</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ElementLinkImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ElementLinkImpl#getSrc <em>Src</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ElementLinkImpl#getDest <em>Dest</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.KPIModelLinkImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.KPIModelLinkImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.KPIModelLinkImpl#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
+public class KPIModelLinkImpl extends GRLModelElementImpl implements KPIModelLink
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -93,31 +89,11 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
   protected String description = DESCRIPTION_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getSrc() <em>Src</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSrc()
-   * @generated
-   * @ordered
-   */
-  protected GRLLinkableElement src;
-
-  /**
-   * The cached value of the '{@link #getDest() <em>Dest</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDest()
-   * @generated
-   * @ordered
-   */
-  protected GRLLinkableElement dest;
-
-  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ElementLinkImpl()
+  protected KPIModelLinkImpl()
   {
     super();
   }
@@ -130,7 +106,7 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.ELEMENT_LINK;
+    return TGRLPackage.Literals.KPI_MODEL_LINK;
   }
 
   /**
@@ -153,7 +129,7 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.ELEMENT_LINK__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.KPI_MODEL_LINK__NAME, oldName, name));
   }
 
   /**
@@ -176,7 +152,7 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
     String oldLabel = label;
     label = newLabel;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.ELEMENT_LINK__LABEL, oldLabel, label));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.KPI_MODEL_LINK__LABEL, oldLabel, label));
   }
 
   /**
@@ -199,93 +175,7 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
     String oldDescription = description;
     description = newDescription;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.ELEMENT_LINK__DESCRIPTION, oldDescription, description));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public GRLLinkableElement getSrc()
-  {
-    if (src != null && src.eIsProxy())
-    {
-      InternalEObject oldSrc = (InternalEObject)src;
-      src = (GRLLinkableElement)eResolveProxy(oldSrc);
-      if (src != oldSrc)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.ELEMENT_LINK__SRC, oldSrc, src));
-      }
-    }
-    return src;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public GRLLinkableElement basicGetSrc()
-  {
-    return src;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSrc(GRLLinkableElement newSrc)
-  {
-    GRLLinkableElement oldSrc = src;
-    src = newSrc;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.ELEMENT_LINK__SRC, oldSrc, src));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public GRLLinkableElement getDest()
-  {
-    if (dest != null && dest.eIsProxy())
-    {
-      InternalEObject oldDest = (InternalEObject)dest;
-      dest = (GRLLinkableElement)eResolveProxy(oldDest);
-      if (dest != oldDest)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.ELEMENT_LINK__DEST, oldDest, dest));
-      }
-    }
-    return dest;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public GRLLinkableElement basicGetDest()
-  {
-    return dest;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setDest(GRLLinkableElement newDest)
-  {
-    GRLLinkableElement oldDest = dest;
-    dest = newDest;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.ELEMENT_LINK__DEST, oldDest, dest));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.KPI_MODEL_LINK__DESCRIPTION, oldDescription, description));
   }
 
   /**
@@ -298,18 +188,12 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
   {
     switch (featureID)
     {
-      case TGRLPackage.ELEMENT_LINK__NAME:
+      case TGRLPackage.KPI_MODEL_LINK__NAME:
         return getName();
-      case TGRLPackage.ELEMENT_LINK__LABEL:
+      case TGRLPackage.KPI_MODEL_LINK__LABEL:
         return getLabel();
-      case TGRLPackage.ELEMENT_LINK__DESCRIPTION:
+      case TGRLPackage.KPI_MODEL_LINK__DESCRIPTION:
         return getDescription();
-      case TGRLPackage.ELEMENT_LINK__SRC:
-        if (resolve) return getSrc();
-        return basicGetSrc();
-      case TGRLPackage.ELEMENT_LINK__DEST:
-        if (resolve) return getDest();
-        return basicGetDest();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -324,20 +208,14 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
   {
     switch (featureID)
     {
-      case TGRLPackage.ELEMENT_LINK__NAME:
+      case TGRLPackage.KPI_MODEL_LINK__NAME:
         setName((String)newValue);
         return;
-      case TGRLPackage.ELEMENT_LINK__LABEL:
+      case TGRLPackage.KPI_MODEL_LINK__LABEL:
         setLabel((String)newValue);
         return;
-      case TGRLPackage.ELEMENT_LINK__DESCRIPTION:
+      case TGRLPackage.KPI_MODEL_LINK__DESCRIPTION:
         setDescription((String)newValue);
-        return;
-      case TGRLPackage.ELEMENT_LINK__SRC:
-        setSrc((GRLLinkableElement)newValue);
-        return;
-      case TGRLPackage.ELEMENT_LINK__DEST:
-        setDest((GRLLinkableElement)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -353,20 +231,14 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
   {
     switch (featureID)
     {
-      case TGRLPackage.ELEMENT_LINK__NAME:
+      case TGRLPackage.KPI_MODEL_LINK__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case TGRLPackage.ELEMENT_LINK__LABEL:
+      case TGRLPackage.KPI_MODEL_LINK__LABEL:
         setLabel(LABEL_EDEFAULT);
         return;
-      case TGRLPackage.ELEMENT_LINK__DESCRIPTION:
+      case TGRLPackage.KPI_MODEL_LINK__DESCRIPTION:
         setDescription(DESCRIPTION_EDEFAULT);
-        return;
-      case TGRLPackage.ELEMENT_LINK__SRC:
-        setSrc((GRLLinkableElement)null);
-        return;
-      case TGRLPackage.ELEMENT_LINK__DEST:
-        setDest((GRLLinkableElement)null);
         return;
     }
     super.eUnset(featureID);
@@ -382,16 +254,12 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
   {
     switch (featureID)
     {
-      case TGRLPackage.ELEMENT_LINK__NAME:
+      case TGRLPackage.KPI_MODEL_LINK__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TGRLPackage.ELEMENT_LINK__LABEL:
+      case TGRLPackage.KPI_MODEL_LINK__LABEL:
         return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
-      case TGRLPackage.ELEMENT_LINK__DESCRIPTION:
+      case TGRLPackage.KPI_MODEL_LINK__DESCRIPTION:
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-      case TGRLPackage.ELEMENT_LINK__SRC:
-        return src != null;
-      case TGRLPackage.ELEMENT_LINK__DEST:
-        return dest != null;
     }
     return super.eIsSet(featureID);
   }
@@ -417,4 +285,4 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
     return result.toString();
   }
 
-} //ElementLinkImpl
+} //KPIModelLinkImpl

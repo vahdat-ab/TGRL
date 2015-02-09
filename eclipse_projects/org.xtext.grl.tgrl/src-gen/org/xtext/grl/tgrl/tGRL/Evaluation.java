@@ -17,6 +17,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Evaluation#getQualitativeEvaluation <em>Qualitative Evaluation</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Evaluation#getExceeds <em>Exceeds</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Evaluation#getEvalRange <em>Eval Range</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Evaluation#getKpiEvalValueSet <em>Kpi Eval Value Set</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Evaluation#getKpiNewEvalValue <em>Kpi New Eval Value</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Evaluation#getInElement <em>In Element</em>}</li>
  * </ul>
  * </p>
  *
@@ -158,5 +161,83 @@ public interface Evaluation extends EObject
    * @generated
    */
   void setEvalRange(EvaluationRange value);
+
+  /**
+   * Returns the value of the '<em><b>Kpi Eval Value Set</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Kpi Eval Value Set</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Kpi Eval Value Set</em>' containment reference.
+   * @see #setKpiEvalValueSet(KPIEvalValueSet)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getEvaluation_KpiEvalValueSet()
+   * @model containment="true"
+   * @generated
+   */
+  KPIEvalValueSet getKpiEvalValueSet();
+
+  /**
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Evaluation#getKpiEvalValueSet <em>Kpi Eval Value Set</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Kpi Eval Value Set</em>' containment reference.
+   * @see #getKpiEvalValueSet()
+   * @generated
+   */
+  void setKpiEvalValueSet(KPIEvalValueSet value);
+
+  /**
+   * Returns the value of the '<em><b>Kpi New Eval Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Kpi New Eval Value</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Kpi New Eval Value</em>' containment reference.
+   * @see #setKpiNewEvalValue(KPINewEvalValue)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getEvaluation_KpiNewEvalValue()
+   * @model containment="true"
+   * @generated
+   */
+  KPINewEvalValue getKpiNewEvalValue();
+
+  /**
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Evaluation#getKpiNewEvalValue <em>Kpi New Eval Value</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Kpi New Eval Value</em>' containment reference.
+   * @see #getKpiNewEvalValue()
+   * @generated
+   */
+  void setKpiNewEvalValue(KPINewEvalValue value);
+
+  /**
+   * Returns the value of the '<em><b>In Element</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>In Element</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>In Element</em>' reference.
+   * @see #setInElement(IntentionalElement)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getEvaluation_InElement()
+   * @model
+   * @generated
+   */
+  IntentionalElement getInElement();
+
+  /**
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Evaluation#getInElement <em>In Element</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>In Element</em>' reference.
+   * @see #getInElement()
+   * @generated
+   */
+  void setInElement(IntentionalElement value);
 
 } // Evaluation

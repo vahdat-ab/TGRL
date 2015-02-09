@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.xtext.grl.tgrl.tGRL.DecompositionType;
-import org.xtext.grl.tgrl.tGRL.Evaluation;
 import org.xtext.grl.tgrl.tGRL.IntentionalElement;
 import org.xtext.grl.tgrl.tGRL.IntentionalElementRef;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
@@ -29,7 +28,6 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl#getDecompositionType <em>Decomposition Type</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl#getRefs <em>Refs</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl#getEvals <em>Evals</em>}</li>
  * </ul>
  * </p>
  *
@@ -66,16 +64,6 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
    * @ordered
    */
   protected EList<IntentionalElementRef> refs;
-
-  /**
-   * The cached value of the '{@link #getEvals() <em>Evals</em>}' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEvals()
-   * @generated
-   * @ordered
-   */
-  protected EList<Evaluation> evals;
 
   /**
    * <!-- begin-user-doc -->
@@ -140,20 +128,6 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Evaluation> getEvals()
-  {
-    if (evals == null)
-    {
-      evals = new EObjectResolvingEList<Evaluation>(Evaluation.class, this, TGRLPackage.INTENTIONAL_ELEMENT__EVALS);
-    }
-    return evals;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -163,8 +137,6 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
         return getDecompositionType();
       case TGRLPackage.INTENTIONAL_ELEMENT__REFS:
         return getRefs();
-      case TGRLPackage.INTENTIONAL_ELEMENT__EVALS:
-        return getEvals();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -187,10 +159,6 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
         getRefs().clear();
         getRefs().addAll((Collection<? extends IntentionalElementRef>)newValue);
         return;
-      case TGRLPackage.INTENTIONAL_ELEMENT__EVALS:
-        getEvals().clear();
-        getEvals().addAll((Collection<? extends Evaluation>)newValue);
-        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -211,9 +179,6 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
       case TGRLPackage.INTENTIONAL_ELEMENT__REFS:
         getRefs().clear();
         return;
-      case TGRLPackage.INTENTIONAL_ELEMENT__EVALS:
-        getEvals().clear();
-        return;
     }
     super.eUnset(featureID);
   }
@@ -232,8 +197,6 @@ public class IntentionalElementImpl extends GRLLinkableElementImpl implements In
         return decompositionType != DECOMPOSITION_TYPE_EDEFAULT;
       case TGRLPackage.INTENTIONAL_ELEMENT__REFS:
         return refs != null && !refs.isEmpty();
-      case TGRLPackage.INTENTIONAL_ELEMENT__EVALS:
-        return evals != null && !evals.isEmpty();
     }
     return super.eIsSet(featureID);
   }

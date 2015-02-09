@@ -119,6 +119,14 @@ public class TGRLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case TGRLPackage.KPI_CONVERSION:
+      {
+        KPIConversion kpiConversion = (KPIConversion)theEObject;
+        T result = caseKPIConversion(kpiConversion);
+        if (result == null) result = caseGRLModelElement(kpiConversion);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case TGRLPackage.GR_LSPEC:
       {
         GRLspec grLspec = (GRLspec)theEObject;
@@ -306,10 +314,73 @@ public class TGRLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TGRLPackage.CONTRIBUB:
+      case TGRLPackage.QUALITATIVE_MAPPINGS:
       {
-        Contribub contribub = (Contribub)theEObject;
-        T result = caseContribub(contribub);
+        QualitativeMappings qualitativeMappings = (QualitativeMappings)theEObject;
+        T result = caseQualitativeMappings(qualitativeMappings);
+        if (result == null) result = caseKPIConversion(qualitativeMappings);
+        if (result == null) result = caseGRLModelElement(qualitativeMappings);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.KPI_EVAL_VALUE_SET:
+      {
+        KPIEvalValueSet kpiEvalValueSet = (KPIEvalValueSet)theEObject;
+        T result = caseKPIEvalValueSet(kpiEvalValueSet);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.QUALITATIVE_MAPPING:
+      {
+        QualitativeMapping qualitativeMapping = (QualitativeMapping)theEObject;
+        T result = caseQualitativeMapping(qualitativeMapping);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.KPI_NEW_EVAL_VALUE:
+      {
+        KPINewEvalValue kpiNewEvalValue = (KPINewEvalValue)theEObject;
+        T result = caseKPINewEvalValue(kpiNewEvalValue);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.KPI_INFORMATION_CONFIG:
+      {
+        KPIInformationConfig kpiInformationConfig = (KPIInformationConfig)theEObject;
+        T result = caseKPIInformationConfig(kpiInformationConfig);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.KPI_INFORMATION_ELEMENT:
+      {
+        KPIInformationElement kpiInformationElement = (KPIInformationElement)theEObject;
+        T result = caseKPIInformationElement(kpiInformationElement);
+        if (result == null) result = caseGRLModelElement(kpiInformationElement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.KPI_INFORMATION_ELEMENT_REF:
+      {
+        KPIInformationElementRef kpiInformationElementRef = (KPIInformationElementRef)theEObject;
+        T result = caseKPIInformationElementRef(kpiInformationElementRef);
+        if (result == null) result = caseGRLNode(kpiInformationElementRef);
+        if (result == null) result = caseGRLModelElement(kpiInformationElementRef);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.KPI_MODEL_LINK:
+      {
+        KPIModelLink kpiModelLink = (KPIModelLink)theEObject;
+        T result = caseKPIModelLink(kpiModelLink);
+        if (result == null) result = caseGRLModelElement(kpiModelLink);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.INDICATOR_GROUP:
+      {
+        IndicatorGroup indicatorGroup = (IndicatorGroup)theEObject;
+        T result = caseIndicatorGroup(indicatorGroup);
+        if (result == null) result = caseGRLModelElement(indicatorGroup);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -409,6 +480,22 @@ public class TGRLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseElementLink(ElementLink object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>KPI Conversion</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>KPI Conversion</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKPIConversion(KPIConversion object)
   {
     return null;
   }
@@ -766,17 +853,145 @@ public class TGRLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Contribub</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Qualitative Mappings</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Contribub</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Qualitative Mappings</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseContribub(Contribub object)
+  public T caseQualitativeMappings(QualitativeMappings object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>KPI Eval Value Set</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>KPI Eval Value Set</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKPIEvalValueSet(KPIEvalValueSet object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Qualitative Mapping</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Qualitative Mapping</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQualitativeMapping(QualitativeMapping object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>KPI New Eval Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>KPI New Eval Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKPINewEvalValue(KPINewEvalValue object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>KPI Information Config</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>KPI Information Config</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKPIInformationConfig(KPIInformationConfig object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>KPI Information Element</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>KPI Information Element</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKPIInformationElement(KPIInformationElement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>KPI Information Element Ref</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>KPI Information Element Ref</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKPIInformationElementRef(KPIInformationElementRef object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>KPI Model Link</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>KPI Model Link</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKPIModelLink(KPIModelLink object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Indicator Group</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Indicator Group</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIndicatorGroup(IndicatorGroup object)
   {
     return null;
   }

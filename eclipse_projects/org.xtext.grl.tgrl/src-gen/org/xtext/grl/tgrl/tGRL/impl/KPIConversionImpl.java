@@ -4,28 +4,26 @@ package org.xtext.grl.tgrl.tGRL.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.xtext.grl.tgrl.tGRL.GRLModelElement;
+import org.xtext.grl.tgrl.tGRL.KPIConversion;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>GRL Model Element</b></em>'.
+ * An implementation of the model object '<em><b>KPI Conversion</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class GRLModelElementImpl extends MinimalEObjectImpl.Container implements GRLModelElement
+public class KPIConversionImpl extends GRLModelElementImpl implements KPIConversion
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected GRLModelElementImpl()
+  protected KPIConversionImpl()
   {
     super();
   }
@@ -38,7 +36,7 @@ public class GRLModelElementImpl extends MinimalEObjectImpl.Container implements
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.GRL_MODEL_ELEMENT;
+    return TGRLPackage.Literals.KPI_CONVERSION;
   }
 
-} //GRLModelElementImpl
+} //KPIConversionImpl

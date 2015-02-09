@@ -7,24 +7,26 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.grl.tgrl.tGRL.GRLNode;
+import org.xtext.grl.tgrl.tGRL.KPINewEvalValue;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>GRL Node</b></em>'.
+ * An implementation of the model object '<em><b>KPI New Eval Value</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GRLNodeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.KPINewEvalValueImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.KPINewEvalValueImpl#getEvaluationValue <em>Evaluation Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
+public class KPINewEvalValueImpl extends MinimalEObjectImpl.Container implements KPINewEvalValue
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -47,11 +49,31 @@ public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
   protected String name = NAME_EDEFAULT;
 
   /**
+   * The default value of the '{@link #getEvaluationValue() <em>Evaluation Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getEvaluationValue()
+   * @generated
+   * @ordered
+   */
+  protected static final double EVALUATION_VALUE_EDEFAULT = 0.0;
+
+  /**
+   * The cached value of the '{@link #getEvaluationValue() <em>Evaluation Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getEvaluationValue()
+   * @generated
+   * @ordered
+   */
+  protected double evaluationValue = EVALUATION_VALUE_EDEFAULT;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected GRLNodeImpl()
+  protected KPINewEvalValueImpl()
   {
     super();
   }
@@ -64,7 +86,7 @@ public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.GRL_NODE;
+    return TGRLPackage.Literals.KPI_NEW_EVAL_VALUE;
   }
 
   /**
@@ -87,7 +109,30 @@ public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.GRL_NODE__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.KPI_NEW_EVAL_VALUE__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public double getEvaluationValue()
+  {
+    return evaluationValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setEvaluationValue(double newEvaluationValue)
+  {
+    double oldEvaluationValue = evaluationValue;
+    evaluationValue = newEvaluationValue;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.KPI_NEW_EVAL_VALUE__EVALUATION_VALUE, oldEvaluationValue, evaluationValue));
   }
 
   /**
@@ -100,8 +145,10 @@ public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
   {
     switch (featureID)
     {
-      case TGRLPackage.GRL_NODE__NAME:
+      case TGRLPackage.KPI_NEW_EVAL_VALUE__NAME:
         return getName();
+      case TGRLPackage.KPI_NEW_EVAL_VALUE__EVALUATION_VALUE:
+        return getEvaluationValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -116,8 +163,11 @@ public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
   {
     switch (featureID)
     {
-      case TGRLPackage.GRL_NODE__NAME:
+      case TGRLPackage.KPI_NEW_EVAL_VALUE__NAME:
         setName((String)newValue);
+        return;
+      case TGRLPackage.KPI_NEW_EVAL_VALUE__EVALUATION_VALUE:
+        setEvaluationValue((Double)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -133,8 +183,11 @@ public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
   {
     switch (featureID)
     {
-      case TGRLPackage.GRL_NODE__NAME:
+      case TGRLPackage.KPI_NEW_EVAL_VALUE__NAME:
         setName(NAME_EDEFAULT);
+        return;
+      case TGRLPackage.KPI_NEW_EVAL_VALUE__EVALUATION_VALUE:
+        setEvaluationValue(EVALUATION_VALUE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -150,8 +203,10 @@ public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
   {
     switch (featureID)
     {
-      case TGRLPackage.GRL_NODE__NAME:
+      case TGRLPackage.KPI_NEW_EVAL_VALUE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case TGRLPackage.KPI_NEW_EVAL_VALUE__EVALUATION_VALUE:
+        return evaluationValue != EVALUATION_VALUE_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -169,8 +224,10 @@ public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", evaluationValue: ");
+    result.append(evaluationValue);
     result.append(')');
     return result.toString();
   }
 
-} //GRLNodeImpl
+} //KPINewEvalValueImpl

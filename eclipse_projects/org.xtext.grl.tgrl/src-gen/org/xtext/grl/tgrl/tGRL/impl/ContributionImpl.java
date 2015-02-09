@@ -2,13 +2,20 @@
  */
 package org.xtext.grl.tgrl.tGRL.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.xtext.grl.tgrl.tGRL.Contribution;
+import org.xtext.grl.tgrl.tGRL.ContributionChange;
 import org.xtext.grl.tgrl.tGRL.ContributionType;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
@@ -22,6 +29,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionImpl#getContribution <em>Contribution</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionImpl#getQuantitativeContribution <em>Quantitative Contribution</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionImpl#getCorrelation <em>Correlation</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionImpl#getChanges <em>Changes</em>}</li>
  * </ul>
  * </p>
  *
@@ -88,6 +96,16 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
    * @ordered
    */
   protected String correlation = CORRELATION_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getChanges() <em>Changes</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getChanges()
+   * @generated
+   * @ordered
+   */
+  protected EList<ContributionChange> changes;
 
   /**
    * <!-- begin-user-doc -->
@@ -184,6 +202,20 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<ContributionChange> getChanges()
+  {
+    if (changes == null)
+    {
+      changes = new EObjectResolvingEList<ContributionChange>(ContributionChange.class, this, TGRLPackage.CONTRIBUTION__CHANGES);
+    }
+    return changes;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -195,6 +227,8 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
         return getQuantitativeContribution();
       case TGRLPackage.CONTRIBUTION__CORRELATION:
         return getCorrelation();
+      case TGRLPackage.CONTRIBUTION__CHANGES:
+        return getChanges();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -204,6 +238,7 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -217,6 +252,10 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
         return;
       case TGRLPackage.CONTRIBUTION__CORRELATION:
         setCorrelation((String)newValue);
+        return;
+      case TGRLPackage.CONTRIBUTION__CHANGES:
+        getChanges().clear();
+        getChanges().addAll((Collection<? extends ContributionChange>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -241,6 +280,9 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
       case TGRLPackage.CONTRIBUTION__CORRELATION:
         setCorrelation(CORRELATION_EDEFAULT);
         return;
+      case TGRLPackage.CONTRIBUTION__CHANGES:
+        getChanges().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -261,6 +303,8 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
         return quantitativeContribution != QUANTITATIVE_CONTRIBUTION_EDEFAULT;
       case TGRLPackage.CONTRIBUTION__CORRELATION:
         return CORRELATION_EDEFAULT == null ? correlation != null : !CORRELATION_EDEFAULT.equals(correlation);
+      case TGRLPackage.CONTRIBUTION__CHANGES:
+        return changes != null && !changes.isEmpty();
     }
     return super.eIsSet(featureID);
   }

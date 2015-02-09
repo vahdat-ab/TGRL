@@ -2,35 +2,40 @@
  */
 package org.xtext.grl.tgrl.tGRL.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.xtext.grl.tgrl.tGRL.ElementLink;
-import org.xtext.grl.tgrl.tGRL.GRLLinkableElement;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+import org.xtext.grl.tgrl.tGRL.Indicator;
+import org.xtext.grl.tgrl.tGRL.IndicatorGroup;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Element Link</b></em>'.
+ * An implementation of the model object '<em><b>Indicator Group</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ElementLinkImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ElementLinkImpl#getLabel <em>Label</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ElementLinkImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ElementLinkImpl#getSrc <em>Src</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ElementLinkImpl#getDest <em>Dest</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorGroupImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorGroupImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorGroupImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorGroupImpl#getIsRedesignCategory <em>Is Redesign Category</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorGroupImpl#getIndicators <em>Indicators</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
+public class IndicatorGroupImpl extends GRLModelElementImpl implements IndicatorGroup
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -93,31 +98,41 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
   protected String description = DESCRIPTION_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getSrc() <em>Src</em>}' reference.
+   * The default value of the '{@link #getIsRedesignCategory() <em>Is Redesign Category</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSrc()
+   * @see #getIsRedesignCategory()
    * @generated
    * @ordered
    */
-  protected GRLLinkableElement src;
+  protected static final String IS_REDESIGN_CATEGORY_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getDest() <em>Dest</em>}' reference.
+   * The cached value of the '{@link #getIsRedesignCategory() <em>Is Redesign Category</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDest()
+   * @see #getIsRedesignCategory()
    * @generated
    * @ordered
    */
-  protected GRLLinkableElement dest;
+  protected String isRedesignCategory = IS_REDESIGN_CATEGORY_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getIndicators() <em>Indicators</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIndicators()
+   * @generated
+   * @ordered
+   */
+  protected EList<Indicator> indicators;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ElementLinkImpl()
+  protected IndicatorGroupImpl()
   {
     super();
   }
@@ -130,7 +145,7 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.ELEMENT_LINK;
+    return TGRLPackage.Literals.INDICATOR_GROUP;
   }
 
   /**
@@ -153,7 +168,7 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.ELEMENT_LINK__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.INDICATOR_GROUP__NAME, oldName, name));
   }
 
   /**
@@ -176,7 +191,7 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
     String oldLabel = label;
     label = newLabel;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.ELEMENT_LINK__LABEL, oldLabel, label));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.INDICATOR_GROUP__LABEL, oldLabel, label));
   }
 
   /**
@@ -199,7 +214,7 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
     String oldDescription = description;
     description = newDescription;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.ELEMENT_LINK__DESCRIPTION, oldDescription, description));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.INDICATOR_GROUP__DESCRIPTION, oldDescription, description));
   }
 
   /**
@@ -207,19 +222,9 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
    * <!-- end-user-doc -->
    * @generated
    */
-  public GRLLinkableElement getSrc()
+  public String getIsRedesignCategory()
   {
-    if (src != null && src.eIsProxy())
-    {
-      InternalEObject oldSrc = (InternalEObject)src;
-      src = (GRLLinkableElement)eResolveProxy(oldSrc);
-      if (src != oldSrc)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.ELEMENT_LINK__SRC, oldSrc, src));
-      }
-    }
-    return src;
+    return isRedesignCategory;
   }
 
   /**
@@ -227,22 +232,12 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
    * <!-- end-user-doc -->
    * @generated
    */
-  public GRLLinkableElement basicGetSrc()
+  public void setIsRedesignCategory(String newIsRedesignCategory)
   {
-    return src;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSrc(GRLLinkableElement newSrc)
-  {
-    GRLLinkableElement oldSrc = src;
-    src = newSrc;
+    String oldIsRedesignCategory = isRedesignCategory;
+    isRedesignCategory = newIsRedesignCategory;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.ELEMENT_LINK__SRC, oldSrc, src));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.INDICATOR_GROUP__IS_REDESIGN_CATEGORY, oldIsRedesignCategory, isRedesignCategory));
   }
 
   /**
@@ -250,42 +245,13 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
    * <!-- end-user-doc -->
    * @generated
    */
-  public GRLLinkableElement getDest()
+  public EList<Indicator> getIndicators()
   {
-    if (dest != null && dest.eIsProxy())
+    if (indicators == null)
     {
-      InternalEObject oldDest = (InternalEObject)dest;
-      dest = (GRLLinkableElement)eResolveProxy(oldDest);
-      if (dest != oldDest)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.ELEMENT_LINK__DEST, oldDest, dest));
-      }
+      indicators = new EObjectResolvingEList<Indicator>(Indicator.class, this, TGRLPackage.INDICATOR_GROUP__INDICATORS);
     }
-    return dest;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public GRLLinkableElement basicGetDest()
-  {
-    return dest;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setDest(GRLLinkableElement newDest)
-  {
-    GRLLinkableElement oldDest = dest;
-    dest = newDest;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.ELEMENT_LINK__DEST, oldDest, dest));
+    return indicators;
   }
 
   /**
@@ -298,18 +264,16 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
   {
     switch (featureID)
     {
-      case TGRLPackage.ELEMENT_LINK__NAME:
+      case TGRLPackage.INDICATOR_GROUP__NAME:
         return getName();
-      case TGRLPackage.ELEMENT_LINK__LABEL:
+      case TGRLPackage.INDICATOR_GROUP__LABEL:
         return getLabel();
-      case TGRLPackage.ELEMENT_LINK__DESCRIPTION:
+      case TGRLPackage.INDICATOR_GROUP__DESCRIPTION:
         return getDescription();
-      case TGRLPackage.ELEMENT_LINK__SRC:
-        if (resolve) return getSrc();
-        return basicGetSrc();
-      case TGRLPackage.ELEMENT_LINK__DEST:
-        if (resolve) return getDest();
-        return basicGetDest();
+      case TGRLPackage.INDICATOR_GROUP__IS_REDESIGN_CATEGORY:
+        return getIsRedesignCategory();
+      case TGRLPackage.INDICATOR_GROUP__INDICATORS:
+        return getIndicators();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -319,25 +283,27 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case TGRLPackage.ELEMENT_LINK__NAME:
+      case TGRLPackage.INDICATOR_GROUP__NAME:
         setName((String)newValue);
         return;
-      case TGRLPackage.ELEMENT_LINK__LABEL:
+      case TGRLPackage.INDICATOR_GROUP__LABEL:
         setLabel((String)newValue);
         return;
-      case TGRLPackage.ELEMENT_LINK__DESCRIPTION:
+      case TGRLPackage.INDICATOR_GROUP__DESCRIPTION:
         setDescription((String)newValue);
         return;
-      case TGRLPackage.ELEMENT_LINK__SRC:
-        setSrc((GRLLinkableElement)newValue);
+      case TGRLPackage.INDICATOR_GROUP__IS_REDESIGN_CATEGORY:
+        setIsRedesignCategory((String)newValue);
         return;
-      case TGRLPackage.ELEMENT_LINK__DEST:
-        setDest((GRLLinkableElement)newValue);
+      case TGRLPackage.INDICATOR_GROUP__INDICATORS:
+        getIndicators().clear();
+        getIndicators().addAll((Collection<? extends Indicator>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -353,20 +319,20 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
   {
     switch (featureID)
     {
-      case TGRLPackage.ELEMENT_LINK__NAME:
+      case TGRLPackage.INDICATOR_GROUP__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case TGRLPackage.ELEMENT_LINK__LABEL:
+      case TGRLPackage.INDICATOR_GROUP__LABEL:
         setLabel(LABEL_EDEFAULT);
         return;
-      case TGRLPackage.ELEMENT_LINK__DESCRIPTION:
+      case TGRLPackage.INDICATOR_GROUP__DESCRIPTION:
         setDescription(DESCRIPTION_EDEFAULT);
         return;
-      case TGRLPackage.ELEMENT_LINK__SRC:
-        setSrc((GRLLinkableElement)null);
+      case TGRLPackage.INDICATOR_GROUP__IS_REDESIGN_CATEGORY:
+        setIsRedesignCategory(IS_REDESIGN_CATEGORY_EDEFAULT);
         return;
-      case TGRLPackage.ELEMENT_LINK__DEST:
-        setDest((GRLLinkableElement)null);
+      case TGRLPackage.INDICATOR_GROUP__INDICATORS:
+        getIndicators().clear();
         return;
     }
     super.eUnset(featureID);
@@ -382,16 +348,16 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
   {
     switch (featureID)
     {
-      case TGRLPackage.ELEMENT_LINK__NAME:
+      case TGRLPackage.INDICATOR_GROUP__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TGRLPackage.ELEMENT_LINK__LABEL:
+      case TGRLPackage.INDICATOR_GROUP__LABEL:
         return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
-      case TGRLPackage.ELEMENT_LINK__DESCRIPTION:
+      case TGRLPackage.INDICATOR_GROUP__DESCRIPTION:
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-      case TGRLPackage.ELEMENT_LINK__SRC:
-        return src != null;
-      case TGRLPackage.ELEMENT_LINK__DEST:
-        return dest != null;
+      case TGRLPackage.INDICATOR_GROUP__IS_REDESIGN_CATEGORY:
+        return IS_REDESIGN_CATEGORY_EDEFAULT == null ? isRedesignCategory != null : !IS_REDESIGN_CATEGORY_EDEFAULT.equals(isRedesignCategory);
+      case TGRLPackage.INDICATOR_GROUP__INDICATORS:
+        return indicators != null && !indicators.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -413,8 +379,10 @@ public class ElementLinkImpl extends GRLModelElementImpl implements ElementLink
     result.append(label);
     result.append(", description: ");
     result.append(description);
+    result.append(", isRedesignCategory: ");
+    result.append(isRedesignCategory);
     result.append(')');
     return result.toString();
   }
 
-} //ElementLinkImpl
+} //IndicatorGroupImpl
