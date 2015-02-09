@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.grl.tgrl/src-gen" editDirectory="/org.xtext.grl.tgrl.edit/src"
+    editorDirectory="/org.xtext.grl.tgrl.editor/src" modelPluginID="org.xtext.grl.tgrl"
+    forceOverwrite="true" modelName="TGRL" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.xtext.grl.tgrl.edit"
+    editorPluginID="org.xtext.grl.tgrl.editor" runtimeVersion="2.10" usedGenPackages="platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore">
+  <genPackages prefix="TGRL" basePackage="org.xtext.grl.tgrl" disposableProviderFactory="true"
+      fileExtensions="xgrl" ecorePackage="TGRL.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="TGRL.ecore#//ImportanceType">
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//ImportanceType/None"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//ImportanceType/High"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//ImportanceType/Medium"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//ImportanceType/Low"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="TGRL.ecore#//DecompositionType">
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//DecompositionType/And"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//DecompositionType/Or"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//DecompositionType/Xor"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="TGRL.ecore#//ContributionType">
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//ContributionType/Help"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//ContributionType/Make"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//ContributionType/SomePositive"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//ContributionType/Unknown"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//ContributionType/SomeNegative"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//ContributionType/Hurt"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//ContributionType/Break"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="TGRL.ecore#//QualitativeLabel">
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/Denied"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/WeaklyDenied"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/WeaklySatisfied"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/Satisfied"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/Conflict"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/Unknown"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/None"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="TGRL.ecore#//Criticality">
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Criticality/None"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Criticality/High"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Criticality/Medium"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Criticality/Low"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="TGRL.ecore#//Priority">
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Priority/None"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Priority/High"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Priority/Medium"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Priority/Low"/>
+    </genEnums>
+    <genClasses ecoreClass="TGRL.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Model/gRLspecs"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//GRLModelElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//GRLModelElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//GRLNode"/>
+    <genClasses ecoreClass="TGRL.ecore#//GRLLinkableElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//GRLLinkableElement/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//GRLLinkableElement/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//GRLLinkableElement/importance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//GRLLinkableElement/importanceQuantitative"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//IntentionalElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//IntentionalElement/decompositionType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//IntentionalElement/refs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//IntentionalElement/evals"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//ElementLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ElementLink/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ElementLink/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//ElementLink/src"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//ElementLink/dest"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//GRLspec">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//GRLspec/impactModel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//GRLspec/links"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//GRLspec/actors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//GRLspec/intElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//GRLspec/groups"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//GRLspec/strategies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//GRLspec/contributionGroups"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//GRLspec/contributionContexts"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//Actor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//Actor/includedActors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//Actor/collapsedRefs"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//Softgoal"/>
+    <genClasses ecoreClass="TGRL.ecore#//Goal"/>
+    <genClasses ecoreClass="TGRL.ecore#//Task"/>
+    <genClasses ecoreClass="TGRL.ecore#//Ressource"/>
+    <genClasses ecoreClass="TGRL.ecore#//Indicator"/>
+    <genClasses ecoreClass="TGRL.ecore#//Decomposition"/>
+    <genClasses ecoreClass="TGRL.ecore#//Contribution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Contribution/contribution"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Contribution/quantitativeContribution"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Contribution/correlation"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//Dependency"/>
+    <genClasses ecoreClass="TGRL.ecore#//Belief">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Belief/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Belief/description"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//CollapsedActorRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//CollapsedActorRef/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//CollapsedActorRef/description"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//IntentionalElementRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//IntentionalElementRef/criticality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//IntentionalElementRef/priority"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//IntentionalElementRef/def"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//ImpactModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ImpactModel/name"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//StrategiesGroup">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//StrategiesGroup/strategies"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//EvaluationStrategy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//EvaluationStrategy/evaluations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//EvaluationStrategy/includedStrategies"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//Evaluation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Evaluation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Evaluation/evaluation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Evaluation/qualitativeEvaluation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Evaluation/exceeds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Evaluation/evalRange"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//EvaluationRange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//EvaluationRange/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//EvaluationRange/end"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//EvaluationRange/step"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//ContributionContextGroup">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//ContributionContextGroup/contribs"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//ContributionContext">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//ContributionContext/includedContexts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//ContributionContext/changes"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//ContributionChange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionChange/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionChange/newContribution"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionChange/newQuantitativeContribution"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//ContributionChange/contribRange"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//ContributionRange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionRange/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionRange/end"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionRange/step"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//Contribub">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Contribub/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Contribub/contribution"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Contribub/quantitativeContribution"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Contribub/correlation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//Contribub/changes"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

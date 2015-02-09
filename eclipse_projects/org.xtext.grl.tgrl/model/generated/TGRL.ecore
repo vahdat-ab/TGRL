@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tGRL" nsURI="http://www.xtext.org/grl/tgrl/TGRL" nsPrefix="tGRL">
+  <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gRLspecs" upperBound="-1"
+        eType="#//GRLspec" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GRLModelElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GRLNode" eSuperTypes="#//GRLModelElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GRLLinkableElement" eSuperTypes="#//GRLModelElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importance" eType="#//ImportanceType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importanceQuantitative"
+        eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntentionalElement" eSuperTypes="#//GRLLinkableElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="decompositionType" eType="#//DecompositionType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" unique="false" upperBound="-1"
+        eType="#//IntentionalElementRef"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="evals" unique="false" upperBound="-1"
+        eType="#//Evaluation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElementLink" eSuperTypes="#//GRLModelElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="src" eType="#//GRLLinkableElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dest" eType="#//GRLLinkableElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GRLspec">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="impactModel" eType="#//ImpactModel"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
+        eType="#//ElementLink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actors" upperBound="-1"
+        eType="#//Actor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="intElements" upperBound="-1"
+        eType="#//IntentionalElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groups" upperBound="-1"
+        eType="#//StrategiesGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="strategies" upperBound="-1"
+        eType="#//EvaluationStrategy" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contributionGroups" upperBound="-1"
+        eType="#//ContributionContextGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contributionContexts" upperBound="-1"
+        eType="#//ContributionContext" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//GRLLinkableElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="includedActors" unique="false"
+        upperBound="-1" eType="#//Actor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="collapsedRefs" unique="false"
+        upperBound="-1" eType="#//CollapsedActorRef"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Softgoal" eSuperTypes="#//IntentionalElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Goal" eSuperTypes="#//IntentionalElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//IntentionalElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Ressource" eSuperTypes="#//IntentionalElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Indicator" eSuperTypes="#//IntentionalElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Decomposition" eSuperTypes="#//ElementLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Contribution" eSuperTypes="#//ElementLink">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contribution" eType="#//ContributionType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantitativeContribution"
+        eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="correlation" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dependency" eSuperTypes="#//ElementLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Belief" eSuperTypes="#//GRLNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CollapsedActorRef" eSuperTypes="#//GRLNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntentionalElementRef" eSuperTypes="#//GRLNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="criticality" eType="#//Criticality"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" eType="#//Priority"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="def" eType="#//IntentionalElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImpactModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StrategiesGroup" eSuperTypes="#//GRLModelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="strategies" unique="false"
+        upperBound="-1" eType="#//EvaluationStrategy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EvaluationStrategy" eSuperTypes="#//GRLModelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="evaluations" upperBound="-1"
+        eType="#//Evaluation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="includedStrategies" unique="false"
+        upperBound="-1" eType="#//EvaluationStrategy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Evaluation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="evaluation" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualitativeEvaluation"
+        eType="#//QualitativeLabel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exceeds" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="evalRange" eType="#//EvaluationRange"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EvaluationRange">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="start" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="step" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContributionContextGroup" eSuperTypes="#//GRLModelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contribs" unique="false"
+        upperBound="-1" eType="#//ContributionContext"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContributionContext" eSuperTypes="#//GRLModelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="includedContexts" unique="false"
+        upperBound="-1" eType="#//ContributionContext"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="changes" upperBound="-1"
+        eType="#//ContributionChange" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContributionChange">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newContribution" eType="#//ContributionType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newQuantitativeContribution"
+        eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contribRange" eType="#//ContributionRange"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContributionRange">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="start" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="step" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Contribub">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contribution" eType="#//ContributionType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantitativeContribution"
+        eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="correlation" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="changes" unique="false"
+        upperBound="-1" eType="#//ContributionChange"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ImportanceType">
+    <eLiterals name="None" literal="none"/>
+    <eLiterals name="High" value="1" literal="high"/>
+    <eLiterals name="Medium" value="2" literal="medium"/>
+    <eLiterals name="Low" value="3" literal="low"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DecompositionType">
+    <eLiterals name="And" literal="and"/>
+    <eLiterals name="Or" value="1" literal="or"/>
+    <eLiterals name="Xor" value="2" literal="xor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ContributionType">
+    <eLiterals name="Help" literal="help"/>
+    <eLiterals name="Make" value="1" literal="make"/>
+    <eLiterals name="SomePositive" value="2" literal="somePositive"/>
+    <eLiterals name="Unknown" value="3" literal="unknown"/>
+    <eLiterals name="SomeNegative" value="4" literal="someNegative"/>
+    <eLiterals name="Hurt" value="5" literal="hurt"/>
+    <eLiterals name="Break" value="6" literal="break"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="QualitativeLabel">
+    <eLiterals name="Denied" literal="denied"/>
+    <eLiterals name="WeaklyDenied" value="1" literal="weaklyDenied"/>
+    <eLiterals name="WeaklySatisfied" value="2" literal="weaklySatisfied"/>
+    <eLiterals name="Satisfied" value="3" literal="satisfied"/>
+    <eLiterals name="Conflict" value="4" literal="conflict"/>
+    <eLiterals name="Unknown" value="5" literal="unknown"/>
+    <eLiterals name="None" value="6" literal="none"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Criticality">
+    <eLiterals name="None" literal="none"/>
+    <eLiterals name="High" value="1" literal="high"/>
+    <eLiterals name="Medium" value="2" literal="medium"/>
+    <eLiterals name="Low" value="3" literal="low"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Priority">
+    <eLiterals name="None" literal="none"/>
+    <eLiterals name="High" value="1" literal="high"/>
+    <eLiterals name="Medium" value="2" literal="medium"/>
+    <eLiterals name="Low" value="3" literal="low"/>
+  </eClassifiers>
+</ecore:EPackage>
