@@ -27,6 +27,7 @@ Workflow {
  	 	/*
     	 * import ecore metamodels 
     	 */
+    	 
 		uriMap = {
     		from = "platform:/plugin/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
 			to = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"

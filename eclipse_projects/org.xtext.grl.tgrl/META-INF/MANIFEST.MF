@@ -30,4 +30,7 @@ Export-Package: org.xtext.grl.tgrl,
  org.xtext.grl.tgrl.validation,
  org.xtext.grl.tgrl.scoping,
  org.xtext.grl.tgrl.generator,
- org.xtext.grl.tgrl.formatting
+ org.xtext.grl.tgrl.formatting,
+ org.xtext.grl.tgrl.tGRL,
+ org.xtext.grl.tgrl.tGRL.impl,
+ org.xtext.grl.tgrl.tGRL.util

@@ -1,243 +1,407 @@
 grammar org.xtext.grl.tgrl.TGRL with org.eclipse.xtext.common.Terminals
 
-import "http://www.eclipse.org/emf/2002/Ecore" as ecore
-import "http:///ucm.ecore" as ucmModel
-import "http:///urncore.ecore" as urncoreModel
-import "http:///urn.ecore" as urnModel
-import "http:///asd.ecore" as asdModel
-import "http:///grl.ecore" as grlModel
+//import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+//import "http:///ucm.ecore" as ucmModel
+//import "http:///urncore.ecore" as urncoreModel
+//import "http:///urn.ecore" as urnModel
+//import "http:///asd.ecore" as asdModel
+//import "http:///grl.ecore" as grlModel
 
+generate tGRL "http://www.xtext.org/grl/tgrl/TGRL"
 
-URNspec returns urnModel::URNspec: 
-	'urnspec' name= ID '{'
-		(
-		(urndef=URNdefinition)&
-		(grlspec=GRLspec)?&
-		(metadata+=Metadata*)&
-		(ucmspec=UCMspec)?&
-		(urnLinks+=URNlink*)&
-		(asdspec=ASDspec)
-		)
-	'}'
-	
+Model:
+	gRLspecs+=GRLspec*;
+
+GRLModelElement:
+	GRLNode | GRLLinkableElement | ElementLink | StrategiesGroup | EvaluationStrategy | 
+	ContributionContextGroup | ContributionContext
 ;
-
-URNdefinition returns urncoreModel::URNdefinition: 
-	'URNdefinition' '{'
-		{urncoreModel::URNdefinition}
-	'}'
+GRLNode:
+	Belief | CollapsedActorRef | IntentionalElementRef
 ;
-ASDspec returns asdModel::ASDspec: 
-	'asdspec'  '{'
-		{asdModel::ASDspec}		
-	'}' 
+GRLLinkableElement:
+	IntentionalElement | Actor
+;	
+IntentionalElement:
+	 Softgoal | Goal  | Task | Ressource | Indicator
 ;
-URNlink returns urnModel::URNlink: 
-	'urnLink' '{'
-	'}'
+ElementLink: 
+	Decomposition | Contribution | Dependency
 ;
-UCMspec returns ucmModel::UCMspec: 
-	'ucmSpec' '{'
-		
-	'}'
-;
-
-
-
-GRLspec returns grlModel::GRLspec: 
+GRLspec: 
 	'grl' '{'
 		(
-		(links+=ElementLink)*&
-		(actors+=Actor)*&
-		(intElements+=IntentionalElement)*&
-		(impactModel=ImpactModel)?&
-		(groups+=StrategiesGroup)*&
-		(contributionContexts+=ContributionContext)*&
-		(contributionGroups+=ContributionContextGroup)*
+			(impactModel=ImpactModel)?
+			(
+				links+=ElementLink | actors+=Actor | intElements+=IntentionalElement | groups+=StrategiesGroup | 
+				strategies+=EvaluationStrategy | contributionGroups+=ContributionContextGroup |
+				contributionContexts+=ContributionContext 	
+			)*	
 		)
 	'}'	
 ;
 
-//**************************************************************************************
-ElementLink returns grlModel::ElementLink: 
-	Decomposition | Contribution | Dependency
-;
-Decomposition returns grlModel::Decomposition: 
-	'decomposition' name=ID '{'	
-		(
-		(src=[grlModel::GRLLinkableElement] '->' dest=[grlModel::GRLLinkableElement] ';')&
-		('id' '=' id=STRING ';')?&
-		('description' '=' description=STRING ';')?&
-		('refs' '=' refs+=[grlModel::LinkRef] (',' refs+=[grlModel::LinkRef])* ';')?
-		)
-	'}'
-;
-Contribution returns grlModel::Contribution: 
-	'contribution' name=ID '{'
-		(
-		('contribution' '=' contribution=ContributionType ';')?&
-		/*
-		 *TODO I must give a default value, which is zero, to this attribute.
-		 * 		This can be done through the post processing mechanism in xText 
-		 */
-		('quantitativeContribution' '=' quantitativeContribution=INT ';')?&
-		('correlation' '=' correlation=BOOLEAN ';')?&
-		('id' '=' id=STRING ';')?&
-		('description' '=' description=STRING ';')?&
-		('refs' '=' refs+=[grlModel::LinkRef] (',' refs+=[grlModel::LinkRef])* ';')?&
-		(src=[grlModel::GRLLinkableElement] '->' dest=[grlModel::GRLLinkableElement] ';')
-		)
-	'}'
-;
-Dependency returns grlModel::Dependency:
-	'dependency' name=ID '{'
-		(
-		('id' '=' id=STRING ';')?&
-		('description' '=' description=STRING ';')?&
-		('refs' '=' refs+=[grlModel::LinkRef] (',' refs+=[grlModel::LinkRef])* ';')?&
-		(src=[grlModel::GRLLinkableElement] '->' dest=[grlModel::GRLLinkableElement] ';')
-		)
-	'}' 
-;
 
-//**************************************************************************************
-
-Actor returns grlModel::Actor: 
+Actor: 
 	'actor' name= ID '{'
 		(
+		('name' '=' label =STRING ';')?&	
 		('importance' '=' importance=ImportanceType ';')?&
 		/*
 		 *TODO I must give a default value, which is zero, to this attribute.
 		 * 		This can be done through the post processing mechanism in xText 
 		 */
 		('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
-		('lineColor' '=' lineColor=STRING ';')?&
-		('fillColor' '=' fillColor=STRING ';')?&
-		('filled' '=' filled = BOOLEAN ';')?&
-		('id' '=' id=STRING ';')?&
 		('description' '=' description=STRING ';')?&
-		('includedActors' '=' includedActors+=[grlModel::Actor](',' includedActors+=[grlModel::Actor])* ';')?&		
-		('collapsedRefs' '=' collapsedRefs+=[grlModel::CollapsedActorRef](',' collapsedRefs+=[grlModel::CollapsedActorRef])* ';')?&
-		('contRefs' '=' contRefs+=[urncoreModel::IURNContainerRef](',' contRefs+=[urncoreModel::IURNContainerRef])* ';')?
+		('includedActors' '=' includedActors+=[Actor](',' includedActors+=[Actor])* ';')?&		
+		('collapsedRefs' '=' collapsedRefs+=[CollapsedActorRef](',' collapsedRefs+=[CollapsedActorRef])* ';')?
+//		('contRefs' '=' contRefs+=[urncoreModel::IURNContainerRef](',' contRefs+=[urncoreModel::IURNContainerRef])* ';')?
 		)
 		
 	'}'
 ;
 
-Belief returns grlModel::Belief: 
-	'belief' name=ID '{'
-		('author' '=' author=STRING ';')?&
-		('x' x=INT ';')?&
-		('y' y=INT ';')?&
-		('id' '=' id=STRING ';')?&
-		('description' description=STRING ';')?		
-	'}'
-;
-CollapsedActorRef returns grlModel::CollapsedActorRef: 
-	'collapsedActorRef' name=ID '{'
-		('x' x=INT ';')?&
-		('y' y=INT ';')?&
-		('id' '=' id=STRING ';')?&
-		('description' description=STRING ';')?	
-		('actor' '=' actor=[grlModel::Actor]';')?
-	'}'
-;
 
-IntentionalElementRef returns grlModel::IntentionalElementRef: 
-	'IntentionalElementRef' name=ID '{'
-		('criticality' '=' criticality=Criticality ';')?&
-		('priority' '=' priority=Priority';')?&
-		('def' '=' def=[grlModel::IntentionalElement] ';')?
-	'}'
-;
-
-IntentionalElement returns grlModel::IntentionalElement: 
-	'intentionalElement' name = ID '{'
-		('type' '=' type=IntentionalElementType';')?
-		('decompositionType' '='decompositionType=DecompositionType ';')?
-		('importance' '=' importance=ImportanceType ';')?
-		
-		/*
-		 *TODO I must give a default value, which is zero, to this attribute.
-		 * 		This can be done through the post processing mechanism in xText 
-		 */
-		('importanceQuantitative' '=' importanceQuantitative=INT ';')? 
-		('lineColor' '=' lineColor=STRING ';')?
-		('fillColor' '=' fillColor=STRING ';')?
-		('filled' '=' filled = BOOLEAN ';')?
-		('id' '=' id=STRING ';')?
-		('description' '=' description=STRING ';')?	
-		('ref' '=' refs+=[grlModel::IntentionalElementRef](',' refs+=[grlModel::IntentionalElementRef] )* ';')?
-	'}'
-;
-ImpactModel returns grlModel::ImpactModel: 
-	'impactModel' name= ID '{'
-	
-	'}'
-;
-StrategiesGroup returns grlModel::StrategiesGroup: 
-	'strategiesGroup' name=ID '{'
-	'}'
-;
-ContributionContext returns grlModel::ContributionContext: 
-	'contributionContext' name= ID '{'
-	'}'
-;
-ContributionContextGroup returns grlModel::ContributionContextGroup: 
-	'contributionContextGroup' name=ID '{'
-	'}'
-;
-EvaluationStrategy returns grlModel::EvaluationStrategy: 
-	'EvaluationStrategy' name=ID '{'
-	'}'
-;
-Metadata returns urncoreModel::Metadata: 
-	'metaData' name=ID '{'
+//*************************************IntentionalElement******************************************
+Softgoal :
+	'softGoal' name = ID '{'
 		(
-		('value' '=' value=STRING ';')?
+			('name' '=' label = STRING ';')?&
+			('description' '=' description=STRING ';')?&
+			('importance' '=' importance=ImportanceType ';')?&
+			('decompositionType' '=' decompositionType=DecompositionType ';')?&
+			/*
+			 *TODO I must give a default value, which is zero, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */
+			('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
+			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?&
+			('evals' '=' evals+=[Evaluation](',' evals+=[Evaluation] )* ';')?
+			
 		)
 	'}'
 ;
-
-
-
-
-
-
-
-
-
-
-enum IntentionalElementType returns grlModel::IntentionalElementType:
-	Softgoal = 'softGoal' | Goal = 'goal' | Task = 'Task' | 
-	Ressource = 'resource'| Indicator = 'indicator'  
+Goal:
+	'goal' name = ID '{'
+		(
+			('name' '=' label = STRING ';')?&
+			('description' '=' description=STRING ';')?&
+			('importance' '=' importance=ImportanceType ';')?&
+			('decompositionType' '='decompositionType=DecompositionType ';')?&
+			/*
+			 *TODO I must give a default value, which is zero, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */
+			('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
+			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?&
+			('evals' '=' evals+=[Evaluation](',' evals+=[Evaluation] )* ';')?
+			
+		)		
+	'}'
+; 
+Task:
+	'Task' name = ID '{'
+		(
+			('name' '=' label = STRING ';')?&
+			('description' '=' description=STRING ';')?&
+			('importance' '=' importance=ImportanceType ';')?&
+			('decompositionType' '='decompositionType=DecompositionType ';')?&
+			/*
+			 *TODO I must give a default value, which is zero, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */
+			('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
+			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?&
+			('evals' '=' evals+=[Evaluation](',' evals+=[Evaluation] )* ';')?
+			 
+		)		
+	'}'
+;  
+Ressource:
+	'resource' name = ID '{'
+		(
+			('name' '=' label = STRING ';')?&
+			('description' '=' description=STRING ';')?&
+			('importance' '=' importance=ImportanceType ';')?&
+			('decompositionType' '='decompositionType=DecompositionType ';')?&
+			/*
+			 *TODO I must give a default value, which is zero, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */
+			('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
+			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?&
+			('evals' '=' evals+=[Evaluation](',' evals+=[Evaluation] )* ';')?
+			
+		)		
+	'}'
+; 
+Indicator:
+	'indicator' name = ID '{'
+		(
+			('name' '=' label = STRING ';')?&
+			('description' '=' description=STRING ';')?&
+			('importance' '=' importance=ImportanceType ';')?&
+			('decompositionType' '='decompositionType=DecompositionType ';')?&
+			/*
+			 *TODO I must give a default value, which is zero, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */
+			('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
+			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?&
+			('evals' '=' evals+=[Evaluation](',' evals+=[Evaluation] )* ';')?
+			
+		)		
+	'}'
+;  
+//*******************************************ElementLink*******************************************
+Decomposition: 
+	'decomposition' (name=ID)? '{'	
+		(
+			('name' '=' label = STRING)?&
+			('description' '=' description=STRING ';')?&
+	//		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?
+			(src=[GRLLinkableElement] '->' dest=[GRLLinkableElement] ';')
+		)
+	'}'
 ;
-enum ImportanceType returns grlModel::ImportanceType: 
+Contribution: 
+	'contribution' (name=ID)? '{'
+		(
+			('name' '=' label = STRING)?&
+			('contribution' '=' contribution=ContributionType ';')?&
+			/*
+			 *TODO I must give a default value, which is zero, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */
+			('quantitativeContribution' '=' quantitativeContribution=INT ';')?&
+			('correlation' '=' correlation=BOOLEAN ';')?&
+			('description' '=' description=STRING ';')?&
+	//		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?&
+			(src=[GRLLinkableElement] '->' dest=[GRLLinkableElement] ';')
+		)
+	'}'
+;
+Dependency:
+	'dependency' (name=ID)? '{'
+		(
+			('name' '=' label = STRING)?&
+			('description' '=' description=STRING ';')?&
+	//		('refs' '=' refs+=[grlModel::LinkRef] (',' refs+=[grlModel::LinkRef])* ';')?&
+			(src=[GRLLinkableElement] '->' dest=[GRLLinkableElement] ';')
+		)
+	'}' 
+;
+//**************************************************************************************
+Belief: 
+	'belief' name=ID '{'
+		(
+			('name' '=' label = STRING ';')?&
+			('description' description=STRING ';')?
+		)		
+	'}'
+;	
+
+CollapsedActorRef: 
+	'collapsedActorRef' name=ID '{'
+		(
+			('name' '=' label = STRING ';')?&
+			('description' description=STRING ';')?	
+		)
+	'}'
+;
+IntentionalElementRef : 
+	'IntentionalElementRef' name=ID '{'
+		(
+			('criticality' '=' criticality=Criticality ';')?&
+			('priority' '=' priority=Priority';')?&
+			('def' '=' def=[IntentionalElement] ';')?					
+		)
+	'}'
+;
+ImpactModel :
+	'impactModel' name= ID '{'
+	'}'
+;
+
+//**************************************************************************************
+StrategiesGroup: 
+	'strategiesGroup' name=ID '{'
+		('strategies' '=' strategies+=[EvaluationStrategy](',' strategies+=[EvaluationStrategy])* ';')*
+	'}'
+;
+EvaluationStrategy: 
+	'EvaluationStrategy' name=ID '{'
+		(
+			(
+				('evaluations' '=' evaluations+=Evaluation';') | 
+				('includedStrategies' '=' includedStrategies+=[EvaluationStrategy](',' includedStrategies+=[EvaluationStrategy])* ';')
+			)*
+		)
+	'}'
+;
+Evaluation:
+	'eval' name = ID '{'
+		(
+			/*
+			 *TODO I must give a default value, which is zero, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */	
+			('evaluation' '=' evaluation = INT ';')?&
+			('qualitativeEvaluation' '=' qualitativeEvaluation=QualitativeLabel ';')?&
+			('exceeds' '=' exceeds = BOOLEAN)?&
+			('evalRange' '=' evalRange=EvaluationRange ';')? 
+		) 
+	'}'
+;
+EvaluationRange: 
+	'evaluationRange' '{'
+		(
+			('start' '=' start=INT ';')?&
+			('end' '=' end=INT ';')?&
+			/*
+			 *TODO I must give a default value, which is 1, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */	
+			('step' '=' step=INT ';')?
+		)
+	'}'
+;
+ContributionContextGroup: 
+	'contributionContextGroup' name=ID '{'
+		('contribs' '=' contribs+=[ContributionContext](',' contribs+=[ContributionContext])* ';')
+	'}'
+;
+ContributionContext: 
+	'contributionContext' name= ID '{'
+		(
+			('includedContexts' '=' includedContexts+=[ContributionContext](',' includedContexts+=[ContributionContext])* ';')?&
+			('changes' '=' changes+=ContributionChange)*
+		)
+	'}'
+;
+ContributionChange:
+	'contributionChange' name=ID '{'
+		(
+			('newContribution' '=' newContribution=ContributionType ';')?&
+			/*
+			 *TODO I must give a default value, which is 0, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */	
+			('newQuantitativeContribution' '=' newQuantitativeContribution = INT ';')?&
+			('contribRange' '=' contribRange = ContributionRange ';')?
+		)
+	'}'
+;
+ContributionRange: 
+	'contributionRange' '{'
+		(
+			('start' '=' start=INT ';')?&
+			('end' '=' end=INT ';')?&
+			/*
+			 *TODO I must give a default value, which is 1, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */	
+			('step' '=' step=INT ';')?
+		)
+	'}'
+;
+Contribub:
+	'contrib' name=ID '{'
+		(
+			('contribution' '=' contribution=ContributionType)?&
+			/*
+			 *TODO I must give a default value, which is 25, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */				
+			('quantitativeContribution' '=' quantitativeContribution=INT)?&
+			('correlation' '=' correlation=BOOLEAN)?&
+			('changes' '=' changes+=[ContributionChange](',' changes+=[ContributionChange])* ';')?	
+		)
+	'}'
+;
+//*******1*******************************************************************************
+
+
+//
+//URNspec returns urnModel::URNspec: 
+//	'urnspec' name= ID '{'
+//		(
+//		(urndef=URNdefinition)&
+//		(grlspec=GRLspec)?&
+//		(metadata+=Metadata*)&
+//		(ucmspec=UCMspec)?&
+//		(urnLinks+=URNlink*)&
+//		(asdspec=ASDspec)
+//		)
+//	'}'
+//	
+//;
+//
+//URNdefinition returns urncoreModel::URNdefinition: 
+//	'URNdefinition' '{'
+//		{urncoreModel::URNdefinition}
+//	'}'
+//;
+//ASDspec returns asdModel::ASDspec: 
+//	'asdspec'  '{'
+//		{asdModel::ASDspec}		
+//	'}' 
+//;
+//URNlink returns urnModel::URNlink: 
+//	'urnLink' '{'
+//	'}'
+//;
+//UCMspec returns ucmModel::UCMspec: 
+//	'ucmSpec' '{'
+//		
+//	'}'
+//;
+//
+//
+
+
+
+
+//Metadata returns urncoreModel::Metadata: 
+//	'metaData' name=ID '{'
+//		(
+//		('value' '=' value=STRING ';')?
+//		)
+//	'}'
+//;
+
+//enum IntentionalElementType:
+//	Softgoal = 'softGoal' | Goal = 'goal' | Task = 'Task' | 
+//	Ressource = 'resource'| Indicator = 'indicator'  
+//;
+enum ImportanceType: 
 	 None ='none' | High = 'high' | Medium = 'medium' | Low = 'low'
 ;
-enum DecompositionType returns grlModel::DecompositionType:
+enum DecompositionType:
 	And = 'and' | Or = 'or' | Xor = 'xor' 
 ;
-enum ContributionType returns grlModel::ContributionType: 
+
+enum ContributionType: 
 	Help = 'help' | Make = 'make' | SomePositive = 'somePositive' |
 	Unknown = 'unknown' | SomeNegative = 'someNegative' | Hurt = 'hurt' |
 	Break = 'break'  
 ;
-enum QualitativeLabel returns grlModel::QualitativeLabel:
+
+enum QualitativeLabel:
 	Denied = 'denied' | WeaklyDenied = 'weaklyDenied' |
 	WeaklySatisfied = 'weaklySatisfied' | Satisfied = 'satisfied' |
 	Conflict = 'conflict' | Unknown = 'unknown' | None = 'none' 
 ;
 
-terminal BOOLEAN returns ecore::EBoolean:
+terminal BOOLEAN:
 'false' | 'true'
 ;
 
 //Deprecated
-enum Criticality returns grlModel::Criticality:
+enum Criticality:
 	None ='none' | High = 'high' | Medium = 'medium' | Low = 'low' 
 ;
 //Deprecated
-enum Priority returns grlModel::Priority:
+enum Priority:
 	None ='none' | High = 'high' | Medium = 'medium' | Low = 'low' 
 ;
