@@ -1,17 +1,9 @@
 grl {
 	actor A1{
-		name = "Actor 1";
+		name = "Actor1";
 	}
 	actor A2{
-		name = "Actor 2";
+		name = "actor3";
 	}
-	dependency d {
-		A1 -> A2;
-	}
-	dependency A{
-		A1 -> A1;
-		
-		
-	}
-	
+
 }

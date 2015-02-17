@@ -1,18 +1,3 @@
-[comment encoding = UTF-8 /]
-[**
- * The documentation of the module generate.
- */]
-[module generate('http://www.xtext.org/grl/tgrl/TGRL')]
-[import org::eclipse::acceleo::module::tgrl::java::services::generateFeatures /]
-
-
-[**
- * The documentation of the template generateElement.
- * @param aModel
- */]
-[template public generateElement(aModel : Model)]
-[comment @main/]
-[file ('test.jucm', false, 'UTF-8')]
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grl="http:///grl.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="Vahdat" created="February 16, 2015 7:08:06 PM EST" modified="February 16, 2015 7:08:10 PM EST" specVersion="2" urnVersion="1.27" nextGlobalID="14">
   <ucmspec>
@@ -21,9 +6,8 @@
     </scenarioGroups>
   </ucmspec>
   <grlspec>
-[for (actor : Actor | gRLspecs.actors)]
-	<actors name="[label/]" id="[name/]" contRefs="[name/]R"/>
-[/for]	
+	<actors name="Actor1" id="A1" contRefs="A1R"/>
+	<actors name="actor3" id="A2" contRefs="A2R"/>
     
     <groups name="StrategiesGroup3" id="3" strategies="4"/>
     <strategies name="EvaluationStrategy4" id="4" author="Vahdat" group="3"/>
@@ -36,14 +20,13 @@
   </grlspec>
   <urndef>
     <specDiagrams xsi:type="grl:GRLGraph" name="GRLGraph2" id="2">
-[for (actor : Actor | gRLspecs.actors)]
-      <contRefs xsi:type="grl:ActorRef" name="ActorRef[name/]R" id="[name/]R" x="382" y="135" width="200" height="200" contDef="[name/]">
+      <contRefs xsi:type="grl:ActorRef" name="ActorRefA1R" id="A1R" x="382" y="135" width="200" height="200" contDef="A1">
         <label/>
       </contRefs>
-[/for]
+      <contRefs xsi:type="grl:ActorRef" name="ActorRefA2R" id="A2R" x="382" y="135" width="200" height="200" contDef="A2">
+        <label/>
+      </contRefs>
     </specDiagrams>
   </urndef>
   <metadata name="_Use0to100EvaluationRange" value="false"/>
 </urn:URNspec>
-[/file]
-[/template]
