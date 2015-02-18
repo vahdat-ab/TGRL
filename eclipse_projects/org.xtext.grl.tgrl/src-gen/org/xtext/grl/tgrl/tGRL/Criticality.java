@@ -27,7 +27,7 @@ public enum Criticality implements Enumerator
    * @generated
    * @ordered
    */
-  NONE(0, "None", "none"),
+  NONE(0, "None", "None"),
 
   /**
    * The '<em><b>High</b></em>' literal object.
@@ -37,7 +37,7 @@ public enum Criticality implements Enumerator
    * @generated
    * @ordered
    */
-  HIGH(1, "High", "high"),
+  HIGH(1, "High", "High"),
 
   /**
    * The '<em><b>Medium</b></em>' literal object.
@@ -47,7 +47,7 @@ public enum Criticality implements Enumerator
    * @generated
    * @ordered
    */
-  MEDIUM(2, "Medium", "medium"),
+  MEDIUM(2, "Medium", "Medium"),
 
   /**
    * The '<em><b>Low</b></em>' literal object.
@@ -57,7 +57,7 @@ public enum Criticality implements Enumerator
    * @generated
    * @ordered
    */
-  LOW(3, "Low", "low");
+  LOW(3, "Low", "Low");
 
   /**
    * The '<em><b>None</b></em>' literal value.
@@ -68,7 +68,7 @@ public enum Criticality implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #NONE
-   * @model name="None" literal="none"
+   * @model name="None"
    * @generated
    * @ordered
    */
@@ -83,7 +83,7 @@ public enum Criticality implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #HIGH
-   * @model name="High" literal="high"
+   * @model name="High"
    * @generated
    * @ordered
    */
@@ -98,7 +98,7 @@ public enum Criticality implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #MEDIUM
-   * @model name="Medium" literal="medium"
+   * @model name="Medium"
    * @generated
    * @ordered
    */
@@ -113,7 +113,7 @@ public enum Criticality implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #LOW
-   * @model name="Low" literal="low"
+   * @model name="Low"
    * @generated
    * @ordered
    */

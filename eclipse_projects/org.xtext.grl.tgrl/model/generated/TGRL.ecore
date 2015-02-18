@@ -5,7 +5,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="gRLspecs" upperBound="-1"
         eType="#//GRLspec" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GRLModelElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GRLModelElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GRLNode" eSuperTypes="#//GRLModelElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>
@@ -224,44 +226,44 @@
         upperBound="-1" eType="#//Indicator"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ImportanceType">
-    <eLiterals name="None" literal="none"/>
-    <eLiterals name="High" value="1" literal="high"/>
-    <eLiterals name="Medium" value="2" literal="medium"/>
-    <eLiterals name="Low" value="3" literal="low"/>
+    <eLiterals name="None" literal="None"/>
+    <eLiterals name="High" value="1" literal="High"/>
+    <eLiterals name="Medium" value="2" literal="Medium"/>
+    <eLiterals name="Low" value="3" literal="Low"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DecompositionType">
-    <eLiterals name="And" literal="and"/>
-    <eLiterals name="Or" value="1" literal="or"/>
-    <eLiterals name="Xor" value="2" literal="xor"/>
+    <eLiterals name="And" literal="And"/>
+    <eLiterals name="Or" value="1" literal="Or"/>
+    <eLiterals name="Xor" value="2" literal="Xor"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ContributionType">
-    <eLiterals name="Help" literal="help"/>
-    <eLiterals name="Make" value="1" literal="make"/>
-    <eLiterals name="SomePositive" value="2" literal="somePositive"/>
-    <eLiterals name="Unknown" value="3" literal="unknown"/>
-    <eLiterals name="SomeNegative" value="4" literal="someNegative"/>
-    <eLiterals name="Hurt" value="5" literal="hurt"/>
-    <eLiterals name="Break" value="6" literal="break"/>
+    <eLiterals name="Help" literal="Help"/>
+    <eLiterals name="Make" value="1" literal="Make"/>
+    <eLiterals name="SomePositive" value="2" literal="SomePositive"/>
+    <eLiterals name="Unknown" value="3" literal="Unknown"/>
+    <eLiterals name="SomeNegative" value="4" literal="SomeNegative"/>
+    <eLiterals name="Hurt" value="5" literal="Hurt"/>
+    <eLiterals name="Break" value="6" literal="Break"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="QualitativeLabel">
-    <eLiterals name="Denied" literal="denied"/>
-    <eLiterals name="WeaklyDenied" value="1" literal="weaklyDenied"/>
-    <eLiterals name="WeaklySatisfied" value="2" literal="weaklySatisfied"/>
-    <eLiterals name="Satisfied" value="3" literal="satisfied"/>
-    <eLiterals name="Conflict" value="4" literal="conflict"/>
-    <eLiterals name="Unknown" value="5" literal="unknown"/>
-    <eLiterals name="None" value="6" literal="none"/>
+    <eLiterals name="Denied" literal="Denied"/>
+    <eLiterals name="WeaklyDenied" value="1" literal="WeaklyDenied"/>
+    <eLiterals name="WeaklySatisfied" value="2" literal="WeaklySatisfied"/>
+    <eLiterals name="Satisfied" value="3" literal="Satisfied"/>
+    <eLiterals name="Conflict" value="4" literal="Conflict"/>
+    <eLiterals name="Unknown" value="5" literal="Unknown"/>
+    <eLiterals name="None" value="6" literal="None"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Criticality">
-    <eLiterals name="None" literal="none"/>
-    <eLiterals name="High" value="1" literal="high"/>
-    <eLiterals name="Medium" value="2" literal="medium"/>
-    <eLiterals name="Low" value="3" literal="low"/>
+    <eLiterals name="None" literal="None"/>
+    <eLiterals name="High" value="1" literal="High"/>
+    <eLiterals name="Medium" value="2" literal="Medium"/>
+    <eLiterals name="Low" value="3" literal="Low"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Priority">
-    <eLiterals name="None" literal="none"/>
-    <eLiterals name="High" value="1" literal="high"/>
-    <eLiterals name="Medium" value="2" literal="medium"/>
-    <eLiterals name="Low" value="3" literal="low"/>
+    <eLiterals name="None" literal="None"/>
+    <eLiterals name="High" value="1" literal="High"/>
+    <eLiterals name="Medium" value="2" literal="Medium"/>
+    <eLiterals name="Low" value="3" literal="Low"/>
   </eClassifiers>
 </ecore:EPackage>

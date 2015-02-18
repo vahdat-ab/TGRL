@@ -1,9 +1,42 @@
 grl {
-	actor A1{
-		name = "Actor1";
+	goal G1{
+		name = "goal1 duke";
+		description = "desc 1 duke";
+		
 	}
-	actor A2{
-		name = "actor3";
+	goal G2 {
+		name = "goal2 duke";
+		description = "desc 2 duke";		
 	}
+	goal G3 {
+		name = "goal3 duke";
+		description = "desc 3 duke";
+	}
+	decomposition DEC1 {
+		name = "dec1-duke";
+		G1 ->G2;
+	}
+
+
+	decomposition DEC2 {
+		name = "dec2-duke";
+		G1 -> G3;
+	}
+	softGoal SG1{
+		name = "sg duke 1";
+	}
+	softGoal SG2{
+		name = "sg duke 2";
+		
+	}
+	dependency dep {
+		SG1 -> SG2;
+	}
+	
+	contribution decom {
+		SG1 ->G1;
+		correlation = true;
+	}
+	
 
 }

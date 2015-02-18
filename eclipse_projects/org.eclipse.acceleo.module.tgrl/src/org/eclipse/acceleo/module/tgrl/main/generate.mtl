@@ -4,7 +4,7 @@
  */]
 [module generate('http://www.xtext.org/grl/tgrl/TGRL')]
 [import org::eclipse::acceleo::module::tgrl::java::services::generateFeatures /]
-
+[import org::eclipse::acceleo::module::tgrl::services::generateServices /]
 
 [**
  * The documentation of the template generateElement.
@@ -22,9 +22,18 @@
   </ucmspec>
   <grlspec>
 [for (actor : Actor | gRLspecs.actors)]
-	<actors name="[label/]" id="[name/]" contRefs="[name/]R"/>
-[/for]	
-    
+	<actors name="[label/]" id="[id/]" description="[description/]" importance="[importance/]" importanceQuantitative="[importanceQuantitative/]" contRefs="[id/]R"/>
+[/for]
+[for (intentionalElement : IntentionalElement | gRLspecs.intElements)]
+	<intElements name="[label/]" id="[id/]" description="[description/]" importance="[importance/]" importanceQuantitative="[importanceQuantitative/]" [getType(intentionalElement)/] [getLinkSrc(aModel, intentionalElement)/] [getLinksDest(aModel, intentionalElement)/] refs="[id/]R"/>
+[/for]
+[for (element : ElementLink | gRLspecs.links->asSequence())]
+	<links [getLinkType(element)/] name="[label/]" id="[id/]" refs="//@urndef/@specDiagrams.0/@connections.[i-1/]" dest="[dest.name/]" src="[src.name/]"/>
+[/for]
+	
+[comment][for (decomposition : Decomposition | gRLspecs.links->selectByKind(Decomposition)->asSequence())]
+	<links xsi:type="grl:Decomposition" name="[label/]" id="[id/]" refs="//@urndef/@specDiagrams.0/@connections.[i-1/]" dest="[decomposition.dest.name/]" src="[decomposition.src.name/]"/>
+[/for][/comment]
     <groups name="StrategiesGroup3" id="3" strategies="4"/>
     <strategies name="EvaluationStrategy4" id="4" author="Vahdat" group="3"/>
     <impactModel/>
@@ -36,8 +45,17 @@
   </grlspec>
   <urndef>
     <specDiagrams xsi:type="grl:GRLGraph" name="GRLGraph2" id="2">
+[for (intentionalElement : IntentionalElement | gRLspecs.intElements)]
+      <nodes xsi:type="grl:IntentionalElementRef" name="Int[id/]R" [getSucc(aModel, intentionalElement)/] [getPred(aModel, intentionalElement)/] id="[id/]R" def="[id/]">
+        <metadata name="_height" value="45"/>
+        <metadata name="_width" value="110"/>
+      </nodes>
+[/for]
+[for (element : ElementLink | gRLspecs.links)]
+	<connections xsi:type="grl:LinkRef" source="[src.id/]R" target="[dest.id/]R" link="[id/]"/>
+[/for]
 [for (actor : Actor | gRLspecs.actors)]
-      <contRefs xsi:type="grl:ActorRef" name="ActorRef[name/]R" id="[name/]R" x="382" y="135" width="200" height="200" contDef="[name/]">
+      <contRefs xsi:type="grl:ActorRef" name="ActorRef[id/]R" id="[id/]R" x="382" y="135" width="200" height="200" contDef="[id/]">
         <label/>
       </contRefs>
 [/for]

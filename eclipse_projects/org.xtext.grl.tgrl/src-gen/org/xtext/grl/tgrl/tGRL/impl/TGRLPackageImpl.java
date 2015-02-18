@@ -475,6 +475,16 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getGRLModelElement_Id()
+  {
+    return (EAttribute)grlModelElementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getGRLNode()
   {
     return grlNodeEClass;
@@ -2004,6 +2014,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     createEReference(modelEClass, MODEL__GR_LSPECS);
 
     grlModelElementEClass = createEClass(GRL_MODEL_ELEMENT);
+    createEAttribute(grlModelElementEClass, GRL_MODEL_ELEMENT__ID);
 
     grlNodeEClass = createEClass(GRL_NODE);
     createEAttribute(grlNodeEClass, GRL_NODE__NAME);
@@ -2258,6 +2269,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEReference(getModel_GRLspecs(), this.getGRLspec(), null, "gRLspecs", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(grlModelElementEClass, GRLModelElement.class, "GRLModelElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGRLModelElement_Id(), theEcorePackage.getEInt(), "id", null, 0, 1, GRLModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(grlNodeEClass, GRLNode.class, "GRLNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getGRLNode_Name(), theEcorePackage.getEString(), "name", null, 0, 1, GRLNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -27,7 +27,7 @@ public enum ContributionType implements Enumerator
    * @generated
    * @ordered
    */
-  HELP(0, "Help", "help"),
+  HELP(0, "Help", "Help"),
 
   /**
    * The '<em><b>Make</b></em>' literal object.
@@ -37,7 +37,7 @@ public enum ContributionType implements Enumerator
    * @generated
    * @ordered
    */
-  MAKE(1, "Make", "make"),
+  MAKE(1, "Make", "Make"),
 
   /**
    * The '<em><b>Some Positive</b></em>' literal object.
@@ -47,7 +47,7 @@ public enum ContributionType implements Enumerator
    * @generated
    * @ordered
    */
-  SOME_POSITIVE(2, "SomePositive", "somePositive"),
+  SOME_POSITIVE(2, "SomePositive", "SomePositive"),
 
   /**
    * The '<em><b>Unknown</b></em>' literal object.
@@ -57,7 +57,7 @@ public enum ContributionType implements Enumerator
    * @generated
    * @ordered
    */
-  UNKNOWN(3, "Unknown", "unknown"),
+  UNKNOWN(3, "Unknown", "Unknown"),
 
   /**
    * The '<em><b>Some Negative</b></em>' literal object.
@@ -67,7 +67,7 @@ public enum ContributionType implements Enumerator
    * @generated
    * @ordered
    */
-  SOME_NEGATIVE(4, "SomeNegative", "someNegative"),
+  SOME_NEGATIVE(4, "SomeNegative", "SomeNegative"),
 
   /**
    * The '<em><b>Hurt</b></em>' literal object.
@@ -77,7 +77,7 @@ public enum ContributionType implements Enumerator
    * @generated
    * @ordered
    */
-  HURT(5, "Hurt", "hurt"),
+  HURT(5, "Hurt", "Hurt"),
 
   /**
    * The '<em><b>Break</b></em>' literal object.
@@ -87,7 +87,7 @@ public enum ContributionType implements Enumerator
    * @generated
    * @ordered
    */
-  BREAK(6, "Break", "break");
+  BREAK(6, "Break", "Break");
 
   /**
    * The '<em><b>Help</b></em>' literal value.
@@ -98,7 +98,7 @@ public enum ContributionType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #HELP
-   * @model name="Help" literal="help"
+   * @model name="Help"
    * @generated
    * @ordered
    */
@@ -113,7 +113,7 @@ public enum ContributionType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #MAKE
-   * @model name="Make" literal="make"
+   * @model name="Make"
    * @generated
    * @ordered
    */
@@ -128,7 +128,7 @@ public enum ContributionType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #SOME_POSITIVE
-   * @model name="SomePositive" literal="somePositive"
+   * @model name="SomePositive"
    * @generated
    * @ordered
    */
@@ -143,7 +143,7 @@ public enum ContributionType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #UNKNOWN
-   * @model name="Unknown" literal="unknown"
+   * @model name="Unknown"
    * @generated
    * @ordered
    */
@@ -158,7 +158,7 @@ public enum ContributionType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #SOME_NEGATIVE
-   * @model name="SomeNegative" literal="someNegative"
+   * @model name="SomeNegative"
    * @generated
    * @ordered
    */
@@ -173,7 +173,7 @@ public enum ContributionType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #HURT
-   * @model name="Hurt" literal="hurt"
+   * @model name="Hurt"
    * @generated
    * @ordered
    */
@@ -188,7 +188,7 @@ public enum ContributionType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #BREAK
-   * @model name="Break" literal="break"
+   * @model name="Break"
    * @generated
    * @ordered
    */

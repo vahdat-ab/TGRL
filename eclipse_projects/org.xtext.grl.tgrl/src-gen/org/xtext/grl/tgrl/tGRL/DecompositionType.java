@@ -27,7 +27,7 @@ public enum DecompositionType implements Enumerator
    * @generated
    * @ordered
    */
-  AND(0, "And", "and"),
+  AND(0, "And", "And"),
 
   /**
    * The '<em><b>Or</b></em>' literal object.
@@ -37,7 +37,7 @@ public enum DecompositionType implements Enumerator
    * @generated
    * @ordered
    */
-  OR(1, "Or", "or"),
+  OR(1, "Or", "Or"),
 
   /**
    * The '<em><b>Xor</b></em>' literal object.
@@ -47,7 +47,7 @@ public enum DecompositionType implements Enumerator
    * @generated
    * @ordered
    */
-  XOR(2, "Xor", "xor");
+  XOR(2, "Xor", "Xor");
 
   /**
    * The '<em><b>And</b></em>' literal value.
@@ -58,7 +58,7 @@ public enum DecompositionType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #AND
-   * @model name="And" literal="and"
+   * @model name="And"
    * @generated
    * @ordered
    */
@@ -73,7 +73,7 @@ public enum DecompositionType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #OR
-   * @model name="Or" literal="or"
+   * @model name="Or"
    * @generated
    * @ordered
    */
@@ -88,7 +88,7 @@ public enum DecompositionType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #XOR
-   * @model name="Xor" literal="xor"
+   * @model name="Xor"
    * @generated
    * @ordered
    */

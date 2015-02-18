@@ -51,7 +51,9 @@
     <genClasses ecoreClass="TGRL.ecore#//Model">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Model/gRLspecs"/>
     </genClasses>
-    <genClasses ecoreClass="TGRL.ecore#//GRLModelElement"/>
+    <genClasses ecoreClass="TGRL.ecore#//GRLModelElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//GRLModelElement/id"/>
+    </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//GRLNode">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//GRLNode/name"/>
     </genClasses>

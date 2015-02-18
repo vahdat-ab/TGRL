@@ -1915,6 +1915,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEqualsSignKeyword_3_0_1 = (Keyword)cGroup_3_0.eContents().get(1);
 		private final Assignment cLabelAssignment_3_0_2 = (Assignment)cGroup_3_0.eContents().get(2);
 		private final RuleCall cLabelSTRINGTerminalRuleCall_3_0_2_0 = (RuleCall)cLabelAssignment_3_0_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3_0_3 = (Keyword)cGroup_3_0.eContents().get(3);
 		private final Group cGroup_3_1 = (Group)cUnorderedGroup_3.eContents().get(1);
 		private final Keyword cDescriptionKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_3_1_1 = (Keyword)cGroup_3_1.eContents().get(1);
@@ -1934,11 +1935,11 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// *******************************************ElementLink*******************************************
 		//Decomposition:
-		//	"decomposition" name=ID? "{" (("name" "=" label=STRING)? //		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?
+		//	"decomposition" name=ID? "{" (("name" "=" label=STRING ";")? //		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?
 		//	& ("description" "=" description=STRING ";")? & src=[GRLLinkableElement] "->" dest=[GRLLinkableElement] ";") "}";
 		public ParserRule getRule() { return rule; }
 
-		//"decomposition" name=ID? "{" (("name" "=" label=STRING)? //		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?
+		//"decomposition" name=ID? "{" (("name" "=" label=STRING ";")? //		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?
 		//& ("description" "=" description=STRING ";")? & src=[GRLLinkableElement] "->" dest=[GRLLinkableElement] ";") "}"
 		public Group getGroup() { return cGroup; }
 
@@ -1954,11 +1955,11 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("name" "=" label=STRING)? //		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?
+		//("name" "=" label=STRING ";")? //		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?
 		//& ("description" "=" description=STRING ";")? & src=[GRLLinkableElement] "->" dest=[GRLLinkableElement] ";"
 		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
 
-		//("name" "=" label=STRING)?
+		//("name" "=" label=STRING ";")?
 		public Group getGroup_3_0() { return cGroup_3_0; }
 
 		//"name"
@@ -1972,6 +1973,9 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getLabelSTRINGTerminalRuleCall_3_0_2_0() { return cLabelSTRINGTerminalRuleCall_3_0_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3_0_3() { return cSemicolonKeyword_3_0_3; }
 
 		//("description" "=" description=STRING ";")?
 		public Group getGroup_3_1() { return cGroup_3_1; }
@@ -2035,6 +2039,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEqualsSignKeyword_3_0_1 = (Keyword)cGroup_3_0.eContents().get(1);
 		private final Assignment cLabelAssignment_3_0_2 = (Assignment)cGroup_3_0.eContents().get(2);
 		private final RuleCall cLabelSTRINGTerminalRuleCall_3_0_2_0 = (RuleCall)cLabelAssignment_3_0_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3_0_3 = (Keyword)cGroup_3_0.eContents().get(3);
 		private final Group cGroup_3_1 = (Group)cUnorderedGroup_3.eContents().get(1);
 		private final Keyword cContributionKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_3_1_1 = (Keyword)cGroup_3_1.eContents().get(1);
@@ -2083,7 +2088,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Contribution:
-		//	"contribution" name=ID? "{" (("name" "=" label=STRING)? / *
+		//	"contribution" name=ID? "{" (("name" "=" label=STRING ";")? / *
 		//			 *TODO I must give a default value, which is 25, to this attribute.
 		//			 * 		This can be done through the post processing mechanism in xText 
 		//			 * / //		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?&
@@ -2093,7 +2098,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//	src=[GRLLinkableElement] "->" dest=[GRLLinkableElement] ";") "}";
 		public ParserRule getRule() { return rule; }
 
-		//"contribution" name=ID? "{" (("name" "=" label=STRING)? / *
+		//"contribution" name=ID? "{" (("name" "=" label=STRING ";")? / *
 		//			 *TODO I must give a default value, which is 25, to this attribute.
 		//			 * 		This can be done through the post processing mechanism in xText 
 		//			 * / //		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?&
@@ -2115,7 +2120,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("name" "=" label=STRING)? / *
+		//("name" "=" label=STRING ";")? / *
 		//			 *TODO I must give a default value, which is 25, to this attribute.
 		//			 * 		This can be done through the post processing mechanism in xText 
 		//			 * / //		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?&
@@ -2125,7 +2130,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//dest=[GRLLinkableElement] ";"
 		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
 
-		//("name" "=" label=STRING)?
+		//("name" "=" label=STRING ";")?
 		public Group getGroup_3_0() { return cGroup_3_0; }
 
 		//"name"
@@ -2139,6 +2144,9 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getLabelSTRINGTerminalRuleCall_3_0_2_0() { return cLabelSTRINGTerminalRuleCall_3_0_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3_0_3() { return cSemicolonKeyword_3_0_3; }
 
 		//("contribution" "=" contribution=ContributionType ";")?
 		public Group getGroup_3_1() { return cGroup_3_1; }
@@ -2292,6 +2300,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEqualsSignKeyword_3_0_1 = (Keyword)cGroup_3_0.eContents().get(1);
 		private final Assignment cLabelAssignment_3_0_2 = (Assignment)cGroup_3_0.eContents().get(2);
 		private final RuleCall cLabelSTRINGTerminalRuleCall_3_0_2_0 = (RuleCall)cLabelAssignment_3_0_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3_0_3 = (Keyword)cGroup_3_0.eContents().get(3);
 		private final Group cGroup_3_1 = (Group)cUnorderedGroup_3.eContents().get(1);
 		private final Keyword cDescriptionKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_3_1_1 = (Keyword)cGroup_3_1.eContents().get(1);
@@ -2310,11 +2319,11 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Dependency:
-		//	"dependency" name=ID? "{" (("name" "=" label=STRING)? //		('refs' '=' refs+=[grlModel::LinkRef] (',' refs+=[grlModel::LinkRef])* ';')?&
+		//	"dependency" name=ID? "{" (("name" "=" label=STRING ";")? //		('refs' '=' refs+=[grlModel::LinkRef] (',' refs+=[grlModel::LinkRef])* ';')?&
 		//	& ("description" "=" description=STRING ";")? & src=[GRLLinkableElement] "->" dest=[GRLLinkableElement] ";") "}";
 		public ParserRule getRule() { return rule; }
 
-		//"dependency" name=ID? "{" (("name" "=" label=STRING)? //		('refs' '=' refs+=[grlModel::LinkRef] (',' refs+=[grlModel::LinkRef])* ';')?&
+		//"dependency" name=ID? "{" (("name" "=" label=STRING ";")? //		('refs' '=' refs+=[grlModel::LinkRef] (',' refs+=[grlModel::LinkRef])* ';')?&
 		//& ("description" "=" description=STRING ";")? & src=[GRLLinkableElement] "->" dest=[GRLLinkableElement] ";") "}"
 		public Group getGroup() { return cGroup; }
 
@@ -2330,11 +2339,11 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//("name" "=" label=STRING)? //		('refs' '=' refs+=[grlModel::LinkRef] (',' refs+=[grlModel::LinkRef])* ';')?&
+		//("name" "=" label=STRING ";")? //		('refs' '=' refs+=[grlModel::LinkRef] (',' refs+=[grlModel::LinkRef])* ';')?&
 		//& ("description" "=" description=STRING ";")? & src=[GRLLinkableElement] "->" dest=[GRLLinkableElement] ";"
 		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
 
-		//("name" "=" label=STRING)?
+		//("name" "=" label=STRING ";")?
 		public Group getGroup_3_0() { return cGroup_3_0; }
 
 		//"name"
@@ -2348,6 +2357,9 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getLabelSTRINGTerminalRuleCall_3_0_2_0() { return cLabelSTRINGTerminalRuleCall_3_0_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3_0_3() { return cSemicolonKeyword_3_0_3; }
 
 		//("description" "=" description=STRING ";")?
 		public Group getGroup_3_1() { return cGroup_3_1; }
@@ -4873,34 +4885,34 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		////	Ressource = 'resource'| Indicator = 'indicator'  
 		////;
 		//enum ImportanceType:
-		//	None="none" | High="high" | Medium="medium" | Low="low";
+		//	None | High | Medium | Low;
 		public EnumRule getRule() { return rule; }
 
-		//None="none" | High="high" | Medium="medium" | Low="low"
+		//None | High | Medium | Low
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//None="none"
+		//None
 		public EnumLiteralDeclaration getNoneEnumLiteralDeclaration_0() { return cNoneEnumLiteralDeclaration_0; }
 
-		//"none"
+		//"None"
 		public Keyword getNoneNoneKeyword_0_0() { return cNoneNoneKeyword_0_0; }
 
-		//High="high"
+		//High
 		public EnumLiteralDeclaration getHighEnumLiteralDeclaration_1() { return cHighEnumLiteralDeclaration_1; }
 
-		//"high"
+		//"High"
 		public Keyword getHighHighKeyword_1_0() { return cHighHighKeyword_1_0; }
 
-		//Medium="medium"
+		//Medium
 		public EnumLiteralDeclaration getMediumEnumLiteralDeclaration_2() { return cMediumEnumLiteralDeclaration_2; }
 
-		//"medium"
+		//"Medium"
 		public Keyword getMediumMediumKeyword_2_0() { return cMediumMediumKeyword_2_0; }
 
-		//Low="low"
+		//Low
 		public EnumLiteralDeclaration getLowEnumLiteralDeclaration_3() { return cLowEnumLiteralDeclaration_3; }
 
-		//"low"
+		//"Low"
 		public Keyword getLowLowKeyword_3_0() { return cLowLowKeyword_3_0; }
 	}
 
@@ -4915,28 +4927,28 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cXorXorKeyword_2_0 = (Keyword)cXorEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum DecompositionType:
-		//	And="and" | Or="or" | Xor="xor";
+		//	And | Or | Xor;
 		public EnumRule getRule() { return rule; }
 
-		//And="and" | Or="or" | Xor="xor"
+		//And | Or | Xor
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//And="and"
+		//And
 		public EnumLiteralDeclaration getAndEnumLiteralDeclaration_0() { return cAndEnumLiteralDeclaration_0; }
 
-		//"and"
+		//"And"
 		public Keyword getAndAndKeyword_0_0() { return cAndAndKeyword_0_0; }
 
-		//Or="or"
+		//Or
 		public EnumLiteralDeclaration getOrEnumLiteralDeclaration_1() { return cOrEnumLiteralDeclaration_1; }
 
-		//"or"
+		//"Or"
 		public Keyword getOrOrKeyword_1_0() { return cOrOrKeyword_1_0; }
 
-		//Xor="xor"
+		//Xor
 		public EnumLiteralDeclaration getXorEnumLiteralDeclaration_2() { return cXorEnumLiteralDeclaration_2; }
 
-		//"xor"
+		//"Xor"
 		public Keyword getXorXorKeyword_2_0() { return cXorXorKeyword_2_0; }
 	}
 
@@ -4959,54 +4971,52 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cBreakBreakKeyword_6_0 = (Keyword)cBreakEnumLiteralDeclaration_6.eContents().get(0);
 		
 		//enum ContributionType:
-		//	Help="help" | Make="make" | SomePositive="somePositive" | Unknown="unknown" | SomeNegative="someNegative" |
-		//	Hurt="hurt" | Break="break";
+		//	Help | Make | SomePositive | Unknown | SomeNegative | Hurt | Break;
 		public EnumRule getRule() { return rule; }
 
-		//Help="help" | Make="make" | SomePositive="somePositive" | Unknown="unknown" | SomeNegative="someNegative" | Hurt="hurt"
-		//| Break="break"
+		//Help | Make | SomePositive | Unknown | SomeNegative | Hurt | Break
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//Help="help"
+		//Help
 		public EnumLiteralDeclaration getHelpEnumLiteralDeclaration_0() { return cHelpEnumLiteralDeclaration_0; }
 
-		//"help"
+		//"Help"
 		public Keyword getHelpHelpKeyword_0_0() { return cHelpHelpKeyword_0_0; }
 
-		//Make="make"
+		//Make
 		public EnumLiteralDeclaration getMakeEnumLiteralDeclaration_1() { return cMakeEnumLiteralDeclaration_1; }
 
-		//"make"
+		//"Make"
 		public Keyword getMakeMakeKeyword_1_0() { return cMakeMakeKeyword_1_0; }
 
-		//SomePositive="somePositive"
+		//SomePositive
 		public EnumLiteralDeclaration getSomePositiveEnumLiteralDeclaration_2() { return cSomePositiveEnumLiteralDeclaration_2; }
 
-		//"somePositive"
+		//"SomePositive"
 		public Keyword getSomePositiveSomePositiveKeyword_2_0() { return cSomePositiveSomePositiveKeyword_2_0; }
 
-		//Unknown="unknown"
+		//Unknown
 		public EnumLiteralDeclaration getUnknownEnumLiteralDeclaration_3() { return cUnknownEnumLiteralDeclaration_3; }
 
-		//"unknown"
+		//"Unknown"
 		public Keyword getUnknownUnknownKeyword_3_0() { return cUnknownUnknownKeyword_3_0; }
 
-		//SomeNegative="someNegative"
+		//SomeNegative
 		public EnumLiteralDeclaration getSomeNegativeEnumLiteralDeclaration_4() { return cSomeNegativeEnumLiteralDeclaration_4; }
 
-		//"someNegative"
+		//"SomeNegative"
 		public Keyword getSomeNegativeSomeNegativeKeyword_4_0() { return cSomeNegativeSomeNegativeKeyword_4_0; }
 
-		//Hurt="hurt"
+		//Hurt
 		public EnumLiteralDeclaration getHurtEnumLiteralDeclaration_5() { return cHurtEnumLiteralDeclaration_5; }
 
-		//"hurt"
+		//"Hurt"
 		public Keyword getHurtHurtKeyword_5_0() { return cHurtHurtKeyword_5_0; }
 
-		//Break="break"
+		//Break
 		public EnumLiteralDeclaration getBreakEnumLiteralDeclaration_6() { return cBreakEnumLiteralDeclaration_6; }
 
-		//"break"
+		//"Break"
 		public Keyword getBreakBreakKeyword_6_0() { return cBreakBreakKeyword_6_0; }
 	}
 
@@ -5029,54 +5039,52 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNoneNoneKeyword_6_0 = (Keyword)cNoneEnumLiteralDeclaration_6.eContents().get(0);
 		
 		//enum QualitativeLabel:
-		//	Denied="denied" | WeaklyDenied="weaklyDenied" | WeaklySatisfied="weaklySatisfied" | Satisfied="satisfied" |
-		//	Conflict="conflict" | Unknown="unknown" | None="none";
+		//	Denied | WeaklyDenied | WeaklySatisfied | Satisfied | Conflict | Unknown | None;
 		public EnumRule getRule() { return rule; }
 
-		//Denied="denied" | WeaklyDenied="weaklyDenied" | WeaklySatisfied="weaklySatisfied" | Satisfied="satisfied" |
-		//Conflict="conflict" | Unknown="unknown" | None="none"
+		//Denied | WeaklyDenied | WeaklySatisfied | Satisfied | Conflict | Unknown | None
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//Denied="denied"
+		//Denied
 		public EnumLiteralDeclaration getDeniedEnumLiteralDeclaration_0() { return cDeniedEnumLiteralDeclaration_0; }
 
-		//"denied"
+		//"Denied"
 		public Keyword getDeniedDeniedKeyword_0_0() { return cDeniedDeniedKeyword_0_0; }
 
-		//WeaklyDenied="weaklyDenied"
+		//WeaklyDenied
 		public EnumLiteralDeclaration getWeaklyDeniedEnumLiteralDeclaration_1() { return cWeaklyDeniedEnumLiteralDeclaration_1; }
 
-		//"weaklyDenied"
+		//"WeaklyDenied"
 		public Keyword getWeaklyDeniedWeaklyDeniedKeyword_1_0() { return cWeaklyDeniedWeaklyDeniedKeyword_1_0; }
 
-		//WeaklySatisfied="weaklySatisfied"
+		//WeaklySatisfied
 		public EnumLiteralDeclaration getWeaklySatisfiedEnumLiteralDeclaration_2() { return cWeaklySatisfiedEnumLiteralDeclaration_2; }
 
-		//"weaklySatisfied"
+		//"WeaklySatisfied"
 		public Keyword getWeaklySatisfiedWeaklySatisfiedKeyword_2_0() { return cWeaklySatisfiedWeaklySatisfiedKeyword_2_0; }
 
-		//Satisfied="satisfied"
+		//Satisfied
 		public EnumLiteralDeclaration getSatisfiedEnumLiteralDeclaration_3() { return cSatisfiedEnumLiteralDeclaration_3; }
 
-		//"satisfied"
+		//"Satisfied"
 		public Keyword getSatisfiedSatisfiedKeyword_3_0() { return cSatisfiedSatisfiedKeyword_3_0; }
 
-		//Conflict="conflict"
+		//Conflict
 		public EnumLiteralDeclaration getConflictEnumLiteralDeclaration_4() { return cConflictEnumLiteralDeclaration_4; }
 
-		//"conflict"
+		//"Conflict"
 		public Keyword getConflictConflictKeyword_4_0() { return cConflictConflictKeyword_4_0; }
 
-		//Unknown="unknown"
+		//Unknown
 		public EnumLiteralDeclaration getUnknownEnumLiteralDeclaration_5() { return cUnknownEnumLiteralDeclaration_5; }
 
-		//"unknown"
+		//"Unknown"
 		public Keyword getUnknownUnknownKeyword_5_0() { return cUnknownUnknownKeyword_5_0; }
 
-		//None="none"
+		//None
 		public EnumLiteralDeclaration getNoneEnumLiteralDeclaration_6() { return cNoneEnumLiteralDeclaration_6; }
 
-		//"none"
+		//"None"
 		public Keyword getNoneNoneKeyword_6_0() { return cNoneNoneKeyword_6_0; }
 	}
 
@@ -5094,34 +5102,34 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		
 		////Deprecated
 		//enum Criticality:
-		//	None="none" | High="high" | Medium="medium" | Low="low";
+		//	None | High | Medium | Low;
 		public EnumRule getRule() { return rule; }
 
-		//None="none" | High="high" | Medium="medium" | Low="low"
+		//None | High | Medium | Low
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//None="none"
+		//None
 		public EnumLiteralDeclaration getNoneEnumLiteralDeclaration_0() { return cNoneEnumLiteralDeclaration_0; }
 
-		//"none"
+		//"None"
 		public Keyword getNoneNoneKeyword_0_0() { return cNoneNoneKeyword_0_0; }
 
-		//High="high"
+		//High
 		public EnumLiteralDeclaration getHighEnumLiteralDeclaration_1() { return cHighEnumLiteralDeclaration_1; }
 
-		//"high"
+		//"High"
 		public Keyword getHighHighKeyword_1_0() { return cHighHighKeyword_1_0; }
 
-		//Medium="medium"
+		//Medium
 		public EnumLiteralDeclaration getMediumEnumLiteralDeclaration_2() { return cMediumEnumLiteralDeclaration_2; }
 
-		//"medium"
+		//"Medium"
 		public Keyword getMediumMediumKeyword_2_0() { return cMediumMediumKeyword_2_0; }
 
-		//Low="low"
+		//Low
 		public EnumLiteralDeclaration getLowEnumLiteralDeclaration_3() { return cLowEnumLiteralDeclaration_3; }
 
-		//"low"
+		//"Low"
 		public Keyword getLowLowKeyword_3_0() { return cLowLowKeyword_3_0; }
 	}
 
@@ -5139,34 +5147,34 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		
 		////Deprecated
 		//enum Priority:
-		//	None="none" | High="high" | Medium="medium" | Low="low";
+		//	None | High | Medium | Low;
 		public EnumRule getRule() { return rule; }
 
-		//None="none" | High="high" | Medium="medium" | Low="low"
+		//None | High | Medium | Low
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//None="none"
+		//None
 		public EnumLiteralDeclaration getNoneEnumLiteralDeclaration_0() { return cNoneEnumLiteralDeclaration_0; }
 
-		//"none"
+		//"None"
 		public Keyword getNoneNoneKeyword_0_0() { return cNoneNoneKeyword_0_0; }
 
-		//High="high"
+		//High
 		public EnumLiteralDeclaration getHighEnumLiteralDeclaration_1() { return cHighEnumLiteralDeclaration_1; }
 
-		//"high"
+		//"High"
 		public Keyword getHighHighKeyword_1_0() { return cHighHighKeyword_1_0; }
 
-		//Medium="medium"
+		//Medium
 		public EnumLiteralDeclaration getMediumEnumLiteralDeclaration_2() { return cMediumEnumLiteralDeclaration_2; }
 
-		//"medium"
+		//"Medium"
 		public Keyword getMediumMediumKeyword_2_0() { return cMediumMediumKeyword_2_0; }
 
-		//Low="low"
+		//Low
 		public EnumLiteralDeclaration getLowEnumLiteralDeclaration_3() { return cLowEnumLiteralDeclaration_3; }
 
-		//"low"
+		//"Low"
 		public Keyword getLowLowKeyword_3_0() { return cLowLowKeyword_3_0; }
 	}
 	
@@ -5498,7 +5506,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// *******************************************ElementLink*******************************************
 	//Decomposition:
-	//	"decomposition" name=ID? "{" (("name" "=" label=STRING)? //		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?
+	//	"decomposition" name=ID? "{" (("name" "=" label=STRING ";")? //		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?
 	//	& ("description" "=" description=STRING ";")? & src=[GRLLinkableElement] "->" dest=[GRLLinkableElement] ";") "}";
 	public DecompositionElements getDecompositionAccess() {
 		return pDecomposition;
@@ -5509,7 +5517,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Contribution:
-	//	"contribution" name=ID? "{" (("name" "=" label=STRING)? / *
+	//	"contribution" name=ID? "{" (("name" "=" label=STRING ";")? / *
 	//			 *TODO I must give a default value, which is 25, to this attribute.
 	//			 * 		This can be done through the post processing mechanism in xText 
 	//			 * / //		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?&
@@ -5526,7 +5534,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Dependency:
-	//	"dependency" name=ID? "{" (("name" "=" label=STRING)? //		('refs' '=' refs+=[grlModel::LinkRef] (',' refs+=[grlModel::LinkRef])* ';')?&
+	//	"dependency" name=ID? "{" (("name" "=" label=STRING ";")? //		('refs' '=' refs+=[grlModel::LinkRef] (',' refs+=[grlModel::LinkRef])* ';')?&
 	//	& ("description" "=" description=STRING ";")? & src=[GRLLinkableElement] "->" dest=[GRLLinkableElement] ";") "}";
 	public DependencyElements getDependencyAccess() {
 		return pDependency;
@@ -5844,7 +5852,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	////	Ressource = 'resource'| Indicator = 'indicator'  
 	////;
 	//enum ImportanceType:
-	//	None="none" | High="high" | Medium="medium" | Low="low";
+	//	None | High | Medium | Low;
 	public ImportanceTypeElements getImportanceTypeAccess() {
 		return unknownRuleImportanceType;
 	}
@@ -5854,7 +5862,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum DecompositionType:
-	//	And="and" | Or="or" | Xor="xor";
+	//	And | Or | Xor;
 	public DecompositionTypeElements getDecompositionTypeAccess() {
 		return unknownRuleDecompositionType;
 	}
@@ -5864,8 +5872,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum ContributionType:
-	//	Help="help" | Make="make" | SomePositive="somePositive" | Unknown="unknown" | SomeNegative="someNegative" |
-	//	Hurt="hurt" | Break="break";
+	//	Help | Make | SomePositive | Unknown | SomeNegative | Hurt | Break;
 	public ContributionTypeElements getContributionTypeAccess() {
 		return unknownRuleContributionType;
 	}
@@ -5875,8 +5882,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum QualitativeLabel:
-	//	Denied="denied" | WeaklyDenied="weaklyDenied" | WeaklySatisfied="weaklySatisfied" | Satisfied="satisfied" |
-	//	Conflict="conflict" | Unknown="unknown" | None="none";
+	//	Denied | WeaklyDenied | WeaklySatisfied | Satisfied | Conflict | Unknown | None;
 	public QualitativeLabelElements getQualitativeLabelAccess() {
 		return unknownRuleQualitativeLabel;
 	}
@@ -5887,7 +5893,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 
 	////Deprecated
 	//enum Criticality:
-	//	None="none" | High="high" | Medium="medium" | Low="low";
+	//	None | High | Medium | Low;
 	public CriticalityElements getCriticalityAccess() {
 		return unknownRuleCriticality;
 	}
@@ -5898,7 +5904,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 
 	////Deprecated
 	//enum Priority:
-	//	None="none" | High="high" | Medium="medium" | Low="low";
+	//	None | High | Medium | Low;
 	public PriorityElements getPriorityAccess() {
 		return unknownRulePriority;
 	}

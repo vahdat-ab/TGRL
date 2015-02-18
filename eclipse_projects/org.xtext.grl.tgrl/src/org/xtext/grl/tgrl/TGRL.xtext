@@ -56,7 +56,7 @@ Actor:
 		 *TODO I must give a default value, which is zero, to this attribute.
 		 * 		This can be done through the post processing mechanism in xText 
 		 */
-		('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
+		('importanceQuantitative' '=' importanceQuantitative = INT ';')?&
 		('description' '=' description=STRING ';')?&
 		('includedActors' '=' includedActors+=[Actor](',' includedActors+=[Actor])* ';')?&		
 		('collapsedRefs' '=' collapsedRefs+=[CollapsedActorRef](',' collapsedRefs+=[CollapsedActorRef])* ';')?
@@ -80,7 +80,8 @@ Softgoal :
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
 			('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
-			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?	
+			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?
+			
 		)
 	'}'
 ;
@@ -158,7 +159,7 @@ Indicator:
 Decomposition: 
 	'decomposition' (name=ID)? '{'	
 		(
-			('name' '=' label = STRING)?&
+			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
 	//		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?
 			(src=[GRLLinkableElement] '->' dest=[GRLLinkableElement] ';')
@@ -168,7 +169,7 @@ Decomposition:
 Contribution: 
 	'contribution' (name=ID)? '{'
 		(
-			('name' '=' label = STRING)?&
+			('name' '=' label = STRING ';')?&
 			('contribution' '=' contribution=ContributionType ';')?&
 			/*
 			 *TODO I must give a default value, which is 25, to this attribute.
@@ -186,7 +187,7 @@ Contribution:
 Dependency:
 	'dependency' (name=ID)? '{'
 		(
-			('name' '=' label = STRING)?&
+			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
 	//		('refs' '=' refs+=[grlModel::LinkRef] (',' refs+=[grlModel::LinkRef])* ';')?&
 			(src=[GRLLinkableElement] '->' dest=[GRLLinkableElement] ';')
@@ -470,31 +471,31 @@ IndicatorGroup :
 //	Ressource = 'resource'| Indicator = 'indicator'  
 //;
 enum ImportanceType: 
-	 None ='none' | High = 'high' | Medium = 'medium' | Low = 'low'
+	 None  | High  | Medium | Low
 ;
 enum DecompositionType:
-	And = 'and' | Or = 'or' | Xor = 'xor' 
+	And| Or  | Xor  
 ;
 
 enum ContributionType: 
-	Help = 'help' | Make = 'make' | SomePositive = 'somePositive' |
-	Unknown = 'unknown' | SomeNegative = 'someNegative' | Hurt = 'hurt' |
-	Break = 'break'  
+	Help | Make | SomePositive  |
+	Unknown  | SomeNegative  | Hurt  |
+	Break 
 ;
 
 enum QualitativeLabel:
-	Denied = 'denied' | WeaklyDenied = 'weaklyDenied' |
-	WeaklySatisfied = 'weaklySatisfied' | Satisfied = 'satisfied' |
-	Conflict = 'conflict' | Unknown = 'unknown' | None = 'none' 
+	Denied | WeaklyDenied |
+	WeaklySatisfied  | Satisfied |
+	Conflict | Unknown | None
 ;
 
 //Deprecated
 enum Criticality:
-	None ='none' | High = 'high' | Medium = 'medium' | Low = 'low' 
+	None | High | Medium | Low  
 ;
 //Deprecated
 enum Priority:
-	None ='none' | High = 'high' | Medium = 'medium' | Low = 'low' 
+	None | High  | Medium  | Low 
 ;
 //Terminals
 terminal BOOLEAN:

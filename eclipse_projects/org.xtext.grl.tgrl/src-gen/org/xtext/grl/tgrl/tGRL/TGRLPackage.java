@@ -96,13 +96,22 @@ public interface TGRLPackage extends EPackage
   int GRL_MODEL_ELEMENT = 1;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GRL_MODEL_ELEMENT__ID = 0;
+
+  /**
    * The number of structural features of the '<em>GRL Model Element</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GRL_MODEL_ELEMENT_FEATURE_COUNT = 0;
+  int GRL_MODEL_ELEMENT_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.GRLNodeImpl <em>GRL Node</em>}' class.
@@ -113,6 +122,15 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   int GRL_NODE = 2;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GRL_NODE__ID = GRL_MODEL_ELEMENT__ID;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -141,6 +159,15 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   int GRL_LINKABLE_ELEMENT = 3;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GRL_LINKABLE_ELEMENT__ID = GRL_MODEL_ELEMENT__ID;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -205,6 +232,15 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   int INTENTIONAL_ELEMENT = 4;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTENTIONAL_ELEMENT__ID = GRL_LINKABLE_ELEMENT__ID;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -289,6 +325,15 @@ public interface TGRLPackage extends EPackage
   int ELEMENT_LINK = 5;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ELEMENT_LINK__ID = GRL_MODEL_ELEMENT__ID;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -351,6 +396,15 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   int KPI_CONVERSION = 6;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KPI_CONVERSION__ID = GRL_MODEL_ELEMENT__ID;
 
   /**
    * The number of structural features of the '<em>KPI Conversion</em>' class.
@@ -499,6 +553,15 @@ public interface TGRLPackage extends EPackage
   int ACTOR = 8;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTOR__ID = GRL_LINKABLE_ELEMENT__ID;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -581,6 +644,15 @@ public interface TGRLPackage extends EPackage
   int SOFTGOAL = 9;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOFTGOAL__ID = INTENTIONAL_ELEMENT__ID;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -661,6 +733,15 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   int GOAL = 10;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GOAL__ID = INTENTIONAL_ELEMENT__ID;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -754,6 +835,15 @@ public interface TGRLPackage extends EPackage
   int TASK = 11;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TASK__ID = INTENTIONAL_ELEMENT__ID;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -845,6 +935,15 @@ public interface TGRLPackage extends EPackage
   int RESSOURCE = 12;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RESSOURCE__ID = INTENTIONAL_ELEMENT__ID;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -925,6 +1024,15 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   int INDICATOR = 13;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDICATOR__ID = INTENTIONAL_ELEMENT__ID;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1027,6 +1135,15 @@ public interface TGRLPackage extends EPackage
   int DECOMPOSITION = 14;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECOMPOSITION__ID = ELEMENT_LINK__ID;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1089,6 +1206,15 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   int CONTRIBUTION = 15;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTRIBUTION__ID = ELEMENT_LINK__ID;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1191,6 +1317,15 @@ public interface TGRLPackage extends EPackage
   int DEPENDENCY = 16;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEPENDENCY__ID = ELEMENT_LINK__ID;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1255,6 +1390,15 @@ public interface TGRLPackage extends EPackage
   int BELIEF = 17;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BELIEF__ID = GRL_NODE__ID;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1301,6 +1445,15 @@ public interface TGRLPackage extends EPackage
   int COLLAPSED_ACTOR_REF = 18;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLLAPSED_ACTOR_REF__ID = GRL_NODE__ID;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1345,6 +1498,15 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   int INTENTIONAL_ELEMENT_REF = 19;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTENTIONAL_ELEMENT_REF__ID = GRL_NODE__ID;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1430,6 +1592,15 @@ public interface TGRLPackage extends EPackage
   int STRATEGIES_GROUP = 21;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRATEGIES_GROUP__ID = GRL_MODEL_ELEMENT__ID;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1465,6 +1636,15 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   int EVALUATION_STRATEGY = 22;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVALUATION_STRATEGY__ID = GRL_MODEL_ELEMENT__ID;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1659,6 +1839,15 @@ public interface TGRLPackage extends EPackage
   int CONTRIBUTION_CONTEXT_GROUP = 25;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTRIBUTION_CONTEXT_GROUP__ID = GRL_MODEL_ELEMENT__ID;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1694,6 +1883,15 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   int CONTRIBUTION_CONTEXT = 26;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTRIBUTION_CONTEXT__ID = GRL_MODEL_ELEMENT__ID;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1841,6 +2039,15 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   int QUALITATIVE_MAPPINGS = 29;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUALITATIVE_MAPPINGS__ID = KPI_CONVERSION__ID;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2127,6 +2334,15 @@ public interface TGRLPackage extends EPackage
   int KPI_INFORMATION_ELEMENT = 34;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KPI_INFORMATION_ELEMENT__ID = GRL_MODEL_ELEMENT__ID;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2191,6 +2407,15 @@ public interface TGRLPackage extends EPackage
   int KPI_INFORMATION_ELEMENT_REF = 35;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KPI_INFORMATION_ELEMENT_REF__ID = GRL_NODE__ID;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2237,6 +2462,15 @@ public interface TGRLPackage extends EPackage
   int KPI_MODEL_LINK = 36;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int KPI_MODEL_LINK__ID = GRL_MODEL_ELEMENT__ID;
+
+  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2281,6 +2515,15 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   int INDICATOR_GROUP = 37;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDICATOR_GROUP__ID = GRL_MODEL_ELEMENT__ID;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2427,6 +2670,17 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   EClass getGRLModelElement();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.GRLModelElement#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.GRLModelElement#getId()
+   * @see #getGRLModelElement()
+   * @generated
+   */
+  EAttribute getGRLModelElement_Id();
 
   /**
    * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.GRLNode <em>GRL Node</em>}'.
@@ -4086,6 +4340,14 @@ public interface TGRLPackage extends EPackage
      * @generated
      */
     EClass GRL_MODEL_ELEMENT = eINSTANCE.getGRLModelElement();
+
+    /**
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GRL_MODEL_ELEMENT__ID = eINSTANCE.getGRLModelElement_Id();
 
     /**
      * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.impl.GRLNodeImpl <em>GRL Node</em>}' class.

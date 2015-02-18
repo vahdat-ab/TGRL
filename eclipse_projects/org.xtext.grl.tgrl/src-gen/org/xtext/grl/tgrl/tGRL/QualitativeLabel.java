@@ -27,7 +27,7 @@ public enum QualitativeLabel implements Enumerator
    * @generated
    * @ordered
    */
-  DENIED(0, "Denied", "denied"),
+  DENIED(0, "Denied", "Denied"),
 
   /**
    * The '<em><b>Weakly Denied</b></em>' literal object.
@@ -37,7 +37,7 @@ public enum QualitativeLabel implements Enumerator
    * @generated
    * @ordered
    */
-  WEAKLY_DENIED(1, "WeaklyDenied", "weaklyDenied"),
+  WEAKLY_DENIED(1, "WeaklyDenied", "WeaklyDenied"),
 
   /**
    * The '<em><b>Weakly Satisfied</b></em>' literal object.
@@ -47,7 +47,7 @@ public enum QualitativeLabel implements Enumerator
    * @generated
    * @ordered
    */
-  WEAKLY_SATISFIED(2, "WeaklySatisfied", "weaklySatisfied"),
+  WEAKLY_SATISFIED(2, "WeaklySatisfied", "WeaklySatisfied"),
 
   /**
    * The '<em><b>Satisfied</b></em>' literal object.
@@ -57,7 +57,7 @@ public enum QualitativeLabel implements Enumerator
    * @generated
    * @ordered
    */
-  SATISFIED(3, "Satisfied", "satisfied"),
+  SATISFIED(3, "Satisfied", "Satisfied"),
 
   /**
    * The '<em><b>Conflict</b></em>' literal object.
@@ -67,7 +67,7 @@ public enum QualitativeLabel implements Enumerator
    * @generated
    * @ordered
    */
-  CONFLICT(4, "Conflict", "conflict"),
+  CONFLICT(4, "Conflict", "Conflict"),
 
   /**
    * The '<em><b>Unknown</b></em>' literal object.
@@ -77,7 +77,7 @@ public enum QualitativeLabel implements Enumerator
    * @generated
    * @ordered
    */
-  UNKNOWN(5, "Unknown", "unknown"),
+  UNKNOWN(5, "Unknown", "Unknown"),
 
   /**
    * The '<em><b>None</b></em>' literal object.
@@ -87,7 +87,7 @@ public enum QualitativeLabel implements Enumerator
    * @generated
    * @ordered
    */
-  NONE(6, "None", "none");
+  NONE(6, "None", "None");
 
   /**
    * The '<em><b>Denied</b></em>' literal value.
@@ -98,7 +98,7 @@ public enum QualitativeLabel implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #DENIED
-   * @model name="Denied" literal="denied"
+   * @model name="Denied"
    * @generated
    * @ordered
    */
@@ -113,7 +113,7 @@ public enum QualitativeLabel implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #WEAKLY_DENIED
-   * @model name="WeaklyDenied" literal="weaklyDenied"
+   * @model name="WeaklyDenied"
    * @generated
    * @ordered
    */
@@ -128,7 +128,7 @@ public enum QualitativeLabel implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #WEAKLY_SATISFIED
-   * @model name="WeaklySatisfied" literal="weaklySatisfied"
+   * @model name="WeaklySatisfied"
    * @generated
    * @ordered
    */
@@ -143,7 +143,7 @@ public enum QualitativeLabel implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #SATISFIED
-   * @model name="Satisfied" literal="satisfied"
+   * @model name="Satisfied"
    * @generated
    * @ordered
    */
@@ -158,7 +158,7 @@ public enum QualitativeLabel implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #CONFLICT
-   * @model name="Conflict" literal="conflict"
+   * @model name="Conflict"
    * @generated
    * @ordered
    */
@@ -173,7 +173,7 @@ public enum QualitativeLabel implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #UNKNOWN
-   * @model name="Unknown" literal="unknown"
+   * @model name="Unknown"
    * @generated
    * @ordered
    */
@@ -188,7 +188,7 @@ public enum QualitativeLabel implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #NONE
-   * @model name="None" literal="none"
+   * @model name="None"
    * @generated
    * @ordered
    */

@@ -1,0 +1,45 @@
+[comment encoding = UTF-8 /]
+[module generateServices('http://www.xtext.org/grl/tgrl/TGRL')]
+
+
+[template public getLinkSrc(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
+[if (inModel.gRLspecs.links->select(src.name=inIntentionalElement.name)->size()>0)]
+linksSrc="[for (element : ElementLink | inModel.gRLspecs.links->select(src.name=inIntentionalElement.name))][id/] [/for]"
+[/if]
+[/template]
+[template public getLinksDest(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
+[if (inModel.gRLspecs.links->select(dest.name=inIntentionalElement.name)->size()>0)]
+linksDest="[for (element : ElementLink | inModel.gRLspecs.links->select(dest.name=inIntentionalElement.name))][id/] [/for]"
+[/if]
+[/template]
+[template public getSucc(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
+[if (inModel.gRLspecs.links->select(src.name=inIntentionalElement.name)->size()>0)]
+succ="[for (element : ElementLink | inModel.gRLspecs.links->select(src.name=inIntentionalElement.name))]
+[for (loopElement : ElementLink | inModel.gRLspecs.links->asSequence())][if (name =element.name)] //@urndef/@specDiagrams.0/@connections.[i-1/][/if][/for][/for]"
+[/if]
+[/template]
+[template public getPred(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
+[if (inModel.gRLspecs.links->select(dest.name=inIntentionalElement.name)->size()>0)]
+pred="[for (element : ElementLink | inModel.gRLspecs.links->select(dest.name=inIntentionalElement.name))]
+[for (loopElement : ElementLink | inModel.gRLspecs.links->asSequence())][if (name =element.name)] //@urndef/@specDiagrams.0/@connections.[i-1/][/if][/for][/for]"
+[/if]
+[/template]
+[template public getType(inIntentionalElement : IntentionalElement) post(trim())]
+[if (oclIsKindOf(Softgoal))]
+[elseif (oclIsKindOf(Goal))]
+type="Goal"
+[elseif (oclIsKindOf(Task))]
+type="Task"
+[elseif (oclIsKindOf(Ressource))]
+type="Ressource"
+[/if]
+[/template]
+[template public getLinkType(inElementLink : ElementLink) post(trim())]
+xsi:type="grl:[if (oclIsKindOf(Decomposition))]
+Decomposition"
+[elseif (oclIsKindOf(Dependency))]
+Dependency"
+[elseif (oclIsKindOf(Contribution))]
+Contribution" contribution="[inElementLink.oclAsType(Contribution).contribution/]" quantitativeContribution="[inElementLink.oclAsType(Contribution).quantitativeContribution/]" correlation="[inElementLink.oclAsType(Contribution).correlation/]"
+[/if]
+[/template]
