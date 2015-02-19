@@ -36,6 +36,24 @@
       <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/Unknown"/>
       <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/None"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="TGRL.ecore#//Color">
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/white"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/black"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/blue"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/green"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/cyan"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/red"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/purple"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/yellow"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/gray"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/lightGray"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/lightBlue"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/lightGreen"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/lightCray"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/lightRed"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/lightPurple"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/lightYellow"/>
+    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="TGRL.ecore#//Criticality">
       <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Criticality/None"/>
       <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Criticality/High"/>
@@ -61,6 +79,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//GRLLinkableElement/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//GRLLinkableElement/label"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//GRLLinkableElement/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//GRLLinkableElement/fillcolor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//GRLLinkableElement/importance"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//GRLLinkableElement/importanceQuantitative"/>
     </genClasses>
@@ -93,6 +112,8 @@
     <genClasses ecoreClass="TGRL.ecore#//Actor">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//Actor/includedActors"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//Actor/collapsedRefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Actor/intentionalElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Actor/elementLinks"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//Softgoal"/>
     <genClasses ecoreClass="TGRL.ecore#//Goal">

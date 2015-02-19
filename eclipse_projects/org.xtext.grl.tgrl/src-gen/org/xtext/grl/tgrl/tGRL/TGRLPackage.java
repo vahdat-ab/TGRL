@@ -197,13 +197,22 @@ public interface TGRLPackage extends EPackage
   int GRL_LINKABLE_ELEMENT__DESCRIPTION = GRL_MODEL_ELEMENT_FEATURE_COUNT + 2;
 
   /**
+   * The feature id for the '<em><b>Fillcolor</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GRL_LINKABLE_ELEMENT__FILLCOLOR = GRL_MODEL_ELEMENT_FEATURE_COUNT + 3;
+
+  /**
    * The feature id for the '<em><b>Importance</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GRL_LINKABLE_ELEMENT__IMPORTANCE = GRL_MODEL_ELEMENT_FEATURE_COUNT + 3;
+  int GRL_LINKABLE_ELEMENT__IMPORTANCE = GRL_MODEL_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Importance Quantitative</b></em>' attribute.
@@ -212,7 +221,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GRL_LINKABLE_ELEMENT__IMPORTANCE_QUANTITATIVE = GRL_MODEL_ELEMENT_FEATURE_COUNT + 4;
+  int GRL_LINKABLE_ELEMENT__IMPORTANCE_QUANTITATIVE = GRL_MODEL_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The number of structural features of the '<em>GRL Linkable Element</em>' class.
@@ -221,7 +230,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GRL_LINKABLE_ELEMENT_FEATURE_COUNT = GRL_MODEL_ELEMENT_FEATURE_COUNT + 5;
+  int GRL_LINKABLE_ELEMENT_FEATURE_COUNT = GRL_MODEL_ELEMENT_FEATURE_COUNT + 6;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl <em>Intentional Element</em>}' class.
@@ -268,6 +277,15 @@ public interface TGRLPackage extends EPackage
    * @ordered
    */
   int INTENTIONAL_ELEMENT__DESCRIPTION = GRL_LINKABLE_ELEMENT__DESCRIPTION;
+
+  /**
+   * The feature id for the '<em><b>Fillcolor</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTENTIONAL_ELEMENT__FILLCOLOR = GRL_LINKABLE_ELEMENT__FILLCOLOR;
 
   /**
    * The feature id for the '<em><b>Importance</b></em>' attribute.
@@ -589,6 +607,15 @@ public interface TGRLPackage extends EPackage
   int ACTOR__DESCRIPTION = GRL_LINKABLE_ELEMENT__DESCRIPTION;
 
   /**
+   * The feature id for the '<em><b>Fillcolor</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTOR__FILLCOLOR = GRL_LINKABLE_ELEMENT__FILLCOLOR;
+
+  /**
    * The feature id for the '<em><b>Importance</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -625,13 +652,31 @@ public interface TGRLPackage extends EPackage
   int ACTOR__COLLAPSED_REFS = GRL_LINKABLE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Intentional Elements</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTOR__INTENTIONAL_ELEMENTS = GRL_LINKABLE_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Element Links</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTOR__ELEMENT_LINKS = GRL_LINKABLE_ELEMENT_FEATURE_COUNT + 3;
+
+  /**
    * The number of structural features of the '<em>Actor</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ACTOR_FEATURE_COUNT = GRL_LINKABLE_ELEMENT_FEATURE_COUNT + 2;
+  int ACTOR_FEATURE_COUNT = GRL_LINKABLE_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.SoftgoalImpl <em>Softgoal</em>}' class.
@@ -678,6 +723,15 @@ public interface TGRLPackage extends EPackage
    * @ordered
    */
   int SOFTGOAL__DESCRIPTION = INTENTIONAL_ELEMENT__DESCRIPTION;
+
+  /**
+   * The feature id for the '<em><b>Fillcolor</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOFTGOAL__FILLCOLOR = INTENTIONAL_ELEMENT__FILLCOLOR;
 
   /**
    * The feature id for the '<em><b>Importance</b></em>' attribute.
@@ -769,6 +823,15 @@ public interface TGRLPackage extends EPackage
    * @ordered
    */
   int GOAL__DESCRIPTION = INTENTIONAL_ELEMENT__DESCRIPTION;
+
+  /**
+   * The feature id for the '<em><b>Fillcolor</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GOAL__FILLCOLOR = INTENTIONAL_ELEMENT__FILLCOLOR;
 
   /**
    * The feature id for the '<em><b>Importance</b></em>' attribute.
@@ -871,6 +934,15 @@ public interface TGRLPackage extends EPackage
   int TASK__DESCRIPTION = INTENTIONAL_ELEMENT__DESCRIPTION;
 
   /**
+   * The feature id for the '<em><b>Fillcolor</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TASK__FILLCOLOR = INTENTIONAL_ELEMENT__FILLCOLOR;
+
+  /**
    * The feature id for the '<em><b>Importance</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -971,6 +1043,15 @@ public interface TGRLPackage extends EPackage
   int RESSOURCE__DESCRIPTION = INTENTIONAL_ELEMENT__DESCRIPTION;
 
   /**
+   * The feature id for the '<em><b>Fillcolor</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RESSOURCE__FILLCOLOR = INTENTIONAL_ELEMENT__FILLCOLOR;
+
+  /**
    * The feature id for the '<em><b>Importance</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1060,6 +1141,15 @@ public interface TGRLPackage extends EPackage
    * @ordered
    */
   int INDICATOR__DESCRIPTION = INTENTIONAL_ELEMENT__DESCRIPTION;
+
+  /**
+   * The feature id for the '<em><b>Fillcolor</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDICATOR__FILLCOLOR = INTENTIONAL_ELEMENT__FILLCOLOR;
 
   /**
    * The feature id for the '<em><b>Importance</b></em>' attribute.
@@ -2620,6 +2710,16 @@ public interface TGRLPackage extends EPackage
   int QUALITATIVE_LABEL = 41;
 
   /**
+   * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.Color <em>Color</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.grl.tgrl.tGRL.Color
+   * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getColor()
+   * @generated
+   */
+  int COLOR = 42;
+
+  /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.Criticality <em>Criticality</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2627,7 +2727,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getCriticality()
    * @generated
    */
-  int CRITICALITY = 42;
+  int CRITICALITY = 43;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.Priority <em>Priority</em>}' enum.
@@ -2637,7 +2737,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getPriority()
    * @generated
    */
-  int PRIORITY = 43;
+  int PRIORITY = 44;
 
 
   /**
@@ -2745,6 +2845,17 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   EAttribute getGRLLinkableElement_Description();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.GRLLinkableElement#getFillcolor <em>Fillcolor</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Fillcolor</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.GRLLinkableElement#getFillcolor()
+   * @see #getGRLLinkableElement()
+   * @generated
+   */
+  EAttribute getGRLLinkableElement_Fillcolor();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.GRLLinkableElement#getImportance <em>Importance</em>}'.
@@ -3048,6 +3159,28 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   EReference getActor_CollapsedRefs();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.grl.tgrl.tGRL.Actor#getIntentionalElements <em>Intentional Elements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Intentional Elements</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.Actor#getIntentionalElements()
+   * @see #getActor()
+   * @generated
+   */
+  EReference getActor_IntentionalElements();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.grl.tgrl.tGRL.Actor#getElementLinks <em>Element Links</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Element Links</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.Actor#getElementLinks()
+   * @see #getActor()
+   * @generated
+   */
+  EReference getActor_ElementLinks();
 
   /**
    * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.Softgoal <em>Softgoal</em>}'.
@@ -4271,6 +4404,16 @@ public interface TGRLPackage extends EPackage
   EEnum getQualitativeLabel();
 
   /**
+   * Returns the meta object for enum '{@link org.xtext.grl.tgrl.tGRL.Color <em>Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Color</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.Color
+   * @generated
+   */
+  EEnum getColor();
+
+  /**
    * Returns the meta object for enum '{@link org.xtext.grl.tgrl.tGRL.Criticality <em>Criticality</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4400,6 +4543,14 @@ public interface TGRLPackage extends EPackage
      * @generated
      */
     EAttribute GRL_LINKABLE_ELEMENT__DESCRIPTION = eINSTANCE.getGRLLinkableElement_Description();
+
+    /**
+     * The meta object literal for the '<em><b>Fillcolor</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GRL_LINKABLE_ELEMENT__FILLCOLOR = eINSTANCE.getGRLLinkableElement_Fillcolor();
 
     /**
      * The meta object literal for the '<em><b>Importance</b></em>' attribute feature.
@@ -4634,6 +4785,22 @@ public interface TGRLPackage extends EPackage
      * @generated
      */
     EReference ACTOR__COLLAPSED_REFS = eINSTANCE.getActor_CollapsedRefs();
+
+    /**
+     * The meta object literal for the '<em><b>Intentional Elements</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ACTOR__INTENTIONAL_ELEMENTS = eINSTANCE.getActor_IntentionalElements();
+
+    /**
+     * The meta object literal for the '<em><b>Element Links</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ACTOR__ELEMENT_LINKS = eINSTANCE.getActor_ElementLinks();
 
     /**
      * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.impl.SoftgoalImpl <em>Softgoal</em>}' class.
@@ -5612,6 +5779,16 @@ public interface TGRLPackage extends EPackage
      * @generated
      */
     EEnum QUALITATIVE_LABEL = eINSTANCE.getQualitativeLabel();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.Color <em>Color</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.grl.tgrl.tGRL.Color
+     * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getColor()
+     * @generated
+     */
+    EEnum COLOR = eINSTANCE.getColor();
 
     /**
      * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.Criticality <em>Criticality</em>}' enum.

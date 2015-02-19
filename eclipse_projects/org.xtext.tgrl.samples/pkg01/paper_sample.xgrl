@@ -1,0 +1,88 @@
+grl {
+	actor ServiceProvider{
+		name="Service provider";
+		softGoal SG1{
+			name = "Minimum Changes to Infrastructure";	
+			fillcolor = yellow;		
+		}
+		softGoal SG2{
+			name = " Low Cost";
+			fillcolor = lightYellow;
+		}
+		softGoal SG3{
+			name = "High Performance";
+			fillcolor = lightGreen;
+		}
+		softGoal SG4{
+			name = "Maximum Hardware Utilisation";
+			fillcolor = lightGreen;
+		}
+		softGoal SG5{
+			name = "High Throughput";
+			fillcolor = lightGreen;
+		}
+		softGoal SG6{
+			name = "Minimum Message Exchange";
+			fillcolor = green;
+		}
+		softGoal SG7{
+			name = "Minimum Switch Loop";
+			fillcolor = red;
+		}
+		
+	}
+	actor System {
+		name = 'System';
+		goal G1{
+			name = "Determine Data Location";
+			importanceQuantitative = 100;
+			importance = High;
+		}
+		goal G2{
+			name = "Determine Service Location";
+		}
+		Task T1{
+			name = "Data in Service Control Point";
+		}
+		Task T2{
+			name = "Data in New Service Node";
+		}
+		Task T3{
+			name="Install Service Node";
+		}
+		Task T4{
+			name = "Service in Central Switch";
+		}
+		Task T5 {
+			name = "Service in Service Control Point";
+		}
+	}
+		
+	actor Vendor{
+		name = "Vendor";
+		importanceQuantitative = 100;
+		goal G1 {
+			name="Service Nodes Ready For Sale";
+			importanceQuantitative = 100;
+		}
+		
+	}
+	resource I1{
+		name = "Service Node";
+		importance = High;
+		importanceQuantitative = 100;
+		decompositionType = And;
+	}
+	/*
+	 * Dependencies
+	 */
+	 dependency Dep1{
+	 	I1->Vendor.G1;
+	 }
+	 contribution Con1{
+	 	System.T1 -> ServiceProvider.SG1;
+	 	contribution = Hurt;
+	 	correlation = true;
+	 	quantitativeContribution = 0;
+	 }
+}

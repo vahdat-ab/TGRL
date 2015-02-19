@@ -14,6 +14,7 @@ package org.xtext.grl.tgrl.tGRL;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.GRLLinkableElement#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.GRLLinkableElement#getLabel <em>Label</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.GRLLinkableElement#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.GRLLinkableElement#getFillcolor <em>Fillcolor</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.GRLLinkableElement#getImportance <em>Importance</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.GRLLinkableElement#getImportanceQuantitative <em>Importance Quantitative</em>}</li>
  * </ul>
@@ -102,6 +103,35 @@ public interface GRLLinkableElement extends GRLModelElement
    * @generated
    */
   void setDescription(String value);
+
+  /**
+   * Returns the value of the '<em><b>Fillcolor</b></em>' attribute.
+   * The literals are from the enumeration {@link org.xtext.grl.tgrl.tGRL.Color}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Fillcolor</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Fillcolor</em>' attribute.
+   * @see org.xtext.grl.tgrl.tGRL.Color
+   * @see #setFillcolor(Color)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getGRLLinkableElement_Fillcolor()
+   * @model
+   * @generated
+   */
+  Color getFillcolor();
+
+  /**
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.GRLLinkableElement#getFillcolor <em>Fillcolor</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Fillcolor</em>' attribute.
+   * @see org.xtext.grl.tgrl.tGRL.Color
+   * @see #getFillcolor()
+   * @generated
+   */
+  void setFillcolor(Color value);
 
   /**
    * Returns the value of the '<em><b>Importance</b></em>' attribute.

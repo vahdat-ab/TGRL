@@ -14,6 +14,8 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getIncludedActors <em>Included Actors</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getCollapsedRefs <em>Collapsed Refs</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getIntentionalElements <em>Intentional Elements</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getElementLinks <em>Element Links</em>}</li>
  * </ul>
  * </p>
  *
@@ -54,5 +56,37 @@ public interface Actor extends GRLLinkableElement
    * @generated
    */
   EList<CollapsedActorRef> getCollapsedRefs();
+
+  /**
+   * Returns the value of the '<em><b>Intentional Elements</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.IntentionalElement}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Intentional Elements</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Intentional Elements</em>' containment reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getActor_IntentionalElements()
+   * @model containment="true"
+   * @generated
+   */
+  EList<IntentionalElement> getIntentionalElements();
+
+  /**
+   * Returns the value of the '<em><b>Element Links</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.ElementLink}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Element Links</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Element Links</em>' containment reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getActor_ElementLinks()
+   * @model containment="true"
+   * @generated
+   */
+  EList<ElementLink> getElementLinks();
 
 } // Actor

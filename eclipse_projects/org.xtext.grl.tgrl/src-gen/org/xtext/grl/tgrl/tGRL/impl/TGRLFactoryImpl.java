@@ -126,6 +126,8 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
         return createContributionTypeFromString(eDataType, initialValue);
       case TGRLPackage.QUALITATIVE_LABEL:
         return createQualitativeLabelFromString(eDataType, initialValue);
+      case TGRLPackage.COLOR:
+        return createColorFromString(eDataType, initialValue);
       case TGRLPackage.CRITICALITY:
         return createCriticalityFromString(eDataType, initialValue);
       case TGRLPackage.PRIORITY:
@@ -153,6 +155,8 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
         return convertContributionTypeToString(eDataType, instanceValue);
       case TGRLPackage.QUALITATIVE_LABEL:
         return convertQualitativeLabelToString(eDataType, instanceValue);
+      case TGRLPackage.COLOR:
+        return convertColorToString(eDataType, instanceValue);
       case TGRLPackage.CRITICALITY:
         return convertCriticalityToString(eDataType, instanceValue);
       case TGRLPackage.PRIORITY:
@@ -664,6 +668,28 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * @generated
    */
   public String convertQualitativeLabelToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Color createColorFromString(EDataType eDataType, String initialValue)
+  {
+    Color result = Color.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertColorToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

@@ -1,42 +1,41 @@
 grl {
-	goal G1{
-		name = "goal1 duke";
-		description = "desc 1 duke";
-		
-	}
-	goal G2 {
-		name = "goal2 duke";
-		description = "desc 2 duke";		
-	}
-	goal G3 {
-		name = "goal3 duke";
-		description = "desc 3 duke";
-	}
-	decomposition DEC1 {
-		name = "dec1-duke";
-		G1 ->G2;
-	}
-
-
-	decomposition DEC2 {
-		name = "dec2-duke";
-		G1 -> G3;
-	}
 	softGoal SG1{
-		name = "sg duke 1";
+		name = "This is the first soft goal.";
+		decompositionType = And;
+		description =" this is a description for SG1";
+		importance =  High;
+		importanceQuantitative = 10; 
 	}
-	softGoal SG2{
-		name = "sg duke 2";
+	goal G1{
+		name = "This is the first goal.";
+	}
+	Task T1{
+		name = "This is the first Task.";
 		
 	}
-	dependency dep {
-		SG1 -> SG2;
+	resource R1 {
+		name = "This is the first Resource.";
+		importanceQuantitative = 1 ;
 	}
-	
-	contribution decom {
-		SG1 ->G1;
+	indicator i1 {
+		name = "This is the first Resource.";
+	}
+	decomposition dec {
+		G1 ->SG1;
+	}
+		decomposition dec2 {
+		R1 ->SG1;
+	}
+	actor A {
+		softGoal ASG1{
+			name = "wonderful";
+		}
+		softGoal ASG2{
+			name="woderful2";
+		}
+	} 
+	contribution COND {
+		A.ASG1 -> G1;
 		correlation = true;
 	}
-	
-
 }

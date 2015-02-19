@@ -58,8 +58,10 @@ Actor:
 		 */
 		('importanceQuantitative' '=' importanceQuantitative = INT ';')?&
 		('description' '=' description=STRING ';')?&
+		('fillcolor' '=' fillcolor = Color ';')?&
 		('includedActors' '=' includedActors+=[Actor](',' includedActors+=[Actor])* ';')?&		
-		('collapsedRefs' '=' collapsedRefs+=[CollapsedActorRef](',' collapsedRefs+=[CollapsedActorRef])* ';')?
+		('collapsedRefs' '=' collapsedRefs+=[CollapsedActorRef](',' collapsedRefs+=[CollapsedActorRef])* ';')?&
+		(intentionalElements+=IntentionalElement  | elementLinks+=ElementLink)*	
 //		('contRefs' '=' contRefs+=[urncoreModel::IURNContainerRef](',' contRefs+=[urncoreModel::IURNContainerRef])* ';')?
 		)
 		
@@ -73,6 +75,7 @@ Softgoal :
 		(
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
+			('fillcolor' '=' fillcolor = Color ';')?&
 			('importance' '=' importance=ImportanceType ';')?&
 			('decompositionType' '=' decompositionType=DecompositionType ';')?&
 			/*
@@ -90,6 +93,7 @@ Goal:
 		(
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
+			('fillcolor' '=' fillcolor = Color ';')?&
 			('importance' '=' importance=ImportanceType ';')?&
 			('decompositionType' '='decompositionType=DecompositionType ';')?&
 			/*
@@ -108,6 +112,7 @@ Task:
 		(
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
+			('fillcolor' '=' fillcolor = Color ';')?&
 			('importance' '=' importance=ImportanceType ';')?&
 			('decompositionType' '='decompositionType=DecompositionType ';')?&
 			/*
@@ -126,6 +131,7 @@ Ressource:
 		(
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
+			('fillcolor' '=' fillcolor = Color ';')?&
 			('importance' '=' importance=ImportanceType ';')?&
 			('decompositionType' '='decompositionType=DecompositionType ';')?&
 			/*
@@ -142,6 +148,7 @@ Indicator:
 		(
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
+			('fillcolor' '=' fillcolor = Color ';')?&
 			('importance' '=' importance=ImportanceType ';')?&
 			('decompositionType' '='decompositionType=DecompositionType ';')?&
 			/*
@@ -162,7 +169,7 @@ Decomposition:
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
 	//		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?
-			(src=[GRLLinkableElement] '->' dest=[GRLLinkableElement] ';')
+			(src=[IntentionalElement | QualifiedName] '->' dest=[IntentionalElement | QualifiedName] ';')
 		)
 	'}'
 ;
@@ -180,7 +187,7 @@ Contribution:
 			('description' '=' description=STRING ';')?&
 			('changes' '=' changes+=[ContributionChange](',' changes+=[ContributionChange])* ';')?&
 	//		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?&
-			(src=[GRLLinkableElement] '->' dest=[GRLLinkableElement] ';')					
+			(src=[GRLLinkableElement | QualifiedName] '->' dest=[GRLLinkableElement | QualifiedName] ';')					
 		)
 	'}'
 ;
@@ -190,7 +197,7 @@ Dependency:
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
 	//		('refs' '=' refs+=[grlModel::LinkRef] (',' refs+=[grlModel::LinkRef])* ';')?&
-			(src=[GRLLinkableElement] '->' dest=[GRLLinkableElement] ';')
+			(src=[GRLLinkableElement | QualifiedName] '->' dest=[GRLLinkableElement | QualifiedName] ';')
 		)
 	'}' 
 ;
@@ -488,7 +495,9 @@ enum QualitativeLabel:
 	WeaklySatisfied  | Satisfied |
 	Conflict | Unknown | None
 ;
-
+enum Color:
+	white|black|blue|green|cyan|red|purple|yellow|gray|lightGray|lightBlue|lightGreen|lightCray|lightRed|lightPurple|lightYellow
+;
 //Deprecated
 enum Criticality:
 	None | High | Medium | Low  
@@ -501,10 +510,19 @@ enum Priority:
 terminal BOOLEAN:
 'false' | 'true'
 ;
-terminal fragment DIGIT: '0'..'9';
-terminal fragment HEX_DIGIT: (DIGIT |'a'..'f'|'A'..'F');
-terminal fragment ALPHANUM: ('a'..'z'|'A'..'Z'|'_'|DIGIT);
-terminal HEXINT: '0' ('x'|'X') HEX_DIGIT+;
-terminal OCTINT: '0' ('0'..'7')+;
-terminal DOUBLE returns ecore::EDouble: DECINT (('.' DIGIT*) | (('.' DIGIT*)? ('E'|'e') ('-'|'+')? DECINT));  // Use terminal to avoid 'e' turning into a keyword
-terminal DECINT: '0' | ('1'..'9' DIGIT*);
+
+QualifiedName:
+ID ('.' ID)*
+;
+
+terminal DOUBLE returns ecore::EDouble: INT ('.' INT+);
+/*
+ * As a guide for feature
+ */
+//terminal fragment DIGIT: '0'..'9';
+//terminal fragment HEX_DIGIT: (DIGIT |'a'..'f'|'A'..'F');
+//terminal fragment ALPHANUM: ('a'..'z'|'A'..'Z'|'_'|DIGIT);
+//terminal HEXINT: '0' ('x'|'X') HEX_DIGIT+;
+//terminal OCTINT: '0' ('0'..'7')+;
+//terminal DOUBLE returns ecore::EDouble: DECINT (('.' DIGIT*) | (('.' DIGIT*)? ('E'|'e') ('-'|'+')? DECINT));  // Use terminal to avoid 'e' turning into a keyword
+//terminal DECINT: '0' | ('1'..'9' DIGIT*);

@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.xtext.grl.tgrl.tGRL.Color;
 import org.xtext.grl.tgrl.tGRL.GRLLinkableElement;
 import org.xtext.grl.tgrl.tGRL.ImportanceType;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
@@ -22,6 +23,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GRLLinkableElementImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GRLLinkableElementImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GRLLinkableElementImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GRLLinkableElementImpl#getFillcolor <em>Fillcolor</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GRLLinkableElementImpl#getImportance <em>Importance</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GRLLinkableElementImpl#getImportanceQuantitative <em>Importance Quantitative</em>}</li>
  * </ul>
@@ -90,6 +92,26 @@ public class GRLLinkableElementImpl extends GRLModelElementImpl implements GRLLi
    * @ordered
    */
   protected String description = DESCRIPTION_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getFillcolor() <em>Fillcolor</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFillcolor()
+   * @generated
+   * @ordered
+   */
+  protected static final Color FILLCOLOR_EDEFAULT = Color.WHITE;
+
+  /**
+   * The cached value of the '{@link #getFillcolor() <em>Fillcolor</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFillcolor()
+   * @generated
+   * @ordered
+   */
+  protected Color fillcolor = FILLCOLOR_EDEFAULT;
 
   /**
    * The default value of the '{@link #getImportance() <em>Importance</em>}' attribute.
@@ -226,6 +248,29 @@ public class GRLLinkableElementImpl extends GRLModelElementImpl implements GRLLi
    * <!-- end-user-doc -->
    * @generated
    */
+  public Color getFillcolor()
+  {
+    return fillcolor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setFillcolor(Color newFillcolor)
+  {
+    Color oldFillcolor = fillcolor;
+    fillcolor = newFillcolor == null ? FILLCOLOR_EDEFAULT : newFillcolor;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.GRL_LINKABLE_ELEMENT__FILLCOLOR, oldFillcolor, fillcolor));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ImportanceType getImportance()
   {
     return importance;
@@ -283,6 +328,8 @@ public class GRLLinkableElementImpl extends GRLModelElementImpl implements GRLLi
         return getLabel();
       case TGRLPackage.GRL_LINKABLE_ELEMENT__DESCRIPTION:
         return getDescription();
+      case TGRLPackage.GRL_LINKABLE_ELEMENT__FILLCOLOR:
+        return getFillcolor();
       case TGRLPackage.GRL_LINKABLE_ELEMENT__IMPORTANCE:
         return getImportance();
       case TGRLPackage.GRL_LINKABLE_ELEMENT__IMPORTANCE_QUANTITATIVE:
@@ -309,6 +356,9 @@ public class GRLLinkableElementImpl extends GRLModelElementImpl implements GRLLi
         return;
       case TGRLPackage.GRL_LINKABLE_ELEMENT__DESCRIPTION:
         setDescription((String)newValue);
+        return;
+      case TGRLPackage.GRL_LINKABLE_ELEMENT__FILLCOLOR:
+        setFillcolor((Color)newValue);
         return;
       case TGRLPackage.GRL_LINKABLE_ELEMENT__IMPORTANCE:
         setImportance((ImportanceType)newValue);
@@ -339,6 +389,9 @@ public class GRLLinkableElementImpl extends GRLModelElementImpl implements GRLLi
       case TGRLPackage.GRL_LINKABLE_ELEMENT__DESCRIPTION:
         setDescription(DESCRIPTION_EDEFAULT);
         return;
+      case TGRLPackage.GRL_LINKABLE_ELEMENT__FILLCOLOR:
+        setFillcolor(FILLCOLOR_EDEFAULT);
+        return;
       case TGRLPackage.GRL_LINKABLE_ELEMENT__IMPORTANCE:
         setImportance(IMPORTANCE_EDEFAULT);
         return;
@@ -365,6 +418,8 @@ public class GRLLinkableElementImpl extends GRLModelElementImpl implements GRLLi
         return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
       case TGRLPackage.GRL_LINKABLE_ELEMENT__DESCRIPTION:
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+      case TGRLPackage.GRL_LINKABLE_ELEMENT__FILLCOLOR:
+        return fillcolor != FILLCOLOR_EDEFAULT;
       case TGRLPackage.GRL_LINKABLE_ELEMENT__IMPORTANCE:
         return importance != IMPORTANCE_EDEFAULT;
       case TGRLPackage.GRL_LINKABLE_ELEMENT__IMPORTANCE_QUANTITATIVE:
@@ -390,6 +445,8 @@ public class GRLLinkableElementImpl extends GRLModelElementImpl implements GRLLi
     result.append(label);
     result.append(", description: ");
     result.append(description);
+    result.append(", fillcolor: ");
+    result.append(fillcolor);
     result.append(", importance: ");
     result.append(importance);
     result.append(", importanceQuantitative: ");

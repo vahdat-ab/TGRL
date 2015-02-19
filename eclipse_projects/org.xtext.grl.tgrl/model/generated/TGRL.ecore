@@ -15,6 +15,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fillcolor" eType="#//Color"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importance" eType="#//ImportanceType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importanceQuantitative"
         eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
@@ -63,6 +64,10 @@
         upperBound="-1" eType="#//Actor"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="collapsedRefs" unique="false"
         upperBound="-1" eType="#//CollapsedActorRef"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="intentionalElements" upperBound="-1"
+        eType="#//IntentionalElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elementLinks" upperBound="-1"
+        eType="#//ElementLink" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Softgoal" eSuperTypes="#//IntentionalElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Goal" eSuperTypes="#//IntentionalElement">
@@ -253,6 +258,24 @@
     <eLiterals name="Conflict" value="4" literal="Conflict"/>
     <eLiterals name="Unknown" value="5" literal="Unknown"/>
     <eLiterals name="None" value="6" literal="None"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Color">
+    <eLiterals name="white" literal="white"/>
+    <eLiterals name="black" value="1" literal="black"/>
+    <eLiterals name="blue" value="2" literal="blue"/>
+    <eLiterals name="green" value="3" literal="green"/>
+    <eLiterals name="cyan" value="4" literal="cyan"/>
+    <eLiterals name="red" value="5" literal="red"/>
+    <eLiterals name="purple" value="6" literal="purple"/>
+    <eLiterals name="yellow" value="7" literal="yellow"/>
+    <eLiterals name="gray" value="8" literal="gray"/>
+    <eLiterals name="lightGray" value="9" literal="lightGray"/>
+    <eLiterals name="lightBlue" value="10" literal="lightBlue"/>
+    <eLiterals name="lightGreen" value="11" literal="lightGreen"/>
+    <eLiterals name="lightCray" value="12" literal="lightCray"/>
+    <eLiterals name="lightRed" value="13" literal="lightRed"/>
+    <eLiterals name="lightPurple" value="14" literal="lightPurple"/>
+    <eLiterals name="lightYellow" value="15" literal="lightYellow"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Criticality">
     <eLiterals name="None" literal="None"/>

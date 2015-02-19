@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.xtext.grl.tgrl.tGRL.Actor;
 import org.xtext.grl.tgrl.tGRL.Belief;
 import org.xtext.grl.tgrl.tGRL.CollapsedActorRef;
+import org.xtext.grl.tgrl.tGRL.Color;
 import org.xtext.grl.tgrl.tGRL.Contribution;
 import org.xtext.grl.tgrl.tGRL.ContributionChange;
 import org.xtext.grl.tgrl.tGRL.ContributionContext;
@@ -365,6 +366,13 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EEnum colorEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EEnum criticalityEEnum = null;
 
   /**
@@ -545,7 +553,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGRLLinkableElement_Importance()
+  public EAttribute getGRLLinkableElement_Fillcolor()
   {
     return (EAttribute)grlLinkableElementEClass.getEStructuralFeatures().get(3);
   }
@@ -555,9 +563,19 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGRLLinkableElement_ImportanceQuantitative()
+  public EAttribute getGRLLinkableElement_Importance()
   {
     return (EAttribute)grlLinkableElementEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGRLLinkableElement_ImportanceQuantitative()
+  {
+    return (EAttribute)grlLinkableElementEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -818,6 +836,26 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
   public EReference getActor_CollapsedRefs()
   {
     return (EReference)actorEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getActor_IntentionalElements()
+  {
+    return (EReference)actorEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getActor_ElementLinks()
+  {
+    return (EReference)actorEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1965,6 +2003,16 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EEnum getColor()
+  {
+    return colorEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getCriticality()
   {
     return criticalityEEnum;
@@ -2023,6 +2071,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     createEAttribute(grlLinkableElementEClass, GRL_LINKABLE_ELEMENT__NAME);
     createEAttribute(grlLinkableElementEClass, GRL_LINKABLE_ELEMENT__LABEL);
     createEAttribute(grlLinkableElementEClass, GRL_LINKABLE_ELEMENT__DESCRIPTION);
+    createEAttribute(grlLinkableElementEClass, GRL_LINKABLE_ELEMENT__FILLCOLOR);
     createEAttribute(grlLinkableElementEClass, GRL_LINKABLE_ELEMENT__IMPORTANCE);
     createEAttribute(grlLinkableElementEClass, GRL_LINKABLE_ELEMENT__IMPORTANCE_QUANTITATIVE);
 
@@ -2056,6 +2105,8 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     actorEClass = createEClass(ACTOR);
     createEReference(actorEClass, ACTOR__INCLUDED_ACTORS);
     createEReference(actorEClass, ACTOR__COLLAPSED_REFS);
+    createEReference(actorEClass, ACTOR__INTENTIONAL_ELEMENTS);
+    createEReference(actorEClass, ACTOR__ELEMENT_LINKS);
 
     softgoalEClass = createEClass(SOFTGOAL);
 
@@ -2201,6 +2252,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     decompositionTypeEEnum = createEEnum(DECOMPOSITION_TYPE);
     contributionTypeEEnum = createEEnum(CONTRIBUTION_TYPE);
     qualitativeLabelEEnum = createEEnum(QUALITATIVE_LABEL);
+    colorEEnum = createEEnum(COLOR);
     criticalityEEnum = createEEnum(CRITICALITY);
     priorityEEnum = createEEnum(PRIORITY);
   }
@@ -2278,6 +2330,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEAttribute(getGRLLinkableElement_Name(), theEcorePackage.getEString(), "name", null, 0, 1, GRLLinkableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGRLLinkableElement_Label(), theEcorePackage.getEString(), "label", null, 0, 1, GRLLinkableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGRLLinkableElement_Description(), theEcorePackage.getEString(), "description", null, 0, 1, GRLLinkableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGRLLinkableElement_Fillcolor(), this.getColor(), "fillcolor", null, 0, 1, GRLLinkableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGRLLinkableElement_Importance(), this.getImportanceType(), "importance", null, 0, 1, GRLLinkableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGRLLinkableElement_ImportanceQuantitative(), theEcorePackage.getEInt(), "importanceQuantitative", null, 0, 1, GRLLinkableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2311,6 +2364,8 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEClass(actorEClass, Actor.class, "Actor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getActor_IncludedActors(), this.getActor(), null, "includedActors", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getActor_CollapsedRefs(), this.getCollapsedActorRef(), null, "collapsedRefs", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getActor_IntentionalElements(), this.getIntentionalElement(), null, "intentionalElements", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getActor_ElementLinks(), this.getElementLink(), null, "elementLinks", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(softgoalEClass, Softgoal.class, "Softgoal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2480,6 +2535,24 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     addEEnumLiteral(qualitativeLabelEEnum, QualitativeLabel.CONFLICT);
     addEEnumLiteral(qualitativeLabelEEnum, QualitativeLabel.UNKNOWN);
     addEEnumLiteral(qualitativeLabelEEnum, QualitativeLabel.NONE);
+
+    initEEnum(colorEEnum, Color.class, "Color");
+    addEEnumLiteral(colorEEnum, Color.WHITE);
+    addEEnumLiteral(colorEEnum, Color.BLACK);
+    addEEnumLiteral(colorEEnum, Color.BLUE);
+    addEEnumLiteral(colorEEnum, Color.GREEN);
+    addEEnumLiteral(colorEEnum, Color.CYAN);
+    addEEnumLiteral(colorEEnum, Color.RED);
+    addEEnumLiteral(colorEEnum, Color.PURPLE);
+    addEEnumLiteral(colorEEnum, Color.YELLOW);
+    addEEnumLiteral(colorEEnum, Color.GRAY);
+    addEEnumLiteral(colorEEnum, Color.LIGHT_GRAY);
+    addEEnumLiteral(colorEEnum, Color.LIGHT_BLUE);
+    addEEnumLiteral(colorEEnum, Color.LIGHT_GREEN);
+    addEEnumLiteral(colorEEnum, Color.LIGHT_CRAY);
+    addEEnumLiteral(colorEEnum, Color.LIGHT_RED);
+    addEEnumLiteral(colorEEnum, Color.LIGHT_PURPLE);
+    addEEnumLiteral(colorEEnum, Color.LIGHT_YELLOW);
 
     initEEnum(criticalityEEnum, Criticality.class, "Criticality");
     addEEnumLiteral(criticalityEEnum, Criticality.NONE);

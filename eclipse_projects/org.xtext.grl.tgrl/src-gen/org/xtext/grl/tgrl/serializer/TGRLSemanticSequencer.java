@@ -300,8 +300,10 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         importance=ImportanceType? 
 	 *         importanceQuantitative=INT? 
 	 *         description=STRING? 
+	 *         fillcolor=Color? 
 	 *         (includedActors+=[Actor|ID] includedActors+=[Actor|ID]*)? 
-	 *         (collapsedRefs+=[CollapsedActorRef|ID] collapsedRefs+=[CollapsedActorRef|ID]*)?
+	 *         (collapsedRefs+=[CollapsedActorRef|ID] collapsedRefs+=[CollapsedActorRef|ID]*)? 
+	 *         (intentionalElements+=IntentionalElement | elementLinks+=ElementLink)*
 	 *     )
 	 */
 	protected void sequence_Actor(EObject context, Actor semanticObject) {
@@ -373,8 +375,8 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         correlation=BOOLEAN? 
 	 *         description=STRING? 
 	 *         (changes+=[ContributionChange|ID] changes+=[ContributionChange|ID]*)? 
-	 *         src=[GRLLinkableElement|ID] 
-	 *         dest=[GRLLinkableElement|ID]
+	 *         src=[GRLLinkableElement|QualifiedName] 
+	 *         dest=[GRLLinkableElement|QualifiedName]
 	 *     )
 	 */
 	protected void sequence_Contribution(EObject context, Contribution semanticObject) {
@@ -384,7 +386,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID? label=STRING? description=STRING? src=[GRLLinkableElement|ID] dest=[GRLLinkableElement|ID])
+	 *     (name=ID? label=STRING? description=STRING? src=[IntentionalElement|QualifiedName] dest=[IntentionalElement|QualifiedName])
 	 */
 	protected void sequence_Decomposition(EObject context, Decomposition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -393,7 +395,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID? label=STRING? description=STRING? src=[GRLLinkableElement|ID] dest=[GRLLinkableElement|ID])
+	 *     (name=ID? label=STRING? description=STRING? src=[GRLLinkableElement|QualifiedName] dest=[GRLLinkableElement|QualifiedName])
 	 */
 	protected void sequence_Dependency(EObject context, Dependency semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -473,6 +475,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         label=STRING? 
 	 *         description=STRING? 
+	 *         fillcolor=Color? 
 	 *         importance=ImportanceType? 
 	 *         decompositionType=DecompositionType? 
 	 *         importanceQuantitative=INT? 
@@ -516,6 +519,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         label=STRING? 
 	 *         description=STRING? 
+	 *         fillcolor=Color? 
 	 *         importance=ImportanceType? 
 	 *         decompositionType=DecompositionType? 
 	 *         importanceQuantitative=INT? 
@@ -649,6 +653,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         label=STRING? 
 	 *         description=STRING? 
+	 *         fillcolor=Color? 
 	 *         importance=ImportanceType? 
 	 *         decompositionType=DecompositionType? 
 	 *         importanceQuantitative=INT? 
@@ -666,6 +671,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         label=STRING? 
 	 *         description=STRING? 
+	 *         fillcolor=Color? 
 	 *         importance=ImportanceType? 
 	 *         decompositionType=DecompositionType? 
 	 *         importanceQuantitative=INT? 
@@ -692,6 +698,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         label=STRING? 
 	 *         description=STRING? 
+	 *         fillcolor=Color? 
 	 *         importance=ImportanceType? 
 	 *         decompositionType=DecompositionType? 
 	 *         importanceQuantitative=INT? 
