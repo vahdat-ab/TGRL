@@ -10,42 +10,37 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 generate tGRL "http://www.xtext.org/grl/tgrl/TGRL"
 
 Model:
-	gRLspecs+=GRLspec*;
+	gRLspecs+=GRLSpecification*;
 
-GRLModelElement:
-	GRLNode | GRLLinkableElement | ElementLink | StrategiesGroup | EvaluationStrategy | 
-	ContributionContextGroup | ContributionContext | KPIConversion | KPIInformationElement | KPIModelLink | IndicatorGroup 
+Element:
+	GRLSpecification | GRLBaseElement
 ;
-GRLNode:
-	Belief | CollapsedActorRef | IntentionalElementRef | KPIInformationElementRef
+GRLBaseElement:
+	 GRLElement | Connection
 ;
-GRLLinkableElement:
-	IntentionalElement | Actor
-;	
+GRLElement:
+	IntentionalElement | ElementLink | Actor 
+;
 IntentionalElement:
-	 Softgoal | Goal  | Task | Ressource | Indicator
+	 Softgoal | Goal  | Task | Resource | Indicator
 ;
 ElementLink: 
-	Decomposition | Contribution | Dependency
+	DecompositionLink | ContributionLink | DependencyLink
 ;
-KPIConversion:
-	QualitativeMappings
-;
-
-GRLspec: 
-	'grl' '{'
-		(
-			(impactModel=ImpactModel)?
-			(
-				links+=ElementLink | actors+=Actor | intElements+=IntentionalElement | groups+=StrategiesGroup | 
-				strategies+=EvaluationStrategy | contributionGroups+=ContributionContextGroup |
-				contributionContexts+=ContributionContext | kpiConv+=KPIConversion	| kpiInformationElements+=KPIInformationElement |
-				kpiModelLinks+=KPIModelLink | indicatorGroup+=IndicatorGroup
-			)*	
-		)
+GRLSpecification: 
+	'grl' (name=ID)? '{'
+		(grlElements+=GRLElement)*
+//		(
+//			(impactModel=ImpactModel)?
+//			(
+//				links+=ElementLink | actors+=Actor | intElements+=IntentionalElement | groups+=StrategiesGroup | 
+//				strategies+=EvaluationStrategy | contributionGroups+=ContributionContextGroup |
+//				contributionContexts+=ContributionContext | kpiConv+=KPIConversion	| kpiInformationElements+=KPIInformationElement |
+//				kpiModelLinks+=KPIModelLink | indicatorGroup+=IndicatorGroup
+//			)*	
+//		)
 	'}'	
 ;
-
 
 Actor: 
 	'actor' name= ID '{'
@@ -58,33 +53,26 @@ Actor:
 		 */
 		('importanceQuantitative' '=' importanceQuantitative = INT ';')?&
 		('description' '=' description=STRING ';')?&
-		('fillcolor' '=' fillcolor = Color ';')?&
-		('includedActors' '=' includedActors+=[Actor](',' includedActors+=[Actor])* ';')?&		
-		('collapsedRefs' '=' collapsedRefs+=[CollapsedActorRef](',' collapsedRefs+=[CollapsedActorRef])* ';')?&
-		(intentionalElements+=IntentionalElement  | elementLinks+=ElementLink)*	
-//		('contRefs' '=' contRefs+=[urncoreModel::IURNContainerRef](',' contRefs+=[urncoreModel::IURNContainerRef])* ';')?
+		('color' '=' fillColor = Color ';')?&
+		(elemets+=IntentionalElement  | elemets+=ElementLink)*	
 		)
 		
 	'}'
 ;
-
-
 //*************************************IntentionalElement******************************************
 Softgoal :
 	'softGoal' name = ID '{'
 		(
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
-			('fillcolor' '=' fillcolor = Color ';')?&
+			('color' '=' fillColor = Color ';')?&
 			('importance' '=' importance=ImportanceType ';')?&
 			('decompositionType' '=' decompositionType=DecompositionType ';')?&
 			/*
 			 *TODO I must give a default value, which is zero, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-			('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
-			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?
-			
+			('importanceQuantitative' '=' importanceQuantitative=INT ';')?			
 		)
 	'}'
 ;
@@ -93,17 +81,14 @@ Goal:
 		(
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
-			('fillcolor' '=' fillcolor = Color ';')?&
+			('color' '=' fillColor = Color ';')?&
 			('importance' '=' importance=ImportanceType ';')?&
 			('decompositionType' '='decompositionType=DecompositionType ';')?&
 			/*
 			 *TODO I must give a default value, which is zero, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-			('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
-			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?&
-			('evals' '=' evals+=[Evaluation](',' evals+=[Evaluation] )* ';')?
-			
+			('importanceQuantitative' '=' importanceQuantitative=INT ';')?			
 		)		
 	'}'
 ; 
@@ -112,34 +97,30 @@ Task:
 		(
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
-			('fillcolor' '=' fillcolor = Color ';')?&
+			('color' '=' fillColor = Color ';')?&
 			('importance' '=' importance=ImportanceType ';')?&
 			('decompositionType' '='decompositionType=DecompositionType ';')?&
 			/*
 			 *TODO I must give a default value, which is zero, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-			('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
-			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?&
-			('evals' '=' evals+=[Evaluation](',' evals+=[Evaluation] )* ';')?
-			 
+			('importanceQuantitative' '=' importanceQuantitative=INT ';')?			 
 		)		
 	'}'
 ;  
-Ressource:
+Resource:
 	'resource' name = ID '{'
 		(
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
-			('fillcolor' '=' fillcolor = Color ';')?&
+			('color' '=' fillColor = Color ';')?&
 			('importance' '=' importance=ImportanceType ';')?&
 			('decompositionType' '='decompositionType=DecompositionType ';')?&
 			/*
 			 *TODO I must give a default value, which is zero, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-			('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
-			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?			
+			('importanceQuantitative' '=' importanceQuantitative=INT ';')?		
 		)		
 	'}'
 ; 
@@ -148,7 +129,7 @@ Indicator:
 		(
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
-			('fillcolor' '=' fillcolor = Color ';')?&
+			('color' '=' fillColor = Color ';')?&
 			('importance' '=' importance=ImportanceType ';')?&
 			('decompositionType' '='decompositionType=DecompositionType ';')?&
 			/*
@@ -163,17 +144,23 @@ Indicator:
 	'}'
 ;  
 //*******************************************ElementLink*******************************************
-Decomposition: 
+Connection:
+	DecompositionEnds | ContributionEnds | DependencyEnds
+;
+DecompositionLink: 
 	'decomposition' (name=ID)? '{'	
 		(
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
-	//		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?
-			(src=[IntentionalElement | QualifiedName] '->' dest=[IntentionalElement | QualifiedName] ';')
+			('color' '=' fillColor = Color ';')?&
+			(connections+=DecompositionEnds)+
 		)
 	'}'
 ;
-Contribution: 
+DecompositionEnds:
+	src=[IntentionalElement | QualifiedName] '->' dest=[IntentionalElement | QualifiedName] ';'
+;
+ContributionLink: 
 	'contribution' (name=ID)? '{'
 		(
 			('name' '=' label = STRING ';')?&
@@ -185,23 +172,44 @@ Contribution:
 			('quantitativeContribution' '=' quantitativeContribution=INT ';')?&
 			('correlation' '=' correlation=BOOLEAN ';')?&
 			('description' '=' description=STRING ';')?&
+			('color' '=' fillColor = Color ';')?&
 			('changes' '=' changes+=[ContributionChange](',' changes+=[ContributionChange])* ';')?&
-	//		('refs' '=' refs+=[LinkRef] (',' refs+=[LinkRef])* ';')?&
-			(src=[GRLLinkableElement | QualifiedName] '->' dest=[GRLLinkableElement | QualifiedName] ';')					
+			(connections+=ContributionEnds)+				
 		)
 	'}'
 ;
-Dependency:
+ContributionEnds:
+	src=[IntentionalElement | QualifiedName] '-|->' dest=[IntentionalElement | QualifiedName] ';'
+;
+DependencyLink:
 	'dependency' (name=ID)? '{'
 		(
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
-	//		('refs' '=' refs+=[grlModel::LinkRef] (',' refs+=[grlModel::LinkRef])* ';')?&
-			(src=[GRLLinkableElement | QualifiedName] '->' dest=[GRLLinkableElement | QualifiedName] ';')
+			('color' '=' fillColor = Color ';')?&
+			(connections+=DependencyEnds)+
 		)
 	'}' 
 ;
+DependencyEnds:
+	src=[IntentionalElement | QualifiedName] '-D->' dest=[IntentionalElement | QualifiedName] ';'
+;
+
 //**************************************************************************************
+
+//GRLModelElement:
+//	GRLNode | GRLLinkableElement | ElementLink | StrategiesGroup | EvaluationStrategy | 
+//	ContributionContextGroup | ContributionContext | KPIConversion | KPIInformationElement | KPIModelLink | IndicatorGroup 
+//;
+//GRLNode:
+//	Belief | CollapsedActorRef | IntentionalElementRef | KPIInformationElementRef
+//;
+
+
+KPIConversion:
+	QualitativeMappings
+;
+
 Belief: 
 	'belief' name=ID '{'
 		(

@@ -4,26 +4,26 @@ package org.xtext.grl.tgrl.tGRL.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.xtext.grl.tgrl.tGRL.Decomposition;
+import org.xtext.grl.tgrl.tGRL.GRLBaseElement;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Decomposition</b></em>'.
+ * An implementation of the model object '<em><b>GRL Base Element</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class DecompositionImpl extends ElementLinkImpl implements Decomposition
+public class GRLBaseElementImpl extends ElementImpl implements GRLBaseElement
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DecompositionImpl()
+  protected GRLBaseElementImpl()
   {
     super();
   }
@@ -36,7 +36,7 @@ public class DecompositionImpl extends ElementLinkImpl implements Decomposition
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.DECOMPOSITION;
+    return TGRLPackage.Literals.GRL_BASE_ELEMENT;
   }
 
-} //DecompositionImpl
+} //GRLBaseElementImpl

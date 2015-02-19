@@ -7,6 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.grl.tgrl.tGRL.KPIModelLink;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
@@ -26,7 +27,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *
  * @generated
  */
-public class KPIModelLinkImpl extends GRLModelElementImpl implements KPIModelLink
+public class KPIModelLinkImpl extends MinimalEObjectImpl.Container implements KPIModelLink
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.

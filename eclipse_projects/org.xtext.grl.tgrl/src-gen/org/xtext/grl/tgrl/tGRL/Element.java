@@ -6,21 +6,21 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>GRL Model Element</b></em>'.
+ * A representation of the model object '<em><b>Element</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.GRLModelElement#getId <em>Id</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Element#getId <em>Id</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getGRLModelElement()
+ * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getElement()
  * @model
  * @generated
  */
-public interface GRLModelElement extends EObject
+public interface Element extends EObject
 {
   /**
    * Returns the value of the '<em><b>Id</b></em>' attribute.
@@ -32,14 +32,14 @@ public interface GRLModelElement extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Id</em>' attribute.
    * @see #setId(int)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getGRLModelElement_Id()
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getElement_Id()
    * @model
    * @generated
    */
   int getId();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.GRLModelElement#getId <em>Id</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Element#getId <em>Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Id</em>' attribute.
@@ -48,4 +48,4 @@ public interface GRLModelElement extends EObject
    */
   void setId(int value);
 
-} // GRLModelElement
+} // Element

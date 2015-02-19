@@ -15,24 +15,28 @@ import org.xtext.grl.tgrl.tGRL.Actor;
 import org.xtext.grl.tgrl.tGRL.Belief;
 import org.xtext.grl.tgrl.tGRL.CollapsedActorRef;
 import org.xtext.grl.tgrl.tGRL.Color;
-import org.xtext.grl.tgrl.tGRL.Contribution;
+import org.xtext.grl.tgrl.tGRL.Connection;
 import org.xtext.grl.tgrl.tGRL.ContributionChange;
 import org.xtext.grl.tgrl.tGRL.ContributionContext;
 import org.xtext.grl.tgrl.tGRL.ContributionContextGroup;
+import org.xtext.grl.tgrl.tGRL.ContributionEnds;
+import org.xtext.grl.tgrl.tGRL.ContributionLink;
 import org.xtext.grl.tgrl.tGRL.ContributionRange;
 import org.xtext.grl.tgrl.tGRL.ContributionType;
 import org.xtext.grl.tgrl.tGRL.Criticality;
-import org.xtext.grl.tgrl.tGRL.Decomposition;
+import org.xtext.grl.tgrl.tGRL.DecompositionEnds;
+import org.xtext.grl.tgrl.tGRL.DecompositionLink;
 import org.xtext.grl.tgrl.tGRL.DecompositionType;
-import org.xtext.grl.tgrl.tGRL.Dependency;
+import org.xtext.grl.tgrl.tGRL.DependencyEnds;
+import org.xtext.grl.tgrl.tGRL.DependencyLink;
+import org.xtext.grl.tgrl.tGRL.Element;
 import org.xtext.grl.tgrl.tGRL.ElementLink;
 import org.xtext.grl.tgrl.tGRL.Evaluation;
 import org.xtext.grl.tgrl.tGRL.EvaluationRange;
 import org.xtext.grl.tgrl.tGRL.EvaluationStrategy;
-import org.xtext.grl.tgrl.tGRL.GRLLinkableElement;
-import org.xtext.grl.tgrl.tGRL.GRLModelElement;
-import org.xtext.grl.tgrl.tGRL.GRLNode;
-import org.xtext.grl.tgrl.tGRL.GRLspec;
+import org.xtext.grl.tgrl.tGRL.GRLBaseElement;
+import org.xtext.grl.tgrl.tGRL.GRLElement;
+import org.xtext.grl.tgrl.tGRL.GRLSpecification;
 import org.xtext.grl.tgrl.tGRL.Goal;
 import org.xtext.grl.tgrl.tGRL.ImpactModel;
 import org.xtext.grl.tgrl.tGRL.ImportanceType;
@@ -52,7 +56,7 @@ import org.xtext.grl.tgrl.tGRL.Priority;
 import org.xtext.grl.tgrl.tGRL.QualitativeLabel;
 import org.xtext.grl.tgrl.tGRL.QualitativeMapping;
 import org.xtext.grl.tgrl.tGRL.QualitativeMappings;
-import org.xtext.grl.tgrl.tGRL.Ressource;
+import org.xtext.grl.tgrl.tGRL.Resource;
 import org.xtext.grl.tgrl.tGRL.Softgoal;
 import org.xtext.grl.tgrl.tGRL.StrategiesGroup;
 import org.xtext.grl.tgrl.tGRL.TGRLFactory;
@@ -79,21 +83,21 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass grlModelElementEClass = null;
+  private EClass elementEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass grlNodeEClass = null;
+  private EClass grlBaseElementEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass grlLinkableElementEClass = null;
+  private EClass grlElementEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -114,14 +118,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass kpiConversionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass grLspecEClass = null;
+  private EClass grlSpecificationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -156,7 +153,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass ressourceEClass = null;
+  private EClass resourceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -170,21 +167,56 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass decompositionEClass = null;
+  private EClass connectionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass contributionEClass = null;
+  private EClass decompositionLinkEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass dependencyEClass = null;
+  private EClass decompositionEndsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass contributionLinkEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass contributionEndsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dependencyLinkEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dependencyEndsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass kpiConversionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -473,9 +505,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getGRLModelElement()
+  public EClass getElement()
   {
-    return grlModelElementEClass;
+    return elementEClass;
   }
 
   /**
@@ -483,9 +515,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGRLModelElement_Id()
+  public EAttribute getElement_Id()
   {
-    return (EAttribute)grlModelElementEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)elementEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -493,9 +525,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getGRLNode()
+  public EClass getGRLBaseElement()
   {
-    return grlNodeEClass;
+    return grlBaseElementEClass;
   }
 
   /**
@@ -503,9 +535,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGRLNode_Name()
+  public EClass getGRLElement()
   {
-    return (EAttribute)grlNodeEClass.getEStructuralFeatures().get(0);
+    return grlElementEClass;
   }
 
   /**
@@ -513,9 +545,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getGRLLinkableElement()
+  public EAttribute getGRLElement_Name()
   {
-    return grlLinkableElementEClass;
+    return (EAttribute)grlElementEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -523,9 +555,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGRLLinkableElement_Name()
+  public EAttribute getGRLElement_Label()
   {
-    return (EAttribute)grlLinkableElementEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)grlElementEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -533,9 +565,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGRLLinkableElement_Label()
+  public EAttribute getGRLElement_Description()
   {
-    return (EAttribute)grlLinkableElementEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)grlElementEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -543,39 +575,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGRLLinkableElement_Description()
+  public EAttribute getGRLElement_FillColor()
   {
-    return (EAttribute)grlLinkableElementEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getGRLLinkableElement_Fillcolor()
-  {
-    return (EAttribute)grlLinkableElementEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getGRLLinkableElement_Importance()
-  {
-    return (EAttribute)grlLinkableElementEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getGRLLinkableElement_ImportanceQuantitative()
-  {
-    return (EAttribute)grlLinkableElementEClass.getEStructuralFeatures().get(5);
+    return (EAttribute)grlElementEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -593,7 +595,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getIntentionalElement_DecompositionType()
+  public EAttribute getIntentionalElement_Importance()
   {
     return (EAttribute)intentionalElementEClass.getEStructuralFeatures().get(0);
   }
@@ -603,9 +605,19 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getIntentionalElement_Refs()
+  public EAttribute getIntentionalElement_DecompositionType()
   {
-    return (EReference)intentionalElementEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)intentionalElementEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIntentionalElement_ImportanceQuantitative()
+  {
+    return (EAttribute)intentionalElementEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -623,9 +635,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getElementLink_Name()
+  public EClass getGRLSpecification()
   {
-    return (EAttribute)elementLinkEClass.getEStructuralFeatures().get(0);
+    return grlSpecificationEClass;
   }
 
   /**
@@ -633,9 +645,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getElementLink_Label()
+  public EAttribute getGRLSpecification_Name()
   {
-    return (EAttribute)elementLinkEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)grlSpecificationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -643,169 +655,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getElementLink_Description()
+  public EReference getGRLSpecification_GrlElements()
   {
-    return (EAttribute)elementLinkEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getElementLink_Src()
-  {
-    return (EReference)elementLinkEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getElementLink_Dest()
-  {
-    return (EReference)elementLinkEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getKPIConversion()
-  {
-    return kpiConversionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getGRLspec()
-  {
-    return grLspecEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getGRLspec_ImpactModel()
-  {
-    return (EReference)grLspecEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getGRLspec_Links()
-  {
-    return (EReference)grLspecEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getGRLspec_Actors()
-  {
-    return (EReference)grLspecEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getGRLspec_IntElements()
-  {
-    return (EReference)grLspecEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getGRLspec_Groups()
-  {
-    return (EReference)grLspecEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getGRLspec_Strategies()
-  {
-    return (EReference)grLspecEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getGRLspec_ContributionGroups()
-  {
-    return (EReference)grLspecEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getGRLspec_ContributionContexts()
-  {
-    return (EReference)grLspecEClass.getEStructuralFeatures().get(7);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getGRLspec_KpiConv()
-  {
-    return (EReference)grLspecEClass.getEStructuralFeatures().get(8);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getGRLspec_KpiInformationElements()
-  {
-    return (EReference)grLspecEClass.getEStructuralFeatures().get(9);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getGRLspec_KpiModelLinks()
-  {
-    return (EReference)grLspecEClass.getEStructuralFeatures().get(10);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getGRLspec_IndicatorGroup()
-  {
-    return (EReference)grLspecEClass.getEStructuralFeatures().get(11);
+    return (EReference)grlSpecificationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -823,9 +675,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getActor_IncludedActors()
+  public EAttribute getActor_Importance()
   {
-    return (EReference)actorEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)actorEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -833,9 +685,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getActor_CollapsedRefs()
+  public EAttribute getActor_ImportanceQuantitative()
   {
-    return (EReference)actorEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)actorEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -843,19 +695,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getActor_IntentionalElements()
+  public EReference getActor_Elemets()
   {
     return (EReference)actorEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getActor_ElementLinks()
-  {
-    return (EReference)actorEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -883,16 +725,6 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getGoal_Evals()
-  {
-    return (EReference)goalEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getTask()
   {
     return taskEClass;
@@ -903,19 +735,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTask_Evals()
+  public EClass getResource()
   {
-    return (EReference)taskEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getRessource()
-  {
-    return ressourceEClass;
+    return resourceEClass;
   }
 
   /**
@@ -933,7 +755,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getIndicator_KpiModelLinksDest()
+  public EReference getIndicator_Refs()
   {
     return (EReference)indicatorEClass.getEStructuralFeatures().get(0);
   }
@@ -943,7 +765,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getIndicator_Groups()
+  public EReference getIndicator_KpiModelLinksDest()
   {
     return (EReference)indicatorEClass.getEStructuralFeatures().get(1);
   }
@@ -953,9 +775,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getDecomposition()
+  public EReference getIndicator_Groups()
   {
-    return decompositionEClass;
+    return (EReference)indicatorEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -963,9 +785,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getContribution()
+  public EClass getConnection()
   {
-    return contributionEClass;
+    return connectionEClass;
   }
 
   /**
@@ -973,9 +795,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getContribution_Contribution()
+  public EReference getConnection_Src()
   {
-    return (EAttribute)contributionEClass.getEStructuralFeatures().get(0);
+    return (EReference)connectionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -983,9 +805,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getContribution_QuantitativeContribution()
+  public EReference getConnection_Dest()
   {
-    return (EAttribute)contributionEClass.getEStructuralFeatures().get(1);
+    return (EReference)connectionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -993,9 +815,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getContribution_Correlation()
+  public EClass getDecompositionLink()
   {
-    return (EAttribute)contributionEClass.getEStructuralFeatures().get(2);
+    return decompositionLinkEClass;
   }
 
   /**
@@ -1003,9 +825,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getContribution_Changes()
+  public EReference getDecompositionLink_Connections()
   {
-    return (EReference)contributionEClass.getEStructuralFeatures().get(3);
+    return (EReference)decompositionLinkEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1013,9 +835,119 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getDependency()
+  public EClass getDecompositionEnds()
   {
-    return dependencyEClass;
+    return decompositionEndsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getContributionLink()
+  {
+    return contributionLinkEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getContributionLink_Contribution()
+  {
+    return (EAttribute)contributionLinkEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getContributionLink_QuantitativeContribution()
+  {
+    return (EAttribute)contributionLinkEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getContributionLink_Correlation()
+  {
+    return (EAttribute)contributionLinkEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getContributionLink_Changes()
+  {
+    return (EReference)contributionLinkEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getContributionLink_Connections()
+  {
+    return (EReference)contributionLinkEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getContributionEnds()
+  {
+    return contributionEndsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDependencyLink()
+  {
+    return dependencyLinkEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDependencyLink_Connections()
+  {
+    return (EReference)dependencyLinkEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDependencyEnds()
+  {
+    return dependencyEndsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getKPIConversion()
+  {
+    return kpiConversionEClass;
   }
 
   /**
@@ -1033,7 +965,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getBelief_Label()
+  public EAttribute getBelief_Name()
   {
     return (EAttribute)beliefEClass.getEStructuralFeatures().get(0);
   }
@@ -1043,9 +975,19 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getBelief_Description()
+  public EAttribute getBelief_Label()
   {
     return (EAttribute)beliefEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBelief_Description()
+  {
+    return (EAttribute)beliefEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1063,7 +1005,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getCollapsedActorRef_Label()
+  public EAttribute getCollapsedActorRef_Name()
   {
     return (EAttribute)collapsedActorRefEClass.getEStructuralFeatures().get(0);
   }
@@ -1073,9 +1015,19 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getCollapsedActorRef_Description()
+  public EAttribute getCollapsedActorRef_Label()
   {
     return (EAttribute)collapsedActorRefEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCollapsedActorRef_Description()
+  {
+    return (EAttribute)collapsedActorRefEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1093,7 +1045,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getIntentionalElementRef_Criticality()
+  public EAttribute getIntentionalElementRef_Name()
   {
     return (EAttribute)intentionalElementRefEClass.getEStructuralFeatures().get(0);
   }
@@ -1103,7 +1055,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getIntentionalElementRef_Priority()
+  public EAttribute getIntentionalElementRef_Criticality()
   {
     return (EAttribute)intentionalElementRefEClass.getEStructuralFeatures().get(1);
   }
@@ -1113,9 +1065,19 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getIntentionalElementRef_Priority()
+  {
+    return (EAttribute)intentionalElementRefEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getIntentionalElementRef_Def()
   {
-    return (EReference)intentionalElementRefEClass.getEStructuralFeatures().get(2);
+    return (EReference)intentionalElementRefEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1843,7 +1805,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getKPIInformationElementRef_Label()
+  public EAttribute getKPIInformationElementRef_Name()
   {
     return (EAttribute)kpiInformationElementRefEClass.getEStructuralFeatures().get(0);
   }
@@ -1853,9 +1815,19 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getKPIInformationElementRef_Description()
+  public EAttribute getKPIInformationElementRef_Label()
   {
     return (EAttribute)kpiInformationElementRefEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getKPIInformationElementRef_Description()
+  {
+    return (EAttribute)kpiInformationElementRefEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2061,86 +2033,83 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     modelEClass = createEClass(MODEL);
     createEReference(modelEClass, MODEL__GR_LSPECS);
 
-    grlModelElementEClass = createEClass(GRL_MODEL_ELEMENT);
-    createEAttribute(grlModelElementEClass, GRL_MODEL_ELEMENT__ID);
+    elementEClass = createEClass(ELEMENT);
+    createEAttribute(elementEClass, ELEMENT__ID);
 
-    grlNodeEClass = createEClass(GRL_NODE);
-    createEAttribute(grlNodeEClass, GRL_NODE__NAME);
+    grlBaseElementEClass = createEClass(GRL_BASE_ELEMENT);
 
-    grlLinkableElementEClass = createEClass(GRL_LINKABLE_ELEMENT);
-    createEAttribute(grlLinkableElementEClass, GRL_LINKABLE_ELEMENT__NAME);
-    createEAttribute(grlLinkableElementEClass, GRL_LINKABLE_ELEMENT__LABEL);
-    createEAttribute(grlLinkableElementEClass, GRL_LINKABLE_ELEMENT__DESCRIPTION);
-    createEAttribute(grlLinkableElementEClass, GRL_LINKABLE_ELEMENT__FILLCOLOR);
-    createEAttribute(grlLinkableElementEClass, GRL_LINKABLE_ELEMENT__IMPORTANCE);
-    createEAttribute(grlLinkableElementEClass, GRL_LINKABLE_ELEMENT__IMPORTANCE_QUANTITATIVE);
+    grlElementEClass = createEClass(GRL_ELEMENT);
+    createEAttribute(grlElementEClass, GRL_ELEMENT__NAME);
+    createEAttribute(grlElementEClass, GRL_ELEMENT__LABEL);
+    createEAttribute(grlElementEClass, GRL_ELEMENT__DESCRIPTION);
+    createEAttribute(grlElementEClass, GRL_ELEMENT__FILL_COLOR);
 
     intentionalElementEClass = createEClass(INTENTIONAL_ELEMENT);
+    createEAttribute(intentionalElementEClass, INTENTIONAL_ELEMENT__IMPORTANCE);
     createEAttribute(intentionalElementEClass, INTENTIONAL_ELEMENT__DECOMPOSITION_TYPE);
-    createEReference(intentionalElementEClass, INTENTIONAL_ELEMENT__REFS);
+    createEAttribute(intentionalElementEClass, INTENTIONAL_ELEMENT__IMPORTANCE_QUANTITATIVE);
 
     elementLinkEClass = createEClass(ELEMENT_LINK);
-    createEAttribute(elementLinkEClass, ELEMENT_LINK__NAME);
-    createEAttribute(elementLinkEClass, ELEMENT_LINK__LABEL);
-    createEAttribute(elementLinkEClass, ELEMENT_LINK__DESCRIPTION);
-    createEReference(elementLinkEClass, ELEMENT_LINK__SRC);
-    createEReference(elementLinkEClass, ELEMENT_LINK__DEST);
 
-    kpiConversionEClass = createEClass(KPI_CONVERSION);
-
-    grLspecEClass = createEClass(GR_LSPEC);
-    createEReference(grLspecEClass, GR_LSPEC__IMPACT_MODEL);
-    createEReference(grLspecEClass, GR_LSPEC__LINKS);
-    createEReference(grLspecEClass, GR_LSPEC__ACTORS);
-    createEReference(grLspecEClass, GR_LSPEC__INT_ELEMENTS);
-    createEReference(grLspecEClass, GR_LSPEC__GROUPS);
-    createEReference(grLspecEClass, GR_LSPEC__STRATEGIES);
-    createEReference(grLspecEClass, GR_LSPEC__CONTRIBUTION_GROUPS);
-    createEReference(grLspecEClass, GR_LSPEC__CONTRIBUTION_CONTEXTS);
-    createEReference(grLspecEClass, GR_LSPEC__KPI_CONV);
-    createEReference(grLspecEClass, GR_LSPEC__KPI_INFORMATION_ELEMENTS);
-    createEReference(grLspecEClass, GR_LSPEC__KPI_MODEL_LINKS);
-    createEReference(grLspecEClass, GR_LSPEC__INDICATOR_GROUP);
+    grlSpecificationEClass = createEClass(GRL_SPECIFICATION);
+    createEAttribute(grlSpecificationEClass, GRL_SPECIFICATION__NAME);
+    createEReference(grlSpecificationEClass, GRL_SPECIFICATION__GRL_ELEMENTS);
 
     actorEClass = createEClass(ACTOR);
-    createEReference(actorEClass, ACTOR__INCLUDED_ACTORS);
-    createEReference(actorEClass, ACTOR__COLLAPSED_REFS);
-    createEReference(actorEClass, ACTOR__INTENTIONAL_ELEMENTS);
-    createEReference(actorEClass, ACTOR__ELEMENT_LINKS);
+    createEAttribute(actorEClass, ACTOR__IMPORTANCE);
+    createEAttribute(actorEClass, ACTOR__IMPORTANCE_QUANTITATIVE);
+    createEReference(actorEClass, ACTOR__ELEMETS);
 
     softgoalEClass = createEClass(SOFTGOAL);
 
     goalEClass = createEClass(GOAL);
-    createEReference(goalEClass, GOAL__EVALS);
 
     taskEClass = createEClass(TASK);
-    createEReference(taskEClass, TASK__EVALS);
 
-    ressourceEClass = createEClass(RESSOURCE);
+    resourceEClass = createEClass(RESOURCE);
 
     indicatorEClass = createEClass(INDICATOR);
+    createEReference(indicatorEClass, INDICATOR__REFS);
     createEReference(indicatorEClass, INDICATOR__KPI_MODEL_LINKS_DEST);
     createEReference(indicatorEClass, INDICATOR__GROUPS);
 
-    decompositionEClass = createEClass(DECOMPOSITION);
+    connectionEClass = createEClass(CONNECTION);
+    createEReference(connectionEClass, CONNECTION__SRC);
+    createEReference(connectionEClass, CONNECTION__DEST);
 
-    contributionEClass = createEClass(CONTRIBUTION);
-    createEAttribute(contributionEClass, CONTRIBUTION__CONTRIBUTION);
-    createEAttribute(contributionEClass, CONTRIBUTION__QUANTITATIVE_CONTRIBUTION);
-    createEAttribute(contributionEClass, CONTRIBUTION__CORRELATION);
-    createEReference(contributionEClass, CONTRIBUTION__CHANGES);
+    decompositionLinkEClass = createEClass(DECOMPOSITION_LINK);
+    createEReference(decompositionLinkEClass, DECOMPOSITION_LINK__CONNECTIONS);
 
-    dependencyEClass = createEClass(DEPENDENCY);
+    decompositionEndsEClass = createEClass(DECOMPOSITION_ENDS);
+
+    contributionLinkEClass = createEClass(CONTRIBUTION_LINK);
+    createEAttribute(contributionLinkEClass, CONTRIBUTION_LINK__CONTRIBUTION);
+    createEAttribute(contributionLinkEClass, CONTRIBUTION_LINK__QUANTITATIVE_CONTRIBUTION);
+    createEAttribute(contributionLinkEClass, CONTRIBUTION_LINK__CORRELATION);
+    createEReference(contributionLinkEClass, CONTRIBUTION_LINK__CHANGES);
+    createEReference(contributionLinkEClass, CONTRIBUTION_LINK__CONNECTIONS);
+
+    contributionEndsEClass = createEClass(CONTRIBUTION_ENDS);
+
+    dependencyLinkEClass = createEClass(DEPENDENCY_LINK);
+    createEReference(dependencyLinkEClass, DEPENDENCY_LINK__CONNECTIONS);
+
+    dependencyEndsEClass = createEClass(DEPENDENCY_ENDS);
+
+    kpiConversionEClass = createEClass(KPI_CONVERSION);
 
     beliefEClass = createEClass(BELIEF);
+    createEAttribute(beliefEClass, BELIEF__NAME);
     createEAttribute(beliefEClass, BELIEF__LABEL);
     createEAttribute(beliefEClass, BELIEF__DESCRIPTION);
 
     collapsedActorRefEClass = createEClass(COLLAPSED_ACTOR_REF);
+    createEAttribute(collapsedActorRefEClass, COLLAPSED_ACTOR_REF__NAME);
     createEAttribute(collapsedActorRefEClass, COLLAPSED_ACTOR_REF__LABEL);
     createEAttribute(collapsedActorRefEClass, COLLAPSED_ACTOR_REF__DESCRIPTION);
 
     intentionalElementRefEClass = createEClass(INTENTIONAL_ELEMENT_REF);
+    createEAttribute(intentionalElementRefEClass, INTENTIONAL_ELEMENT_REF__NAME);
     createEAttribute(intentionalElementRefEClass, INTENTIONAL_ELEMENT_REF__CRITICALITY);
     createEAttribute(intentionalElementRefEClass, INTENTIONAL_ELEMENT_REF__PRIORITY);
     createEReference(intentionalElementRefEClass, INTENTIONAL_ELEMENT_REF__DEF);
@@ -2232,6 +2201,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     createEReference(kpiInformationElementEClass, KPI_INFORMATION_ELEMENT__REFS);
 
     kpiInformationElementRefEClass = createEClass(KPI_INFORMATION_ELEMENT_REF);
+    createEAttribute(kpiInformationElementRefEClass, KPI_INFORMATION_ELEMENT_REF__NAME);
     createEAttribute(kpiInformationElementRefEClass, KPI_INFORMATION_ELEMENT_REF__LABEL);
     createEAttribute(kpiInformationElementRefEClass, KPI_INFORMATION_ELEMENT_REF__DESCRIPTION);
 
@@ -2289,117 +2259,107 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    grlNodeEClass.getESuperTypes().add(this.getGRLModelElement());
-    grlLinkableElementEClass.getESuperTypes().add(this.getGRLModelElement());
-    intentionalElementEClass.getESuperTypes().add(this.getGRLLinkableElement());
-    elementLinkEClass.getESuperTypes().add(this.getGRLModelElement());
-    kpiConversionEClass.getESuperTypes().add(this.getGRLModelElement());
-    actorEClass.getESuperTypes().add(this.getGRLLinkableElement());
+    grlBaseElementEClass.getESuperTypes().add(this.getElement());
+    grlElementEClass.getESuperTypes().add(this.getGRLBaseElement());
+    intentionalElementEClass.getESuperTypes().add(this.getGRLElement());
+    elementLinkEClass.getESuperTypes().add(this.getGRLElement());
+    grlSpecificationEClass.getESuperTypes().add(this.getElement());
+    actorEClass.getESuperTypes().add(this.getGRLElement());
     softgoalEClass.getESuperTypes().add(this.getIntentionalElement());
     goalEClass.getESuperTypes().add(this.getIntentionalElement());
     taskEClass.getESuperTypes().add(this.getIntentionalElement());
-    ressourceEClass.getESuperTypes().add(this.getIntentionalElement());
+    resourceEClass.getESuperTypes().add(this.getIntentionalElement());
     indicatorEClass.getESuperTypes().add(this.getIntentionalElement());
-    decompositionEClass.getESuperTypes().add(this.getElementLink());
-    contributionEClass.getESuperTypes().add(this.getElementLink());
-    dependencyEClass.getESuperTypes().add(this.getElementLink());
-    beliefEClass.getESuperTypes().add(this.getGRLNode());
-    collapsedActorRefEClass.getESuperTypes().add(this.getGRLNode());
-    intentionalElementRefEClass.getESuperTypes().add(this.getGRLNode());
-    strategiesGroupEClass.getESuperTypes().add(this.getGRLModelElement());
-    evaluationStrategyEClass.getESuperTypes().add(this.getGRLModelElement());
-    contributionContextGroupEClass.getESuperTypes().add(this.getGRLModelElement());
-    contributionContextEClass.getESuperTypes().add(this.getGRLModelElement());
+    connectionEClass.getESuperTypes().add(this.getGRLBaseElement());
+    decompositionLinkEClass.getESuperTypes().add(this.getElementLink());
+    decompositionEndsEClass.getESuperTypes().add(this.getConnection());
+    contributionLinkEClass.getESuperTypes().add(this.getElementLink());
+    contributionEndsEClass.getESuperTypes().add(this.getConnection());
+    dependencyLinkEClass.getESuperTypes().add(this.getElementLink());
+    dependencyEndsEClass.getESuperTypes().add(this.getConnection());
     qualitativeMappingsEClass.getESuperTypes().add(this.getKPIConversion());
-    kpiInformationElementEClass.getESuperTypes().add(this.getGRLModelElement());
-    kpiInformationElementRefEClass.getESuperTypes().add(this.getGRLNode());
-    kpiModelLinkEClass.getESuperTypes().add(this.getGRLModelElement());
-    indicatorGroupEClass.getESuperTypes().add(this.getGRLModelElement());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_GRLspecs(), this.getGRLspec(), null, "gRLspecs", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_GRLspecs(), this.getGRLSpecification(), null, "gRLspecs", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(grlModelElementEClass, GRLModelElement.class, "GRLModelElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGRLModelElement_Id(), theEcorePackage.getEInt(), "id", null, 0, 1, GRLModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getElement_Id(), theEcorePackage.getEInt(), "id", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(grlNodeEClass, GRLNode.class, "GRLNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGRLNode_Name(), theEcorePackage.getEString(), "name", null, 0, 1, GRLNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(grlBaseElementEClass, GRLBaseElement.class, "GRLBaseElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(grlLinkableElementEClass, GRLLinkableElement.class, "GRLLinkableElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGRLLinkableElement_Name(), theEcorePackage.getEString(), "name", null, 0, 1, GRLLinkableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGRLLinkableElement_Label(), theEcorePackage.getEString(), "label", null, 0, 1, GRLLinkableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGRLLinkableElement_Description(), theEcorePackage.getEString(), "description", null, 0, 1, GRLLinkableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGRLLinkableElement_Fillcolor(), this.getColor(), "fillcolor", null, 0, 1, GRLLinkableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGRLLinkableElement_Importance(), this.getImportanceType(), "importance", null, 0, 1, GRLLinkableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGRLLinkableElement_ImportanceQuantitative(), theEcorePackage.getEInt(), "importanceQuantitative", null, 0, 1, GRLLinkableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(grlElementEClass, GRLElement.class, "GRLElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGRLElement_Name(), theEcorePackage.getEString(), "name", null, 0, 1, GRLElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGRLElement_Label(), theEcorePackage.getEString(), "label", null, 0, 1, GRLElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGRLElement_Description(), theEcorePackage.getEString(), "description", null, 0, 1, GRLElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGRLElement_FillColor(), this.getColor(), "fillColor", null, 0, 1, GRLElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(intentionalElementEClass, IntentionalElement.class, "IntentionalElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIntentionalElement_Importance(), this.getImportanceType(), "importance", null, 0, 1, IntentionalElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getIntentionalElement_DecompositionType(), this.getDecompositionType(), "decompositionType", null, 0, 1, IntentionalElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getIntentionalElement_Refs(), this.getIntentionalElementRef(), null, "refs", null, 0, -1, IntentionalElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getIntentionalElement_ImportanceQuantitative(), theEcorePackage.getEInt(), "importanceQuantitative", null, 0, 1, IntentionalElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(elementLinkEClass, ElementLink.class, "ElementLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getElementLink_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ElementLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getElementLink_Label(), theEcorePackage.getEString(), "label", null, 0, 1, ElementLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getElementLink_Description(), theEcorePackage.getEString(), "description", null, 0, 1, ElementLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getElementLink_Src(), this.getGRLLinkableElement(), null, "src", null, 0, 1, ElementLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getElementLink_Dest(), this.getGRLLinkableElement(), null, "dest", null, 0, 1, ElementLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(kpiConversionEClass, KPIConversion.class, "KPIConversion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(grLspecEClass, GRLspec.class, "GRLspec", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getGRLspec_ImpactModel(), this.getImpactModel(), null, "impactModel", null, 0, 1, GRLspec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGRLspec_Links(), this.getElementLink(), null, "links", null, 0, -1, GRLspec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGRLspec_Actors(), this.getActor(), null, "actors", null, 0, -1, GRLspec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGRLspec_IntElements(), this.getIntentionalElement(), null, "intElements", null, 0, -1, GRLspec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGRLspec_Groups(), this.getStrategiesGroup(), null, "groups", null, 0, -1, GRLspec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGRLspec_Strategies(), this.getEvaluationStrategy(), null, "strategies", null, 0, -1, GRLspec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGRLspec_ContributionGroups(), this.getContributionContextGroup(), null, "contributionGroups", null, 0, -1, GRLspec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGRLspec_ContributionContexts(), this.getContributionContext(), null, "contributionContexts", null, 0, -1, GRLspec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGRLspec_KpiConv(), this.getKPIConversion(), null, "kpiConv", null, 0, -1, GRLspec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGRLspec_KpiInformationElements(), this.getKPIInformationElement(), null, "kpiInformationElements", null, 0, -1, GRLspec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGRLspec_KpiModelLinks(), this.getKPIModelLink(), null, "kpiModelLinks", null, 0, -1, GRLspec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getGRLspec_IndicatorGroup(), this.getIndicatorGroup(), null, "indicatorGroup", null, 0, -1, GRLspec.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(grlSpecificationEClass, GRLSpecification.class, "GRLSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGRLSpecification_Name(), theEcorePackage.getEString(), "name", null, 0, 1, GRLSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGRLSpecification_GrlElements(), this.getGRLElement(), null, "grlElements", null, 0, -1, GRLSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(actorEClass, Actor.class, "Actor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getActor_IncludedActors(), this.getActor(), null, "includedActors", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getActor_CollapsedRefs(), this.getCollapsedActorRef(), null, "collapsedRefs", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getActor_IntentionalElements(), this.getIntentionalElement(), null, "intentionalElements", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getActor_ElementLinks(), this.getElementLink(), null, "elementLinks", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getActor_Importance(), this.getImportanceType(), "importance", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getActor_ImportanceQuantitative(), theEcorePackage.getEInt(), "importanceQuantitative", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getActor_Elemets(), this.getGRLElement(), null, "elemets", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(softgoalEClass, Softgoal.class, "Softgoal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(goalEClass, Goal.class, "Goal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getGoal_Evals(), this.getEvaluation(), null, "evals", null, 0, -1, Goal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(taskEClass, Task.class, "Task", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTask_Evals(), this.getEvaluation(), null, "evals", null, 0, -1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(ressourceEClass, Ressource.class, "Ressource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(resourceEClass, Resource.class, "Resource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(indicatorEClass, Indicator.class, "Indicator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getIndicator_Refs(), this.getIntentionalElementRef(), null, "refs", null, 0, -1, Indicator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getIndicator_KpiModelLinksDest(), this.getKPIModelLink(), null, "kpiModelLinksDest", null, 0, -1, Indicator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getIndicator_Groups(), this.getIndicatorGroup(), null, "groups", null, 0, -1, Indicator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(decompositionEClass, Decomposition.class, "Decomposition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getConnection_Src(), this.getIntentionalElement(), null, "src", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getConnection_Dest(), this.getIntentionalElement(), null, "dest", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(contributionEClass, Contribution.class, "Contribution", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getContribution_Contribution(), this.getContributionType(), "contribution", null, 0, 1, Contribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getContribution_QuantitativeContribution(), theEcorePackage.getEInt(), "quantitativeContribution", null, 0, 1, Contribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getContribution_Correlation(), theEcorePackage.getEString(), "correlation", null, 0, 1, Contribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getContribution_Changes(), this.getContributionChange(), null, "changes", null, 0, -1, Contribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(decompositionLinkEClass, DecompositionLink.class, "DecompositionLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDecompositionLink_Connections(), this.getDecompositionEnds(), null, "connections", null, 0, -1, DecompositionLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(dependencyEClass, Dependency.class, "Dependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(decompositionEndsEClass, DecompositionEnds.class, "DecompositionEnds", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(contributionLinkEClass, ContributionLink.class, "ContributionLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getContributionLink_Contribution(), this.getContributionType(), "contribution", null, 0, 1, ContributionLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getContributionLink_QuantitativeContribution(), theEcorePackage.getEInt(), "quantitativeContribution", null, 0, 1, ContributionLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getContributionLink_Correlation(), theEcorePackage.getEString(), "correlation", null, 0, 1, ContributionLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContributionLink_Changes(), this.getContributionChange(), null, "changes", null, 0, -1, ContributionLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContributionLink_Connections(), this.getContributionEnds(), null, "connections", null, 0, -1, ContributionLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(contributionEndsEClass, ContributionEnds.class, "ContributionEnds", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(dependencyLinkEClass, DependencyLink.class, "DependencyLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDependencyLink_Connections(), this.getDependencyEnds(), null, "connections", null, 0, -1, DependencyLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dependencyEndsEClass, DependencyEnds.class, "DependencyEnds", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(kpiConversionEClass, KPIConversion.class, "KPIConversion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(beliefEClass, Belief.class, "Belief", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBelief_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Belief.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getBelief_Label(), theEcorePackage.getEString(), "label", null, 0, 1, Belief.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getBelief_Description(), theEcorePackage.getEString(), "description", null, 0, 1, Belief.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(collapsedActorRefEClass, CollapsedActorRef.class, "CollapsedActorRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCollapsedActorRef_Name(), theEcorePackage.getEString(), "name", null, 0, 1, CollapsedActorRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getCollapsedActorRef_Label(), theEcorePackage.getEString(), "label", null, 0, 1, CollapsedActorRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getCollapsedActorRef_Description(), theEcorePackage.getEString(), "description", null, 0, 1, CollapsedActorRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(intentionalElementRefEClass, IntentionalElementRef.class, "IntentionalElementRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIntentionalElementRef_Name(), theEcorePackage.getEString(), "name", null, 0, 1, IntentionalElementRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getIntentionalElementRef_Criticality(), this.getCriticality(), "criticality", null, 0, 1, IntentionalElementRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getIntentionalElementRef_Priority(), this.getPriority(), "priority", null, 0, 1, IntentionalElementRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getIntentionalElementRef_Def(), this.getIntentionalElement(), null, "def", null, 0, 1, IntentionalElementRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2491,6 +2451,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEReference(getKPIInformationElement_Refs(), this.getKPIInformationElementRef(), null, "refs", null, 0, -1, KPIInformationElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(kpiInformationElementRefEClass, KPIInformationElementRef.class, "KPIInformationElementRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getKPIInformationElementRef_Name(), theEcorePackage.getEString(), "name", null, 0, 1, KPIInformationElementRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getKPIInformationElementRef_Label(), theEcorePackage.getEString(), "label", null, 0, 1, KPIInformationElementRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getKPIInformationElementRef_Description(), theEcorePackage.getEString(), "description", null, 0, 1, KPIInformationElementRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

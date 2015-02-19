@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.grl.tgrl.tGRL.Criticality;
 import org.xtext.grl.tgrl.tGRL.IntentionalElement;
@@ -22,6 +23,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementRefImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementRefImpl#getCriticality <em>Criticality</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementRefImpl#getPriority <em>Priority</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementRefImpl#getDef <em>Def</em>}</li>
@@ -30,8 +32,28 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *
  * @generated
  */
-public class IntentionalElementRefImpl extends GRLNodeImpl implements IntentionalElementRef
+public class IntentionalElementRefImpl extends MinimalEObjectImpl.Container implements IntentionalElementRef
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The default value of the '{@link #getCriticality() <em>Criticality</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -101,6 +123,29 @@ public class IntentionalElementRefImpl extends GRLNodeImpl implements Intentiona
   protected EClass eStaticClass()
   {
     return TGRLPackage.Literals.INTENTIONAL_ELEMENT_REF;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.INTENTIONAL_ELEMENT_REF__NAME, oldName, name));
   }
 
   /**
@@ -202,6 +247,8 @@ public class IntentionalElementRefImpl extends GRLNodeImpl implements Intentiona
   {
     switch (featureID)
     {
+      case TGRLPackage.INTENTIONAL_ELEMENT_REF__NAME:
+        return getName();
       case TGRLPackage.INTENTIONAL_ELEMENT_REF__CRITICALITY:
         return getCriticality();
       case TGRLPackage.INTENTIONAL_ELEMENT_REF__PRIORITY:
@@ -223,6 +270,9 @@ public class IntentionalElementRefImpl extends GRLNodeImpl implements Intentiona
   {
     switch (featureID)
     {
+      case TGRLPackage.INTENTIONAL_ELEMENT_REF__NAME:
+        setName((String)newValue);
+        return;
       case TGRLPackage.INTENTIONAL_ELEMENT_REF__CRITICALITY:
         setCriticality((Criticality)newValue);
         return;
@@ -246,6 +296,9 @@ public class IntentionalElementRefImpl extends GRLNodeImpl implements Intentiona
   {
     switch (featureID)
     {
+      case TGRLPackage.INTENTIONAL_ELEMENT_REF__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case TGRLPackage.INTENTIONAL_ELEMENT_REF__CRITICALITY:
         setCriticality(CRITICALITY_EDEFAULT);
         return;
@@ -269,6 +322,8 @@ public class IntentionalElementRefImpl extends GRLNodeImpl implements Intentiona
   {
     switch (featureID)
     {
+      case TGRLPackage.INTENTIONAL_ELEMENT_REF__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case TGRLPackage.INTENTIONAL_ELEMENT_REF__CRITICALITY:
         return criticality != CRITICALITY_EDEFAULT;
       case TGRLPackage.INTENTIONAL_ELEMENT_REF__PRIORITY:
@@ -290,7 +345,9 @@ public class IntentionalElementRefImpl extends GRLNodeImpl implements Intentiona
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (criticality: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", criticality: ");
     result.append(criticality);
     result.append(", priority: ");
     result.append(priority);

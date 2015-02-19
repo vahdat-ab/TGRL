@@ -4,6 +4,7 @@ package org.xtext.grl.tgrl.tGRL.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -11,14 +12,14 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.grl.tgrl.tGRL.Actor;
-import org.xtext.grl.tgrl.tGRL.CollapsedActorRef;
-import org.xtext.grl.tgrl.tGRL.ElementLink;
-import org.xtext.grl.tgrl.tGRL.IntentionalElement;
+import org.xtext.grl.tgrl.tGRL.GRLElement;
+import org.xtext.grl.tgrl.tGRL.ImportanceType;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
@@ -28,56 +29,65 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ActorImpl#getIncludedActors <em>Included Actors</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ActorImpl#getCollapsedRefs <em>Collapsed Refs</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ActorImpl#getIntentionalElements <em>Intentional Elements</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ActorImpl#getElementLinks <em>Element Links</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ActorImpl#getImportance <em>Importance</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ActorImpl#getImportanceQuantitative <em>Importance Quantitative</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ActorImpl#getElemets <em>Elemets</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ActorImpl extends GRLLinkableElementImpl implements Actor
+public class ActorImpl extends GRLElementImpl implements Actor
 {
   /**
-   * The cached value of the '{@link #getIncludedActors() <em>Included Actors</em>}' reference list.
+   * The default value of the '{@link #getImportance() <em>Importance</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIncludedActors()
+   * @see #getImportance()
    * @generated
    * @ordered
    */
-  protected EList<Actor> includedActors;
+  protected static final ImportanceType IMPORTANCE_EDEFAULT = ImportanceType.NONE;
 
   /**
-   * The cached value of the '{@link #getCollapsedRefs() <em>Collapsed Refs</em>}' reference list.
+   * The cached value of the '{@link #getImportance() <em>Importance</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCollapsedRefs()
+   * @see #getImportance()
    * @generated
    * @ordered
    */
-  protected EList<CollapsedActorRef> collapsedRefs;
+  protected ImportanceType importance = IMPORTANCE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getIntentionalElements() <em>Intentional Elements</em>}' containment reference list.
+   * The default value of the '{@link #getImportanceQuantitative() <em>Importance Quantitative</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIntentionalElements()
+   * @see #getImportanceQuantitative()
    * @generated
    * @ordered
    */
-  protected EList<IntentionalElement> intentionalElements;
+  protected static final int IMPORTANCE_QUANTITATIVE_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getElementLinks() <em>Element Links</em>}' containment reference list.
+   * The cached value of the '{@link #getImportanceQuantitative() <em>Importance Quantitative</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getElementLinks()
+   * @see #getImportanceQuantitative()
    * @generated
    * @ordered
    */
-  protected EList<ElementLink> elementLinks;
+  protected int importanceQuantitative = IMPORTANCE_QUANTITATIVE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getElemets() <em>Elemets</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getElemets()
+   * @generated
+   * @ordered
+   */
+  protected EList<GRLElement> elemets;
 
   /**
    * <!-- begin-user-doc -->
@@ -105,13 +115,9 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Actor> getIncludedActors()
+  public ImportanceType getImportance()
   {
-    if (includedActors == null)
-    {
-      includedActors = new EObjectResolvingEList<Actor>(Actor.class, this, TGRLPackage.ACTOR__INCLUDED_ACTORS);
-    }
-    return includedActors;
+    return importance;
   }
 
   /**
@@ -119,13 +125,12 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<CollapsedActorRef> getCollapsedRefs()
+  public void setImportance(ImportanceType newImportance)
   {
-    if (collapsedRefs == null)
-    {
-      collapsedRefs = new EObjectResolvingEList<CollapsedActorRef>(CollapsedActorRef.class, this, TGRLPackage.ACTOR__COLLAPSED_REFS);
-    }
-    return collapsedRefs;
+    ImportanceType oldImportance = importance;
+    importance = newImportance == null ? IMPORTANCE_EDEFAULT : newImportance;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.ACTOR__IMPORTANCE, oldImportance, importance));
   }
 
   /**
@@ -133,13 +138,9 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<IntentionalElement> getIntentionalElements()
+  public int getImportanceQuantitative()
   {
-    if (intentionalElements == null)
-    {
-      intentionalElements = new EObjectContainmentEList<IntentionalElement>(IntentionalElement.class, this, TGRLPackage.ACTOR__INTENTIONAL_ELEMENTS);
-    }
-    return intentionalElements;
+    return importanceQuantitative;
   }
 
   /**
@@ -147,13 +148,26 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ElementLink> getElementLinks()
+  public void setImportanceQuantitative(int newImportanceQuantitative)
   {
-    if (elementLinks == null)
+    int oldImportanceQuantitative = importanceQuantitative;
+    importanceQuantitative = newImportanceQuantitative;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.ACTOR__IMPORTANCE_QUANTITATIVE, oldImportanceQuantitative, importanceQuantitative));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<GRLElement> getElemets()
+  {
+    if (elemets == null)
     {
-      elementLinks = new EObjectContainmentEList<ElementLink>(ElementLink.class, this, TGRLPackage.ACTOR__ELEMENT_LINKS);
+      elemets = new EObjectContainmentEList<GRLElement>(GRLElement.class, this, TGRLPackage.ACTOR__ELEMETS);
     }
-    return elementLinks;
+    return elemets;
   }
 
   /**
@@ -166,10 +180,8 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor
   {
     switch (featureID)
     {
-      case TGRLPackage.ACTOR__INTENTIONAL_ELEMENTS:
-        return ((InternalEList<?>)getIntentionalElements()).basicRemove(otherEnd, msgs);
-      case TGRLPackage.ACTOR__ELEMENT_LINKS:
-        return ((InternalEList<?>)getElementLinks()).basicRemove(otherEnd, msgs);
+      case TGRLPackage.ACTOR__ELEMETS:
+        return ((InternalEList<?>)getElemets()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -184,14 +196,12 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor
   {
     switch (featureID)
     {
-      case TGRLPackage.ACTOR__INCLUDED_ACTORS:
-        return getIncludedActors();
-      case TGRLPackage.ACTOR__COLLAPSED_REFS:
-        return getCollapsedRefs();
-      case TGRLPackage.ACTOR__INTENTIONAL_ELEMENTS:
-        return getIntentionalElements();
-      case TGRLPackage.ACTOR__ELEMENT_LINKS:
-        return getElementLinks();
+      case TGRLPackage.ACTOR__IMPORTANCE:
+        return getImportance();
+      case TGRLPackage.ACTOR__IMPORTANCE_QUANTITATIVE:
+        return getImportanceQuantitative();
+      case TGRLPackage.ACTOR__ELEMETS:
+        return getElemets();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -207,21 +217,15 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor
   {
     switch (featureID)
     {
-      case TGRLPackage.ACTOR__INCLUDED_ACTORS:
-        getIncludedActors().clear();
-        getIncludedActors().addAll((Collection<? extends Actor>)newValue);
+      case TGRLPackage.ACTOR__IMPORTANCE:
+        setImportance((ImportanceType)newValue);
         return;
-      case TGRLPackage.ACTOR__COLLAPSED_REFS:
-        getCollapsedRefs().clear();
-        getCollapsedRefs().addAll((Collection<? extends CollapsedActorRef>)newValue);
+      case TGRLPackage.ACTOR__IMPORTANCE_QUANTITATIVE:
+        setImportanceQuantitative((Integer)newValue);
         return;
-      case TGRLPackage.ACTOR__INTENTIONAL_ELEMENTS:
-        getIntentionalElements().clear();
-        getIntentionalElements().addAll((Collection<? extends IntentionalElement>)newValue);
-        return;
-      case TGRLPackage.ACTOR__ELEMENT_LINKS:
-        getElementLinks().clear();
-        getElementLinks().addAll((Collection<? extends ElementLink>)newValue);
+      case TGRLPackage.ACTOR__ELEMETS:
+        getElemets().clear();
+        getElemets().addAll((Collection<? extends GRLElement>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -237,17 +241,14 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor
   {
     switch (featureID)
     {
-      case TGRLPackage.ACTOR__INCLUDED_ACTORS:
-        getIncludedActors().clear();
+      case TGRLPackage.ACTOR__IMPORTANCE:
+        setImportance(IMPORTANCE_EDEFAULT);
         return;
-      case TGRLPackage.ACTOR__COLLAPSED_REFS:
-        getCollapsedRefs().clear();
+      case TGRLPackage.ACTOR__IMPORTANCE_QUANTITATIVE:
+        setImportanceQuantitative(IMPORTANCE_QUANTITATIVE_EDEFAULT);
         return;
-      case TGRLPackage.ACTOR__INTENTIONAL_ELEMENTS:
-        getIntentionalElements().clear();
-        return;
-      case TGRLPackage.ACTOR__ELEMENT_LINKS:
-        getElementLinks().clear();
+      case TGRLPackage.ACTOR__ELEMETS:
+        getElemets().clear();
         return;
     }
     super.eUnset(featureID);
@@ -263,16 +264,33 @@ public class ActorImpl extends GRLLinkableElementImpl implements Actor
   {
     switch (featureID)
     {
-      case TGRLPackage.ACTOR__INCLUDED_ACTORS:
-        return includedActors != null && !includedActors.isEmpty();
-      case TGRLPackage.ACTOR__COLLAPSED_REFS:
-        return collapsedRefs != null && !collapsedRefs.isEmpty();
-      case TGRLPackage.ACTOR__INTENTIONAL_ELEMENTS:
-        return intentionalElements != null && !intentionalElements.isEmpty();
-      case TGRLPackage.ACTOR__ELEMENT_LINKS:
-        return elementLinks != null && !elementLinks.isEmpty();
+      case TGRLPackage.ACTOR__IMPORTANCE:
+        return importance != IMPORTANCE_EDEFAULT;
+      case TGRLPackage.ACTOR__IMPORTANCE_QUANTITATIVE:
+        return importanceQuantitative != IMPORTANCE_QUANTITATIVE_EDEFAULT;
+      case TGRLPackage.ACTOR__ELEMETS:
+        return elemets != null && !elemets.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (importance: ");
+    result.append(importance);
+    result.append(", importanceQuantitative: ");
+    result.append(importanceQuantitative);
+    result.append(')');
+    return result.toString();
   }
 
 } //ActorImpl

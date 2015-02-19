@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.xtext.grl.tgrl.tGRL.GRLspec;
+import org.xtext.grl.tgrl.tGRL.GRLSpecification;
 import org.xtext.grl.tgrl.tGRL.Model;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
@@ -43,7 +43,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @generated
    * @ordered
    */
-  protected EList<GRLspec> gRLspecs;
+  protected EList<GRLSpecification> gRLspecs;
 
   /**
    * <!-- begin-user-doc -->
@@ -71,11 +71,11 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<GRLspec> getGRLspecs()
+  public EList<GRLSpecification> getGRLspecs()
   {
     if (gRLspecs == null)
     {
-      gRLspecs = new EObjectContainmentEList<GRLspec>(GRLspec.class, this, TGRLPackage.MODEL__GR_LSPECS);
+      gRLspecs = new EObjectContainmentEList<GRLSpecification>(GRLSpecification.class, this, TGRLPackage.MODEL__GR_LSPECS);
     }
     return gRLspecs;
   }
@@ -125,7 +125,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case TGRLPackage.MODEL__GR_LSPECS:
         getGRLspecs().clear();
-        getGRLspecs().addAll((Collection<? extends GRLspec>)newValue);
+        getGRLspecs().addAll((Collection<? extends GRLSpecification>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

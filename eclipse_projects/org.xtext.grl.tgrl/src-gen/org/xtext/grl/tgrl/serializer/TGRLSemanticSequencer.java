@@ -17,17 +17,20 @@ import org.xtext.grl.tgrl.services.TGRLGrammarAccess;
 import org.xtext.grl.tgrl.tGRL.Actor;
 import org.xtext.grl.tgrl.tGRL.Belief;
 import org.xtext.grl.tgrl.tGRL.CollapsedActorRef;
-import org.xtext.grl.tgrl.tGRL.Contribution;
 import org.xtext.grl.tgrl.tGRL.ContributionChange;
 import org.xtext.grl.tgrl.tGRL.ContributionContext;
 import org.xtext.grl.tgrl.tGRL.ContributionContextGroup;
+import org.xtext.grl.tgrl.tGRL.ContributionEnds;
+import org.xtext.grl.tgrl.tGRL.ContributionLink;
 import org.xtext.grl.tgrl.tGRL.ContributionRange;
-import org.xtext.grl.tgrl.tGRL.Decomposition;
-import org.xtext.grl.tgrl.tGRL.Dependency;
+import org.xtext.grl.tgrl.tGRL.DecompositionEnds;
+import org.xtext.grl.tgrl.tGRL.DecompositionLink;
+import org.xtext.grl.tgrl.tGRL.DependencyEnds;
+import org.xtext.grl.tgrl.tGRL.DependencyLink;
 import org.xtext.grl.tgrl.tGRL.Evaluation;
 import org.xtext.grl.tgrl.tGRL.EvaluationRange;
 import org.xtext.grl.tgrl.tGRL.EvaluationStrategy;
-import org.xtext.grl.tgrl.tGRL.GRLspec;
+import org.xtext.grl.tgrl.tGRL.GRLSpecification;
 import org.xtext.grl.tgrl.tGRL.Goal;
 import org.xtext.grl.tgrl.tGRL.ImpactModel;
 import org.xtext.grl.tgrl.tGRL.Indicator;
@@ -42,7 +45,7 @@ import org.xtext.grl.tgrl.tGRL.KPINewEvalValue;
 import org.xtext.grl.tgrl.tGRL.Model;
 import org.xtext.grl.tgrl.tGRL.QualitativeMapping;
 import org.xtext.grl.tgrl.tGRL.QualitativeMappings;
-import org.xtext.grl.tgrl.tGRL.Ressource;
+import org.xtext.grl.tgrl.tGRL.Resource;
 import org.xtext.grl.tgrl.tGRL.Softgoal;
 import org.xtext.grl.tgrl.tGRL.StrategiesGroup;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
@@ -58,33 +61,22 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		if(semanticObject.eClass().getEPackage() == TGRLPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case TGRLPackage.ACTOR:
 				if(context == grammarAccess.getActorRule() ||
-				   context == grammarAccess.getGRLLinkableElementRule() ||
-				   context == grammarAccess.getGRLModelElementRule()) {
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
+				   context == grammarAccess.getGRLElementRule()) {
 					sequence_Actor(context, (Actor) semanticObject); 
 					return; 
 				}
 				else break;
 			case TGRLPackage.BELIEF:
-				if(context == grammarAccess.getBeliefRule() ||
-				   context == grammarAccess.getGRLModelElementRule() ||
-				   context == grammarAccess.getGRLNodeRule()) {
+				if(context == grammarAccess.getBeliefRule()) {
 					sequence_Belief(context, (Belief) semanticObject); 
 					return; 
 				}
 				else break;
 			case TGRLPackage.COLLAPSED_ACTOR_REF:
-				if(context == grammarAccess.getCollapsedActorRefRule() ||
-				   context == grammarAccess.getGRLModelElementRule() ||
-				   context == grammarAccess.getGRLNodeRule()) {
+				if(context == grammarAccess.getCollapsedActorRefRule()) {
 					sequence_CollapsedActorRef(context, (CollapsedActorRef) semanticObject); 
-					return; 
-				}
-				else break;
-			case TGRLPackage.CONTRIBUTION:
-				if(context == grammarAccess.getContributionRule() ||
-				   context == grammarAccess.getElementLinkRule() ||
-				   context == grammarAccess.getGRLModelElementRule()) {
-					sequence_Contribution(context, (Contribution) semanticObject); 
 					return; 
 				}
 				else break;
@@ -95,16 +87,33 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case TGRLPackage.CONTRIBUTION_CONTEXT:
-				if(context == grammarAccess.getContributionContextRule() ||
-				   context == grammarAccess.getGRLModelElementRule()) {
+				if(context == grammarAccess.getContributionContextRule()) {
 					sequence_ContributionContext(context, (ContributionContext) semanticObject); 
 					return; 
 				}
 				else break;
 			case TGRLPackage.CONTRIBUTION_CONTEXT_GROUP:
-				if(context == grammarAccess.getContributionContextGroupRule() ||
-				   context == grammarAccess.getGRLModelElementRule()) {
+				if(context == grammarAccess.getContributionContextGroupRule()) {
 					sequence_ContributionContextGroup(context, (ContributionContextGroup) semanticObject); 
+					return; 
+				}
+				else break;
+			case TGRLPackage.CONTRIBUTION_ENDS:
+				if(context == grammarAccess.getConnectionRule() ||
+				   context == grammarAccess.getContributionEndsRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGRLBaseElementRule()) {
+					sequence_ContributionEnds(context, (ContributionEnds) semanticObject); 
+					return; 
+				}
+				else break;
+			case TGRLPackage.CONTRIBUTION_LINK:
+				if(context == grammarAccess.getContributionLinkRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getElementLinkRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
+				   context == grammarAccess.getGRLElementRule()) {
+					sequence_ContributionLink(context, (ContributionLink) semanticObject); 
 					return; 
 				}
 				else break;
@@ -114,19 +123,41 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case TGRLPackage.DECOMPOSITION:
-				if(context == grammarAccess.getDecompositionRule() ||
-				   context == grammarAccess.getElementLinkRule() ||
-				   context == grammarAccess.getGRLModelElementRule()) {
-					sequence_Decomposition(context, (Decomposition) semanticObject); 
+			case TGRLPackage.DECOMPOSITION_ENDS:
+				if(context == grammarAccess.getConnectionRule() ||
+				   context == grammarAccess.getDecompositionEndsRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGRLBaseElementRule()) {
+					sequence_DecompositionEnds(context, (DecompositionEnds) semanticObject); 
 					return; 
 				}
 				else break;
-			case TGRLPackage.DEPENDENCY:
-				if(context == grammarAccess.getDependencyRule() ||
+			case TGRLPackage.DECOMPOSITION_LINK:
+				if(context == grammarAccess.getDecompositionLinkRule() ||
+				   context == grammarAccess.getElementRule() ||
 				   context == grammarAccess.getElementLinkRule() ||
-				   context == grammarAccess.getGRLModelElementRule()) {
-					sequence_Dependency(context, (Dependency) semanticObject); 
+				   context == grammarAccess.getGRLBaseElementRule() ||
+				   context == grammarAccess.getGRLElementRule()) {
+					sequence_DecompositionLink(context, (DecompositionLink) semanticObject); 
+					return; 
+				}
+				else break;
+			case TGRLPackage.DEPENDENCY_ENDS:
+				if(context == grammarAccess.getConnectionRule() ||
+				   context == grammarAccess.getDependencyEndsRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGRLBaseElementRule()) {
+					sequence_DependencyEnds(context, (DependencyEnds) semanticObject); 
+					return; 
+				}
+				else break;
+			case TGRLPackage.DEPENDENCY_LINK:
+				if(context == grammarAccess.getDependencyLinkRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getElementLinkRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
+				   context == grammarAccess.getGRLElementRule()) {
+					sequence_DependencyLink(context, (DependencyLink) semanticObject); 
 					return; 
 				}
 				else break;
@@ -143,21 +174,22 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case TGRLPackage.EVALUATION_STRATEGY:
-				if(context == grammarAccess.getEvaluationStrategyRule() ||
-				   context == grammarAccess.getGRLModelElementRule()) {
+				if(context == grammarAccess.getEvaluationStrategyRule()) {
 					sequence_EvaluationStrategy(context, (EvaluationStrategy) semanticObject); 
 					return; 
 				}
 				else break;
-			case TGRLPackage.GR_LSPEC:
-				if(context == grammarAccess.getGRLspecRule()) {
-					sequence_GRLspec(context, (GRLspec) semanticObject); 
+			case TGRLPackage.GRL_SPECIFICATION:
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGRLSpecificationRule()) {
+					sequence_GRLSpecification(context, (GRLSpecification) semanticObject); 
 					return; 
 				}
 				else break;
 			case TGRLPackage.GOAL:
-				if(context == grammarAccess.getGRLLinkableElementRule() ||
-				   context == grammarAccess.getGRLModelElementRule() ||
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
+				   context == grammarAccess.getGRLElementRule() ||
 				   context == grammarAccess.getGoalRule() ||
 				   context == grammarAccess.getIntentionalElementRule()) {
 					sequence_Goal(context, (Goal) semanticObject); 
@@ -171,8 +203,9 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case TGRLPackage.INDICATOR:
-				if(context == grammarAccess.getGRLLinkableElementRule() ||
-				   context == grammarAccess.getGRLModelElementRule() ||
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
+				   context == grammarAccess.getGRLElementRule() ||
 				   context == grammarAccess.getIndicatorRule() ||
 				   context == grammarAccess.getIntentionalElementRule()) {
 					sequence_Indicator(context, (Indicator) semanticObject); 
@@ -180,16 +213,13 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case TGRLPackage.INDICATOR_GROUP:
-				if(context == grammarAccess.getGRLModelElementRule() ||
-				   context == grammarAccess.getIndicatorGroupRule()) {
+				if(context == grammarAccess.getIndicatorGroupRule()) {
 					sequence_IndicatorGroup(context, (IndicatorGroup) semanticObject); 
 					return; 
 				}
 				else break;
 			case TGRLPackage.INTENTIONAL_ELEMENT_REF:
-				if(context == grammarAccess.getGRLModelElementRule() ||
-				   context == grammarAccess.getGRLNodeRule() ||
-				   context == grammarAccess.getIntentionalElementRefRule()) {
+				if(context == grammarAccess.getIntentionalElementRefRule()) {
 					sequence_IntentionalElementRef(context, (IntentionalElementRef) semanticObject); 
 					return; 
 				}
@@ -207,23 +237,19 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case TGRLPackage.KPI_INFORMATION_ELEMENT:
-				if(context == grammarAccess.getGRLModelElementRule() ||
-				   context == grammarAccess.getKPIInformationElementRule()) {
+				if(context == grammarAccess.getKPIInformationElementRule()) {
 					sequence_KPIInformationElement(context, (KPIInformationElement) semanticObject); 
 					return; 
 				}
 				else break;
 			case TGRLPackage.KPI_INFORMATION_ELEMENT_REF:
-				if(context == grammarAccess.getGRLModelElementRule() ||
-				   context == grammarAccess.getGRLNodeRule() ||
-				   context == grammarAccess.getKPIInformationElementRefRule()) {
+				if(context == grammarAccess.getKPIInformationElementRefRule()) {
 					sequence_KPIInformationElementRef(context, (KPIInformationElementRef) semanticObject); 
 					return; 
 				}
 				else break;
 			case TGRLPackage.KPI_MODEL_LINK:
-				if(context == grammarAccess.getGRLModelElementRule() ||
-				   context == grammarAccess.getKPIModelLinkRule()) {
+				if(context == grammarAccess.getKPIModelLinkRule()) {
 					sequence_KPIModelLink(context, (KPIModelLink) semanticObject); 
 					return; 
 				}
@@ -247,25 +273,26 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case TGRLPackage.QUALITATIVE_MAPPINGS:
-				if(context == grammarAccess.getGRLModelElementRule() ||
-				   context == grammarAccess.getKPIConversionRule() ||
+				if(context == grammarAccess.getKPIConversionRule() ||
 				   context == grammarAccess.getQualitativeMappingsRule()) {
 					sequence_QualitativeMappings(context, (QualitativeMappings) semanticObject); 
 					return; 
 				}
 				else break;
-			case TGRLPackage.RESSOURCE:
-				if(context == grammarAccess.getGRLLinkableElementRule() ||
-				   context == grammarAccess.getGRLModelElementRule() ||
+			case TGRLPackage.RESOURCE:
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
+				   context == grammarAccess.getGRLElementRule() ||
 				   context == grammarAccess.getIntentionalElementRule() ||
-				   context == grammarAccess.getRessourceRule()) {
-					sequence_Ressource(context, (Ressource) semanticObject); 
+				   context == grammarAccess.getResourceRule()) {
+					sequence_Resource(context, (Resource) semanticObject); 
 					return; 
 				}
 				else break;
 			case TGRLPackage.SOFTGOAL:
-				if(context == grammarAccess.getGRLLinkableElementRule() ||
-				   context == grammarAccess.getGRLModelElementRule() ||
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
+				   context == grammarAccess.getGRLElementRule() ||
 				   context == grammarAccess.getIntentionalElementRule() ||
 				   context == grammarAccess.getSoftgoalRule()) {
 					sequence_Softgoal(context, (Softgoal) semanticObject); 
@@ -273,15 +300,15 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case TGRLPackage.STRATEGIES_GROUP:
-				if(context == grammarAccess.getGRLModelElementRule() ||
-				   context == grammarAccess.getStrategiesGroupRule()) {
+				if(context == grammarAccess.getStrategiesGroupRule()) {
 					sequence_StrategiesGroup(context, (StrategiesGroup) semanticObject); 
 					return; 
 				}
 				else break;
 			case TGRLPackage.TASK:
-				if(context == grammarAccess.getGRLLinkableElementRule() ||
-				   context == grammarAccess.getGRLModelElementRule() ||
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
+				   context == grammarAccess.getGRLElementRule() ||
 				   context == grammarAccess.getIntentionalElementRule() ||
 				   context == grammarAccess.getTaskRule()) {
 					sequence_Task(context, (Task) semanticObject); 
@@ -300,10 +327,8 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         importance=ImportanceType? 
 	 *         importanceQuantitative=INT? 
 	 *         description=STRING? 
-	 *         fillcolor=Color? 
-	 *         (includedActors+=[Actor|ID] includedActors+=[Actor|ID]*)? 
-	 *         (collapsedRefs+=[CollapsedActorRef|ID] collapsedRefs+=[CollapsedActorRef|ID]*)? 
-	 *         (intentionalElements+=IntentionalElement | elementLinks+=ElementLink)*
+	 *         fillColor=Color? 
+	 *         (elemets+=IntentionalElement | elemets+=ElementLink)*
 	 *     )
 	 */
 	protected void sequence_Actor(EObject context, Actor semanticObject) {
@@ -358,9 +383,9 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (start=INT? end=INT? step=INT?)
+	 *     (src=[IntentionalElement|QualifiedName] dest=[IntentionalElement|QualifiedName])
 	 */
-	protected void sequence_ContributionRange(EObject context, ContributionRange semanticObject) {
+	protected void sequence_ContributionEnds(EObject context, ContributionEnds semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -374,30 +399,57 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         quantitativeContribution=INT? 
 	 *         correlation=BOOLEAN? 
 	 *         description=STRING? 
+	 *         fillColor=Color? 
 	 *         (changes+=[ContributionChange|ID] changes+=[ContributionChange|ID]*)? 
-	 *         src=[GRLLinkableElement|QualifiedName] 
-	 *         dest=[GRLLinkableElement|QualifiedName]
+	 *         connections+=ContributionEnds+
 	 *     )
 	 */
-	protected void sequence_Contribution(EObject context, Contribution semanticObject) {
+	protected void sequence_ContributionLink(EObject context, ContributionLink semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=ID? label=STRING? description=STRING? src=[IntentionalElement|QualifiedName] dest=[IntentionalElement|QualifiedName])
+	 *     (start=INT? end=INT? step=INT?)
 	 */
-	protected void sequence_Decomposition(EObject context, Decomposition semanticObject) {
+	protected void sequence_ContributionRange(EObject context, ContributionRange semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=ID? label=STRING? description=STRING? src=[GRLLinkableElement|QualifiedName] dest=[GRLLinkableElement|QualifiedName])
+	 *     (src=[IntentionalElement|QualifiedName] dest=[IntentionalElement|QualifiedName])
 	 */
-	protected void sequence_Dependency(EObject context, Dependency semanticObject) {
+	protected void sequence_DecompositionEnds(EObject context, DecompositionEnds semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID? label=STRING? description=STRING? fillColor=Color? connections+=DecompositionEnds+)
+	 */
+	protected void sequence_DecompositionLink(EObject context, DecompositionLink semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (src=[IntentionalElement|QualifiedName] dest=[IntentionalElement|QualifiedName])
+	 */
+	protected void sequence_DependencyEnds(EObject context, DependencyEnds semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID? label=STRING? description=STRING? fillColor=Color? connections+=DependencyEnds+)
+	 */
+	protected void sequence_DependencyLink(EObject context, DependencyLink semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -447,24 +499,9 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         impactModel=ImpactModel? 
-	 *         (
-	 *             links+=ElementLink | 
-	 *             actors+=Actor | 
-	 *             intElements+=IntentionalElement | 
-	 *             groups+=StrategiesGroup | 
-	 *             strategies+=EvaluationStrategy | 
-	 *             contributionGroups+=ContributionContextGroup | 
-	 *             contributionContexts+=ContributionContext | 
-	 *             kpiConv+=KPIConversion | 
-	 *             kpiInformationElements+=KPIInformationElement | 
-	 *             kpiModelLinks+=KPIModelLink | 
-	 *             indicatorGroup+=IndicatorGroup
-	 *         )*
-	 *     )
+	 *     (name=ID? grlElements+=GRLElement*)
 	 */
-	protected void sequence_GRLspec(EObject context, GRLspec semanticObject) {
+	protected void sequence_GRLSpecification(EObject context, GRLSpecification semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -475,12 +512,10 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         label=STRING? 
 	 *         description=STRING? 
-	 *         fillcolor=Color? 
+	 *         fillColor=Color? 
 	 *         importance=ImportanceType? 
 	 *         decompositionType=DecompositionType? 
-	 *         importanceQuantitative=INT? 
-	 *         (refs+=[IntentionalElementRef|ID] refs+=[IntentionalElementRef|ID]*)? 
-	 *         (evals+=[Evaluation|ID] evals+=[Evaluation|ID]*)?
+	 *         importanceQuantitative=INT?
 	 *     )
 	 */
 	protected void sequence_Goal(EObject context, Goal semanticObject) {
@@ -519,7 +554,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         label=STRING? 
 	 *         description=STRING? 
-	 *         fillcolor=Color? 
+	 *         fillColor=Color? 
 	 *         importance=ImportanceType? 
 	 *         decompositionType=DecompositionType? 
 	 *         importanceQuantitative=INT? 
@@ -622,7 +657,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     gRLspecs+=GRLspec*
+	 *     gRLspecs+=GRLSpecification*
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -653,14 +688,13 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         label=STRING? 
 	 *         description=STRING? 
-	 *         fillcolor=Color? 
+	 *         fillColor=Color? 
 	 *         importance=ImportanceType? 
 	 *         decompositionType=DecompositionType? 
-	 *         importanceQuantitative=INT? 
-	 *         (refs+=[IntentionalElementRef|ID] refs+=[IntentionalElementRef|ID]*)?
+	 *         importanceQuantitative=INT?
 	 *     )
 	 */
-	protected void sequence_Ressource(EObject context, Ressource semanticObject) {
+	protected void sequence_Resource(EObject context, Resource semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -671,11 +705,10 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         label=STRING? 
 	 *         description=STRING? 
-	 *         fillcolor=Color? 
+	 *         fillColor=Color? 
 	 *         importance=ImportanceType? 
 	 *         decompositionType=DecompositionType? 
-	 *         importanceQuantitative=INT? 
-	 *         (refs+=[IntentionalElementRef|ID] refs+=[IntentionalElementRef|ID]*)?
+	 *         importanceQuantitative=INT?
 	 *     )
 	 */
 	protected void sequence_Softgoal(EObject context, Softgoal semanticObject) {
@@ -698,12 +731,10 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         label=STRING? 
 	 *         description=STRING? 
-	 *         fillcolor=Color? 
+	 *         fillColor=Color? 
 	 *         importance=ImportanceType? 
 	 *         decompositionType=DecompositionType? 
-	 *         importanceQuantitative=INT? 
-	 *         (refs+=[IntentionalElementRef|ID] refs+=[IntentionalElementRef|ID]*)? 
-	 *         (evals+=[Evaluation|ID] evals+=[Evaluation|ID]*)?
+	 *         importanceQuantitative=INT?
 	 *     )
 	 */
 	protected void sequence_Task(EObject context, Task semanticObject) {

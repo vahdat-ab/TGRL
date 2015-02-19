@@ -7,6 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.grl.tgrl.tGRL.CollapsedActorRef;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
@@ -18,6 +19,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.CollapsedActorRefImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.CollapsedActorRefImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.CollapsedActorRefImpl#getDescription <em>Description</em>}</li>
  * </ul>
@@ -25,8 +27,28 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *
  * @generated
  */
-public class CollapsedActorRefImpl extends GRLNodeImpl implements CollapsedActorRef
+public class CollapsedActorRefImpl extends MinimalEObjectImpl.Container implements CollapsedActorRef
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -93,6 +115,29 @@ public class CollapsedActorRefImpl extends GRLNodeImpl implements CollapsedActor
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.COLLAPSED_ACTOR_REF__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getLabel()
   {
     return label;
@@ -144,6 +189,8 @@ public class CollapsedActorRefImpl extends GRLNodeImpl implements CollapsedActor
   {
     switch (featureID)
     {
+      case TGRLPackage.COLLAPSED_ACTOR_REF__NAME:
+        return getName();
       case TGRLPackage.COLLAPSED_ACTOR_REF__LABEL:
         return getLabel();
       case TGRLPackage.COLLAPSED_ACTOR_REF__DESCRIPTION:
@@ -162,6 +209,9 @@ public class CollapsedActorRefImpl extends GRLNodeImpl implements CollapsedActor
   {
     switch (featureID)
     {
+      case TGRLPackage.COLLAPSED_ACTOR_REF__NAME:
+        setName((String)newValue);
+        return;
       case TGRLPackage.COLLAPSED_ACTOR_REF__LABEL:
         setLabel((String)newValue);
         return;
@@ -182,6 +232,9 @@ public class CollapsedActorRefImpl extends GRLNodeImpl implements CollapsedActor
   {
     switch (featureID)
     {
+      case TGRLPackage.COLLAPSED_ACTOR_REF__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case TGRLPackage.COLLAPSED_ACTOR_REF__LABEL:
         setLabel(LABEL_EDEFAULT);
         return;
@@ -202,6 +255,8 @@ public class CollapsedActorRefImpl extends GRLNodeImpl implements CollapsedActor
   {
     switch (featureID)
     {
+      case TGRLPackage.COLLAPSED_ACTOR_REF__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case TGRLPackage.COLLAPSED_ACTOR_REF__LABEL:
         return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
       case TGRLPackage.COLLAPSED_ACTOR_REF__DESCRIPTION:
@@ -221,7 +276,9 @@ public class CollapsedActorRefImpl extends GRLNodeImpl implements CollapsedActor
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (label: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", label: ");
     result.append(label);
     result.append(", description: ");
     result.append(description);

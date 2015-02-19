@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
@@ -32,7 +33,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *
  * @generated
  */
-public class StrategiesGroupImpl extends GRLModelElementImpl implements StrategiesGroup
+public class StrategiesGroupImpl extends MinimalEObjectImpl.Container implements StrategiesGroup
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.

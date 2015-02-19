@@ -5,37 +5,43 @@ package org.xtext.grl.tgrl.tGRL.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.xtext.grl.tgrl.tGRL.Contribution;
 import org.xtext.grl.tgrl.tGRL.ContributionChange;
+import org.xtext.grl.tgrl.tGRL.ContributionEnds;
+import org.xtext.grl.tgrl.tGRL.ContributionLink;
 import org.xtext.grl.tgrl.tGRL.ContributionType;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Contribution</b></em>'.
+ * An implementation of the model object '<em><b>Contribution Link</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionImpl#getContribution <em>Contribution</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionImpl#getQuantitativeContribution <em>Quantitative Contribution</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionImpl#getCorrelation <em>Correlation</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionImpl#getChanges <em>Changes</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionLinkImpl#getContribution <em>Contribution</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionLinkImpl#getQuantitativeContribution <em>Quantitative Contribution</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionLinkImpl#getCorrelation <em>Correlation</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionLinkImpl#getChanges <em>Changes</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionLinkImpl#getConnections <em>Connections</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ContributionImpl extends ElementLinkImpl implements Contribution
+public class ContributionLinkImpl extends ElementLinkImpl implements ContributionLink
 {
   /**
    * The default value of the '{@link #getContribution() <em>Contribution</em>}' attribute.
@@ -108,11 +114,21 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
   protected EList<ContributionChange> changes;
 
   /**
+   * The cached value of the '{@link #getConnections() <em>Connections</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getConnections()
+   * @generated
+   * @ordered
+   */
+  protected EList<ContributionEnds> connections;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ContributionImpl()
+  protected ContributionLinkImpl()
   {
     super();
   }
@@ -125,7 +141,7 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.CONTRIBUTION;
+    return TGRLPackage.Literals.CONTRIBUTION_LINK;
   }
 
   /**
@@ -148,7 +164,7 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
     ContributionType oldContribution = contribution;
     contribution = newContribution == null ? CONTRIBUTION_EDEFAULT : newContribution;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION__CONTRIBUTION, oldContribution, contribution));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION_LINK__CONTRIBUTION, oldContribution, contribution));
   }
 
   /**
@@ -171,7 +187,7 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
     int oldQuantitativeContribution = quantitativeContribution;
     quantitativeContribution = newQuantitativeContribution;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION__QUANTITATIVE_CONTRIBUTION, oldQuantitativeContribution, quantitativeContribution));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION_LINK__QUANTITATIVE_CONTRIBUTION, oldQuantitativeContribution, quantitativeContribution));
   }
 
   /**
@@ -194,7 +210,7 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
     String oldCorrelation = correlation;
     correlation = newCorrelation;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION__CORRELATION, oldCorrelation, correlation));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION_LINK__CORRELATION, oldCorrelation, correlation));
   }
 
   /**
@@ -206,9 +222,39 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
   {
     if (changes == null)
     {
-      changes = new EObjectResolvingEList<ContributionChange>(ContributionChange.class, this, TGRLPackage.CONTRIBUTION__CHANGES);
+      changes = new EObjectResolvingEList<ContributionChange>(ContributionChange.class, this, TGRLPackage.CONTRIBUTION_LINK__CHANGES);
     }
     return changes;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<ContributionEnds> getConnections()
+  {
+    if (connections == null)
+    {
+      connections = new EObjectContainmentEList<ContributionEnds>(ContributionEnds.class, this, TGRLPackage.CONTRIBUTION_LINK__CONNECTIONS);
+    }
+    return connections;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case TGRLPackage.CONTRIBUTION_LINK__CONNECTIONS:
+        return ((InternalEList<?>)getConnections()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -221,14 +267,16 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION__CONTRIBUTION:
+      case TGRLPackage.CONTRIBUTION_LINK__CONTRIBUTION:
         return getContribution();
-      case TGRLPackage.CONTRIBUTION__QUANTITATIVE_CONTRIBUTION:
+      case TGRLPackage.CONTRIBUTION_LINK__QUANTITATIVE_CONTRIBUTION:
         return getQuantitativeContribution();
-      case TGRLPackage.CONTRIBUTION__CORRELATION:
+      case TGRLPackage.CONTRIBUTION_LINK__CORRELATION:
         return getCorrelation();
-      case TGRLPackage.CONTRIBUTION__CHANGES:
+      case TGRLPackage.CONTRIBUTION_LINK__CHANGES:
         return getChanges();
+      case TGRLPackage.CONTRIBUTION_LINK__CONNECTIONS:
+        return getConnections();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -244,18 +292,22 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION__CONTRIBUTION:
+      case TGRLPackage.CONTRIBUTION_LINK__CONTRIBUTION:
         setContribution((ContributionType)newValue);
         return;
-      case TGRLPackage.CONTRIBUTION__QUANTITATIVE_CONTRIBUTION:
+      case TGRLPackage.CONTRIBUTION_LINK__QUANTITATIVE_CONTRIBUTION:
         setQuantitativeContribution((Integer)newValue);
         return;
-      case TGRLPackage.CONTRIBUTION__CORRELATION:
+      case TGRLPackage.CONTRIBUTION_LINK__CORRELATION:
         setCorrelation((String)newValue);
         return;
-      case TGRLPackage.CONTRIBUTION__CHANGES:
+      case TGRLPackage.CONTRIBUTION_LINK__CHANGES:
         getChanges().clear();
         getChanges().addAll((Collection<? extends ContributionChange>)newValue);
+        return;
+      case TGRLPackage.CONTRIBUTION_LINK__CONNECTIONS:
+        getConnections().clear();
+        getConnections().addAll((Collection<? extends ContributionEnds>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -271,17 +323,20 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION__CONTRIBUTION:
+      case TGRLPackage.CONTRIBUTION_LINK__CONTRIBUTION:
         setContribution(CONTRIBUTION_EDEFAULT);
         return;
-      case TGRLPackage.CONTRIBUTION__QUANTITATIVE_CONTRIBUTION:
+      case TGRLPackage.CONTRIBUTION_LINK__QUANTITATIVE_CONTRIBUTION:
         setQuantitativeContribution(QUANTITATIVE_CONTRIBUTION_EDEFAULT);
         return;
-      case TGRLPackage.CONTRIBUTION__CORRELATION:
+      case TGRLPackage.CONTRIBUTION_LINK__CORRELATION:
         setCorrelation(CORRELATION_EDEFAULT);
         return;
-      case TGRLPackage.CONTRIBUTION__CHANGES:
+      case TGRLPackage.CONTRIBUTION_LINK__CHANGES:
         getChanges().clear();
+        return;
+      case TGRLPackage.CONTRIBUTION_LINK__CONNECTIONS:
+        getConnections().clear();
         return;
     }
     super.eUnset(featureID);
@@ -297,14 +352,16 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION__CONTRIBUTION:
+      case TGRLPackage.CONTRIBUTION_LINK__CONTRIBUTION:
         return contribution != CONTRIBUTION_EDEFAULT;
-      case TGRLPackage.CONTRIBUTION__QUANTITATIVE_CONTRIBUTION:
+      case TGRLPackage.CONTRIBUTION_LINK__QUANTITATIVE_CONTRIBUTION:
         return quantitativeContribution != QUANTITATIVE_CONTRIBUTION_EDEFAULT;
-      case TGRLPackage.CONTRIBUTION__CORRELATION:
+      case TGRLPackage.CONTRIBUTION_LINK__CORRELATION:
         return CORRELATION_EDEFAULT == null ? correlation != null : !CORRELATION_EDEFAULT.equals(correlation);
-      case TGRLPackage.CONTRIBUTION__CHANGES:
+      case TGRLPackage.CONTRIBUTION_LINK__CHANGES:
         return changes != null && !changes.isEmpty();
+      case TGRLPackage.CONTRIBUTION_LINK__CONNECTIONS:
+        return connections != null && !connections.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -330,4 +387,4 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
     return result.toString();
   }
 
-} //ContributionImpl
+} //ContributionLinkImpl

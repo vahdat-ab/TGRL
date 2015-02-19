@@ -4,6 +4,8 @@ package org.xtext.grl.tgrl.tGRL;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Indicator Group</b></em>'.
@@ -24,7 +26,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface IndicatorGroup extends GRLModelElement
+public interface IndicatorGroup extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.

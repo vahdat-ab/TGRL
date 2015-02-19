@@ -66,22 +66,26 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
     switch (eClass.getClassifierID())
     {
       case TGRLPackage.MODEL: return createModel();
-      case TGRLPackage.GRL_MODEL_ELEMENT: return createGRLModelElement();
-      case TGRLPackage.GRL_NODE: return createGRLNode();
-      case TGRLPackage.GRL_LINKABLE_ELEMENT: return createGRLLinkableElement();
+      case TGRLPackage.ELEMENT: return createElement();
+      case TGRLPackage.GRL_BASE_ELEMENT: return createGRLBaseElement();
+      case TGRLPackage.GRL_ELEMENT: return createGRLElement();
       case TGRLPackage.INTENTIONAL_ELEMENT: return createIntentionalElement();
       case TGRLPackage.ELEMENT_LINK: return createElementLink();
-      case TGRLPackage.KPI_CONVERSION: return createKPIConversion();
-      case TGRLPackage.GR_LSPEC: return createGRLspec();
+      case TGRLPackage.GRL_SPECIFICATION: return createGRLSpecification();
       case TGRLPackage.ACTOR: return createActor();
       case TGRLPackage.SOFTGOAL: return createSoftgoal();
       case TGRLPackage.GOAL: return createGoal();
       case TGRLPackage.TASK: return createTask();
-      case TGRLPackage.RESSOURCE: return createRessource();
+      case TGRLPackage.RESOURCE: return createResource();
       case TGRLPackage.INDICATOR: return createIndicator();
-      case TGRLPackage.DECOMPOSITION: return createDecomposition();
-      case TGRLPackage.CONTRIBUTION: return createContribution();
-      case TGRLPackage.DEPENDENCY: return createDependency();
+      case TGRLPackage.CONNECTION: return createConnection();
+      case TGRLPackage.DECOMPOSITION_LINK: return createDecompositionLink();
+      case TGRLPackage.DECOMPOSITION_ENDS: return createDecompositionEnds();
+      case TGRLPackage.CONTRIBUTION_LINK: return createContributionLink();
+      case TGRLPackage.CONTRIBUTION_ENDS: return createContributionEnds();
+      case TGRLPackage.DEPENDENCY_LINK: return createDependencyLink();
+      case TGRLPackage.DEPENDENCY_ENDS: return createDependencyEnds();
+      case TGRLPackage.KPI_CONVERSION: return createKPIConversion();
       case TGRLPackage.BELIEF: return createBelief();
       case TGRLPackage.COLLAPSED_ACTOR_REF: return createCollapsedActorRef();
       case TGRLPackage.INTENTIONAL_ELEMENT_REF: return createIntentionalElementRef();
@@ -182,10 +186,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public GRLModelElement createGRLModelElement()
+  public Element createElement()
   {
-    GRLModelElementImpl grlModelElement = new GRLModelElementImpl();
-    return grlModelElement;
+    ElementImpl element = new ElementImpl();
+    return element;
   }
 
   /**
@@ -193,10 +197,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public GRLNode createGRLNode()
+  public GRLBaseElement createGRLBaseElement()
   {
-    GRLNodeImpl grlNode = new GRLNodeImpl();
-    return grlNode;
+    GRLBaseElementImpl grlBaseElement = new GRLBaseElementImpl();
+    return grlBaseElement;
   }
 
   /**
@@ -204,10 +208,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public GRLLinkableElement createGRLLinkableElement()
+  public GRLElement createGRLElement()
   {
-    GRLLinkableElementImpl grlLinkableElement = new GRLLinkableElementImpl();
-    return grlLinkableElement;
+    GRLElementImpl grlElement = new GRLElementImpl();
+    return grlElement;
   }
 
   /**
@@ -237,21 +241,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public KPIConversion createKPIConversion()
+  public GRLSpecification createGRLSpecification()
   {
-    KPIConversionImpl kpiConversion = new KPIConversionImpl();
-    return kpiConversion;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public GRLspec createGRLspec()
-  {
-    GRLspecImpl grLspec = new GRLspecImpl();
-    return grLspec;
+    GRLSpecificationImpl grlSpecification = new GRLSpecificationImpl();
+    return grlSpecification;
   }
 
   /**
@@ -303,10 +296,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Ressource createRessource()
+  public Resource createResource()
   {
-    RessourceImpl ressource = new RessourceImpl();
-    return ressource;
+    ResourceImpl resource = new ResourceImpl();
+    return resource;
   }
 
   /**
@@ -325,10 +318,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Decomposition createDecomposition()
+  public Connection createConnection()
   {
-    DecompositionImpl decomposition = new DecompositionImpl();
-    return decomposition;
+    ConnectionImpl connection = new ConnectionImpl();
+    return connection;
   }
 
   /**
@@ -336,10 +329,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Contribution createContribution()
+  public DecompositionLink createDecompositionLink()
   {
-    ContributionImpl contribution = new ContributionImpl();
-    return contribution;
+    DecompositionLinkImpl decompositionLink = new DecompositionLinkImpl();
+    return decompositionLink;
   }
 
   /**
@@ -347,10 +340,65 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Dependency createDependency()
+  public DecompositionEnds createDecompositionEnds()
   {
-    DependencyImpl dependency = new DependencyImpl();
-    return dependency;
+    DecompositionEndsImpl decompositionEnds = new DecompositionEndsImpl();
+    return decompositionEnds;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ContributionLink createContributionLink()
+  {
+    ContributionLinkImpl contributionLink = new ContributionLinkImpl();
+    return contributionLink;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ContributionEnds createContributionEnds()
+  {
+    ContributionEndsImpl contributionEnds = new ContributionEndsImpl();
+    return contributionEnds;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DependencyLink createDependencyLink()
+  {
+    DependencyLinkImpl dependencyLink = new DependencyLinkImpl();
+    return dependencyLink;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DependencyEnds createDependencyEnds()
+  {
+    DependencyEndsImpl dependencyEnds = new DependencyEndsImpl();
+    return dependencyEnds;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public KPIConversion createKPIConversion()
+  {
+    KPIConversionImpl kpiConversion = new KPIConversionImpl();
+    return kpiConversion;
   }
 
   /**

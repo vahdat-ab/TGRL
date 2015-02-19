@@ -22,14 +22,15 @@
     </scenarioGroups>
   </ucmspec>
   <grlspec>
-[for (actor : Actor | gRLspecs.actors)]
+[for (actor : Actor | gRLspecs.grlElements->selectByType(Actor))]
 	<actors name="[label/]" id="[id/]" description="[description/]" [getColor(actor)/] importance="[importance/]" importanceQuantitative="[importanceQuantitative/]" contRefs="[id/]R"/>
 [/for]
 [for (intentionalElement : IntentionalElement | getAllIntentionalElements(aModel))]
 	<intElements name="[label/]" id="[id/]" description="[description/]" [getColor(intentionalElement)/] decompositionType = "[decompositionType/]" importance="[importance/]" importanceQuantitative="[importanceQuantitative/]" [getType(intentionalElement)/]  [getLinkSrc(aModel, intentionalElement)/] [getLinksDest(aModel, intentionalElement)/] refs="[id/]R"/>
 [/for]
-[for (element : ElementLink | getAllElementLink(aModel))]
-	<links [getLinkType(element)/] name="[label/]" id="[id/]" refs="//@urndef/@specDiagrams.0/@connections.[i-1/]" dest="[dest.name/]" src="[src.name/]"/>
+[for (connection : Connection | getAllConnections(aModel))]
+	<links [getLinkType(connection)/] name="" id="[id/]" refs="//@urndef/@specDiagrams.0/@connections.[i+topIndex-1/]" dest="[dest.name/]" src="[src.name/]"/>
+	
 [/for]
 
     <groups name="StrategiesGroup3" id="3" strategies="4"/>

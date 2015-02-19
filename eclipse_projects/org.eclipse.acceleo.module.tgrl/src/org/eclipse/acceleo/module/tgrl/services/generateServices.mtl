@@ -36,14 +36,12 @@ type="Indicator"
 type="Ressource"
 [/if]
 [/template]
-[template public getLinkType(inElementLink : ElementLink) post(trim())]
-xsi:type="grl:[if (oclIsKindOf(Decomposition))]
+[template public getLinkType(inConnection : Connection) post(trim())]
+xsi:type="grl:[if (oclIsKindOf(DecompositionEnds))]
 Decomposition"
-[elseif (oclIsKindOf(Dependency))]
+[elseif (oclIsKindOf(DependencyEnds))]
 Dependency"
-[elseif (oclIsKindOf(Indicator))]
-Indicator"
-[elseif (oclIsKindOf(Contribution))]
+[elseif (oclIsKindOf(ContributionEnds))]
 Contribution" contribution="[inElementLink.oclAsType(Contribution).contribution/]" quantitativeContribution="[inElementLink.oclAsType(Contribution).quantitativeContribution/]" [if (inElementLink.oclAsType(Contribution).correlation->size()=0)]correlation="false"
 [else]correlation="[inElementLink.oclAsType(Contribution).correlation.toString()/]"[/if]
 [/if]
@@ -54,37 +52,37 @@ nodes="[for (elementLink : IntentionalElement | intentionalElements)][id/]R [/fo
 [/if]	
 [/template]
 
-[template public getColor(inGRLLinkableElement : GRLLinkableElement)]
-[if (fillcolor.toString()='white')]
-[elseif (fillcolor.toString()='black')]
+[template public getColor(inGRLElement : GRLElement)]
+[if (fillColor.toString()='white')]
+[elseif (fillColor.toString()='black')]
 filled="true" fillColor="0,0,0"
-[elseif (fillcolor.toString()='blue')]
+[elseif (fillColor.toString()='blue')]
 filled="true" fillColor="96,96,191"
-[elseif (fillcolor.toString()='green')]
+[elseif (fillColor.toString()='green')]
 filled="true" fillColor="96,191,96"
-[elseif (fillcolor.toString()='cyan')]
+[elseif (fillColor.toString()='cyan')]
 filled="true" fillColor="96,191,191"
-[elseif (fillcolor.toString()='red')]
+[elseif (fillColor.toString()='red')]
 filled="true" fillColor="191,96,96"
-[elseif (fillcolor.toString()='purple')]
+[elseif (fillColor.toString()='purple')]
 filled="true" fillColor="191,96,191"
-[elseif (fillcolor.toString()='yellow')]
+[elseif (fillColor.toString()='yellow')]
 filled="true" fillColor="191,191,96"
-[elseif (fillcolor.toString()='gray')]
+[elseif (fillColor.toString()='gray')]
 filled="true" fillColor="160,160,160"
-[elseif (fillcolor.toString()='lightGray')]
+[elseif (fillColor.toString()='lightGray')]
 filled="true" fillColor="191,191,191"
-[elseif (fillcolor.toString()='lightBlue')]
+[elseif (fillColor.toString()='lightBlue')]
 filled="true" fillColor="160,160,255"
-[elseif (fillcolor.toString()='lightGreen')]
+[elseif (fillColor.toString()='lightGreen')]
 filled="true" fillColor="160,255,160"
-[elseif (fillcolor.toString()='lightCray')]
+[elseif (fillColor.toString()='lightCray')]
 filled="true" fillColor="160,255,255"
-[elseif (fillcolor.toString()='lightRed')]
+[elseif (fillColor.toString()='lightRed')]
 filled="true" fillColor="255,160,160"
-[elseif (fillcolor.toString()='lightPurple')]
+[elseif (fillColor.toString()='lightPurple')]
 filled="true" fillColor="255,160,255"
-[elseif (fillcolor.toString()='lightYellow')]
+[elseif (fillColor.toString()='lightYellow')]
 filled="true" fillColor="255,255,160"
 [/if]
 [/template]

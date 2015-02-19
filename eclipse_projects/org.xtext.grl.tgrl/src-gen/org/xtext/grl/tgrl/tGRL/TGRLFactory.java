@@ -32,31 +32,31 @@ public interface TGRLFactory extends EFactory
   Model createModel();
 
   /**
-   * Returns a new object of class '<em>GRL Model Element</em>'.
+   * Returns a new object of class '<em>Element</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>GRL Model Element</em>'.
+   * @return a new object of class '<em>Element</em>'.
    * @generated
    */
-  GRLModelElement createGRLModelElement();
+  Element createElement();
 
   /**
-   * Returns a new object of class '<em>GRL Node</em>'.
+   * Returns a new object of class '<em>GRL Base Element</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>GRL Node</em>'.
+   * @return a new object of class '<em>GRL Base Element</em>'.
    * @generated
    */
-  GRLNode createGRLNode();
+  GRLBaseElement createGRLBaseElement();
 
   /**
-   * Returns a new object of class '<em>GRL Linkable Element</em>'.
+   * Returns a new object of class '<em>GRL Element</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>GRL Linkable Element</em>'.
+   * @return a new object of class '<em>GRL Element</em>'.
    * @generated
    */
-  GRLLinkableElement createGRLLinkableElement();
+  GRLElement createGRLElement();
 
   /**
    * Returns a new object of class '<em>Intentional Element</em>'.
@@ -77,22 +77,13 @@ public interface TGRLFactory extends EFactory
   ElementLink createElementLink();
 
   /**
-   * Returns a new object of class '<em>KPI Conversion</em>'.
+   * Returns a new object of class '<em>GRL Specification</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>KPI Conversion</em>'.
+   * @return a new object of class '<em>GRL Specification</em>'.
    * @generated
    */
-  KPIConversion createKPIConversion();
-
-  /**
-   * Returns a new object of class '<em>GR Lspec</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>GR Lspec</em>'.
-   * @generated
-   */
-  GRLspec createGRLspec();
+  GRLSpecification createGRLSpecification();
 
   /**
    * Returns a new object of class '<em>Actor</em>'.
@@ -131,13 +122,13 @@ public interface TGRLFactory extends EFactory
   Task createTask();
 
   /**
-   * Returns a new object of class '<em>Ressource</em>'.
+   * Returns a new object of class '<em>Resource</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Ressource</em>'.
+   * @return a new object of class '<em>Resource</em>'.
    * @generated
    */
-  Ressource createRessource();
+  Resource createResource();
 
   /**
    * Returns a new object of class '<em>Indicator</em>'.
@@ -149,31 +140,76 @@ public interface TGRLFactory extends EFactory
   Indicator createIndicator();
 
   /**
-   * Returns a new object of class '<em>Decomposition</em>'.
+   * Returns a new object of class '<em>Connection</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Decomposition</em>'.
+   * @return a new object of class '<em>Connection</em>'.
    * @generated
    */
-  Decomposition createDecomposition();
+  Connection createConnection();
 
   /**
-   * Returns a new object of class '<em>Contribution</em>'.
+   * Returns a new object of class '<em>Decomposition Link</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Contribution</em>'.
+   * @return a new object of class '<em>Decomposition Link</em>'.
    * @generated
    */
-  Contribution createContribution();
+  DecompositionLink createDecompositionLink();
 
   /**
-   * Returns a new object of class '<em>Dependency</em>'.
+   * Returns a new object of class '<em>Decomposition Ends</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Dependency</em>'.
+   * @return a new object of class '<em>Decomposition Ends</em>'.
    * @generated
    */
-  Dependency createDependency();
+  DecompositionEnds createDecompositionEnds();
+
+  /**
+   * Returns a new object of class '<em>Contribution Link</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Contribution Link</em>'.
+   * @generated
+   */
+  ContributionLink createContributionLink();
+
+  /**
+   * Returns a new object of class '<em>Contribution Ends</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Contribution Ends</em>'.
+   * @generated
+   */
+  ContributionEnds createContributionEnds();
+
+  /**
+   * Returns a new object of class '<em>Dependency Link</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dependency Link</em>'.
+   * @generated
+   */
+  DependencyLink createDependencyLink();
+
+  /**
+   * Returns a new object of class '<em>Dependency Ends</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dependency Ends</em>'.
+   * @generated
+   */
+  DependencyEnds createDependencyEnds();
+
+  /**
+   * Returns a new object of class '<em>KPI Conversion</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>KPI Conversion</em>'.
+   * @generated
+   */
+  KPIConversion createKPIConversion();
 
   /**
    * Returns a new object of class '<em>Belief</em>'.

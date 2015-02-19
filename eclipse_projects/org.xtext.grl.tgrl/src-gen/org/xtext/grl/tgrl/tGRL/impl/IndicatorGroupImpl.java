@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
@@ -35,7 +36,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *
  * @generated
  */
-public class IndicatorGroupImpl extends GRLModelElementImpl implements IndicatorGroup
+public class IndicatorGroupImpl extends MinimalEObjectImpl.Container implements IndicatorGroup
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.

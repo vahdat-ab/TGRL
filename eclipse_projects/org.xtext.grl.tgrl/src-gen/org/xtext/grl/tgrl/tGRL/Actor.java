@@ -12,10 +12,9 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getIncludedActors <em>Included Actors</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getCollapsedRefs <em>Collapsed Refs</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getIntentionalElements <em>Intentional Elements</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getElementLinks <em>Element Links</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getImportance <em>Importance</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getImportanceQuantitative <em>Importance Quantitative</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getElemets <em>Elemets</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,70 +22,77 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Actor extends GRLLinkableElement
+public interface Actor extends GRLElement
 {
   /**
-   * Returns the value of the '<em><b>Included Actors</b></em>' reference list.
-   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.Actor}.
+   * Returns the value of the '<em><b>Importance</b></em>' attribute.
+   * The literals are from the enumeration {@link org.xtext.grl.tgrl.tGRL.ImportanceType}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Included Actors</em>' reference list isn't clear,
+   * If the meaning of the '<em>Importance</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Included Actors</em>' reference list.
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getActor_IncludedActors()
+   * @return the value of the '<em>Importance</em>' attribute.
+   * @see org.xtext.grl.tgrl.tGRL.ImportanceType
+   * @see #setImportance(ImportanceType)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getActor_Importance()
    * @model
    * @generated
    */
-  EList<Actor> getIncludedActors();
+  ImportanceType getImportance();
 
   /**
-   * Returns the value of the '<em><b>Collapsed Refs</b></em>' reference list.
-   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.CollapsedActorRef}.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Actor#getImportance <em>Importance</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Importance</em>' attribute.
+   * @see org.xtext.grl.tgrl.tGRL.ImportanceType
+   * @see #getImportance()
+   * @generated
+   */
+  void setImportance(ImportanceType value);
+
+  /**
+   * Returns the value of the '<em><b>Importance Quantitative</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Collapsed Refs</em>' reference list isn't clear,
+   * If the meaning of the '<em>Importance Quantitative</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Collapsed Refs</em>' reference list.
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getActor_CollapsedRefs()
+   * @return the value of the '<em>Importance Quantitative</em>' attribute.
+   * @see #setImportanceQuantitative(int)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getActor_ImportanceQuantitative()
    * @model
    * @generated
    */
-  EList<CollapsedActorRef> getCollapsedRefs();
+  int getImportanceQuantitative();
 
   /**
-   * Returns the value of the '<em><b>Intentional Elements</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.IntentionalElement}.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Actor#getImportanceQuantitative <em>Importance Quantitative</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Importance Quantitative</em>' attribute.
+   * @see #getImportanceQuantitative()
+   * @generated
+   */
+  void setImportanceQuantitative(int value);
+
+  /**
+   * Returns the value of the '<em><b>Elemets</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.GRLElement}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Intentional Elements</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Elemets</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Intentional Elements</em>' containment reference list.
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getActor_IntentionalElements()
+   * @return the value of the '<em>Elemets</em>' containment reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getActor_Elemets()
    * @model containment="true"
    * @generated
    */
-  EList<IntentionalElement> getIntentionalElements();
-
-  /**
-   * Returns the value of the '<em><b>Element Links</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.ElementLink}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Element Links</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Element Links</em>' containment reference list.
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getActor_ElementLinks()
-   * @model containment="true"
-   * @generated
-   */
-  EList<ElementLink> getElementLinks();
+  EList<GRLElement> getElemets();
 
 } // Actor

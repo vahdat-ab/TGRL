@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
@@ -39,7 +40,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *
  * @generated
  */
-public class EvaluationStrategyImpl extends GRLModelElementImpl implements EvaluationStrategy
+public class EvaluationStrategyImpl extends MinimalEObjectImpl.Container implements EvaluationStrategy
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.

@@ -2,6 +2,7 @@
  */
 package org.xtext.grl.tgrl.tGRL;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +14,6 @@ package org.xtext.grl.tgrl.tGRL;
  * @model
  * @generated
  */
-public interface KPIConversion extends GRLModelElement
+public interface KPIConversion extends EObject
 {
 } // KPIConversion

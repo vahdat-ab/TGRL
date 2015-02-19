@@ -26,7 +26,7 @@ public interface Model extends EObject
 {
   /**
    * Returns the value of the '<em><b>GR Lspecs</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.GRLspec}.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.GRLSpecification}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>GR Lspecs</em>' containment reference list isn't clear,
@@ -38,6 +38,6 @@ public interface Model extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<GRLspec> getGRLspecs();
+  EList<GRLSpecification> getGRLspecs();
 
 } // Model

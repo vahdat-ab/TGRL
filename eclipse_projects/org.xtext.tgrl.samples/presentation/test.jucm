@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grl="http:///grl.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="Vahdat" created="February 16, 2015 7:08:06 PM EST" modified="February 19, 2015 3:11:49 PM EST" specVersion="3" urnVersion="1.27" nextGlobalID="43">
+  <ucmspec/>
+  <grlspec>
+    <intElements name="This is the fist" id="26" description="desc" linksDest="0 40" importance="High" importanceQuantitative="10" fillColor="255,255,160" filled="true" refs="35"/>
+    <intElements name="This is a goal" id="28" description="" linksDest="42" type="Goal" refs="36"/>
+    <intElements name="Indicator32" id="32" description="" type="Indicator" refs="37"/>
+    <intElements name="Softgoal30" id="30" description="" linksSrc="0 42" refs="38"/>
+    <intElements name="Goal31" id="31" description="" linksSrc="40" type="Goal" refs="39"/>
+    <actors name="Actor29" id="29" description="" contRefs="34"/>
+    <links xsi:type="grl:Dependency" name="Dependency0" id="0" refs="//@urndef/@specDiagrams.0/@connections.0" dest="26" src="30"/>
+    <links xsi:type="grl:Contribution" name="Contribution40" id="40" refs="//@urndef/@specDiagrams.0/@connections.1" dest="26" src="31"/>
+    <links xsi:type="grl:Decomposition" name="Decomposition42" id="42" refs="//@urndef/@specDiagrams.0/@connections.2" dest="28" src="30"/>
+    <groups name="StrategiesGroup3" id="3" strategies="4"/>
+    <strategies name="EvaluationStrategy4" id="4" author="Vahdat" group="3"/>
+    <impactModel/>
+    <indicatorGroup name="Time" id="7" isRedesignCategory="true"/>
+    <indicatorGroup name="Cost" id="8" isRedesignCategory="true"/>
+    <indicatorGroup name="Quality" id="9" isRedesignCategory="true"/>
+    <indicatorGroup name="Flexibility" id="10" isRedesignCategory="true"/>
+    <featureModel/>
+  </grlspec>
+  <urndef>
+    <specDiagrams xsi:type="grl:GRLGraph" name="GRLGraph2" id="2">
+      <nodes xsi:type="grl:IntentionalElementRef" name="Int26R" id="35" x="244" y="72" pred="//@urndef/@specDiagrams.0/@connections.0 //@urndef/@specDiagrams.0/@connections.1" def="26">
+        <metadata name="_height" value="45"/>
+        <metadata name="_width" value="110"/>
+      </nodes>
+      <nodes xsi:type="grl:IntentionalElementRef" name="Int28R" id="36" x="372" y="72" pred="//@urndef/@specDiagrams.0/@connections.2" def="28">
+        <metadata name="_height" value="45"/>
+        <metadata name="_width" value="110"/>
+      </nodes>
+      <nodes xsi:type="grl:IntentionalElementRef" name="Int32R" id="37" x="500" y="72" def="32">
+        <metadata name="_height" value="45"/>
+        <metadata name="_width" value="110"/>
+      </nodes>
+      <nodes xsi:type="grl:IntentionalElementRef" name="Int30R" id="38" x="244" y="267" contRef="34" succ="//@urndef/@specDiagrams.0/@connections.0 //@urndef/@specDiagrams.0/@connections.2" def="30">
+        <metadata name="_height" value="45"/>
+        <metadata name="_width" value="110"/>
+      </nodes>
+      <nodes xsi:type="grl:IntentionalElementRef" name="Int31R" id="39" x="119" y="267" contRef="34" succ="//@urndef/@specDiagrams.0/@connections.1" def="31">
+        <metadata name="_height" value="45"/>
+        <metadata name="_width" value="110"/>
+      </nodes>
+      <contRefs xsi:type="grl:ActorRef" name="ActorRef29R" id="34" x="58" y="159" width="465" height="206" contDef="29" nodes="38 39">
+        <label/>
+      </contRefs>
+      <connections xsi:type="grl:LinkRef" source="38" target="35" link="0"/>
+      <connections xsi:type="grl:LinkRef" source="39" target="35" link="40">
+        <label deltaX="30" deltaY="-30"/>
+      </connections>
+      <connections xsi:type="grl:LinkRef" source="38" target="36" link="42"/>
+    </specDiagrams>
+  </urndef>
+  <metadata name="_Use0to100EvaluationRange" value="false"/>
+</urn:URNspec>

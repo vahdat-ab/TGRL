@@ -8,10 +8,7 @@ import org.eclipse.xtext.conversion.ValueConverterException;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.parser.DefaultEcoreElementFactory;
 import org.eclipse.xtext.parser.IAstFactory;
-import org.xtext.grl.tgrl.tGRL.ElementLink;
-import org.xtext.grl.tgrl.tGRL.GRLModelElement;
-import org.xtext.grl.tgrl.tGRL.IntentionalElement;
-import org.xtext.grl.tgrl.tGRL.Softgoal;
+import org.xtext.grl.tgrl.tGRL.Element;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
@@ -29,10 +26,10 @@ public class TGRLRuntimeModule extends org.xtext.grl.tgrl.AbstractTGRLRuntimeMod
 				String ruleName, INode node) throws ValueConverterException {
 			// TODO Auto-generated method stub
 			super.set(object, feature, value, ruleName, node);
-			if (object instanceof GRLModelElement) {
+			if (object instanceof Element) {
 			
-				GRLModelElement gRLModelElement = (GRLModelElement) object;        
-				gRLModelElement.setId(id);
+				Element element = (Element) object;        
+				element.setId(id);
 			id++;
 			}
 		}

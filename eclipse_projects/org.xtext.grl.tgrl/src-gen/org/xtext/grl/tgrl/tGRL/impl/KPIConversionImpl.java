@@ -4,6 +4,8 @@ package org.xtext.grl.tgrl.tGRL.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.xtext.grl.tgrl.tGRL.KPIConversion;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
@@ -16,7 +18,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *
  * @generated
  */
-public class KPIConversionImpl extends GRLModelElementImpl implements KPIConversion
+public class KPIConversionImpl extends MinimalEObjectImpl.Container implements KPIConversion
 {
   /**
    * <!-- begin-user-doc -->

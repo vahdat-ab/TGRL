@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
@@ -37,7 +38,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *
  * @generated
  */
-public class ContributionContextImpl extends GRLModelElementImpl implements ContributionContext
+public class ContributionContextImpl extends MinimalEObjectImpl.Container implements ContributionContext
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.

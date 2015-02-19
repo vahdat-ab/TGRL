@@ -7,51 +7,52 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.grl.tgrl.tGRL.GRLNode;
+import org.xtext.grl.tgrl.tGRL.Element;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>GRL Node</b></em>'.
+ * An implementation of the model object '<em><b>Element</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GRLNodeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ElementImpl#getId <em>Id</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
+public class ElementImpl extends MinimalEObjectImpl.Container implements Element
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getId()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final int ID_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getId()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected int id = ID_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected GRLNodeImpl()
+  protected ElementImpl()
   {
     super();
   }
@@ -64,7 +65,7 @@ public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.GRL_NODE;
+    return TGRLPackage.Literals.ELEMENT;
   }
 
   /**
@@ -72,9 +73,9 @@ public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public int getId()
   {
-    return name;
+    return id;
   }
 
   /**
@@ -82,12 +83,12 @@ public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setId(int newId)
   {
-    String oldName = name;
-    name = newName;
+    int oldId = id;
+    id = newId;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.GRL_NODE__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.ELEMENT__ID, oldId, id));
   }
 
   /**
@@ -100,8 +101,8 @@ public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
   {
     switch (featureID)
     {
-      case TGRLPackage.GRL_NODE__NAME:
-        return getName();
+      case TGRLPackage.ELEMENT__ID:
+        return getId();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -116,8 +117,8 @@ public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
   {
     switch (featureID)
     {
-      case TGRLPackage.GRL_NODE__NAME:
-        setName((String)newValue);
+      case TGRLPackage.ELEMENT__ID:
+        setId((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -133,8 +134,8 @@ public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
   {
     switch (featureID)
     {
-      case TGRLPackage.GRL_NODE__NAME:
-        setName(NAME_EDEFAULT);
+      case TGRLPackage.ELEMENT__ID:
+        setId(ID_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -150,8 +151,8 @@ public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
   {
     switch (featureID)
     {
-      case TGRLPackage.GRL_NODE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case TGRLPackage.ELEMENT__ID:
+        return id != ID_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -167,10 +168,10 @@ public class GRLNodeImpl extends GRLModelElementImpl implements GRLNode
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
+    result.append(" (id: ");
+    result.append(id);
     result.append(')');
     return result.toString();
   }
 
-} //GRLNodeImpl
+} //ElementImpl

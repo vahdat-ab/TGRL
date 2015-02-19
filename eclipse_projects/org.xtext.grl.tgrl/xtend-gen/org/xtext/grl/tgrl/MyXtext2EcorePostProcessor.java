@@ -26,7 +26,7 @@ public class MyXtext2EcorePostProcessor implements IXtext2EcorePostProcessor {
     Iterable<EClass> _filter = Iterables.<EClass>filter(_eClassifiers, EClass.class);
     for (final EClass c : _filter) {
       String _name = c.getName();
-      boolean _equals = Objects.equal(_name, "GRLModelElement");
+      boolean _equals = Objects.equal(_name, "Element");
       if (_equals) {
         this.handle(c);
       }

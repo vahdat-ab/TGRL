@@ -4,26 +4,26 @@ package org.xtext.grl.tgrl.tGRL.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.xtext.grl.tgrl.tGRL.Ressource;
+import org.xtext.grl.tgrl.tGRL.DependencyEnds;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Ressource</b></em>'.
+ * An implementation of the model object '<em><b>Dependency Ends</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class RessourceImpl extends IntentionalElementImpl implements Ressource
+public class DependencyEndsImpl extends ConnectionImpl implements DependencyEnds
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected RessourceImpl()
+  protected DependencyEndsImpl()
   {
     super();
   }
@@ -36,7 +36,7 @@ public class RessourceImpl extends IntentionalElementImpl implements Ressource
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.RESSOURCE;
+    return TGRLPackage.Literals.DEPENDENCY_ENDS;
   }
 
-} //RessourceImpl
+} //DependencyEndsImpl

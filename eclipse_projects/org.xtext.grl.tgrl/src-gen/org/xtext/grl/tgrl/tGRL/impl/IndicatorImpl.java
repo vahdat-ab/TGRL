@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.xtext.grl.tgrl.tGRL.Indicator;
 import org.xtext.grl.tgrl.tGRL.IndicatorGroup;
+import org.xtext.grl.tgrl.tGRL.IntentionalElementRef;
 import org.xtext.grl.tgrl.tGRL.KPIModelLink;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
@@ -22,6 +23,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorImpl#getRefs <em>Refs</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorImpl#getKpiModelLinksDest <em>Kpi Model Links Dest</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorImpl#getGroups <em>Groups</em>}</li>
  * </ul>
@@ -31,6 +33,16 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  */
 public class IndicatorImpl extends IntentionalElementImpl implements Indicator
 {
+  /**
+   * The cached value of the '{@link #getRefs() <em>Refs</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRefs()
+   * @generated
+   * @ordered
+   */
+  protected EList<IntentionalElementRef> refs;
+
   /**
    * The cached value of the '{@link #getKpiModelLinksDest() <em>Kpi Model Links Dest</em>}' reference list.
    * <!-- begin-user-doc -->
@@ -77,6 +89,20 @@ public class IndicatorImpl extends IntentionalElementImpl implements Indicator
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<IntentionalElementRef> getRefs()
+  {
+    if (refs == null)
+    {
+      refs = new EObjectResolvingEList<IntentionalElementRef>(IntentionalElementRef.class, this, TGRLPackage.INDICATOR__REFS);
+    }
+    return refs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<KPIModelLink> getKpiModelLinksDest()
   {
     if (kpiModelLinksDest == null)
@@ -110,6 +136,8 @@ public class IndicatorImpl extends IntentionalElementImpl implements Indicator
   {
     switch (featureID)
     {
+      case TGRLPackage.INDICATOR__REFS:
+        return getRefs();
       case TGRLPackage.INDICATOR__KPI_MODEL_LINKS_DEST:
         return getKpiModelLinksDest();
       case TGRLPackage.INDICATOR__GROUPS:
@@ -129,6 +157,10 @@ public class IndicatorImpl extends IntentionalElementImpl implements Indicator
   {
     switch (featureID)
     {
+      case TGRLPackage.INDICATOR__REFS:
+        getRefs().clear();
+        getRefs().addAll((Collection<? extends IntentionalElementRef>)newValue);
+        return;
       case TGRLPackage.INDICATOR__KPI_MODEL_LINKS_DEST:
         getKpiModelLinksDest().clear();
         getKpiModelLinksDest().addAll((Collection<? extends KPIModelLink>)newValue);
@@ -151,6 +183,9 @@ public class IndicatorImpl extends IntentionalElementImpl implements Indicator
   {
     switch (featureID)
     {
+      case TGRLPackage.INDICATOR__REFS:
+        getRefs().clear();
+        return;
       case TGRLPackage.INDICATOR__KPI_MODEL_LINKS_DEST:
         getKpiModelLinksDest().clear();
         return;
@@ -171,6 +206,8 @@ public class IndicatorImpl extends IntentionalElementImpl implements Indicator
   {
     switch (featureID)
     {
+      case TGRLPackage.INDICATOR__REFS:
+        return refs != null && !refs.isEmpty();
       case TGRLPackage.INDICATOR__KPI_MODEL_LINKS_DEST:
         return kpiModelLinksDest != null && !kpiModelLinksDest.isEmpty();
       case TGRLPackage.INDICATOR__GROUPS:
