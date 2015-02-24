@@ -77,6 +77,15 @@ public interface TGRLFactory extends EFactory
   ElementLink createElementLink();
 
   /**
+   * Returns a new object of class '<em>In Line Element Link</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>In Line Element Link</em>'.
+   * @generated
+   */
+  InLineElementLink createInLineElementLink();
+
+  /**
    * Returns a new object of class '<em>GRL Specification</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -140,67 +149,85 @@ public interface TGRLFactory extends EFactory
   Indicator createIndicator();
 
   /**
-   * Returns a new object of class '<em>Connection</em>'.
+   * Returns a new object of class '<em>Decomposition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Connection</em>'.
+   * @return a new object of class '<em>Decomposition</em>'.
    * @generated
    */
-  Connection createConnection();
+  Decomposition createDecomposition();
 
   /**
-   * Returns a new object of class '<em>Decomposition Link</em>'.
+   * Returns a new object of class '<em>In Line Decomposition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Decomposition Link</em>'.
+   * @return a new object of class '<em>In Line Decomposition</em>'.
    * @generated
    */
-  DecompositionLink createDecompositionLink();
+  InLineDecomposition createInLineDecomposition();
 
   /**
-   * Returns a new object of class '<em>Decomposition Ends</em>'.
+   * Returns a new object of class '<em>Decomposition End</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Decomposition Ends</em>'.
+   * @return a new object of class '<em>Decomposition End</em>'.
    * @generated
    */
-  DecompositionEnds createDecompositionEnds();
+  DecompositionEnd createDecompositionEnd();
 
   /**
-   * Returns a new object of class '<em>Contribution Link</em>'.
+   * Returns a new object of class '<em>Contribution</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Contribution Link</em>'.
+   * @return a new object of class '<em>Contribution</em>'.
    * @generated
    */
-  ContributionLink createContributionLink();
+  Contribution createContribution();
 
   /**
-   * Returns a new object of class '<em>Contribution Ends</em>'.
+   * Returns a new object of class '<em>In Line Contribution</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Contribution Ends</em>'.
+   * @return a new object of class '<em>In Line Contribution</em>'.
    * @generated
    */
-  ContributionEnds createContributionEnds();
+  InLineContribution createInLineContribution();
 
   /**
-   * Returns a new object of class '<em>Dependency Link</em>'.
+   * Returns a new object of class '<em>Contribution End</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Dependency Link</em>'.
+   * @return a new object of class '<em>Contribution End</em>'.
    * @generated
    */
-  DependencyLink createDependencyLink();
+  ContributionEnd createContributionEnd();
 
   /**
-   * Returns a new object of class '<em>Dependency Ends</em>'.
+   * Returns a new object of class '<em>Dependency</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Dependency Ends</em>'.
+   * @return a new object of class '<em>Dependency</em>'.
    * @generated
    */
-  DependencyEnds createDependencyEnds();
+  Dependency createDependency();
+
+  /**
+   * Returns a new object of class '<em>In Line Dependency</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>In Line Dependency</em>'.
+   * @generated
+   */
+  InLineDependency createInLineDependency();
+
+  /**
+   * Returns a new object of class '<em>Dependency End</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dependency End</em>'.
+   * @generated
+   */
+  DependencyEnd createDependencyEnd();
 
   /**
    * Returns a new object of class '<em>KPI Conversion</em>'.

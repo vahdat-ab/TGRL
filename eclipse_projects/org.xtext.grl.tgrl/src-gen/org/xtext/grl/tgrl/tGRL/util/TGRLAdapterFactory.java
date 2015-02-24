@@ -105,6 +105,11 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
         return createElementLinkAdapter();
       }
       @Override
+      public Adapter caseInLineElementLink(InLineElementLink object)
+      {
+        return createInLineElementLinkAdapter();
+      }
+      @Override
       public Adapter caseGRLSpecification(GRLSpecification object)
       {
         return createGRLSpecificationAdapter();
@@ -140,39 +145,49 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
         return createIndicatorAdapter();
       }
       @Override
-      public Adapter caseConnection(Connection object)
+      public Adapter caseDecomposition(Decomposition object)
       {
-        return createConnectionAdapter();
+        return createDecompositionAdapter();
       }
       @Override
-      public Adapter caseDecompositionLink(DecompositionLink object)
+      public Adapter caseInLineDecomposition(InLineDecomposition object)
       {
-        return createDecompositionLinkAdapter();
+        return createInLineDecompositionAdapter();
       }
       @Override
-      public Adapter caseDecompositionEnds(DecompositionEnds object)
+      public Adapter caseDecompositionEnd(DecompositionEnd object)
       {
-        return createDecompositionEndsAdapter();
+        return createDecompositionEndAdapter();
       }
       @Override
-      public Adapter caseContributionLink(ContributionLink object)
+      public Adapter caseContribution(Contribution object)
       {
-        return createContributionLinkAdapter();
+        return createContributionAdapter();
       }
       @Override
-      public Adapter caseContributionEnds(ContributionEnds object)
+      public Adapter caseInLineContribution(InLineContribution object)
       {
-        return createContributionEndsAdapter();
+        return createInLineContributionAdapter();
       }
       @Override
-      public Adapter caseDependencyLink(DependencyLink object)
+      public Adapter caseContributionEnd(ContributionEnd object)
       {
-        return createDependencyLinkAdapter();
+        return createContributionEndAdapter();
       }
       @Override
-      public Adapter caseDependencyEnds(DependencyEnds object)
+      public Adapter caseDependency(Dependency object)
       {
-        return createDependencyEndsAdapter();
+        return createDependencyAdapter();
+      }
+      @Override
+      public Adapter caseInLineDependency(InLineDependency object)
+      {
+        return createInLineDependencyAdapter();
+      }
+      @Override
+      public Adapter caseDependencyEnd(DependencyEnd object)
+      {
+        return createDependencyEndAdapter();
       }
       @Override
       public Adapter caseKPIConversion(KPIConversion object)
@@ -397,6 +412,21 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.InLineElementLink <em>In Line Element Link</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.grl.tgrl.tGRL.InLineElementLink
+   * @generated
+   */
+  public Adapter createInLineElementLinkAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.GRLSpecification <em>GRL Specification</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -502,106 +532,136 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.Connection <em>Connection</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.Decomposition <em>Decomposition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.Connection
+   * @see org.xtext.grl.tgrl.tGRL.Decomposition
    * @generated
    */
-  public Adapter createConnectionAdapter()
+  public Adapter createDecompositionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.DecompositionLink <em>Decomposition Link</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.InLineDecomposition <em>In Line Decomposition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.DecompositionLink
+   * @see org.xtext.grl.tgrl.tGRL.InLineDecomposition
    * @generated
    */
-  public Adapter createDecompositionLinkAdapter()
+  public Adapter createInLineDecompositionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.DecompositionEnds <em>Decomposition Ends</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.DecompositionEnd <em>Decomposition End</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.DecompositionEnds
+   * @see org.xtext.grl.tgrl.tGRL.DecompositionEnd
    * @generated
    */
-  public Adapter createDecompositionEndsAdapter()
+  public Adapter createDecompositionEndAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.ContributionLink <em>Contribution Link</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.Contribution <em>Contribution</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.ContributionLink
+   * @see org.xtext.grl.tgrl.tGRL.Contribution
    * @generated
    */
-  public Adapter createContributionLinkAdapter()
+  public Adapter createContributionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.ContributionEnds <em>Contribution Ends</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.InLineContribution <em>In Line Contribution</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.ContributionEnds
+   * @see org.xtext.grl.tgrl.tGRL.InLineContribution
    * @generated
    */
-  public Adapter createContributionEndsAdapter()
+  public Adapter createInLineContributionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.DependencyLink <em>Dependency Link</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.ContributionEnd <em>Contribution End</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.DependencyLink
+   * @see org.xtext.grl.tgrl.tGRL.ContributionEnd
    * @generated
    */
-  public Adapter createDependencyLinkAdapter()
+  public Adapter createContributionEndAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.DependencyEnds <em>Dependency Ends</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.Dependency <em>Dependency</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.DependencyEnds
+   * @see org.xtext.grl.tgrl.tGRL.Dependency
    * @generated
    */
-  public Adapter createDependencyEndsAdapter()
+  public Adapter createDependencyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.InLineDependency <em>In Line Dependency</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.grl.tgrl.tGRL.InLineDependency
+   * @generated
+   */
+  public Adapter createInLineDependencyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.DependencyEnd <em>Dependency End</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.grl.tgrl.tGRL.DependencyEnd
+   * @generated
+   */
+  public Adapter createDependencyEndAdapter()
   {
     return null;
   }

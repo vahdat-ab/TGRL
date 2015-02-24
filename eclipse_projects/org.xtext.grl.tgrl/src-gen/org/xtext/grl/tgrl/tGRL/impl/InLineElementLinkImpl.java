@@ -4,26 +4,26 @@ package org.xtext.grl.tgrl.tGRL.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.xtext.grl.tgrl.tGRL.DependencyEnds;
+import org.xtext.grl.tgrl.tGRL.InLineElementLink;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Dependency Ends</b></em>'.
+ * An implementation of the model object '<em><b>In Line Element Link</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class DependencyEndsImpl extends ConnectionImpl implements DependencyEnds
+public class InLineElementLinkImpl extends GRLBaseElementImpl implements InLineElementLink
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DependencyEndsImpl()
+  protected InLineElementLinkImpl()
   {
     super();
   }
@@ -36,7 +36,7 @@ public class DependencyEndsImpl extends ConnectionImpl implements DependencyEnds
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.DEPENDENCY_ENDS;
+    return TGRLPackage.Literals.IN_LINE_ELEMENT_LINK;
   }
 
-} //DependencyEndsImpl
+} //InLineElementLinkImpl

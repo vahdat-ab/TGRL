@@ -71,6 +71,7 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
       case TGRLPackage.GRL_ELEMENT: return createGRLElement();
       case TGRLPackage.INTENTIONAL_ELEMENT: return createIntentionalElement();
       case TGRLPackage.ELEMENT_LINK: return createElementLink();
+      case TGRLPackage.IN_LINE_ELEMENT_LINK: return createInLineElementLink();
       case TGRLPackage.GRL_SPECIFICATION: return createGRLSpecification();
       case TGRLPackage.ACTOR: return createActor();
       case TGRLPackage.SOFTGOAL: return createSoftgoal();
@@ -78,13 +79,15 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
       case TGRLPackage.TASK: return createTask();
       case TGRLPackage.RESOURCE: return createResource();
       case TGRLPackage.INDICATOR: return createIndicator();
-      case TGRLPackage.CONNECTION: return createConnection();
-      case TGRLPackage.DECOMPOSITION_LINK: return createDecompositionLink();
-      case TGRLPackage.DECOMPOSITION_ENDS: return createDecompositionEnds();
-      case TGRLPackage.CONTRIBUTION_LINK: return createContributionLink();
-      case TGRLPackage.CONTRIBUTION_ENDS: return createContributionEnds();
-      case TGRLPackage.DEPENDENCY_LINK: return createDependencyLink();
-      case TGRLPackage.DEPENDENCY_ENDS: return createDependencyEnds();
+      case TGRLPackage.DECOMPOSITION: return createDecomposition();
+      case TGRLPackage.IN_LINE_DECOMPOSITION: return createInLineDecomposition();
+      case TGRLPackage.DECOMPOSITION_END: return createDecompositionEnd();
+      case TGRLPackage.CONTRIBUTION: return createContribution();
+      case TGRLPackage.IN_LINE_CONTRIBUTION: return createInLineContribution();
+      case TGRLPackage.CONTRIBUTION_END: return createContributionEnd();
+      case TGRLPackage.DEPENDENCY: return createDependency();
+      case TGRLPackage.IN_LINE_DEPENDENCY: return createInLineDependency();
+      case TGRLPackage.DEPENDENCY_END: return createDependencyEnd();
       case TGRLPackage.KPI_CONVERSION: return createKPIConversion();
       case TGRLPackage.BELIEF: return createBelief();
       case TGRLPackage.COLLAPSED_ACTOR_REF: return createCollapsedActorRef();
@@ -241,6 +244,17 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public InLineElementLink createInLineElementLink()
+  {
+    InLineElementLinkImpl inLineElementLink = new InLineElementLinkImpl();
+    return inLineElementLink;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public GRLSpecification createGRLSpecification()
   {
     GRLSpecificationImpl grlSpecification = new GRLSpecificationImpl();
@@ -318,10 +332,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Connection createConnection()
+  public Decomposition createDecomposition()
   {
-    ConnectionImpl connection = new ConnectionImpl();
-    return connection;
+    DecompositionImpl decomposition = new DecompositionImpl();
+    return decomposition;
   }
 
   /**
@@ -329,10 +343,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public DecompositionLink createDecompositionLink()
+  public InLineDecomposition createInLineDecomposition()
   {
-    DecompositionLinkImpl decompositionLink = new DecompositionLinkImpl();
-    return decompositionLink;
+    InLineDecompositionImpl inLineDecomposition = new InLineDecompositionImpl();
+    return inLineDecomposition;
   }
 
   /**
@@ -340,10 +354,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public DecompositionEnds createDecompositionEnds()
+  public DecompositionEnd createDecompositionEnd()
   {
-    DecompositionEndsImpl decompositionEnds = new DecompositionEndsImpl();
-    return decompositionEnds;
+    DecompositionEndImpl decompositionEnd = new DecompositionEndImpl();
+    return decompositionEnd;
   }
 
   /**
@@ -351,10 +365,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ContributionLink createContributionLink()
+  public Contribution createContribution()
   {
-    ContributionLinkImpl contributionLink = new ContributionLinkImpl();
-    return contributionLink;
+    ContributionImpl contribution = new ContributionImpl();
+    return contribution;
   }
 
   /**
@@ -362,10 +376,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ContributionEnds createContributionEnds()
+  public InLineContribution createInLineContribution()
   {
-    ContributionEndsImpl contributionEnds = new ContributionEndsImpl();
-    return contributionEnds;
+    InLineContributionImpl inLineContribution = new InLineContributionImpl();
+    return inLineContribution;
   }
 
   /**
@@ -373,10 +387,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public DependencyLink createDependencyLink()
+  public ContributionEnd createContributionEnd()
   {
-    DependencyLinkImpl dependencyLink = new DependencyLinkImpl();
-    return dependencyLink;
+    ContributionEndImpl contributionEnd = new ContributionEndImpl();
+    return contributionEnd;
   }
 
   /**
@@ -384,10 +398,32 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public DependencyEnds createDependencyEnds()
+  public Dependency createDependency()
   {
-    DependencyEndsImpl dependencyEnds = new DependencyEndsImpl();
-    return dependencyEnds;
+    DependencyImpl dependency = new DependencyImpl();
+    return dependency;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InLineDependency createInLineDependency()
+  {
+    InLineDependencyImpl inLineDependency = new InLineDependencyImpl();
+    return inLineDependency;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DependencyEnd createDependencyEnd()
+  {
+    DependencyEndImpl dependencyEnd = new DependencyEndImpl();
+    return dependencyEnd;
   }
 
   /**

@@ -2,48 +2,53 @@
  */
 package org.xtext.grl.tgrl.tGRL.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.xtext.grl.tgrl.tGRL.ElementLink;
-import org.xtext.grl.tgrl.tGRL.IntentionalElement;
+import org.xtext.grl.tgrl.tGRL.DecompositionEnd;
+import org.xtext.grl.tgrl.tGRL.InLineDecomposition;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Element Link</b></em>'.
+ * An implementation of the model object '<em><b>In Line Decomposition</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ElementLinkImpl#getSrc <em>Src</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.InLineDecompositionImpl#getDest <em>Dest</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ElementLinkImpl extends GRLElementImpl implements ElementLink
+public class InLineDecompositionImpl extends InLineElementLinkImpl implements InLineDecomposition
 {
   /**
-   * The cached value of the '{@link #getSrc() <em>Src</em>}' reference.
+   * The cached value of the '{@link #getDest() <em>Dest</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSrc()
+   * @see #getDest()
    * @generated
    * @ordered
    */
-  protected IntentionalElement src;
+  protected EList<DecompositionEnd> dest;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ElementLinkImpl()
+  protected InLineDecompositionImpl()
   {
     super();
   }
@@ -56,7 +61,7 @@ public class ElementLinkImpl extends GRLElementImpl implements ElementLink
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.ELEMENT_LINK;
+    return TGRLPackage.Literals.IN_LINE_DECOMPOSITION;
   }
 
   /**
@@ -64,19 +69,13 @@ public class ElementLinkImpl extends GRLElementImpl implements ElementLink
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntentionalElement getSrc()
+  public EList<DecompositionEnd> getDest()
   {
-    if (src != null && src.eIsProxy())
+    if (dest == null)
     {
-      InternalEObject oldSrc = (InternalEObject)src;
-      src = (IntentionalElement)eResolveProxy(oldSrc);
-      if (src != oldSrc)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.ELEMENT_LINK__SRC, oldSrc, src));
-      }
+      dest = new EObjectContainmentEList<DecompositionEnd>(DecompositionEnd.class, this, TGRLPackage.IN_LINE_DECOMPOSITION__DEST);
     }
-    return src;
+    return dest;
   }
 
   /**
@@ -84,22 +83,15 @@ public class ElementLinkImpl extends GRLElementImpl implements ElementLink
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntentionalElement basicGetSrc()
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    return src;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSrc(IntentionalElement newSrc)
-  {
-    IntentionalElement oldSrc = src;
-    src = newSrc;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.ELEMENT_LINK__SRC, oldSrc, src));
+    switch (featureID)
+    {
+      case TGRLPackage.IN_LINE_DECOMPOSITION__DEST:
+        return ((InternalEList<?>)getDest()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -112,9 +104,8 @@ public class ElementLinkImpl extends GRLElementImpl implements ElementLink
   {
     switch (featureID)
     {
-      case TGRLPackage.ELEMENT_LINK__SRC:
-        if (resolve) return getSrc();
-        return basicGetSrc();
+      case TGRLPackage.IN_LINE_DECOMPOSITION__DEST:
+        return getDest();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -124,13 +115,15 @@ public class ElementLinkImpl extends GRLElementImpl implements ElementLink
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case TGRLPackage.ELEMENT_LINK__SRC:
-        setSrc((IntentionalElement)newValue);
+      case TGRLPackage.IN_LINE_DECOMPOSITION__DEST:
+        getDest().clear();
+        getDest().addAll((Collection<? extends DecompositionEnd>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -146,8 +139,8 @@ public class ElementLinkImpl extends GRLElementImpl implements ElementLink
   {
     switch (featureID)
     {
-      case TGRLPackage.ELEMENT_LINK__SRC:
-        setSrc((IntentionalElement)null);
+      case TGRLPackage.IN_LINE_DECOMPOSITION__DEST:
+        getDest().clear();
         return;
     }
     super.eUnset(featureID);
@@ -163,10 +156,10 @@ public class ElementLinkImpl extends GRLElementImpl implements ElementLink
   {
     switch (featureID)
     {
-      case TGRLPackage.ELEMENT_LINK__SRC:
-        return src != null;
+      case TGRLPackage.IN_LINE_DECOMPOSITION__DEST:
+        return dest != null && !dest.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //ElementLinkImpl
+} //InLineDecompositionImpl

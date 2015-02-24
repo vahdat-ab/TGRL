@@ -17,7 +17,7 @@ import org.xtext.grl.tgrl.tGRL.Model;
 public class ModelFeatures {
 	public List<IntentionalElement> getAllIntentionalElements(Model inModel)	{
 		List<IntentionalElement> output = new ArrayList<IntentionalElement>();
-		for (GRLSpecification grlspec : inModel.getGRLspecs()) {
+		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
 			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
 				if (grlElement1 instanceof IntentionalElement) {
 					output.add((IntentionalElement)grlElement1);	
@@ -35,7 +35,7 @@ public class ModelFeatures {
 	}
 	public List<ElementLink> getAllElementLink(Model inModel)	{
 		List<ElementLink> output = new ArrayList<ElementLink>();
-		for (GRLSpecification grlspec : inModel.getGRLspecs()) {
+		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
 			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
 				if (grlElement1 instanceof ElementLink) {
 					output.add((ElementLink)grlElement1);	

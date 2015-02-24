@@ -12,8 +12,12 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getLabel <em>Label</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getImportance <em>Importance</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getImportanceQuantitative <em>Importance Quantitative</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getFillColor <em>Fill Color</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getElemets <em>Elemets</em>}</li>
  * </ul>
  * </p>
@@ -24,6 +28,58 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Actor extends GRLElement
 {
+  /**
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getActor_Name()
+   * @model
+   * @generated
+   */
+  String getName();
+
+  /**
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Actor#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
+  void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Label</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Label</em>' attribute.
+   * @see #setLabel(String)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getActor_Label()
+   * @model
+   * @generated
+   */
+  String getLabel();
+
+  /**
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Actor#getLabel <em>Label</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Label</em>' attribute.
+   * @see #getLabel()
+   * @generated
+   */
+  void setLabel(String value);
+
   /**
    * Returns the value of the '<em><b>Importance</b></em>' attribute.
    * The literals are from the enumeration {@link org.xtext.grl.tgrl.tGRL.ImportanceType}.
@@ -78,6 +134,61 @@ public interface Actor extends GRLElement
    * @generated
    */
   void setImportanceQuantitative(int value);
+
+  /**
+   * Returns the value of the '<em><b>Description</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Description</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Description</em>' attribute.
+   * @see #setDescription(String)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getActor_Description()
+   * @model
+   * @generated
+   */
+  String getDescription();
+
+  /**
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Actor#getDescription <em>Description</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Description</em>' attribute.
+   * @see #getDescription()
+   * @generated
+   */
+  void setDescription(String value);
+
+  /**
+   * Returns the value of the '<em><b>Fill Color</b></em>' attribute.
+   * The literals are from the enumeration {@link org.xtext.grl.tgrl.tGRL.Color}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Fill Color</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Fill Color</em>' attribute.
+   * @see org.xtext.grl.tgrl.tGRL.Color
+   * @see #setFillColor(Color)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getActor_FillColor()
+   * @model
+   * @generated
+   */
+  Color getFillColor();
+
+  /**
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Actor#getFillColor <em>Fill Color</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Fill Color</em>' attribute.
+   * @see org.xtext.grl.tgrl.tGRL.Color
+   * @see #getFillColor()
+   * @generated
+   */
+  void setFillColor(Color value);
 
   /**
    * Returns the value of the '<em><b>Elemets</b></em>' containment reference list.

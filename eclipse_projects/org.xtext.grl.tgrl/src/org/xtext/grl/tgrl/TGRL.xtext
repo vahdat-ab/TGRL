@@ -10,22 +10,26 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 generate tGRL "http://www.xtext.org/grl/tgrl/TGRL"
 
 Model:
-	gRLspecs+=GRLSpecification*;
+	gRLspecifications+=GRLSpecification*;
 
 Element:
 	GRLSpecification | GRLBaseElement
 ;
 GRLBaseElement:
-	 GRLElement | Connection
+	 GRLElement | InLineElementLink
 ;
 GRLElement:
-	IntentionalElement | ElementLink | Actor 
+	IntentionalElement | ElementLink | Actor  
 ;
 IntentionalElement:
 	 Softgoal | Goal  | Task | Resource | Indicator
 ;
+
 ElementLink: 
-	DecompositionLink | ContributionLink | DependencyLink
+	Decomposition | Contribution | Dependency
+;
+InLineElementLink: 
+	InLineDecomposition | InLineContribution | InLineDependency
 ;
 GRLSpecification: 
 	'grl' (name=ID)? '{'
@@ -46,12 +50,11 @@ Actor:
 	'actor' name= ID '{'
 		(
 		('name' '=' label =STRING ';')?&	
-		('importance' '=' importance=ImportanceType ';')?&
 		/*
-		 *TODO I must give a default value, which is zero, to this attribute.
+		 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
 		 * 		This can be done through the post processing mechanism in xText 
 		 */
-		('importanceQuantitative' '=' importanceQuantitative = INT ';')?&
+		( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
 		('description' '=' description=STRING ';')?&
 		('color' '=' fillColor = Color ';')?&
 		(elemets+=IntentionalElement  | elemets+=ElementLink)*	
@@ -66,13 +69,13 @@ Softgoal :
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
 			('color' '=' fillColor = Color ';')?&
-			('importance' '=' importance=ImportanceType ';')?&
 			('decompositionType' '=' decompositionType=DecompositionType ';')?&
 			/*
-			 *TODO I must give a default value, which is zero, to this attribute.
+			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-			('importanceQuantitative' '=' importanceQuantitative=INT ';')?			
+			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+			(elementLinks+=InLineElementLink)*		
 		)
 	'}'
 ;
@@ -82,13 +85,13 @@ Goal:
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
 			('color' '=' fillColor = Color ';')?&
-			('importance' '=' importance=ImportanceType ';')?&
 			('decompositionType' '='decompositionType=DecompositionType ';')?&
 			/*
-			 *TODO I must give a default value, which is zero, to this attribute.
+			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-			('importanceQuantitative' '=' importanceQuantitative=INT ';')?			
+			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&		
+			(elementLinks+=InLineElementLink)*
 		)		
 	'}'
 ; 
@@ -98,13 +101,13 @@ Task:
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
 			('color' '=' fillColor = Color ';')?&
-			('importance' '=' importance=ImportanceType ';')?&
 			('decompositionType' '='decompositionType=DecompositionType ';')?&
 			/*
-			 *TODO I must give a default value, which is zero, to this attribute.
+			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-			('importanceQuantitative' '=' importanceQuantitative=INT ';')?			 
+			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&	
+			(elementLinks+=InLineElementLink)*	 
 		)		
 	'}'
 ;  
@@ -114,13 +117,13 @@ Resource:
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
 			('color' '=' fillColor = Color ';')?&
-			('importance' '=' importance=ImportanceType ';')?&
 			('decompositionType' '='decompositionType=DecompositionType ';')?&
 			/*
-			 *TODO I must give a default value, which is zero, to this attribute.
+			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-			('importanceQuantitative' '=' importanceQuantitative=INT ';')?		
+			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&	
+			(elementLinks+=InLineElementLink)*	
 		)		
 	'}'
 ; 
@@ -130,69 +133,77 @@ Indicator:
 			('name' '=' label = STRING ';')?&
 			('description' '=' description=STRING ';')?&
 			('color' '=' fillColor = Color ';')?&
-			('importance' '=' importance=ImportanceType ';')?&
 			('decompositionType' '='decompositionType=DecompositionType ';')?&
 			/*
-			 *TODO I must give a default value, which is zero, to this attribute.
+			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-			('importanceQuantitative' '=' importanceQuantitative=INT ';')?&
+			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
 			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?&
 			('kpiModelLinksDest' '=' kpiModelLinksDest+=[KPIModelLink](',' kpiModelLinksDest+=[KPIModelLink] )* ';')?&
-			('groups''=' groups+=[IndicatorGroup](',' groups+=[IndicatorGroup] )* ';')?			
+			('groups''=' groups+=[IndicatorGroup](',' groups+=[IndicatorGroup] )* ';')?&
+			(elementLinks+=InLineElementLink)*			
 		)		
 	'}'
 ;  
 //*******************************************ElementLink*******************************************
-Connection:
-	DecompositionEnds | ContributionEnds | DependencyEnds
+Decomposition: 
+	src=[IntentionalElement | QualifiedName] 'decomposes' dest+=DecompositionEnd (','dest+=DecompositionEnd)* ';'
+//			('name' '=' label = STRING ';')?&
+//			('description' '=' description=STRING ';')?&
+//			('color' '=' fillColor = Color ';')?&
 ;
-DecompositionLink: 
-	'decomposition' (name=ID)? '{'	
-		(
-			('name' '=' label = STRING ';')?&
-			('description' '=' description=STRING ';')?&
-			('color' '=' fillColor = Color ';')?&
-			(connections+=DecompositionEnds)+
-		)
-	'}'
+InLineDecomposition:
+	'decomposes' dest+=DecompositionEnd (','dest+=DecompositionEnd)* ';'
 ;
-DecompositionEnds:
-	src=[IntentionalElement | QualifiedName] '->' dest=[IntentionalElement | QualifiedName] ';'
+DecompositionEnd:
+	name=[IntentionalElement | QualifiedName] 
+	(
+		'{'
+			(description=STRING)?
+		'}'	
+	)?
 ;
-ContributionLink: 
-	'contribution' (name=ID)? '{'
-		(
-			('name' '=' label = STRING ';')?&
-			('contribution' '=' contribution=ContributionType ';')?&
+Contribution: 
+	src=[IntentionalElement | QualifiedName] 'contributes' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
+//			('name' '=' label = STRING ';')?&
+//			('contribution' '=' contribution=ContributionType ';')?&
 			/*
 			 *TODO I must give a default value, which is 25, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-			('quantitativeContribution' '=' quantitativeContribution=INT ';')?&
-			('correlation' '=' correlation=BOOLEAN ';')?&
-			('description' '=' description=STRING ';')?&
-			('color' '=' fillColor = Color ';')?&
-			('changes' '=' changes+=[ContributionChange](',' changes+=[ContributionChange])* ';')?&
-			(connections+=ContributionEnds)+				
-		)
-	'}'
+//			('quantitativeContribution' '=' quantitativeContribution=INT ';')?&
+//			('correlation' '=' correlation=BOOLEAN ';')?&
+//			('description' '=' description=STRING ';')?&
+//			('color' '=' fillColor = Color ';')?&				
 ;
-ContributionEnds:
-	src=[IntentionalElement | QualifiedName] '-|->' dest=[IntentionalElement | QualifiedName] ';'
+InLineContribution:
+	'contributes' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
 ;
-DependencyLink:
-	'dependency' (name=ID)? '{'
-		(
-			('name' '=' label = STRING ';')?&
-			('description' '=' description=STRING ';')?&
-			('color' '=' fillColor = Color ';')?&
-			(connections+=DependencyEnds)+
-		)
-	'}' 
+ContributionEnd:
+	name = [IntentionalElement | QualifiedName]
+	(
+		'{'
+			(contribution=ContributionType | quantitativeContribution=INT)?
+		'}'
+	)?
 ;
-DependencyEnds:
-	src=[IntentionalElement | QualifiedName] '-D->' dest=[IntentionalElement | QualifiedName] ';'
+Dependency:
+	src=[IntentionalElement | QualifiedName] 'depends' dest+=DependencyEnd (','dest+=DependencyEnd)* ';'
+//			('name' '=' label = STRING ';')?&
+//			('description' '=' c ';')?&
+//			('color' '=' fillColor = Color ';')?&
+;
+InLineDependency:
+	'depends' dest+=DependencyEnd (','dest+=DependencyEnd)* ';'
+;
+DependencyEnd:
+	name = [IntentionalElement | QualifiedName] 
+	(
+		'{'
+			(description=STRING)?
+		'}'
+	)?
 ;
 
 //**************************************************************************************

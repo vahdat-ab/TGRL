@@ -27,7 +27,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ModelImpl#getGRLspecs <em>GR Lspecs</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ModelImpl#getGRLspecifications <em>GR Lspecifications</em>}</li>
  * </ul>
  * </p>
  *
@@ -36,14 +36,14 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
   /**
-   * The cached value of the '{@link #getGRLspecs() <em>GR Lspecs</em>}' containment reference list.
+   * The cached value of the '{@link #getGRLspecifications() <em>GR Lspecifications</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getGRLspecs()
+   * @see #getGRLspecifications()
    * @generated
    * @ordered
    */
-  protected EList<GRLSpecification> gRLspecs;
+  protected EList<GRLSpecification> gRLspecifications;
 
   /**
    * <!-- begin-user-doc -->
@@ -71,13 +71,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<GRLSpecification> getGRLspecs()
+  public EList<GRLSpecification> getGRLspecifications()
   {
-    if (gRLspecs == null)
+    if (gRLspecifications == null)
     {
-      gRLspecs = new EObjectContainmentEList<GRLSpecification>(GRLSpecification.class, this, TGRLPackage.MODEL__GR_LSPECS);
+      gRLspecifications = new EObjectContainmentEList<GRLSpecification>(GRLSpecification.class, this, TGRLPackage.MODEL__GR_LSPECIFICATIONS);
     }
-    return gRLspecs;
+    return gRLspecifications;
   }
 
   /**
@@ -90,8 +90,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case TGRLPackage.MODEL__GR_LSPECS:
-        return ((InternalEList<?>)getGRLspecs()).basicRemove(otherEnd, msgs);
+      case TGRLPackage.MODEL__GR_LSPECIFICATIONS:
+        return ((InternalEList<?>)getGRLspecifications()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -106,8 +106,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case TGRLPackage.MODEL__GR_LSPECS:
-        return getGRLspecs();
+      case TGRLPackage.MODEL__GR_LSPECIFICATIONS:
+        return getGRLspecifications();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -123,9 +123,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case TGRLPackage.MODEL__GR_LSPECS:
-        getGRLspecs().clear();
-        getGRLspecs().addAll((Collection<? extends GRLSpecification>)newValue);
+      case TGRLPackage.MODEL__GR_LSPECIFICATIONS:
+        getGRLspecifications().clear();
+        getGRLspecifications().addAll((Collection<? extends GRLSpecification>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -141,8 +141,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case TGRLPackage.MODEL__GR_LSPECS:
-        getGRLspecs().clear();
+      case TGRLPackage.MODEL__GR_LSPECIFICATIONS:
+        getGRLspecifications().clear();
         return;
     }
     super.eUnset(featureID);
@@ -158,8 +158,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case TGRLPackage.MODEL__GR_LSPECS:
-        return gRLspecs != null && !gRLspecs.isEmpty();
+      case TGRLPackage.MODEL__GR_LSPECIFICATIONS:
+        return gRLspecifications != null && !gRLspecifications.isEmpty();
     }
     return super.eIsSet(featureID);
   }

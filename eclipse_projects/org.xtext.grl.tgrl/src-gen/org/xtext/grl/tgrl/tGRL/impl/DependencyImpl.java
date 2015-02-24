@@ -14,41 +14,41 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.xtext.grl.tgrl.tGRL.DecompositionEnds;
-import org.xtext.grl.tgrl.tGRL.DecompositionLink;
+import org.xtext.grl.tgrl.tGRL.Dependency;
+import org.xtext.grl.tgrl.tGRL.DependencyEnd;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Decomposition Link</b></em>'.
+ * An implementation of the model object '<em><b>Dependency</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.DecompositionLinkImpl#getConnections <em>Connections</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.DependencyImpl#getDest <em>Dest</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class DecompositionLinkImpl extends ElementLinkImpl implements DecompositionLink
+public class DependencyImpl extends ElementLinkImpl implements Dependency
 {
   /**
-   * The cached value of the '{@link #getConnections() <em>Connections</em>}' containment reference list.
+   * The cached value of the '{@link #getDest() <em>Dest</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getConnections()
+   * @see #getDest()
    * @generated
    * @ordered
    */
-  protected EList<DecompositionEnds> connections;
+  protected EList<DependencyEnd> dest;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DecompositionLinkImpl()
+  protected DependencyImpl()
   {
     super();
   }
@@ -61,7 +61,7 @@ public class DecompositionLinkImpl extends ElementLinkImpl implements Decomposit
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.DECOMPOSITION_LINK;
+    return TGRLPackage.Literals.DEPENDENCY;
   }
 
   /**
@@ -69,13 +69,13 @@ public class DecompositionLinkImpl extends ElementLinkImpl implements Decomposit
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<DecompositionEnds> getConnections()
+  public EList<DependencyEnd> getDest()
   {
-    if (connections == null)
+    if (dest == null)
     {
-      connections = new EObjectContainmentEList<DecompositionEnds>(DecompositionEnds.class, this, TGRLPackage.DECOMPOSITION_LINK__CONNECTIONS);
+      dest = new EObjectContainmentEList<DependencyEnd>(DependencyEnd.class, this, TGRLPackage.DEPENDENCY__DEST);
     }
-    return connections;
+    return dest;
   }
 
   /**
@@ -88,8 +88,8 @@ public class DecompositionLinkImpl extends ElementLinkImpl implements Decomposit
   {
     switch (featureID)
     {
-      case TGRLPackage.DECOMPOSITION_LINK__CONNECTIONS:
-        return ((InternalEList<?>)getConnections()).basicRemove(otherEnd, msgs);
+      case TGRLPackage.DEPENDENCY__DEST:
+        return ((InternalEList<?>)getDest()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -104,8 +104,8 @@ public class DecompositionLinkImpl extends ElementLinkImpl implements Decomposit
   {
     switch (featureID)
     {
-      case TGRLPackage.DECOMPOSITION_LINK__CONNECTIONS:
-        return getConnections();
+      case TGRLPackage.DEPENDENCY__DEST:
+        return getDest();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -121,9 +121,9 @@ public class DecompositionLinkImpl extends ElementLinkImpl implements Decomposit
   {
     switch (featureID)
     {
-      case TGRLPackage.DECOMPOSITION_LINK__CONNECTIONS:
-        getConnections().clear();
-        getConnections().addAll((Collection<? extends DecompositionEnds>)newValue);
+      case TGRLPackage.DEPENDENCY__DEST:
+        getDest().clear();
+        getDest().addAll((Collection<? extends DependencyEnd>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -139,8 +139,8 @@ public class DecompositionLinkImpl extends ElementLinkImpl implements Decomposit
   {
     switch (featureID)
     {
-      case TGRLPackage.DECOMPOSITION_LINK__CONNECTIONS:
-        getConnections().clear();
+      case TGRLPackage.DEPENDENCY__DEST:
+        getDest().clear();
         return;
     }
     super.eUnset(featureID);
@@ -156,10 +156,10 @@ public class DecompositionLinkImpl extends ElementLinkImpl implements Decomposit
   {
     switch (featureID)
     {
-      case TGRLPackage.DECOMPOSITION_LINK__CONNECTIONS:
-        return connections != null && !connections.isEmpty();
+      case TGRLPackage.DEPENDENCY__DEST:
+        return dest != null && !dest.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //DecompositionLinkImpl
+} //DependencyImpl
