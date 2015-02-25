@@ -72,7 +72,11 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case TGRLPackage.BELIEF:
-				if(context == grammarAccess.getBeliefRule()) {
+				if(context == grammarAccess.getBeliefRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
+				   context == grammarAccess.getGRLElementRule() ||
+				   context == grammarAccess.getIntentionalElementRule()) {
 					sequence_Belief(context, (Belief) semanticObject); 
 					return; 
 				}

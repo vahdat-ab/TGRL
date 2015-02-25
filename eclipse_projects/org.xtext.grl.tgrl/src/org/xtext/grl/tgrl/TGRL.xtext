@@ -22,7 +22,7 @@ GRLElement:
 	IntentionalElement | ElementLink | Actor  
 ;
 IntentionalElement:
-	 Softgoal | Goal  | Task | Resource | Indicator
+	 Softgoal | Goal  | Task | Resource | Indicator | Belief
 ;
 
 ElementLink: 
@@ -145,7 +145,15 @@ Indicator:
 			(elementLinks+=InLineElementLink)*			
 		)		
 	'}'
-;  
+;
+Belief: 
+	'belief' name=ID '{'
+		(
+			('name' '=' label = STRING ';')?&
+			('description' description=STRING ';')?
+		)		
+	'}'
+;	
 //*******************************************ElementLink*******************************************
 Decomposition: 
 	src=[IntentionalElement | QualifiedName] 'decomposes' dest+=DecompositionEnd (','dest+=DecompositionEnd)* ';'
@@ -221,14 +229,6 @@ KPIConversion:
 	QualitativeMappings
 ;
 
-Belief: 
-	'belief' name=ID '{'
-		(
-			('name' '=' label = STRING ';')?&
-			('description' description=STRING ';')?
-		)		
-	'}'
-;	
 
 CollapsedActorRef: 
 	'collapsedActorRef' name=ID '{'

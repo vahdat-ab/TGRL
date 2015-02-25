@@ -106,12 +106,13 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTaskParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cResourceParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cIndicatorParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cBeliefParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
 		//IntentionalElement:
-		//	Softgoal | Goal | Task | Resource | Indicator;
+		//	Softgoal | Goal | Task | Resource | Indicator | Belief;
 		public ParserRule getRule() { return rule; }
 
-		//Softgoal | Goal | Task | Resource | Indicator
+		//Softgoal | Goal | Task | Resource | Indicator | Belief
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Softgoal
@@ -128,6 +129,9 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Indicator
 		public RuleCall getIndicatorParserRuleCall_4() { return cIndicatorParserRuleCall_4; }
+
+		//Belief
+		public RuleCall getBeliefParserRuleCall_5() { return cBeliefParserRuleCall_5; }
 	}
 
 	public class ElementLinkElements extends AbstractParserRuleElementFinder {
@@ -1479,6 +1483,86 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
+	public class BeliefElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Belief");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cBeliefKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final UnorderedGroup cUnorderedGroup_3 = (UnorderedGroup)cGroup.eContents().get(3);
+		private final Group cGroup_3_0 = (Group)cUnorderedGroup_3.eContents().get(0);
+		private final Keyword cNameKeyword_3_0_0 = (Keyword)cGroup_3_0.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_3_0_1 = (Keyword)cGroup_3_0.eContents().get(1);
+		private final Assignment cLabelAssignment_3_0_2 = (Assignment)cGroup_3_0.eContents().get(2);
+		private final RuleCall cLabelSTRINGTerminalRuleCall_3_0_2_0 = (RuleCall)cLabelAssignment_3_0_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3_0_3 = (Keyword)cGroup_3_0.eContents().get(3);
+		private final Group cGroup_3_1 = (Group)cUnorderedGroup_3.eContents().get(1);
+		private final Keyword cDescriptionKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
+		private final Assignment cDescriptionAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
+		private final RuleCall cDescriptionSTRINGTerminalRuleCall_3_1_1_0 = (RuleCall)cDescriptionAssignment_3_1_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3_1_2 = (Keyword)cGroup_3_1.eContents().get(2);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//Belief:
+		//	"belief" name=ID "{" (("name" "=" label=STRING ";")? & ("description" description=STRING ";")?) "}";
+		public ParserRule getRule() { return rule; }
+
+		//"belief" name=ID "{" (("name" "=" label=STRING ";")? & ("description" description=STRING ";")?) "}"
+		public Group getGroup() { return cGroup; }
+
+		//"belief"
+		public Keyword getBeliefKeyword_0() { return cBeliefKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//("name" "=" label=STRING ";")? & ("description" description=STRING ";")?
+		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
+
+		//("name" "=" label=STRING ";")?
+		public Group getGroup_3_0() { return cGroup_3_0; }
+
+		//"name"
+		public Keyword getNameKeyword_3_0_0() { return cNameKeyword_3_0_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_3_0_1() { return cEqualsSignKeyword_3_0_1; }
+
+		//label=STRING
+		public Assignment getLabelAssignment_3_0_2() { return cLabelAssignment_3_0_2; }
+
+		//STRING
+		public RuleCall getLabelSTRINGTerminalRuleCall_3_0_2_0() { return cLabelSTRINGTerminalRuleCall_3_0_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3_0_3() { return cSemicolonKeyword_3_0_3; }
+
+		//("description" description=STRING ";")?
+		public Group getGroup_3_1() { return cGroup_3_1; }
+
+		//"description"
+		public Keyword getDescriptionKeyword_3_1_0() { return cDescriptionKeyword_3_1_0; }
+
+		//description=STRING
+		public Assignment getDescriptionAssignment_3_1_1() { return cDescriptionAssignment_3_1_1; }
+
+		//STRING
+		public RuleCall getDescriptionSTRINGTerminalRuleCall_3_1_1_0() { return cDescriptionSTRINGTerminalRuleCall_3_1_1_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3_1_2() { return cSemicolonKeyword_3_1_2; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+	}
+
 	public class DecompositionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Decomposition");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1957,86 +2041,6 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//QualitativeMappings
 		public RuleCall getQualitativeMappingsParserRuleCall() { return cQualitativeMappingsParserRuleCall; }
-	}
-
-	public class BeliefElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Belief");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cBeliefKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final UnorderedGroup cUnorderedGroup_3 = (UnorderedGroup)cGroup.eContents().get(3);
-		private final Group cGroup_3_0 = (Group)cUnorderedGroup_3.eContents().get(0);
-		private final Keyword cNameKeyword_3_0_0 = (Keyword)cGroup_3_0.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_3_0_1 = (Keyword)cGroup_3_0.eContents().get(1);
-		private final Assignment cLabelAssignment_3_0_2 = (Assignment)cGroup_3_0.eContents().get(2);
-		private final RuleCall cLabelSTRINGTerminalRuleCall_3_0_2_0 = (RuleCall)cLabelAssignment_3_0_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_0_3 = (Keyword)cGroup_3_0.eContents().get(3);
-		private final Group cGroup_3_1 = (Group)cUnorderedGroup_3.eContents().get(1);
-		private final Keyword cDescriptionKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
-		private final Assignment cDescriptionAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
-		private final RuleCall cDescriptionSTRINGTerminalRuleCall_3_1_1_0 = (RuleCall)cDescriptionAssignment_3_1_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_1_2 = (Keyword)cGroup_3_1.eContents().get(2);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		
-		//Belief:
-		//	"belief" name=ID "{" (("name" "=" label=STRING ";")? & ("description" description=STRING ";")?) "}";
-		public ParserRule getRule() { return rule; }
-
-		//"belief" name=ID "{" (("name" "=" label=STRING ";")? & ("description" description=STRING ";")?) "}"
-		public Group getGroup() { return cGroup; }
-
-		//"belief"
-		public Keyword getBeliefKeyword_0() { return cBeliefKeyword_0; }
-
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
-
-		//("name" "=" label=STRING ";")? & ("description" description=STRING ";")?
-		public UnorderedGroup getUnorderedGroup_3() { return cUnorderedGroup_3; }
-
-		//("name" "=" label=STRING ";")?
-		public Group getGroup_3_0() { return cGroup_3_0; }
-
-		//"name"
-		public Keyword getNameKeyword_3_0_0() { return cNameKeyword_3_0_0; }
-
-		//"="
-		public Keyword getEqualsSignKeyword_3_0_1() { return cEqualsSignKeyword_3_0_1; }
-
-		//label=STRING
-		public Assignment getLabelAssignment_3_0_2() { return cLabelAssignment_3_0_2; }
-
-		//STRING
-		public RuleCall getLabelSTRINGTerminalRuleCall_3_0_2_0() { return cLabelSTRINGTerminalRuleCall_3_0_2_0; }
-
-		//";"
-		public Keyword getSemicolonKeyword_3_0_3() { return cSemicolonKeyword_3_0_3; }
-
-		//("description" description=STRING ";")?
-		public Group getGroup_3_1() { return cGroup_3_1; }
-
-		//"description"
-		public Keyword getDescriptionKeyword_3_1_0() { return cDescriptionKeyword_3_1_0; }
-
-		//description=STRING
-		public Assignment getDescriptionAssignment_3_1_1() { return cDescriptionAssignment_3_1_1; }
-
-		//STRING
-		public RuleCall getDescriptionSTRINGTerminalRuleCall_3_1_1_0() { return cDescriptionSTRINGTerminalRuleCall_3_1_1_0; }
-
-		//";"
-		public Keyword getSemicolonKeyword_3_1_2() { return cSemicolonKeyword_3_1_2; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 
 	public class CollapsedActorRefElements extends AbstractParserRuleElementFinder {
@@ -4910,6 +4914,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	private final TaskElements pTask;
 	private final ResourceElements pResource;
 	private final IndicatorElements pIndicator;
+	private final BeliefElements pBelief;
 	private final DecompositionElements pDecomposition;
 	private final InLineDecompositionElements pInLineDecomposition;
 	private final DecompositionEndElements pDecompositionEnd;
@@ -4920,7 +4925,6 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	private final InLineDependencyElements pInLineDependency;
 	private final DependencyEndElements pDependencyEnd;
 	private final KPIConversionElements pKPIConversion;
-	private final BeliefElements pBelief;
 	private final CollapsedActorRefElements pCollapsedActorRef;
 	private final IntentionalElementRefElements pIntentionalElementRef;
 	private final ImpactModelElements pImpactModel;
@@ -4975,6 +4979,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pTask = new TaskElements();
 		this.pResource = new ResourceElements();
 		this.pIndicator = new IndicatorElements();
+		this.pBelief = new BeliefElements();
 		this.pDecomposition = new DecompositionElements();
 		this.pInLineDecomposition = new InLineDecompositionElements();
 		this.pDecompositionEnd = new DecompositionEndElements();
@@ -4985,7 +4990,6 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		this.pInLineDependency = new InLineDependencyElements();
 		this.pDependencyEnd = new DependencyEndElements();
 		this.pKPIConversion = new KPIConversionElements();
-		this.pBelief = new BeliefElements();
 		this.pCollapsedActorRef = new CollapsedActorRefElements();
 		this.pIntentionalElementRef = new IntentionalElementRefElements();
 		this.pImpactModel = new ImpactModelElements();
@@ -5086,7 +5090,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//IntentionalElement:
-	//	Softgoal | Goal | Task | Resource | Indicator;
+	//	Softgoal | Goal | Task | Resource | Indicator | Belief;
 	public IntentionalElementElements getIntentionalElementAccess() {
 		return pIntentionalElement;
 	}
@@ -5226,6 +5230,16 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		return getIndicatorAccess().getRule();
 	}
 
+	//Belief:
+	//	"belief" name=ID "{" (("name" "=" label=STRING ";")? & ("description" description=STRING ";")?) "}";
+	public BeliefElements getBeliefAccess() {
+		return pBelief;
+	}
+	
+	public ParserRule getBeliefRule() {
+		return getBeliefAccess().getRule();
+	}
+
 	//// *******************************************ElementLink*******************************************
 	////			('name' '=' label = STRING ';')?&
 	////			('description' '=' description=STRING ';')?&
@@ -5348,16 +5362,6 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getKPIConversionRule() {
 		return getKPIConversionAccess().getRule();
-	}
-
-	//Belief:
-	//	"belief" name=ID "{" (("name" "=" label=STRING ";")? & ("description" description=STRING ";")?) "}";
-	public BeliefElements getBeliefAccess() {
-		return pBelief;
-	}
-	
-	public ParserRule getBeliefRule() {
-		return getBeliefAccess().getRule();
 	}
 
 	//CollapsedActorRef:

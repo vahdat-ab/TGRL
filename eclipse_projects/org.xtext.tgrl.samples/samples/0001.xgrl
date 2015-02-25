@@ -1,0 +1,65 @@
+/*
+ * grl model without name
+ */ 
+grl {
+	
+}
+
+/*
+ * GRL nmodel with name.
+ * This is used to reference later inside the project.
+ */
+grl GRL1{
+	
+}
+/*
+ * GRL Model + Goal 
+ */
+grl GRL2{
+ 	goal G1{ 	
+ 			
+ 	}
+   	softGoal SG1{
+  		
+  	}
+	Task T1{
+		
+	} 	
+	belief B1{
+		
+	}
+	resource R1{
+		
+	}
+	indicator I1{
+		
+	}
+}
+//------------------------------------------------------
+//These two GRL "GRL3" and "GRL4" are the same
+//------------------------------------------------------
+grl GRL3{
+ 	goal G1{ 	
+ 		contributes G2{Make},G3{10};	
+ 	}
+ 	goal G2{
+ 		
+ 	}
+ 	goal G3{
+ 		
+ 	}
+ }
+ 
+ grl GRL4{
+ 	goal G1{ 	
+ 	}
+ 	goal G2{
+ 		
+ 	}
+ 	goal G3{
+ 		
+ 	}
+	G1 contributes G2{Make},G3{10};	
+ 
+ }
+// ------------------------------------------------------

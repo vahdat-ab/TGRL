@@ -79,6 +79,7 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
       case TGRLPackage.TASK: return createTask();
       case TGRLPackage.RESOURCE: return createResource();
       case TGRLPackage.INDICATOR: return createIndicator();
+      case TGRLPackage.BELIEF: return createBelief();
       case TGRLPackage.DECOMPOSITION: return createDecomposition();
       case TGRLPackage.IN_LINE_DECOMPOSITION: return createInLineDecomposition();
       case TGRLPackage.DECOMPOSITION_END: return createDecompositionEnd();
@@ -89,7 +90,6 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
       case TGRLPackage.IN_LINE_DEPENDENCY: return createInLineDependency();
       case TGRLPackage.DEPENDENCY_END: return createDependencyEnd();
       case TGRLPackage.KPI_CONVERSION: return createKPIConversion();
-      case TGRLPackage.BELIEF: return createBelief();
       case TGRLPackage.COLLAPSED_ACTOR_REF: return createCollapsedActorRef();
       case TGRLPackage.INTENTIONAL_ELEMENT_REF: return createIntentionalElementRef();
       case TGRLPackage.IMPACT_MODEL: return createImpactModel();
@@ -332,6 +332,17 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Belief createBelief()
+  {
+    BeliefImpl belief = new BeliefImpl();
+    return belief;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Decomposition createDecomposition()
   {
     DecompositionImpl decomposition = new DecompositionImpl();
@@ -435,17 +446,6 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
   {
     KPIConversionImpl kpiConversion = new KPIConversionImpl();
     return kpiConversion;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Belief createBelief()
-  {
-    BeliefImpl belief = new BeliefImpl();
-    return belief;
   }
 
   /**

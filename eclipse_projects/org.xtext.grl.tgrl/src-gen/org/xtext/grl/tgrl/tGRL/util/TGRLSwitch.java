@@ -205,6 +205,17 @@ public class TGRLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case TGRLPackage.BELIEF:
+      {
+        Belief belief = (Belief)theEObject;
+        T result = caseBelief(belief);
+        if (result == null) result = caseIntentionalElement(belief);
+        if (result == null) result = caseGRLElement(belief);
+        if (result == null) result = caseGRLBaseElement(belief);
+        if (result == null) result = caseElement(belief);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case TGRLPackage.DECOMPOSITION:
       {
         Decomposition decomposition = (Decomposition)theEObject;
@@ -293,13 +304,6 @@ public class TGRLSwitch<T> extends Switch<T>
       {
         KPIConversion kpiConversion = (KPIConversion)theEObject;
         T result = caseKPIConversion(kpiConversion);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case TGRLPackage.BELIEF:
-      {
-        Belief belief = (Belief)theEObject;
-        T result = caseBelief(belief);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -673,6 +677,22 @@ public class TGRLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Belief</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Belief</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBelief(Belief object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Decomposition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -828,22 +848,6 @@ public class TGRLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseKPIConversion(KPIConversion object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Belief</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Belief</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseBelief(Belief object)
   {
     return null;
   }

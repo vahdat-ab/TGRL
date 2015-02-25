@@ -3,8 +3,7 @@ grl {
 		name = "This is the first soft goal.";
 		decompositionType = And;
 		description =" this is a description for SG1";
-		importance =  High;
-		importanceQuantitative = 10; 
+		High; 
 	}
 	goal G1{
 		name = "This is the first goal.";
@@ -15,17 +14,13 @@ grl {
 	}
 	resource R1 {
 		name = "This is the first Resource.";
-		importanceQuantitative = 1 ;
+		1 ;
 	}
 	indicator i1 {
 		name = "This is the first Resource.";
 	}
-	decomposition dec {
-		G1 ->SG1;
-	}
-		decomposition dec2 {
-		R1 ->SG1;
-	}
+		G1 decomposes SG1;
+		R1 decomposes SG1;
 	actor A {
 		softGoal ASG1{
 			name = "wonderful";
@@ -34,8 +29,6 @@ grl {
 			name="woderful2";
 		}
 	} 
-	contribution COND {
-		A.ASG1 -> G1;
-		correlation = true;
-	}
+	A.ASG1 depends G1;
+		
 }

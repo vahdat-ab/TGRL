@@ -145,6 +145,11 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
         return createIndicatorAdapter();
       }
       @Override
+      public Adapter caseBelief(Belief object)
+      {
+        return createBeliefAdapter();
+      }
+      @Override
       public Adapter caseDecomposition(Decomposition object)
       {
         return createDecompositionAdapter();
@@ -193,11 +198,6 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
       public Adapter caseKPIConversion(KPIConversion object)
       {
         return createKPIConversionAdapter();
-      }
-      @Override
-      public Adapter caseBelief(Belief object)
-      {
-        return createBeliefAdapter();
       }
       @Override
       public Adapter caseCollapsedActorRef(CollapsedActorRef object)
@@ -532,6 +532,21 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.Belief <em>Belief</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.grl.tgrl.tGRL.Belief
+   * @generated
+   */
+  public Adapter createBeliefAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.Decomposition <em>Decomposition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -677,21 +692,6 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createKPIConversionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.Belief <em>Belief</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.Belief
-   * @generated
-   */
-  public Adapter createBeliefAdapter()
   {
     return null;
   }

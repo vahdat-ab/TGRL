@@ -6,7 +6,7 @@ grl GRL1 {
 			color = yellow;	
 			
 		}
-		A.ASG2 depends G1;
+		System.G2 depends G1;
 		softGoal SG2{
 			name = " Low Cost";
 			color = lightYellow;

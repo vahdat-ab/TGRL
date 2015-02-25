@@ -149,6 +149,15 @@ public interface TGRLFactory extends EFactory
   Indicator createIndicator();
 
   /**
+   * Returns a new object of class '<em>Belief</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Belief</em>'.
+   * @generated
+   */
+  Belief createBelief();
+
+  /**
    * Returns a new object of class '<em>Decomposition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -237,15 +246,6 @@ public interface TGRLFactory extends EFactory
    * @generated
    */
   KPIConversion createKPIConversion();
-
-  /**
-   * Returns a new object of class '<em>Belief</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Belief</em>'.
-   * @generated
-   */
-  Belief createBelief();
 
   /**
    * Returns a new object of class '<em>Collapsed Actor Ref</em>'.
