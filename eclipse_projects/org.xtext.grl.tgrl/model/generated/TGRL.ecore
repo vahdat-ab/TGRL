@@ -77,8 +77,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importance" eType="#//ImportanceType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importanceQuantitative"
         eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" unique="false" upperBound="-1"
-        eType="#//IntentionalElementRef"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="kpiModelLinksDest" unique="false"
         upperBound="-1" eType="#//KPIModelLink"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="groups" unique="false"
@@ -125,48 +123,28 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//IntentionalElement"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="KPIConversion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CollapsedActorRef">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IntentionalElementRef">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="criticality" eType="#//Criticality"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" eType="#//Priority"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="def" eType="#//IntentionalElement"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ImpactModel">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StrategiesGroup">
+  <eClassifiers xsi:type="ecore:EClass" name="StrategyGroup" eSuperTypes="#//GRLElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="strategies" unique="false"
         upperBound="-1" eType="#//EvaluationStrategy"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EvaluationStrategy">
+  <eClassifiers xsi:type="ecore:EClass" name="EvaluationStrategy" eSuperTypes="#//GRLElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superStrategies" unique="false"
+        upperBound="-1" eType="#//EvaluationStrategy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="evaluations" upperBound="-1"
         eType="#//Evaluation" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="includedStrategies" unique="false"
-        upperBound="-1" eType="#//EvaluationStrategy"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="kipInforConfig" upperBound="-1"
-        eType="#//KPIInformationConfig" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Evaluation">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="evaluation" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Evaluation" eSuperTypes="#//GRLElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="intentionalElement" eType="#//IntentionalElement"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualitativeEvaluation"
         eType="#//QualitativeLabel"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exceeds" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="evalRange" eType="#//EvaluationRange"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="kpiEvalValueSet" eType="#//KPIEvalValueSet"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="kpiNewEvalValue" eType="#//KPINewEvalValue"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inElement" eType="#//IntentionalElement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="evaluation" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exceeds" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KPIConversion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ImpactModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EvaluationRange">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="start" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
@@ -261,33 +239,33 @@
         upperBound="-1" eType="#//Indicator"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ImportanceType">
-    <eLiterals name="None" literal="None"/>
-    <eLiterals name="High" value="1" literal="High"/>
-    <eLiterals name="Medium" value="2" literal="Medium"/>
-    <eLiterals name="Low" value="3" literal="Low"/>
+    <eLiterals name="none" literal="none"/>
+    <eLiterals name="high" value="1" literal="high"/>
+    <eLiterals name="medium" value="2" literal="medium"/>
+    <eLiterals name="low" value="3" literal="low"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DecompositionType">
-    <eLiterals name="And" literal="And"/>
-    <eLiterals name="Or" value="1" literal="Or"/>
-    <eLiterals name="Xor" value="2" literal="Xor"/>
+    <eLiterals name="and" literal="and"/>
+    <eLiterals name="or" value="1" literal="or"/>
+    <eLiterals name="xor" value="2" literal="xor"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ContributionType">
-    <eLiterals name="Help" literal="Help"/>
-    <eLiterals name="Make" value="1" literal="Make"/>
-    <eLiterals name="SomePositive" value="2" literal="SomePositive"/>
-    <eLiterals name="Unknown" value="3" literal="Unknown"/>
-    <eLiterals name="SomeNegative" value="4" literal="SomeNegative"/>
-    <eLiterals name="Hurt" value="5" literal="Hurt"/>
-    <eLiterals name="Break" value="6" literal="Break"/>
+    <eLiterals name="help" literal="help"/>
+    <eLiterals name="make" value="1" literal="make"/>
+    <eLiterals name="somePositive" value="2" literal="somePositive"/>
+    <eLiterals name="unknown" value="3" literal="unknown"/>
+    <eLiterals name="someNegative" value="4" literal="someNegative"/>
+    <eLiterals name="hurt" value="5" literal="hurt"/>
+    <eLiterals name="break" value="6" literal="break"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="QualitativeLabel">
-    <eLiterals name="Denied" literal="Denied"/>
-    <eLiterals name="WeaklyDenied" value="1" literal="WeaklyDenied"/>
-    <eLiterals name="WeaklySatisfied" value="2" literal="WeaklySatisfied"/>
-    <eLiterals name="Satisfied" value="3" literal="Satisfied"/>
-    <eLiterals name="Conflict" value="4" literal="Conflict"/>
-    <eLiterals name="Unknown" value="5" literal="Unknown"/>
-    <eLiterals name="None" value="6" literal="None"/>
+    <eLiterals name="denied" literal="denied"/>
+    <eLiterals name="weaklyDenied" value="1" literal="weaklyDenied"/>
+    <eLiterals name="weaklySatisfied" value="2" literal="weaklySatisfied"/>
+    <eLiterals name="satisfied" value="3" literal="satisfied"/>
+    <eLiterals name="conflict" value="4" literal="conflict"/>
+    <eLiterals name="unknown" value="5" literal="unknown"/>
+    <eLiterals name="none" value="6" literal="none"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Color">
     <eLiterals name="white" literal="white"/>

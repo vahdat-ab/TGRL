@@ -300,38 +300,13 @@ public class TGRLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TGRLPackage.KPI_CONVERSION:
+      case TGRLPackage.STRATEGY_GROUP:
       {
-        KPIConversion kpiConversion = (KPIConversion)theEObject;
-        T result = caseKPIConversion(kpiConversion);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case TGRLPackage.COLLAPSED_ACTOR_REF:
-      {
-        CollapsedActorRef collapsedActorRef = (CollapsedActorRef)theEObject;
-        T result = caseCollapsedActorRef(collapsedActorRef);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case TGRLPackage.INTENTIONAL_ELEMENT_REF:
-      {
-        IntentionalElementRef intentionalElementRef = (IntentionalElementRef)theEObject;
-        T result = caseIntentionalElementRef(intentionalElementRef);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case TGRLPackage.IMPACT_MODEL:
-      {
-        ImpactModel impactModel = (ImpactModel)theEObject;
-        T result = caseImpactModel(impactModel);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case TGRLPackage.STRATEGIES_GROUP:
-      {
-        StrategiesGroup strategiesGroup = (StrategiesGroup)theEObject;
-        T result = caseStrategiesGroup(strategiesGroup);
+        StrategyGroup strategyGroup = (StrategyGroup)theEObject;
+        T result = caseStrategyGroup(strategyGroup);
+        if (result == null) result = caseGRLElement(strategyGroup);
+        if (result == null) result = caseGRLBaseElement(strategyGroup);
+        if (result == null) result = caseElement(strategyGroup);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -339,6 +314,9 @@ public class TGRLSwitch<T> extends Switch<T>
       {
         EvaluationStrategy evaluationStrategy = (EvaluationStrategy)theEObject;
         T result = caseEvaluationStrategy(evaluationStrategy);
+        if (result == null) result = caseGRLElement(evaluationStrategy);
+        if (result == null) result = caseGRLBaseElement(evaluationStrategy);
+        if (result == null) result = caseElement(evaluationStrategy);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -346,6 +324,23 @@ public class TGRLSwitch<T> extends Switch<T>
       {
         Evaluation evaluation = (Evaluation)theEObject;
         T result = caseEvaluation(evaluation);
+        if (result == null) result = caseGRLElement(evaluation);
+        if (result == null) result = caseGRLBaseElement(evaluation);
+        if (result == null) result = caseElement(evaluation);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.KPI_CONVERSION:
+      {
+        KPIConversion kpiConversion = (KPIConversion)theEObject;
+        T result = caseKPIConversion(kpiConversion);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.IMPACT_MODEL:
+      {
+        ImpactModel impactModel = (ImpactModel)theEObject;
+        T result = caseImpactModel(impactModel);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -837,81 +832,17 @@ public class TGRLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>KPI Conversion</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Strategy Group</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>KPI Conversion</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Strategy Group</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseKPIConversion(KPIConversion object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Collapsed Actor Ref</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Collapsed Actor Ref</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseCollapsedActorRef(CollapsedActorRef object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Intentional Element Ref</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Intentional Element Ref</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseIntentionalElementRef(IntentionalElementRef object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Impact Model</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Impact Model</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseImpactModel(ImpactModel object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Strategies Group</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Strategies Group</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseStrategiesGroup(StrategiesGroup object)
+  public T caseStrategyGroup(StrategyGroup object)
   {
     return null;
   }
@@ -944,6 +875,38 @@ public class TGRLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseEvaluation(Evaluation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>KPI Conversion</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>KPI Conversion</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKPIConversion(KPIConversion object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Impact Model</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Impact Model</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseImpactModel(ImpactModel object)
   {
     return null;
   }

@@ -239,49 +239,13 @@ public interface TGRLFactory extends EFactory
   DependencyEnd createDependencyEnd();
 
   /**
-   * Returns a new object of class '<em>KPI Conversion</em>'.
+   * Returns a new object of class '<em>Strategy Group</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>KPI Conversion</em>'.
+   * @return a new object of class '<em>Strategy Group</em>'.
    * @generated
    */
-  KPIConversion createKPIConversion();
-
-  /**
-   * Returns a new object of class '<em>Collapsed Actor Ref</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Collapsed Actor Ref</em>'.
-   * @generated
-   */
-  CollapsedActorRef createCollapsedActorRef();
-
-  /**
-   * Returns a new object of class '<em>Intentional Element Ref</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Intentional Element Ref</em>'.
-   * @generated
-   */
-  IntentionalElementRef createIntentionalElementRef();
-
-  /**
-   * Returns a new object of class '<em>Impact Model</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Impact Model</em>'.
-   * @generated
-   */
-  ImpactModel createImpactModel();
-
-  /**
-   * Returns a new object of class '<em>Strategies Group</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Strategies Group</em>'.
-   * @generated
-   */
-  StrategiesGroup createStrategiesGroup();
+  StrategyGroup createStrategyGroup();
 
   /**
    * Returns a new object of class '<em>Evaluation Strategy</em>'.
@@ -300,6 +264,24 @@ public interface TGRLFactory extends EFactory
    * @generated
    */
   Evaluation createEvaluation();
+
+  /**
+   * Returns a new object of class '<em>KPI Conversion</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>KPI Conversion</em>'.
+   * @generated
+   */
+  KPIConversion createKPIConversion();
+
+  /**
+   * Returns a new object of class '<em>Impact Model</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Impact Model</em>'.
+   * @generated
+   */
+  ImpactModel createImpactModel();
 
   /**
    * Returns a new object of class '<em>Evaluation Range</em>'.

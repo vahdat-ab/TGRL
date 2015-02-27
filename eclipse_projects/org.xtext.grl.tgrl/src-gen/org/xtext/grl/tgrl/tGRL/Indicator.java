@@ -16,7 +16,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Indicator#getDecompositionType <em>Decomposition Type</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Indicator#getImportance <em>Importance</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Indicator#getImportanceQuantitative <em>Importance Quantitative</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.Indicator#getRefs <em>Refs</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Indicator#getKpiModelLinksDest <em>Kpi Model Links Dest</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Indicator#getGroups <em>Groups</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Indicator#getElementLinks <em>Element Links</em>}</li>
@@ -141,22 +140,6 @@ public interface Indicator extends IntentionalElement
    * @generated
    */
   void setImportanceQuantitative(int value);
-
-  /**
-   * Returns the value of the '<em><b>Refs</b></em>' reference list.
-   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.IntentionalElementRef}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Refs</em>' reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Refs</em>' reference list.
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getIndicator_Refs()
-   * @model
-   * @generated
-   */
-  EList<IntentionalElementRef> getRefs();
 
   /**
    * Returns the value of the '<em><b>Kpi Model Links Dest</b></em>' reference list.

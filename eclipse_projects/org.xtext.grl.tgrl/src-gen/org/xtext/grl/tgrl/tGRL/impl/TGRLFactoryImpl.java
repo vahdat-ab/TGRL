@@ -89,13 +89,11 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
       case TGRLPackage.DEPENDENCY: return createDependency();
       case TGRLPackage.IN_LINE_DEPENDENCY: return createInLineDependency();
       case TGRLPackage.DEPENDENCY_END: return createDependencyEnd();
-      case TGRLPackage.KPI_CONVERSION: return createKPIConversion();
-      case TGRLPackage.COLLAPSED_ACTOR_REF: return createCollapsedActorRef();
-      case TGRLPackage.INTENTIONAL_ELEMENT_REF: return createIntentionalElementRef();
-      case TGRLPackage.IMPACT_MODEL: return createImpactModel();
-      case TGRLPackage.STRATEGIES_GROUP: return createStrategiesGroup();
+      case TGRLPackage.STRATEGY_GROUP: return createStrategyGroup();
       case TGRLPackage.EVALUATION_STRATEGY: return createEvaluationStrategy();
       case TGRLPackage.EVALUATION: return createEvaluation();
+      case TGRLPackage.KPI_CONVERSION: return createKPIConversion();
+      case TGRLPackage.IMPACT_MODEL: return createImpactModel();
       case TGRLPackage.EVALUATION_RANGE: return createEvaluationRange();
       case TGRLPackage.CONTRIBUTION_CONTEXT_GROUP: return createContributionContextGroup();
       case TGRLPackage.CONTRIBUTION_CONTEXT: return createContributionContext();
@@ -442,54 +440,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public KPIConversion createKPIConversion()
+  public StrategyGroup createStrategyGroup()
   {
-    KPIConversionImpl kpiConversion = new KPIConversionImpl();
-    return kpiConversion;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public CollapsedActorRef createCollapsedActorRef()
-  {
-    CollapsedActorRefImpl collapsedActorRef = new CollapsedActorRefImpl();
-    return collapsedActorRef;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public IntentionalElementRef createIntentionalElementRef()
-  {
-    IntentionalElementRefImpl intentionalElementRef = new IntentionalElementRefImpl();
-    return intentionalElementRef;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ImpactModel createImpactModel()
-  {
-    ImpactModelImpl impactModel = new ImpactModelImpl();
-    return impactModel;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public StrategiesGroup createStrategiesGroup()
-  {
-    StrategiesGroupImpl strategiesGroup = new StrategiesGroupImpl();
-    return strategiesGroup;
+    StrategyGroupImpl strategyGroup = new StrategyGroupImpl();
+    return strategyGroup;
   }
 
   /**
@@ -512,6 +466,28 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
   {
     EvaluationImpl evaluation = new EvaluationImpl();
     return evaluation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public KPIConversion createKPIConversion()
+  {
+    KPIConversionImpl kpiConversion = new KPIConversionImpl();
+    return kpiConversion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ImpactModel createImpactModel()
+  {
+    ImpactModelImpl impactModel = new ImpactModelImpl();
+    return impactModel;
   }
 
   /**

@@ -27,7 +27,7 @@ public enum ImportanceType implements Enumerator
    * @generated
    * @ordered
    */
-  NONE(0, "None", "None"),
+  NONE(0, "none", "none"),
 
   /**
    * The '<em><b>High</b></em>' literal object.
@@ -37,7 +37,7 @@ public enum ImportanceType implements Enumerator
    * @generated
    * @ordered
    */
-  HIGH(1, "High", "High"),
+  HIGH(1, "high", "high"),
 
   /**
    * The '<em><b>Medium</b></em>' literal object.
@@ -47,7 +47,7 @@ public enum ImportanceType implements Enumerator
    * @generated
    * @ordered
    */
-  MEDIUM(2, "Medium", "Medium"),
+  MEDIUM(2, "medium", "medium"),
 
   /**
    * The '<em><b>Low</b></em>' literal object.
@@ -57,7 +57,7 @@ public enum ImportanceType implements Enumerator
    * @generated
    * @ordered
    */
-  LOW(3, "Low", "Low");
+  LOW(3, "low", "low");
 
   /**
    * The '<em><b>None</b></em>' literal value.
@@ -68,7 +68,7 @@ public enum ImportanceType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #NONE
-   * @model name="None"
+   * @model name="none"
    * @generated
    * @ordered
    */
@@ -83,7 +83,7 @@ public enum ImportanceType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #HIGH
-   * @model name="High"
+   * @model name="high"
    * @generated
    * @ordered
    */
@@ -98,7 +98,7 @@ public enum ImportanceType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #MEDIUM
-   * @model name="Medium"
+   * @model name="medium"
    * @generated
    * @ordered
    */
@@ -113,7 +113,7 @@ public enum ImportanceType implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #LOW
-   * @model name="Low"
+   * @model name="low"
    * @generated
    * @ordered
    */

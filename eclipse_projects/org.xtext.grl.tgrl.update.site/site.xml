@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.xtext.grl.tgrl.sdk_1.0.0.201502270201.jar" id="org.xtext.grl.tgrl.sdk" version="1.0.0.201502270201"/>
+</site>

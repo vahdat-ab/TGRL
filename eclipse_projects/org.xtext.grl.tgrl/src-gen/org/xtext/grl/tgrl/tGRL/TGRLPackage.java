@@ -909,22 +909,13 @@ public interface TGRLPackage extends EPackage
   int INDICATOR__IMPORTANCE_QUANTITATIVE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 3;
 
   /**
-   * The feature id for the '<em><b>Refs</b></em>' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INDICATOR__REFS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 4;
-
-  /**
    * The feature id for the '<em><b>Kpi Model Links Dest</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INDICATOR__KPI_MODEL_LINKS_DEST = INTENTIONAL_ELEMENT_FEATURE_COUNT + 5;
+  int INDICATOR__KPI_MODEL_LINKS_DEST = INTENTIONAL_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Groups</b></em>' reference list.
@@ -933,7 +924,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INDICATOR__GROUPS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 6;
+  int INDICATOR__GROUPS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Element Links</b></em>' containment reference list.
@@ -942,7 +933,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INDICATOR__ELEMENT_LINKS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 7;
+  int INDICATOR__ELEMENT_LINKS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 6;
 
   /**
    * The number of structural features of the '<em>Indicator</em>' class.
@@ -951,7 +942,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INDICATOR_FEATURE_COUNT = INTENTIONAL_ELEMENT_FEATURE_COUNT + 8;
+  int INDICATOR_FEATURE_COUNT = INTENTIONAL_ELEMENT_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.BeliefImpl <em>Belief</em>}' class.
@@ -1378,6 +1369,171 @@ public interface TGRLPackage extends EPackage
   int DEPENDENCY_END_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.StrategyGroupImpl <em>Strategy Group</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.grl.tgrl.tGRL.impl.StrategyGroupImpl
+   * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getStrategyGroup()
+   * @generated
+   */
+  int STRATEGY_GROUP = 24;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRATEGY_GROUP__ID = GRL_ELEMENT__ID;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRATEGY_GROUP__NAME = GRL_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Strategies</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRATEGY_GROUP__STRATEGIES = GRL_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Strategy Group</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRATEGY_GROUP_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationStrategyImpl <em>Evaluation Strategy</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.grl.tgrl.tGRL.impl.EvaluationStrategyImpl
+   * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getEvaluationStrategy()
+   * @generated
+   */
+  int EVALUATION_STRATEGY = 25;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVALUATION_STRATEGY__ID = GRL_ELEMENT__ID;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVALUATION_STRATEGY__NAME = GRL_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Super Strategies</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVALUATION_STRATEGY__SUPER_STRATEGIES = GRL_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Evaluations</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVALUATION_STRATEGY__EVALUATIONS = GRL_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Evaluation Strategy</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVALUATION_STRATEGY_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationImpl <em>Evaluation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.grl.tgrl.tGRL.impl.EvaluationImpl
+   * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getEvaluation()
+   * @generated
+   */
+  int EVALUATION = 26;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVALUATION__ID = GRL_ELEMENT__ID;
+
+  /**
+   * The feature id for the '<em><b>Intentional Element</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVALUATION__INTENTIONAL_ELEMENT = GRL_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Qualitative Evaluation</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVALUATION__QUALITATIVE_EVALUATION = GRL_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Evaluation</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVALUATION__EVALUATION = GRL_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Exceeds</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVALUATION__EXCEEDS = GRL_ELEMENT_FEATURE_COUNT + 3;
+
+  /**
+   * The number of structural features of the '<em>Evaluation</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVALUATION_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 4;
+
+  /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.KPIConversionImpl <em>KPI Conversion</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1385,7 +1541,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getKPIConversion()
    * @generated
    */
-  int KPI_CONVERSION = 24;
+  int KPI_CONVERSION = 27;
 
   /**
    * The number of structural features of the '<em>KPI Conversion</em>' class.
@@ -1397,107 +1553,6 @@ public interface TGRLPackage extends EPackage
   int KPI_CONVERSION_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.CollapsedActorRefImpl <em>Collapsed Actor Ref</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.grl.tgrl.tGRL.impl.CollapsedActorRefImpl
-   * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getCollapsedActorRef()
-   * @generated
-   */
-  int COLLAPSED_ACTOR_REF = 25;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COLLAPSED_ACTOR_REF__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Label</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COLLAPSED_ACTOR_REF__LABEL = 1;
-
-  /**
-   * The feature id for the '<em><b>Description</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COLLAPSED_ACTOR_REF__DESCRIPTION = 2;
-
-  /**
-   * The number of structural features of the '<em>Collapsed Actor Ref</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COLLAPSED_ACTOR_REF_FEATURE_COUNT = 3;
-
-  /**
-   * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementRefImpl <em>Intentional Element Ref</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.grl.tgrl.tGRL.impl.IntentionalElementRefImpl
-   * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getIntentionalElementRef()
-   * @generated
-   */
-  int INTENTIONAL_ELEMENT_REF = 26;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INTENTIONAL_ELEMENT_REF__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Criticality</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INTENTIONAL_ELEMENT_REF__CRITICALITY = 1;
-
-  /**
-   * The feature id for the '<em><b>Priority</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INTENTIONAL_ELEMENT_REF__PRIORITY = 2;
-
-  /**
-   * The feature id for the '<em><b>Def</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INTENTIONAL_ELEMENT_REF__DEF = 3;
-
-  /**
-   * The number of structural features of the '<em>Intentional Element Ref</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INTENTIONAL_ELEMENT_REF_FEATURE_COUNT = 4;
-
-  /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.ImpactModelImpl <em>Impact Model</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1505,7 +1560,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getImpactModel()
    * @generated
    */
-  int IMPACT_MODEL = 27;
+  int IMPACT_MODEL = 28;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1526,189 +1581,6 @@ public interface TGRLPackage extends EPackage
   int IMPACT_MODEL_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.StrategiesGroupImpl <em>Strategies Group</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.grl.tgrl.tGRL.impl.StrategiesGroupImpl
-   * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getStrategiesGroup()
-   * @generated
-   */
-  int STRATEGIES_GROUP = 28;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRATEGIES_GROUP__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Strategies</b></em>' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRATEGIES_GROUP__STRATEGIES = 1;
-
-  /**
-   * The number of structural features of the '<em>Strategies Group</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRATEGIES_GROUP_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationStrategyImpl <em>Evaluation Strategy</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.grl.tgrl.tGRL.impl.EvaluationStrategyImpl
-   * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getEvaluationStrategy()
-   * @generated
-   */
-  int EVALUATION_STRATEGY = 29;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVALUATION_STRATEGY__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Evaluations</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVALUATION_STRATEGY__EVALUATIONS = 1;
-
-  /**
-   * The feature id for the '<em><b>Included Strategies</b></em>' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVALUATION_STRATEGY__INCLUDED_STRATEGIES = 2;
-
-  /**
-   * The feature id for the '<em><b>Kip Infor Config</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVALUATION_STRATEGY__KIP_INFOR_CONFIG = 3;
-
-  /**
-   * The number of structural features of the '<em>Evaluation Strategy</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVALUATION_STRATEGY_FEATURE_COUNT = 4;
-
-  /**
-   * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationImpl <em>Evaluation</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.grl.tgrl.tGRL.impl.EvaluationImpl
-   * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getEvaluation()
-   * @generated
-   */
-  int EVALUATION = 30;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVALUATION__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Evaluation</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVALUATION__EVALUATION = 1;
-
-  /**
-   * The feature id for the '<em><b>Qualitative Evaluation</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVALUATION__QUALITATIVE_EVALUATION = 2;
-
-  /**
-   * The feature id for the '<em><b>Exceeds</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVALUATION__EXCEEDS = 3;
-
-  /**
-   * The feature id for the '<em><b>Eval Range</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVALUATION__EVAL_RANGE = 4;
-
-  /**
-   * The feature id for the '<em><b>Kpi Eval Value Set</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVALUATION__KPI_EVAL_VALUE_SET = 5;
-
-  /**
-   * The feature id for the '<em><b>Kpi New Eval Value</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVALUATION__KPI_NEW_EVAL_VALUE = 6;
-
-  /**
-   * The feature id for the '<em><b>In Element</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVALUATION__IN_ELEMENT = 7;
-
-  /**
-   * The number of structural features of the '<em>Evaluation</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EVALUATION_FEATURE_COUNT = 8;
-
-  /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationRangeImpl <em>Evaluation Range</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1716,7 +1588,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getEvaluationRange()
    * @generated
    */
-  int EVALUATION_RANGE = 31;
+  int EVALUATION_RANGE = 29;
 
   /**
    * The feature id for the '<em><b>Start</b></em>' attribute.
@@ -1762,7 +1634,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getContributionContextGroup()
    * @generated
    */
-  int CONTRIBUTION_CONTEXT_GROUP = 32;
+  int CONTRIBUTION_CONTEXT_GROUP = 30;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1799,7 +1671,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getContributionContext()
    * @generated
    */
-  int CONTRIBUTION_CONTEXT = 33;
+  int CONTRIBUTION_CONTEXT = 31;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1845,7 +1717,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getContributionChange()
    * @generated
    */
-  int CONTRIBUTION_CHANGE = 34;
+  int CONTRIBUTION_CHANGE = 32;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1900,7 +1772,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getContributionRange()
    * @generated
    */
-  int CONTRIBUTION_RANGE = 35;
+  int CONTRIBUTION_RANGE = 33;
 
   /**
    * The feature id for the '<em><b>Start</b></em>' attribute.
@@ -1946,7 +1818,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getQualitativeMappings()
    * @generated
    */
-  int QUALITATIVE_MAPPINGS = 36;
+  int QUALITATIVE_MAPPINGS = 34;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1992,7 +1864,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getKPIEvalValueSet()
    * @generated
    */
-  int KPI_EVAL_VALUE_SET = 37;
+  int KPI_EVAL_VALUE_SET = 35;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2074,7 +1946,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getQualitativeMapping()
    * @generated
    */
-  int QUALITATIVE_MAPPING = 38;
+  int QUALITATIVE_MAPPING = 36;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2138,7 +2010,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getKPINewEvalValue()
    * @generated
    */
-  int KPI_NEW_EVAL_VALUE = 39;
+  int KPI_NEW_EVAL_VALUE = 37;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2175,7 +2047,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getKPIInformationConfig()
    * @generated
    */
-  int KPI_INFORMATION_CONFIG = 40;
+  int KPI_INFORMATION_CONFIG = 38;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2230,7 +2102,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getKPIInformationElement()
    * @generated
    */
-  int KPI_INFORMATION_ELEMENT = 41;
+  int KPI_INFORMATION_ELEMENT = 39;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2294,7 +2166,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getKPIInformationElementRef()
    * @generated
    */
-  int KPI_INFORMATION_ELEMENT_REF = 42;
+  int KPI_INFORMATION_ELEMENT_REF = 40;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2340,7 +2212,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getKPIModelLink()
    * @generated
    */
-  int KPI_MODEL_LINK = 43;
+  int KPI_MODEL_LINK = 41;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2386,7 +2258,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getIndicatorGroup()
    * @generated
    */
-  int INDICATOR_GROUP = 44;
+  int INDICATOR_GROUP = 42;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2450,7 +2322,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getImportanceType()
    * @generated
    */
-  int IMPORTANCE_TYPE = 45;
+  int IMPORTANCE_TYPE = 43;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.DecompositionType <em>Decomposition Type</em>}' enum.
@@ -2460,7 +2332,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getDecompositionType()
    * @generated
    */
-  int DECOMPOSITION_TYPE = 46;
+  int DECOMPOSITION_TYPE = 44;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.ContributionType <em>Contribution Type</em>}' enum.
@@ -2470,7 +2342,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getContributionType()
    * @generated
    */
-  int CONTRIBUTION_TYPE = 47;
+  int CONTRIBUTION_TYPE = 45;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.QualitativeLabel <em>Qualitative Label</em>}' enum.
@@ -2480,7 +2352,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getQualitativeLabel()
    * @generated
    */
-  int QUALITATIVE_LABEL = 48;
+  int QUALITATIVE_LABEL = 46;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.Color <em>Color</em>}' enum.
@@ -2490,7 +2362,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getColor()
    * @generated
    */
-  int COLOR = 49;
+  int COLOR = 47;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.Criticality <em>Criticality</em>}' enum.
@@ -2500,7 +2372,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getCriticality()
    * @generated
    */
-  int CRITICALITY = 50;
+  int CRITICALITY = 48;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.Priority <em>Priority</em>}' enum.
@@ -2510,7 +2382,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getPriority()
    * @generated
    */
-  int PRIORITY = 51;
+  int PRIORITY = 49;
 
 
   /**
@@ -3083,17 +2955,6 @@ public interface TGRLPackage extends EPackage
   EAttribute getIndicator_ImportanceQuantitative();
 
   /**
-   * Returns the meta object for the reference list '{@link org.xtext.grl.tgrl.tGRL.Indicator#getRefs <em>Refs</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Refs</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.Indicator#getRefs()
-   * @see #getIndicator()
-   * @generated
-   */
-  EReference getIndicator_Refs();
-
-  /**
    * Returns the meta object for the reference list '{@link org.xtext.grl.tgrl.tGRL.Indicator#getKpiModelLinksDest <em>Kpi Model Links Dest</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3370,164 +3231,36 @@ public interface TGRLPackage extends EPackage
   EAttribute getDependencyEnd_Description();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.KPIConversion <em>KPI Conversion</em>}'.
+   * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.StrategyGroup <em>Strategy Group</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>KPI Conversion</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.KPIConversion
+   * @return the meta object for class '<em>Strategy Group</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.StrategyGroup
    * @generated
    */
-  EClass getKPIConversion();
+  EClass getStrategyGroup();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.CollapsedActorRef <em>Collapsed Actor Ref</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Collapsed Actor Ref</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.CollapsedActorRef
-   * @generated
-   */
-  EClass getCollapsedActorRef();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.CollapsedActorRef#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.StrategyGroup#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.CollapsedActorRef#getName()
-   * @see #getCollapsedActorRef()
+   * @see org.xtext.grl.tgrl.tGRL.StrategyGroup#getName()
+   * @see #getStrategyGroup()
    * @generated
    */
-  EAttribute getCollapsedActorRef_Name();
+  EAttribute getStrategyGroup_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.CollapsedActorRef#getLabel <em>Label</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Label</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.CollapsedActorRef#getLabel()
-   * @see #getCollapsedActorRef()
-   * @generated
-   */
-  EAttribute getCollapsedActorRef_Label();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.CollapsedActorRef#getDescription <em>Description</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Description</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.CollapsedActorRef#getDescription()
-   * @see #getCollapsedActorRef()
-   * @generated
-   */
-  EAttribute getCollapsedActorRef_Description();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.IntentionalElementRef <em>Intentional Element Ref</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Intentional Element Ref</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.IntentionalElementRef
-   * @generated
-   */
-  EClass getIntentionalElementRef();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.IntentionalElementRef#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.IntentionalElementRef#getName()
-   * @see #getIntentionalElementRef()
-   * @generated
-   */
-  EAttribute getIntentionalElementRef_Name();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.IntentionalElementRef#getCriticality <em>Criticality</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Criticality</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.IntentionalElementRef#getCriticality()
-   * @see #getIntentionalElementRef()
-   * @generated
-   */
-  EAttribute getIntentionalElementRef_Criticality();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.IntentionalElementRef#getPriority <em>Priority</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Priority</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.IntentionalElementRef#getPriority()
-   * @see #getIntentionalElementRef()
-   * @generated
-   */
-  EAttribute getIntentionalElementRef_Priority();
-
-  /**
-   * Returns the meta object for the reference '{@link org.xtext.grl.tgrl.tGRL.IntentionalElementRef#getDef <em>Def</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Def</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.IntentionalElementRef#getDef()
-   * @see #getIntentionalElementRef()
-   * @generated
-   */
-  EReference getIntentionalElementRef_Def();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.ImpactModel <em>Impact Model</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Impact Model</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.ImpactModel
-   * @generated
-   */
-  EClass getImpactModel();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.ImpactModel#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.ImpactModel#getName()
-   * @see #getImpactModel()
-   * @generated
-   */
-  EAttribute getImpactModel_Name();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.StrategiesGroup <em>Strategies Group</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Strategies Group</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.StrategiesGroup
-   * @generated
-   */
-  EClass getStrategiesGroup();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.StrategiesGroup#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.StrategiesGroup#getName()
-   * @see #getStrategiesGroup()
-   * @generated
-   */
-  EAttribute getStrategiesGroup_Name();
-
-  /**
-   * Returns the meta object for the reference list '{@link org.xtext.grl.tgrl.tGRL.StrategiesGroup#getStrategies <em>Strategies</em>}'.
+   * Returns the meta object for the reference list '{@link org.xtext.grl.tgrl.tGRL.StrategyGroup#getStrategies <em>Strategies</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the reference list '<em>Strategies</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.StrategiesGroup#getStrategies()
-   * @see #getStrategiesGroup()
+   * @see org.xtext.grl.tgrl.tGRL.StrategyGroup#getStrategies()
+   * @see #getStrategyGroup()
    * @generated
    */
-  EReference getStrategiesGroup_Strategies();
+  EReference getStrategyGroup_Strategies();
 
   /**
    * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.EvaluationStrategy <em>Evaluation Strategy</em>}'.
@@ -3551,6 +3284,17 @@ public interface TGRLPackage extends EPackage
   EAttribute getEvaluationStrategy_Name();
 
   /**
+   * Returns the meta object for the reference list '{@link org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getSuperStrategies <em>Super Strategies</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Super Strategies</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getSuperStrategies()
+   * @see #getEvaluationStrategy()
+   * @generated
+   */
+  EReference getEvaluationStrategy_SuperStrategies();
+
+  /**
    * Returns the meta object for the containment reference list '{@link org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getEvaluations <em>Evaluations</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3560,28 +3304,6 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   EReference getEvaluationStrategy_Evaluations();
-
-  /**
-   * Returns the meta object for the reference list '{@link org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getIncludedStrategies <em>Included Strategies</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Included Strategies</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getIncludedStrategies()
-   * @see #getEvaluationStrategy()
-   * @generated
-   */
-  EReference getEvaluationStrategy_IncludedStrategies();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getKipInforConfig <em>Kip Infor Config</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Kip Infor Config</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getKipInforConfig()
-   * @see #getEvaluationStrategy()
-   * @generated
-   */
-  EReference getEvaluationStrategy_KipInforConfig();
 
   /**
    * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.Evaluation <em>Evaluation</em>}'.
@@ -3594,26 +3316,15 @@ public interface TGRLPackage extends EPackage
   EClass getEvaluation();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Evaluation#getName <em>Name</em>}'.
+   * Returns the meta object for the reference '{@link org.xtext.grl.tgrl.tGRL.Evaluation#getIntentionalElement <em>Intentional Element</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.Evaluation#getName()
+   * @return the meta object for the reference '<em>Intentional Element</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.Evaluation#getIntentionalElement()
    * @see #getEvaluation()
    * @generated
    */
-  EAttribute getEvaluation_Name();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Evaluation#getEvaluation <em>Evaluation</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Evaluation</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.Evaluation#getEvaluation()
-   * @see #getEvaluation()
-   * @generated
-   */
-  EAttribute getEvaluation_Evaluation();
+  EReference getEvaluation_IntentionalElement();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Evaluation#getQualitativeEvaluation <em>Qualitative Evaluation</em>}'.
@@ -3627,59 +3338,57 @@ public interface TGRLPackage extends EPackage
   EAttribute getEvaluation_QualitativeEvaluation();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Evaluation#getExceeds <em>Exceeds</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Evaluation#getEvaluation <em>Evaluation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Evaluation</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.Evaluation#getEvaluation()
+   * @see #getEvaluation()
+   * @generated
+   */
+  EAttribute getEvaluation_Evaluation();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Evaluation#isExceeds <em>Exceeds</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Exceeds</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.Evaluation#getExceeds()
+   * @see org.xtext.grl.tgrl.tGRL.Evaluation#isExceeds()
    * @see #getEvaluation()
    * @generated
    */
   EAttribute getEvaluation_Exceeds();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.grl.tgrl.tGRL.Evaluation#getEvalRange <em>Eval Range</em>}'.
+   * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.KPIConversion <em>KPI Conversion</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Eval Range</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.Evaluation#getEvalRange()
-   * @see #getEvaluation()
+   * @return the meta object for class '<em>KPI Conversion</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.KPIConversion
    * @generated
    */
-  EReference getEvaluation_EvalRange();
+  EClass getKPIConversion();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.grl.tgrl.tGRL.Evaluation#getKpiEvalValueSet <em>Kpi Eval Value Set</em>}'.
+   * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.ImpactModel <em>Impact Model</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Kpi Eval Value Set</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.Evaluation#getKpiEvalValueSet()
-   * @see #getEvaluation()
+   * @return the meta object for class '<em>Impact Model</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.ImpactModel
    * @generated
    */
-  EReference getEvaluation_KpiEvalValueSet();
+  EClass getImpactModel();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.grl.tgrl.tGRL.Evaluation#getKpiNewEvalValue <em>Kpi New Eval Value</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.ImpactModel#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Kpi New Eval Value</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.Evaluation#getKpiNewEvalValue()
-   * @see #getEvaluation()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.ImpactModel#getName()
+   * @see #getImpactModel()
    * @generated
    */
-  EReference getEvaluation_KpiNewEvalValue();
-
-  /**
-   * Returns the meta object for the reference '{@link org.xtext.grl.tgrl.tGRL.Evaluation#getInElement <em>In Element</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>In Element</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.Evaluation#getInElement()
-   * @see #getEvaluation()
-   * @generated
-   */
-  EReference getEvaluation_InElement();
+  EAttribute getImpactModel_Name();
 
   /**
    * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.EvaluationRange <em>Evaluation Range</em>}'.
@@ -4939,14 +4648,6 @@ public interface TGRLPackage extends EPackage
     EAttribute INDICATOR__IMPORTANCE_QUANTITATIVE = eINSTANCE.getIndicator_ImportanceQuantitative();
 
     /**
-     * The meta object literal for the '<em><b>Refs</b></em>' reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference INDICATOR__REFS = eINSTANCE.getIndicator_Refs();
-
-    /**
      * The meta object literal for the '<em><b>Kpi Model Links Dest</b></em>' reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5175,24 +4876,14 @@ public interface TGRLPackage extends EPackage
     EAttribute DEPENDENCY_END__DESCRIPTION = eINSTANCE.getDependencyEnd_Description();
 
     /**
-     * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.impl.KPIConversionImpl <em>KPI Conversion</em>}' class.
+     * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.impl.StrategyGroupImpl <em>Strategy Group</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.grl.tgrl.tGRL.impl.KPIConversionImpl
-     * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getKPIConversion()
+     * @see org.xtext.grl.tgrl.tGRL.impl.StrategyGroupImpl
+     * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getStrategyGroup()
      * @generated
      */
-    EClass KPI_CONVERSION = eINSTANCE.getKPIConversion();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.impl.CollapsedActorRefImpl <em>Collapsed Actor Ref</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.grl.tgrl.tGRL.impl.CollapsedActorRefImpl
-     * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getCollapsedActorRef()
-     * @generated
-     */
-    EClass COLLAPSED_ACTOR_REF = eINSTANCE.getCollapsedActorRef();
+    EClass STRATEGY_GROUP = eINSTANCE.getStrategyGroup();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -5200,101 +4891,7 @@ public interface TGRLPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute COLLAPSED_ACTOR_REF__NAME = eINSTANCE.getCollapsedActorRef_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute COLLAPSED_ACTOR_REF__LABEL = eINSTANCE.getCollapsedActorRef_Label();
-
-    /**
-     * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute COLLAPSED_ACTOR_REF__DESCRIPTION = eINSTANCE.getCollapsedActorRef_Description();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementRefImpl <em>Intentional Element Ref</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.grl.tgrl.tGRL.impl.IntentionalElementRefImpl
-     * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getIntentionalElementRef()
-     * @generated
-     */
-    EClass INTENTIONAL_ELEMENT_REF = eINSTANCE.getIntentionalElementRef();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute INTENTIONAL_ELEMENT_REF__NAME = eINSTANCE.getIntentionalElementRef_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Criticality</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute INTENTIONAL_ELEMENT_REF__CRITICALITY = eINSTANCE.getIntentionalElementRef_Criticality();
-
-    /**
-     * The meta object literal for the '<em><b>Priority</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute INTENTIONAL_ELEMENT_REF__PRIORITY = eINSTANCE.getIntentionalElementRef_Priority();
-
-    /**
-     * The meta object literal for the '<em><b>Def</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference INTENTIONAL_ELEMENT_REF__DEF = eINSTANCE.getIntentionalElementRef_Def();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.impl.ImpactModelImpl <em>Impact Model</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.grl.tgrl.tGRL.impl.ImpactModelImpl
-     * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getImpactModel()
-     * @generated
-     */
-    EClass IMPACT_MODEL = eINSTANCE.getImpactModel();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute IMPACT_MODEL__NAME = eINSTANCE.getImpactModel_Name();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.impl.StrategiesGroupImpl <em>Strategies Group</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.grl.tgrl.tGRL.impl.StrategiesGroupImpl
-     * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getStrategiesGroup()
-     * @generated
-     */
-    EClass STRATEGIES_GROUP = eINSTANCE.getStrategiesGroup();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STRATEGIES_GROUP__NAME = eINSTANCE.getStrategiesGroup_Name();
+    EAttribute STRATEGY_GROUP__NAME = eINSTANCE.getStrategyGroup_Name();
 
     /**
      * The meta object literal for the '<em><b>Strategies</b></em>' reference list feature.
@@ -5302,7 +4899,7 @@ public interface TGRLPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference STRATEGIES_GROUP__STRATEGIES = eINSTANCE.getStrategiesGroup_Strategies();
+    EReference STRATEGY_GROUP__STRATEGIES = eINSTANCE.getStrategyGroup_Strategies();
 
     /**
      * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationStrategyImpl <em>Evaluation Strategy</em>}' class.
@@ -5323,28 +4920,20 @@ public interface TGRLPackage extends EPackage
     EAttribute EVALUATION_STRATEGY__NAME = eINSTANCE.getEvaluationStrategy_Name();
 
     /**
+     * The meta object literal for the '<em><b>Super Strategies</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EVALUATION_STRATEGY__SUPER_STRATEGIES = eINSTANCE.getEvaluationStrategy_SuperStrategies();
+
+    /**
      * The meta object literal for the '<em><b>Evaluations</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference EVALUATION_STRATEGY__EVALUATIONS = eINSTANCE.getEvaluationStrategy_Evaluations();
-
-    /**
-     * The meta object literal for the '<em><b>Included Strategies</b></em>' reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EVALUATION_STRATEGY__INCLUDED_STRATEGIES = eINSTANCE.getEvaluationStrategy_IncludedStrategies();
-
-    /**
-     * The meta object literal for the '<em><b>Kip Infor Config</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EVALUATION_STRATEGY__KIP_INFOR_CONFIG = eINSTANCE.getEvaluationStrategy_KipInforConfig();
 
     /**
      * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationImpl <em>Evaluation</em>}' class.
@@ -5357,20 +4946,12 @@ public interface TGRLPackage extends EPackage
     EClass EVALUATION = eINSTANCE.getEvaluation();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Intentional Element</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EVALUATION__NAME = eINSTANCE.getEvaluation_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Evaluation</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EVALUATION__EVALUATION = eINSTANCE.getEvaluation_Evaluation();
+    EReference EVALUATION__INTENTIONAL_ELEMENT = eINSTANCE.getEvaluation_IntentionalElement();
 
     /**
      * The meta object literal for the '<em><b>Qualitative Evaluation</b></em>' attribute feature.
@@ -5381,6 +4962,14 @@ public interface TGRLPackage extends EPackage
     EAttribute EVALUATION__QUALITATIVE_EVALUATION = eINSTANCE.getEvaluation_QualitativeEvaluation();
 
     /**
+     * The meta object literal for the '<em><b>Evaluation</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EVALUATION__EVALUATION = eINSTANCE.getEvaluation_Evaluation();
+
+    /**
      * The meta object literal for the '<em><b>Exceeds</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5389,36 +4978,32 @@ public interface TGRLPackage extends EPackage
     EAttribute EVALUATION__EXCEEDS = eINSTANCE.getEvaluation_Exceeds();
 
     /**
-     * The meta object literal for the '<em><b>Eval Range</b></em>' containment reference feature.
+     * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.impl.KPIConversionImpl <em>KPI Conversion</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see org.xtext.grl.tgrl.tGRL.impl.KPIConversionImpl
+     * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getKPIConversion()
      * @generated
      */
-    EReference EVALUATION__EVAL_RANGE = eINSTANCE.getEvaluation_EvalRange();
+    EClass KPI_CONVERSION = eINSTANCE.getKPIConversion();
 
     /**
-     * The meta object literal for the '<em><b>Kpi Eval Value Set</b></em>' containment reference feature.
+     * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.impl.ImpactModelImpl <em>Impact Model</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see org.xtext.grl.tgrl.tGRL.impl.ImpactModelImpl
+     * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getImpactModel()
      * @generated
      */
-    EReference EVALUATION__KPI_EVAL_VALUE_SET = eINSTANCE.getEvaluation_KpiEvalValueSet();
+    EClass IMPACT_MODEL = eINSTANCE.getImpactModel();
 
     /**
-     * The meta object literal for the '<em><b>Kpi New Eval Value</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference EVALUATION__KPI_NEW_EVAL_VALUE = eINSTANCE.getEvaluation_KpiNewEvalValue();
-
-    /**
-     * The meta object literal for the '<em><b>In Element</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EVALUATION__IN_ELEMENT = eINSTANCE.getEvaluation_InElement();
+    EAttribute IMPACT_MODEL__NAME = eINSTANCE.getImpactModel_Name();
 
     /**
      * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationRangeImpl <em>Evaluation Range</em>}' class.

@@ -195,29 +195,9 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
         return createDependencyEndAdapter();
       }
       @Override
-      public Adapter caseKPIConversion(KPIConversion object)
+      public Adapter caseStrategyGroup(StrategyGroup object)
       {
-        return createKPIConversionAdapter();
-      }
-      @Override
-      public Adapter caseCollapsedActorRef(CollapsedActorRef object)
-      {
-        return createCollapsedActorRefAdapter();
-      }
-      @Override
-      public Adapter caseIntentionalElementRef(IntentionalElementRef object)
-      {
-        return createIntentionalElementRefAdapter();
-      }
-      @Override
-      public Adapter caseImpactModel(ImpactModel object)
-      {
-        return createImpactModelAdapter();
-      }
-      @Override
-      public Adapter caseStrategiesGroup(StrategiesGroup object)
-      {
-        return createStrategiesGroupAdapter();
+        return createStrategyGroupAdapter();
       }
       @Override
       public Adapter caseEvaluationStrategy(EvaluationStrategy object)
@@ -228,6 +208,16 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
       public Adapter caseEvaluation(Evaluation object)
       {
         return createEvaluationAdapter();
+      }
+      @Override
+      public Adapter caseKPIConversion(KPIConversion object)
+      {
+        return createKPIConversionAdapter();
+      }
+      @Override
+      public Adapter caseImpactModel(ImpactModel object)
+      {
+        return createImpactModelAdapter();
       }
       @Override
       public Adapter caseEvaluationRange(EvaluationRange object)
@@ -682,76 +672,16 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.KPIConversion <em>KPI Conversion</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.StrategyGroup <em>Strategy Group</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.KPIConversion
+   * @see org.xtext.grl.tgrl.tGRL.StrategyGroup
    * @generated
    */
-  public Adapter createKPIConversionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.CollapsedActorRef <em>Collapsed Actor Ref</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.CollapsedActorRef
-   * @generated
-   */
-  public Adapter createCollapsedActorRefAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.IntentionalElementRef <em>Intentional Element Ref</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.IntentionalElementRef
-   * @generated
-   */
-  public Adapter createIntentionalElementRefAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.ImpactModel <em>Impact Model</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.ImpactModel
-   * @generated
-   */
-  public Adapter createImpactModelAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.StrategiesGroup <em>Strategies Group</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.StrategiesGroup
-   * @generated
-   */
-  public Adapter createStrategiesGroupAdapter()
+  public Adapter createStrategyGroupAdapter()
   {
     return null;
   }
@@ -782,6 +712,36 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createEvaluationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.KPIConversion <em>KPI Conversion</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.grl.tgrl.tGRL.KPIConversion
+   * @generated
+   */
+  public Adapter createKPIConversionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.ImpactModel <em>Impact Model</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.grl.tgrl.tGRL.ImpactModel
+   * @generated
+   */
+  public Adapter createImpactModelAdapter()
   {
     return null;
   }

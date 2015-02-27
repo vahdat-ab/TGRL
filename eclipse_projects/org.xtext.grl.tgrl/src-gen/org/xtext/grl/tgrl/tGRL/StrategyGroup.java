@@ -4,26 +4,24 @@ package org.xtext.grl.tgrl.tGRL;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Strategies Group</b></em>'.
+ * A representation of the model object '<em><b>Strategy Group</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.StrategiesGroup#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.StrategiesGroup#getStrategies <em>Strategies</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.StrategyGroup#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.StrategyGroup#getStrategies <em>Strategies</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getStrategiesGroup()
+ * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getStrategyGroup()
  * @model
  * @generated
  */
-public interface StrategiesGroup extends EObject
+public interface StrategyGroup extends GRLElement
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -35,14 +33,14 @@ public interface StrategiesGroup extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getStrategiesGroup_Name()
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getStrategyGroup_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.StrategiesGroup#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.StrategyGroup#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -61,10 +59,10 @@ public interface StrategiesGroup extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Strategies</em>' reference list.
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getStrategiesGroup_Strategies()
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getStrategyGroup_Strategies()
    * @model
    * @generated
    */
   EList<EvaluationStrategy> getStrategies();
 
-} // StrategiesGroup
+} // StrategyGroup

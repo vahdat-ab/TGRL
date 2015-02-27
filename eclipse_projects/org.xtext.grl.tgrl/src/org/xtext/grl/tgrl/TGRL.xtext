@@ -16,10 +16,10 @@ Element:
 	GRLSpecification | GRLBaseElement
 ;
 GRLBaseElement:
-	 GRLElement | InLineElementLink
+	 GRLElement | InLineElementLink 
 ;
 GRLElement:
-	IntentionalElement | ElementLink | Actor  
+	IntentionalElement | ElementLink | Actor | StrategyGroup | EvaluationStrategy | Evaluation
 ;
 IntentionalElement:
 	 Softgoal | Goal  | Task | Resource | Indicator | Belief
@@ -33,11 +33,11 @@ InLineElementLink:
 ;
 GRLSpecification: 
 	'grl' (name=ID)? '{'
-		(grlElements+=GRLElement)*
+		(grlElements+=GRLElement  )*
 //		(
 //			(impactModel=ImpactModel)?
 //			(
-//				links+=ElementLink | actors+=Actor | intElements+=IntentionalElement | groups+=StrategiesGroup | 
+//				links+=ElementLink | actors+=Actor | intElements+=IntentionalElement | 
 //				strategies+=EvaluationStrategy | contributionGroups+=ContributionContextGroup |
 //				contributionContexts+=ContributionContext | kpiConv+=KPIConversion	| kpiInformationElements+=KPIInformationElement |
 //				kpiModelLinks+=KPIModelLink | indicatorGroup+=IndicatorGroup
@@ -139,7 +139,6 @@ Indicator:
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
 			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
-			('refs' '=' refs+=[IntentionalElementRef](',' refs+=[IntentionalElementRef] )* ';')?&
 			('kpiModelLinksDest' '=' kpiModelLinksDest+=[KPIModelLink](',' kpiModelLinksDest+=[KPIModelLink] )* ';')?&
 			('groups''=' groups+=[IndicatorGroup](',' groups+=[IndicatorGroup] )* ';')?&
 			(elementLinks+=InLineElementLink)*			
@@ -156,13 +155,13 @@ Belief:
 ;	
 //*******************************************ElementLink*******************************************
 Decomposition: 
-	src=[IntentionalElement | QualifiedName] 'decomposes' dest+=DecompositionEnd (','dest+=DecompositionEnd)* ';'
+	src=[IntentionalElement | QualifiedName] 'decomposedBy' dest+=DecompositionEnd (','dest+=DecompositionEnd)* ';'
 //			('name' '=' label = STRING ';')?&
 //			('description' '=' description=STRING ';')?&
 //			('color' '=' fillColor = Color ';')?&
 ;
 InLineDecomposition:
-	'decomposes' dest+=DecompositionEnd (','dest+=DecompositionEnd)* ';'
+	'decomposedBy' dest+=DecompositionEnd (','dest+=DecompositionEnd)* ';'
 ;
 DecompositionEnd:
 	name=[IntentionalElement | QualifiedName] 
@@ -173,7 +172,7 @@ DecompositionEnd:
 	)?
 ;
 Contribution: 
-	src=[IntentionalElement | QualifiedName] 'contributes' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
+	src=[IntentionalElement | QualifiedName] 'contributeTo' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
 //			('name' '=' label = STRING ';')?&
 //			('contribution' '=' contribution=ContributionType ';')?&
 			/*
@@ -186,7 +185,7 @@ Contribution:
 //			('color' '=' fillColor = Color ';')?&				
 ;
 InLineContribution:
-	'contributes' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
+	'contributeTo' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
 ;
 ContributionEnd:
 	name = [IntentionalElement | QualifiedName]
@@ -197,13 +196,13 @@ ContributionEnd:
 	)?
 ;
 Dependency:
-	src=[IntentionalElement | QualifiedName] 'depends' dest+=DependencyEnd (','dest+=DependencyEnd)* ';'
+	src=[IntentionalElement | QualifiedName] 'dependOn' dest+=DependencyEnd (','dest+=DependencyEnd)* ';'
 //			('name' '=' label = STRING ';')?&
 //			('description' '=' c ';')?&
 //			('color' '=' fillColor = Color ';')?&
 ;
 InLineDependency:
-	'depends' dest+=DependencyEnd (','dest+=DependencyEnd)* ';'
+	'dependOn' dest+=DependencyEnd (','dest+=DependencyEnd)* ';'
 ;
 DependencyEnd:
 	name = [IntentionalElement | QualifiedName] 
@@ -212,6 +211,29 @@ DependencyEnd:
 			(description=STRING)?
 		'}'
 	)?
+;
+//*******************************************Strategy*******************************************
+StrategyGroup: 
+	'strategyGroup' name=ID 'includes' strategies+=[EvaluationStrategy | QualifiedName](',' strategies+=[EvaluationStrategy | QualifiedName])* ';'
+;
+
+EvaluationStrategy: 
+	'strategy' name=ID ('isA' superStrategies+=[EvaluationStrategy | QualifiedName](',' superStrategies+=[EvaluationStrategy | QualifiedName])* )?
+	'{'
+		evaluations+=Evaluation*
+//				('kipInforConfig' '='kipInforConfig+=KPIInformationConfig ';')
+	'}'
+;
+Evaluation:
+	/*
+	 *TODO I must give a default value for evaluation, which is zero, to this attribute.
+	 * 		This can be done through the post processing mechanism in xText 
+	 */	
+	intentionalElement = [IntentionalElement | QualifiedName] '=' (qualitativeEvaluation=QualitativeLabel | evaluation = INT )('{'exceeds?='exceeds' '}' | ';')
+	
+//			('evalRange' '=' evalRange=EvaluationRange ';')?&
+//			('kpiEvalValueSet' '=' kpiEvalValueSet = KPIEvalValueSet ';')?&
+//			('kpiNewEvalValue' '=' kpiNewEvalValue = KPINewEvalValue)?&
 ;
 
 //**************************************************************************************
@@ -230,62 +252,14 @@ KPIConversion:
 ;
 
 
-CollapsedActorRef: 
-	'collapsedActorRef' name=ID '{'
-		(
-			('name' '=' label = STRING ';')?&
-			('description' description=STRING ';')?	
-		)
-	'}'
-;
-IntentionalElementRef : 
-	'IntentionalElementRef' name=ID '{'
-		(
-			('criticality' '=' criticality=Criticality ';')?&
-			('priority' '=' priority=Priority';')?&
-			('def' '=' def=[IntentionalElement] ';')?					
-		)
-	'}'
-;
 ImpactModel :
 	'impactModel' name= ID '{'
 	'}'
 ;
 
 //**************************************************************************************
-StrategiesGroup: 
-	'strategiesGroup' name=ID '{'
-		('strategies' '=' strategies+=[EvaluationStrategy](',' strategies+=[EvaluationStrategy])* ';')*
-	'}'
-;
-EvaluationStrategy: 
-	'EvaluationStrategy' name=ID '{'
-		(
-			(
-				('evaluations' '=' evaluations+=Evaluation';') | 
-				('includedStrategies' '=' includedStrategies+=[EvaluationStrategy](',' includedStrategies+=[EvaluationStrategy])* ';') |
-				('kipInforConfig' '='kipInforConfig+=KPIInformationConfig ';')
-			)*
-		)
-	'}'
-;
-Evaluation:
-	'eval' name = ID '{'
-		(
-			/*
-			 *TODO I must give a default value, which is zero, to this attribute.
-			 * 		This can be done through the post processing mechanism in xText 
-			 */	
-			('evaluation' '=' evaluation = INT ';')?&
-			('qualitativeEvaluation' '=' qualitativeEvaluation=QualitativeLabel ';')?&
-			('exceeds' '=' exceeds = BOOLEAN)?&
-			('evalRange' '=' evalRange=EvaluationRange ';')?&
-			('kpiEvalValueSet' '=' kpiEvalValueSet = KPIEvalValueSet ';')?&
-			('kpiNewEvalValue' '=' kpiNewEvalValue = KPINewEvalValue)?&
-			('inElement' '=' inElement=[IntentionalElement] ';') 
-		) 
-	'}'
-;
+
+
 EvaluationRange: 
 	'evaluationRange' '{'
 		(
@@ -497,22 +471,22 @@ IndicatorGroup :
 //	Ressource = 'resource'| Indicator = 'indicator'  
 //;
 enum ImportanceType: 
-	 None  | High  | Medium | Low
+	 none  | high  | medium | low
 ;
 enum DecompositionType:
-	And| Or  | Xor  
+	and| or  | xor  
 ;
 
 enum ContributionType: 
-	Help | Make | SomePositive  |
-	Unknown  | SomeNegative  | Hurt  |
-	Break 
+	help | make | somePositive  |
+	unknown  | someNegative  | hurt  |
+	break 
 ;
 
 enum QualitativeLabel:
-	Denied | WeaklyDenied |
-	WeaklySatisfied  | Satisfied |
-	Conflict | Unknown | None
+	denied | weaklyDenied |
+	weaklySatisfied  | satisfied |
+	conflict | unknown | none
 ;
 enum Color:
 	white|black|blue|green|cyan|red|purple|yellow|gray|lightGray|lightBlue|lightGreen|lightCray|lightRed|lightPurple|lightYellow

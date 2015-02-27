@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.xtext.grl.tgrl.tGRL.Actor;
 import org.xtext.grl.tgrl.tGRL.Belief;
-import org.xtext.grl.tgrl.tGRL.CollapsedActorRef;
 import org.xtext.grl.tgrl.tGRL.Color;
 import org.xtext.grl.tgrl.tGRL.Contribution;
 import org.xtext.grl.tgrl.tGRL.ContributionChange;
@@ -46,7 +45,6 @@ import org.xtext.grl.tgrl.tGRL.InLineElementLink;
 import org.xtext.grl.tgrl.tGRL.Indicator;
 import org.xtext.grl.tgrl.tGRL.IndicatorGroup;
 import org.xtext.grl.tgrl.tGRL.IntentionalElement;
-import org.xtext.grl.tgrl.tGRL.IntentionalElementRef;
 import org.xtext.grl.tgrl.tGRL.KPIConversion;
 import org.xtext.grl.tgrl.tGRL.KPIEvalValueSet;
 import org.xtext.grl.tgrl.tGRL.KPIInformationConfig;
@@ -61,7 +59,7 @@ import org.xtext.grl.tgrl.tGRL.QualitativeMapping;
 import org.xtext.grl.tgrl.tGRL.QualitativeMappings;
 import org.xtext.grl.tgrl.tGRL.Resource;
 import org.xtext.grl.tgrl.tGRL.Softgoal;
-import org.xtext.grl.tgrl.tGRL.StrategiesGroup;
+import org.xtext.grl.tgrl.tGRL.StrategyGroup;
 import org.xtext.grl.tgrl.tGRL.TGRLFactory;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 import org.xtext.grl.tgrl.tGRL.Task;
@@ -247,35 +245,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass kpiConversionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass collapsedActorRefEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass intentionalElementRefEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass impactModelEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass strategiesGroupEClass = null;
+  private EClass strategyGroupEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -290,6 +260,20 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * @generated
    */
   private EClass evaluationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass kpiConversionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass impactModelEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1039,7 +1023,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getIndicator_Refs()
+  public EReference getIndicator_KpiModelLinksDest()
   {
     return (EReference)indicatorEClass.getEStructuralFeatures().get(4);
   }
@@ -1049,7 +1033,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getIndicator_KpiModelLinksDest()
+  public EReference getIndicator_Groups()
   {
     return (EReference)indicatorEClass.getEStructuralFeatures().get(5);
   }
@@ -1059,19 +1043,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getIndicator_Groups()
-  {
-    return (EReference)indicatorEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getIndicator_ElementLinks()
   {
-    return (EReference)indicatorEClass.getEStructuralFeatures().get(7);
+    return (EReference)indicatorEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -1309,9 +1283,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getKPIConversion()
+  public EClass getStrategyGroup()
   {
-    return kpiConversionEClass;
+    return strategyGroupEClass;
   }
 
   /**
@@ -1319,9 +1293,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getCollapsedActorRef()
+  public EAttribute getStrategyGroup_Name()
   {
-    return collapsedActorRefEClass;
+    return (EAttribute)strategyGroupEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1329,129 +1303,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getCollapsedActorRef_Name()
+  public EReference getStrategyGroup_Strategies()
   {
-    return (EAttribute)collapsedActorRefEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getCollapsedActorRef_Label()
-  {
-    return (EAttribute)collapsedActorRefEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getCollapsedActorRef_Description()
-  {
-    return (EAttribute)collapsedActorRefEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getIntentionalElementRef()
-  {
-    return intentionalElementRefEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getIntentionalElementRef_Name()
-  {
-    return (EAttribute)intentionalElementRefEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getIntentionalElementRef_Criticality()
-  {
-    return (EAttribute)intentionalElementRefEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getIntentionalElementRef_Priority()
-  {
-    return (EAttribute)intentionalElementRefEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getIntentionalElementRef_Def()
-  {
-    return (EReference)intentionalElementRefEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getImpactModel()
-  {
-    return impactModelEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getImpactModel_Name()
-  {
-    return (EAttribute)impactModelEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getStrategiesGroup()
-  {
-    return strategiesGroupEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getStrategiesGroup_Name()
-  {
-    return (EAttribute)strategiesGroupEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getStrategiesGroup_Strategies()
-  {
-    return (EReference)strategiesGroupEClass.getEStructuralFeatures().get(1);
+    return (EReference)strategyGroupEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1479,7 +1333,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getEvaluationStrategy_Evaluations()
+  public EReference getEvaluationStrategy_SuperStrategies()
   {
     return (EReference)evaluationStrategyEClass.getEStructuralFeatures().get(1);
   }
@@ -1489,19 +1343,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getEvaluationStrategy_IncludedStrategies()
+  public EReference getEvaluationStrategy_Evaluations()
   {
     return (EReference)evaluationStrategyEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getEvaluationStrategy_KipInforConfig()
-  {
-    return (EReference)evaluationStrategyEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1519,9 +1363,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEvaluation_Name()
+  public EReference getEvaluation_IntentionalElement()
   {
-    return (EAttribute)evaluationEClass.getEStructuralFeatures().get(0);
+    return (EReference)evaluationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1529,7 +1373,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEvaluation_Evaluation()
+  public EAttribute getEvaluation_QualitativeEvaluation()
   {
     return (EAttribute)evaluationEClass.getEStructuralFeatures().get(1);
   }
@@ -1539,7 +1383,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEvaluation_QualitativeEvaluation()
+  public EAttribute getEvaluation_Evaluation()
   {
     return (EAttribute)evaluationEClass.getEStructuralFeatures().get(2);
   }
@@ -1559,9 +1403,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getEvaluation_EvalRange()
+  public EClass getKPIConversion()
   {
-    return (EReference)evaluationEClass.getEStructuralFeatures().get(4);
+    return kpiConversionEClass;
   }
 
   /**
@@ -1569,9 +1413,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getEvaluation_KpiEvalValueSet()
+  public EClass getImpactModel()
   {
-    return (EReference)evaluationEClass.getEStructuralFeatures().get(5);
+    return impactModelEClass;
   }
 
   /**
@@ -1579,19 +1423,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getEvaluation_KpiNewEvalValue()
+  public EAttribute getImpactModel_Name()
   {
-    return (EReference)evaluationEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getEvaluation_InElement()
-  {
-    return (EReference)evaluationEClass.getEStructuralFeatures().get(7);
+    return (EAttribute)impactModelEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2420,7 +2254,6 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     createEAttribute(indicatorEClass, INDICATOR__DECOMPOSITION_TYPE);
     createEAttribute(indicatorEClass, INDICATOR__IMPORTANCE);
     createEAttribute(indicatorEClass, INDICATOR__IMPORTANCE_QUANTITATIVE);
-    createEReference(indicatorEClass, INDICATOR__REFS);
     createEReference(indicatorEClass, INDICATOR__KPI_MODEL_LINKS_DEST);
     createEReference(indicatorEClass, INDICATOR__GROUPS);
     createEReference(indicatorEClass, INDICATOR__ELEMENT_LINKS);
@@ -2458,41 +2291,25 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     createEReference(dependencyEndEClass, DEPENDENCY_END__NAME);
     createEAttribute(dependencyEndEClass, DEPENDENCY_END__DESCRIPTION);
 
-    kpiConversionEClass = createEClass(KPI_CONVERSION);
-
-    collapsedActorRefEClass = createEClass(COLLAPSED_ACTOR_REF);
-    createEAttribute(collapsedActorRefEClass, COLLAPSED_ACTOR_REF__NAME);
-    createEAttribute(collapsedActorRefEClass, COLLAPSED_ACTOR_REF__LABEL);
-    createEAttribute(collapsedActorRefEClass, COLLAPSED_ACTOR_REF__DESCRIPTION);
-
-    intentionalElementRefEClass = createEClass(INTENTIONAL_ELEMENT_REF);
-    createEAttribute(intentionalElementRefEClass, INTENTIONAL_ELEMENT_REF__NAME);
-    createEAttribute(intentionalElementRefEClass, INTENTIONAL_ELEMENT_REF__CRITICALITY);
-    createEAttribute(intentionalElementRefEClass, INTENTIONAL_ELEMENT_REF__PRIORITY);
-    createEReference(intentionalElementRefEClass, INTENTIONAL_ELEMENT_REF__DEF);
-
-    impactModelEClass = createEClass(IMPACT_MODEL);
-    createEAttribute(impactModelEClass, IMPACT_MODEL__NAME);
-
-    strategiesGroupEClass = createEClass(STRATEGIES_GROUP);
-    createEAttribute(strategiesGroupEClass, STRATEGIES_GROUP__NAME);
-    createEReference(strategiesGroupEClass, STRATEGIES_GROUP__STRATEGIES);
+    strategyGroupEClass = createEClass(STRATEGY_GROUP);
+    createEAttribute(strategyGroupEClass, STRATEGY_GROUP__NAME);
+    createEReference(strategyGroupEClass, STRATEGY_GROUP__STRATEGIES);
 
     evaluationStrategyEClass = createEClass(EVALUATION_STRATEGY);
     createEAttribute(evaluationStrategyEClass, EVALUATION_STRATEGY__NAME);
+    createEReference(evaluationStrategyEClass, EVALUATION_STRATEGY__SUPER_STRATEGIES);
     createEReference(evaluationStrategyEClass, EVALUATION_STRATEGY__EVALUATIONS);
-    createEReference(evaluationStrategyEClass, EVALUATION_STRATEGY__INCLUDED_STRATEGIES);
-    createEReference(evaluationStrategyEClass, EVALUATION_STRATEGY__KIP_INFOR_CONFIG);
 
     evaluationEClass = createEClass(EVALUATION);
-    createEAttribute(evaluationEClass, EVALUATION__NAME);
-    createEAttribute(evaluationEClass, EVALUATION__EVALUATION);
+    createEReference(evaluationEClass, EVALUATION__INTENTIONAL_ELEMENT);
     createEAttribute(evaluationEClass, EVALUATION__QUALITATIVE_EVALUATION);
+    createEAttribute(evaluationEClass, EVALUATION__EVALUATION);
     createEAttribute(evaluationEClass, EVALUATION__EXCEEDS);
-    createEReference(evaluationEClass, EVALUATION__EVAL_RANGE);
-    createEReference(evaluationEClass, EVALUATION__KPI_EVAL_VALUE_SET);
-    createEReference(evaluationEClass, EVALUATION__KPI_NEW_EVAL_VALUE);
-    createEReference(evaluationEClass, EVALUATION__IN_ELEMENT);
+
+    kpiConversionEClass = createEClass(KPI_CONVERSION);
+
+    impactModelEClass = createEClass(IMPACT_MODEL);
+    createEAttribute(impactModelEClass, IMPACT_MODEL__NAME);
 
     evaluationRangeEClass = createEClass(EVALUATION_RANGE);
     createEAttribute(evaluationRangeEClass, EVALUATION_RANGE__START);
@@ -2635,6 +2452,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     inLineContributionEClass.getESuperTypes().add(this.getInLineElementLink());
     dependencyEClass.getESuperTypes().add(this.getElementLink());
     inLineDependencyEClass.getESuperTypes().add(this.getInLineElementLink());
+    strategyGroupEClass.getESuperTypes().add(this.getGRLElement());
+    evaluationStrategyEClass.getESuperTypes().add(this.getGRLElement());
+    evaluationEClass.getESuperTypes().add(this.getGRLElement());
     qualitativeMappingsEClass.getESuperTypes().add(this.getKPIConversion());
 
     // Initialize classes and features; add operations and parameters
@@ -2704,7 +2524,6 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEAttribute(getIndicator_DecompositionType(), this.getDecompositionType(), "decompositionType", null, 0, 1, Indicator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getIndicator_Importance(), this.getImportanceType(), "importance", null, 0, 1, Indicator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getIndicator_ImportanceQuantitative(), theEcorePackage.getEInt(), "importanceQuantitative", null, 0, 1, Indicator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getIndicator_Refs(), this.getIntentionalElementRef(), null, "refs", null, 0, -1, Indicator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getIndicator_KpiModelLinksDest(), this.getKPIModelLink(), null, "kpiModelLinksDest", null, 0, -1, Indicator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getIndicator_Groups(), this.getIndicatorGroup(), null, "groups", null, 0, -1, Indicator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getIndicator_ElementLinks(), this.getInLineElementLink(), null, "elementLinks", null, 0, -1, Indicator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2742,41 +2561,25 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEReference(getDependencyEnd_Name(), this.getIntentionalElement(), null, "name", null, 0, 1, DependencyEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDependencyEnd_Description(), theEcorePackage.getEString(), "description", null, 0, 1, DependencyEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(kpiConversionEClass, KPIConversion.class, "KPIConversion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(collapsedActorRefEClass, CollapsedActorRef.class, "CollapsedActorRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCollapsedActorRef_Name(), theEcorePackage.getEString(), "name", null, 0, 1, CollapsedActorRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCollapsedActorRef_Label(), theEcorePackage.getEString(), "label", null, 0, 1, CollapsedActorRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCollapsedActorRef_Description(), theEcorePackage.getEString(), "description", null, 0, 1, CollapsedActorRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(intentionalElementRefEClass, IntentionalElementRef.class, "IntentionalElementRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getIntentionalElementRef_Name(), theEcorePackage.getEString(), "name", null, 0, 1, IntentionalElementRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getIntentionalElementRef_Criticality(), this.getCriticality(), "criticality", null, 0, 1, IntentionalElementRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getIntentionalElementRef_Priority(), this.getPriority(), "priority", null, 0, 1, IntentionalElementRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getIntentionalElementRef_Def(), this.getIntentionalElement(), null, "def", null, 0, 1, IntentionalElementRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(impactModelEClass, ImpactModel.class, "ImpactModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getImpactModel_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ImpactModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(strategiesGroupEClass, StrategiesGroup.class, "StrategiesGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getStrategiesGroup_Name(), theEcorePackage.getEString(), "name", null, 0, 1, StrategiesGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getStrategiesGroup_Strategies(), this.getEvaluationStrategy(), null, "strategies", null, 0, -1, StrategiesGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(strategyGroupEClass, StrategyGroup.class, "StrategyGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getStrategyGroup_Name(), theEcorePackage.getEString(), "name", null, 0, 1, StrategyGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getStrategyGroup_Strategies(), this.getEvaluationStrategy(), null, "strategies", null, 0, -1, StrategyGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(evaluationStrategyEClass, EvaluationStrategy.class, "EvaluationStrategy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEvaluationStrategy_Name(), theEcorePackage.getEString(), "name", null, 0, 1, EvaluationStrategy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEvaluationStrategy_SuperStrategies(), this.getEvaluationStrategy(), null, "superStrategies", null, 0, -1, EvaluationStrategy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEvaluationStrategy_Evaluations(), this.getEvaluation(), null, "evaluations", null, 0, -1, EvaluationStrategy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getEvaluationStrategy_IncludedStrategies(), this.getEvaluationStrategy(), null, "includedStrategies", null, 0, -1, EvaluationStrategy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getEvaluationStrategy_KipInforConfig(), this.getKPIInformationConfig(), null, "kipInforConfig", null, 0, -1, EvaluationStrategy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(evaluationEClass, Evaluation.class, "Evaluation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getEvaluation_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEvaluation_Evaluation(), theEcorePackage.getEInt(), "evaluation", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEvaluation_IntentionalElement(), this.getIntentionalElement(), null, "intentionalElement", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEvaluation_QualitativeEvaluation(), this.getQualitativeLabel(), "qualitativeEvaluation", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEvaluation_Exceeds(), theEcorePackage.getEString(), "exceeds", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getEvaluation_EvalRange(), this.getEvaluationRange(), null, "evalRange", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getEvaluation_KpiEvalValueSet(), this.getKPIEvalValueSet(), null, "kpiEvalValueSet", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getEvaluation_KpiNewEvalValue(), this.getKPINewEvalValue(), null, "kpiNewEvalValue", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getEvaluation_InElement(), this.getIntentionalElement(), null, "inElement", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEvaluation_Evaluation(), theEcorePackage.getEInt(), "evaluation", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEvaluation_Exceeds(), theEcorePackage.getEBoolean(), "exceeds", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(kpiConversionEClass, KPIConversion.class, "KPIConversion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(impactModelEClass, ImpactModel.class, "ImpactModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getImpactModel_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ImpactModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(evaluationRangeEClass, EvaluationRange.class, "EvaluationRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEvaluationRange_Start(), theEcorePackage.getEInt(), "start", null, 0, 1, EvaluationRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
@@ -21,7 +20,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.grl.tgrl.tGRL.Evaluation;
 import org.xtext.grl.tgrl.tGRL.EvaluationStrategy;
-import org.xtext.grl.tgrl.tGRL.KPIInformationConfig;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
@@ -32,15 +30,14 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationStrategyImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationStrategyImpl#getSuperStrategies <em>Super Strategies</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationStrategyImpl#getEvaluations <em>Evaluations</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationStrategyImpl#getIncludedStrategies <em>Included Strategies</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationStrategyImpl#getKipInforConfig <em>Kip Infor Config</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class EvaluationStrategyImpl extends MinimalEObjectImpl.Container implements EvaluationStrategy
+public class EvaluationStrategyImpl extends GRLElementImpl implements EvaluationStrategy
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -63,6 +60,16 @@ public class EvaluationStrategyImpl extends MinimalEObjectImpl.Container impleme
   protected String name = NAME_EDEFAULT;
 
   /**
+   * The cached value of the '{@link #getSuperStrategies() <em>Super Strategies</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSuperStrategies()
+   * @generated
+   * @ordered
+   */
+  protected EList<EvaluationStrategy> superStrategies;
+
+  /**
    * The cached value of the '{@link #getEvaluations() <em>Evaluations</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -71,26 +78,6 @@ public class EvaluationStrategyImpl extends MinimalEObjectImpl.Container impleme
    * @ordered
    */
   protected EList<Evaluation> evaluations;
-
-  /**
-   * The cached value of the '{@link #getIncludedStrategies() <em>Included Strategies</em>}' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getIncludedStrategies()
-   * @generated
-   * @ordered
-   */
-  protected EList<EvaluationStrategy> includedStrategies;
-
-  /**
-   * The cached value of the '{@link #getKipInforConfig() <em>Kip Infor Config</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getKipInforConfig()
-   * @generated
-   * @ordered
-   */
-  protected EList<KPIInformationConfig> kipInforConfig;
 
   /**
    * <!-- begin-user-doc -->
@@ -141,6 +128,20 @@ public class EvaluationStrategyImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<EvaluationStrategy> getSuperStrategies()
+  {
+    if (superStrategies == null)
+    {
+      superStrategies = new EObjectResolvingEList<EvaluationStrategy>(EvaluationStrategy.class, this, TGRLPackage.EVALUATION_STRATEGY__SUPER_STRATEGIES);
+    }
+    return superStrategies;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<Evaluation> getEvaluations()
   {
     if (evaluations == null)
@@ -155,34 +156,6 @@ public class EvaluationStrategyImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<EvaluationStrategy> getIncludedStrategies()
-  {
-    if (includedStrategies == null)
-    {
-      includedStrategies = new EObjectResolvingEList<EvaluationStrategy>(EvaluationStrategy.class, this, TGRLPackage.EVALUATION_STRATEGY__INCLUDED_STRATEGIES);
-    }
-    return includedStrategies;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<KPIInformationConfig> getKipInforConfig()
-  {
-    if (kipInforConfig == null)
-    {
-      kipInforConfig = new EObjectContainmentEList<KPIInformationConfig>(KPIInformationConfig.class, this, TGRLPackage.EVALUATION_STRATEGY__KIP_INFOR_CONFIG);
-    }
-    return kipInforConfig;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -190,8 +163,6 @@ public class EvaluationStrategyImpl extends MinimalEObjectImpl.Container impleme
     {
       case TGRLPackage.EVALUATION_STRATEGY__EVALUATIONS:
         return ((InternalEList<?>)getEvaluations()).basicRemove(otherEnd, msgs);
-      case TGRLPackage.EVALUATION_STRATEGY__KIP_INFOR_CONFIG:
-        return ((InternalEList<?>)getKipInforConfig()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -208,12 +179,10 @@ public class EvaluationStrategyImpl extends MinimalEObjectImpl.Container impleme
     {
       case TGRLPackage.EVALUATION_STRATEGY__NAME:
         return getName();
+      case TGRLPackage.EVALUATION_STRATEGY__SUPER_STRATEGIES:
+        return getSuperStrategies();
       case TGRLPackage.EVALUATION_STRATEGY__EVALUATIONS:
         return getEvaluations();
-      case TGRLPackage.EVALUATION_STRATEGY__INCLUDED_STRATEGIES:
-        return getIncludedStrategies();
-      case TGRLPackage.EVALUATION_STRATEGY__KIP_INFOR_CONFIG:
-        return getKipInforConfig();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -232,17 +201,13 @@ public class EvaluationStrategyImpl extends MinimalEObjectImpl.Container impleme
       case TGRLPackage.EVALUATION_STRATEGY__NAME:
         setName((String)newValue);
         return;
+      case TGRLPackage.EVALUATION_STRATEGY__SUPER_STRATEGIES:
+        getSuperStrategies().clear();
+        getSuperStrategies().addAll((Collection<? extends EvaluationStrategy>)newValue);
+        return;
       case TGRLPackage.EVALUATION_STRATEGY__EVALUATIONS:
         getEvaluations().clear();
         getEvaluations().addAll((Collection<? extends Evaluation>)newValue);
-        return;
-      case TGRLPackage.EVALUATION_STRATEGY__INCLUDED_STRATEGIES:
-        getIncludedStrategies().clear();
-        getIncludedStrategies().addAll((Collection<? extends EvaluationStrategy>)newValue);
-        return;
-      case TGRLPackage.EVALUATION_STRATEGY__KIP_INFOR_CONFIG:
-        getKipInforConfig().clear();
-        getKipInforConfig().addAll((Collection<? extends KPIInformationConfig>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -261,14 +226,11 @@ public class EvaluationStrategyImpl extends MinimalEObjectImpl.Container impleme
       case TGRLPackage.EVALUATION_STRATEGY__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case TGRLPackage.EVALUATION_STRATEGY__SUPER_STRATEGIES:
+        getSuperStrategies().clear();
+        return;
       case TGRLPackage.EVALUATION_STRATEGY__EVALUATIONS:
         getEvaluations().clear();
-        return;
-      case TGRLPackage.EVALUATION_STRATEGY__INCLUDED_STRATEGIES:
-        getIncludedStrategies().clear();
-        return;
-      case TGRLPackage.EVALUATION_STRATEGY__KIP_INFOR_CONFIG:
-        getKipInforConfig().clear();
         return;
     }
     super.eUnset(featureID);
@@ -286,12 +248,10 @@ public class EvaluationStrategyImpl extends MinimalEObjectImpl.Container impleme
     {
       case TGRLPackage.EVALUATION_STRATEGY__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case TGRLPackage.EVALUATION_STRATEGY__SUPER_STRATEGIES:
+        return superStrategies != null && !superStrategies.isEmpty();
       case TGRLPackage.EVALUATION_STRATEGY__EVALUATIONS:
         return evaluations != null && !evaluations.isEmpty();
-      case TGRLPackage.EVALUATION_STRATEGY__INCLUDED_STRATEGIES:
-        return includedStrategies != null && !includedStrategies.isEmpty();
-      case TGRLPackage.EVALUATION_STRATEGY__KIP_INFOR_CONFIG:
-        return kipInforConfig != null && !kipInforConfig.isEmpty();
     }
     return super.eIsSet(featureID);
   }
