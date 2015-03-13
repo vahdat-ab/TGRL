@@ -3,6 +3,7 @@
 package org.xtext.grl.tgrl.tGRL.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -10,7 +11,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.grl.tgrl.tGRL.Evaluation;
+import org.xtext.grl.tgrl.tGRL.EvaluationRange;
 import org.xtext.grl.tgrl.tGRL.IntentionalElement;
+import org.xtext.grl.tgrl.tGRL.KPIEvalValueSet;
 import org.xtext.grl.tgrl.tGRL.QualitativeLabel;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
@@ -25,6 +28,8 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationImpl#getQualitativeEvaluation <em>Qualitative Evaluation</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationImpl#getEvaluation <em>Evaluation</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationImpl#isExceeds <em>Exceeds</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationImpl#getEvalRange <em>Eval Range</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationImpl#getKpiEvalValueSet <em>Kpi Eval Value Set</em>}</li>
  * </ul>
  * </p>
  *
@@ -101,6 +106,26 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
    * @ordered
    */
   protected boolean exceeds = EXCEEDS_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getEvalRange() <em>Eval Range</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getEvalRange()
+   * @generated
+   * @ordered
+   */
+  protected EvaluationRange evalRange;
+
+  /**
+   * The cached value of the '{@link #getKpiEvalValueSet() <em>Kpi Eval Value Set</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getKpiEvalValueSet()
+   * @generated
+   * @ordered
+   */
+  protected KPIEvalValueSet kpiEvalValueSet;
 
   /**
    * <!-- begin-user-doc -->
@@ -240,6 +265,120 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
    * <!-- end-user-doc -->
    * @generated
    */
+  public EvaluationRange getEvalRange()
+  {
+    return evalRange;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetEvalRange(EvaluationRange newEvalRange, NotificationChain msgs)
+  {
+    EvaluationRange oldEvalRange = evalRange;
+    evalRange = newEvalRange;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TGRLPackage.EVALUATION__EVAL_RANGE, oldEvalRange, newEvalRange);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setEvalRange(EvaluationRange newEvalRange)
+  {
+    if (newEvalRange != evalRange)
+    {
+      NotificationChain msgs = null;
+      if (evalRange != null)
+        msgs = ((InternalEObject)evalRange).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TGRLPackage.EVALUATION__EVAL_RANGE, null, msgs);
+      if (newEvalRange != null)
+        msgs = ((InternalEObject)newEvalRange).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TGRLPackage.EVALUATION__EVAL_RANGE, null, msgs);
+      msgs = basicSetEvalRange(newEvalRange, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.EVALUATION__EVAL_RANGE, newEvalRange, newEvalRange));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public KPIEvalValueSet getKpiEvalValueSet()
+  {
+    return kpiEvalValueSet;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetKpiEvalValueSet(KPIEvalValueSet newKpiEvalValueSet, NotificationChain msgs)
+  {
+    KPIEvalValueSet oldKpiEvalValueSet = kpiEvalValueSet;
+    kpiEvalValueSet = newKpiEvalValueSet;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TGRLPackage.EVALUATION__KPI_EVAL_VALUE_SET, oldKpiEvalValueSet, newKpiEvalValueSet);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setKpiEvalValueSet(KPIEvalValueSet newKpiEvalValueSet)
+  {
+    if (newKpiEvalValueSet != kpiEvalValueSet)
+    {
+      NotificationChain msgs = null;
+      if (kpiEvalValueSet != null)
+        msgs = ((InternalEObject)kpiEvalValueSet).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TGRLPackage.EVALUATION__KPI_EVAL_VALUE_SET, null, msgs);
+      if (newKpiEvalValueSet != null)
+        msgs = ((InternalEObject)newKpiEvalValueSet).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TGRLPackage.EVALUATION__KPI_EVAL_VALUE_SET, null, msgs);
+      msgs = basicSetKpiEvalValueSet(newKpiEvalValueSet, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.EVALUATION__KPI_EVAL_VALUE_SET, newKpiEvalValueSet, newKpiEvalValueSet));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case TGRLPackage.EVALUATION__EVAL_RANGE:
+        return basicSetEvalRange(null, msgs);
+      case TGRLPackage.EVALUATION__KPI_EVAL_VALUE_SET:
+        return basicSetKpiEvalValueSet(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -254,6 +393,10 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
         return getEvaluation();
       case TGRLPackage.EVALUATION__EXCEEDS:
         return isExceeds();
+      case TGRLPackage.EVALUATION__EVAL_RANGE:
+        return getEvalRange();
+      case TGRLPackage.EVALUATION__KPI_EVAL_VALUE_SET:
+        return getKpiEvalValueSet();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -279,6 +422,12 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
         return;
       case TGRLPackage.EVALUATION__EXCEEDS:
         setExceeds((Boolean)newValue);
+        return;
+      case TGRLPackage.EVALUATION__EVAL_RANGE:
+        setEvalRange((EvaluationRange)newValue);
+        return;
+      case TGRLPackage.EVALUATION__KPI_EVAL_VALUE_SET:
+        setKpiEvalValueSet((KPIEvalValueSet)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -306,6 +455,12 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
       case TGRLPackage.EVALUATION__EXCEEDS:
         setExceeds(EXCEEDS_EDEFAULT);
         return;
+      case TGRLPackage.EVALUATION__EVAL_RANGE:
+        setEvalRange((EvaluationRange)null);
+        return;
+      case TGRLPackage.EVALUATION__KPI_EVAL_VALUE_SET:
+        setKpiEvalValueSet((KPIEvalValueSet)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -328,6 +483,10 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
         return evaluation != EVALUATION_EDEFAULT;
       case TGRLPackage.EVALUATION__EXCEEDS:
         return exceeds != EXCEEDS_EDEFAULT;
+      case TGRLPackage.EVALUATION__EVAL_RANGE:
+        return evalRange != null;
+      case TGRLPackage.EVALUATION__KPI_EVAL_VALUE_SET:
+        return kpiEvalValueSet != null;
     }
     return super.eIsSet(featureID);
   }

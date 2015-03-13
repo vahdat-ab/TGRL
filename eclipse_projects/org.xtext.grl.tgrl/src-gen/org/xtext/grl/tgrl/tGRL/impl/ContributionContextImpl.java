@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
@@ -31,14 +30,14 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionContextImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionContextImpl#getIncludedContexts <em>Included Contexts</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionContextImpl#getSuperContributionContexts <em>Super Contribution Contexts</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionContextImpl#getChanges <em>Changes</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ContributionContextImpl extends MinimalEObjectImpl.Container implements ContributionContext
+public class ContributionContextImpl extends GRLElementImpl implements ContributionContext
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -61,14 +60,14 @@ public class ContributionContextImpl extends MinimalEObjectImpl.Container implem
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getIncludedContexts() <em>Included Contexts</em>}' reference list.
+   * The cached value of the '{@link #getSuperContributionContexts() <em>Super Contribution Contexts</em>}' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIncludedContexts()
+   * @see #getSuperContributionContexts()
    * @generated
    * @ordered
    */
-  protected EList<ContributionContext> includedContexts;
+  protected EList<ContributionContext> superContributionContexts;
 
   /**
    * The cached value of the '{@link #getChanges() <em>Changes</em>}' containment reference list.
@@ -129,13 +128,13 @@ public class ContributionContextImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ContributionContext> getIncludedContexts()
+  public EList<ContributionContext> getSuperContributionContexts()
   {
-    if (includedContexts == null)
+    if (superContributionContexts == null)
     {
-      includedContexts = new EObjectResolvingEList<ContributionContext>(ContributionContext.class, this, TGRLPackage.CONTRIBUTION_CONTEXT__INCLUDED_CONTEXTS);
+      superContributionContexts = new EObjectResolvingEList<ContributionContext>(ContributionContext.class, this, TGRLPackage.CONTRIBUTION_CONTEXT__SUPER_CONTRIBUTION_CONTEXTS);
     }
-    return includedContexts;
+    return superContributionContexts;
   }
 
   /**
@@ -180,8 +179,8 @@ public class ContributionContextImpl extends MinimalEObjectImpl.Container implem
     {
       case TGRLPackage.CONTRIBUTION_CONTEXT__NAME:
         return getName();
-      case TGRLPackage.CONTRIBUTION_CONTEXT__INCLUDED_CONTEXTS:
-        return getIncludedContexts();
+      case TGRLPackage.CONTRIBUTION_CONTEXT__SUPER_CONTRIBUTION_CONTEXTS:
+        return getSuperContributionContexts();
       case TGRLPackage.CONTRIBUTION_CONTEXT__CHANGES:
         return getChanges();
     }
@@ -202,9 +201,9 @@ public class ContributionContextImpl extends MinimalEObjectImpl.Container implem
       case TGRLPackage.CONTRIBUTION_CONTEXT__NAME:
         setName((String)newValue);
         return;
-      case TGRLPackage.CONTRIBUTION_CONTEXT__INCLUDED_CONTEXTS:
-        getIncludedContexts().clear();
-        getIncludedContexts().addAll((Collection<? extends ContributionContext>)newValue);
+      case TGRLPackage.CONTRIBUTION_CONTEXT__SUPER_CONTRIBUTION_CONTEXTS:
+        getSuperContributionContexts().clear();
+        getSuperContributionContexts().addAll((Collection<? extends ContributionContext>)newValue);
         return;
       case TGRLPackage.CONTRIBUTION_CONTEXT__CHANGES:
         getChanges().clear();
@@ -227,8 +226,8 @@ public class ContributionContextImpl extends MinimalEObjectImpl.Container implem
       case TGRLPackage.CONTRIBUTION_CONTEXT__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case TGRLPackage.CONTRIBUTION_CONTEXT__INCLUDED_CONTEXTS:
-        getIncludedContexts().clear();
+      case TGRLPackage.CONTRIBUTION_CONTEXT__SUPER_CONTRIBUTION_CONTEXTS:
+        getSuperContributionContexts().clear();
         return;
       case TGRLPackage.CONTRIBUTION_CONTEXT__CHANGES:
         getChanges().clear();
@@ -249,8 +248,8 @@ public class ContributionContextImpl extends MinimalEObjectImpl.Container implem
     {
       case TGRLPackage.CONTRIBUTION_CONTEXT__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TGRLPackage.CONTRIBUTION_CONTEXT__INCLUDED_CONTEXTS:
-        return includedContexts != null && !includedContexts.isEmpty();
+      case TGRLPackage.CONTRIBUTION_CONTEXT__SUPER_CONTRIBUTION_CONTEXTS:
+        return superContributionContexts != null && !superContributionContexts.isEmpty();
       case TGRLPackage.CONTRIBUTION_CONTEXT__CHANGES:
         return changes != null && !changes.isEmpty();
     }

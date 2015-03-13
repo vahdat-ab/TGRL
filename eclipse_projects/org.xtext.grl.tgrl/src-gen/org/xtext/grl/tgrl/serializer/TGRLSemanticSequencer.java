@@ -19,8 +19,8 @@ import org.xtext.grl.tgrl.tGRL.Belief;
 import org.xtext.grl.tgrl.tGRL.Contribution;
 import org.xtext.grl.tgrl.tGRL.ContributionChange;
 import org.xtext.grl.tgrl.tGRL.ContributionContext;
-import org.xtext.grl.tgrl.tGRL.ContributionContextGroup;
 import org.xtext.grl.tgrl.tGRL.ContributionEnd;
+import org.xtext.grl.tgrl.tGRL.ContributionGroup;
 import org.xtext.grl.tgrl.tGRL.ContributionRange;
 import org.xtext.grl.tgrl.tGRL.Decomposition;
 import org.xtext.grl.tgrl.tGRL.DecompositionEnd;
@@ -37,15 +37,16 @@ import org.xtext.grl.tgrl.tGRL.InLineDecomposition;
 import org.xtext.grl.tgrl.tGRL.InLineDependency;
 import org.xtext.grl.tgrl.tGRL.Indicator;
 import org.xtext.grl.tgrl.tGRL.IndicatorGroup;
-import org.xtext.grl.tgrl.tGRL.KPIEvalValueSet;
 import org.xtext.grl.tgrl.tGRL.KPIInformationConfig;
 import org.xtext.grl.tgrl.tGRL.KPIInformationElement;
 import org.xtext.grl.tgrl.tGRL.KPIInformationElementRef;
 import org.xtext.grl.tgrl.tGRL.KPIModelLink;
 import org.xtext.grl.tgrl.tGRL.KPINewEvalValue;
+import org.xtext.grl.tgrl.tGRL.KPIQualitativeEvalValueSet;
+import org.xtext.grl.tgrl.tGRL.KPIQuantitativeEvalValueSet;
+import org.xtext.grl.tgrl.tGRL.Mapping;
 import org.xtext.grl.tgrl.tGRL.Model;
 import org.xtext.grl.tgrl.tGRL.QualitativeMapping;
-import org.xtext.grl.tgrl.tGRL.QualitativeMappings;
 import org.xtext.grl.tgrl.tGRL.Resource;
 import org.xtext.grl.tgrl.tGRL.Softgoal;
 import org.xtext.grl.tgrl.tGRL.StrategyGroup;
@@ -96,20 +97,26 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case TGRLPackage.CONTRIBUTION_CONTEXT:
-				if(context == grammarAccess.getContributionContextRule()) {
+				if(context == grammarAccess.getContributionContextRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
+				   context == grammarAccess.getGRLElementRule()) {
 					sequence_ContributionContext(context, (ContributionContext) semanticObject); 
-					return; 
-				}
-				else break;
-			case TGRLPackage.CONTRIBUTION_CONTEXT_GROUP:
-				if(context == grammarAccess.getContributionContextGroupRule()) {
-					sequence_ContributionContextGroup(context, (ContributionContextGroup) semanticObject); 
 					return; 
 				}
 				else break;
 			case TGRLPackage.CONTRIBUTION_END:
 				if(context == grammarAccess.getContributionEndRule()) {
 					sequence_ContributionEnd(context, (ContributionEnd) semanticObject); 
+					return; 
+				}
+				else break;
+			case TGRLPackage.CONTRIBUTION_GROUP:
+				if(context == grammarAccess.getContributionGroupRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
+				   context == grammarAccess.getGRLElementRule()) {
+					sequence_ContributionGroup(context, (ContributionGroup) semanticObject); 
 					return; 
 				}
 				else break;
@@ -241,12 +248,6 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case TGRLPackage.KPI_EVAL_VALUE_SET:
-				if(context == grammarAccess.getKPIEvalValueSetRule()) {
-					sequence_KPIEvalValueSet(context, (KPIEvalValueSet) semanticObject); 
-					return; 
-				}
-				else break;
 			case TGRLPackage.KPI_INFORMATION_CONFIG:
 				if(context == grammarAccess.getKPIInformationConfigRule()) {
 					sequence_KPIInformationConfig(context, (KPIInformationConfig) semanticObject); 
@@ -277,6 +278,28 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case TGRLPackage.KPI_QUALITATIVE_EVAL_VALUE_SET:
+				if(context == grammarAccess.getKPIEvalValueSetRule() ||
+				   context == grammarAccess.getKPIQualitativeEvalValueSetRule()) {
+					sequence_KPIQualitativeEvalValueSet(context, (KPIQualitativeEvalValueSet) semanticObject); 
+					return; 
+				}
+				else break;
+			case TGRLPackage.KPI_QUANTITATIVE_EVAL_VALUE_SET:
+				if(context == grammarAccess.getKPIEvalValueSetRule() ||
+				   context == grammarAccess.getKPIQuantitativeEvalValueSetRule()) {
+					sequence_KPIQuantitativeEvalValueSet(context, (KPIQuantitativeEvalValueSet) semanticObject); 
+					return; 
+				}
+				else break;
+			case TGRLPackage.MAPPING:
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
+				   context == grammarAccess.getMappingRule()) {
+					sequence_Mapping(context, (Mapping) semanticObject); 
+					return; 
+				}
+				else break;
 			case TGRLPackage.MODEL:
 				if(context == grammarAccess.getModelRule()) {
 					sequence_Model(context, (Model) semanticObject); 
@@ -284,15 +307,11 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case TGRLPackage.QUALITATIVE_MAPPING:
-				if(context == grammarAccess.getQualitativeMappingRule()) {
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
+				   context == grammarAccess.getGRLElementRule() ||
+				   context == grammarAccess.getQualitativeMappingRule()) {
 					sequence_QualitativeMapping(context, (QualitativeMapping) semanticObject); 
-					return; 
-				}
-				else break;
-			case TGRLPackage.QUALITATIVE_MAPPINGS:
-				if(context == grammarAccess.getKPIConversionRule() ||
-				   context == grammarAccess.getQualitativeMappingsRule()) {
-					sequence_QualitativeMappings(context, (QualitativeMappings) semanticObject); 
 					return; 
 				}
 				else break;
@@ -375,16 +394,11 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID contribs+=[ContributionContext|ID] contribs+=[ContributionContext|ID]*)
-	 */
-	protected void sequence_ContributionContextGroup(EObject context, ContributionContextGroup semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name=ID (includedContexts+=[ContributionContext|ID] includedContexts+=[ContributionContext|ID]*)? changes+=ContributionChange*)
+	 *     (
+	 *         name=ID 
+	 *         (superContributionContexts+=[ContributionContext|QualifiedName] superContributionContexts+=[ContributionContext|QualifiedName]*)? 
+	 *         changes+=ContributionChange*
+	 *     )
 	 */
 	protected void sequence_ContributionContext(EObject context, ContributionContext semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -393,9 +407,18 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=[IntentionalElement|QualifiedName] (contribution=ContributionType | quantitativeContribution=INT)?)
+	 *     (name=ID? desname=[IntentionalElement|QualifiedName] (contribution=ContributionType | quantitativeContribution=INT)?)
 	 */
 	protected void sequence_ContributionEnd(EObject context, ContributionEnd semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID contribs+=[ContributionContext|ID] contribs+=[ContributionContext|ID]*)
+	 */
+	protected void sequence_ContributionGroup(EObject context, ContributionGroup semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -456,7 +479,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (start=INT? end=INT? step=INT?)
+	 *     (start=INT end=INT step=INT)
 	 */
 	protected void sequence_EvaluationRange(EObject context, EvaluationRange semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -474,7 +497,11 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (intentionalElement=[IntentionalElement|QualifiedName] (qualitativeEvaluation=QualitativeLabel | evaluation=INT) exceeds?='exceeds'?)
+	 *     (
+	 *         intentionalElement=[IntentionalElement|QualifiedName] 
+	 *         (qualitativeEvaluation=QualitativeLabel | evaluation=INT) 
+	 *         (exceeds?='exceeds'? evalRange=EvaluationRange? kpiEvalValueSet=KPIEvalValueSet?)?
+	 *     )
 	 */
 	protected void sequence_Evaluation(EObject context, Evaluation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -580,23 +607,6 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         name=ID 
-	 *         targetValue=DOUBLE? 
-	 *         thresholdValue=DOUBLE? 
-	 *         worstValue=DOUBLE? 
-	 *         evaluationValue=DOUBLE? 
-	 *         unit=STRING? 
-	 *         qualitativeEvaluationValue=STRING?
-	 *     )
-	 */
-	protected void sequence_KPIEvalValueSet(EObject context, KPIEvalValueSet semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     (name=ID levelOfDimension=STRING? valueOfDimension=STRING? kpiInfoElement=[KPIInformationElement|ID])
 	 */
 	protected void sequence_KPIInformationConfig(EObject context, KPIInformationConfig semanticObject) {
@@ -658,6 +668,40 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     qualitativeEvaluationValue=[Mapping|QualifiedName]
+	 */
+	protected void sequence_KPIQualitativeEvalValueSet(EObject context, KPIQualitativeEvalValueSet semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, TGRLPackage.Literals.KPI_QUALITATIVE_EVAL_VALUE_SET__QUALITATIVE_EVALUATION_VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TGRLPackage.Literals.KPI_QUALITATIVE_EVAL_VALUE_SET__QUALITATIVE_EVALUATION_VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getKPIQualitativeEvalValueSetAccess().getQualitativeEvaluationValueMappingQualifiedNameParserRuleCall_2_0_1(), semanticObject.getQualitativeEvaluationValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (targetValue=DOUBLE thresholdValue=DOUBLE worstValue=DOUBLE evaluationValue=DOUBLE unit=STRING)
+	 */
+	protected void sequence_KPIQuantitativeEvalValueSet(EObject context, KPIQuantitativeEvalValueSet semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=STRING valuation=INT qualitativeEvaluation=QualitativeLabel exceeds=BOOLEAN)
+	 */
+	protected void sequence_Mapping(EObject context, Mapping semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     gRLspecifications+=GRLSpecification*
 	 */
 	protected void sequence_Model(EObject context, Model semanticObject) {
@@ -667,18 +711,9 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID realWorldLabel=STRING? evaluation=INT? qualitativeEvaluation=QualitativeLabel? exceeds=BOOLEAN?)
+	 *     (name=ID mappin+=Mapping*)
 	 */
 	protected void sequence_QualitativeMapping(EObject context, QualitativeMapping semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name=ID (kpiEvalValueSet+=[KPIEvalValueSet|ID] kpiEvalValueSet+=[KPIEvalValueSet|ID]*)* mappin+=QualitativeMapping*)
-	 */
-	protected void sequence_QualitativeMappings(EObject context, QualitativeMappings semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

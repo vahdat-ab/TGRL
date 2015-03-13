@@ -151,7 +151,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//InLineContribution/dest"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//ContributionEnd">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//ContributionEnd/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionEnd/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//ContributionEnd/desname"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionEnd/contribution"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionEnd/quantitativeContribution"/>
     </genClasses>
@@ -179,23 +180,24 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Evaluation/qualitativeEvaluation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Evaluation/evaluation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Evaluation/exceeds"/>
-    </genClasses>
-    <genClasses ecoreClass="TGRL.ecore#//KPIConversion"/>
-    <genClasses ecoreClass="TGRL.ecore#//ImpactModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ImpactModel/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Evaluation/evalRange"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Evaluation/kpiEvalValueSet"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//EvaluationRange">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//EvaluationRange/start"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//EvaluationRange/end"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//EvaluationRange/step"/>
     </genClasses>
-    <genClasses ecoreClass="TGRL.ecore#//ContributionContextGroup">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionContextGroup/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//ContributionContextGroup/contribs"/>
+    <genClasses ecoreClass="TGRL.ecore#//ImpactModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ImpactModel/name"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//ContributionGroup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionGroup/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//ContributionGroup/contribs"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//ContributionContext">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionContext/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//ContributionContext/includedContexts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//ContributionContext/superContributionContexts"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//ContributionContext/changes"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//ContributionChange">
@@ -209,26 +211,26 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionRange/end"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionRange/step"/>
     </genClasses>
-    <genClasses ecoreClass="TGRL.ecore#//QualitativeMappings">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//QualitativeMappings/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//QualitativeMappings/kpiEvalValueSet"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//QualitativeMappings/mappin"/>
+    <genClasses ecoreClass="TGRL.ecore#//KPIEvalValueSet"/>
+    <genClasses ecoreClass="TGRL.ecore#//KPIQuantitativeEvalValueSet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//KPIQuantitativeEvalValueSet/targetValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//KPIQuantitativeEvalValueSet/thresholdValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//KPIQuantitativeEvalValueSet/worstValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//KPIQuantitativeEvalValueSet/evaluationValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//KPIQuantitativeEvalValueSet/unit"/>
     </genClasses>
-    <genClasses ecoreClass="TGRL.ecore#//KPIEvalValueSet">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//KPIEvalValueSet/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//KPIEvalValueSet/targetValue"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//KPIEvalValueSet/thresholdValue"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//KPIEvalValueSet/worstValue"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//KPIEvalValueSet/evaluationValue"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//KPIEvalValueSet/unit"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//KPIEvalValueSet/qualitativeEvaluationValue"/>
+    <genClasses ecoreClass="TGRL.ecore#//KPIQualitativeEvalValueSet">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//KPIQualitativeEvalValueSet/qualitativeEvaluationValue"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//QualitativeMapping">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//QualitativeMapping/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//QualitativeMapping/realWorldLabel"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//QualitativeMapping/evaluation"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//QualitativeMapping/qualitativeEvaluation"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//QualitativeMapping/exceeds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//QualitativeMapping/mappin"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//Mapping">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Mapping/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Mapping/valuation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Mapping/qualitativeEvaluation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Mapping/exceeds"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//KPINewEvalValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//KPINewEvalValue/name"/>

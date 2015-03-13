@@ -11,29 +11,28 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.xtext.grl.tgrl.tGRL.ContributionContext;
-import org.xtext.grl.tgrl.tGRL.ContributionContextGroup;
+import org.xtext.grl.tgrl.tGRL.ContributionGroup;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Contribution Context Group</b></em>'.
+ * An implementation of the model object '<em><b>Contribution Group</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionContextGroupImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionContextGroupImpl#getContribs <em>Contribs</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionGroupImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionGroupImpl#getContribs <em>Contribs</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ContributionContextGroupImpl extends MinimalEObjectImpl.Container implements ContributionContextGroup
+public class ContributionGroupImpl extends GRLElementImpl implements ContributionGroup
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -70,7 +69,7 @@ public class ContributionContextGroupImpl extends MinimalEObjectImpl.Container i
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ContributionContextGroupImpl()
+  protected ContributionGroupImpl()
   {
     super();
   }
@@ -83,7 +82,7 @@ public class ContributionContextGroupImpl extends MinimalEObjectImpl.Container i
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.CONTRIBUTION_CONTEXT_GROUP;
+    return TGRLPackage.Literals.CONTRIBUTION_GROUP;
   }
 
   /**
@@ -106,7 +105,7 @@ public class ContributionContextGroupImpl extends MinimalEObjectImpl.Container i
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION_CONTEXT_GROUP__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION_GROUP__NAME, oldName, name));
   }
 
   /**
@@ -118,7 +117,7 @@ public class ContributionContextGroupImpl extends MinimalEObjectImpl.Container i
   {
     if (contribs == null)
     {
-      contribs = new EObjectResolvingEList<ContributionContext>(ContributionContext.class, this, TGRLPackage.CONTRIBUTION_CONTEXT_GROUP__CONTRIBS);
+      contribs = new EObjectResolvingEList<ContributionContext>(ContributionContext.class, this, TGRLPackage.CONTRIBUTION_GROUP__CONTRIBS);
     }
     return contribs;
   }
@@ -133,9 +132,9 @@ public class ContributionContextGroupImpl extends MinimalEObjectImpl.Container i
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION_CONTEXT_GROUP__NAME:
+      case TGRLPackage.CONTRIBUTION_GROUP__NAME:
         return getName();
-      case TGRLPackage.CONTRIBUTION_CONTEXT_GROUP__CONTRIBS:
+      case TGRLPackage.CONTRIBUTION_GROUP__CONTRIBS:
         return getContribs();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -152,10 +151,10 @@ public class ContributionContextGroupImpl extends MinimalEObjectImpl.Container i
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION_CONTEXT_GROUP__NAME:
+      case TGRLPackage.CONTRIBUTION_GROUP__NAME:
         setName((String)newValue);
         return;
-      case TGRLPackage.CONTRIBUTION_CONTEXT_GROUP__CONTRIBS:
+      case TGRLPackage.CONTRIBUTION_GROUP__CONTRIBS:
         getContribs().clear();
         getContribs().addAll((Collection<? extends ContributionContext>)newValue);
         return;
@@ -173,10 +172,10 @@ public class ContributionContextGroupImpl extends MinimalEObjectImpl.Container i
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION_CONTEXT_GROUP__NAME:
+      case TGRLPackage.CONTRIBUTION_GROUP__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case TGRLPackage.CONTRIBUTION_CONTEXT_GROUP__CONTRIBS:
+      case TGRLPackage.CONTRIBUTION_GROUP__CONTRIBS:
         getContribs().clear();
         return;
     }
@@ -193,9 +192,9 @@ public class ContributionContextGroupImpl extends MinimalEObjectImpl.Container i
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION_CONTEXT_GROUP__NAME:
+      case TGRLPackage.CONTRIBUTION_GROUP__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TGRLPackage.CONTRIBUTION_CONTEXT_GROUP__CONTRIBS:
+      case TGRLPackage.CONTRIBUTION_GROUP__CONTRIBS:
         return contribs != null && !contribs.isEmpty();
     }
     return super.eIsSet(featureID);
@@ -218,4 +217,4 @@ public class ContributionContextGroupImpl extends MinimalEObjectImpl.Container i
     return result.toString();
   }
 
-} //ContributionContextGroupImpl
+} //ContributionGroupImpl

@@ -17,8 +17,8 @@ import org.xtext.grl.tgrl.tGRL.Color;
 import org.xtext.grl.tgrl.tGRL.Contribution;
 import org.xtext.grl.tgrl.tGRL.ContributionChange;
 import org.xtext.grl.tgrl.tGRL.ContributionContext;
-import org.xtext.grl.tgrl.tGRL.ContributionContextGroup;
 import org.xtext.grl.tgrl.tGRL.ContributionEnd;
+import org.xtext.grl.tgrl.tGRL.ContributionGroup;
 import org.xtext.grl.tgrl.tGRL.ContributionRange;
 import org.xtext.grl.tgrl.tGRL.ContributionType;
 import org.xtext.grl.tgrl.tGRL.Criticality;
@@ -45,18 +45,19 @@ import org.xtext.grl.tgrl.tGRL.InLineElementLink;
 import org.xtext.grl.tgrl.tGRL.Indicator;
 import org.xtext.grl.tgrl.tGRL.IndicatorGroup;
 import org.xtext.grl.tgrl.tGRL.IntentionalElement;
-import org.xtext.grl.tgrl.tGRL.KPIConversion;
 import org.xtext.grl.tgrl.tGRL.KPIEvalValueSet;
 import org.xtext.grl.tgrl.tGRL.KPIInformationConfig;
 import org.xtext.grl.tgrl.tGRL.KPIInformationElement;
 import org.xtext.grl.tgrl.tGRL.KPIInformationElementRef;
 import org.xtext.grl.tgrl.tGRL.KPIModelLink;
 import org.xtext.grl.tgrl.tGRL.KPINewEvalValue;
+import org.xtext.grl.tgrl.tGRL.KPIQualitativeEvalValueSet;
+import org.xtext.grl.tgrl.tGRL.KPIQuantitativeEvalValueSet;
+import org.xtext.grl.tgrl.tGRL.Mapping;
 import org.xtext.grl.tgrl.tGRL.Model;
 import org.xtext.grl.tgrl.tGRL.Priority;
 import org.xtext.grl.tgrl.tGRL.QualitativeLabel;
 import org.xtext.grl.tgrl.tGRL.QualitativeMapping;
-import org.xtext.grl.tgrl.tGRL.QualitativeMappings;
 import org.xtext.grl.tgrl.tGRL.Resource;
 import org.xtext.grl.tgrl.tGRL.Softgoal;
 import org.xtext.grl.tgrl.tGRL.StrategyGroup;
@@ -266,7 +267,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass kpiConversionEClass = null;
+  private EClass evaluationRangeEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -280,14 +281,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass evaluationRangeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass contributionContextGroupEClass = null;
+  private EClass contributionGroupEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -315,13 +309,6 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass qualitativeMappingsEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass kpiEvalValueSetEClass = null;
 
   /**
@@ -329,7 +316,28 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass kpiQuantitativeEvalValueSetEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass kpiQualitativeEvalValueSetEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass qualitativeMappingEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mappingEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1183,9 +1191,19 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getContributionEnd_Name()
+  public EAttribute getContributionEnd_Name()
   {
-    return (EReference)contributionEndEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)contributionEndEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getContributionEnd_Desname()
+  {
+    return (EReference)contributionEndEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1195,7 +1213,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    */
   public EAttribute getContributionEnd_Contribution()
   {
-    return (EAttribute)contributionEndEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)contributionEndEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1205,7 +1223,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    */
   public EAttribute getContributionEnd_QuantitativeContribution()
   {
-    return (EAttribute)contributionEndEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)contributionEndEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1403,9 +1421,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getKPIConversion()
+  public EReference getEvaluation_EvalRange()
   {
-    return kpiConversionEClass;
+    return (EReference)evaluationEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1413,19 +1431,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getImpactModel()
+  public EReference getEvaluation_KpiEvalValueSet()
   {
-    return impactModelEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getImpactModel_Name()
-  {
-    return (EAttribute)impactModelEClass.getEStructuralFeatures().get(0);
+    return (EReference)evaluationEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1473,9 +1481,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getContributionContextGroup()
+  public EClass getImpactModel()
   {
-    return contributionContextGroupEClass;
+    return impactModelEClass;
   }
 
   /**
@@ -1483,9 +1491,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getContributionContextGroup_Name()
+  public EAttribute getImpactModel_Name()
   {
-    return (EAttribute)contributionContextGroupEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)impactModelEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1493,9 +1501,29 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getContributionContextGroup_Contribs()
+  public EClass getContributionGroup()
   {
-    return (EReference)contributionContextGroupEClass.getEStructuralFeatures().get(1);
+    return contributionGroupEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getContributionGroup_Name()
+  {
+    return (EAttribute)contributionGroupEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getContributionGroup_Contribs()
+  {
+    return (EReference)contributionGroupEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1523,7 +1551,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getContributionContext_IncludedContexts()
+  public EReference getContributionContext_SuperContributionContexts()
   {
     return (EReference)contributionContextEClass.getEStructuralFeatures().get(1);
   }
@@ -1633,46 +1661,6 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getQualitativeMappings()
-  {
-    return qualitativeMappingsEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getQualitativeMappings_Name()
-  {
-    return (EAttribute)qualitativeMappingsEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getQualitativeMappings_KpiEvalValueSet()
-  {
-    return (EReference)qualitativeMappingsEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getQualitativeMappings_Mappin()
-  {
-    return (EReference)qualitativeMappingsEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getKPIEvalValueSet()
   {
     return kpiEvalValueSetEClass;
@@ -1683,9 +1671,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getKPIEvalValueSet_Name()
+  public EClass getKPIQuantitativeEvalValueSet()
   {
-    return (EAttribute)kpiEvalValueSetEClass.getEStructuralFeatures().get(0);
+    return kpiQuantitativeEvalValueSetEClass;
   }
 
   /**
@@ -1693,9 +1681,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getKPIEvalValueSet_TargetValue()
+  public EAttribute getKPIQuantitativeEvalValueSet_TargetValue()
   {
-    return (EAttribute)kpiEvalValueSetEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)kpiQuantitativeEvalValueSetEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1703,9 +1691,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getKPIEvalValueSet_ThresholdValue()
+  public EAttribute getKPIQuantitativeEvalValueSet_ThresholdValue()
   {
-    return (EAttribute)kpiEvalValueSetEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)kpiQuantitativeEvalValueSetEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1713,9 +1701,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getKPIEvalValueSet_WorstValue()
+  public EAttribute getKPIQuantitativeEvalValueSet_WorstValue()
   {
-    return (EAttribute)kpiEvalValueSetEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)kpiQuantitativeEvalValueSetEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1723,9 +1711,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getKPIEvalValueSet_EvaluationValue()
+  public EAttribute getKPIQuantitativeEvalValueSet_EvaluationValue()
   {
-    return (EAttribute)kpiEvalValueSetEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)kpiQuantitativeEvalValueSetEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1733,9 +1721,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getKPIEvalValueSet_Unit()
+  public EAttribute getKPIQuantitativeEvalValueSet_Unit()
   {
-    return (EAttribute)kpiEvalValueSetEClass.getEStructuralFeatures().get(5);
+    return (EAttribute)kpiQuantitativeEvalValueSetEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1743,9 +1731,19 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getKPIEvalValueSet_QualitativeEvaluationValue()
+  public EClass getKPIQualitativeEvalValueSet()
   {
-    return (EAttribute)kpiEvalValueSetEClass.getEStructuralFeatures().get(6);
+    return kpiQualitativeEvalValueSetEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getKPIQualitativeEvalValueSet_QualitativeEvaluationValue()
+  {
+    return (EReference)kpiQualitativeEvalValueSetEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1773,9 +1771,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getQualitativeMapping_RealWorldLabel()
+  public EReference getQualitativeMapping_Mappin()
   {
-    return (EAttribute)qualitativeMappingEClass.getEStructuralFeatures().get(1);
+    return (EReference)qualitativeMappingEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1783,9 +1781,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getQualitativeMapping_Evaluation()
+  public EClass getMapping()
   {
-    return (EAttribute)qualitativeMappingEClass.getEStructuralFeatures().get(2);
+    return mappingEClass;
   }
 
   /**
@@ -1793,9 +1791,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getQualitativeMapping_QualitativeEvaluation()
+  public EAttribute getMapping_Name()
   {
-    return (EAttribute)qualitativeMappingEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)mappingEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1803,9 +1801,29 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getQualitativeMapping_Exceeds()
+  public EAttribute getMapping_Valuation()
   {
-    return (EAttribute)qualitativeMappingEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)mappingEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMapping_QualitativeEvaluation()
+  {
+    return (EAttribute)mappingEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMapping_Exceeds()
+  {
+    return (EAttribute)mappingEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2277,7 +2295,8 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     createEReference(inLineContributionEClass, IN_LINE_CONTRIBUTION__DEST);
 
     contributionEndEClass = createEClass(CONTRIBUTION_END);
-    createEReference(contributionEndEClass, CONTRIBUTION_END__NAME);
+    createEAttribute(contributionEndEClass, CONTRIBUTION_END__NAME);
+    createEReference(contributionEndEClass, CONTRIBUTION_END__DESNAME);
     createEAttribute(contributionEndEClass, CONTRIBUTION_END__CONTRIBUTION);
     createEAttribute(contributionEndEClass, CONTRIBUTION_END__QUANTITATIVE_CONTRIBUTION);
 
@@ -2305,24 +2324,24 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     createEAttribute(evaluationEClass, EVALUATION__QUALITATIVE_EVALUATION);
     createEAttribute(evaluationEClass, EVALUATION__EVALUATION);
     createEAttribute(evaluationEClass, EVALUATION__EXCEEDS);
-
-    kpiConversionEClass = createEClass(KPI_CONVERSION);
-
-    impactModelEClass = createEClass(IMPACT_MODEL);
-    createEAttribute(impactModelEClass, IMPACT_MODEL__NAME);
+    createEReference(evaluationEClass, EVALUATION__EVAL_RANGE);
+    createEReference(evaluationEClass, EVALUATION__KPI_EVAL_VALUE_SET);
 
     evaluationRangeEClass = createEClass(EVALUATION_RANGE);
     createEAttribute(evaluationRangeEClass, EVALUATION_RANGE__START);
     createEAttribute(evaluationRangeEClass, EVALUATION_RANGE__END);
     createEAttribute(evaluationRangeEClass, EVALUATION_RANGE__STEP);
 
-    contributionContextGroupEClass = createEClass(CONTRIBUTION_CONTEXT_GROUP);
-    createEAttribute(contributionContextGroupEClass, CONTRIBUTION_CONTEXT_GROUP__NAME);
-    createEReference(contributionContextGroupEClass, CONTRIBUTION_CONTEXT_GROUP__CONTRIBS);
+    impactModelEClass = createEClass(IMPACT_MODEL);
+    createEAttribute(impactModelEClass, IMPACT_MODEL__NAME);
+
+    contributionGroupEClass = createEClass(CONTRIBUTION_GROUP);
+    createEAttribute(contributionGroupEClass, CONTRIBUTION_GROUP__NAME);
+    createEReference(contributionGroupEClass, CONTRIBUTION_GROUP__CONTRIBS);
 
     contributionContextEClass = createEClass(CONTRIBUTION_CONTEXT);
     createEAttribute(contributionContextEClass, CONTRIBUTION_CONTEXT__NAME);
-    createEReference(contributionContextEClass, CONTRIBUTION_CONTEXT__INCLUDED_CONTEXTS);
+    createEReference(contributionContextEClass, CONTRIBUTION_CONTEXT__SUPER_CONTRIBUTION_CONTEXTS);
     createEReference(contributionContextEClass, CONTRIBUTION_CONTEXT__CHANGES);
 
     contributionChangeEClass = createEClass(CONTRIBUTION_CHANGE);
@@ -2336,26 +2355,27 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     createEAttribute(contributionRangeEClass, CONTRIBUTION_RANGE__END);
     createEAttribute(contributionRangeEClass, CONTRIBUTION_RANGE__STEP);
 
-    qualitativeMappingsEClass = createEClass(QUALITATIVE_MAPPINGS);
-    createEAttribute(qualitativeMappingsEClass, QUALITATIVE_MAPPINGS__NAME);
-    createEReference(qualitativeMappingsEClass, QUALITATIVE_MAPPINGS__KPI_EVAL_VALUE_SET);
-    createEReference(qualitativeMappingsEClass, QUALITATIVE_MAPPINGS__MAPPIN);
-
     kpiEvalValueSetEClass = createEClass(KPI_EVAL_VALUE_SET);
-    createEAttribute(kpiEvalValueSetEClass, KPI_EVAL_VALUE_SET__NAME);
-    createEAttribute(kpiEvalValueSetEClass, KPI_EVAL_VALUE_SET__TARGET_VALUE);
-    createEAttribute(kpiEvalValueSetEClass, KPI_EVAL_VALUE_SET__THRESHOLD_VALUE);
-    createEAttribute(kpiEvalValueSetEClass, KPI_EVAL_VALUE_SET__WORST_VALUE);
-    createEAttribute(kpiEvalValueSetEClass, KPI_EVAL_VALUE_SET__EVALUATION_VALUE);
-    createEAttribute(kpiEvalValueSetEClass, KPI_EVAL_VALUE_SET__UNIT);
-    createEAttribute(kpiEvalValueSetEClass, KPI_EVAL_VALUE_SET__QUALITATIVE_EVALUATION_VALUE);
+
+    kpiQuantitativeEvalValueSetEClass = createEClass(KPI_QUANTITATIVE_EVAL_VALUE_SET);
+    createEAttribute(kpiQuantitativeEvalValueSetEClass, KPI_QUANTITATIVE_EVAL_VALUE_SET__TARGET_VALUE);
+    createEAttribute(kpiQuantitativeEvalValueSetEClass, KPI_QUANTITATIVE_EVAL_VALUE_SET__THRESHOLD_VALUE);
+    createEAttribute(kpiQuantitativeEvalValueSetEClass, KPI_QUANTITATIVE_EVAL_VALUE_SET__WORST_VALUE);
+    createEAttribute(kpiQuantitativeEvalValueSetEClass, KPI_QUANTITATIVE_EVAL_VALUE_SET__EVALUATION_VALUE);
+    createEAttribute(kpiQuantitativeEvalValueSetEClass, KPI_QUANTITATIVE_EVAL_VALUE_SET__UNIT);
+
+    kpiQualitativeEvalValueSetEClass = createEClass(KPI_QUALITATIVE_EVAL_VALUE_SET);
+    createEReference(kpiQualitativeEvalValueSetEClass, KPI_QUALITATIVE_EVAL_VALUE_SET__QUALITATIVE_EVALUATION_VALUE);
 
     qualitativeMappingEClass = createEClass(QUALITATIVE_MAPPING);
     createEAttribute(qualitativeMappingEClass, QUALITATIVE_MAPPING__NAME);
-    createEAttribute(qualitativeMappingEClass, QUALITATIVE_MAPPING__REAL_WORLD_LABEL);
-    createEAttribute(qualitativeMappingEClass, QUALITATIVE_MAPPING__EVALUATION);
-    createEAttribute(qualitativeMappingEClass, QUALITATIVE_MAPPING__QUALITATIVE_EVALUATION);
-    createEAttribute(qualitativeMappingEClass, QUALITATIVE_MAPPING__EXCEEDS);
+    createEReference(qualitativeMappingEClass, QUALITATIVE_MAPPING__MAPPIN);
+
+    mappingEClass = createEClass(MAPPING);
+    createEAttribute(mappingEClass, MAPPING__NAME);
+    createEAttribute(mappingEClass, MAPPING__VALUATION);
+    createEAttribute(mappingEClass, MAPPING__QUALITATIVE_EVALUATION);
+    createEAttribute(mappingEClass, MAPPING__EXCEEDS);
 
     kpiNewEvalValueEClass = createEClass(KPI_NEW_EVAL_VALUE);
     createEAttribute(kpiNewEvalValueEClass, KPI_NEW_EVAL_VALUE__NAME);
@@ -2455,7 +2475,12 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     strategyGroupEClass.getESuperTypes().add(this.getGRLElement());
     evaluationStrategyEClass.getESuperTypes().add(this.getGRLElement());
     evaluationEClass.getESuperTypes().add(this.getGRLElement());
-    qualitativeMappingsEClass.getESuperTypes().add(this.getKPIConversion());
+    contributionGroupEClass.getESuperTypes().add(this.getGRLElement());
+    contributionContextEClass.getESuperTypes().add(this.getGRLElement());
+    kpiQuantitativeEvalValueSetEClass.getESuperTypes().add(this.getKPIEvalValueSet());
+    kpiQualitativeEvalValueSetEClass.getESuperTypes().add(this.getKPIEvalValueSet());
+    qualitativeMappingEClass.getESuperTypes().add(this.getGRLElement());
+    mappingEClass.getESuperTypes().add(this.getGRLBaseElement());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2547,7 +2572,8 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEReference(getInLineContribution_Dest(), this.getContributionEnd(), null, "dest", null, 0, -1, InLineContribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(contributionEndEClass, ContributionEnd.class, "ContributionEnd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getContributionEnd_Name(), this.getIntentionalElement(), null, "name", null, 0, 1, ContributionEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getContributionEnd_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ContributionEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContributionEnd_Desname(), this.getIntentionalElement(), null, "desname", null, 0, 1, ContributionEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getContributionEnd_Contribution(), this.getContributionType(), "contribution", null, 0, 1, ContributionEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getContributionEnd_QuantitativeContribution(), theEcorePackage.getEInt(), "quantitativeContribution", null, 0, 1, ContributionEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2575,24 +2601,24 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEAttribute(getEvaluation_QualitativeEvaluation(), this.getQualitativeLabel(), "qualitativeEvaluation", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEvaluation_Evaluation(), theEcorePackage.getEInt(), "evaluation", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEvaluation_Exceeds(), theEcorePackage.getEBoolean(), "exceeds", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(kpiConversionEClass, KPIConversion.class, "KPIConversion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(impactModelEClass, ImpactModel.class, "ImpactModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getImpactModel_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ImpactModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEvaluation_EvalRange(), this.getEvaluationRange(), null, "evalRange", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEvaluation_KpiEvalValueSet(), this.getKPIEvalValueSet(), null, "kpiEvalValueSet", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(evaluationRangeEClass, EvaluationRange.class, "EvaluationRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEvaluationRange_Start(), theEcorePackage.getEInt(), "start", null, 0, 1, EvaluationRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEvaluationRange_End(), theEcorePackage.getEInt(), "end", null, 0, 1, EvaluationRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEvaluationRange_Step(), theEcorePackage.getEInt(), "step", null, 0, 1, EvaluationRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(contributionContextGroupEClass, ContributionContextGroup.class, "ContributionContextGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getContributionContextGroup_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ContributionContextGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getContributionContextGroup_Contribs(), this.getContributionContext(), null, "contribs", null, 0, -1, ContributionContextGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(impactModelEClass, ImpactModel.class, "ImpactModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getImpactModel_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ImpactModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(contributionGroupEClass, ContributionGroup.class, "ContributionGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getContributionGroup_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ContributionGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContributionGroup_Contribs(), this.getContributionContext(), null, "contribs", null, 0, -1, ContributionGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(contributionContextEClass, ContributionContext.class, "ContributionContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getContributionContext_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ContributionContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getContributionContext_IncludedContexts(), this.getContributionContext(), null, "includedContexts", null, 0, -1, ContributionContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContributionContext_SuperContributionContexts(), this.getContributionContext(), null, "superContributionContexts", null, 0, -1, ContributionContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getContributionContext_Changes(), this.getContributionChange(), null, "changes", null, 0, -1, ContributionContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(contributionChangeEClass, ContributionChange.class, "ContributionChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2606,26 +2632,27 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEAttribute(getContributionRange_End(), theEcorePackage.getEInt(), "end", null, 0, 1, ContributionRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getContributionRange_Step(), theEcorePackage.getEInt(), "step", null, 0, 1, ContributionRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(qualitativeMappingsEClass, QualitativeMappings.class, "QualitativeMappings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getQualitativeMappings_Name(), theEcorePackage.getEString(), "name", null, 0, 1, QualitativeMappings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getQualitativeMappings_KpiEvalValueSet(), this.getKPIEvalValueSet(), null, "kpiEvalValueSet", null, 0, -1, QualitativeMappings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getQualitativeMappings_Mappin(), this.getQualitativeMapping(), null, "mappin", null, 0, -1, QualitativeMappings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(kpiEvalValueSetEClass, KPIEvalValueSet.class, "KPIEvalValueSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getKPIEvalValueSet_Name(), theEcorePackage.getEString(), "name", null, 0, 1, KPIEvalValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getKPIEvalValueSet_TargetValue(), theEcorePackage.getEDouble(), "targetValue", null, 0, 1, KPIEvalValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getKPIEvalValueSet_ThresholdValue(), theEcorePackage.getEDouble(), "thresholdValue", null, 0, 1, KPIEvalValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getKPIEvalValueSet_WorstValue(), theEcorePackage.getEDouble(), "worstValue", null, 0, 1, KPIEvalValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getKPIEvalValueSet_EvaluationValue(), theEcorePackage.getEDouble(), "evaluationValue", null, 0, 1, KPIEvalValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getKPIEvalValueSet_Unit(), theEcorePackage.getEString(), "unit", null, 0, 1, KPIEvalValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getKPIEvalValueSet_QualitativeEvaluationValue(), theEcorePackage.getEString(), "qualitativeEvaluationValue", null, 0, 1, KPIEvalValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(kpiQuantitativeEvalValueSetEClass, KPIQuantitativeEvalValueSet.class, "KPIQuantitativeEvalValueSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getKPIQuantitativeEvalValueSet_TargetValue(), theEcorePackage.getEDouble(), "targetValue", null, 0, 1, KPIQuantitativeEvalValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getKPIQuantitativeEvalValueSet_ThresholdValue(), theEcorePackage.getEDouble(), "thresholdValue", null, 0, 1, KPIQuantitativeEvalValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getKPIQuantitativeEvalValueSet_WorstValue(), theEcorePackage.getEDouble(), "worstValue", null, 0, 1, KPIQuantitativeEvalValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getKPIQuantitativeEvalValueSet_EvaluationValue(), theEcorePackage.getEDouble(), "evaluationValue", null, 0, 1, KPIQuantitativeEvalValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getKPIQuantitativeEvalValueSet_Unit(), theEcorePackage.getEString(), "unit", null, 0, 1, KPIQuantitativeEvalValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(kpiQualitativeEvalValueSetEClass, KPIQualitativeEvalValueSet.class, "KPIQualitativeEvalValueSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getKPIQualitativeEvalValueSet_QualitativeEvaluationValue(), this.getMapping(), null, "qualitativeEvaluationValue", null, 0, 1, KPIQualitativeEvalValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(qualitativeMappingEClass, QualitativeMapping.class, "QualitativeMapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getQualitativeMapping_Name(), theEcorePackage.getEString(), "name", null, 0, 1, QualitativeMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getQualitativeMapping_RealWorldLabel(), theEcorePackage.getEString(), "realWorldLabel", null, 0, 1, QualitativeMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getQualitativeMapping_Evaluation(), theEcorePackage.getEInt(), "evaluation", null, 0, 1, QualitativeMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getQualitativeMapping_QualitativeEvaluation(), this.getQualitativeLabel(), "qualitativeEvaluation", null, 0, 1, QualitativeMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getQualitativeMapping_Exceeds(), theEcorePackage.getEString(), "exceeds", null, 0, 1, QualitativeMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQualitativeMapping_Mappin(), this.getMapping(), null, "mappin", null, 0, -1, QualitativeMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(mappingEClass, Mapping.class, "Mapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMapping_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMapping_Valuation(), theEcorePackage.getEInt(), "valuation", null, 0, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMapping_QualitativeEvaluation(), this.getQualitativeLabel(), "qualitativeEvaluation", null, 0, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMapping_Exceeds(), theEcorePackage.getEString(), "exceeds", null, 0, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(kpiNewEvalValueEClass, KPINewEvalValue.class, "KPINewEvalValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getKPINewEvalValue_Name(), theEcorePackage.getEString(), "name", null, 0, 1, KPINewEvalValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

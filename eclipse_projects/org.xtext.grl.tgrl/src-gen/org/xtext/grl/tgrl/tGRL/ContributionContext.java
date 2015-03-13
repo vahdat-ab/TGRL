@@ -4,8 +4,6 @@ package org.xtext.grl.tgrl.tGRL;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Contribution Context</b></em>'.
@@ -15,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionContext#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionContext#getIncludedContexts <em>Included Contexts</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionContext#getSuperContributionContexts <em>Super Contribution Contexts</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionContext#getChanges <em>Changes</em>}</li>
  * </ul>
  * </p>
@@ -24,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ContributionContext extends EObject
+public interface ContributionContext extends GRLElement
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -53,20 +51,20 @@ public interface ContributionContext extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Included Contexts</b></em>' reference list.
+   * Returns the value of the '<em><b>Super Contribution Contexts</b></em>' reference list.
    * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.ContributionContext}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Included Contexts</em>' reference list isn't clear,
+   * If the meaning of the '<em>Super Contribution Contexts</em>' reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Included Contexts</em>' reference list.
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionContext_IncludedContexts()
+   * @return the value of the '<em>Super Contribution Contexts</em>' reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionContext_SuperContributionContexts()
    * @model
    * @generated
    */
-  EList<ContributionContext> getIncludedContexts();
+  EList<ContributionContext> getSuperContributionContexts();
 
   /**
    * Returns the value of the '<em><b>Changes</b></em>' containment reference list.

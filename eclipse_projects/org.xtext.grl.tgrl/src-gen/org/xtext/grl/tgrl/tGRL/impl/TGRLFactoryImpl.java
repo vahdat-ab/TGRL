@@ -92,16 +92,17 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
       case TGRLPackage.STRATEGY_GROUP: return createStrategyGroup();
       case TGRLPackage.EVALUATION_STRATEGY: return createEvaluationStrategy();
       case TGRLPackage.EVALUATION: return createEvaluation();
-      case TGRLPackage.KPI_CONVERSION: return createKPIConversion();
-      case TGRLPackage.IMPACT_MODEL: return createImpactModel();
       case TGRLPackage.EVALUATION_RANGE: return createEvaluationRange();
-      case TGRLPackage.CONTRIBUTION_CONTEXT_GROUP: return createContributionContextGroup();
+      case TGRLPackage.IMPACT_MODEL: return createImpactModel();
+      case TGRLPackage.CONTRIBUTION_GROUP: return createContributionGroup();
       case TGRLPackage.CONTRIBUTION_CONTEXT: return createContributionContext();
       case TGRLPackage.CONTRIBUTION_CHANGE: return createContributionChange();
       case TGRLPackage.CONTRIBUTION_RANGE: return createContributionRange();
-      case TGRLPackage.QUALITATIVE_MAPPINGS: return createQualitativeMappings();
       case TGRLPackage.KPI_EVAL_VALUE_SET: return createKPIEvalValueSet();
+      case TGRLPackage.KPI_QUANTITATIVE_EVAL_VALUE_SET: return createKPIQuantitativeEvalValueSet();
+      case TGRLPackage.KPI_QUALITATIVE_EVAL_VALUE_SET: return createKPIQualitativeEvalValueSet();
       case TGRLPackage.QUALITATIVE_MAPPING: return createQualitativeMapping();
+      case TGRLPackage.MAPPING: return createMapping();
       case TGRLPackage.KPI_NEW_EVAL_VALUE: return createKPINewEvalValue();
       case TGRLPackage.KPI_INFORMATION_CONFIG: return createKPIInformationConfig();
       case TGRLPackage.KPI_INFORMATION_ELEMENT: return createKPIInformationElement();
@@ -473,10 +474,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public KPIConversion createKPIConversion()
+  public EvaluationRange createEvaluationRange()
   {
-    KPIConversionImpl kpiConversion = new KPIConversionImpl();
-    return kpiConversion;
+    EvaluationRangeImpl evaluationRange = new EvaluationRangeImpl();
+    return evaluationRange;
   }
 
   /**
@@ -495,21 +496,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public EvaluationRange createEvaluationRange()
+  public ContributionGroup createContributionGroup()
   {
-    EvaluationRangeImpl evaluationRange = new EvaluationRangeImpl();
-    return evaluationRange;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ContributionContextGroup createContributionContextGroup()
-  {
-    ContributionContextGroupImpl contributionContextGroup = new ContributionContextGroupImpl();
-    return contributionContextGroup;
+    ContributionGroupImpl contributionGroup = new ContributionGroupImpl();
+    return contributionGroup;
   }
 
   /**
@@ -550,17 +540,6 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public QualitativeMappings createQualitativeMappings()
-  {
-    QualitativeMappingsImpl qualitativeMappings = new QualitativeMappingsImpl();
-    return qualitativeMappings;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public KPIEvalValueSet createKPIEvalValueSet()
   {
     KPIEvalValueSetImpl kpiEvalValueSet = new KPIEvalValueSetImpl();
@@ -572,10 +551,43 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public KPIQuantitativeEvalValueSet createKPIQuantitativeEvalValueSet()
+  {
+    KPIQuantitativeEvalValueSetImpl kpiQuantitativeEvalValueSet = new KPIQuantitativeEvalValueSetImpl();
+    return kpiQuantitativeEvalValueSet;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public KPIQualitativeEvalValueSet createKPIQualitativeEvalValueSet()
+  {
+    KPIQualitativeEvalValueSetImpl kpiQualitativeEvalValueSet = new KPIQualitativeEvalValueSetImpl();
+    return kpiQualitativeEvalValueSet;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public QualitativeMapping createQualitativeMapping()
   {
     QualitativeMappingImpl qualitativeMapping = new QualitativeMappingImpl();
     return qualitativeMapping;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Mapping createMapping()
+  {
+    MappingImpl mapping = new MappingImpl();
+    return mapping;
   }
 
   /**

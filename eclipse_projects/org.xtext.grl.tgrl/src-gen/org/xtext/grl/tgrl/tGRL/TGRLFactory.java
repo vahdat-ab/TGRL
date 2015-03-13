@@ -266,13 +266,13 @@ public interface TGRLFactory extends EFactory
   Evaluation createEvaluation();
 
   /**
-   * Returns a new object of class '<em>KPI Conversion</em>'.
+   * Returns a new object of class '<em>Evaluation Range</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>KPI Conversion</em>'.
+   * @return a new object of class '<em>Evaluation Range</em>'.
    * @generated
    */
-  KPIConversion createKPIConversion();
+  EvaluationRange createEvaluationRange();
 
   /**
    * Returns a new object of class '<em>Impact Model</em>'.
@@ -284,22 +284,13 @@ public interface TGRLFactory extends EFactory
   ImpactModel createImpactModel();
 
   /**
-   * Returns a new object of class '<em>Evaluation Range</em>'.
+   * Returns a new object of class '<em>Contribution Group</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Evaluation Range</em>'.
+   * @return a new object of class '<em>Contribution Group</em>'.
    * @generated
    */
-  EvaluationRange createEvaluationRange();
-
-  /**
-   * Returns a new object of class '<em>Contribution Context Group</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Contribution Context Group</em>'.
-   * @generated
-   */
-  ContributionContextGroup createContributionContextGroup();
+  ContributionGroup createContributionGroup();
 
   /**
    * Returns a new object of class '<em>Contribution Context</em>'.
@@ -329,15 +320,6 @@ public interface TGRLFactory extends EFactory
   ContributionRange createContributionRange();
 
   /**
-   * Returns a new object of class '<em>Qualitative Mappings</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Qualitative Mappings</em>'.
-   * @generated
-   */
-  QualitativeMappings createQualitativeMappings();
-
-  /**
    * Returns a new object of class '<em>KPI Eval Value Set</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -347,6 +329,24 @@ public interface TGRLFactory extends EFactory
   KPIEvalValueSet createKPIEvalValueSet();
 
   /**
+   * Returns a new object of class '<em>KPI Quantitative Eval Value Set</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>KPI Quantitative Eval Value Set</em>'.
+   * @generated
+   */
+  KPIQuantitativeEvalValueSet createKPIQuantitativeEvalValueSet();
+
+  /**
+   * Returns a new object of class '<em>KPI Qualitative Eval Value Set</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>KPI Qualitative Eval Value Set</em>'.
+   * @generated
+   */
+  KPIQualitativeEvalValueSet createKPIQualitativeEvalValueSet();
+
+  /**
    * Returns a new object of class '<em>Qualitative Mapping</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -354,6 +354,15 @@ public interface TGRLFactory extends EFactory
    * @generated
    */
   QualitativeMapping createQualitativeMapping();
+
+  /**
+   * Returns a new object of class '<em>Mapping</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Mapping</em>'.
+   * @generated
+   */
+  Mapping createMapping();
 
   /**
    * Returns a new object of class '<em>KPI New Eval Value</em>'.

@@ -16,10 +16,12 @@ Element:
 	GRLSpecification | GRLBaseElement
 ;
 GRLBaseElement:
-	 GRLElement | InLineElementLink 
+	 GRLElement | InLineElementLink | Mapping
 ;
 GRLElement:
-	IntentionalElement | ElementLink | Actor | StrategyGroup | EvaluationStrategy | Evaluation
+	
+	IntentionalElement | ElementLink | Actor | StrategyGroup | EvaluationStrategy | Evaluation | ContributionGroup |ContributionContext | QualitativeMapping
+	
 ;
 IntentionalElement:
 	 Softgoal | Goal  | Task | Resource | Indicator | Belief
@@ -172,7 +174,7 @@ DecompositionEnd:
 	)?
 ;
 Contribution: 
-	src=[IntentionalElement | QualifiedName] 'contributeTo' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
+	src=[IntentionalElement | QualifiedName] dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
 //			('name' '=' label = STRING ';')?&
 //			('contribution' '=' contribution=ContributionType ';')?&
 			/*
@@ -188,7 +190,8 @@ InLineContribution:
 	'contributeTo' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
 ;
 ContributionEnd:
-	name = [IntentionalElement | QualifiedName]
+   (name = ID)?
+	desname = [IntentionalElement | QualifiedName]
 	(
 		'{'
 			(contribution=ContributionType | quantitativeContribution=INT)?
@@ -216,12 +219,10 @@ DependencyEnd:
 StrategyGroup: 
 	'strategyGroup' name=ID 'includes' strategies+=[EvaluationStrategy | QualifiedName](',' strategies+=[EvaluationStrategy | QualifiedName])* ';'
 ;
-
 EvaluationStrategy: 
-	'strategy' name=ID ('isA' superStrategies+=[EvaluationStrategy | QualifiedName](',' superStrategies+=[EvaluationStrategy | QualifiedName])* )?
+	'strategy' name=ID ('extends' superStrategies+=[EvaluationStrategy | QualifiedName](',' superStrategies+=[EvaluationStrategy | QualifiedName])* )?
 	'{'
 		evaluations+=Evaluation*
-//				('kipInforConfig' '='kipInforConfig+=KPIInformationConfig ';')
 	'}'
 ;
 Evaluation:
@@ -229,28 +230,18 @@ Evaluation:
 	 *TODO I must give a default value for evaluation, which is zero, to this attribute.
 	 * 		This can be done through the post processing mechanism in xText 
 	 */	
-	intentionalElement = [IntentionalElement | QualifiedName] '=' (qualitativeEvaluation=QualitativeLabel | evaluation = INT )('{'exceeds?='exceeds' '}' | ';')
-	
-//			('evalRange' '=' evalRange=EvaluationRange ';')?&
-//			('kpiEvalValueSet' '=' kpiEvalValueSet = KPIEvalValueSet ';')?&
-//			('kpiNewEvalValue' '=' kpiNewEvalValue = KPINewEvalValue)?&
+	intentionalElement = [IntentionalElement | QualifiedName] '=' (qualitativeEvaluation=QualitativeLabel | evaluation = INT )('{' (exceeds?='exceeds'';')?& (evalRange=EvaluationRange)?& (kpiEvalValueSet = KPIEvalValueSet)? '}' | ';')
 ;
-
+EvaluationRange: 
+	('start' '=' start=INT ';')&
+	('end' '=' end=INT ';')&
+	/*
+	 *TODO I must give a default value, which is 1, to this attribute.
+	 * 		This can be done through the post processing mechanism in xText 
+	 */	
+	('step' '=' step=INT ';')
+;
 //**************************************************************************************
-
-//GRLModelElement:
-//	GRLNode | GRLLinkableElement | ElementLink | StrategiesGroup | EvaluationStrategy | 
-//	ContributionContextGroup | ContributionContext | KPIConversion | KPIInformationElement | KPIModelLink | IndicatorGroup 
-//;
-//GRLNode:
-//	Belief | CollapsedActorRef | IntentionalElementRef | KPIInformationElementRef
-//;
-
-
-KPIConversion:
-	QualitativeMappings
-;
-
 
 ImpactModel :
 	'impactModel' name= ID '{'
@@ -260,34 +251,20 @@ ImpactModel :
 //**************************************************************************************
 
 
-EvaluationRange: 
-	'evaluationRange' '{'
-		(
-			('start' '=' start=INT ';')?&
-			('end' '=' end=INT ';')?&
-			/*
-			 *TODO I must give a default value, which is 1, to this attribute.
-			 * 		This can be done through the post processing mechanism in xText 
-			 */	
-			('step' '=' step=INT ';')?
-		)
-	'}'
+
+ContributionGroup: 
+	'contributionGroup' name=ID 'includes' contribs+=[ContributionContext](',' contribs+=[ContributionContext])* ';'
 ;
-ContributionContextGroup: 
-	'contributionContextGroup' name=ID '{'
-		('contribs' '=' contribs+=[ContributionContext](',' contribs+=[ContributionContext])* ';')
-	'}'
-;
+
 ContributionContext: 
-	'contributionContext' name= ID '{'
-		(
-			('includedContexts' '=' includedContexts+=[ContributionContext](',' includedContexts+=[ContributionContext])* ';')?&
+	'contribution' name= ID ('extends' superContributionContexts+=[ContributionContext | QualifiedName](',' superContributionContexts+=[ContributionContext | QualifiedName])* )?
+	 '{'
 			('changes' '=' changes+=ContributionChange)*
-		)
+
 	'}'
 ;
 ContributionChange:
-	'contributionChange' name=ID '{'
+	'contributionChange' name=ID 'extends' '{'
 		(
 			('newContribution' '=' newContribution=ContributionType ';')?&
 			/*
@@ -312,55 +289,49 @@ ContributionRange:
 		)
 	'}'
 ;
-QualitativeMappings:
-	'qualitativeMappings' name=ID '{'
-		(
-			('kpiEvalValueSet' '=' kpiEvalValueSet+=[KPIEvalValueSet](',' kpiEvalValueSet+=[KPIEvalValueSet])* ';')*&	
-			(mappin+=QualitativeMapping)*	
-		)
-		
-	'}'
-;
 
 KPIEvalValueSet:
-	'kpiEvalValueSet' name=ID '{'
-		(
-			/*
-			 *TODO I must give a default value, which is 0, to this attribute.
-			 * 		This can be done through the post processing mechanism in xText 
-			 */	
-			('targetValue' '=' targetValue=DOUBLE ';')?&
-			/*
-			 *TODO I must give a default value, which is 0, to this attribute.
-			 * 		This can be done through the post processing mechanism in xText 
-			 */	
-			('thresholdValue' '=' thresholdValue=DOUBLE ';')?&
-			/*
-			 *TODO I must give a default value, which is 0, to this attribute.
-			 * 		This can be done through the post processing mechanism in xText 
-			 */	
-			('worstValue' '=' worstValue=DOUBLE ';')?&
-			/*
-			 *TODO I must give a default value, which is 0, to this attribute.
-			 * 		This can be done through the post processing mechanism in xText 
-			 */	
-			('evaluationValue' '=' evaluationValue=DOUBLE ';')?&	
-			('unit' '=' unit=STRING ';')?&
-			('qualitativeEvaluationValue' '=' qualitativeEvaluationValue=STRING ';')?						
-		)
-	'}'
+	KPIQuantitativeEvalValueSet | KPIQualitativeEvalValueSet
 ;
-QualitativeMapping:
+KPIQuantitativeEvalValueSet:
+	/*
+	 *TODO I must give a default value, which is 0, to this attribute.
+	 * 		This can be done through the post processing mechanism in xText 
+	 */	
+	('target' '=' targetValue=DOUBLE ';')&
+	/*
+	 *TODO I must give a default value, which is 0, to this attribute.
+	 * 		This can be done through the post processing mechanism in xText 
+	 */	
+	('threshold' '=' thresholdValue=DOUBLE ';')&
+	/*
+	 *TODO I must give a default value, which is 0, to this attribute.
+	 * 		This can be done through the post processing mechanism in xText 
+	 */	
+	('worst' '=' worstValue=DOUBLE ';')&
+	/*
+	 *TODO I must give a default value, which is 0, to this attribute.
+	 * 		This can be done through the post processing mechanism in xText 
+	 */	
+	('eval' '=' evaluationValue=DOUBLE ';')&	
+	('unit' '=' unit=STRING ';')
+;
 
+KPIQualitativeEvalValueSet:
+		'qualeval' '=' qualitativeEvaluationValue=[Mapping | QualifiedName] ';'	
+;
+
+QualitativeMapping:
 	'qualitativeMapping' name=ID '{'
-		(
-			('realWorldLabel' '=' realWorldLabel=STRING ';')?&
-			('evaluation' '=' evaluation=INT ';')?&
-			('qualitativeEvaluation' '=' qualitativeEvaluation=QualitativeLabel ';')?&
-			('exceeds' '=' exceeds=BOOLEAN ';')?				
-		)
+		(mappin+=Mapping)*			
 	'}'
 ;
+
+Mapping:
+	name=STRING ',' valuation=INT ',' qualitativeEvaluation=QualitativeLabel ',' exceeds=BOOLEAN ';'			
+;
+
+
 KPINewEvalValue:
 	'kpiNewEvalValue' name=ID '{'
 		/*

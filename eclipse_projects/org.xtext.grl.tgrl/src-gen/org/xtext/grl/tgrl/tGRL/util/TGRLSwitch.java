@@ -330,10 +330,10 @@ public class TGRLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TGRLPackage.KPI_CONVERSION:
+      case TGRLPackage.EVALUATION_RANGE:
       {
-        KPIConversion kpiConversion = (KPIConversion)theEObject;
-        T result = caseKPIConversion(kpiConversion);
+        EvaluationRange evaluationRange = (EvaluationRange)theEObject;
+        T result = caseEvaluationRange(evaluationRange);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -344,17 +344,13 @@ public class TGRLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TGRLPackage.EVALUATION_RANGE:
+      case TGRLPackage.CONTRIBUTION_GROUP:
       {
-        EvaluationRange evaluationRange = (EvaluationRange)theEObject;
-        T result = caseEvaluationRange(evaluationRange);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case TGRLPackage.CONTRIBUTION_CONTEXT_GROUP:
-      {
-        ContributionContextGroup contributionContextGroup = (ContributionContextGroup)theEObject;
-        T result = caseContributionContextGroup(contributionContextGroup);
+        ContributionGroup contributionGroup = (ContributionGroup)theEObject;
+        T result = caseContributionGroup(contributionGroup);
+        if (result == null) result = caseGRLElement(contributionGroup);
+        if (result == null) result = caseGRLBaseElement(contributionGroup);
+        if (result == null) result = caseElement(contributionGroup);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -362,6 +358,9 @@ public class TGRLSwitch<T> extends Switch<T>
       {
         ContributionContext contributionContext = (ContributionContext)theEObject;
         T result = caseContributionContext(contributionContext);
+        if (result == null) result = caseGRLElement(contributionContext);
+        if (result == null) result = caseGRLBaseElement(contributionContext);
+        if (result == null) result = caseElement(contributionContext);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -379,14 +378,6 @@ public class TGRLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TGRLPackage.QUALITATIVE_MAPPINGS:
-      {
-        QualitativeMappings qualitativeMappings = (QualitativeMappings)theEObject;
-        T result = caseQualitativeMappings(qualitativeMappings);
-        if (result == null) result = caseKPIConversion(qualitativeMappings);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case TGRLPackage.KPI_EVAL_VALUE_SET:
       {
         KPIEvalValueSet kpiEvalValueSet = (KPIEvalValueSet)theEObject;
@@ -394,10 +385,38 @@ public class TGRLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case TGRLPackage.KPI_QUANTITATIVE_EVAL_VALUE_SET:
+      {
+        KPIQuantitativeEvalValueSet kpiQuantitativeEvalValueSet = (KPIQuantitativeEvalValueSet)theEObject;
+        T result = caseKPIQuantitativeEvalValueSet(kpiQuantitativeEvalValueSet);
+        if (result == null) result = caseKPIEvalValueSet(kpiQuantitativeEvalValueSet);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.KPI_QUALITATIVE_EVAL_VALUE_SET:
+      {
+        KPIQualitativeEvalValueSet kpiQualitativeEvalValueSet = (KPIQualitativeEvalValueSet)theEObject;
+        T result = caseKPIQualitativeEvalValueSet(kpiQualitativeEvalValueSet);
+        if (result == null) result = caseKPIEvalValueSet(kpiQualitativeEvalValueSet);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case TGRLPackage.QUALITATIVE_MAPPING:
       {
         QualitativeMapping qualitativeMapping = (QualitativeMapping)theEObject;
         T result = caseQualitativeMapping(qualitativeMapping);
+        if (result == null) result = caseGRLElement(qualitativeMapping);
+        if (result == null) result = caseGRLBaseElement(qualitativeMapping);
+        if (result == null) result = caseElement(qualitativeMapping);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.MAPPING:
+      {
+        Mapping mapping = (Mapping)theEObject;
+        T result = caseMapping(mapping);
+        if (result == null) result = caseGRLBaseElement(mapping);
+        if (result == null) result = caseElement(mapping);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -880,17 +899,17 @@ public class TGRLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>KPI Conversion</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Evaluation Range</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>KPI Conversion</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Evaluation Range</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseKPIConversion(KPIConversion object)
+  public T caseEvaluationRange(EvaluationRange object)
   {
     return null;
   }
@@ -912,33 +931,17 @@ public class TGRLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Evaluation Range</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Contribution Group</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Evaluation Range</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Contribution Group</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseEvaluationRange(EvaluationRange object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Contribution Context Group</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Contribution Context Group</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseContributionContextGroup(ContributionContextGroup object)
+  public T caseContributionGroup(ContributionGroup object)
   {
     return null;
   }
@@ -992,22 +995,6 @@ public class TGRLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Qualitative Mappings</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Qualitative Mappings</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseQualitativeMappings(QualitativeMappings object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>KPI Eval Value Set</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1024,6 +1011,38 @@ public class TGRLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>KPI Quantitative Eval Value Set</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>KPI Quantitative Eval Value Set</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKPIQuantitativeEvalValueSet(KPIQuantitativeEvalValueSet object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>KPI Qualitative Eval Value Set</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>KPI Qualitative Eval Value Set</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKPIQualitativeEvalValueSet(KPIQualitativeEvalValueSet object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Qualitative Mapping</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1035,6 +1054,22 @@ public class TGRLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseQualitativeMapping(QualitativeMapping object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Mapping</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Mapping</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMapping(Mapping object)
   {
     return null;
   }

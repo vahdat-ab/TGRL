@@ -4,26 +4,24 @@ package org.xtext.grl.tgrl.tGRL;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Contribution Context Group</b></em>'.
+ * A representation of the model object '<em><b>Contribution Group</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionContextGroup#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionContextGroup#getContribs <em>Contribs</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionGroup#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionGroup#getContribs <em>Contribs</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionContextGroup()
+ * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionGroup()
  * @model
  * @generated
  */
-public interface ContributionContextGroup extends EObject
+public interface ContributionGroup extends GRLElement
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -35,14 +33,14 @@ public interface ContributionContextGroup extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionContextGroup_Name()
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionGroup_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ContributionContextGroup#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ContributionGroup#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -61,10 +59,10 @@ public interface ContributionContextGroup extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Contribs</em>' reference list.
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionContextGroup_Contribs()
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionGroup_Contribs()
    * @model
    * @generated
    */
   EList<ContributionContext> getContribs();
 
-} // ContributionContextGroup
+} // ContributionGroup

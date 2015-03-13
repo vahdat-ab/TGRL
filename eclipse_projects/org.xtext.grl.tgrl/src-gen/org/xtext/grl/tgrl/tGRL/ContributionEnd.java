@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionEnd#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionEnd#getDesname <em>Desname</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionEnd#getContribution <em>Contribution</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionEnd#getQuantitativeContribution <em>Quantitative Contribution</em>}</li>
  * </ul>
@@ -25,30 +26,56 @@ import org.eclipse.emf.ecore.EObject;
 public interface ContributionEnd extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' reference.
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' reference isn't clear,
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' reference.
-   * @see #setName(IntentionalElement)
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
    * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionEnd_Name()
    * @model
    * @generated
    */
-  IntentionalElement getName();
+  String getName();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ContributionEnd#getName <em>Name</em>}' reference.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ContributionEnd#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' reference.
+   * @param value the new value of the '<em>Name</em>' attribute.
    * @see #getName()
    * @generated
    */
-  void setName(IntentionalElement value);
+  void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Desname</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Desname</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Desname</em>' reference.
+   * @see #setDesname(IntentionalElement)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionEnd_Desname()
+   * @model
+   * @generated
+   */
+  IntentionalElement getDesname();
+
+  /**
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ContributionEnd#getDesname <em>Desname</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Desname</em>' reference.
+   * @see #getDesname()
+   * @generated
+   */
+  void setDesname(IntentionalElement value);
 
   /**
    * Returns the value of the '<em><b>Contribution</b></em>' attribute.

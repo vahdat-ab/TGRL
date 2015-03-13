@@ -210,9 +210,9 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
         return createEvaluationAdapter();
       }
       @Override
-      public Adapter caseKPIConversion(KPIConversion object)
+      public Adapter caseEvaluationRange(EvaluationRange object)
       {
-        return createKPIConversionAdapter();
+        return createEvaluationRangeAdapter();
       }
       @Override
       public Adapter caseImpactModel(ImpactModel object)
@@ -220,14 +220,9 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
         return createImpactModelAdapter();
       }
       @Override
-      public Adapter caseEvaluationRange(EvaluationRange object)
+      public Adapter caseContributionGroup(ContributionGroup object)
       {
-        return createEvaluationRangeAdapter();
-      }
-      @Override
-      public Adapter caseContributionContextGroup(ContributionContextGroup object)
-      {
-        return createContributionContextGroupAdapter();
+        return createContributionGroupAdapter();
       }
       @Override
       public Adapter caseContributionContext(ContributionContext object)
@@ -245,19 +240,29 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
         return createContributionRangeAdapter();
       }
       @Override
-      public Adapter caseQualitativeMappings(QualitativeMappings object)
-      {
-        return createQualitativeMappingsAdapter();
-      }
-      @Override
       public Adapter caseKPIEvalValueSet(KPIEvalValueSet object)
       {
         return createKPIEvalValueSetAdapter();
       }
       @Override
+      public Adapter caseKPIQuantitativeEvalValueSet(KPIQuantitativeEvalValueSet object)
+      {
+        return createKPIQuantitativeEvalValueSetAdapter();
+      }
+      @Override
+      public Adapter caseKPIQualitativeEvalValueSet(KPIQualitativeEvalValueSet object)
+      {
+        return createKPIQualitativeEvalValueSetAdapter();
+      }
+      @Override
       public Adapter caseQualitativeMapping(QualitativeMapping object)
       {
         return createQualitativeMappingAdapter();
+      }
+      @Override
+      public Adapter caseMapping(Mapping object)
+      {
+        return createMappingAdapter();
       }
       @Override
       public Adapter caseKPINewEvalValue(KPINewEvalValue object)
@@ -717,16 +722,16 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.KPIConversion <em>KPI Conversion</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.EvaluationRange <em>Evaluation Range</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.KPIConversion
+   * @see org.xtext.grl.tgrl.tGRL.EvaluationRange
    * @generated
    */
-  public Adapter createKPIConversionAdapter()
+  public Adapter createEvaluationRangeAdapter()
   {
     return null;
   }
@@ -747,31 +752,16 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.EvaluationRange <em>Evaluation Range</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.ContributionGroup <em>Contribution Group</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.EvaluationRange
+   * @see org.xtext.grl.tgrl.tGRL.ContributionGroup
    * @generated
    */
-  public Adapter createEvaluationRangeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.ContributionContextGroup <em>Contribution Context Group</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.ContributionContextGroup
-   * @generated
-   */
-  public Adapter createContributionContextGroupAdapter()
+  public Adapter createContributionGroupAdapter()
   {
     return null;
   }
@@ -822,21 +812,6 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.QualitativeMappings <em>Qualitative Mappings</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.QualitativeMappings
-   * @generated
-   */
-  public Adapter createQualitativeMappingsAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.KPIEvalValueSet <em>KPI Eval Value Set</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -852,6 +827,36 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.KPIQuantitativeEvalValueSet <em>KPI Quantitative Eval Value Set</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.grl.tgrl.tGRL.KPIQuantitativeEvalValueSet
+   * @generated
+   */
+  public Adapter createKPIQuantitativeEvalValueSetAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.KPIQualitativeEvalValueSet <em>KPI Qualitative Eval Value Set</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.grl.tgrl.tGRL.KPIQualitativeEvalValueSet
+   * @generated
+   */
+  public Adapter createKPIQualitativeEvalValueSetAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.QualitativeMapping <em>Qualitative Mapping</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -862,6 +867,21 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createQualitativeMappingAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.Mapping <em>Mapping</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.grl.tgrl.tGRL.Mapping
+   * @generated
+   */
+  public Adapter createMappingAdapter()
   {
     return null;
   }
