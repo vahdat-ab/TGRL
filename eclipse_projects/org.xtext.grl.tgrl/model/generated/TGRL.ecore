@@ -16,7 +16,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ElementLink" eSuperTypes="#//GRLElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="src" eType="#//IntentionalElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="src" eType="#//GRLElement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InLineElementLink" eSuperTypes="#//GRLBaseElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="GRLSpecification" eSuperTypes="#//Element">
@@ -77,10 +77,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importance" eType="#//ImportanceType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importanceQuantitative"
         eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="kpiModelLinksDest" unique="false"
-        upperBound="-1" eType="#//KPIModelLink"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="groups" unique="false"
-        upperBound="-1" eType="#//IndicatorGroup"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elementLinks" upperBound="-1"
         eType="#//InLineElementLink" containment="true"/>
   </eClassifiers>
@@ -152,34 +148,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="step" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ImpactModel">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ContributionGroup" eSuperTypes="#//GRLElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contribs" unique="false"
-        upperBound="-1" eType="#//ContributionContext"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ContributionContext" eSuperTypes="#//GRLElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="superContributionContexts"
-        unique="false" upperBound="-1" eType="#//ContributionContext"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="changes" upperBound="-1"
-        eType="#//ContributionChange" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ContributionChange">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newContribution" eType="#//ContributionType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newQuantitativeContribution"
-        eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contribRange" eType="#//ContributionRange"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ContributionRange">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="start" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="step" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="KPIEvalValueSet"/>
   <eClassifiers xsi:type="ecore:EClass" name="KPIQuantitativeEvalValueSet" eSuperTypes="#//KPIEvalValueSet">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetValue" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
@@ -202,44 +170,52 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valuation" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualitativeEvaluation"
         eType="#//QualitativeLabel"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exceeds" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exceeds" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="KPINewEvalValue">
+  <eClassifiers xsi:type="ecore:EClass" name="ContributionGroup" eSuperTypes="#//GRLElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="evaluationValue" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contribs" unique="false"
+        upperBound="-1" eType="#//ContributionContext"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="KPIInformationConfig">
+  <eClassifiers xsi:type="ecore:EClass" name="ContributionContext" eSuperTypes="#//GRLElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="levelOfDimension" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueOfDimension" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="kpiInfoElement" eType="#//KPIInformationElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superContributionContexts"
+        unique="false" upperBound="-1" eType="#//ContributionContext"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="changes" upperBound="-1"
+        eType="#//ContributionChange" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="KPIInformationElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="kpiModelLinksSrc" unique="false"
-        upperBound="-1" eType="#//KPIModelLink"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="refs" unique="false" upperBound="-1"
-        eType="#//KPIInformationElementRef"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContributionChange">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contribution" eType="#//ContributionEnd"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newContribution" eType="#//ContributionType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newQuantitativeContribution"
+        eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contribRange" eType="#//ContributionRange"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="KPIInformationElementRef">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ContributionRange">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="start" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="step" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="KPIModelLink">
+  <eClassifiers xsi:type="ecore:EClass" name="Metadata" eSuperTypes="#//GRLElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IndicatorGroup">
+  <eClassifiers xsi:type="ecore:EClass" name="Comment" eSuperTypes="#//GRLElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkType" eSuperTypes="#//GRLElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isRedesignCategory" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="indicators" unique="false"
-        upperBound="-1" eType="#//Indicator"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//ElementLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//LinkType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="des" unique="false" upperBound="-1"
+        eType="#//GRLElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="inLineLink" eSuperTypes="#//InLineElementLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//LinkType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="des" unique="false" upperBound="-1"
+        eType="#//GRLElement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ImportanceType">
     <eLiterals name="none" literal="none"/>

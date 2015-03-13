@@ -20,7 +20,7 @@ GRLBaseElement:
 ;
 GRLElement:
 	
-	IntentionalElement | ElementLink | Actor | StrategyGroup | EvaluationStrategy | Evaluation | ContributionGroup |ContributionContext | QualitativeMapping
+	IntentionalElement | ElementLink | Actor | StrategyGroup | EvaluationStrategy | Evaluation | ContributionGroup |ContributionContext | QualitativeMapping | Metadata | Comment | LinkType
 	
 ;
 IntentionalElement:
@@ -28,10 +28,11 @@ IntentionalElement:
 ;
 
 ElementLink: 
-	Decomposition | Contribution | Dependency
+	Decomposition | Contribution | Dependency | Link
 ;
+
 InLineElementLink: 
-	InLineDecomposition | InLineContribution | InLineDependency
+	InLineDecomposition | InLineContribution | InLineDependency | inLineLink
 ;
 GRLSpecification: 
 	'grl' (name=ID)? '{'
@@ -141,8 +142,6 @@ Indicator:
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
 			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
-			('kpiModelLinksDest' '=' kpiModelLinksDest+=[KPIModelLink](',' kpiModelLinksDest+=[KPIModelLink] )* ';')?&
-			('groups''=' groups+=[IndicatorGroup](',' groups+=[IndicatorGroup] )* ';')?&
 			(elementLinks+=InLineElementLink)*			
 		)		
 	'}'
@@ -174,7 +173,7 @@ DecompositionEnd:
 	)?
 ;
 Contribution: 
-	src=[IntentionalElement | QualifiedName] dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
+	src=[IntentionalElement | QualifiedName] 'contributeTo' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
 //			('name' '=' label = STRING ';')?&
 //			('contribution' '=' contribution=ContributionType ';')?&
 			/*
@@ -242,54 +241,6 @@ EvaluationRange:
 	('step' '=' step=INT ';')
 ;
 //**************************************************************************************
-
-ImpactModel :
-	'impactModel' name= ID '{'
-	'}'
-;
-
-//**************************************************************************************
-
-
-
-ContributionGroup: 
-	'contributionGroup' name=ID 'includes' contribs+=[ContributionContext](',' contribs+=[ContributionContext])* ';'
-;
-
-ContributionContext: 
-	'contribution' name= ID ('extends' superContributionContexts+=[ContributionContext | QualifiedName](',' superContributionContexts+=[ContributionContext | QualifiedName])* )?
-	 '{'
-			('changes' '=' changes+=ContributionChange)*
-
-	'}'
-;
-ContributionChange:
-	'contributionChange' name=ID 'extends' '{'
-		(
-			('newContribution' '=' newContribution=ContributionType ';')?&
-			/*
-			 *TODO I must give a default value, which is 0, to this attribute.
-			 * 		This can be done through the post processing mechanism in xText 
-			 */	
-			('newQuantitativeContribution' '=' newQuantitativeContribution = INT ';')?&
-			('contribRange' '=' contribRange = ContributionRange ';')?
-		)
-	'}'
-;
-ContributionRange: 
-	'contributionRange' '{'
-		(
-			('start' '=' start=INT ';')?&
-			('end' '=' end=INT ';')?&
-			/*
-			 *TODO I must give a default value, which is 1, to this attribute.
-			 * 		This can be done through the post processing mechanism in xText 
-			 */	
-			('step' '=' step=INT ';')?
-		)
-	'}'
-;
-
 KPIEvalValueSet:
 	KPIQuantitativeEvalValueSet | KPIQualitativeEvalValueSet
 ;
@@ -331,64 +282,62 @@ Mapping:
 	name=STRING ',' valuation=INT ',' qualitativeEvaluation=QualitativeLabel ',' exceeds=BOOLEAN ';'			
 ;
 
+ContributionGroup: 
+	'contributionGroup' name=ID 'includes' contribs+=[ContributionContext](',' contribs+=[ContributionContext])* ';'
+;
 
-KPINewEvalValue:
-	'kpiNewEvalValue' name=ID '{'
-		/*
-		 *TODO I must give a default value, which is 0, to this attribute.
-		 * 		This can be done through the post processing mechanism in xText 
-		 */	
-		'evaluationValue' '=' evaluationValue=DOUBLE ';'
-	'}'
-;
-KPIInformationConfig:
-	'kpiInformationConfig' name=ID '{'
-		(
-			('levelOfDimension' '=' levelOfDimension = STRING ';')?&
-			('valueOfDimension' '=' valueOfDimension=STRING ';')?&
-			('kpiInfoElement' '=' kpiInfoElement=[KPIInformationElement])
-		)
-	'}'
-;
-KPIInformationElement:
-	'kpiInformationElement' name=ID '{'
-		(
-			('name' '=' label = STRING ';')?&
-			('description' '=' description=STRING ';')?&
-			('kpiModelLinksSrc' '=' kpiModelLinksSrc+=[KPIModelLink](',' kpiModelLinksSrc+=[KPIModelLink] )* ';')?&
-			('refs' '=' refs+=[KPIInformationElementRef](',' refs+=[KPIInformationElementRef] )* ';')?
-		)
-	'}'
-;
-KPIInformationElementRef:
-	'kpiInformationElementRef' name=ID '{'
-		(
-			('name' '=' label = STRING ';')?&
-			('description' '=' description=STRING ';')?
-		)
-	'}'
-;
-KPIModelLink:
-	'kpiModelLink' name=ID '{'
-		(
-			('name' '=' label = STRING ';')?&
-			('description' '=' description=STRING ';')?
-		)
-	'}'
-;
-IndicatorGroup :
-		'indicatorGroup' name=ID '{'
-		(
-			('name' '=' label = STRING ';')?&
-			('description' '=' description=STRING ';')?&
-			('isRedesignCategory' '=' isRedesignCategory=BOOLEAN ';')?&
-			('indicators''=' indicators+=[Indicator](',' indicators+=[Indicator] )* ';')?
-		)
-	'}'
-;
-//*******1*******************************************************************************
+ContributionContext: 
+	'contribution' name= ID ('extends' superContributionContexts+=[ContributionContext | QualifiedName](',' superContributionContexts+=[ContributionContext | QualifiedName])* )?
+	 '{'
+			(changes+=ContributionChange)*
 
+	'}'
+;
+ContributionChange:
+	/*
+	 *TODO I must give a default value for v, which is 0, to this attribute.
+	 * 		This can be done through the post processing mechanism in xText 
+	 */	
+	contribution = [ContributionEnd | QualifiedName] ':' ( newContribution= ContributionType | newQuantitativeContribution = INT)(';'| ('{' contribRange = ContributionRange '}') )
+;
+ContributionRange: 
+	('start' '=' start=INT ';')&
+	('end' '=' end=INT ';')&
+	/*
+	 *TODO I must give a default value, which is 1, to this attribute.
+	 * 		This can be done through the post processing mechanism in xText 
+	 */	
+	('step' '=' step=INT ';')?
+;
+Metadata:
+	'metadata' name = ID '=' value=STRING ';'	
+;
 
+Comment:
+	'comment' content=STRING ';'
+;
+LinkType:
+	'link' name = STRING ';'
+;
+
+Link :
+	src = [GRLElement | QualifiedName] type = [LinkType | QualifiedName] des += [GRLElement | QualifiedName] (',' des += [GRLElement | QualifiedName])* ';'
+;
+
+inLineLink:
+	type = [LinkType | QualifiedName] des += [GRLElement | QualifiedName] (',' des += [GRLElement | QualifiedName])* ';'
+;
+
+//IndicatorGroup :
+//		'indicatorGroup' name=ID '{'
+//		(
+//			('name' '=' label = STRING ';')?&
+//			('description' '=' description=STRING ';')?&
+//			('isRedesignCategory' '=' isRedesignCategory=BOOLEAN ';')?&
+//			('indicators''=' indicators+=[Indicator](',' indicators+=[Indicator] )* ';')?
+//		)
+//	'}'
+//;
 //
 //URNspec returns urnModel::URNspec: 
 //	'urnspec' name= ID '{'
@@ -426,21 +375,6 @@ IndicatorGroup :
 //
 //
 
-
-
-
-//Metadata returns urncoreModel::Metadata: 
-//	'metaData' name=ID '{'
-//		(
-//		('value' '=' value=STRING ';')?
-//		)
-//	'}'
-//;
-
-//enum IntentionalElementType:
-//	Softgoal = 'softGoal' | Goal = 'goal' | Task = 'Task' | 
-//	Ressource = 'resource'| Indicator = 'indicator'  
-//;
 enum ImportanceType: 
 	 none  | high  | medium | low
 ;
@@ -471,8 +405,8 @@ enum Priority:
 	None | High  | Medium  | Low 
 ;
 //Terminals
-terminal BOOLEAN:
-'false' | 'true'
+terminal BOOLEAN returns ecore::EBoolean:
+	'false' | 'true'
 ;
 
 QualifiedName:

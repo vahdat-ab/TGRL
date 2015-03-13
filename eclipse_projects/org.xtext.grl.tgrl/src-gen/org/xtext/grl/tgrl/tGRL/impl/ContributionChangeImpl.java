@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.grl.tgrl.tGRL.ContributionChange;
+import org.xtext.grl.tgrl.tGRL.ContributionEnd;
 import org.xtext.grl.tgrl.tGRL.ContributionRange;
 import org.xtext.grl.tgrl.tGRL.ContributionType;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
@@ -23,7 +24,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionChangeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionChangeImpl#getContribution <em>Contribution</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionChangeImpl#getNewContribution <em>New Contribution</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionChangeImpl#getNewQuantitativeContribution <em>New Quantitative Contribution</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionChangeImpl#getContribRange <em>Contrib Range</em>}</li>
@@ -35,24 +36,14 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 public class ContributionChangeImpl extends MinimalEObjectImpl.Container implements ContributionChange
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getContribution() <em>Contribution</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getContribution()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected ContributionEnd contribution;
 
   /**
    * The default value of the '{@link #getNewContribution() <em>New Contribution</em>}' attribute.
@@ -130,9 +121,19 @@ public class ContributionChangeImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public ContributionEnd getContribution()
   {
-    return name;
+    if (contribution != null && contribution.eIsProxy())
+    {
+      InternalEObject oldContribution = (InternalEObject)contribution;
+      contribution = (ContributionEnd)eResolveProxy(oldContribution);
+      if (contribution != oldContribution)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.CONTRIBUTION_CHANGE__CONTRIBUTION, oldContribution, contribution));
+      }
+    }
+    return contribution;
   }
 
   /**
@@ -140,12 +141,22 @@ public class ContributionChangeImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public ContributionEnd basicGetContribution()
   {
-    String oldName = name;
-    name = newName;
+    return contribution;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setContribution(ContributionEnd newContribution)
+  {
+    ContributionEnd oldContribution = contribution;
+    contribution = newContribution;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION_CHANGE__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION_CHANGE__CONTRIBUTION, oldContribution, contribution));
   }
 
   /**
@@ -268,8 +279,9 @@ public class ContributionChangeImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION_CHANGE__NAME:
-        return getName();
+      case TGRLPackage.CONTRIBUTION_CHANGE__CONTRIBUTION:
+        if (resolve) return getContribution();
+        return basicGetContribution();
       case TGRLPackage.CONTRIBUTION_CHANGE__NEW_CONTRIBUTION:
         return getNewContribution();
       case TGRLPackage.CONTRIBUTION_CHANGE__NEW_QUANTITATIVE_CONTRIBUTION:
@@ -290,8 +302,8 @@ public class ContributionChangeImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION_CHANGE__NAME:
-        setName((String)newValue);
+      case TGRLPackage.CONTRIBUTION_CHANGE__CONTRIBUTION:
+        setContribution((ContributionEnd)newValue);
         return;
       case TGRLPackage.CONTRIBUTION_CHANGE__NEW_CONTRIBUTION:
         setNewContribution((ContributionType)newValue);
@@ -316,8 +328,8 @@ public class ContributionChangeImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION_CHANGE__NAME:
-        setName(NAME_EDEFAULT);
+      case TGRLPackage.CONTRIBUTION_CHANGE__CONTRIBUTION:
+        setContribution((ContributionEnd)null);
         return;
       case TGRLPackage.CONTRIBUTION_CHANGE__NEW_CONTRIBUTION:
         setNewContribution(NEW_CONTRIBUTION_EDEFAULT);
@@ -342,8 +354,8 @@ public class ContributionChangeImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION_CHANGE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case TGRLPackage.CONTRIBUTION_CHANGE__CONTRIBUTION:
+        return contribution != null;
       case TGRLPackage.CONTRIBUTION_CHANGE__NEW_CONTRIBUTION:
         return newContribution != NEW_CONTRIBUTION_EDEFAULT;
       case TGRLPackage.CONTRIBUTION_CHANGE__NEW_QUANTITATIVE_CONTRIBUTION:
@@ -365,9 +377,7 @@ public class ContributionChangeImpl extends MinimalEObjectImpl.Container impleme
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", newContribution: ");
+    result.append(" (newContribution: ");
     result.append(newContribution);
     result.append(", newQuantitativeContribution: ");
     result.append(newQuantitativeContribution);

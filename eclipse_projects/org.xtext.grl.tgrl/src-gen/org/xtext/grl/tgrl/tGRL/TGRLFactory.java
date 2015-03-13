@@ -275,51 +275,6 @@ public interface TGRLFactory extends EFactory
   EvaluationRange createEvaluationRange();
 
   /**
-   * Returns a new object of class '<em>Impact Model</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Impact Model</em>'.
-   * @generated
-   */
-  ImpactModel createImpactModel();
-
-  /**
-   * Returns a new object of class '<em>Contribution Group</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Contribution Group</em>'.
-   * @generated
-   */
-  ContributionGroup createContributionGroup();
-
-  /**
-   * Returns a new object of class '<em>Contribution Context</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Contribution Context</em>'.
-   * @generated
-   */
-  ContributionContext createContributionContext();
-
-  /**
-   * Returns a new object of class '<em>Contribution Change</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Contribution Change</em>'.
-   * @generated
-   */
-  ContributionChange createContributionChange();
-
-  /**
-   * Returns a new object of class '<em>Contribution Range</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Contribution Range</em>'.
-   * @generated
-   */
-  ContributionRange createContributionRange();
-
-  /**
    * Returns a new object of class '<em>KPI Eval Value Set</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -365,58 +320,85 @@ public interface TGRLFactory extends EFactory
   Mapping createMapping();
 
   /**
-   * Returns a new object of class '<em>KPI New Eval Value</em>'.
+   * Returns a new object of class '<em>Contribution Group</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>KPI New Eval Value</em>'.
+   * @return a new object of class '<em>Contribution Group</em>'.
    * @generated
    */
-  KPINewEvalValue createKPINewEvalValue();
+  ContributionGroup createContributionGroup();
 
   /**
-   * Returns a new object of class '<em>KPI Information Config</em>'.
+   * Returns a new object of class '<em>Contribution Context</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>KPI Information Config</em>'.
+   * @return a new object of class '<em>Contribution Context</em>'.
    * @generated
    */
-  KPIInformationConfig createKPIInformationConfig();
+  ContributionContext createContributionContext();
 
   /**
-   * Returns a new object of class '<em>KPI Information Element</em>'.
+   * Returns a new object of class '<em>Contribution Change</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>KPI Information Element</em>'.
+   * @return a new object of class '<em>Contribution Change</em>'.
    * @generated
    */
-  KPIInformationElement createKPIInformationElement();
+  ContributionChange createContributionChange();
 
   /**
-   * Returns a new object of class '<em>KPI Information Element Ref</em>'.
+   * Returns a new object of class '<em>Contribution Range</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>KPI Information Element Ref</em>'.
+   * @return a new object of class '<em>Contribution Range</em>'.
    * @generated
    */
-  KPIInformationElementRef createKPIInformationElementRef();
+  ContributionRange createContributionRange();
 
   /**
-   * Returns a new object of class '<em>KPI Model Link</em>'.
+   * Returns a new object of class '<em>Metadata</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>KPI Model Link</em>'.
+   * @return a new object of class '<em>Metadata</em>'.
    * @generated
    */
-  KPIModelLink createKPIModelLink();
+  Metadata createMetadata();
 
   /**
-   * Returns a new object of class '<em>Indicator Group</em>'.
+   * Returns a new object of class '<em>Comment</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Indicator Group</em>'.
+   * @return a new object of class '<em>Comment</em>'.
    * @generated
    */
-  IndicatorGroup createIndicatorGroup();
+  Comment createComment();
+
+  /**
+   * Returns a new object of class '<em>Link Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Link Type</em>'.
+   * @generated
+   */
+  LinkType createLinkType();
+
+  /**
+   * Returns a new object of class '<em>Link</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Link</em>'.
+   * @generated
+   */
+  Link createLink();
+
+  /**
+   * Returns a new object of class '<em>in Line Link</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>in Line Link</em>'.
+   * @generated
+   */
+  inLineLink createinLineLink();
 
   /**
    * Returns the package supported by this factory.

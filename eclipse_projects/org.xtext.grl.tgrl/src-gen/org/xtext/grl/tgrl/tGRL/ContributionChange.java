@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionChange#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionChange#getContribution <em>Contribution</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionChange#getNewContribution <em>New Contribution</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionChange#getNewQuantitativeContribution <em>New Quantitative Contribution</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionChange#getContribRange <em>Contrib Range</em>}</li>
@@ -26,30 +26,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface ContributionChange extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Contribution</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Contribution</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionChange_Name()
+   * @return the value of the '<em>Contribution</em>' reference.
+   * @see #setContribution(ContributionEnd)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionChange_Contribution()
    * @model
    * @generated
    */
-  String getName();
+  ContributionEnd getContribution();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ContributionChange#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ContributionChange#getContribution <em>Contribution</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
+   * @param value the new value of the '<em>Contribution</em>' reference.
+   * @see #getContribution()
    * @generated
    */
-  void setName(String value);
+  void setContribution(ContributionEnd value);
 
   /**
    * Returns the value of the '<em><b>New Contribution</b></em>' attribute.

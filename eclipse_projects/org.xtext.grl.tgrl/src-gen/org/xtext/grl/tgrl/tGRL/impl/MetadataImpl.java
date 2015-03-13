@@ -7,26 +7,25 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.grl.tgrl.tGRL.KPINewEvalValue;
+import org.xtext.grl.tgrl.tGRL.Metadata;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>KPI New Eval Value</b></em>'.
+ * An implementation of the model object '<em><b>Metadata</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.KPINewEvalValueImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.KPINewEvalValueImpl#getEvaluationValue <em>Evaluation Value</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.MetadataImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.MetadataImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class KPINewEvalValueImpl extends MinimalEObjectImpl.Container implements KPINewEvalValue
+public class MetadataImpl extends GRLElementImpl implements Metadata
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -49,31 +48,31 @@ public class KPINewEvalValueImpl extends MinimalEObjectImpl.Container implements
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getEvaluationValue() <em>Evaluation Value</em>}' attribute.
+   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getEvaluationValue()
+   * @see #getValue()
    * @generated
    * @ordered
    */
-  protected static final double EVALUATION_VALUE_EDEFAULT = 0.0;
+  protected static final String VALUE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getEvaluationValue() <em>Evaluation Value</em>}' attribute.
+   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getEvaluationValue()
+   * @see #getValue()
    * @generated
    * @ordered
    */
-  protected double evaluationValue = EVALUATION_VALUE_EDEFAULT;
+  protected String value = VALUE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected KPINewEvalValueImpl()
+  protected MetadataImpl()
   {
     super();
   }
@@ -86,7 +85,7 @@ public class KPINewEvalValueImpl extends MinimalEObjectImpl.Container implements
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.KPI_NEW_EVAL_VALUE;
+    return TGRLPackage.Literals.METADATA;
   }
 
   /**
@@ -109,7 +108,7 @@ public class KPINewEvalValueImpl extends MinimalEObjectImpl.Container implements
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.KPI_NEW_EVAL_VALUE__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.METADATA__NAME, oldName, name));
   }
 
   /**
@@ -117,9 +116,9 @@ public class KPINewEvalValueImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public double getEvaluationValue()
+  public String getValue()
   {
-    return evaluationValue;
+    return value;
   }
 
   /**
@@ -127,12 +126,12 @@ public class KPINewEvalValueImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEvaluationValue(double newEvaluationValue)
+  public void setValue(String newValue)
   {
-    double oldEvaluationValue = evaluationValue;
-    evaluationValue = newEvaluationValue;
+    String oldValue = value;
+    value = newValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.KPI_NEW_EVAL_VALUE__EVALUATION_VALUE, oldEvaluationValue, evaluationValue));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.METADATA__VALUE, oldValue, value));
   }
 
   /**
@@ -145,10 +144,10 @@ public class KPINewEvalValueImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case TGRLPackage.KPI_NEW_EVAL_VALUE__NAME:
+      case TGRLPackage.METADATA__NAME:
         return getName();
-      case TGRLPackage.KPI_NEW_EVAL_VALUE__EVALUATION_VALUE:
-        return getEvaluationValue();
+      case TGRLPackage.METADATA__VALUE:
+        return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -163,11 +162,11 @@ public class KPINewEvalValueImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case TGRLPackage.KPI_NEW_EVAL_VALUE__NAME:
+      case TGRLPackage.METADATA__NAME:
         setName((String)newValue);
         return;
-      case TGRLPackage.KPI_NEW_EVAL_VALUE__EVALUATION_VALUE:
-        setEvaluationValue((Double)newValue);
+      case TGRLPackage.METADATA__VALUE:
+        setValue((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -183,11 +182,11 @@ public class KPINewEvalValueImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case TGRLPackage.KPI_NEW_EVAL_VALUE__NAME:
+      case TGRLPackage.METADATA__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case TGRLPackage.KPI_NEW_EVAL_VALUE__EVALUATION_VALUE:
-        setEvaluationValue(EVALUATION_VALUE_EDEFAULT);
+      case TGRLPackage.METADATA__VALUE:
+        setValue(VALUE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -203,10 +202,10 @@ public class KPINewEvalValueImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case TGRLPackage.KPI_NEW_EVAL_VALUE__NAME:
+      case TGRLPackage.METADATA__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TGRLPackage.KPI_NEW_EVAL_VALUE__EVALUATION_VALUE:
-        return evaluationValue != EVALUATION_VALUE_EDEFAULT;
+      case TGRLPackage.METADATA__VALUE:
+        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
     }
     return super.eIsSet(featureID);
   }
@@ -224,10 +223,10 @@ public class KPINewEvalValueImpl extends MinimalEObjectImpl.Container implements
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", evaluationValue: ");
-    result.append(evaluationValue);
+    result.append(", value: ");
+    result.append(value);
     result.append(')');
     return result.toString();
   }
 
-} //KPINewEvalValueImpl
+} //MetadataImpl

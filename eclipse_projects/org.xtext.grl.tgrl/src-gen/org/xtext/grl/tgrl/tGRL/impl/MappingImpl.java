@@ -22,7 +22,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.MappingImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.MappingImpl#getValuation <em>Valuation</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.MappingImpl#getQualitativeEvaluation <em>Qualitative Evaluation</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.MappingImpl#getExceeds <em>Exceeds</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.MappingImpl#isExceeds <em>Exceeds</em>}</li>
  * </ul>
  * </p>
  *
@@ -91,24 +91,24 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
   protected QualitativeLabel qualitativeEvaluation = QUALITATIVE_EVALUATION_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getExceeds() <em>Exceeds</em>}' attribute.
+   * The default value of the '{@link #isExceeds() <em>Exceeds</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getExceeds()
+   * @see #isExceeds()
    * @generated
    * @ordered
    */
-  protected static final String EXCEEDS_EDEFAULT = null;
+  protected static final boolean EXCEEDS_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #getExceeds() <em>Exceeds</em>}' attribute.
+   * The cached value of the '{@link #isExceeds() <em>Exceeds</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getExceeds()
+   * @see #isExceeds()
    * @generated
    * @ordered
    */
-  protected String exceeds = EXCEEDS_EDEFAULT;
+  protected boolean exceeds = EXCEEDS_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -205,7 +205,7 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getExceeds()
+  public boolean isExceeds()
   {
     return exceeds;
   }
@@ -215,9 +215,9 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setExceeds(String newExceeds)
+  public void setExceeds(boolean newExceeds)
   {
-    String oldExceeds = exceeds;
+    boolean oldExceeds = exceeds;
     exceeds = newExceeds;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.MAPPING__EXCEEDS, oldExceeds, exceeds));
@@ -240,7 +240,7 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
       case TGRLPackage.MAPPING__QUALITATIVE_EVALUATION:
         return getQualitativeEvaluation();
       case TGRLPackage.MAPPING__EXCEEDS:
-        return getExceeds();
+        return isExceeds();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -265,7 +265,7 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
         setQualitativeEvaluation((QualitativeLabel)newValue);
         return;
       case TGRLPackage.MAPPING__EXCEEDS:
-        setExceeds((String)newValue);
+        setExceeds((Boolean)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -314,7 +314,7 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
       case TGRLPackage.MAPPING__QUALITATIVE_EVALUATION:
         return qualitativeEvaluation != QUALITATIVE_EVALUATION_EDEFAULT;
       case TGRLPackage.MAPPING__EXCEEDS:
-        return EXCEEDS_EDEFAULT == null ? exceeds != null : !EXCEEDS_EDEFAULT.equals(exceeds);
+        return exceeds != EXCEEDS_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }

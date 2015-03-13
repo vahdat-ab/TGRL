@@ -93,22 +93,20 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
       case TGRLPackage.EVALUATION_STRATEGY: return createEvaluationStrategy();
       case TGRLPackage.EVALUATION: return createEvaluation();
       case TGRLPackage.EVALUATION_RANGE: return createEvaluationRange();
-      case TGRLPackage.IMPACT_MODEL: return createImpactModel();
-      case TGRLPackage.CONTRIBUTION_GROUP: return createContributionGroup();
-      case TGRLPackage.CONTRIBUTION_CONTEXT: return createContributionContext();
-      case TGRLPackage.CONTRIBUTION_CHANGE: return createContributionChange();
-      case TGRLPackage.CONTRIBUTION_RANGE: return createContributionRange();
       case TGRLPackage.KPI_EVAL_VALUE_SET: return createKPIEvalValueSet();
       case TGRLPackage.KPI_QUANTITATIVE_EVAL_VALUE_SET: return createKPIQuantitativeEvalValueSet();
       case TGRLPackage.KPI_QUALITATIVE_EVAL_VALUE_SET: return createKPIQualitativeEvalValueSet();
       case TGRLPackage.QUALITATIVE_MAPPING: return createQualitativeMapping();
       case TGRLPackage.MAPPING: return createMapping();
-      case TGRLPackage.KPI_NEW_EVAL_VALUE: return createKPINewEvalValue();
-      case TGRLPackage.KPI_INFORMATION_CONFIG: return createKPIInformationConfig();
-      case TGRLPackage.KPI_INFORMATION_ELEMENT: return createKPIInformationElement();
-      case TGRLPackage.KPI_INFORMATION_ELEMENT_REF: return createKPIInformationElementRef();
-      case TGRLPackage.KPI_MODEL_LINK: return createKPIModelLink();
-      case TGRLPackage.INDICATOR_GROUP: return createIndicatorGroup();
+      case TGRLPackage.CONTRIBUTION_GROUP: return createContributionGroup();
+      case TGRLPackage.CONTRIBUTION_CONTEXT: return createContributionContext();
+      case TGRLPackage.CONTRIBUTION_CHANGE: return createContributionChange();
+      case TGRLPackage.CONTRIBUTION_RANGE: return createContributionRange();
+      case TGRLPackage.METADATA: return createMetadata();
+      case TGRLPackage.COMMENT: return createComment();
+      case TGRLPackage.LINK_TYPE: return createLinkType();
+      case TGRLPackage.LINK: return createLink();
+      case TGRLPackage.IN_LINE_LINK: return createinLineLink();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -485,61 +483,6 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ImpactModel createImpactModel()
-  {
-    ImpactModelImpl impactModel = new ImpactModelImpl();
-    return impactModel;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ContributionGroup createContributionGroup()
-  {
-    ContributionGroupImpl contributionGroup = new ContributionGroupImpl();
-    return contributionGroup;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ContributionContext createContributionContext()
-  {
-    ContributionContextImpl contributionContext = new ContributionContextImpl();
-    return contributionContext;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ContributionChange createContributionChange()
-  {
-    ContributionChangeImpl contributionChange = new ContributionChangeImpl();
-    return contributionChange;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ContributionRange createContributionRange()
-  {
-    ContributionRangeImpl contributionRange = new ContributionRangeImpl();
-    return contributionRange;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public KPIEvalValueSet createKPIEvalValueSet()
   {
     KPIEvalValueSetImpl kpiEvalValueSet = new KPIEvalValueSetImpl();
@@ -595,10 +538,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public KPINewEvalValue createKPINewEvalValue()
+  public ContributionGroup createContributionGroup()
   {
-    KPINewEvalValueImpl kpiNewEvalValue = new KPINewEvalValueImpl();
-    return kpiNewEvalValue;
+    ContributionGroupImpl contributionGroup = new ContributionGroupImpl();
+    return contributionGroup;
   }
 
   /**
@@ -606,10 +549,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public KPIInformationConfig createKPIInformationConfig()
+  public ContributionContext createContributionContext()
   {
-    KPIInformationConfigImpl kpiInformationConfig = new KPIInformationConfigImpl();
-    return kpiInformationConfig;
+    ContributionContextImpl contributionContext = new ContributionContextImpl();
+    return contributionContext;
   }
 
   /**
@@ -617,10 +560,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public KPIInformationElement createKPIInformationElement()
+  public ContributionChange createContributionChange()
   {
-    KPIInformationElementImpl kpiInformationElement = new KPIInformationElementImpl();
-    return kpiInformationElement;
+    ContributionChangeImpl contributionChange = new ContributionChangeImpl();
+    return contributionChange;
   }
 
   /**
@@ -628,10 +571,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public KPIInformationElementRef createKPIInformationElementRef()
+  public ContributionRange createContributionRange()
   {
-    KPIInformationElementRefImpl kpiInformationElementRef = new KPIInformationElementRefImpl();
-    return kpiInformationElementRef;
+    ContributionRangeImpl contributionRange = new ContributionRangeImpl();
+    return contributionRange;
   }
 
   /**
@@ -639,10 +582,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public KPIModelLink createKPIModelLink()
+  public Metadata createMetadata()
   {
-    KPIModelLinkImpl kpiModelLink = new KPIModelLinkImpl();
-    return kpiModelLink;
+    MetadataImpl metadata = new MetadataImpl();
+    return metadata;
   }
 
   /**
@@ -650,10 +593,43 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public IndicatorGroup createIndicatorGroup()
+  public Comment createComment()
   {
-    IndicatorGroupImpl indicatorGroup = new IndicatorGroupImpl();
-    return indicatorGroup;
+    CommentImpl comment = new CommentImpl();
+    return comment;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LinkType createLinkType()
+  {
+    LinkTypeImpl linkType = new LinkTypeImpl();
+    return linkType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Link createLink()
+  {
+    LinkImpl link = new LinkImpl();
+    return link;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public inLineLink createinLineLink()
+  {
+    inLineLinkImpl inLineLink = new inLineLinkImpl();
+    return inLineLink;
   }
 
   /**

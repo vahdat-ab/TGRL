@@ -7,52 +7,51 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.grl.tgrl.tGRL.ImpactModel;
+import org.xtext.grl.tgrl.tGRL.Comment;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Impact Model</b></em>'.
+ * An implementation of the model object '<em><b>Comment</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ImpactModelImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.CommentImpl#getContent <em>Content</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ImpactModelImpl extends MinimalEObjectImpl.Container implements ImpactModel
+public class CommentImpl extends GRLElementImpl implements Comment
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getContent() <em>Content</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getContent()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final String CONTENT_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getContent() <em>Content</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getContent()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected String content = CONTENT_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ImpactModelImpl()
+  protected CommentImpl()
   {
     super();
   }
@@ -65,7 +64,7 @@ public class ImpactModelImpl extends MinimalEObjectImpl.Container implements Imp
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.IMPACT_MODEL;
+    return TGRLPackage.Literals.COMMENT;
   }
 
   /**
@@ -73,9 +72,9 @@ public class ImpactModelImpl extends MinimalEObjectImpl.Container implements Imp
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public String getContent()
   {
-    return name;
+    return content;
   }
 
   /**
@@ -83,12 +82,12 @@ public class ImpactModelImpl extends MinimalEObjectImpl.Container implements Imp
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setContent(String newContent)
   {
-    String oldName = name;
-    name = newName;
+    String oldContent = content;
+    content = newContent;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.IMPACT_MODEL__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.COMMENT__CONTENT, oldContent, content));
   }
 
   /**
@@ -101,8 +100,8 @@ public class ImpactModelImpl extends MinimalEObjectImpl.Container implements Imp
   {
     switch (featureID)
     {
-      case TGRLPackage.IMPACT_MODEL__NAME:
-        return getName();
+      case TGRLPackage.COMMENT__CONTENT:
+        return getContent();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +116,8 @@ public class ImpactModelImpl extends MinimalEObjectImpl.Container implements Imp
   {
     switch (featureID)
     {
-      case TGRLPackage.IMPACT_MODEL__NAME:
-        setName((String)newValue);
+      case TGRLPackage.COMMENT__CONTENT:
+        setContent((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +133,8 @@ public class ImpactModelImpl extends MinimalEObjectImpl.Container implements Imp
   {
     switch (featureID)
     {
-      case TGRLPackage.IMPACT_MODEL__NAME:
-        setName(NAME_EDEFAULT);
+      case TGRLPackage.COMMENT__CONTENT:
+        setContent(CONTENT_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -151,8 +150,8 @@ public class ImpactModelImpl extends MinimalEObjectImpl.Container implements Imp
   {
     switch (featureID)
     {
-      case TGRLPackage.IMPACT_MODEL__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case TGRLPackage.COMMENT__CONTENT:
+        return CONTENT_EDEFAULT == null ? content != null : !CONTENT_EDEFAULT.equals(content);
     }
     return super.eIsSet(featureID);
   }
@@ -168,10 +167,10 @@ public class ImpactModelImpl extends MinimalEObjectImpl.Container implements Imp
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
+    result.append(" (content: ");
+    result.append(content);
     result.append(')');
     return result.toString();
   }
 
-} //ImpactModelImpl
+} //CommentImpl

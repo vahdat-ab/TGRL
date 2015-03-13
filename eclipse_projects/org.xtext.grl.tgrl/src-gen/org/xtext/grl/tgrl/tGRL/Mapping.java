@@ -14,7 +14,7 @@ package org.xtext.grl.tgrl.tGRL;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Mapping#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Mapping#getValuation <em>Valuation</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Mapping#getQualitativeEvaluation <em>Qualitative Evaluation</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.Mapping#getExceeds <em>Exceeds</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Mapping#isExceeds <em>Exceeds</em>}</li>
  * </ul>
  * </p>
  *
@@ -114,21 +114,21 @@ public interface Mapping extends GRLBaseElement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Exceeds</em>' attribute.
-   * @see #setExceeds(String)
+   * @see #setExceeds(boolean)
    * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getMapping_Exceeds()
    * @model
    * @generated
    */
-  String getExceeds();
+  boolean isExceeds();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Mapping#getExceeds <em>Exceeds</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Mapping#isExceeds <em>Exceeds</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Exceeds</em>' attribute.
-   * @see #getExceeds()
+   * @see #isExceeds()
    * @generated
    */
-  void setExceeds(String value);
+  void setExceeds(boolean value);
 
 } // Mapping

@@ -215,31 +215,6 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
         return createEvaluationRangeAdapter();
       }
       @Override
-      public Adapter caseImpactModel(ImpactModel object)
-      {
-        return createImpactModelAdapter();
-      }
-      @Override
-      public Adapter caseContributionGroup(ContributionGroup object)
-      {
-        return createContributionGroupAdapter();
-      }
-      @Override
-      public Adapter caseContributionContext(ContributionContext object)
-      {
-        return createContributionContextAdapter();
-      }
-      @Override
-      public Adapter caseContributionChange(ContributionChange object)
-      {
-        return createContributionChangeAdapter();
-      }
-      @Override
-      public Adapter caseContributionRange(ContributionRange object)
-      {
-        return createContributionRangeAdapter();
-      }
-      @Override
       public Adapter caseKPIEvalValueSet(KPIEvalValueSet object)
       {
         return createKPIEvalValueSetAdapter();
@@ -265,34 +240,49 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
         return createMappingAdapter();
       }
       @Override
-      public Adapter caseKPINewEvalValue(KPINewEvalValue object)
+      public Adapter caseContributionGroup(ContributionGroup object)
       {
-        return createKPINewEvalValueAdapter();
+        return createContributionGroupAdapter();
       }
       @Override
-      public Adapter caseKPIInformationConfig(KPIInformationConfig object)
+      public Adapter caseContributionContext(ContributionContext object)
       {
-        return createKPIInformationConfigAdapter();
+        return createContributionContextAdapter();
       }
       @Override
-      public Adapter caseKPIInformationElement(KPIInformationElement object)
+      public Adapter caseContributionChange(ContributionChange object)
       {
-        return createKPIInformationElementAdapter();
+        return createContributionChangeAdapter();
       }
       @Override
-      public Adapter caseKPIInformationElementRef(KPIInformationElementRef object)
+      public Adapter caseContributionRange(ContributionRange object)
       {
-        return createKPIInformationElementRefAdapter();
+        return createContributionRangeAdapter();
       }
       @Override
-      public Adapter caseKPIModelLink(KPIModelLink object)
+      public Adapter caseMetadata(Metadata object)
       {
-        return createKPIModelLinkAdapter();
+        return createMetadataAdapter();
       }
       @Override
-      public Adapter caseIndicatorGroup(IndicatorGroup object)
+      public Adapter caseComment(Comment object)
       {
-        return createIndicatorGroupAdapter();
+        return createCommentAdapter();
+      }
+      @Override
+      public Adapter caseLinkType(LinkType object)
+      {
+        return createLinkTypeAdapter();
+      }
+      @Override
+      public Adapter caseLink(Link object)
+      {
+        return createLinkAdapter();
+      }
+      @Override
+      public Adapter caseinLineLink(inLineLink object)
+      {
+        return createinLineLinkAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -737,81 +727,6 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.ImpactModel <em>Impact Model</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.ImpactModel
-   * @generated
-   */
-  public Adapter createImpactModelAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.ContributionGroup <em>Contribution Group</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.ContributionGroup
-   * @generated
-   */
-  public Adapter createContributionGroupAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.ContributionContext <em>Contribution Context</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.ContributionContext
-   * @generated
-   */
-  public Adapter createContributionContextAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.ContributionChange <em>Contribution Change</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.ContributionChange
-   * @generated
-   */
-  public Adapter createContributionChangeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.ContributionRange <em>Contribution Range</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.ContributionRange
-   * @generated
-   */
-  public Adapter createContributionRangeAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.KPIEvalValueSet <em>KPI Eval Value Set</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -887,91 +802,136 @@ public class TGRLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.KPINewEvalValue <em>KPI New Eval Value</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.ContributionGroup <em>Contribution Group</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.KPINewEvalValue
+   * @see org.xtext.grl.tgrl.tGRL.ContributionGroup
    * @generated
    */
-  public Adapter createKPINewEvalValueAdapter()
+  public Adapter createContributionGroupAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.KPIInformationConfig <em>KPI Information Config</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.ContributionContext <em>Contribution Context</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.KPIInformationConfig
+   * @see org.xtext.grl.tgrl.tGRL.ContributionContext
    * @generated
    */
-  public Adapter createKPIInformationConfigAdapter()
+  public Adapter createContributionContextAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.KPIInformationElement <em>KPI Information Element</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.ContributionChange <em>Contribution Change</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.KPIInformationElement
+   * @see org.xtext.grl.tgrl.tGRL.ContributionChange
    * @generated
    */
-  public Adapter createKPIInformationElementAdapter()
+  public Adapter createContributionChangeAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.KPIInformationElementRef <em>KPI Information Element Ref</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.ContributionRange <em>Contribution Range</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.KPIInformationElementRef
+   * @see org.xtext.grl.tgrl.tGRL.ContributionRange
    * @generated
    */
-  public Adapter createKPIInformationElementRefAdapter()
+  public Adapter createContributionRangeAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.KPIModelLink <em>KPI Model Link</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.Metadata <em>Metadata</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.KPIModelLink
+   * @see org.xtext.grl.tgrl.tGRL.Metadata
    * @generated
    */
-  public Adapter createKPIModelLinkAdapter()
+  public Adapter createMetadataAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.IndicatorGroup <em>Indicator Group</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.Comment <em>Comment</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.grl.tgrl.tGRL.IndicatorGroup
+   * @see org.xtext.grl.tgrl.tGRL.Comment
    * @generated
    */
-  public Adapter createIndicatorGroupAdapter()
+  public Adapter createCommentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.LinkType <em>Link Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.grl.tgrl.tGRL.LinkType
+   * @generated
+   */
+  public Adapter createLinkTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.Link <em>Link</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.grl.tgrl.tGRL.Link
+   * @generated
+   */
+  public Adapter createLinkAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.grl.tgrl.tGRL.inLineLink <em>in Line Link</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.grl.tgrl.tGRL.inLineLink
+   * @generated
+   */
+  public Adapter createinLineLinkAdapter()
   {
     return null;
   }

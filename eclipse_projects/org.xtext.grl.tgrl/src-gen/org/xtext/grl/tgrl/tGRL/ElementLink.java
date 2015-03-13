@@ -30,12 +30,12 @@ public interface ElementLink extends GRLElement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Src</em>' reference.
-   * @see #setSrc(IntentionalElement)
+   * @see #setSrc(GRLElement)
    * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getElementLink_Src()
    * @model
    * @generated
    */
-  IntentionalElement getSrc();
+  GRLElement getSrc();
 
   /**
    * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ElementLink#getSrc <em>Src</em>}' reference.
@@ -45,6 +45,6 @@ public interface ElementLink extends GRLElement
    * @see #getSrc()
    * @generated
    */
-  void setSrc(IntentionalElement value);
+  void setSrc(GRLElement value);
 
 } // ElementLink

@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.grl.tgrl.tGRL.Color;
@@ -23,8 +22,6 @@ import org.xtext.grl.tgrl.tGRL.DecompositionType;
 import org.xtext.grl.tgrl.tGRL.ImportanceType;
 import org.xtext.grl.tgrl.tGRL.InLineElementLink;
 import org.xtext.grl.tgrl.tGRL.Indicator;
-import org.xtext.grl.tgrl.tGRL.IndicatorGroup;
-import org.xtext.grl.tgrl.tGRL.KPIModelLink;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
@@ -38,8 +35,6 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorImpl#getDecompositionType <em>Decomposition Type</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorImpl#getImportance <em>Importance</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorImpl#getImportanceQuantitative <em>Importance Quantitative</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorImpl#getKpiModelLinksDest <em>Kpi Model Links Dest</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorImpl#getGroups <em>Groups</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorImpl#getElementLinks <em>Element Links</em>}</li>
  * </ul>
  * </p>
@@ -127,26 +122,6 @@ public class IndicatorImpl extends IntentionalElementImpl implements Indicator
    * @ordered
    */
   protected int importanceQuantitative = IMPORTANCE_QUANTITATIVE_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getKpiModelLinksDest() <em>Kpi Model Links Dest</em>}' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getKpiModelLinksDest()
-   * @generated
-   * @ordered
-   */
-  protected EList<KPIModelLink> kpiModelLinksDest;
-
-  /**
-   * The cached value of the '{@link #getGroups() <em>Groups</em>}' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getGroups()
-   * @generated
-   * @ordered
-   */
-  protected EList<IndicatorGroup> groups;
 
   /**
    * The cached value of the '{@link #getElementLinks() <em>Element Links</em>}' containment reference list.
@@ -276,34 +251,6 @@ public class IndicatorImpl extends IntentionalElementImpl implements Indicator
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<KPIModelLink> getKpiModelLinksDest()
-  {
-    if (kpiModelLinksDest == null)
-    {
-      kpiModelLinksDest = new EObjectResolvingEList<KPIModelLink>(KPIModelLink.class, this, TGRLPackage.INDICATOR__KPI_MODEL_LINKS_DEST);
-    }
-    return kpiModelLinksDest;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<IndicatorGroup> getGroups()
-  {
-    if (groups == null)
-    {
-      groups = new EObjectResolvingEList<IndicatorGroup>(IndicatorGroup.class, this, TGRLPackage.INDICATOR__GROUPS);
-    }
-    return groups;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<InLineElementLink> getElementLinks()
   {
     if (elementLinks == null)
@@ -347,10 +294,6 @@ public class IndicatorImpl extends IntentionalElementImpl implements Indicator
         return getImportance();
       case TGRLPackage.INDICATOR__IMPORTANCE_QUANTITATIVE:
         return getImportanceQuantitative();
-      case TGRLPackage.INDICATOR__KPI_MODEL_LINKS_DEST:
-        return getKpiModelLinksDest();
-      case TGRLPackage.INDICATOR__GROUPS:
-        return getGroups();
       case TGRLPackage.INDICATOR__ELEMENT_LINKS:
         return getElementLinks();
     }
@@ -379,14 +322,6 @@ public class IndicatorImpl extends IntentionalElementImpl implements Indicator
         return;
       case TGRLPackage.INDICATOR__IMPORTANCE_QUANTITATIVE:
         setImportanceQuantitative((Integer)newValue);
-        return;
-      case TGRLPackage.INDICATOR__KPI_MODEL_LINKS_DEST:
-        getKpiModelLinksDest().clear();
-        getKpiModelLinksDest().addAll((Collection<? extends KPIModelLink>)newValue);
-        return;
-      case TGRLPackage.INDICATOR__GROUPS:
-        getGroups().clear();
-        getGroups().addAll((Collection<? extends IndicatorGroup>)newValue);
         return;
       case TGRLPackage.INDICATOR__ELEMENT_LINKS:
         getElementLinks().clear();
@@ -418,12 +353,6 @@ public class IndicatorImpl extends IntentionalElementImpl implements Indicator
       case TGRLPackage.INDICATOR__IMPORTANCE_QUANTITATIVE:
         setImportanceQuantitative(IMPORTANCE_QUANTITATIVE_EDEFAULT);
         return;
-      case TGRLPackage.INDICATOR__KPI_MODEL_LINKS_DEST:
-        getKpiModelLinksDest().clear();
-        return;
-      case TGRLPackage.INDICATOR__GROUPS:
-        getGroups().clear();
-        return;
       case TGRLPackage.INDICATOR__ELEMENT_LINKS:
         getElementLinks().clear();
         return;
@@ -449,10 +378,6 @@ public class IndicatorImpl extends IntentionalElementImpl implements Indicator
         return importance != IMPORTANCE_EDEFAULT;
       case TGRLPackage.INDICATOR__IMPORTANCE_QUANTITATIVE:
         return importanceQuantitative != IMPORTANCE_QUANTITATIVE_EDEFAULT;
-      case TGRLPackage.INDICATOR__KPI_MODEL_LINKS_DEST:
-        return kpiModelLinksDest != null && !kpiModelLinksDest.isEmpty();
-      case TGRLPackage.INDICATOR__GROUPS:
-        return groups != null && !groups.isEmpty();
       case TGRLPackage.INDICATOR__ELEMENT_LINKS:
         return elementLinks != null && !elementLinks.isEmpty();
     }

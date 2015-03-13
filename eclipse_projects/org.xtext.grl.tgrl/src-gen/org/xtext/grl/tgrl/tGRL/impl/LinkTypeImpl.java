@@ -5,45 +5,53 @@ package org.xtext.grl.tgrl.tGRL.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.xtext.grl.tgrl.tGRL.ElementLink;
-import org.xtext.grl.tgrl.tGRL.GRLElement;
+import org.xtext.grl.tgrl.tGRL.LinkType;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Element Link</b></em>'.
+ * An implementation of the model object '<em><b>Link Type</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ElementLinkImpl#getSrc <em>Src</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.LinkTypeImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ElementLinkImpl extends GRLElementImpl implements ElementLink
+public class LinkTypeImpl extends GRLElementImpl implements LinkType
 {
   /**
-   * The cached value of the '{@link #getSrc() <em>Src</em>}' reference.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSrc()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected GRLElement src;
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ElementLinkImpl()
+  protected LinkTypeImpl()
   {
     super();
   }
@@ -56,7 +64,7 @@ public class ElementLinkImpl extends GRLElementImpl implements ElementLink
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.ELEMENT_LINK;
+    return TGRLPackage.Literals.LINK_TYPE;
   }
 
   /**
@@ -64,19 +72,9 @@ public class ElementLinkImpl extends GRLElementImpl implements ElementLink
    * <!-- end-user-doc -->
    * @generated
    */
-  public GRLElement getSrc()
+  public String getName()
   {
-    if (src != null && src.eIsProxy())
-    {
-      InternalEObject oldSrc = (InternalEObject)src;
-      src = (GRLElement)eResolveProxy(oldSrc);
-      if (src != oldSrc)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.ELEMENT_LINK__SRC, oldSrc, src));
-      }
-    }
-    return src;
+    return name;
   }
 
   /**
@@ -84,22 +82,12 @@ public class ElementLinkImpl extends GRLElementImpl implements ElementLink
    * <!-- end-user-doc -->
    * @generated
    */
-  public GRLElement basicGetSrc()
+  public void setName(String newName)
   {
-    return src;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSrc(GRLElement newSrc)
-  {
-    GRLElement oldSrc = src;
-    src = newSrc;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.ELEMENT_LINK__SRC, oldSrc, src));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.LINK_TYPE__NAME, oldName, name));
   }
 
   /**
@@ -112,9 +100,8 @@ public class ElementLinkImpl extends GRLElementImpl implements ElementLink
   {
     switch (featureID)
     {
-      case TGRLPackage.ELEMENT_LINK__SRC:
-        if (resolve) return getSrc();
-        return basicGetSrc();
+      case TGRLPackage.LINK_TYPE__NAME:
+        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -129,8 +116,8 @@ public class ElementLinkImpl extends GRLElementImpl implements ElementLink
   {
     switch (featureID)
     {
-      case TGRLPackage.ELEMENT_LINK__SRC:
-        setSrc((GRLElement)newValue);
+      case TGRLPackage.LINK_TYPE__NAME:
+        setName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -146,8 +133,8 @@ public class ElementLinkImpl extends GRLElementImpl implements ElementLink
   {
     switch (featureID)
     {
-      case TGRLPackage.ELEMENT_LINK__SRC:
-        setSrc((GRLElement)null);
+      case TGRLPackage.LINK_TYPE__NAME:
+        setName(NAME_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -163,10 +150,27 @@ public class ElementLinkImpl extends GRLElementImpl implements ElementLink
   {
     switch (featureID)
     {
-      case TGRLPackage.ELEMENT_LINK__SRC:
-        return src != null;
+      case TGRLPackage.LINK_TYPE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
 
-} //ElementLinkImpl
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
+  }
+
+} //LinkTypeImpl
