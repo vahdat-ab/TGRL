@@ -250,5 +250,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//inLineLink/type"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//inLineLink/des"/>
     </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//IndicatorGroup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//IndicatorGroup/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//IndicatorGroup/indicators"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

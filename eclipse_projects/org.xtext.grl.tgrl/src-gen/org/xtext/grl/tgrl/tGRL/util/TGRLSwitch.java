@@ -464,6 +464,16 @@ public class TGRLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case TGRLPackage.INDICATOR_GROUP:
+      {
+        IndicatorGroup indicatorGroup = (IndicatorGroup)theEObject;
+        T result = caseIndicatorGroup(indicatorGroup);
+        if (result == null) result = caseGRLElement(indicatorGroup);
+        if (result == null) result = caseGRLBaseElement(indicatorGroup);
+        if (result == null) result = caseElement(indicatorGroup);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -1136,6 +1146,22 @@ public class TGRLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseinLineLink(inLineLink object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Indicator Group</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Indicator Group</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIndicatorGroup(IndicatorGroup object)
   {
     return null;
   }

@@ -401,6 +401,15 @@ public interface TGRLFactory extends EFactory
   inLineLink createinLineLink();
 
   /**
+   * Returns a new object of class '<em>Indicator Group</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Indicator Group</em>'.
+   * @generated
+   */
+  IndicatorGroup createIndicatorGroup();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

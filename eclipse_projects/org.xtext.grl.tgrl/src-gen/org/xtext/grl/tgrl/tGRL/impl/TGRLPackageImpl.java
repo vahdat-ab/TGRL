@@ -43,6 +43,7 @@ import org.xtext.grl.tgrl.tGRL.InLineDecomposition;
 import org.xtext.grl.tgrl.tGRL.InLineDependency;
 import org.xtext.grl.tgrl.tGRL.InLineElementLink;
 import org.xtext.grl.tgrl.tGRL.Indicator;
+import org.xtext.grl.tgrl.tGRL.IndicatorGroup;
 import org.xtext.grl.tgrl.tGRL.IntentionalElement;
 import org.xtext.grl.tgrl.tGRL.KPIEvalValueSet;
 import org.xtext.grl.tgrl.tGRL.KPIQualitativeEvalValueSet;
@@ -364,6 +365,13 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * @generated
    */
   private EClass inLineLinkEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass indicatorGroupEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1955,6 +1963,36 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getIndicatorGroup()
+  {
+    return indicatorGroupEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIndicatorGroup_Name()
+  {
+    return (EAttribute)indicatorGroupEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIndicatorGroup_Indicators()
+  {
+    return (EReference)indicatorGroupEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getImportanceType()
   {
     return importanceTypeEEnum;
@@ -2239,6 +2277,10 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     createEReference(inLineLinkEClass, IN_LINE_LINK__TYPE);
     createEReference(inLineLinkEClass, IN_LINE_LINK__DES);
 
+    indicatorGroupEClass = createEClass(INDICATOR_GROUP);
+    createEAttribute(indicatorGroupEClass, INDICATOR_GROUP__NAME);
+    createEReference(indicatorGroupEClass, INDICATOR_GROUP__INDICATORS);
+
     // Create enums
     importanceTypeEEnum = createEEnum(IMPORTANCE_TYPE);
     decompositionTypeEEnum = createEEnum(DECOMPOSITION_TYPE);
@@ -2314,6 +2356,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     linkTypeEClass.getESuperTypes().add(this.getGRLElement());
     linkEClass.getESuperTypes().add(this.getElementLink());
     inLineLinkEClass.getESuperTypes().add(this.getInLineElementLink());
+    indicatorGroupEClass.getESuperTypes().add(this.getGRLElement());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2504,6 +2547,10 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEClass(inLineLinkEClass, inLineLink.class, "inLineLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getinLineLink_Type(), this.getLinkType(), null, "type", null, 0, 1, inLineLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getinLineLink_Des(), this.getGRLElement(), null, "des", null, 0, -1, inLineLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(indicatorGroupEClass, IndicatorGroup.class, "IndicatorGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIndicatorGroup_Name(), theEcorePackage.getEString(), "name", null, 0, 1, IndicatorGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getIndicatorGroup_Indicators(), this.getIndicator(), null, "indicators", null, 0, -1, IndicatorGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(importanceTypeEEnum, ImportanceType.class, "ImportanceType");

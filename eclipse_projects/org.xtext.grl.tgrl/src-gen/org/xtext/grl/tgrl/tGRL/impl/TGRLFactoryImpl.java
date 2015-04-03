@@ -107,6 +107,7 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
       case TGRLPackage.LINK_TYPE: return createLinkType();
       case TGRLPackage.LINK: return createLink();
       case TGRLPackage.IN_LINE_LINK: return createinLineLink();
+      case TGRLPackage.INDICATOR_GROUP: return createIndicatorGroup();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -630,6 +631,17 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
   {
     inLineLinkImpl inLineLink = new inLineLinkImpl();
     return inLineLink;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IndicatorGroup createIndicatorGroup()
+  {
+    IndicatorGroupImpl indicatorGroup = new IndicatorGroupImpl();
+    return indicatorGroup;
   }
 
   /**

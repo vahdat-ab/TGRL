@@ -2332,6 +2332,52 @@ public interface TGRLPackage extends EPackage
   int IN_LINE_LINK_FEATURE_COUNT = IN_LINE_ELEMENT_LINK_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorGroupImpl <em>Indicator Group</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.grl.tgrl.tGRL.impl.IndicatorGroupImpl
+   * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getIndicatorGroup()
+   * @generated
+   */
+  int INDICATOR_GROUP = 42;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDICATOR_GROUP__ID = GRL_ELEMENT__ID;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDICATOR_GROUP__NAME = GRL_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Indicators</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDICATOR_GROUP__INDICATORS = GRL_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Indicator Group</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDICATOR_GROUP_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.ImportanceType <em>Importance Type</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2339,7 +2385,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getImportanceType()
    * @generated
    */
-  int IMPORTANCE_TYPE = 42;
+  int IMPORTANCE_TYPE = 43;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.DecompositionType <em>Decomposition Type</em>}' enum.
@@ -2349,7 +2395,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getDecompositionType()
    * @generated
    */
-  int DECOMPOSITION_TYPE = 43;
+  int DECOMPOSITION_TYPE = 44;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.ContributionType <em>Contribution Type</em>}' enum.
@@ -2359,7 +2405,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getContributionType()
    * @generated
    */
-  int CONTRIBUTION_TYPE = 44;
+  int CONTRIBUTION_TYPE = 45;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.QualitativeLabel <em>Qualitative Label</em>}' enum.
@@ -2369,7 +2415,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getQualitativeLabel()
    * @generated
    */
-  int QUALITATIVE_LABEL = 45;
+  int QUALITATIVE_LABEL = 46;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.Color <em>Color</em>}' enum.
@@ -2379,7 +2425,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getColor()
    * @generated
    */
-  int COLOR = 46;
+  int COLOR = 47;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.Criticality <em>Criticality</em>}' enum.
@@ -2389,7 +2435,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getCriticality()
    * @generated
    */
-  int CRITICALITY = 47;
+  int CRITICALITY = 48;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.Priority <em>Priority</em>}' enum.
@@ -2399,7 +2445,7 @@ public interface TGRLPackage extends EPackage
    * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getPriority()
    * @generated
    */
-  int PRIORITY = 48;
+  int PRIORITY = 49;
 
 
   /**
@@ -3978,6 +4024,38 @@ public interface TGRLPackage extends EPackage
   EReference getinLineLink_Des();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.IndicatorGroup <em>Indicator Group</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Indicator Group</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.IndicatorGroup
+   * @generated
+   */
+  EClass getIndicatorGroup();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.IndicatorGroup#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.IndicatorGroup#getName()
+   * @see #getIndicatorGroup()
+   * @generated
+   */
+  EAttribute getIndicatorGroup_Name();
+
+  /**
+   * Returns the meta object for the reference list '{@link org.xtext.grl.tgrl.tGRL.IndicatorGroup#getIndicators <em>Indicators</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Indicators</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.IndicatorGroup#getIndicators()
+   * @see #getIndicatorGroup()
+   * @generated
+   */
+  EReference getIndicatorGroup_Indicators();
+
+  /**
    * Returns the meta object for enum '{@link org.xtext.grl.tgrl.tGRL.ImportanceType <em>Importance Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -5329,6 +5407,32 @@ public interface TGRLPackage extends EPackage
      * @generated
      */
     EReference IN_LINE_LINK__DES = eINSTANCE.getinLineLink_Des();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorGroupImpl <em>Indicator Group</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.grl.tgrl.tGRL.impl.IndicatorGroupImpl
+     * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getIndicatorGroup()
+     * @generated
+     */
+    EClass INDICATOR_GROUP = eINSTANCE.getIndicatorGroup();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INDICATOR_GROUP__NAME = eINSTANCE.getIndicatorGroup_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Indicators</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INDICATOR_GROUP__INDICATORS = eINSTANCE.getIndicatorGroup_Indicators();
 
     /**
      * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.ImportanceType <em>Importance Type</em>}' enum.

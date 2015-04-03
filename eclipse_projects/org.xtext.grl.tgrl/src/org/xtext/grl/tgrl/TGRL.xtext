@@ -20,7 +20,8 @@ GRLBaseElement:
 ;
 GRLElement:
 	
-	IntentionalElement | ElementLink | Actor | StrategyGroup | EvaluationStrategy | Evaluation | ContributionGroup |ContributionContext | QualitativeMapping | Metadata | Comment | LinkType
+	IntentionalElement | ElementLink | Actor | StrategyGroup | IndicatorGroup | EvaluationStrategy | Evaluation | ContributionGroup | 
+	ContributionContext | QualitativeMapping | Metadata | Comment | LinkType 
 	
 ;
 IntentionalElement:
@@ -50,116 +51,158 @@ GRLSpecification:
 ;
 
 Actor: 
-	'actor' name= ID '{'
+	'actor' name= ID
+	(
+		';' |
 		(
-		('name' '=' label =STRING ';')?&	
-		/*
-		 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
-		 * 		This can be done through the post processing mechanism in xText 
-		 */
-		( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
-		('description' '=' description=STRING ';')?&
-		('color' '=' fillColor = Color ';')?&
-		(metaData+=Metadata)*&
-		(elemets+=IntentionalElement  | elemets+=ElementLink)*	
+		'{'
+			(
+			('name' '=' label =STRING ';')?&	
+			/*
+			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */
+			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+			('description' '=' description=STRING ';')?&
+			('color' '=' fillColor = Color ';')?&
+			(metaData+=Metadata)*&
+			(elemets+=IntentionalElement  | elemets+=ElementLink)*	
+			)
+			
+		'}'			
 		)
-		
-	'}'
+	)
 ;
 //*************************************IntentionalElement******************************************
 Softgoal :
-	'softGoal' name = ID '{'
+	'softGoal' name = ID 
+	(
+		';' | 
 		(
-			('name' '=' label = STRING ';')?&
-			('description' '=' description=STRING ';')?&
-			('color' '=' fillColor = Color ';')?&
-			('decompositionType' '=' decompositionType=DecompositionType ';')?&
-			/*
-			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
-			 * 		This can be done through the post processing mechanism in xText 
-			 */
-			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
-			(metaData+=Metadata)*&
-			(elementLinks+=InLineElementLink)*		
-		)
-	'}'
+		'{'
+			(
+				('name' '=' label = STRING ';')?&
+				('description' '=' description=STRING ';')?&
+				('color' '=' fillColor = Color ';')?&
+				('decompositionType' '=' decompositionType=DecompositionType ';')?&
+				/*
+				 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
+				 * 		This can be done through the post processing mechanism in xText 
+				 */
+				( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+				(metaData+=Metadata)*&
+				(elementLinks+=InLineElementLink)*		
+			)
+		'}'	
+		)		
+	)
 ;
 Goal:
-	'goal' name = ID '{'
+	'goal' name = ID
+	(
+		';' |
 		(
-			('name' '=' label = STRING ';')?&
-			('description' '=' description=STRING ';')?&
-			('color' '=' fillColor = Color ';')?&
-			('decompositionType' '='decompositionType=DecompositionType ';')?&
-			/*
-			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
-			 * 		This can be done through the post processing mechanism in xText 
-			 */
-			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
-			(metaData+=Metadata)*&		
-			(elementLinks+=InLineElementLink)*
-		)		
-	'}'
+		 '{'
+			(
+				('name' '=' label = STRING ';')?&
+				('description' '=' description=STRING ';')?&
+				('color' '=' fillColor = Color ';')?&
+				('decompositionType' '='decompositionType=DecompositionType ';')?&
+				/*
+				 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
+				 * 		This can be done through the post processing mechanism in xText 
+				 */
+				( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+				(metaData+=Metadata)*&		
+				(elementLinks+=InLineElementLink)*
+			)		
+		'}'			
+		)
+	)
 ; 
 Task:
-	'Task' name = ID '{'
+	'Task' name = ID
+	(
+		';' | 
 		(
-			('name' '=' label = STRING ';')?&
-			('description' '=' description=STRING ';')?&
-			('color' '=' fillColor = Color ';')?&
-			('decompositionType' '='decompositionType=DecompositionType ';')?&
-			/*
-			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
-			 * 		This can be done through the post processing mechanism in xText 
-			 */
-			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
-			(metaData+=Metadata)*&	
-			(elementLinks+=InLineElementLink)*	 
-		)		
-	'}'
+		'{'
+			(
+				('name' '=' label = STRING ';')?&
+				('description' '=' description=STRING ';')?&
+				('color' '=' fillColor = Color ';')?&
+				('decompositionType' '='decompositionType=DecompositionType ';')?&
+				/*
+				 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
+				 * 		This can be done through the post processing mechanism in xText 
+				 */
+				( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+				(metaData+=Metadata)*&	
+				(elementLinks+=InLineElementLink)*	 
+			)		
+		'}'			
+		)
+	)
 ;  
 Resource:
-	'resource' name = ID '{'
+	'resource' name = ID 
+	(
+		';' |
 		(
-			('name' '=' label = STRING ';')?&
-			('description' '=' description=STRING ';')?&
-			('color' '=' fillColor = Color ';')?&
-			('decompositionType' '='decompositionType=DecompositionType ';')?&
-			/*
-			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
-			 * 		This can be done through the post processing mechanism in xText 
-			 */
-			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
-			(metaData+=Metadata)*&	
-			(elementLinks+=InLineElementLink)*	
-		)		
-	'}'
+		'{'
+			(
+				('name' '=' label = STRING ';')?&
+				('description' '=' description=STRING ';')?&
+				('color' '=' fillColor = Color ';')?&
+				('decompositionType' '='decompositionType=DecompositionType ';')?&
+				/*
+				 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
+				 * 		This can be done through the post processing mechanism in xText 
+				 */
+				( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+				(metaData+=Metadata)*&	
+				(elementLinks+=InLineElementLink)*	
+			)		
+		'}'			
+		)
+	)
 ; 
 Indicator:
-	'indicator' name = ID '{'
+	'indicator' name = ID
+	(
+		';' |
 		(
-			('name' '=' label = STRING ';')?&
-			('description' '=' description=STRING ';')?&
-			('color' '=' fillColor = Color ';')?&
-			('decompositionType' '='decompositionType=DecompositionType ';')?&
-			/*
-			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
-			 * 		This can be done through the post processing mechanism in xText 
-			 */
-			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
-			(metaData+=Metadata)*&
-			(elementLinks+=InLineElementLink)*			
-		)		
-	'}'
+		'{'
+			(
+				('name' '=' label = STRING ';')?&
+				('description' '=' description=STRING ';')?&
+				('color' '=' fillColor = Color ';')?&
+				('decompositionType' '='decompositionType=DecompositionType ';')?&
+				/*
+				 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
+				 * 		This can be done through the post processing mechanism in xText 
+				 */
+				( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+				(metaData+=Metadata)*&
+				(elementLinks+=InLineElementLink)*			
+			)		
+		'}'			
+		)
+	) 
 ;
 Belief: 
-	'belief' name=ID '{'
+	'belief' name=ID
+	(
+		';' |
 		(
-			('name' '=' label = STRING ';')?&
-			(metaData+=Metadata)*&
-			('description' description=STRING ';')?
-		)		
-	'}'
+		 '{'
+			(
+				('name' '=' label = STRING ';')?&
+				(metaData+=Metadata)*&
+				('description' description=STRING ';')?
+			)		
+		'}'			
+		)
+	)
 ;	
 //*******************************************ElementLink*******************************************
 Decomposition: 
@@ -344,52 +387,11 @@ inLineLink:
 	type = [LinkType | QualifiedName] des += [GRLElement | QualifiedName] (',' des += [GRLElement | QualifiedName])* ';'
 ;
 
-//IndicatorGroup :
-//		'indicatorGroup' name=ID '{'
-//		(
-//			('name' '=' label = STRING ';')?&
-//			('description' '=' description=STRING ';')?&
-//			('isRedesignCategory' '=' isRedesignCategory=BOOLEAN ';')?&
-//			('indicators''=' indicators+=[Indicator](',' indicators+=[Indicator] )* ';')?
-//		)
-//	'}'
-//;
-//
-//URNspec returns urnModel::URNspec: 
-//	'urnspec' name= ID '{'
-//		(
-//		(urndef=URNdefinition)&
-//		(grlspec=GRLspec)?&
-//		(metadata+=Metadata*)&
-//		(ucmspec=UCMspec)?&
-//		(urnLinks+=URNlink*)&
-//		(asdspec=ASDspec)
-//		)
-//	'}'
-//	
-//;
-//
-//URNdefinition returns urncoreModel::URNdefinition: 
-//	'URNdefinition' '{'
-//		{urncoreModel::URNdefinition}
-//	'}'
-//;
-//ASDspec returns asdModel::ASDspec: 
-//	'asdspec'  '{'
-//		{asdModel::ASDspec}		
-//	'}' 
-//;
-//URNlink returns urnModel::URNlink: 
-//	'urnLink' '{'
-//	'}'
-//;
-//UCMspec returns ucmModel::UCMspec: 
-//	'ucmSpec' '{'
-//		
-//	'}'
-//;
-//
-//
+
+IndicatorGroup :
+	'indicatorGroup' name=ID 'includes' indicators+=[Indicator | QualifiedName](',' indicators+=[Indicator | QualifiedName])* ';'
+//			('isRedesignCategory' '=' isRedesignCategory=BOOLEAN ';')
+;
 
 enum ImportanceType: 
 	 none  | high  | medium | low

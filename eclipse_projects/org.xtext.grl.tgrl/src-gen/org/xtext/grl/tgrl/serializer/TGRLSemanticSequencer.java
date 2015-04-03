@@ -36,6 +36,7 @@ import org.xtext.grl.tgrl.tGRL.InLineContribution;
 import org.xtext.grl.tgrl.tGRL.InLineDecomposition;
 import org.xtext.grl.tgrl.tGRL.InLineDependency;
 import org.xtext.grl.tgrl.tGRL.Indicator;
+import org.xtext.grl.tgrl.tGRL.IndicatorGroup;
 import org.xtext.grl.tgrl.tGRL.KPIQualitativeEvalValueSet;
 import org.xtext.grl.tgrl.tGRL.KPIQuantitativeEvalValueSet;
 import org.xtext.grl.tgrl.tGRL.Link;
@@ -243,6 +244,15 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case TGRLPackage.INDICATOR_GROUP:
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
+				   context == grammarAccess.getGRLElementRule() ||
+				   context == grammarAccess.getIndicatorGroupRule()) {
+					sequence_IndicatorGroup(context, (IndicatorGroup) semanticObject); 
+					return; 
+				}
+				else break;
 			case TGRLPackage.KPI_QUALITATIVE_EVAL_VALUE_SET:
 				if(context == grammarAccess.getKPIEvalValueSetRule() ||
 				   context == grammarAccess.getKPIQualitativeEvalValueSetRule()) {
@@ -364,12 +374,14 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         label=STRING? 
-	 *         (importance=ImportanceType | importanceQuantitative=INT)? 
-	 *         description=STRING? 
-	 *         fillColor=Color? 
-	 *         metaData+=Metadata* 
-	 *         (elemets+=IntentionalElement | elemets+=ElementLink)*
+	 *         (
+	 *             label=STRING? 
+	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *             description=STRING? 
+	 *             fillColor=Color? 
+	 *             metaData+=Metadata* 
+	 *             (elemets+=IntentionalElement | elemets+=ElementLink)*
+	 *         )?
 	 *     )
 	 */
 	protected void sequence_Actor(EObject context, Actor semanticObject) {
@@ -379,7 +391,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID label=STRING? metaData+=Metadata* description=STRING?)
+	 *     (name=ID (label=STRING? metaData+=Metadata* description=STRING?)?)
 	 */
 	protected void sequence_Belief(EObject context, Belief semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -543,13 +555,15 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         label=STRING? 
-	 *         description=STRING? 
-	 *         fillColor=Color? 
-	 *         decompositionType=DecompositionType? 
-	 *         (importance=ImportanceType | importanceQuantitative=INT)? 
-	 *         metaData+=Metadata* 
-	 *         elementLinks+=InLineElementLink*
+	 *         (
+	 *             label=STRING? 
+	 *             description=STRING? 
+	 *             fillColor=Color? 
+	 *             decompositionType=DecompositionType? 
+	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *             metaData+=Metadata* 
+	 *             elementLinks+=InLineElementLink*
+	 *         )?
 	 *     )
 	 */
 	protected void sequence_Goal(EObject context, Goal semanticObject) {
@@ -586,15 +600,26 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     (name=ID indicators+=[Indicator|QualifiedName] indicators+=[Indicator|QualifiedName]*)
+	 */
+	protected void sequence_IndicatorGroup(EObject context, IndicatorGroup semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         label=STRING? 
-	 *         description=STRING? 
-	 *         fillColor=Color? 
-	 *         decompositionType=DecompositionType? 
-	 *         (importance=ImportanceType | importanceQuantitative=INT)? 
-	 *         metaData+=Metadata* 
-	 *         elementLinks+=InLineElementLink*
+	 *         (
+	 *             label=STRING? 
+	 *             description=STRING? 
+	 *             fillColor=Color? 
+	 *             decompositionType=DecompositionType? 
+	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *             metaData+=Metadata* 
+	 *             elementLinks+=InLineElementLink*
+	 *         )?
 	 *     )
 	 */
 	protected void sequence_Indicator(EObject context, Indicator semanticObject) {
@@ -685,13 +710,15 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         label=STRING? 
-	 *         description=STRING? 
-	 *         fillColor=Color? 
-	 *         decompositionType=DecompositionType? 
-	 *         (importance=ImportanceType | importanceQuantitative=INT)? 
-	 *         metaData+=Metadata* 
-	 *         elementLinks+=InLineElementLink*
+	 *         (
+	 *             label=STRING? 
+	 *             description=STRING? 
+	 *             fillColor=Color? 
+	 *             decompositionType=DecompositionType? 
+	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *             metaData+=Metadata* 
+	 *             elementLinks+=InLineElementLink*
+	 *         )?
 	 *     )
 	 */
 	protected void sequence_Resource(EObject context, Resource semanticObject) {
@@ -703,13 +730,15 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         label=STRING? 
-	 *         description=STRING? 
-	 *         fillColor=Color? 
-	 *         decompositionType=DecompositionType? 
-	 *         (importance=ImportanceType | importanceQuantitative=INT)? 
-	 *         metaData+=Metadata* 
-	 *         elementLinks+=InLineElementLink*
+	 *         (
+	 *             label=STRING? 
+	 *             description=STRING? 
+	 *             fillColor=Color? 
+	 *             decompositionType=DecompositionType? 
+	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *             metaData+=Metadata* 
+	 *             elementLinks+=InLineElementLink*
+	 *         )?
 	 *     )
 	 */
 	protected void sequence_Softgoal(EObject context, Softgoal semanticObject) {
@@ -730,13 +759,15 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         label=STRING? 
-	 *         description=STRING? 
-	 *         fillColor=Color? 
-	 *         decompositionType=DecompositionType? 
-	 *         (importance=ImportanceType | importanceQuantitative=INT)? 
-	 *         metaData+=Metadata* 
-	 *         elementLinks+=InLineElementLink*
+	 *         (
+	 *             label=STRING? 
+	 *             description=STRING? 
+	 *             fillColor=Color? 
+	 *             decompositionType=DecompositionType? 
+	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *             metaData+=Metadata* 
+	 *             elementLinks+=InLineElementLink*
+	 *         )?
 	 *     )
 	 */
 	protected void sequence_Task(EObject context, Task semanticObject) {

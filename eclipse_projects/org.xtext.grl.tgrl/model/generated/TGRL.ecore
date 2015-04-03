@@ -227,6 +227,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="des" unique="false" upperBound="-1"
         eType="#//GRLElement"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IndicatorGroup" eSuperTypes="#//GRLElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="indicators" unique="false"
+        upperBound="-1" eType="#//Indicator"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ImportanceType">
     <eLiterals name="none" literal="none"/>
     <eLiterals name="high" value="1" literal="high"/>
