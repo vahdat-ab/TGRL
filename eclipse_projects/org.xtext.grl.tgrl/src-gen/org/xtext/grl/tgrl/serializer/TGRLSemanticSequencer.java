@@ -368,6 +368,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (importance=ImportanceType | importanceQuantitative=INT)? 
 	 *         description=STRING? 
 	 *         fillColor=Color? 
+	 *         metaData+=Metadata* 
 	 *         (elemets+=IntentionalElement | elemets+=ElementLink)*
 	 *     )
 	 */
@@ -378,7 +379,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID label=STRING? description=STRING?)
+	 *     (name=ID label=STRING? metaData+=Metadata* description=STRING?)
 	 */
 	protected void sequence_Belief(EObject context, Belief semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -412,6 +413,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (
 	 *         name=ID 
 	 *         (superContributionContexts+=[ContributionContext|QualifiedName] superContributionContexts+=[ContributionContext|QualifiedName]*)? 
+	 *         metaData+=Metadata* 
 	 *         changes+=ContributionChange*
 	 *     )
 	 */
@@ -503,7 +505,12 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID (superStrategies+=[EvaluationStrategy|QualifiedName] superStrategies+=[EvaluationStrategy|QualifiedName]*)? evaluations+=Evaluation*)
+	 *     (
+	 *         name=ID 
+	 *         (superStrategies+=[EvaluationStrategy|QualifiedName] superStrategies+=[EvaluationStrategy|QualifiedName]*)? 
+	 *         metaData+=Metadata* 
+	 *         evaluations+=Evaluation*
+	 *     )
 	 */
 	protected void sequence_EvaluationStrategy(EObject context, EvaluationStrategy semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -541,6 +548,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         fillColor=Color? 
 	 *         decompositionType=DecompositionType? 
 	 *         (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *         metaData+=Metadata* 
 	 *         elementLinks+=InLineElementLink*
 	 *     )
 	 */
@@ -585,6 +593,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         fillColor=Color? 
 	 *         decompositionType=DecompositionType? 
 	 *         (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *         metaData+=Metadata* 
 	 *         elementLinks+=InLineElementLink*
 	 *     )
 	 */
@@ -620,7 +629,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     name=STRING
+	 *     name=ID
 	 */
 	protected void sequence_LinkType(EObject context, LinkType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -665,7 +674,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID mappin+=Mapping*)
+	 *     (name=ID metaData+=Metadata* mappin+=Mapping*)
 	 */
 	protected void sequence_QualitativeMapping(EObject context, QualitativeMapping semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -681,6 +690,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         fillColor=Color? 
 	 *         decompositionType=DecompositionType? 
 	 *         (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *         metaData+=Metadata* 
 	 *         elementLinks+=InLineElementLink*
 	 *     )
 	 */
@@ -698,6 +708,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         fillColor=Color? 
 	 *         decompositionType=DecompositionType? 
 	 *         (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *         metaData+=Metadata* 
 	 *         elementLinks+=InLineElementLink*
 	 *     )
 	 */
@@ -724,6 +735,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         fillColor=Color? 
 	 *         decompositionType=DecompositionType? 
 	 *         (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *         metaData+=Metadata* 
 	 *         elementLinks+=InLineElementLink*
 	 *     )
 	 */

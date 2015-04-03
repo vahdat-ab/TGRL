@@ -2,6 +2,7 @@
  */
 package org.xtext.grl.tgrl.tGRL;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +15,7 @@ package org.xtext.grl.tgrl.tGRL;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getLabel <em>Label</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getMetaData <em>Meta Data</em>}</li>
  * </ul>
  * </p>
  *
@@ -100,5 +102,21 @@ public interface IntentionalElement extends GRLElement
    * @generated
    */
   void setDescription(String value);
+
+  /**
+   * Returns the value of the '<em><b>Meta Data</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.Metadata}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Meta Data</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Meta Data</em>' containment reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getIntentionalElement_MetaData()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Metadata> getMetaData();
 
 } // IntentionalElement

@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionContext#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionContext#getSuperContributionContexts <em>Super Contribution Contexts</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionContext#getMetaData <em>Meta Data</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.ContributionContext#getChanges <em>Changes</em>}</li>
  * </ul>
  * </p>
@@ -65,6 +66,22 @@ public interface ContributionContext extends GRLElement
    * @generated
    */
   EList<ContributionContext> getSuperContributionContexts();
+
+  /**
+   * Returns the value of the '<em><b>Meta Data</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.Metadata}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Meta Data</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Meta Data</em>' containment reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionContext_MetaData()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Metadata> getMetaData();
 
   /**
    * Returns the value of the '<em><b>Changes</b></em>' containment reference list.

@@ -216,13 +216,22 @@ public interface TGRLPackage extends EPackage
   int INTENTIONAL_ELEMENT__DESCRIPTION = GRL_ELEMENT_FEATURE_COUNT + 2;
 
   /**
+   * The feature id for the '<em><b>Meta Data</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTENTIONAL_ELEMENT__META_DATA = GRL_ELEMENT_FEATURE_COUNT + 3;
+
+  /**
    * The number of structural features of the '<em>Intentional Element</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INTENTIONAL_ELEMENT_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 3;
+  int INTENTIONAL_ELEMENT_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.ElementLinkImpl <em>Element Link</em>}' class.
@@ -409,13 +418,22 @@ public interface TGRLPackage extends EPackage
   int ACTOR__FILL_COLOR = GRL_ELEMENT_FEATURE_COUNT + 5;
 
   /**
+   * The feature id for the '<em><b>Meta Data</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTOR__META_DATA = GRL_ELEMENT_FEATURE_COUNT + 6;
+
+  /**
    * The feature id for the '<em><b>Elemets</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ACTOR__ELEMETS = GRL_ELEMENT_FEATURE_COUNT + 6;
+  int ACTOR__ELEMETS = GRL_ELEMENT_FEATURE_COUNT + 7;
 
   /**
    * The number of structural features of the '<em>Actor</em>' class.
@@ -424,7 +442,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACTOR_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 7;
+  int ACTOR_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 8;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.SoftgoalImpl <em>Softgoal</em>}' class.
@@ -471,6 +489,15 @@ public interface TGRLPackage extends EPackage
    * @ordered
    */
   int SOFTGOAL__DESCRIPTION = INTENTIONAL_ELEMENT__DESCRIPTION;
+
+  /**
+   * The feature id for the '<em><b>Meta Data</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOFTGOAL__META_DATA = INTENTIONAL_ELEMENT__META_DATA;
 
   /**
    * The feature id for the '<em><b>Fill Color</b></em>' attribute.
@@ -573,6 +600,15 @@ public interface TGRLPackage extends EPackage
   int GOAL__DESCRIPTION = INTENTIONAL_ELEMENT__DESCRIPTION;
 
   /**
+   * The feature id for the '<em><b>Meta Data</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GOAL__META_DATA = INTENTIONAL_ELEMENT__META_DATA;
+
+  /**
    * The feature id for the '<em><b>Fill Color</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -671,6 +707,15 @@ public interface TGRLPackage extends EPackage
    * @ordered
    */
   int TASK__DESCRIPTION = INTENTIONAL_ELEMENT__DESCRIPTION;
+
+  /**
+   * The feature id for the '<em><b>Meta Data</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TASK__META_DATA = INTENTIONAL_ELEMENT__META_DATA;
 
   /**
    * The feature id for the '<em><b>Fill Color</b></em>' attribute.
@@ -773,6 +818,15 @@ public interface TGRLPackage extends EPackage
   int RESOURCE__DESCRIPTION = INTENTIONAL_ELEMENT__DESCRIPTION;
 
   /**
+   * The feature id for the '<em><b>Meta Data</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RESOURCE__META_DATA = INTENTIONAL_ELEMENT__META_DATA;
+
+  /**
    * The feature id for the '<em><b>Fill Color</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -873,6 +927,15 @@ public interface TGRLPackage extends EPackage
   int INDICATOR__DESCRIPTION = INTENTIONAL_ELEMENT__DESCRIPTION;
 
   /**
+   * The feature id for the '<em><b>Meta Data</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDICATOR__META_DATA = INTENTIONAL_ELEMENT__META_DATA;
+
+  /**
    * The feature id for the '<em><b>Fill Color</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -971,6 +1034,15 @@ public interface TGRLPackage extends EPackage
    * @ordered
    */
   int BELIEF__DESCRIPTION = INTENTIONAL_ELEMENT__DESCRIPTION;
+
+  /**
+   * The feature id for the '<em><b>Meta Data</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BELIEF__META_DATA = INTENTIONAL_ELEMENT__META_DATA;
 
   /**
    * The number of structural features of the '<em>Belief</em>' class.
@@ -1443,13 +1515,22 @@ public interface TGRLPackage extends EPackage
   int EVALUATION_STRATEGY__SUPER_STRATEGIES = GRL_ELEMENT_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Meta Data</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVALUATION_STRATEGY__META_DATA = GRL_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
    * The feature id for the '<em><b>Evaluations</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EVALUATION_STRATEGY__EVALUATIONS = GRL_ELEMENT_FEATURE_COUNT + 2;
+  int EVALUATION_STRATEGY__EVALUATIONS = GRL_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Evaluation Strategy</em>' class.
@@ -1458,7 +1539,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVALUATION_STRATEGY_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 3;
+  int EVALUATION_STRATEGY_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationImpl <em>Evaluation</em>}' class.
@@ -1728,13 +1809,22 @@ public interface TGRLPackage extends EPackage
   int QUALITATIVE_MAPPING__NAME = GRL_ELEMENT_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Meta Data</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUALITATIVE_MAPPING__META_DATA = GRL_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Mappin</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QUALITATIVE_MAPPING__MAPPIN = GRL_ELEMENT_FEATURE_COUNT + 1;
+  int QUALITATIVE_MAPPING__MAPPIN = GRL_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Qualitative Mapping</em>' class.
@@ -1743,7 +1833,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QUALITATIVE_MAPPING_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 2;
+  int QUALITATIVE_MAPPING_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.MappingImpl <em>Mapping</em>}' class.
@@ -1893,13 +1983,22 @@ public interface TGRLPackage extends EPackage
   int CONTRIBUTION_CONTEXT__SUPER_CONTRIBUTION_CONTEXTS = GRL_ELEMENT_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Meta Data</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTRIBUTION_CONTEXT__META_DATA = GRL_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
    * The feature id for the '<em><b>Changes</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONTRIBUTION_CONTEXT__CHANGES = GRL_ELEMENT_FEATURE_COUNT + 2;
+  int CONTRIBUTION_CONTEXT__CHANGES = GRL_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Contribution Context</em>' class.
@@ -1908,7 +2007,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTRIBUTION_CONTEXT_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 3;
+  int CONTRIBUTION_CONTEXT_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.ContributionChangeImpl <em>Contribution Change</em>}' class.
@@ -2409,6 +2508,17 @@ public interface TGRLPackage extends EPackage
   EAttribute getIntentionalElement_Description();
 
   /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getMetaData <em>Meta Data</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Meta Data</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.IntentionalElement#getMetaData()
+   * @see #getIntentionalElement()
+   * @generated
+   */
+  EReference getIntentionalElement_MetaData();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.ElementLink <em>Element Link</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2546,6 +2656,17 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   EAttribute getActor_FillColor();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.grl.tgrl.tGRL.Actor#getMetaData <em>Meta Data</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Meta Data</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.Actor#getMetaData()
+   * @see #getActor()
+   * @generated
+   */
+  EReference getActor_MetaData();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.grl.tgrl.tGRL.Actor#getElemets <em>Elemets</em>}'.
@@ -3202,6 +3323,17 @@ public interface TGRLPackage extends EPackage
   EReference getEvaluationStrategy_SuperStrategies();
 
   /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getMetaData <em>Meta Data</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Meta Data</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getMetaData()
+   * @see #getEvaluationStrategy()
+   * @generated
+   */
+  EReference getEvaluationStrategy_MetaData();
+
+  /**
    * Returns the meta object for the containment reference list '{@link org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getEvaluations <em>Evaluations</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3449,6 +3581,17 @@ public interface TGRLPackage extends EPackage
   EAttribute getQualitativeMapping_Name();
 
   /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.grl.tgrl.tGRL.QualitativeMapping#getMetaData <em>Meta Data</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Meta Data</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.QualitativeMapping#getMetaData()
+   * @see #getQualitativeMapping()
+   * @generated
+   */
+  EReference getQualitativeMapping_MetaData();
+
+  /**
    * Returns the meta object for the containment reference list '{@link org.xtext.grl.tgrl.tGRL.QualitativeMapping#getMappin <em>Mappin</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3576,6 +3719,17 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   EReference getContributionContext_SuperContributionContexts();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.grl.tgrl.tGRL.ContributionContext#getMetaData <em>Meta Data</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Meta Data</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.ContributionContext#getMetaData()
+   * @see #getContributionContext()
+   * @generated
+   */
+  EReference getContributionContext_MetaData();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.grl.tgrl.tGRL.ContributionContext#getChanges <em>Changes</em>}'.
@@ -4007,6 +4161,14 @@ public interface TGRLPackage extends EPackage
     EAttribute INTENTIONAL_ELEMENT__DESCRIPTION = eINSTANCE.getIntentionalElement_Description();
 
     /**
+     * The meta object literal for the '<em><b>Meta Data</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INTENTIONAL_ELEMENT__META_DATA = eINSTANCE.getIntentionalElement_MetaData();
+
+    /**
      * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.impl.ElementLinkImpl <em>Element Link</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4117,6 +4279,14 @@ public interface TGRLPackage extends EPackage
      * @generated
      */
     EAttribute ACTOR__FILL_COLOR = eINSTANCE.getActor_FillColor();
+
+    /**
+     * The meta object literal for the '<em><b>Meta Data</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ACTOR__META_DATA = eINSTANCE.getActor_MetaData();
 
     /**
      * The meta object literal for the '<em><b>Elemets</b></em>' containment reference list feature.
@@ -4641,6 +4811,14 @@ public interface TGRLPackage extends EPackage
     EReference EVALUATION_STRATEGY__SUPER_STRATEGIES = eINSTANCE.getEvaluationStrategy_SuperStrategies();
 
     /**
+     * The meta object literal for the '<em><b>Meta Data</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EVALUATION_STRATEGY__META_DATA = eINSTANCE.getEvaluationStrategy_MetaData();
+
+    /**
      * The meta object literal for the '<em><b>Evaluations</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4837,6 +5015,14 @@ public interface TGRLPackage extends EPackage
     EAttribute QUALITATIVE_MAPPING__NAME = eINSTANCE.getQualitativeMapping_Name();
 
     /**
+     * The meta object literal for the '<em><b>Meta Data</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QUALITATIVE_MAPPING__META_DATA = eINSTANCE.getQualitativeMapping_MetaData();
+
+    /**
      * The meta object literal for the '<em><b>Mappin</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4937,6 +5123,14 @@ public interface TGRLPackage extends EPackage
      * @generated
      */
     EReference CONTRIBUTION_CONTEXT__SUPER_CONTRIBUTION_CONTEXTS = eINSTANCE.getContributionContext_SuperContributionContexts();
+
+    /**
+     * The meta object literal for the '<em><b>Meta Data</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONTRIBUTION_CONTEXT__META_DATA = eINSTANCE.getContributionContext_MetaData();
 
     /**
      * The meta object literal for the '<em><b>Changes</b></em>' containment reference list feature.

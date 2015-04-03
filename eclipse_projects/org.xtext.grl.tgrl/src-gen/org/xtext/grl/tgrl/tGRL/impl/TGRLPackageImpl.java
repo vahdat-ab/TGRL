@@ -585,6 +585,16 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getIntentionalElement_MetaData()
+  {
+    return (EReference)intentionalElementEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getElementLink()
   {
     return elementLinkEClass;
@@ -715,9 +725,19 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getActor_Elemets()
+  public EReference getActor_MetaData()
   {
     return (EReference)actorEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getActor_Elemets()
+  {
+    return (EReference)actorEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -1325,9 +1345,19 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getEvaluationStrategy_Evaluations()
+  public EReference getEvaluationStrategy_MetaData()
   {
     return (EReference)evaluationStrategyEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEvaluationStrategy_Evaluations()
+  {
+    return (EReference)evaluationStrategyEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1555,9 +1585,19 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getQualitativeMapping_Mappin()
+  public EReference getQualitativeMapping_MetaData()
   {
     return (EReference)qualitativeMappingEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQualitativeMapping_Mappin()
+  {
+    return (EReference)qualitativeMappingEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1675,9 +1715,19 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getContributionContext_Changes()
+  public EReference getContributionContext_MetaData()
   {
     return (EReference)contributionContextEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getContributionContext_Changes()
+  {
+    return (EReference)contributionContextEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2014,6 +2064,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     createEAttribute(intentionalElementEClass, INTENTIONAL_ELEMENT__NAME);
     createEAttribute(intentionalElementEClass, INTENTIONAL_ELEMENT__LABEL);
     createEAttribute(intentionalElementEClass, INTENTIONAL_ELEMENT__DESCRIPTION);
+    createEReference(intentionalElementEClass, INTENTIONAL_ELEMENT__META_DATA);
 
     elementLinkEClass = createEClass(ELEMENT_LINK);
     createEReference(elementLinkEClass, ELEMENT_LINK__SRC);
@@ -2031,6 +2082,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     createEAttribute(actorEClass, ACTOR__IMPORTANCE_QUANTITATIVE);
     createEAttribute(actorEClass, ACTOR__DESCRIPTION);
     createEAttribute(actorEClass, ACTOR__FILL_COLOR);
+    createEReference(actorEClass, ACTOR__META_DATA);
     createEReference(actorEClass, ACTOR__ELEMETS);
 
     softgoalEClass = createEClass(SOFTGOAL);
@@ -2109,6 +2161,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     evaluationStrategyEClass = createEClass(EVALUATION_STRATEGY);
     createEAttribute(evaluationStrategyEClass, EVALUATION_STRATEGY__NAME);
     createEReference(evaluationStrategyEClass, EVALUATION_STRATEGY__SUPER_STRATEGIES);
+    createEReference(evaluationStrategyEClass, EVALUATION_STRATEGY__META_DATA);
     createEReference(evaluationStrategyEClass, EVALUATION_STRATEGY__EVALUATIONS);
 
     evaluationEClass = createEClass(EVALUATION);
@@ -2138,6 +2191,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
 
     qualitativeMappingEClass = createEClass(QUALITATIVE_MAPPING);
     createEAttribute(qualitativeMappingEClass, QUALITATIVE_MAPPING__NAME);
+    createEReference(qualitativeMappingEClass, QUALITATIVE_MAPPING__META_DATA);
     createEReference(qualitativeMappingEClass, QUALITATIVE_MAPPING__MAPPIN);
 
     mappingEClass = createEClass(MAPPING);
@@ -2153,6 +2207,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     contributionContextEClass = createEClass(CONTRIBUTION_CONTEXT);
     createEAttribute(contributionContextEClass, CONTRIBUTION_CONTEXT__NAME);
     createEReference(contributionContextEClass, CONTRIBUTION_CONTEXT__SUPER_CONTRIBUTION_CONTEXTS);
+    createEReference(contributionContextEClass, CONTRIBUTION_CONTEXT__META_DATA);
     createEReference(contributionContextEClass, CONTRIBUTION_CONTEXT__CHANGES);
 
     contributionChangeEClass = createEClass(CONTRIBUTION_CHANGE);
@@ -2275,6 +2330,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEAttribute(getIntentionalElement_Name(), theEcorePackage.getEString(), "name", null, 0, 1, IntentionalElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getIntentionalElement_Label(), theEcorePackage.getEString(), "label", null, 0, 1, IntentionalElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getIntentionalElement_Description(), theEcorePackage.getEString(), "description", null, 0, 1, IntentionalElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getIntentionalElement_MetaData(), this.getMetadata(), null, "metaData", null, 0, -1, IntentionalElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(elementLinkEClass, ElementLink.class, "ElementLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getElementLink_Src(), this.getGRLElement(), null, "src", null, 0, 1, ElementLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2292,6 +2348,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEAttribute(getActor_ImportanceQuantitative(), theEcorePackage.getEInt(), "importanceQuantitative", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getActor_Description(), theEcorePackage.getEString(), "description", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getActor_FillColor(), this.getColor(), "fillColor", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getActor_MetaData(), this.getMetadata(), null, "metaData", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getActor_Elemets(), this.getGRLElement(), null, "elemets", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(softgoalEClass, Softgoal.class, "Softgoal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2370,6 +2427,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEClass(evaluationStrategyEClass, EvaluationStrategy.class, "EvaluationStrategy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEvaluationStrategy_Name(), theEcorePackage.getEString(), "name", null, 0, 1, EvaluationStrategy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEvaluationStrategy_SuperStrategies(), this.getEvaluationStrategy(), null, "superStrategies", null, 0, -1, EvaluationStrategy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEvaluationStrategy_MetaData(), this.getMetadata(), null, "metaData", null, 0, -1, EvaluationStrategy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEvaluationStrategy_Evaluations(), this.getEvaluation(), null, "evaluations", null, 0, -1, EvaluationStrategy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(evaluationEClass, Evaluation.class, "Evaluation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2399,6 +2457,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
 
     initEClass(qualitativeMappingEClass, QualitativeMapping.class, "QualitativeMapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getQualitativeMapping_Name(), theEcorePackage.getEString(), "name", null, 0, 1, QualitativeMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQualitativeMapping_MetaData(), this.getMetadata(), null, "metaData", null, 0, -1, QualitativeMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQualitativeMapping_Mappin(), this.getMapping(), null, "mappin", null, 0, -1, QualitativeMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(mappingEClass, Mapping.class, "Mapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2414,6 +2473,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEClass(contributionContextEClass, ContributionContext.class, "ContributionContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getContributionContext_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ContributionContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getContributionContext_SuperContributionContexts(), this.getContributionContext(), null, "superContributionContexts", null, 0, -1, ContributionContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContributionContext_MetaData(), this.getMetadata(), null, "metaData", null, 0, -1, ContributionContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getContributionContext_Changes(), this.getContributionChange(), null, "changes", null, 0, -1, ContributionContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(contributionChangeEClass, ContributionChange.class, "ContributionChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

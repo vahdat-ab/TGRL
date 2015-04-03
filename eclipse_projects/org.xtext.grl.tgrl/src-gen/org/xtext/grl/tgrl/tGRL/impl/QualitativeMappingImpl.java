@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.grl.tgrl.tGRL.Mapping;
+import org.xtext.grl.tgrl.tGRL.Metadata;
 import org.xtext.grl.tgrl.tGRL.QualitativeMapping;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
@@ -29,6 +30,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.QualitativeMappingImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.QualitativeMappingImpl#getMetaData <em>Meta Data</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.QualitativeMappingImpl#getMappin <em>Mappin</em>}</li>
  * </ul>
  * </p>
@@ -56,6 +58,16 @@ public class QualitativeMappingImpl extends GRLElementImpl implements Qualitativ
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getMetaData() <em>Meta Data</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMetaData()
+   * @generated
+   * @ordered
+   */
+  protected EList<Metadata> metaData;
 
   /**
    * The cached value of the '{@link #getMappin() <em>Mappin</em>}' containment reference list.
@@ -116,6 +128,20 @@ public class QualitativeMappingImpl extends GRLElementImpl implements Qualitativ
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Metadata> getMetaData()
+  {
+    if (metaData == null)
+    {
+      metaData = new EObjectContainmentEList<Metadata>(Metadata.class, this, TGRLPackage.QUALITATIVE_MAPPING__META_DATA);
+    }
+    return metaData;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<Mapping> getMappin()
   {
     if (mappin == null)
@@ -135,6 +161,8 @@ public class QualitativeMappingImpl extends GRLElementImpl implements Qualitativ
   {
     switch (featureID)
     {
+      case TGRLPackage.QUALITATIVE_MAPPING__META_DATA:
+        return ((InternalEList<?>)getMetaData()).basicRemove(otherEnd, msgs);
       case TGRLPackage.QUALITATIVE_MAPPING__MAPPIN:
         return ((InternalEList<?>)getMappin()).basicRemove(otherEnd, msgs);
     }
@@ -153,6 +181,8 @@ public class QualitativeMappingImpl extends GRLElementImpl implements Qualitativ
     {
       case TGRLPackage.QUALITATIVE_MAPPING__NAME:
         return getName();
+      case TGRLPackage.QUALITATIVE_MAPPING__META_DATA:
+        return getMetaData();
       case TGRLPackage.QUALITATIVE_MAPPING__MAPPIN:
         return getMappin();
     }
@@ -172,6 +202,10 @@ public class QualitativeMappingImpl extends GRLElementImpl implements Qualitativ
     {
       case TGRLPackage.QUALITATIVE_MAPPING__NAME:
         setName((String)newValue);
+        return;
+      case TGRLPackage.QUALITATIVE_MAPPING__META_DATA:
+        getMetaData().clear();
+        getMetaData().addAll((Collection<? extends Metadata>)newValue);
         return;
       case TGRLPackage.QUALITATIVE_MAPPING__MAPPIN:
         getMappin().clear();
@@ -194,6 +228,9 @@ public class QualitativeMappingImpl extends GRLElementImpl implements Qualitativ
       case TGRLPackage.QUALITATIVE_MAPPING__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case TGRLPackage.QUALITATIVE_MAPPING__META_DATA:
+        getMetaData().clear();
+        return;
       case TGRLPackage.QUALITATIVE_MAPPING__MAPPIN:
         getMappin().clear();
         return;
@@ -213,6 +250,8 @@ public class QualitativeMappingImpl extends GRLElementImpl implements Qualitativ
     {
       case TGRLPackage.QUALITATIVE_MAPPING__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case TGRLPackage.QUALITATIVE_MAPPING__META_DATA:
+        return metaData != null && !metaData.isEmpty();
       case TGRLPackage.QUALITATIVE_MAPPING__MAPPIN:
         return mappin != null && !mappin.isEmpty();
     }

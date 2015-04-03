@@ -21,6 +21,7 @@ import org.xtext.grl.tgrl.tGRL.Actor;
 import org.xtext.grl.tgrl.tGRL.Color;
 import org.xtext.grl.tgrl.tGRL.GRLElement;
 import org.xtext.grl.tgrl.tGRL.ImportanceType;
+import org.xtext.grl.tgrl.tGRL.Metadata;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
@@ -36,6 +37,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ActorImpl#getImportanceQuantitative <em>Importance Quantitative</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ActorImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ActorImpl#getFillColor <em>Fill Color</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ActorImpl#getMetaData <em>Meta Data</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ActorImpl#getElemets <em>Elemets</em>}</li>
  * </ul>
  * </p>
@@ -163,6 +165,16 @@ public class ActorImpl extends GRLElementImpl implements Actor
    * @ordered
    */
   protected Color fillColor = FILL_COLOR_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getMetaData() <em>Meta Data</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMetaData()
+   * @generated
+   * @ordered
+   */
+  protected EList<Metadata> metaData;
 
   /**
    * The cached value of the '{@link #getElemets() <em>Elemets</em>}' containment reference list.
@@ -338,6 +350,20 @@ public class ActorImpl extends GRLElementImpl implements Actor
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Metadata> getMetaData()
+  {
+    if (metaData == null)
+    {
+      metaData = new EObjectContainmentEList<Metadata>(Metadata.class, this, TGRLPackage.ACTOR__META_DATA);
+    }
+    return metaData;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<GRLElement> getElemets()
   {
     if (elemets == null)
@@ -357,6 +383,8 @@ public class ActorImpl extends GRLElementImpl implements Actor
   {
     switch (featureID)
     {
+      case TGRLPackage.ACTOR__META_DATA:
+        return ((InternalEList<?>)getMetaData()).basicRemove(otherEnd, msgs);
       case TGRLPackage.ACTOR__ELEMETS:
         return ((InternalEList<?>)getElemets()).basicRemove(otherEnd, msgs);
     }
@@ -385,6 +413,8 @@ public class ActorImpl extends GRLElementImpl implements Actor
         return getDescription();
       case TGRLPackage.ACTOR__FILL_COLOR:
         return getFillColor();
+      case TGRLPackage.ACTOR__META_DATA:
+        return getMetaData();
       case TGRLPackage.ACTOR__ELEMETS:
         return getElemets();
     }
@@ -419,6 +449,10 @@ public class ActorImpl extends GRLElementImpl implements Actor
         return;
       case TGRLPackage.ACTOR__FILL_COLOR:
         setFillColor((Color)newValue);
+        return;
+      case TGRLPackage.ACTOR__META_DATA:
+        getMetaData().clear();
+        getMetaData().addAll((Collection<? extends Metadata>)newValue);
         return;
       case TGRLPackage.ACTOR__ELEMETS:
         getElemets().clear();
@@ -456,6 +490,9 @@ public class ActorImpl extends GRLElementImpl implements Actor
       case TGRLPackage.ACTOR__FILL_COLOR:
         setFillColor(FILL_COLOR_EDEFAULT);
         return;
+      case TGRLPackage.ACTOR__META_DATA:
+        getMetaData().clear();
+        return;
       case TGRLPackage.ACTOR__ELEMETS:
         getElemets().clear();
         return;
@@ -485,6 +522,8 @@ public class ActorImpl extends GRLElementImpl implements Actor
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
       case TGRLPackage.ACTOR__FILL_COLOR:
         return fillColor != FILL_COLOR_EDEFAULT;
+      case TGRLPackage.ACTOR__META_DATA:
+        return metaData != null && !metaData.isEmpty();
       case TGRLPackage.ACTOR__ELEMETS:
         return elemets != null && !elemets.isEmpty();
     }

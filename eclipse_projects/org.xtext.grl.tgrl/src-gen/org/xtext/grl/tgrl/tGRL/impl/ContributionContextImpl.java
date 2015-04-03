@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.grl.tgrl.tGRL.ContributionChange;
 import org.xtext.grl.tgrl.tGRL.ContributionContext;
+import org.xtext.grl.tgrl.tGRL.Metadata;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
@@ -31,6 +32,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionContextImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionContextImpl#getSuperContributionContexts <em>Super Contribution Contexts</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionContextImpl#getMetaData <em>Meta Data</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionContextImpl#getChanges <em>Changes</em>}</li>
  * </ul>
  * </p>
@@ -68,6 +70,16 @@ public class ContributionContextImpl extends GRLElementImpl implements Contribut
    * @ordered
    */
   protected EList<ContributionContext> superContributionContexts;
+
+  /**
+   * The cached value of the '{@link #getMetaData() <em>Meta Data</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMetaData()
+   * @generated
+   * @ordered
+   */
+  protected EList<Metadata> metaData;
 
   /**
    * The cached value of the '{@link #getChanges() <em>Changes</em>}' containment reference list.
@@ -142,6 +154,20 @@ public class ContributionContextImpl extends GRLElementImpl implements Contribut
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Metadata> getMetaData()
+  {
+    if (metaData == null)
+    {
+      metaData = new EObjectContainmentEList<Metadata>(Metadata.class, this, TGRLPackage.CONTRIBUTION_CONTEXT__META_DATA);
+    }
+    return metaData;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<ContributionChange> getChanges()
   {
     if (changes == null)
@@ -161,6 +187,8 @@ public class ContributionContextImpl extends GRLElementImpl implements Contribut
   {
     switch (featureID)
     {
+      case TGRLPackage.CONTRIBUTION_CONTEXT__META_DATA:
+        return ((InternalEList<?>)getMetaData()).basicRemove(otherEnd, msgs);
       case TGRLPackage.CONTRIBUTION_CONTEXT__CHANGES:
         return ((InternalEList<?>)getChanges()).basicRemove(otherEnd, msgs);
     }
@@ -181,6 +209,8 @@ public class ContributionContextImpl extends GRLElementImpl implements Contribut
         return getName();
       case TGRLPackage.CONTRIBUTION_CONTEXT__SUPER_CONTRIBUTION_CONTEXTS:
         return getSuperContributionContexts();
+      case TGRLPackage.CONTRIBUTION_CONTEXT__META_DATA:
+        return getMetaData();
       case TGRLPackage.CONTRIBUTION_CONTEXT__CHANGES:
         return getChanges();
     }
@@ -204,6 +234,10 @@ public class ContributionContextImpl extends GRLElementImpl implements Contribut
       case TGRLPackage.CONTRIBUTION_CONTEXT__SUPER_CONTRIBUTION_CONTEXTS:
         getSuperContributionContexts().clear();
         getSuperContributionContexts().addAll((Collection<? extends ContributionContext>)newValue);
+        return;
+      case TGRLPackage.CONTRIBUTION_CONTEXT__META_DATA:
+        getMetaData().clear();
+        getMetaData().addAll((Collection<? extends Metadata>)newValue);
         return;
       case TGRLPackage.CONTRIBUTION_CONTEXT__CHANGES:
         getChanges().clear();
@@ -229,6 +263,9 @@ public class ContributionContextImpl extends GRLElementImpl implements Contribut
       case TGRLPackage.CONTRIBUTION_CONTEXT__SUPER_CONTRIBUTION_CONTEXTS:
         getSuperContributionContexts().clear();
         return;
+      case TGRLPackage.CONTRIBUTION_CONTEXT__META_DATA:
+        getMetaData().clear();
+        return;
       case TGRLPackage.CONTRIBUTION_CONTEXT__CHANGES:
         getChanges().clear();
         return;
@@ -250,6 +287,8 @@ public class ContributionContextImpl extends GRLElementImpl implements Contribut
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case TGRLPackage.CONTRIBUTION_CONTEXT__SUPER_CONTRIBUTION_CONTEXTS:
         return superContributionContexts != null && !superContributionContexts.isEmpty();
+      case TGRLPackage.CONTRIBUTION_CONTEXT__META_DATA:
+        return metaData != null && !metaData.isEmpty();
       case TGRLPackage.CONTRIBUTION_CONTEXT__CHANGES:
         return changes != null && !changes.isEmpty();
     }

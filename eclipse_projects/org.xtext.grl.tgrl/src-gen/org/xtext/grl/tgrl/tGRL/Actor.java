@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getImportanceQuantitative <em>Importance Quantitative</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getDescription <em>Description</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getFillColor <em>Fill Color</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getMetaData <em>Meta Data</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getElemets <em>Elemets</em>}</li>
  * </ul>
  * </p>
@@ -189,6 +190,22 @@ public interface Actor extends GRLElement
    * @generated
    */
   void setFillColor(Color value);
+
+  /**
+   * Returns the value of the '<em><b>Meta Data</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.Metadata}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Meta Data</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Meta Data</em>' containment reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getActor_MetaData()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Metadata> getMetaData();
 
   /**
    * Returns the value of the '<em><b>Elemets</b></em>' containment reference list.

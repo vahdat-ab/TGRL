@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.grl.tgrl.tGRL.Evaluation;
 import org.xtext.grl.tgrl.tGRL.EvaluationStrategy;
+import org.xtext.grl.tgrl.tGRL.Metadata;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
@@ -31,6 +32,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationStrategyImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationStrategyImpl#getSuperStrategies <em>Super Strategies</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationStrategyImpl#getMetaData <em>Meta Data</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationStrategyImpl#getEvaluations <em>Evaluations</em>}</li>
  * </ul>
  * </p>
@@ -68,6 +70,16 @@ public class EvaluationStrategyImpl extends GRLElementImpl implements Evaluation
    * @ordered
    */
   protected EList<EvaluationStrategy> superStrategies;
+
+  /**
+   * The cached value of the '{@link #getMetaData() <em>Meta Data</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMetaData()
+   * @generated
+   * @ordered
+   */
+  protected EList<Metadata> metaData;
 
   /**
    * The cached value of the '{@link #getEvaluations() <em>Evaluations</em>}' containment reference list.
@@ -142,6 +154,20 @@ public class EvaluationStrategyImpl extends GRLElementImpl implements Evaluation
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Metadata> getMetaData()
+  {
+    if (metaData == null)
+    {
+      metaData = new EObjectContainmentEList<Metadata>(Metadata.class, this, TGRLPackage.EVALUATION_STRATEGY__META_DATA);
+    }
+    return metaData;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<Evaluation> getEvaluations()
   {
     if (evaluations == null)
@@ -161,6 +187,8 @@ public class EvaluationStrategyImpl extends GRLElementImpl implements Evaluation
   {
     switch (featureID)
     {
+      case TGRLPackage.EVALUATION_STRATEGY__META_DATA:
+        return ((InternalEList<?>)getMetaData()).basicRemove(otherEnd, msgs);
       case TGRLPackage.EVALUATION_STRATEGY__EVALUATIONS:
         return ((InternalEList<?>)getEvaluations()).basicRemove(otherEnd, msgs);
     }
@@ -181,6 +209,8 @@ public class EvaluationStrategyImpl extends GRLElementImpl implements Evaluation
         return getName();
       case TGRLPackage.EVALUATION_STRATEGY__SUPER_STRATEGIES:
         return getSuperStrategies();
+      case TGRLPackage.EVALUATION_STRATEGY__META_DATA:
+        return getMetaData();
       case TGRLPackage.EVALUATION_STRATEGY__EVALUATIONS:
         return getEvaluations();
     }
@@ -204,6 +234,10 @@ public class EvaluationStrategyImpl extends GRLElementImpl implements Evaluation
       case TGRLPackage.EVALUATION_STRATEGY__SUPER_STRATEGIES:
         getSuperStrategies().clear();
         getSuperStrategies().addAll((Collection<? extends EvaluationStrategy>)newValue);
+        return;
+      case TGRLPackage.EVALUATION_STRATEGY__META_DATA:
+        getMetaData().clear();
+        getMetaData().addAll((Collection<? extends Metadata>)newValue);
         return;
       case TGRLPackage.EVALUATION_STRATEGY__EVALUATIONS:
         getEvaluations().clear();
@@ -229,6 +263,9 @@ public class EvaluationStrategyImpl extends GRLElementImpl implements Evaluation
       case TGRLPackage.EVALUATION_STRATEGY__SUPER_STRATEGIES:
         getSuperStrategies().clear();
         return;
+      case TGRLPackage.EVALUATION_STRATEGY__META_DATA:
+        getMetaData().clear();
+        return;
       case TGRLPackage.EVALUATION_STRATEGY__EVALUATIONS:
         getEvaluations().clear();
         return;
@@ -250,6 +287,8 @@ public class EvaluationStrategyImpl extends GRLElementImpl implements Evaluation
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case TGRLPackage.EVALUATION_STRATEGY__SUPER_STRATEGIES:
         return superStrategies != null && !superStrategies.isEmpty();
+      case TGRLPackage.EVALUATION_STRATEGY__META_DATA:
+        return metaData != null && !metaData.isEmpty();
       case TGRLPackage.EVALUATION_STRATEGY__EVALUATIONS:
         return evaluations != null && !evaluations.isEmpty();
     }

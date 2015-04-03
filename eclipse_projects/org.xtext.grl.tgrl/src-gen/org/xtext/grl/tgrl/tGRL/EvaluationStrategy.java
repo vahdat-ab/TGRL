@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getSuperStrategies <em>Super Strategies</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getMetaData <em>Meta Data</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.EvaluationStrategy#getEvaluations <em>Evaluations</em>}</li>
  * </ul>
  * </p>
@@ -65,6 +66,22 @@ public interface EvaluationStrategy extends GRLElement
    * @generated
    */
   EList<EvaluationStrategy> getSuperStrategies();
+
+  /**
+   * Returns the value of the '<em><b>Meta Data</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.Metadata}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Meta Data</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Meta Data</em>' containment reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getEvaluationStrategy_MetaData()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Metadata> getMetaData();
 
   /**
    * Returns the value of the '<em><b>Evaluations</b></em>' containment reference list.

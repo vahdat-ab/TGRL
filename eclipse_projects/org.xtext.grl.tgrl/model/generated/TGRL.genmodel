@@ -78,6 +78,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//IntentionalElement/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//IntentionalElement/label"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//IntentionalElement/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//IntentionalElement/metaData"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//ElementLink">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//ElementLink/src"/>
@@ -94,6 +95,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Actor/importanceQuantitative"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Actor/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Actor/fillColor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Actor/metaData"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Actor/elemets"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//Softgoal">
@@ -171,6 +173,7 @@
     <genClasses ecoreClass="TGRL.ecore#//EvaluationStrategy">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//EvaluationStrategy/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//EvaluationStrategy/superStrategies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//EvaluationStrategy/metaData"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//EvaluationStrategy/evaluations"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//Evaluation">
@@ -199,6 +202,7 @@
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//QualitativeMapping">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//QualitativeMapping/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//QualitativeMapping/metaData"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//QualitativeMapping/mappin"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//Mapping">
@@ -214,6 +218,7 @@
     <genClasses ecoreClass="TGRL.ecore#//ContributionContext">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionContext/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//ContributionContext/superContributionContexts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//ContributionContext/metaData"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//ContributionContext/changes"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//ContributionChange">

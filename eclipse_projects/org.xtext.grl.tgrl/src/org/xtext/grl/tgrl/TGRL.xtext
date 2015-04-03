@@ -60,6 +60,7 @@ Actor:
 		( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
 		('description' '=' description=STRING ';')?&
 		('color' '=' fillColor = Color ';')?&
+		(metaData+=Metadata)*&
 		(elemets+=IntentionalElement  | elemets+=ElementLink)*	
 		)
 		
@@ -78,6 +79,7 @@ Softgoal :
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
 			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+			(metaData+=Metadata)*&
 			(elementLinks+=InLineElementLink)*		
 		)
 	'}'
@@ -93,7 +95,8 @@ Goal:
 			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&		
+			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+			(metaData+=Metadata)*&		
 			(elementLinks+=InLineElementLink)*
 		)		
 	'}'
@@ -109,7 +112,8 @@ Task:
 			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&	
+			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+			(metaData+=Metadata)*&	
 			(elementLinks+=InLineElementLink)*	 
 		)		
 	'}'
@@ -125,7 +129,8 @@ Resource:
 			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&	
+			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+			(metaData+=Metadata)*&	
 			(elementLinks+=InLineElementLink)*	
 		)		
 	'}'
@@ -142,6 +147,7 @@ Indicator:
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
 			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+			(metaData+=Metadata)*&
 			(elementLinks+=InLineElementLink)*			
 		)		
 	'}'
@@ -150,6 +156,7 @@ Belief:
 	'belief' name=ID '{'
 		(
 			('name' '=' label = STRING ';')?&
+			(metaData+=Metadata)*&
 			('description' description=STRING ';')?
 		)		
 	'}'
@@ -221,7 +228,10 @@ StrategyGroup:
 EvaluationStrategy: 
 	'strategy' name=ID ('extends' superStrategies+=[EvaluationStrategy | QualifiedName](',' superStrategies+=[EvaluationStrategy | QualifiedName])* )?
 	'{'
-		evaluations+=Evaluation*
+		(
+			(metaData+=Metadata)*&
+			evaluations+=Evaluation*
+		)
 	'}'
 ;
 Evaluation:
@@ -274,7 +284,11 @@ KPIQualitativeEvalValueSet:
 
 QualitativeMapping:
 	'qualitativeMapping' name=ID '{'
-		(mappin+=Mapping)*			
+		(
+			(metaData+=Metadata)*&
+			(mappin+=Mapping)*
+		)
+					
 	'}'
 ;
 
@@ -288,9 +302,11 @@ ContributionGroup:
 
 ContributionContext: 
 	'contribution' name= ID ('extends' superContributionContexts+=[ContributionContext | QualifiedName](',' superContributionContexts+=[ContributionContext | QualifiedName])* )?
-	 '{'
+	'{'
+		(
+			(metaData+=Metadata)*&
 			(changes+=ContributionChange)*
-
+		)
 	'}'
 ;
 ContributionChange:
@@ -317,7 +333,7 @@ Comment:
 	'comment' content=STRING ';'
 ;
 LinkType:
-	'link' name = STRING ';'
+	'link' name = ID ';'
 ;
 
 Link :

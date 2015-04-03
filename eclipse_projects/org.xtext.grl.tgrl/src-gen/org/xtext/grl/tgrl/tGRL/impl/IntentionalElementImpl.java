@@ -2,13 +2,23 @@
  */
 package org.xtext.grl.tgrl.tGRL.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.xtext.grl.tgrl.tGRL.IntentionalElement;
+import org.xtext.grl.tgrl.tGRL.Metadata;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
@@ -21,6 +31,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl#getMetaData <em>Meta Data</em>}</li>
  * </ul>
  * </p>
  *
@@ -87,6 +98,16 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
    * @ordered
    */
   protected String description = DESCRIPTION_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getMetaData() <em>Meta Data</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMetaData()
+   * @generated
+   * @ordered
+   */
+  protected EList<Metadata> metaData;
 
   /**
    * <!-- begin-user-doc -->
@@ -183,6 +204,36 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Metadata> getMetaData()
+  {
+    if (metaData == null)
+    {
+      metaData = new EObjectContainmentEList<Metadata>(Metadata.class, this, TGRLPackage.INTENTIONAL_ELEMENT__META_DATA);
+    }
+    return metaData;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case TGRLPackage.INTENTIONAL_ELEMENT__META_DATA:
+        return ((InternalEList<?>)getMetaData()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -194,6 +245,8 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
         return getLabel();
       case TGRLPackage.INTENTIONAL_ELEMENT__DESCRIPTION:
         return getDescription();
+      case TGRLPackage.INTENTIONAL_ELEMENT__META_DATA:
+        return getMetaData();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -203,6 +256,7 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -216,6 +270,10 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
         return;
       case TGRLPackage.INTENTIONAL_ELEMENT__DESCRIPTION:
         setDescription((String)newValue);
+        return;
+      case TGRLPackage.INTENTIONAL_ELEMENT__META_DATA:
+        getMetaData().clear();
+        getMetaData().addAll((Collection<? extends Metadata>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -240,6 +298,9 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
       case TGRLPackage.INTENTIONAL_ELEMENT__DESCRIPTION:
         setDescription(DESCRIPTION_EDEFAULT);
         return;
+      case TGRLPackage.INTENTIONAL_ELEMENT__META_DATA:
+        getMetaData().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -260,6 +321,8 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
         return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
       case TGRLPackage.INTENTIONAL_ELEMENT__DESCRIPTION:
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+      case TGRLPackage.INTENTIONAL_ELEMENT__META_DATA:
+        return metaData != null && !metaData.isEmpty();
     }
     return super.eIsSet(featureID);
   }
