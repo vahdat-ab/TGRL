@@ -33,14 +33,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importanceQuantitative"
         eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fillColor" eType="#//Color"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="metaData" upperBound="-1"
         eType="#//Metadata" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elemets" upperBound="-1"
         eType="#//GRLElement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Softgoal" eSuperTypes="#//IntentionalElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fillColor" eType="#//Color"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="decompositionType" eType="#//DecompositionType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importance" eType="#//ImportanceType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importanceQuantitative"
@@ -49,7 +47,6 @@
         eType="#//InLineElementLink" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Goal" eSuperTypes="#//IntentionalElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fillColor" eType="#//Color"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="decompositionType" eType="#//DecompositionType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importance" eType="#//ImportanceType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importanceQuantitative"
@@ -58,7 +55,6 @@
         eType="#//InLineElementLink" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//IntentionalElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fillColor" eType="#//Color"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="decompositionType" eType="#//DecompositionType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importance" eType="#//ImportanceType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importanceQuantitative"
@@ -67,7 +63,6 @@
         eType="#//InLineElementLink" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="#//IntentionalElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fillColor" eType="#//Color"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="decompositionType" eType="#//DecompositionType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importance" eType="#//ImportanceType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importanceQuantitative"
@@ -76,7 +71,6 @@
         eType="#//InLineElementLink" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Indicator" eSuperTypes="#//IntentionalElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fillColor" eType="#//Color"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="decompositionType" eType="#//DecompositionType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importance" eType="#//ImportanceType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importanceQuantitative"
@@ -175,7 +169,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Mapping" eSuperTypes="#//GRLBaseElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valuation" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="evaluation" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualitativeEvaluation"
         eType="#//QualitativeLabel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="exceeds" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>

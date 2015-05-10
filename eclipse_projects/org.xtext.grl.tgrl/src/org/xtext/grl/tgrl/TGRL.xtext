@@ -62,9 +62,8 @@ Actor:
 			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+			( (importance=ImportanceType | (importanceQuantitative=INT)) ';')?&
 			('description' '=' description=STRING ';')?&
-			('color' '=' fillColor = Color ';')?&
 			(metaData+=Metadata)*&
 			(elemets+=IntentionalElement  | elemets+=ElementLink)*	
 			)
@@ -83,7 +82,6 @@ Softgoal :
 			(
 				('name' '=' label = STRING ';')?&
 				('description' '=' description=STRING ';')?&
-				('color' '=' fillColor = Color ';')?&
 				('decompositionType' '=' decompositionType=DecompositionType ';')?&
 				/*
 				 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
@@ -98,30 +96,29 @@ Softgoal :
 	)
 ;
 Goal:
-	'goal' name = ID
+'goal' name = ID
+(
+	';' |
 	(
-		';' |
+	 '{'
 		(
-		 '{'
-			(
-				('name' '=' label = STRING ';')?&
-				('description' '=' description=STRING ';')?&
-				('color' '=' fillColor = Color ';')?&
-				('decompositionType' '='decompositionType=DecompositionType ';')?&
-				/*
-				 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
-				 * 		This can be done through the post processing mechanism in xText 
-				 */
-				( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
-				(metaData+=Metadata)*&		
-				(elementLinks+=InLineElementLink)*
-			)		
-		'}'			
-		)
+			('name' '=' label = STRING ';')?&
+			('description' '=' description=STRING ';')?&
+			('decompositionType' '='decompositionType=DecompositionType ';')?&
+			/*
+			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */
+			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+			(metaData+=Metadata)*&		
+			(elementLinks+=InLineElementLink)*
+		)		
+	'}'			
 	)
+)
 ; 
 Task:
-	'Task' name = ID
+	'task' name = ID
 	(
 		';' | 
 		(
@@ -129,7 +126,6 @@ Task:
 			(
 				('name' '=' label = STRING ';')?&
 				('description' '=' description=STRING ';')?&
-				('color' '=' fillColor = Color ';')?&
 				('decompositionType' '='decompositionType=DecompositionType ';')?&
 				/*
 				 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
@@ -152,7 +148,6 @@ Resource:
 			(
 				('name' '=' label = STRING ';')?&
 				('description' '=' description=STRING ';')?&
-				('color' '=' fillColor = Color ';')?&
 				('decompositionType' '='decompositionType=DecompositionType ';')?&
 				/*
 				 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
@@ -175,7 +170,6 @@ Indicator:
 			(
 				('name' '=' label = STRING ';')?&
 				('description' '=' description=STRING ';')?&
-				('color' '=' fillColor = Color ';')?&
 				('decompositionType' '='decompositionType=DecompositionType ';')?&
 				/*
 				 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
@@ -209,7 +203,6 @@ Decomposition:
 	src=[IntentionalElement | QualifiedName] 'decomposedBy' dest+=DecompositionEnd (','dest+=DecompositionEnd)* ';'
 //			('name' '=' label = STRING ';')?&
 //			('description' '=' description=STRING ';')?&
-//			('color' '=' fillColor = Color ';')?&
 ;
 InLineDecomposition:
 	'decomposedBy' dest+=DecompositionEnd (','dest+=DecompositionEnd)* ';'
@@ -223,7 +216,7 @@ DecompositionEnd:
 	)?
 ;
 Contribution: 
-	src=[IntentionalElement | QualifiedName] 'contributeTo' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
+	src=[IntentionalElement | QualifiedName] 'contributesTo' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
 //			('name' '=' label = STRING ';')?&
 //			('contribution' '=' contribution=ContributionType ';')?&
 			/*
@@ -232,11 +225,10 @@ Contribution:
 			 */
 //			('quantitativeContribution' '=' quantitativeContribution=INT ';')?&
 //			('correlation' '=' correlation=BOOLEAN ';')?&
-//			('description' '=' description=STRING ';')?&
-//			('color' '=' fillColor = Color ';')?&				
+//			('description' '=' description=STRING ';')?&				
 ;
 InLineContribution:
-	'contributeTo' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
+	'contributesTo' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
 ;
 ContributionEnd:
    (name = ID)?
@@ -247,14 +239,17 @@ ContributionEnd:
 		'}'
 	)?
 ;
+
+//Question:
+//A Dependency describes how a source actor definition (the depender) depends on a destination actor definition (the dependee) for an intentional element or indicator (the dependum).
+
 Dependency:
-	src=[IntentionalElement | QualifiedName] 'dependOn' dest+=DependencyEnd (','dest+=DependencyEnd)* ';'
+	src=[IntentionalElement | QualifiedName] 'dependsOn' dest+=DependencyEnd (','dest+=DependencyEnd)* ';'
 //			('name' '=' label = STRING ';')?&
 //			('description' '=' c ';')?&
-//			('color' '=' fillColor = Color ';')?&
 ;
 InLineDependency:
-	'dependOn' dest+=DependencyEnd (','dest+=DependencyEnd)* ';'
+	'dependsOn' dest+=DependencyEnd (','dest+=DependencyEnd)* ';'
 ;
 DependencyEnd:
 	name = [IntentionalElement | QualifiedName] 
@@ -336,7 +331,7 @@ QualitativeMapping:
 ;
 
 Mapping:
-	name=STRING ',' valuation=INT ',' qualitativeEvaluation=QualitativeLabel ',' exceeds=BOOLEAN ';'			
+	name=STRING ',' evaluation=INT ',' qualitativeEvaluation=QualitativeLabel ',' exceeds=BOOLEAN ';'			
 ;
 
 ContributionGroup: 

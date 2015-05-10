@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.xtext.grl.tgrl.tGRL.Color;
 import org.xtext.grl.tgrl.tGRL.DecompositionType;
 import org.xtext.grl.tgrl.tGRL.Goal;
 import org.xtext.grl.tgrl.tGRL.ImportanceType;
@@ -31,7 +30,6 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GoalImpl#getFillColor <em>Fill Color</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GoalImpl#getDecompositionType <em>Decomposition Type</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GoalImpl#getImportance <em>Importance</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.GoalImpl#getImportanceQuantitative <em>Importance Quantitative</em>}</li>
@@ -43,26 +41,6 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  */
 public class GoalImpl extends IntentionalElementImpl implements Goal
 {
-  /**
-   * The default value of the '{@link #getFillColor() <em>Fill Color</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getFillColor()
-   * @generated
-   * @ordered
-   */
-  protected static final Color FILL_COLOR_EDEFAULT = Color.WHITE;
-
-  /**
-   * The cached value of the '{@link #getFillColor() <em>Fill Color</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getFillColor()
-   * @generated
-   * @ordered
-   */
-  protected Color fillColor = FILL_COLOR_EDEFAULT;
-
   /**
    * The default value of the '{@link #getDecompositionType() <em>Decomposition Type</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -152,29 +130,6 @@ public class GoalImpl extends IntentionalElementImpl implements Goal
   protected EClass eStaticClass()
   {
     return TGRLPackage.Literals.GOAL;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Color getFillColor()
-  {
-    return fillColor;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setFillColor(Color newFillColor)
-  {
-    Color oldFillColor = fillColor;
-    fillColor = newFillColor == null ? FILL_COLOR_EDEFAULT : newFillColor;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.GOAL__FILL_COLOR, oldFillColor, fillColor));
   }
 
   /**
@@ -286,8 +241,6 @@ public class GoalImpl extends IntentionalElementImpl implements Goal
   {
     switch (featureID)
     {
-      case TGRLPackage.GOAL__FILL_COLOR:
-        return getFillColor();
       case TGRLPackage.GOAL__DECOMPOSITION_TYPE:
         return getDecompositionType();
       case TGRLPackage.GOAL__IMPORTANCE:
@@ -311,9 +264,6 @@ public class GoalImpl extends IntentionalElementImpl implements Goal
   {
     switch (featureID)
     {
-      case TGRLPackage.GOAL__FILL_COLOR:
-        setFillColor((Color)newValue);
-        return;
       case TGRLPackage.GOAL__DECOMPOSITION_TYPE:
         setDecompositionType((DecompositionType)newValue);
         return;
@@ -341,9 +291,6 @@ public class GoalImpl extends IntentionalElementImpl implements Goal
   {
     switch (featureID)
     {
-      case TGRLPackage.GOAL__FILL_COLOR:
-        setFillColor(FILL_COLOR_EDEFAULT);
-        return;
       case TGRLPackage.GOAL__DECOMPOSITION_TYPE:
         setDecompositionType(DECOMPOSITION_TYPE_EDEFAULT);
         return;
@@ -370,8 +317,6 @@ public class GoalImpl extends IntentionalElementImpl implements Goal
   {
     switch (featureID)
     {
-      case TGRLPackage.GOAL__FILL_COLOR:
-        return fillColor != FILL_COLOR_EDEFAULT;
       case TGRLPackage.GOAL__DECOMPOSITION_TYPE:
         return decompositionType != DECOMPOSITION_TYPE_EDEFAULT;
       case TGRLPackage.GOAL__IMPORTANCE:
@@ -395,9 +340,7 @@ public class GoalImpl extends IntentionalElementImpl implements Goal
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (fillColor: ");
-    result.append(fillColor);
-    result.append(", decompositionType: ");
+    result.append(" (decompositionType: ");
     result.append(decompositionType);
     result.append(", importance: ");
     result.append(importance);

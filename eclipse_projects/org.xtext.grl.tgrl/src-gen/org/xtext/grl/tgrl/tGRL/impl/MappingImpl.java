@@ -20,7 +20,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.MappingImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.MappingImpl#getValuation <em>Valuation</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.MappingImpl#getEvaluation <em>Evaluation</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.MappingImpl#getQualitativeEvaluation <em>Qualitative Evaluation</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.MappingImpl#isExceeds <em>Exceeds</em>}</li>
  * </ul>
@@ -51,24 +51,24 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getValuation() <em>Valuation</em>}' attribute.
+   * The default value of the '{@link #getEvaluation() <em>Evaluation</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValuation()
+   * @see #getEvaluation()
    * @generated
    * @ordered
    */
-  protected static final int VALUATION_EDEFAULT = 0;
+  protected static final int EVALUATION_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getValuation() <em>Valuation</em>}' attribute.
+   * The cached value of the '{@link #getEvaluation() <em>Evaluation</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValuation()
+   * @see #getEvaluation()
    * @generated
    * @ordered
    */
-  protected int valuation = VALUATION_EDEFAULT;
+  protected int evaluation = EVALUATION_EDEFAULT;
 
   /**
    * The default value of the '{@link #getQualitativeEvaluation() <em>Qualitative Evaluation</em>}' attribute.
@@ -159,9 +159,9 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getValuation()
+  public int getEvaluation()
   {
-    return valuation;
+    return evaluation;
   }
 
   /**
@@ -169,12 +169,12 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValuation(int newValuation)
+  public void setEvaluation(int newEvaluation)
   {
-    int oldValuation = valuation;
-    valuation = newValuation;
+    int oldEvaluation = evaluation;
+    evaluation = newEvaluation;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.MAPPING__VALUATION, oldValuation, valuation));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.MAPPING__EVALUATION, oldEvaluation, evaluation));
   }
 
   /**
@@ -235,8 +235,8 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
     {
       case TGRLPackage.MAPPING__NAME:
         return getName();
-      case TGRLPackage.MAPPING__VALUATION:
-        return getValuation();
+      case TGRLPackage.MAPPING__EVALUATION:
+        return getEvaluation();
       case TGRLPackage.MAPPING__QUALITATIVE_EVALUATION:
         return getQualitativeEvaluation();
       case TGRLPackage.MAPPING__EXCEEDS:
@@ -258,8 +258,8 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
       case TGRLPackage.MAPPING__NAME:
         setName((String)newValue);
         return;
-      case TGRLPackage.MAPPING__VALUATION:
-        setValuation((Integer)newValue);
+      case TGRLPackage.MAPPING__EVALUATION:
+        setEvaluation((Integer)newValue);
         return;
       case TGRLPackage.MAPPING__QUALITATIVE_EVALUATION:
         setQualitativeEvaluation((QualitativeLabel)newValue);
@@ -284,8 +284,8 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
       case TGRLPackage.MAPPING__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case TGRLPackage.MAPPING__VALUATION:
-        setValuation(VALUATION_EDEFAULT);
+      case TGRLPackage.MAPPING__EVALUATION:
+        setEvaluation(EVALUATION_EDEFAULT);
         return;
       case TGRLPackage.MAPPING__QUALITATIVE_EVALUATION:
         setQualitativeEvaluation(QUALITATIVE_EVALUATION_EDEFAULT);
@@ -309,8 +309,8 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
     {
       case TGRLPackage.MAPPING__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TGRLPackage.MAPPING__VALUATION:
-        return valuation != VALUATION_EDEFAULT;
+      case TGRLPackage.MAPPING__EVALUATION:
+        return evaluation != EVALUATION_EDEFAULT;
       case TGRLPackage.MAPPING__QUALITATIVE_EVALUATION:
         return qualitativeEvaluation != QUALITATIVE_EVALUATION_EDEFAULT;
       case TGRLPackage.MAPPING__EXCEEDS:
@@ -332,8 +332,8 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", valuation: ");
-    result.append(valuation);
+    result.append(", evaluation: ");
+    result.append(evaluation);
     result.append(", qualitativeEvaluation: ");
     result.append(qualitativeEvaluation);
     result.append(", exceeds: ");

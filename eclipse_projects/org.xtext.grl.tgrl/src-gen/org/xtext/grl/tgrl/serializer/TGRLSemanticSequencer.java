@@ -378,7 +378,6 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             label=STRING? 
 	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
 	 *             description=STRING? 
-	 *             fillColor=Color? 
 	 *             metaData+=Metadata* 
 	 *             (elemets+=IntentionalElement | elemets+=ElementLink)*
 	 *         )?
@@ -558,7 +557,6 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (
 	 *             label=STRING? 
 	 *             description=STRING? 
-	 *             fillColor=Color? 
 	 *             decompositionType=DecompositionType? 
 	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
 	 *             metaData+=Metadata* 
@@ -614,7 +612,6 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (
 	 *             label=STRING? 
 	 *             description=STRING? 
-	 *             fillColor=Color? 
 	 *             decompositionType=DecompositionType? 
 	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
 	 *             metaData+=Metadata* 
@@ -672,7 +669,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=STRING valuation=INT qualitativeEvaluation=QualitativeLabel exceeds=BOOLEAN)
+	 *     (name=STRING evaluation=INT qualitativeEvaluation=QualitativeLabel exceeds=BOOLEAN)
 	 */
 	protected void sequence_Mapping(EObject context, Mapping semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -713,7 +710,6 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (
 	 *             label=STRING? 
 	 *             description=STRING? 
-	 *             fillColor=Color? 
 	 *             decompositionType=DecompositionType? 
 	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
 	 *             metaData+=Metadata* 
@@ -733,7 +729,6 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (
 	 *             label=STRING? 
 	 *             description=STRING? 
-	 *             fillColor=Color? 
 	 *             decompositionType=DecompositionType? 
 	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
 	 *             metaData+=Metadata* 
@@ -762,7 +757,6 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         (
 	 *             label=STRING? 
 	 *             description=STRING? 
-	 *             fillColor=Color? 
 	 *             decompositionType=DecompositionType? 
 	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
 	 *             metaData+=Metadata* 

@@ -94,40 +94,34 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Actor/importance"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Actor/importanceQuantitative"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Actor/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Actor/fillColor"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Actor/metaData"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Actor/elemets"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//Softgoal">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Softgoal/fillColor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Softgoal/decompositionType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Softgoal/importance"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Softgoal/importanceQuantitative"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Softgoal/elementLinks"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//Goal">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Goal/fillColor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Goal/decompositionType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Goal/importance"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Goal/importanceQuantitative"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Goal/elementLinks"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//Task">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Task/fillColor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Task/decompositionType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Task/importance"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Task/importanceQuantitative"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Task/elementLinks"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//Resource">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Resource/fillColor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Resource/decompositionType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Resource/importance"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Resource/importanceQuantitative"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Resource/elementLinks"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//Indicator">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Indicator/fillColor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Indicator/decompositionType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Indicator/importance"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Indicator/importanceQuantitative"/>
@@ -207,7 +201,7 @@
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//Mapping">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Mapping/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Mapping/valuation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Mapping/evaluation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Mapping/qualitativeEvaluation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Mapping/exceeds"/>
     </genClasses>

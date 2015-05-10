@@ -723,19 +723,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getActor_FillColor()
-  {
-    return (EAttribute)actorEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getActor_MetaData()
   {
-    return (EReference)actorEClass.getEStructuralFeatures().get(6);
+    return (EReference)actorEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -745,7 +735,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    */
   public EReference getActor_Elemets()
   {
-    return (EReference)actorEClass.getEStructuralFeatures().get(7);
+    return (EReference)actorEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -763,7 +753,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getSoftgoal_FillColor()
+  public EAttribute getSoftgoal_DecompositionType()
   {
     return (EAttribute)softgoalEClass.getEStructuralFeatures().get(0);
   }
@@ -773,7 +763,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getSoftgoal_DecompositionType()
+  public EAttribute getSoftgoal_Importance()
   {
     return (EAttribute)softgoalEClass.getEStructuralFeatures().get(1);
   }
@@ -783,7 +773,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getSoftgoal_Importance()
+  public EAttribute getSoftgoal_ImportanceQuantitative()
   {
     return (EAttribute)softgoalEClass.getEStructuralFeatures().get(2);
   }
@@ -793,19 +783,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getSoftgoal_ImportanceQuantitative()
-  {
-    return (EAttribute)softgoalEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getSoftgoal_ElementLinks()
   {
-    return (EReference)softgoalEClass.getEStructuralFeatures().get(4);
+    return (EReference)softgoalEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -823,7 +803,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGoal_FillColor()
+  public EAttribute getGoal_DecompositionType()
   {
     return (EAttribute)goalEClass.getEStructuralFeatures().get(0);
   }
@@ -833,7 +813,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGoal_DecompositionType()
+  public EAttribute getGoal_Importance()
   {
     return (EAttribute)goalEClass.getEStructuralFeatures().get(1);
   }
@@ -843,7 +823,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGoal_Importance()
+  public EAttribute getGoal_ImportanceQuantitative()
   {
     return (EAttribute)goalEClass.getEStructuralFeatures().get(2);
   }
@@ -853,19 +833,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGoal_ImportanceQuantitative()
-  {
-    return (EAttribute)goalEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getGoal_ElementLinks()
   {
-    return (EReference)goalEClass.getEStructuralFeatures().get(4);
+    return (EReference)goalEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -883,7 +853,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTask_FillColor()
+  public EAttribute getTask_DecompositionType()
   {
     return (EAttribute)taskEClass.getEStructuralFeatures().get(0);
   }
@@ -893,7 +863,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTask_DecompositionType()
+  public EAttribute getTask_Importance()
   {
     return (EAttribute)taskEClass.getEStructuralFeatures().get(1);
   }
@@ -903,7 +873,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTask_Importance()
+  public EAttribute getTask_ImportanceQuantitative()
   {
     return (EAttribute)taskEClass.getEStructuralFeatures().get(2);
   }
@@ -913,19 +883,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTask_ImportanceQuantitative()
-  {
-    return (EAttribute)taskEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getTask_ElementLinks()
   {
-    return (EReference)taskEClass.getEStructuralFeatures().get(4);
+    return (EReference)taskEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -943,7 +903,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getResource_FillColor()
+  public EAttribute getResource_DecompositionType()
   {
     return (EAttribute)resourceEClass.getEStructuralFeatures().get(0);
   }
@@ -953,7 +913,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getResource_DecompositionType()
+  public EAttribute getResource_Importance()
   {
     return (EAttribute)resourceEClass.getEStructuralFeatures().get(1);
   }
@@ -963,7 +923,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getResource_Importance()
+  public EAttribute getResource_ImportanceQuantitative()
   {
     return (EAttribute)resourceEClass.getEStructuralFeatures().get(2);
   }
@@ -973,19 +933,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getResource_ImportanceQuantitative()
-  {
-    return (EAttribute)resourceEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getResource_ElementLinks()
   {
-    return (EReference)resourceEClass.getEStructuralFeatures().get(4);
+    return (EReference)resourceEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1003,7 +953,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getIndicator_FillColor()
+  public EAttribute getIndicator_DecompositionType()
   {
     return (EAttribute)indicatorEClass.getEStructuralFeatures().get(0);
   }
@@ -1013,7 +963,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getIndicator_DecompositionType()
+  public EAttribute getIndicator_Importance()
   {
     return (EAttribute)indicatorEClass.getEStructuralFeatures().get(1);
   }
@@ -1023,7 +973,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getIndicator_Importance()
+  public EAttribute getIndicator_ImportanceQuantitative()
   {
     return (EAttribute)indicatorEClass.getEStructuralFeatures().get(2);
   }
@@ -1033,19 +983,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getIndicator_ImportanceQuantitative()
-  {
-    return (EAttribute)indicatorEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getIndicator_ElementLinks()
   {
-    return (EReference)indicatorEClass.getEStructuralFeatures().get(4);
+    return (EReference)indicatorEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1633,7 +1573,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMapping_Valuation()
+  public EAttribute getMapping_Evaluation()
   {
     return (EAttribute)mappingEClass.getEStructuralFeatures().get(1);
   }
@@ -2119,40 +2059,34 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     createEAttribute(actorEClass, ACTOR__IMPORTANCE);
     createEAttribute(actorEClass, ACTOR__IMPORTANCE_QUANTITATIVE);
     createEAttribute(actorEClass, ACTOR__DESCRIPTION);
-    createEAttribute(actorEClass, ACTOR__FILL_COLOR);
     createEReference(actorEClass, ACTOR__META_DATA);
     createEReference(actorEClass, ACTOR__ELEMETS);
 
     softgoalEClass = createEClass(SOFTGOAL);
-    createEAttribute(softgoalEClass, SOFTGOAL__FILL_COLOR);
     createEAttribute(softgoalEClass, SOFTGOAL__DECOMPOSITION_TYPE);
     createEAttribute(softgoalEClass, SOFTGOAL__IMPORTANCE);
     createEAttribute(softgoalEClass, SOFTGOAL__IMPORTANCE_QUANTITATIVE);
     createEReference(softgoalEClass, SOFTGOAL__ELEMENT_LINKS);
 
     goalEClass = createEClass(GOAL);
-    createEAttribute(goalEClass, GOAL__FILL_COLOR);
     createEAttribute(goalEClass, GOAL__DECOMPOSITION_TYPE);
     createEAttribute(goalEClass, GOAL__IMPORTANCE);
     createEAttribute(goalEClass, GOAL__IMPORTANCE_QUANTITATIVE);
     createEReference(goalEClass, GOAL__ELEMENT_LINKS);
 
     taskEClass = createEClass(TASK);
-    createEAttribute(taskEClass, TASK__FILL_COLOR);
     createEAttribute(taskEClass, TASK__DECOMPOSITION_TYPE);
     createEAttribute(taskEClass, TASK__IMPORTANCE);
     createEAttribute(taskEClass, TASK__IMPORTANCE_QUANTITATIVE);
     createEReference(taskEClass, TASK__ELEMENT_LINKS);
 
     resourceEClass = createEClass(RESOURCE);
-    createEAttribute(resourceEClass, RESOURCE__FILL_COLOR);
     createEAttribute(resourceEClass, RESOURCE__DECOMPOSITION_TYPE);
     createEAttribute(resourceEClass, RESOURCE__IMPORTANCE);
     createEAttribute(resourceEClass, RESOURCE__IMPORTANCE_QUANTITATIVE);
     createEReference(resourceEClass, RESOURCE__ELEMENT_LINKS);
 
     indicatorEClass = createEClass(INDICATOR);
-    createEAttribute(indicatorEClass, INDICATOR__FILL_COLOR);
     createEAttribute(indicatorEClass, INDICATOR__DECOMPOSITION_TYPE);
     createEAttribute(indicatorEClass, INDICATOR__IMPORTANCE);
     createEAttribute(indicatorEClass, INDICATOR__IMPORTANCE_QUANTITATIVE);
@@ -2234,7 +2168,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
 
     mappingEClass = createEClass(MAPPING);
     createEAttribute(mappingEClass, MAPPING__NAME);
-    createEAttribute(mappingEClass, MAPPING__VALUATION);
+    createEAttribute(mappingEClass, MAPPING__EVALUATION);
     createEAttribute(mappingEClass, MAPPING__QUALITATIVE_EVALUATION);
     createEAttribute(mappingEClass, MAPPING__EXCEEDS);
 
@@ -2390,40 +2324,34 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEAttribute(getActor_Importance(), this.getImportanceType(), "importance", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getActor_ImportanceQuantitative(), theEcorePackage.getEInt(), "importanceQuantitative", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getActor_Description(), theEcorePackage.getEString(), "description", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getActor_FillColor(), this.getColor(), "fillColor", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getActor_MetaData(), this.getMetadata(), null, "metaData", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getActor_Elemets(), this.getGRLElement(), null, "elemets", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(softgoalEClass, Softgoal.class, "Softgoal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSoftgoal_FillColor(), this.getColor(), "fillColor", null, 0, 1, Softgoal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSoftgoal_DecompositionType(), this.getDecompositionType(), "decompositionType", null, 0, 1, Softgoal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSoftgoal_Importance(), this.getImportanceType(), "importance", null, 0, 1, Softgoal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSoftgoal_ImportanceQuantitative(), theEcorePackage.getEInt(), "importanceQuantitative", null, 0, 1, Softgoal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSoftgoal_ElementLinks(), this.getInLineElementLink(), null, "elementLinks", null, 0, -1, Softgoal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(goalEClass, Goal.class, "Goal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGoal_FillColor(), this.getColor(), "fillColor", null, 0, 1, Goal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGoal_DecompositionType(), this.getDecompositionType(), "decompositionType", null, 0, 1, Goal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGoal_Importance(), this.getImportanceType(), "importance", null, 0, 1, Goal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getGoal_ImportanceQuantitative(), theEcorePackage.getEInt(), "importanceQuantitative", null, 0, 1, Goal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getGoal_ElementLinks(), this.getInLineElementLink(), null, "elementLinks", null, 0, -1, Goal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(taskEClass, Task.class, "Task", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTask_FillColor(), this.getColor(), "fillColor", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTask_DecompositionType(), this.getDecompositionType(), "decompositionType", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTask_Importance(), this.getImportanceType(), "importance", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTask_ImportanceQuantitative(), theEcorePackage.getEInt(), "importanceQuantitative", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTask_ElementLinks(), this.getInLineElementLink(), null, "elementLinks", null, 0, -1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(resourceEClass, Resource.class, "Resource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getResource_FillColor(), this.getColor(), "fillColor", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getResource_DecompositionType(), this.getDecompositionType(), "decompositionType", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getResource_Importance(), this.getImportanceType(), "importance", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getResource_ImportanceQuantitative(), theEcorePackage.getEInt(), "importanceQuantitative", null, 0, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getResource_ElementLinks(), this.getInLineElementLink(), null, "elementLinks", null, 0, -1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(indicatorEClass, Indicator.class, "Indicator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getIndicator_FillColor(), this.getColor(), "fillColor", null, 0, 1, Indicator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getIndicator_DecompositionType(), this.getDecompositionType(), "decompositionType", null, 0, 1, Indicator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getIndicator_Importance(), this.getImportanceType(), "importance", null, 0, 1, Indicator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getIndicator_ImportanceQuantitative(), theEcorePackage.getEInt(), "importanceQuantitative", null, 0, 1, Indicator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2505,7 +2433,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
 
     initEClass(mappingEClass, Mapping.class, "Mapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMapping_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMapping_Valuation(), theEcorePackage.getEInt(), "valuation", null, 0, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMapping_Evaluation(), theEcorePackage.getEInt(), "evaluation", null, 0, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMapping_QualitativeEvaluation(), this.getQualitativeLabel(), "qualitativeEvaluation", null, 0, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMapping_Exceeds(), theEcorePackage.getEBoolean(), "exceeds", null, 0, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

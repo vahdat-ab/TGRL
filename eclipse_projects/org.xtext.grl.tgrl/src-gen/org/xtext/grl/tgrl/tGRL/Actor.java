@@ -17,7 +17,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getImportance <em>Importance</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getImportanceQuantitative <em>Importance Quantitative</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getDescription <em>Description</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getFillColor <em>Fill Color</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getMetaData <em>Meta Data</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Actor#getElemets <em>Elemets</em>}</li>
  * </ul>
@@ -161,35 +160,6 @@ public interface Actor extends GRLElement
    * @generated
    */
   void setDescription(String value);
-
-  /**
-   * Returns the value of the '<em><b>Fill Color</b></em>' attribute.
-   * The literals are from the enumeration {@link org.xtext.grl.tgrl.tGRL.Color}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Fill Color</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Fill Color</em>' attribute.
-   * @see org.xtext.grl.tgrl.tGRL.Color
-   * @see #setFillColor(Color)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getActor_FillColor()
-   * @model
-   * @generated
-   */
-  Color getFillColor();
-
-  /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Actor#getFillColor <em>Fill Color</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Fill Color</em>' attribute.
-   * @see org.xtext.grl.tgrl.tGRL.Color
-   * @see #getFillColor()
-   * @generated
-   */
-  void setFillColor(Color value);
 
   /**
    * Returns the value of the '<em><b>Meta Data</b></em>' containment reference list.

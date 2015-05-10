@@ -12,7 +12,7 @@ package org.xtext.grl.tgrl.tGRL;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Mapping#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.Mapping#getValuation <em>Valuation</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Mapping#getEvaluation <em>Evaluation</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Mapping#getQualitativeEvaluation <em>Qualitative Evaluation</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Mapping#isExceeds <em>Exceeds</em>}</li>
  * </ul>
@@ -51,30 +51,30 @@ public interface Mapping extends GRLBaseElement
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Valuation</b></em>' attribute.
+   * Returns the value of the '<em><b>Evaluation</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Valuation</em>' attribute isn't clear,
+   * If the meaning of the '<em>Evaluation</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Valuation</em>' attribute.
-   * @see #setValuation(int)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getMapping_Valuation()
+   * @return the value of the '<em>Evaluation</em>' attribute.
+   * @see #setEvaluation(int)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getMapping_Evaluation()
    * @model
    * @generated
    */
-  int getValuation();
+  int getEvaluation();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Mapping#getValuation <em>Valuation</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Mapping#getEvaluation <em>Evaluation</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Valuation</em>' attribute.
-   * @see #getValuation()
+   * @param value the new value of the '<em>Evaluation</em>' attribute.
+   * @see #getEvaluation()
    * @generated
    */
-  void setValuation(int value);
+  void setEvaluation(int value);
 
   /**
    * Returns the value of the '<em><b>Qualitative Evaluation</b></em>' attribute.

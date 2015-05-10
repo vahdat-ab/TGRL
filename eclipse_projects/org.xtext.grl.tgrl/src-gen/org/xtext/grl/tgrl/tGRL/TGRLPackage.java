@@ -409,22 +409,13 @@ public interface TGRLPackage extends EPackage
   int ACTOR__DESCRIPTION = GRL_ELEMENT_FEATURE_COUNT + 4;
 
   /**
-   * The feature id for the '<em><b>Fill Color</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ACTOR__FILL_COLOR = GRL_ELEMENT_FEATURE_COUNT + 5;
-
-  /**
    * The feature id for the '<em><b>Meta Data</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ACTOR__META_DATA = GRL_ELEMENT_FEATURE_COUNT + 6;
+  int ACTOR__META_DATA = GRL_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Elemets</b></em>' containment reference list.
@@ -433,7 +424,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACTOR__ELEMETS = GRL_ELEMENT_FEATURE_COUNT + 7;
+  int ACTOR__ELEMETS = GRL_ELEMENT_FEATURE_COUNT + 6;
 
   /**
    * The number of structural features of the '<em>Actor</em>' class.
@@ -442,7 +433,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACTOR_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 8;
+  int ACTOR_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.SoftgoalImpl <em>Softgoal</em>}' class.
@@ -500,22 +491,13 @@ public interface TGRLPackage extends EPackage
   int SOFTGOAL__META_DATA = INTENTIONAL_ELEMENT__META_DATA;
 
   /**
-   * The feature id for the '<em><b>Fill Color</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SOFTGOAL__FILL_COLOR = INTENTIONAL_ELEMENT_FEATURE_COUNT + 0;
-
-  /**
    * The feature id for the '<em><b>Decomposition Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SOFTGOAL__DECOMPOSITION_TYPE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 1;
+  int SOFTGOAL__DECOMPOSITION_TYPE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Importance</b></em>' attribute.
@@ -524,7 +506,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SOFTGOAL__IMPORTANCE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 2;
+  int SOFTGOAL__IMPORTANCE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Importance Quantitative</b></em>' attribute.
@@ -533,7 +515,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SOFTGOAL__IMPORTANCE_QUANTITATIVE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 3;
+  int SOFTGOAL__IMPORTANCE_QUANTITATIVE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Element Links</b></em>' containment reference list.
@@ -542,7 +524,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SOFTGOAL__ELEMENT_LINKS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 4;
+  int SOFTGOAL__ELEMENT_LINKS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Softgoal</em>' class.
@@ -551,7 +533,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SOFTGOAL_FEATURE_COUNT = INTENTIONAL_ELEMENT_FEATURE_COUNT + 5;
+  int SOFTGOAL_FEATURE_COUNT = INTENTIONAL_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.GoalImpl <em>Goal</em>}' class.
@@ -609,22 +591,13 @@ public interface TGRLPackage extends EPackage
   int GOAL__META_DATA = INTENTIONAL_ELEMENT__META_DATA;
 
   /**
-   * The feature id for the '<em><b>Fill Color</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GOAL__FILL_COLOR = INTENTIONAL_ELEMENT_FEATURE_COUNT + 0;
-
-  /**
    * The feature id for the '<em><b>Decomposition Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GOAL__DECOMPOSITION_TYPE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 1;
+  int GOAL__DECOMPOSITION_TYPE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Importance</b></em>' attribute.
@@ -633,7 +606,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GOAL__IMPORTANCE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 2;
+  int GOAL__IMPORTANCE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Importance Quantitative</b></em>' attribute.
@@ -642,7 +615,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GOAL__IMPORTANCE_QUANTITATIVE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 3;
+  int GOAL__IMPORTANCE_QUANTITATIVE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Element Links</b></em>' containment reference list.
@@ -651,7 +624,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GOAL__ELEMENT_LINKS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 4;
+  int GOAL__ELEMENT_LINKS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Goal</em>' class.
@@ -660,7 +633,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GOAL_FEATURE_COUNT = INTENTIONAL_ELEMENT_FEATURE_COUNT + 5;
+  int GOAL_FEATURE_COUNT = INTENTIONAL_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.TaskImpl <em>Task</em>}' class.
@@ -718,22 +691,13 @@ public interface TGRLPackage extends EPackage
   int TASK__META_DATA = INTENTIONAL_ELEMENT__META_DATA;
 
   /**
-   * The feature id for the '<em><b>Fill Color</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TASK__FILL_COLOR = INTENTIONAL_ELEMENT_FEATURE_COUNT + 0;
-
-  /**
    * The feature id for the '<em><b>Decomposition Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TASK__DECOMPOSITION_TYPE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 1;
+  int TASK__DECOMPOSITION_TYPE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Importance</b></em>' attribute.
@@ -742,7 +706,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TASK__IMPORTANCE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 2;
+  int TASK__IMPORTANCE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Importance Quantitative</b></em>' attribute.
@@ -751,7 +715,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TASK__IMPORTANCE_QUANTITATIVE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 3;
+  int TASK__IMPORTANCE_QUANTITATIVE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Element Links</b></em>' containment reference list.
@@ -760,7 +724,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TASK__ELEMENT_LINKS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 4;
+  int TASK__ELEMENT_LINKS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Task</em>' class.
@@ -769,7 +733,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TASK_FEATURE_COUNT = INTENTIONAL_ELEMENT_FEATURE_COUNT + 5;
+  int TASK_FEATURE_COUNT = INTENTIONAL_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.ResourceImpl <em>Resource</em>}' class.
@@ -827,22 +791,13 @@ public interface TGRLPackage extends EPackage
   int RESOURCE__META_DATA = INTENTIONAL_ELEMENT__META_DATA;
 
   /**
-   * The feature id for the '<em><b>Fill Color</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int RESOURCE__FILL_COLOR = INTENTIONAL_ELEMENT_FEATURE_COUNT + 0;
-
-  /**
    * The feature id for the '<em><b>Decomposition Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int RESOURCE__DECOMPOSITION_TYPE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 1;
+  int RESOURCE__DECOMPOSITION_TYPE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Importance</b></em>' attribute.
@@ -851,7 +806,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RESOURCE__IMPORTANCE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 2;
+  int RESOURCE__IMPORTANCE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Importance Quantitative</b></em>' attribute.
@@ -860,7 +815,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RESOURCE__IMPORTANCE_QUANTITATIVE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 3;
+  int RESOURCE__IMPORTANCE_QUANTITATIVE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Element Links</b></em>' containment reference list.
@@ -869,7 +824,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RESOURCE__ELEMENT_LINKS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 4;
+  int RESOURCE__ELEMENT_LINKS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Resource</em>' class.
@@ -878,7 +833,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int RESOURCE_FEATURE_COUNT = INTENTIONAL_ELEMENT_FEATURE_COUNT + 5;
+  int RESOURCE_FEATURE_COUNT = INTENTIONAL_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.IndicatorImpl <em>Indicator</em>}' class.
@@ -936,22 +891,13 @@ public interface TGRLPackage extends EPackage
   int INDICATOR__META_DATA = INTENTIONAL_ELEMENT__META_DATA;
 
   /**
-   * The feature id for the '<em><b>Fill Color</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INDICATOR__FILL_COLOR = INTENTIONAL_ELEMENT_FEATURE_COUNT + 0;
-
-  /**
    * The feature id for the '<em><b>Decomposition Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INDICATOR__DECOMPOSITION_TYPE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 1;
+  int INDICATOR__DECOMPOSITION_TYPE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Importance</b></em>' attribute.
@@ -960,7 +906,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INDICATOR__IMPORTANCE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 2;
+  int INDICATOR__IMPORTANCE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Importance Quantitative</b></em>' attribute.
@@ -969,7 +915,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INDICATOR__IMPORTANCE_QUANTITATIVE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 3;
+  int INDICATOR__IMPORTANCE_QUANTITATIVE = INTENTIONAL_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Element Links</b></em>' containment reference list.
@@ -978,7 +924,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INDICATOR__ELEMENT_LINKS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 4;
+  int INDICATOR__ELEMENT_LINKS = INTENTIONAL_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Indicator</em>' class.
@@ -987,7 +933,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INDICATOR_FEATURE_COUNT = INTENTIONAL_ELEMENT_FEATURE_COUNT + 5;
+  int INDICATOR_FEATURE_COUNT = INTENTIONAL_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.BeliefImpl <em>Belief</em>}' class.
@@ -1864,13 +1810,13 @@ public interface TGRLPackage extends EPackage
   int MAPPING__NAME = GRL_BASE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Valuation</b></em>' attribute.
+   * The feature id for the '<em><b>Evaluation</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MAPPING__VALUATION = GRL_BASE_ELEMENT_FEATURE_COUNT + 1;
+  int MAPPING__EVALUATION = GRL_BASE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Qualitative Evaluation</b></em>' attribute.
@@ -2693,17 +2639,6 @@ public interface TGRLPackage extends EPackage
   EAttribute getActor_Description();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Actor#getFillColor <em>Fill Color</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Fill Color</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.Actor#getFillColor()
-   * @see #getActor()
-   * @generated
-   */
-  EAttribute getActor_FillColor();
-
-  /**
    * Returns the meta object for the containment reference list '{@link org.xtext.grl.tgrl.tGRL.Actor#getMetaData <em>Meta Data</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2734,17 +2669,6 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   EClass getSoftgoal();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Softgoal#getFillColor <em>Fill Color</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Fill Color</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.Softgoal#getFillColor()
-   * @see #getSoftgoal()
-   * @generated
-   */
-  EAttribute getSoftgoal_FillColor();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Softgoal#getDecompositionType <em>Decomposition Type</em>}'.
@@ -2801,17 +2725,6 @@ public interface TGRLPackage extends EPackage
   EClass getGoal();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Goal#getFillColor <em>Fill Color</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Fill Color</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.Goal#getFillColor()
-   * @see #getGoal()
-   * @generated
-   */
-  EAttribute getGoal_FillColor();
-
-  /**
    * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Goal#getDecompositionType <em>Decomposition Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2864,17 +2777,6 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   EClass getTask();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Task#getFillColor <em>Fill Color</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Fill Color</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.Task#getFillColor()
-   * @see #getTask()
-   * @generated
-   */
-  EAttribute getTask_FillColor();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Task#getDecompositionType <em>Decomposition Type</em>}'.
@@ -2931,17 +2833,6 @@ public interface TGRLPackage extends EPackage
   EClass getResource();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Resource#getFillColor <em>Fill Color</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Fill Color</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.Resource#getFillColor()
-   * @see #getResource()
-   * @generated
-   */
-  EAttribute getResource_FillColor();
-
-  /**
    * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Resource#getDecompositionType <em>Decomposition Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2994,17 +2885,6 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   EClass getIndicator();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Indicator#getFillColor <em>Fill Color</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Fill Color</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.Indicator#getFillColor()
-   * @see #getIndicator()
-   * @generated
-   */
-  EAttribute getIndicator_FillColor();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Indicator#getDecompositionType <em>Decomposition Type</em>}'.
@@ -3670,15 +3550,15 @@ public interface TGRLPackage extends EPackage
   EAttribute getMapping_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Mapping#getValuation <em>Valuation</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Mapping#getEvaluation <em>Evaluation</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Valuation</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.Mapping#getValuation()
+   * @return the meta object for the attribute '<em>Evaluation</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.Mapping#getEvaluation()
    * @see #getMapping()
    * @generated
    */
-  EAttribute getMapping_Valuation();
+  EAttribute getMapping_Evaluation();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Mapping#getQualitativeEvaluation <em>Qualitative Evaluation</em>}'.
@@ -4351,14 +4231,6 @@ public interface TGRLPackage extends EPackage
     EAttribute ACTOR__DESCRIPTION = eINSTANCE.getActor_Description();
 
     /**
-     * The meta object literal for the '<em><b>Fill Color</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ACTOR__FILL_COLOR = eINSTANCE.getActor_FillColor();
-
-    /**
      * The meta object literal for the '<em><b>Meta Data</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4383,14 +4255,6 @@ public interface TGRLPackage extends EPackage
      * @generated
      */
     EClass SOFTGOAL = eINSTANCE.getSoftgoal();
-
-    /**
-     * The meta object literal for the '<em><b>Fill Color</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SOFTGOAL__FILL_COLOR = eINSTANCE.getSoftgoal_FillColor();
 
     /**
      * The meta object literal for the '<em><b>Decomposition Type</b></em>' attribute feature.
@@ -4435,14 +4299,6 @@ public interface TGRLPackage extends EPackage
     EClass GOAL = eINSTANCE.getGoal();
 
     /**
-     * The meta object literal for the '<em><b>Fill Color</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute GOAL__FILL_COLOR = eINSTANCE.getGoal_FillColor();
-
-    /**
      * The meta object literal for the '<em><b>Decomposition Type</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4483,14 +4339,6 @@ public interface TGRLPackage extends EPackage
      * @generated
      */
     EClass TASK = eINSTANCE.getTask();
-
-    /**
-     * The meta object literal for the '<em><b>Fill Color</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TASK__FILL_COLOR = eINSTANCE.getTask_FillColor();
 
     /**
      * The meta object literal for the '<em><b>Decomposition Type</b></em>' attribute feature.
@@ -4535,14 +4383,6 @@ public interface TGRLPackage extends EPackage
     EClass RESOURCE = eINSTANCE.getResource();
 
     /**
-     * The meta object literal for the '<em><b>Fill Color</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute RESOURCE__FILL_COLOR = eINSTANCE.getResource_FillColor();
-
-    /**
      * The meta object literal for the '<em><b>Decomposition Type</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4583,14 +4423,6 @@ public interface TGRLPackage extends EPackage
      * @generated
      */
     EClass INDICATOR = eINSTANCE.getIndicator();
-
-    /**
-     * The meta object literal for the '<em><b>Fill Color</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute INDICATOR__FILL_COLOR = eINSTANCE.getIndicator_FillColor();
 
     /**
      * The meta object literal for the '<em><b>Decomposition Type</b></em>' attribute feature.
@@ -5127,12 +4959,12 @@ public interface TGRLPackage extends EPackage
     EAttribute MAPPING__NAME = eINSTANCE.getMapping_Name();
 
     /**
-     * The meta object literal for the '<em><b>Valuation</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Evaluation</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute MAPPING__VALUATION = eINSTANCE.getMapping_Valuation();
+    EAttribute MAPPING__EVALUATION = eINSTANCE.getMapping_Evaluation();
 
     /**
      * The meta object literal for the '<em><b>Qualitative Evaluation</b></em>' attribute feature.
