@@ -423,6 +423,13 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
   private EEnum priorityEEnum = null;
 
   /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum booleanEEnum = null;
+
+  /**
    * Creates an instance of the model <b>Package</b>, registered with
    * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
    * package URI value.
@@ -2003,6 +2010,16 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EEnum getBoolean()
+  {
+    return booleanEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public TGRLFactory getTGRLFactory()
   {
     return (TGRLFactory)getEFactoryInstance();
@@ -2223,6 +2240,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     colorEEnum = createEEnum(COLOR);
     criticalityEEnum = createEEnum(CRITICALITY);
     priorityEEnum = createEEnum(PRIORITY);
+    booleanEEnum = createEEnum(BOOLEAN);
   }
 
   /**
@@ -2435,7 +2453,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEAttribute(getMapping_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMapping_Evaluation(), theEcorePackage.getEInt(), "evaluation", null, 0, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMapping_QualitativeEvaluation(), this.getQualitativeLabel(), "qualitativeEvaluation", null, 0, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getMapping_Exceeds(), theEcorePackage.getEBoolean(), "exceeds", null, 0, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMapping_Exceeds(), this.getBoolean(), "exceeds", null, 0, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(contributionGroupEClass, ContributionGroup.class, "ContributionGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getContributionGroup_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ContributionGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2539,6 +2557,10 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     addEEnumLiteral(priorityEEnum, Priority.HIGH);
     addEEnumLiteral(priorityEEnum, Priority.MEDIUM);
     addEEnumLiteral(priorityEEnum, Priority.LOW);
+
+    initEEnum(booleanEEnum, org.xtext.grl.tgrl.tGRL.Boolean.class, "Boolean");
+    addEEnumLiteral(booleanEEnum, org.xtext.grl.tgrl.tGRL.Boolean.FALSE);
+    addEEnumLiteral(booleanEEnum, org.xtext.grl.tgrl.tGRL.Boolean.TRUE);
 
     // Create resource
     createResource(eNS_URI);

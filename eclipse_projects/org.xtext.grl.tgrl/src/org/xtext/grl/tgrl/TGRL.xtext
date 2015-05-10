@@ -20,8 +20,9 @@ GRLBaseElement:
 ;
 GRLElement:
 	
-	IntentionalElement | ElementLink | Actor | StrategyGroup | IndicatorGroup | EvaluationStrategy | Evaluation | ContributionGroup | 
-	ContributionContext | QualitativeMapping | Metadata | Comment | LinkType 
+	IntentionalElement | ElementLink | Actor | StrategyGroup | IndicatorGroup | EvaluationStrategy | Evaluation | 
+	ContributionGroup |	ContributionContext | 
+	QualitativeMapping | Metadata | Comment | LinkType 
 	
 ;
 IntentionalElement:
@@ -62,10 +63,10 @@ Actor:
 			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-			( (importance=ImportanceType | (importanceQuantitative=INT)) ';')?&
+			('importance' '='  (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE) ';')?&
 			('description' '=' description=STRING ';')?&
 			(metaData+=Metadata)*&
-			(elemets+=IntentionalElement  | elemets+=ElementLink)*	
+			(elemets+=IntentionalElement  | elemets+=ElementLink)*
 			)
 			
 		'}'			
@@ -87,7 +88,7 @@ Softgoal :
 				 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
 				 * 		This can be done through the post processing mechanism in xText 
 				 */
-				( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+				('importance' '='  (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE) ';')?&
 				(metaData+=Metadata)*&
 				(elementLinks+=InLineElementLink)*		
 			)
@@ -109,7 +110,7 @@ Goal:
 			 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-			( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+			('importance' '='  (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE) ';')?&
 			(metaData+=Metadata)*&		
 			(elementLinks+=InLineElementLink)*
 		)		
@@ -131,7 +132,7 @@ Task:
 				 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
 				 * 		This can be done through the post processing mechanism in xText 
 				 */
-				( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+				('importance' '='  (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE) ';')?&
 				(metaData+=Metadata)*&	
 				(elementLinks+=InLineElementLink)*	 
 			)		
@@ -153,7 +154,7 @@ Resource:
 				 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
 				 * 		This can be done through the post processing mechanism in xText 
 				 */
-				( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+				('importance' '='  (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE) ';')?&
 				(metaData+=Metadata)*&	
 				(elementLinks+=InLineElementLink)*	
 			)		
@@ -175,7 +176,7 @@ Indicator:
 				 *TODO I must give a default value for importanceQuantitative, which is zero, to this attribute.
 				 * 		This can be done through the post processing mechanism in xText 
 				 */
-				( (importance=ImportanceType | importanceQuantitative=INT) ';')?&
+				('importance' '='  (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE) ';')?&
 				(metaData+=Metadata)*&
 				(elementLinks+=InLineElementLink)*			
 			)		
@@ -211,7 +212,7 @@ DecompositionEnd:
 	name=[IntentionalElement | QualifiedName] 
 	(
 		'{'
-			(description=STRING)?
+			(description=STRING ';')?
 		'}'	
 	)?
 ;
@@ -223,7 +224,7 @@ Contribution:
 			 *TODO I must give a default value, which is 25, to this attribute.
 			 * 		This can be done through the post processing mechanism in xText 
 			 */
-//			('quantitativeContribution' '=' quantitativeContribution=INT ';')?&
+//			('quantitativeContribution' '=' quantitativeContribution=QUALITATIVEVALUE ';')?&
 //			('correlation' '=' correlation=BOOLEAN ';')?&
 //			('description' '=' description=STRING ';')?&				
 ;
@@ -235,7 +236,7 @@ ContributionEnd:
 	desname = [IntentionalElement | QualifiedName]
 	(
 		'{'
-			(contribution=ContributionType | quantitativeContribution=INT)?
+			((contribution=ContributionType | quantitativeContribution=QUALITATIVEVALUE)';')?
 		'}'
 	)?
 ;
@@ -255,7 +256,7 @@ DependencyEnd:
 	name = [IntentionalElement | QualifiedName] 
 	(
 		'{'
-			(description=STRING)?
+			(description=STRING ';')?
 		'}'
 	)?
 ;
@@ -277,7 +278,7 @@ Evaluation:
 	 *TODO I must give a default value for evaluation, which is zero, to this attribute.
 	 * 		This can be done through the post processing mechanism in xText 
 	 */	
-	intentionalElement = [IntentionalElement | QualifiedName] '=' (qualitativeEvaluation=QualitativeLabel | evaluation = INT )('{' (exceeds?='exceeds'';')?& (evalRange=EvaluationRange)?& (kpiEvalValueSet = KPIEvalValueSet)? '}' | ';')
+	intentionalElement = [IntentionalElement | QualifiedName] '=' (qualitativeEvaluation=QualitativeLabel | evaluation = QUALITATIVEVALUE )('{' (exceeds?='exceeds'';')?& (evalRange=EvaluationRange)?& (kpiEvalValueSet = KPIEvalValueSet)? '}' | ';')
 ;
 EvaluationRange: 
 	('start' '=' start=INT ';')&
@@ -331,9 +332,12 @@ QualitativeMapping:
 ;
 
 Mapping:
-	name=STRING ',' evaluation=INT ',' qualitativeEvaluation=QualitativeLabel ',' exceeds=BOOLEAN ';'			
+	name=STRING ',' evaluation=QUALITATIVEVALUE ',' qualitativeEvaluation=QualitativeLabel ',' exceeds=Boolean ';'			
 ;
 
+/********************************************************************************************
+ * Looks unnecessary 
+ */
 ContributionGroup: 
 	'contributionGroup' name=ID 'includes' contribs+=[ContributionContext](',' contribs+=[ContributionContext])* ';'
 ;
@@ -352,7 +356,7 @@ ContributionChange:
 	 *TODO I must give a default value for v, which is 0, to this attribute.
 	 * 		This can be done through the post processing mechanism in xText 
 	 */	
-	contribution = [ContributionEnd | QualifiedName] ':' ( newContribution= ContributionType | newQuantitativeContribution = INT)(';'| ('{' contribRange = ContributionRange '}') )
+	contribution = [ContributionEnd | QualifiedName] ':' ( newContribution= ContributionType | newQuantitativeContribution = QUALITATIVEVALUE)(';'| ('{' contribRange = ContributionRange '}') )
 ;
 ContributionRange: 
 	('start' '=' start=INT ';')&
@@ -363,6 +367,11 @@ ContributionRange:
 	 */	
 	('step' '=' step=INT ';')?
 ;
+
+/*
+ * Looks unnecessary
+ * ******************************************************************************************** 
+ */
 Metadata:
 	'metadata' name = ID '=' value=STRING ';'	
 ;
@@ -418,8 +427,8 @@ enum Priority:
 	None | High  | Medium  | Low 
 ;
 //Terminals
-terminal BOOLEAN returns ecore::EBoolean:
-	'false' | 'true'
+enum Boolean:
+	false | true
 ;
 
 QualifiedName:
@@ -437,3 +446,4 @@ terminal DOUBLE returns ecore::EDouble: INT ('.' INT+);
 //terminal OCTINT: '0' ('0'..'7')+;
 //terminal DOUBLE returns ecore::EDouble: DECINT (('.' DIGIT*) | (('.' DIGIT*)? ('E'|'e') ('-'|'+')? DECINT));  // Use terminal to avoid 'e' turning into a keyword
 //terminal DECINT: '0' | ('1'..'9' DIGIT*);
+terminal QUALITATIVEVALUE returns ecore::EInt: ('-'|'+')? ( (('0'..'9')('0'..'9')?) | ('100')) ;

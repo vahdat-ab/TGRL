@@ -11,7 +11,58 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.xtext.grl.tgrl.tGRL.*;
+import org.xtext.grl.tgrl.tGRL.Actor;
+import org.xtext.grl.tgrl.tGRL.Belief;
+import org.xtext.grl.tgrl.tGRL.Color;
+import org.xtext.grl.tgrl.tGRL.Comment;
+import org.xtext.grl.tgrl.tGRL.Contribution;
+import org.xtext.grl.tgrl.tGRL.ContributionChange;
+import org.xtext.grl.tgrl.tGRL.ContributionContext;
+import org.xtext.grl.tgrl.tGRL.ContributionEnd;
+import org.xtext.grl.tgrl.tGRL.ContributionGroup;
+import org.xtext.grl.tgrl.tGRL.ContributionRange;
+import org.xtext.grl.tgrl.tGRL.ContributionType;
+import org.xtext.grl.tgrl.tGRL.Criticality;
+import org.xtext.grl.tgrl.tGRL.Decomposition;
+import org.xtext.grl.tgrl.tGRL.DecompositionEnd;
+import org.xtext.grl.tgrl.tGRL.DecompositionType;
+import org.xtext.grl.tgrl.tGRL.Dependency;
+import org.xtext.grl.tgrl.tGRL.DependencyEnd;
+import org.xtext.grl.tgrl.tGRL.Element;
+import org.xtext.grl.tgrl.tGRL.ElementLink;
+import org.xtext.grl.tgrl.tGRL.Evaluation;
+import org.xtext.grl.tgrl.tGRL.EvaluationRange;
+import org.xtext.grl.tgrl.tGRL.EvaluationStrategy;
+import org.xtext.grl.tgrl.tGRL.GRLBaseElement;
+import org.xtext.grl.tgrl.tGRL.GRLElement;
+import org.xtext.grl.tgrl.tGRL.GRLSpecification;
+import org.xtext.grl.tgrl.tGRL.Goal;
+import org.xtext.grl.tgrl.tGRL.ImportanceType;
+import org.xtext.grl.tgrl.tGRL.InLineContribution;
+import org.xtext.grl.tgrl.tGRL.InLineDecomposition;
+import org.xtext.grl.tgrl.tGRL.InLineDependency;
+import org.xtext.grl.tgrl.tGRL.InLineElementLink;
+import org.xtext.grl.tgrl.tGRL.Indicator;
+import org.xtext.grl.tgrl.tGRL.IndicatorGroup;
+import org.xtext.grl.tgrl.tGRL.IntentionalElement;
+import org.xtext.grl.tgrl.tGRL.KPIEvalValueSet;
+import org.xtext.grl.tgrl.tGRL.KPIQualitativeEvalValueSet;
+import org.xtext.grl.tgrl.tGRL.KPIQuantitativeEvalValueSet;
+import org.xtext.grl.tgrl.tGRL.Link;
+import org.xtext.grl.tgrl.tGRL.LinkType;
+import org.xtext.grl.tgrl.tGRL.Mapping;
+import org.xtext.grl.tgrl.tGRL.Metadata;
+import org.xtext.grl.tgrl.tGRL.Model;
+import org.xtext.grl.tgrl.tGRL.Priority;
+import org.xtext.grl.tgrl.tGRL.QualitativeLabel;
+import org.xtext.grl.tgrl.tGRL.QualitativeMapping;
+import org.xtext.grl.tgrl.tGRL.Resource;
+import org.xtext.grl.tgrl.tGRL.Softgoal;
+import org.xtext.grl.tgrl.tGRL.StrategyGroup;
+import org.xtext.grl.tgrl.tGRL.TGRLFactory;
+import org.xtext.grl.tgrl.tGRL.TGRLPackage;
+import org.xtext.grl.tgrl.tGRL.Task;
+import org.xtext.grl.tgrl.tGRL.inLineLink;
 
 /**
  * <!-- begin-user-doc -->
@@ -137,6 +188,8 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
         return createCriticalityFromString(eDataType, initialValue);
       case TGRLPackage.PRIORITY:
         return createPriorityFromString(eDataType, initialValue);
+      case TGRLPackage.BOOLEAN:
+        return createBooleanFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -166,6 +219,8 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
         return convertCriticalityToString(eDataType, instanceValue);
       case TGRLPackage.PRIORITY:
         return convertPriorityToString(eDataType, instanceValue);
+      case TGRLPackage.BOOLEAN:
+        return convertBooleanToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -794,6 +849,28 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * @generated
    */
   public String convertPriorityToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public org.xtext.grl.tgrl.tGRL.Boolean createBooleanFromString(EDataType eDataType, String initialValue)
+  {
+    org.xtext.grl.tgrl.tGRL.Boolean result = org.xtext.grl.tgrl.tGRL.Boolean.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertBooleanToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

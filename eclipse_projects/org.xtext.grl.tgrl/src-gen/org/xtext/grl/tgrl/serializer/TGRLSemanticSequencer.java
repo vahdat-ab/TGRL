@@ -376,7 +376,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         (
 	 *             label=STRING? 
-	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *             (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE)? 
 	 *             description=STRING? 
 	 *             metaData+=Metadata* 
 	 *             (elemets+=IntentionalElement | elemets+=ElementLink)*
@@ -410,7 +410,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         contribution=[ContributionEnd|QualifiedName] 
-	 *         (newContribution=ContributionType | newQuantitativeContribution=INT) 
+	 *         (newContribution=ContributionType | newQuantitativeContribution=QUALITATIVEVALUE) 
 	 *         contribRange=ContributionRange?
 	 *     )
 	 */
@@ -435,7 +435,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID? desname=[IntentionalElement|QualifiedName] (contribution=ContributionType | quantitativeContribution=INT)?)
+	 *     (name=ID? desname=[IntentionalElement|QualifiedName] (contribution=ContributionType | quantitativeContribution=QUALITATIVEVALUE)?)
 	 */
 	protected void sequence_ContributionEnd(EObject context, ContributionEnd semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -532,7 +532,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         intentionalElement=[IntentionalElement|QualifiedName] 
-	 *         (qualitativeEvaluation=QualitativeLabel | evaluation=INT) 
+	 *         (qualitativeEvaluation=QualitativeLabel | evaluation=QUALITATIVEVALUE) 
 	 *         (exceeds?='exceeds'? evalRange=EvaluationRange? kpiEvalValueSet=KPIEvalValueSet?)?
 	 *     )
 	 */
@@ -558,7 +558,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             label=STRING? 
 	 *             description=STRING? 
 	 *             decompositionType=DecompositionType? 
-	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *             (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE)? 
 	 *             metaData+=Metadata* 
 	 *             elementLinks+=InLineElementLink*
 	 *         )?
@@ -613,7 +613,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             label=STRING? 
 	 *             description=STRING? 
 	 *             decompositionType=DecompositionType? 
-	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *             (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE)? 
 	 *             metaData+=Metadata* 
 	 *             elementLinks+=InLineElementLink*
 	 *         )?
@@ -669,7 +669,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=STRING evaluation=INT qualitativeEvaluation=QualitativeLabel exceeds=BOOLEAN)
+	 *     (name=STRING evaluation=QUALITATIVEVALUE qualitativeEvaluation=QualitativeLabel exceeds=Boolean)
 	 */
 	protected void sequence_Mapping(EObject context, Mapping semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -711,7 +711,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             label=STRING? 
 	 *             description=STRING? 
 	 *             decompositionType=DecompositionType? 
-	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *             (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE)? 
 	 *             metaData+=Metadata* 
 	 *             elementLinks+=InLineElementLink*
 	 *         )?
@@ -730,7 +730,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             label=STRING? 
 	 *             description=STRING? 
 	 *             decompositionType=DecompositionType? 
-	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *             (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE)? 
 	 *             metaData+=Metadata* 
 	 *             elementLinks+=InLineElementLink*
 	 *         )?
@@ -758,7 +758,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             label=STRING? 
 	 *             description=STRING? 
 	 *             decompositionType=DecompositionType? 
-	 *             (importance=ImportanceType | importanceQuantitative=INT)? 
+	 *             (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE)? 
 	 *             metaData+=Metadata* 
 	 *             elementLinks+=InLineElementLink*
 	 *         )?

@@ -2393,6 +2393,16 @@ public interface TGRLPackage extends EPackage
    */
   int PRIORITY = 49;
 
+  /**
+   * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.Boolean <em>Boolean</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.grl.tgrl.tGRL.Boolean
+   * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getBoolean()
+   * @generated
+   */
+  int BOOLEAN = 50;
+
 
   /**
    * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.Model <em>Model</em>}'.
@@ -3572,11 +3582,11 @@ public interface TGRLPackage extends EPackage
   EAttribute getMapping_QualitativeEvaluation();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Mapping#isExceeds <em>Exceeds</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Mapping#getExceeds <em>Exceeds</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Exceeds</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.Mapping#isExceeds()
+   * @see org.xtext.grl.tgrl.tGRL.Mapping#getExceeds()
    * @see #getMapping()
    * @generated
    */
@@ -4004,6 +4014,16 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   EEnum getPriority();
+
+  /**
+   * Returns the meta object for enum '{@link org.xtext.grl.tgrl.tGRL.Boolean <em>Boolean</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Boolean</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.Boolean
+   * @generated
+   */
+  EEnum getBoolean();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -5335,6 +5355,16 @@ public interface TGRLPackage extends EPackage
      * @generated
      */
     EEnum PRIORITY = eINSTANCE.getPriority();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.Boolean <em>Boolean</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.grl.tgrl.tGRL.Boolean
+     * @see org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl#getBoolean()
+     * @generated
+     */
+    EEnum BOOLEAN = eINSTANCE.getBoolean();
 
   }
 

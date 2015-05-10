@@ -2,6 +2,8 @@
  */
 package org.xtext.grl.tgrl.tGRL.impl;
 
+import java.lang.Boolean;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 

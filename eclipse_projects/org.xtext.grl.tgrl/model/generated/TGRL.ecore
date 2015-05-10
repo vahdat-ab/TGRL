@@ -172,7 +172,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="evaluation" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualitativeEvaluation"
         eType="#//QualitativeLabel"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exceeds" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exceeds" eType="#//Boolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ContributionGroup" eSuperTypes="#//GRLElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
@@ -284,5 +284,9 @@
     <eLiterals name="High" value="1" literal="High"/>
     <eLiterals name="Medium" value="2" literal="Medium"/>
     <eLiterals name="Low" value="3" literal="Low"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Boolean">
+    <eLiterals name="false" literal="false"/>
+    <eLiterals name="true" value="1" literal="true"/>
   </eClassifiers>
 </ecore:EPackage>

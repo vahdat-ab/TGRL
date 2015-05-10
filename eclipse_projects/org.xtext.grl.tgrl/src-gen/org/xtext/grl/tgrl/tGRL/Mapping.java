@@ -14,7 +14,7 @@ package org.xtext.grl.tgrl.tGRL;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Mapping#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Mapping#getEvaluation <em>Evaluation</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Mapping#getQualitativeEvaluation <em>Qualitative Evaluation</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.Mapping#isExceeds <em>Exceeds</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Mapping#getExceeds <em>Exceeds</em>}</li>
  * </ul>
  * </p>
  *
@@ -107,6 +107,7 @@ public interface Mapping extends GRLBaseElement
 
   /**
    * Returns the value of the '<em><b>Exceeds</b></em>' attribute.
+   * The literals are from the enumeration {@link org.xtext.grl.tgrl.tGRL.Boolean}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Exceeds</em>' attribute isn't clear,
@@ -114,21 +115,23 @@ public interface Mapping extends GRLBaseElement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Exceeds</em>' attribute.
-   * @see #setExceeds(boolean)
+   * @see org.xtext.grl.tgrl.tGRL.Boolean
+   * @see #setExceeds(org.xtext.grl.tgrl.tGRL.Boolean)
    * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getMapping_Exceeds()
    * @model
    * @generated
    */
-  boolean isExceeds();
+  org.xtext.grl.tgrl.tGRL.Boolean getExceeds();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Mapping#isExceeds <em>Exceeds</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Mapping#getExceeds <em>Exceeds</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Exceeds</em>' attribute.
-   * @see #isExceeds()
+   * @see org.xtext.grl.tgrl.tGRL.Boolean
+   * @see #getExceeds()
    * @generated
    */
-  void setExceeds(boolean value);
+  void setExceeds(org.xtext.grl.tgrl.tGRL.Boolean value);
 
 } // Mapping

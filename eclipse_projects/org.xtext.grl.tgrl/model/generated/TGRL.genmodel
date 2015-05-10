@@ -66,6 +66,10 @@
       <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Priority/Medium"/>
       <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Priority/Low"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="TGRL.ecore#//Boolean">
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Boolean/false"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Boolean/true"/>
+    </genEnums>
     <genClasses ecoreClass="TGRL.ecore#//Model">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Model/gRLspecifications"/>
     </genClasses>
