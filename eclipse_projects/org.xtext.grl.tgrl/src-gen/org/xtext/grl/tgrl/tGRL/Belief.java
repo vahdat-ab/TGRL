@@ -13,6 +13,6 @@ package org.xtext.grl.tgrl.tGRL;
  * @model
  * @generated
  */
-public interface Belief extends IntentionalElement
+public interface Belief extends SuperIntentionalElement
 {
 } // Belief

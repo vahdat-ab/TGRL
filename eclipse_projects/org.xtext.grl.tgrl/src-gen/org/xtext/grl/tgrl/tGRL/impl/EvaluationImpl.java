@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.grl.tgrl.tGRL.Evaluation;
 import org.xtext.grl.tgrl.tGRL.EvaluationRange;
-import org.xtext.grl.tgrl.tGRL.IntentionalElement;
 import org.xtext.grl.tgrl.tGRL.KPIEvalValueSet;
 import org.xtext.grl.tgrl.tGRL.QualitativeLabel;
+import org.xtext.grl.tgrl.tGRL.SuperIntentionalElement;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
@@ -47,7 +47,7 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
    * @generated
    * @ordered
    */
-  protected IntentionalElement intentionalElement;
+  protected SuperIntentionalElement intentionalElement;
 
   /**
    * The default value of the '{@link #getQualitativeEvaluation() <em>Qualitative Evaluation</em>}' attribute.
@@ -155,12 +155,12 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntentionalElement getIntentionalElement()
+  public SuperIntentionalElement getIntentionalElement()
   {
     if (intentionalElement != null && intentionalElement.eIsProxy())
     {
       InternalEObject oldIntentionalElement = (InternalEObject)intentionalElement;
-      intentionalElement = (IntentionalElement)eResolveProxy(oldIntentionalElement);
+      intentionalElement = (SuperIntentionalElement)eResolveProxy(oldIntentionalElement);
       if (intentionalElement != oldIntentionalElement)
       {
         if (eNotificationRequired())
@@ -175,7 +175,7 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntentionalElement basicGetIntentionalElement()
+  public SuperIntentionalElement basicGetIntentionalElement()
   {
     return intentionalElement;
   }
@@ -185,9 +185,9 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setIntentionalElement(IntentionalElement newIntentionalElement)
+  public void setIntentionalElement(SuperIntentionalElement newIntentionalElement)
   {
-    IntentionalElement oldIntentionalElement = intentionalElement;
+    SuperIntentionalElement oldIntentionalElement = intentionalElement;
     intentionalElement = newIntentionalElement;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.EVALUATION__INTENTIONAL_ELEMENT, oldIntentionalElement, intentionalElement));
@@ -414,7 +414,7 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
     switch (featureID)
     {
       case TGRLPackage.EVALUATION__INTENTIONAL_ELEMENT:
-        setIntentionalElement((IntentionalElement)newValue);
+        setIntentionalElement((SuperIntentionalElement)newValue);
         return;
       case TGRLPackage.EVALUATION__QUALITATIVE_EVALUATION:
         setQualitativeEvaluation((QualitativeLabel)newValue);
@@ -446,7 +446,7 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
     switch (featureID)
     {
       case TGRLPackage.EVALUATION__INTENTIONAL_ELEMENT:
-        setIntentionalElement((IntentionalElement)null);
+        setIntentionalElement((SuperIntentionalElement)null);
         return;
       case TGRLPackage.EVALUATION__QUALITATIVE_EVALUATION:
         setQualitativeEvaluation(QUALITATIVE_EVALUATION_EDEFAULT);

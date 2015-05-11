@@ -5,53 +5,45 @@ package org.xtext.grl.tgrl.tGRL.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.xtext.grl.tgrl.tGRL.DependencyEnd;
+import org.xtext.grl.tgrl.tGRL.GRLElement;
+import org.xtext.grl.tgrl.tGRL.SuperElementLink;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Dependency End</b></em>'.
+ * An implementation of the model object '<em><b>Super Element Link</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.DependencyEndImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.SuperElementLinkImpl#getSrc <em>Src</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
+public class SuperElementLinkImpl extends GRLElementImpl implements SuperElementLink
 {
   /**
-   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+   * The cached value of the '{@link #getSrc() <em>Src</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDescription()
+   * @see #getSrc()
    * @generated
    * @ordered
    */
-  protected static final String DESCRIPTION_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDescription()
-   * @generated
-   * @ordered
-   */
-  protected String description = DESCRIPTION_EDEFAULT;
+  protected GRLElement src;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DependencyEndImpl()
+  protected SuperElementLinkImpl()
   {
     super();
   }
@@ -64,7 +56,7 @@ public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.DEPENDENCY_END;
+    return TGRLPackage.Literals.SUPER_ELEMENT_LINK;
   }
 
   /**
@@ -72,9 +64,19 @@ public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getDescription()
+  public GRLElement getSrc()
   {
-    return description;
+    if (src != null && src.eIsProxy())
+    {
+      InternalEObject oldSrc = (InternalEObject)src;
+      src = (GRLElement)eResolveProxy(oldSrc);
+      if (src != oldSrc)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.SUPER_ELEMENT_LINK__SRC, oldSrc, src));
+      }
+    }
+    return src;
   }
 
   /**
@@ -82,12 +84,22 @@ public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDescription(String newDescription)
+  public GRLElement basicGetSrc()
   {
-    String oldDescription = description;
-    description = newDescription;
+    return src;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSrc(GRLElement newSrc)
+  {
+    GRLElement oldSrc = src;
+    src = newSrc;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.DEPENDENCY_END__DESCRIPTION, oldDescription, description));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.SUPER_ELEMENT_LINK__SRC, oldSrc, src));
   }
 
   /**
@@ -100,8 +112,9 @@ public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
   {
     switch (featureID)
     {
-      case TGRLPackage.DEPENDENCY_END__DESCRIPTION:
-        return getDescription();
+      case TGRLPackage.SUPER_ELEMENT_LINK__SRC:
+        if (resolve) return getSrc();
+        return basicGetSrc();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -116,8 +129,8 @@ public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
   {
     switch (featureID)
     {
-      case TGRLPackage.DEPENDENCY_END__DESCRIPTION:
-        setDescription((String)newValue);
+      case TGRLPackage.SUPER_ELEMENT_LINK__SRC:
+        setSrc((GRLElement)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -133,8 +146,8 @@ public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
   {
     switch (featureID)
     {
-      case TGRLPackage.DEPENDENCY_END__DESCRIPTION:
-        setDescription(DESCRIPTION_EDEFAULT);
+      case TGRLPackage.SUPER_ELEMENT_LINK__SRC:
+        setSrc((GRLElement)null);
         return;
     }
     super.eUnset(featureID);
@@ -150,27 +163,10 @@ public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
   {
     switch (featureID)
     {
-      case TGRLPackage.DEPENDENCY_END__DESCRIPTION:
-        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+      case TGRLPackage.SUPER_ELEMENT_LINK__SRC:
+        return src != null;
     }
     return super.eIsSet(featureID);
   }
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (description: ");
-    result.append(description);
-    result.append(')');
-    return result.toString();
-  }
-
-} //DependencyEndImpl
+} //SuperElementLinkImpl

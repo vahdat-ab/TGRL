@@ -2,17 +2,17 @@
 [module generateServices('http://www.xtext.org/grl/tgrl/TGRL')]
 [import org::eclipse::acceleo::module::tgrl::java::services::generateModelFeatures /]
 
-[template public getLinkSrc(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
-[if (getAllElementLink(inModel)->select(src.name=inIntentionalElement.name)->size()>0)]
-linksSrc="[for (element : ElementLink | getAllElementLink(inModel)->select(src.name=inIntentionalElement.name))][id/] [/for]"
+[comment][template public getLinkSrc(inModel : Model ,inIntentionalElement : IntentionalElement, type:OclType) post(trim())]
+[if (getAllElementLink(inModel)->select(src.id=inIntentionalElement.id)->selectByType(Decomposition)->size()>0)]
+linksSrc="[for (element : ElementLink | getAllElementLink(inModel)->select(src.id=inIntentionalElement.id))][id/] [/for]"
 [/if]
 [/template]
 [template public getLinksDest(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
-[if (getAllElementLink(inModel)->select(dest.name=inIntentionalElement.name)->size()>0)]
+[if (getAllElementLink(inModel).oclas ->select( =inIntentionalElement.name)->size()>0)]
 linksDest="[for (element : ElementLink | getAllElementLink(inModel)->select(dest.name=inIntentionalElement.name))][id/] [/for]"
 [/if]
-[/template]
-[template public getSucc(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
+[/template][/comment]
+[comment][template public getSucc(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
 [if (getAllElementLink(inModel)->select(src.name=inIntentionalElement.name)->size()>0)]
 succ="[for (element : ElementLink | getAllElementLink(inModel)->select(src.name=inIntentionalElement.name))]
 [for (loopElement : ElementLink | getAllElementLink(inModel)->asSequence())][if (name =element.name)] //@urndef/@specDiagrams.0/@connections.[i-1/][/if][/for][/for]"
@@ -23,7 +23,7 @@ succ="[for (element : ElementLink | getAllElementLink(inModel)->select(src.name=
 pred="[for (element : ElementLink | getAllElementLink(inModel)->select(dest.name=inIntentionalElement.name))]
 [for (loopElement : ElementLink | getAllElementLink(inModel)->asSequence())][if (name =element.name)] //@urndef/@specDiagrams.0/@connections.[i-1/][/if][/for][/for]"
 [/if]
-[/template]
+[/template][/comment]
 [template public getType(inIntentionalElement : IntentionalElement) post(trim())]
 [if (oclIsKindOf(Softgoal))]
 [elseif (oclIsKindOf(Goal))]
@@ -32,11 +32,11 @@ type="Goal"
 type="Task"
 [elseif (oclIsKindOf(Indicator))]
 type="Indicator"
-[elseif (oclIsKindOf(Ressource))]
+[elseif (oclIsKindOf(Resource))]
 type="Ressource"
 [/if]
 [/template]
-[template public getLinkType(inConnection : Connection) post(trim())]
+[comment][template public getLinkType(inConnection : Connection) post(trim())]
 xsi:type="grl:[if (oclIsKindOf(DecompositionEnds))]
 Decomposition"
 [elseif (oclIsKindOf(DependencyEnds))]
@@ -45,14 +45,14 @@ Dependency"
 Contribution" contribution="[inElementLink.oclAsType(Contribution).contribution/]" quantitativeContribution="[inElementLink.oclAsType(Contribution).quantitativeContribution/]" [if (inElementLink.oclAsType(Contribution).correlation->size()=0)]correlation="false"
 [else]correlation="[inElementLink.oclAsType(Contribution).correlation.toString()/]"[/if]
 [/if]
-[/template]
+[/template][/comment]
 [template public getNodes(inActor : Actor) post(trim())]
-[if (intentionalElements->size()>0)]
-nodes="[for (elementLink : IntentionalElement | intentionalElements)][id/]R [/for]"
+[if (elemets->selectByType(IntentionalElement)->size()>0)]
+nodes="[for (elementLink : IntentionalElement | elemets->selectByType(IntentionalElement))][id/]R [/for]"
 [/if]	
 [/template]
 
-[template public getColor(inGRLElement : GRLElement)]
+[comment][template public getColor(inGRLElement : GRLElement)]
 [if (fillColor.toString()='white')]
 [elseif (fillColor.toString()='black')]
 filled="true" fillColor="0,0,0"
@@ -85,4 +85,15 @@ filled="true" fillColor="255,160,255"
 [elseif (fillColor.toString()='lightYellow')]
 filled="true" fillColor="255,255,160"
 [/if]
+[/template][/comment]
+
+[template public getName(inSuperIntentionalElement : SuperIntentionalElement) post(trim())]
+[if (label='')]
+[name/][else][label/]
+[/if]
+[/template]
+[template public PrintMetaData(inMetadata : Set(Metadata)) post(trim())]
+[for (metadata : Metadata | inMetadata)]
+<metadata name="[name/]" value="[value/]"/>
+[/for]
 [/template]

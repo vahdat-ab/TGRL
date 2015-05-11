@@ -5,14 +5,11 @@ package org.xtext.grl.tgrl.tGRL.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.grl.tgrl.tGRL.ContributionEnd;
 import org.xtext.grl.tgrl.tGRL.ContributionType;
-import org.xtext.grl.tgrl.tGRL.IntentionalElement;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
@@ -23,7 +20,6 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionEndImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionEndImpl#getDesname <em>Desname</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionEndImpl#getContribution <em>Contribution</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionEndImpl#getQuantitativeContribution <em>Quantitative Contribution</em>}</li>
  * </ul>
@@ -31,7 +27,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *
  * @generated
  */
-public class ContributionEndImpl extends MinimalEObjectImpl.Container implements ContributionEnd
+public class ContributionEndImpl extends LinkEndImpl implements ContributionEnd
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -52,16 +48,6 @@ public class ContributionEndImpl extends MinimalEObjectImpl.Container implements
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getDesname() <em>Desname</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDesname()
-   * @generated
-   * @ordered
-   */
-  protected IntentionalElement desname;
 
   /**
    * The default value of the '{@link #getContribution() <em>Contribution</em>}' attribute.
@@ -152,49 +138,6 @@ public class ContributionEndImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntentionalElement getDesname()
-  {
-    if (desname != null && desname.eIsProxy())
-    {
-      InternalEObject oldDesname = (InternalEObject)desname;
-      desname = (IntentionalElement)eResolveProxy(oldDesname);
-      if (desname != oldDesname)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.CONTRIBUTION_END__DESNAME, oldDesname, desname));
-      }
-    }
-    return desname;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public IntentionalElement basicGetDesname()
-  {
-    return desname;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setDesname(IntentionalElement newDesname)
-  {
-    IntentionalElement oldDesname = desname;
-    desname = newDesname;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION_END__DESNAME, oldDesname, desname));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public ContributionType getContribution()
   {
     return contribution;
@@ -248,9 +191,6 @@ public class ContributionEndImpl extends MinimalEObjectImpl.Container implements
     {
       case TGRLPackage.CONTRIBUTION_END__NAME:
         return getName();
-      case TGRLPackage.CONTRIBUTION_END__DESNAME:
-        if (resolve) return getDesname();
-        return basicGetDesname();
       case TGRLPackage.CONTRIBUTION_END__CONTRIBUTION:
         return getContribution();
       case TGRLPackage.CONTRIBUTION_END__QUANTITATIVE_CONTRIBUTION:
@@ -271,9 +211,6 @@ public class ContributionEndImpl extends MinimalEObjectImpl.Container implements
     {
       case TGRLPackage.CONTRIBUTION_END__NAME:
         setName((String)newValue);
-        return;
-      case TGRLPackage.CONTRIBUTION_END__DESNAME:
-        setDesname((IntentionalElement)newValue);
         return;
       case TGRLPackage.CONTRIBUTION_END__CONTRIBUTION:
         setContribution((ContributionType)newValue);
@@ -298,9 +235,6 @@ public class ContributionEndImpl extends MinimalEObjectImpl.Container implements
       case TGRLPackage.CONTRIBUTION_END__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case TGRLPackage.CONTRIBUTION_END__DESNAME:
-        setDesname((IntentionalElement)null);
-        return;
       case TGRLPackage.CONTRIBUTION_END__CONTRIBUTION:
         setContribution(CONTRIBUTION_EDEFAULT);
         return;
@@ -323,8 +257,6 @@ public class ContributionEndImpl extends MinimalEObjectImpl.Container implements
     {
       case TGRLPackage.CONTRIBUTION_END__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TGRLPackage.CONTRIBUTION_END__DESNAME:
-        return desname != null;
       case TGRLPackage.CONTRIBUTION_END__CONTRIBUTION:
         return contribution != CONTRIBUTION_EDEFAULT;
       case TGRLPackage.CONTRIBUTION_END__QUANTITATIVE_CONTRIBUTION:

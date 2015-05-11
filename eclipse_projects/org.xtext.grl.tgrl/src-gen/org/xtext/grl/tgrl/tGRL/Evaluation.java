@@ -35,12 +35,12 @@ public interface Evaluation extends GRLElement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Intentional Element</em>' reference.
-   * @see #setIntentionalElement(IntentionalElement)
+   * @see #setIntentionalElement(SuperIntentionalElement)
    * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getEvaluation_IntentionalElement()
    * @model
    * @generated
    */
-  IntentionalElement getIntentionalElement();
+  SuperIntentionalElement getIntentionalElement();
 
   /**
    * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Evaluation#getIntentionalElement <em>Intentional Element</em>}' reference.
@@ -50,7 +50,7 @@ public interface Evaluation extends GRLElement
    * @see #getIntentionalElement()
    * @generated
    */
-  void setIntentionalElement(IntentionalElement value);
+  void setIntentionalElement(SuperIntentionalElement value);
 
   /**
    * Returns the value of the '<em><b>Qualitative Evaluation</b></em>' attribute.

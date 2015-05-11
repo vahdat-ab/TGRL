@@ -28,13 +28,13 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.LinkImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.LinkImpl#getDes <em>Des</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.LinkImpl#getDest <em>Dest</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class LinkImpl extends ElementLinkImpl implements Link
+public class LinkImpl extends SuperElementLinkImpl implements Link
 {
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' reference.
@@ -47,14 +47,14 @@ public class LinkImpl extends ElementLinkImpl implements Link
   protected LinkType type;
 
   /**
-   * The cached value of the '{@link #getDes() <em>Des</em>}' reference list.
+   * The cached value of the '{@link #getDest() <em>Dest</em>}' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDes()
+   * @see #getDest()
    * @generated
    * @ordered
    */
-  protected EList<GRLElement> des;
+  protected EList<GRLElement> dest;
 
   /**
    * <!-- begin-user-doc -->
@@ -125,13 +125,13 @@ public class LinkImpl extends ElementLinkImpl implements Link
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<GRLElement> getDes()
+  public EList<GRLElement> getDest()
   {
-    if (des == null)
+    if (dest == null)
     {
-      des = new EObjectResolvingEList<GRLElement>(GRLElement.class, this, TGRLPackage.LINK__DES);
+      dest = new EObjectResolvingEList<GRLElement>(GRLElement.class, this, TGRLPackage.LINK__DEST);
     }
-    return des;
+    return dest;
   }
 
   /**
@@ -147,8 +147,8 @@ public class LinkImpl extends ElementLinkImpl implements Link
       case TGRLPackage.LINK__TYPE:
         if (resolve) return getType();
         return basicGetType();
-      case TGRLPackage.LINK__DES:
-        return getDes();
+      case TGRLPackage.LINK__DEST:
+        return getDest();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -167,9 +167,9 @@ public class LinkImpl extends ElementLinkImpl implements Link
       case TGRLPackage.LINK__TYPE:
         setType((LinkType)newValue);
         return;
-      case TGRLPackage.LINK__DES:
-        getDes().clear();
-        getDes().addAll((Collection<? extends GRLElement>)newValue);
+      case TGRLPackage.LINK__DEST:
+        getDest().clear();
+        getDest().addAll((Collection<? extends GRLElement>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -188,8 +188,8 @@ public class LinkImpl extends ElementLinkImpl implements Link
       case TGRLPackage.LINK__TYPE:
         setType((LinkType)null);
         return;
-      case TGRLPackage.LINK__DES:
-        getDes().clear();
+      case TGRLPackage.LINK__DEST:
+        getDest().clear();
         return;
     }
     super.eUnset(featureID);
@@ -207,8 +207,8 @@ public class LinkImpl extends ElementLinkImpl implements Link
     {
       case TGRLPackage.LINK__TYPE:
         return type != null;
-      case TGRLPackage.LINK__DES:
-        return des != null && !des.isEmpty();
+      case TGRLPackage.LINK__DEST:
+        return dest != null && !dest.isEmpty();
     }
     return super.eIsSet(featureID);
   }

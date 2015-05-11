@@ -28,7 +28,7 @@ import org.xtext.grl.tgrl.tGRL.inLineLink;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.inLineLinkImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.inLineLinkImpl#getDes <em>Des</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.inLineLinkImpl#getDest <em>Dest</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,14 +47,14 @@ public class inLineLinkImpl extends InLineElementLinkImpl implements inLineLink
   protected LinkType type;
 
   /**
-   * The cached value of the '{@link #getDes() <em>Des</em>}' reference list.
+   * The cached value of the '{@link #getDest() <em>Dest</em>}' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDes()
+   * @see #getDest()
    * @generated
    * @ordered
    */
-  protected EList<GRLElement> des;
+  protected EList<GRLElement> dest;
 
   /**
    * <!-- begin-user-doc -->
@@ -125,13 +125,13 @@ public class inLineLinkImpl extends InLineElementLinkImpl implements inLineLink
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<GRLElement> getDes()
+  public EList<GRLElement> getDest()
   {
-    if (des == null)
+    if (dest == null)
     {
-      des = new EObjectResolvingEList<GRLElement>(GRLElement.class, this, TGRLPackage.IN_LINE_LINK__DES);
+      dest = new EObjectResolvingEList<GRLElement>(GRLElement.class, this, TGRLPackage.IN_LINE_LINK__DEST);
     }
-    return des;
+    return dest;
   }
 
   /**
@@ -147,8 +147,8 @@ public class inLineLinkImpl extends InLineElementLinkImpl implements inLineLink
       case TGRLPackage.IN_LINE_LINK__TYPE:
         if (resolve) return getType();
         return basicGetType();
-      case TGRLPackage.IN_LINE_LINK__DES:
-        return getDes();
+      case TGRLPackage.IN_LINE_LINK__DEST:
+        return getDest();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -167,9 +167,9 @@ public class inLineLinkImpl extends InLineElementLinkImpl implements inLineLink
       case TGRLPackage.IN_LINE_LINK__TYPE:
         setType((LinkType)newValue);
         return;
-      case TGRLPackage.IN_LINE_LINK__DES:
-        getDes().clear();
-        getDes().addAll((Collection<? extends GRLElement>)newValue);
+      case TGRLPackage.IN_LINE_LINK__DEST:
+        getDest().clear();
+        getDest().addAll((Collection<? extends GRLElement>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -188,8 +188,8 @@ public class inLineLinkImpl extends InLineElementLinkImpl implements inLineLink
       case TGRLPackage.IN_LINE_LINK__TYPE:
         setType((LinkType)null);
         return;
-      case TGRLPackage.IN_LINE_LINK__DES:
-        getDes().clear();
+      case TGRLPackage.IN_LINE_LINK__DEST:
+        getDest().clear();
         return;
     }
     super.eUnset(featureID);
@@ -207,8 +207,8 @@ public class inLineLinkImpl extends InLineElementLinkImpl implements inLineLink
     {
       case TGRLPackage.IN_LINE_LINK__TYPE:
         return type != null;
-      case TGRLPackage.IN_LINE_LINK__DES:
-        return des != null && !des.isEmpty();
+      case TGRLPackage.IN_LINE_LINK__DEST:
+        return dest != null && !dest.isEmpty();
     }
     return super.eIsSet(featureID);
   }

@@ -20,17 +20,23 @@ GRLBaseElement:
 ;
 GRLElement:
 	
-	IntentionalElement | ElementLink | Actor | StrategyGroup | IndicatorGroup | EvaluationStrategy | Evaluation | 
+	SuperIntentionalElement | SuperElementLink | Actor | StrategyGroup | IndicatorGroup | EvaluationStrategy | Evaluation | 
 	ContributionGroup |	ContributionContext | 
 	QualitativeMapping | Metadata | Comment | LinkType 
 	
 ;
+SuperIntentionalElement:
+	IntentionalElement | Belief
+;
 IntentionalElement:
-	 Softgoal | Goal  | Task | Resource | Indicator | Belief
+	 Softgoal | Goal  | Task | Resource | Indicator 
 ;
 
+SuperElementLink:
+	ElementLink | Link
+;
 ElementLink: 
-	Decomposition | Contribution | Dependency | Link
+	Decomposition | Contribution | Dependency
 ;
 
 InLineElementLink: 
@@ -42,7 +48,7 @@ GRLSpecification:
 //		(
 //			(impactModel=ImpactModel)?
 //			(
-//				links+=ElementLink | actors+=Actor | intElements+=IntentionalElement | 
+//				links+=ElementLink | actors+=Actor | intElements+=SuperIntentionalElement | 
 //				strategies+=EvaluationStrategy | contributionGroups+=ContributionContextGroup |
 //				contributionContexts+=ContributionContext | kpiConv+=KPIConversion	| kpiInformationElements+=KPIInformationElement |
 //				kpiModelLinks+=KPIModelLink | indicatorGroup+=IndicatorGroup
@@ -51,6 +57,7 @@ GRLSpecification:
 	'}'	
 ;
 
+//*************************************Actor******************************************
 Actor: 
 	'actor' name= ID
 	(
@@ -66,7 +73,7 @@ Actor:
 			('importance' '='  (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE) ';')?&
 			('description' '=' description=STRING ';')?&
 			(metaData+=Metadata)*&
-			(elemets+=IntentionalElement  | elemets+=ElementLink)*
+			(elemets+=SuperIntentionalElement  | elemets+=SuperElementLink)*
 			)
 			
 		'}'			
@@ -193,15 +200,18 @@ Belief:
 			(
 				('name' '=' label = STRING ';')?&
 				(metaData+=Metadata)*&
-				('description' description=STRING ';')?
+				('description' '=' description=STRING ';')?
 			)		
 		'}'			
 		)
 	)
 ;	
 //*******************************************ElementLink*******************************************
+LinkEnd:
+	DecompositionEnd | ContributionEnd | DependencyEnd
+;
 Decomposition: 
-	src=[IntentionalElement | QualifiedName] 'decomposedBy' dest+=DecompositionEnd (','dest+=DecompositionEnd)* ';'
+	src=[SuperIntentionalElement | QualifiedName] 'decomposedBy' dest+=DecompositionEnd (','dest+=DecompositionEnd)* ';'
 //			('name' '=' label = STRING ';')?&
 //			('description' '=' description=STRING ';')?&
 ;
@@ -209,15 +219,15 @@ InLineDecomposition:
 	'decomposedBy' dest+=DecompositionEnd (','dest+=DecompositionEnd)* ';'
 ;
 DecompositionEnd:
-	name=[IntentionalElement | QualifiedName] 
+	destName=[SuperIntentionalElement | QualifiedName] 
 	(
 		'{'
-			(description=STRING ';')?
+			(description=STRING)?
 		'}'	
 	)?
 ;
 Contribution: 
-	src=[IntentionalElement | QualifiedName] 'contributesTo' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
+	src=[SuperIntentionalElement | QualifiedName] 'contributesTo' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
 //			('name' '=' label = STRING ';')?&
 //			('contribution' '=' contribution=ContributionType ';')?&
 			/*
@@ -233,10 +243,10 @@ InLineContribution:
 ;
 ContributionEnd:
    (name = ID)?
-	desname = [IntentionalElement | QualifiedName]
+	destName = [SuperIntentionalElement | QualifiedName]
 	(
 		'{'
-			((contribution=ContributionType | quantitativeContribution=QUALITATIVEVALUE)';')?
+			(contribution=ContributionType | quantitativeContribution=QUALITATIVEVALUE)?
 		'}'
 	)?
 ;
@@ -245,7 +255,7 @@ ContributionEnd:
 //A Dependency describes how a source actor definition (the depender) depends on a destination actor definition (the dependee) for an intentional element or indicator (the dependum).
 
 Dependency:
-	src=[IntentionalElement | QualifiedName] 'dependsOn' dest+=DependencyEnd (','dest+=DependencyEnd)* ';'
+	src=[SuperIntentionalElement | QualifiedName] 'dependsOn' dest+=DependencyEnd (','dest+=DependencyEnd)* ';'
 //			('name' '=' label = STRING ';')?&
 //			('description' '=' c ';')?&
 ;
@@ -253,13 +263,26 @@ InLineDependency:
 	'dependsOn' dest+=DependencyEnd (','dest+=DependencyEnd)* ';'
 ;
 DependencyEnd:
-	name = [IntentionalElement | QualifiedName] 
+	destName = [SuperIntentionalElement | QualifiedName] 
 	(
 		'{'
-			(description=STRING ';')?
+			(description=STRING)?
 		'}'
 	)?
 ;
+
+LinkType:
+	'link' name = ID ';'
+;
+
+Link :
+	src = [GRLElement | QualifiedName] type = [LinkType | QualifiedName] dest += [GRLElement | QualifiedName] (',' dest += [GRLElement | QualifiedName])* ';'
+;
+
+inLineLink:
+	type = [LinkType | QualifiedName] dest += [GRLElement | QualifiedName] (',' dest += [GRLElement | QualifiedName])* ';'
+;
+
 //*******************************************Strategy*******************************************
 StrategyGroup: 
 	'strategyGroup' name=ID 'includes' strategies+=[EvaluationStrategy | QualifiedName](',' strategies+=[EvaluationStrategy | QualifiedName])* ';'
@@ -278,7 +301,7 @@ Evaluation:
 	 *TODO I must give a default value for evaluation, which is zero, to this attribute.
 	 * 		This can be done through the post processing mechanism in xText 
 	 */	
-	intentionalElement = [IntentionalElement | QualifiedName] '=' (qualitativeEvaluation=QualitativeLabel | evaluation = QUALITATIVEVALUE )('{' (exceeds?='exceeds'';')?& (evalRange=EvaluationRange)?& (kpiEvalValueSet = KPIEvalValueSet)? '}' | ';')
+	intentionalElement = [SuperIntentionalElement | QualifiedName] '=' (qualitativeEvaluation=QualitativeLabel | evaluation = QUALITATIVEVALUE )('{' (exceeds?='exceeds'';')?& (evalRange=EvaluationRange)?& (kpiEvalValueSet = KPIEvalValueSet)? '}' | ';')
 ;
 EvaluationRange: 
 	('start' '=' start=INT ';')&
@@ -379,17 +402,6 @@ Metadata:
 Comment:
 	'comment' content=STRING ';'
 ;
-LinkType:
-	'link' name = ID ';'
-;
-
-Link :
-	src = [GRLElement | QualifiedName] type = [LinkType | QualifiedName] des += [GRLElement | QualifiedName] (',' des += [GRLElement | QualifiedName])* ';'
-;
-
-inLineLink:
-	type = [LinkType | QualifiedName] des += [GRLElement | QualifiedName] (',' des += [GRLElement | QualifiedName])* ';'
-;
 
 
 IndicatorGroup :
@@ -398,7 +410,7 @@ IndicatorGroup :
 ;
 
 enum ImportanceType: 
-	 none  | high  | medium | low
+	 None = 'none'  | High = 'high'  | Medium = 'medium' | Low = 'low'
 ;
 enum DecompositionType:
 	and| or  | xor  

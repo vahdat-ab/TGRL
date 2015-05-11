@@ -5,13 +5,10 @@ package org.xtext.grl.tgrl.tGRL.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.grl.tgrl.tGRL.DecompositionEnd;
-import org.xtext.grl.tgrl.tGRL.IntentionalElement;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
@@ -21,25 +18,14 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.DecompositionEndImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.DecompositionEndImpl#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class DecompositionEndImpl extends MinimalEObjectImpl.Container implements DecompositionEnd
+public class DecompositionEndImpl extends LinkEndImpl implements DecompositionEnd
 {
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected IntentionalElement name;
-
   /**
    * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -86,49 +72,6 @@ public class DecompositionEndImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public IntentionalElement getName()
-  {
-    if (name != null && name.eIsProxy())
-    {
-      InternalEObject oldName = (InternalEObject)name;
-      name = (IntentionalElement)eResolveProxy(oldName);
-      if (name != oldName)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.DECOMPOSITION_END__NAME, oldName, name));
-      }
-    }
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public IntentionalElement basicGetName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(IntentionalElement newName)
-  {
-    IntentionalElement oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.DECOMPOSITION_END__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public String getDescription()
   {
     return description;
@@ -157,9 +100,6 @@ public class DecompositionEndImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case TGRLPackage.DECOMPOSITION_END__NAME:
-        if (resolve) return getName();
-        return basicGetName();
       case TGRLPackage.DECOMPOSITION_END__DESCRIPTION:
         return getDescription();
     }
@@ -176,9 +116,6 @@ public class DecompositionEndImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case TGRLPackage.DECOMPOSITION_END__NAME:
-        setName((IntentionalElement)newValue);
-        return;
       case TGRLPackage.DECOMPOSITION_END__DESCRIPTION:
         setDescription((String)newValue);
         return;
@@ -196,9 +133,6 @@ public class DecompositionEndImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case TGRLPackage.DECOMPOSITION_END__NAME:
-        setName((IntentionalElement)null);
-        return;
       case TGRLPackage.DECOMPOSITION_END__DESCRIPTION:
         setDescription(DESCRIPTION_EDEFAULT);
         return;
@@ -216,8 +150,6 @@ public class DecompositionEndImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case TGRLPackage.DECOMPOSITION_END__NAME:
-        return name != null;
       case TGRLPackage.DECOMPOSITION_END__DESCRIPTION:
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
     }

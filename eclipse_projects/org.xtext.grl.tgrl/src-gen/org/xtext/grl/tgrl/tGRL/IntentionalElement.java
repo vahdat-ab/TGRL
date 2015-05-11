@@ -12,10 +12,10 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getLabel <em>Label</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getDescription <em>Description</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getMetaData <em>Meta Data</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getDecompositionType <em>Decomposition Type</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getImportance <em>Importance</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getImportanceQuantitative <em>Importance Quantitative</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getElementLinks <em>Element Links</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,100 +23,106 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface IntentionalElement extends GRLElement
+public interface IntentionalElement extends SuperIntentionalElement
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Decomposition Type</b></em>' attribute.
+   * The literals are from the enumeration {@link org.xtext.grl.tgrl.tGRL.DecompositionType}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Decomposition Type</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getIntentionalElement_Name()
+   * @return the value of the '<em>Decomposition Type</em>' attribute.
+   * @see org.xtext.grl.tgrl.tGRL.DecompositionType
+   * @see #setDecompositionType(DecompositionType)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getIntentionalElement_DecompositionType()
    * @model
    * @generated
    */
-  String getName();
+  DecompositionType getDecompositionType();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getDecompositionType <em>Decomposition Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
+   * @param value the new value of the '<em>Decomposition Type</em>' attribute.
+   * @see org.xtext.grl.tgrl.tGRL.DecompositionType
+   * @see #getDecompositionType()
    * @generated
    */
-  void setName(String value);
+  void setDecompositionType(DecompositionType value);
 
   /**
-   * Returns the value of the '<em><b>Label</b></em>' attribute.
+   * Returns the value of the '<em><b>Importance</b></em>' attribute.
+   * The literals are from the enumeration {@link org.xtext.grl.tgrl.tGRL.ImportanceType}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Label</em>' attribute isn't clear,
+   * If the meaning of the '<em>Importance</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Label</em>' attribute.
-   * @see #setLabel(String)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getIntentionalElement_Label()
+   * @return the value of the '<em>Importance</em>' attribute.
+   * @see org.xtext.grl.tgrl.tGRL.ImportanceType
+   * @see #setImportance(ImportanceType)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getIntentionalElement_Importance()
    * @model
    * @generated
    */
-  String getLabel();
+  ImportanceType getImportance();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getLabel <em>Label</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getImportance <em>Importance</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Label</em>' attribute.
-   * @see #getLabel()
+   * @param value the new value of the '<em>Importance</em>' attribute.
+   * @see org.xtext.grl.tgrl.tGRL.ImportanceType
+   * @see #getImportance()
    * @generated
    */
-  void setLabel(String value);
+  void setImportance(ImportanceType value);
 
   /**
-   * Returns the value of the '<em><b>Description</b></em>' attribute.
+   * Returns the value of the '<em><b>Importance Quantitative</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Description</em>' attribute isn't clear,
+   * If the meaning of the '<em>Importance Quantitative</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Description</em>' attribute.
-   * @see #setDescription(String)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getIntentionalElement_Description()
+   * @return the value of the '<em>Importance Quantitative</em>' attribute.
+   * @see #setImportanceQuantitative(int)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getIntentionalElement_ImportanceQuantitative()
    * @model
    * @generated
    */
-  String getDescription();
+  int getImportanceQuantitative();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getDescription <em>Description</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getImportanceQuantitative <em>Importance Quantitative</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Description</em>' attribute.
-   * @see #getDescription()
+   * @param value the new value of the '<em>Importance Quantitative</em>' attribute.
+   * @see #getImportanceQuantitative()
    * @generated
    */
-  void setDescription(String value);
+  void setImportanceQuantitative(int value);
 
   /**
-   * Returns the value of the '<em><b>Meta Data</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.Metadata}.
+   * Returns the value of the '<em><b>Element Links</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.InLineElementLink}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Meta Data</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Element Links</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Meta Data</em>' containment reference list.
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getIntentionalElement_MetaData()
+   * @return the value of the '<em>Element Links</em>' containment reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getIntentionalElement_ElementLinks()
    * @model containment="true"
    * @generated
    */
-  EList<Metadata> getMetaData();
+  EList<InLineElementLink> getElementLinks();
 
 } // IntentionalElement

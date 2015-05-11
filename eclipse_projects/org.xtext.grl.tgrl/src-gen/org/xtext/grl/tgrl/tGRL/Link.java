@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.Link#getType <em>Type</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.Link#getDes <em>Des</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.Link#getDest <em>Dest</em>}</li>
  * </ul>
  * </p>
  *
@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Link extends ElementLink
+public interface Link extends SuperElementLink
 {
   /**
    * Returns the value of the '<em><b>Type</b></em>' reference.
@@ -50,19 +50,19 @@ public interface Link extends ElementLink
   void setType(LinkType value);
 
   /**
-   * Returns the value of the '<em><b>Des</b></em>' reference list.
+   * Returns the value of the '<em><b>Dest</b></em>' reference list.
    * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.GRLElement}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Des</em>' reference list isn't clear,
+   * If the meaning of the '<em>Dest</em>' reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Des</em>' reference list.
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getLink_Des()
+   * @return the value of the '<em>Dest</em>' reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getLink_Dest()
    * @model
    * @generated
    */
-  EList<GRLElement> getDes();
+  EList<GRLElement> getDest();
 
 } // Link

@@ -10,16 +10,25 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GRLBaseElement" eSuperTypes="#//Element"/>
   <eClassifiers xsi:type="ecore:EClass" name="GRLElement" eSuperTypes="#//GRLBaseElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="IntentionalElement" eSuperTypes="#//GRLElement">
+  <eClassifiers xsi:type="ecore:EClass" name="SuperIntentionalElement" eSuperTypes="#//GRLElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="metaData" upperBound="-1"
         eType="#//Metadata" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ElementLink" eSuperTypes="#//GRLElement">
+  <eClassifiers xsi:type="ecore:EClass" name="IntentionalElement" eSuperTypes="#//SuperIntentionalElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="decompositionType" eType="#//DecompositionType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importance" eType="#//ImportanceType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importanceQuantitative"
+        eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elementLinks" upperBound="-1"
+        eType="#//InLineElementLink" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SuperElementLink" eSuperTypes="#//GRLElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="src" eType="#//GRLElement"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElementLink" eSuperTypes="#//SuperElementLink"/>
   <eClassifiers xsi:type="ecore:EClass" name="InLineElementLink" eSuperTypes="#//GRLBaseElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="GRLSpecification" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
@@ -38,47 +47,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="elemets" upperBound="-1"
         eType="#//GRLElement" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Softgoal" eSuperTypes="#//IntentionalElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="decompositionType" eType="#//DecompositionType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importance" eType="#//ImportanceType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importanceQuantitative"
-        eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elementLinks" upperBound="-1"
-        eType="#//InLineElementLink" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Softgoal" eSuperTypes="#//IntentionalElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Goal" eSuperTypes="#//IntentionalElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//IntentionalElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="#//IntentionalElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Indicator" eSuperTypes="#//IntentionalElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Belief" eSuperTypes="#//SuperIntentionalElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkEnd">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="destName" eType="#//SuperIntentionalElement"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Goal" eSuperTypes="#//IntentionalElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="decompositionType" eType="#//DecompositionType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importance" eType="#//ImportanceType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importanceQuantitative"
-        eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elementLinks" upperBound="-1"
-        eType="#//InLineElementLink" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//IntentionalElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="decompositionType" eType="#//DecompositionType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importance" eType="#//ImportanceType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importanceQuantitative"
-        eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elementLinks" upperBound="-1"
-        eType="#//InLineElementLink" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="#//IntentionalElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="decompositionType" eType="#//DecompositionType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importance" eType="#//ImportanceType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importanceQuantitative"
-        eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elementLinks" upperBound="-1"
-        eType="#//InLineElementLink" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Indicator" eSuperTypes="#//IntentionalElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="decompositionType" eType="#//DecompositionType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importance" eType="#//ImportanceType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importanceQuantitative"
-        eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elementLinks" upperBound="-1"
-        eType="#//InLineElementLink" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Belief" eSuperTypes="#//IntentionalElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Decomposition" eSuperTypes="#//ElementLink">
     <eStructuralFeatures xsi:type="ecore:EReference" name="dest" upperBound="-1" eType="#//DecompositionEnd"
         containment="true"/>
@@ -87,8 +64,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="dest" upperBound="-1" eType="#//DecompositionEnd"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DecompositionEnd">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//IntentionalElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DecompositionEnd" eSuperTypes="#//LinkEnd">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Contribution" eSuperTypes="#//ElementLink">
@@ -99,9 +75,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="dest" upperBound="-1" eType="#//ContributionEnd"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ContributionEnd">
+  <eClassifiers xsi:type="ecore:EClass" name="ContributionEnd" eSuperTypes="#//LinkEnd">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="desname" eType="#//IntentionalElement"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="contribution" eType="#//ContributionType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantitativeContribution"
         eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
@@ -114,9 +89,21 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="dest" upperBound="-1" eType="#//DependencyEnd"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DependencyEnd">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//IntentionalElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DependencyEnd" eSuperTypes="#//LinkEnd">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkType" eSuperTypes="#//GRLElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//SuperElementLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//LinkType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dest" unique="false" upperBound="-1"
+        eType="#//GRLElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="inLineLink" eSuperTypes="#//InLineElementLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//LinkType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dest" unique="false" upperBound="-1"
+        eType="#//GRLElement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StrategyGroup" eSuperTypes="#//GRLElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
@@ -133,7 +120,7 @@
         eType="#//Evaluation" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Evaluation" eSuperTypes="#//GRLElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="intentionalElement" eType="#//IntentionalElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="intentionalElement" eType="#//SuperIntentionalElement"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualitativeEvaluation"
         eType="#//QualitativeLabel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="evaluation" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
@@ -208,29 +195,16 @@
   <eClassifiers xsi:type="ecore:EClass" name="Comment" eSuperTypes="#//GRLElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LinkType" eSuperTypes="#//GRLElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//ElementLink">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//LinkType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="des" unique="false" upperBound="-1"
-        eType="#//GRLElement"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="inLineLink" eSuperTypes="#//InLineElementLink">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//LinkType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="des" unique="false" upperBound="-1"
-        eType="#//GRLElement"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IndicatorGroup" eSuperTypes="#//GRLElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="indicators" unique="false"
         upperBound="-1" eType="#//Indicator"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ImportanceType">
-    <eLiterals name="none" literal="none"/>
-    <eLiterals name="high" value="1" literal="high"/>
-    <eLiterals name="medium" value="2" literal="medium"/>
-    <eLiterals name="low" value="3" literal="low"/>
+    <eLiterals name="None" literal="none"/>
+    <eLiterals name="High" value="1" literal="high"/>
+    <eLiterals name="Medium" value="2" literal="medium"/>
+    <eLiterals name="Low" value="3" literal="low"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DecompositionType">
     <eLiterals name="and" literal="and"/>

@@ -1,11 +1,11 @@
 [comment encoding = Cp1252 /]
 [module generateModelFeatures('http://www.xtext.org/grl/tgrl/TGRL')/]
 
-[query public getAllIntentionalElements(arg0 : Model) : Sequence(OclAny)
-	= invoke('org.eclipse.acceleo.module.tgrl.java.services.ModelFeatures', 'getAllIntentionalElements(org.xtext.grl.tgrl.tGRL.Model)', Sequence{arg0})
+[query public getAllSuperIntentionalElements(arg0 : Model) : Sequence(OclAny)
+	= invoke('org.eclipse.acceleo.module.tgrl.java.services.ModelFeatures', 'getAllSuperIntentionalElements(org.xtext.grl.tgrl.tGRL.Model)', Sequence{arg0})
 /]
 
-[query public getAllElementLink(arg0 : Model) : Sequence(OclAny)
+[query public getAllElementLink(arg0 : Model) : Sequence(ElementLink)
 	= invoke('org.eclipse.acceleo.module.tgrl.java.services.ModelFeatures', 'getAllElementLink(org.xtext.grl.tgrl.tGRL.Model)', Sequence{arg0})
 /]
 

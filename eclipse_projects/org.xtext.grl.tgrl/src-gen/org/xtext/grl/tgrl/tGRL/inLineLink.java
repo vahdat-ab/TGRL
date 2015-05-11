@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.inLineLink#getType <em>Type</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.inLineLink#getDes <em>Des</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.inLineLink#getDest <em>Dest</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,19 +50,19 @@ public interface inLineLink extends InLineElementLink
   void setType(LinkType value);
 
   /**
-   * Returns the value of the '<em><b>Des</b></em>' reference list.
+   * Returns the value of the '<em><b>Dest</b></em>' reference list.
    * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.GRLElement}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Des</em>' reference list isn't clear,
+   * If the meaning of the '<em>Dest</em>' reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Des</em>' reference list.
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getinLineLink_Des()
+   * @return the value of the '<em>Dest</em>' reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getinLineLink_Dest()
    * @model
    * @generated
    */
-  EList<GRLElement> getDes();
+  EList<GRLElement> getDest();
 
 } // inLineLink

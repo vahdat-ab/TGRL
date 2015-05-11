@@ -17,8 +17,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.xtext.grl.tgrl.tGRL.DecompositionType;
+import org.xtext.grl.tgrl.tGRL.ImportanceType;
+import org.xtext.grl.tgrl.tGRL.InLineElementLink;
 import org.xtext.grl.tgrl.tGRL.IntentionalElement;
-import org.xtext.grl.tgrl.tGRL.Metadata;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
@@ -28,86 +30,86 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl#getLabel <em>Label</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl#getMetaData <em>Meta Data</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl#getDecompositionType <em>Decomposition Type</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl#getImportance <em>Importance</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl#getImportanceQuantitative <em>Importance Quantitative</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl#getElementLinks <em>Element Links</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class IntentionalElementImpl extends GRLElementImpl implements IntentionalElement
+public class IntentionalElementImpl extends SuperIntentionalElementImpl implements IntentionalElement
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getDecompositionType() <em>Decomposition Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getDecompositionType()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final DecompositionType DECOMPOSITION_TYPE_EDEFAULT = DecompositionType.AND;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getDecompositionType() <em>Decomposition Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getDecompositionType()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected DecompositionType decompositionType = DECOMPOSITION_TYPE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
+   * The default value of the '{@link #getImportance() <em>Importance</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLabel()
+   * @see #getImportance()
    * @generated
    * @ordered
    */
-  protected static final String LABEL_EDEFAULT = null;
+  protected static final ImportanceType IMPORTANCE_EDEFAULT = ImportanceType.NONE;
 
   /**
-   * The cached value of the '{@link #getLabel() <em>Label</em>}' attribute.
+   * The cached value of the '{@link #getImportance() <em>Importance</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLabel()
+   * @see #getImportance()
    * @generated
    * @ordered
    */
-  protected String label = LABEL_EDEFAULT;
+  protected ImportanceType importance = IMPORTANCE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+   * The default value of the '{@link #getImportanceQuantitative() <em>Importance Quantitative</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDescription()
+   * @see #getImportanceQuantitative()
    * @generated
    * @ordered
    */
-  protected static final String DESCRIPTION_EDEFAULT = null;
+  protected static final int IMPORTANCE_QUANTITATIVE_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+   * The cached value of the '{@link #getImportanceQuantitative() <em>Importance Quantitative</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDescription()
+   * @see #getImportanceQuantitative()
    * @generated
    * @ordered
    */
-  protected String description = DESCRIPTION_EDEFAULT;
+  protected int importanceQuantitative = IMPORTANCE_QUANTITATIVE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getMetaData() <em>Meta Data</em>}' containment reference list.
+   * The cached value of the '{@link #getElementLinks() <em>Element Links</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMetaData()
+   * @see #getElementLinks()
    * @generated
    * @ordered
    */
-  protected EList<Metadata> metaData;
+  protected EList<InLineElementLink> elementLinks;
 
   /**
    * <!-- begin-user-doc -->
@@ -135,9 +137,9 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public DecompositionType getDecompositionType()
   {
-    return name;
+    return decompositionType;
   }
 
   /**
@@ -145,12 +147,12 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setDecompositionType(DecompositionType newDecompositionType)
   {
-    String oldName = name;
-    name = newName;
+    DecompositionType oldDecompositionType = decompositionType;
+    decompositionType = newDecompositionType == null ? DECOMPOSITION_TYPE_EDEFAULT : newDecompositionType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.INTENTIONAL_ELEMENT__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.INTENTIONAL_ELEMENT__DECOMPOSITION_TYPE, oldDecompositionType, decompositionType));
   }
 
   /**
@@ -158,9 +160,9 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getLabel()
+  public ImportanceType getImportance()
   {
-    return label;
+    return importance;
   }
 
   /**
@@ -168,12 +170,12 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLabel(String newLabel)
+  public void setImportance(ImportanceType newImportance)
   {
-    String oldLabel = label;
-    label = newLabel;
+    ImportanceType oldImportance = importance;
+    importance = newImportance == null ? IMPORTANCE_EDEFAULT : newImportance;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.INTENTIONAL_ELEMENT__LABEL, oldLabel, label));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.INTENTIONAL_ELEMENT__IMPORTANCE, oldImportance, importance));
   }
 
   /**
@@ -181,9 +183,9 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getDescription()
+  public int getImportanceQuantitative()
   {
-    return description;
+    return importanceQuantitative;
   }
 
   /**
@@ -191,12 +193,12 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDescription(String newDescription)
+  public void setImportanceQuantitative(int newImportanceQuantitative)
   {
-    String oldDescription = description;
-    description = newDescription;
+    int oldImportanceQuantitative = importanceQuantitative;
+    importanceQuantitative = newImportanceQuantitative;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.INTENTIONAL_ELEMENT__DESCRIPTION, oldDescription, description));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.INTENTIONAL_ELEMENT__IMPORTANCE_QUANTITATIVE, oldImportanceQuantitative, importanceQuantitative));
   }
 
   /**
@@ -204,13 +206,13 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Metadata> getMetaData()
+  public EList<InLineElementLink> getElementLinks()
   {
-    if (metaData == null)
+    if (elementLinks == null)
     {
-      metaData = new EObjectContainmentEList<Metadata>(Metadata.class, this, TGRLPackage.INTENTIONAL_ELEMENT__META_DATA);
+      elementLinks = new EObjectContainmentEList<InLineElementLink>(InLineElementLink.class, this, TGRLPackage.INTENTIONAL_ELEMENT__ELEMENT_LINKS);
     }
-    return metaData;
+    return elementLinks;
   }
 
   /**
@@ -223,8 +225,8 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
   {
     switch (featureID)
     {
-      case TGRLPackage.INTENTIONAL_ELEMENT__META_DATA:
-        return ((InternalEList<?>)getMetaData()).basicRemove(otherEnd, msgs);
+      case TGRLPackage.INTENTIONAL_ELEMENT__ELEMENT_LINKS:
+        return ((InternalEList<?>)getElementLinks()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -239,14 +241,14 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
   {
     switch (featureID)
     {
-      case TGRLPackage.INTENTIONAL_ELEMENT__NAME:
-        return getName();
-      case TGRLPackage.INTENTIONAL_ELEMENT__LABEL:
-        return getLabel();
-      case TGRLPackage.INTENTIONAL_ELEMENT__DESCRIPTION:
-        return getDescription();
-      case TGRLPackage.INTENTIONAL_ELEMENT__META_DATA:
-        return getMetaData();
+      case TGRLPackage.INTENTIONAL_ELEMENT__DECOMPOSITION_TYPE:
+        return getDecompositionType();
+      case TGRLPackage.INTENTIONAL_ELEMENT__IMPORTANCE:
+        return getImportance();
+      case TGRLPackage.INTENTIONAL_ELEMENT__IMPORTANCE_QUANTITATIVE:
+        return getImportanceQuantitative();
+      case TGRLPackage.INTENTIONAL_ELEMENT__ELEMENT_LINKS:
+        return getElementLinks();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -262,18 +264,18 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
   {
     switch (featureID)
     {
-      case TGRLPackage.INTENTIONAL_ELEMENT__NAME:
-        setName((String)newValue);
+      case TGRLPackage.INTENTIONAL_ELEMENT__DECOMPOSITION_TYPE:
+        setDecompositionType((DecompositionType)newValue);
         return;
-      case TGRLPackage.INTENTIONAL_ELEMENT__LABEL:
-        setLabel((String)newValue);
+      case TGRLPackage.INTENTIONAL_ELEMENT__IMPORTANCE:
+        setImportance((ImportanceType)newValue);
         return;
-      case TGRLPackage.INTENTIONAL_ELEMENT__DESCRIPTION:
-        setDescription((String)newValue);
+      case TGRLPackage.INTENTIONAL_ELEMENT__IMPORTANCE_QUANTITATIVE:
+        setImportanceQuantitative((Integer)newValue);
         return;
-      case TGRLPackage.INTENTIONAL_ELEMENT__META_DATA:
-        getMetaData().clear();
-        getMetaData().addAll((Collection<? extends Metadata>)newValue);
+      case TGRLPackage.INTENTIONAL_ELEMENT__ELEMENT_LINKS:
+        getElementLinks().clear();
+        getElementLinks().addAll((Collection<? extends InLineElementLink>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -289,17 +291,17 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
   {
     switch (featureID)
     {
-      case TGRLPackage.INTENTIONAL_ELEMENT__NAME:
-        setName(NAME_EDEFAULT);
+      case TGRLPackage.INTENTIONAL_ELEMENT__DECOMPOSITION_TYPE:
+        setDecompositionType(DECOMPOSITION_TYPE_EDEFAULT);
         return;
-      case TGRLPackage.INTENTIONAL_ELEMENT__LABEL:
-        setLabel(LABEL_EDEFAULT);
+      case TGRLPackage.INTENTIONAL_ELEMENT__IMPORTANCE:
+        setImportance(IMPORTANCE_EDEFAULT);
         return;
-      case TGRLPackage.INTENTIONAL_ELEMENT__DESCRIPTION:
-        setDescription(DESCRIPTION_EDEFAULT);
+      case TGRLPackage.INTENTIONAL_ELEMENT__IMPORTANCE_QUANTITATIVE:
+        setImportanceQuantitative(IMPORTANCE_QUANTITATIVE_EDEFAULT);
         return;
-      case TGRLPackage.INTENTIONAL_ELEMENT__META_DATA:
-        getMetaData().clear();
+      case TGRLPackage.INTENTIONAL_ELEMENT__ELEMENT_LINKS:
+        getElementLinks().clear();
         return;
     }
     super.eUnset(featureID);
@@ -315,14 +317,14 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
   {
     switch (featureID)
     {
-      case TGRLPackage.INTENTIONAL_ELEMENT__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TGRLPackage.INTENTIONAL_ELEMENT__LABEL:
-        return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
-      case TGRLPackage.INTENTIONAL_ELEMENT__DESCRIPTION:
-        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-      case TGRLPackage.INTENTIONAL_ELEMENT__META_DATA:
-        return metaData != null && !metaData.isEmpty();
+      case TGRLPackage.INTENTIONAL_ELEMENT__DECOMPOSITION_TYPE:
+        return decompositionType != DECOMPOSITION_TYPE_EDEFAULT;
+      case TGRLPackage.INTENTIONAL_ELEMENT__IMPORTANCE:
+        return importance != IMPORTANCE_EDEFAULT;
+      case TGRLPackage.INTENTIONAL_ELEMENT__IMPORTANCE_QUANTITATIVE:
+        return importanceQuantitative != IMPORTANCE_QUANTITATIVE_EDEFAULT;
+      case TGRLPackage.INTENTIONAL_ELEMENT__ELEMENT_LINKS:
+        return elementLinks != null && !elementLinks.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -338,12 +340,12 @@ public class IntentionalElementImpl extends GRLElementImpl implements Intentiona
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", label: ");
-    result.append(label);
-    result.append(", description: ");
-    result.append(description);
+    result.append(" (decompositionType: ");
+    result.append(decompositionType);
+    result.append(", importance: ");
+    result.append(importance);
+    result.append(", importanceQuantitative: ");
+    result.append(importanceQuantitative);
     result.append(')');
     return result.toString();
   }

@@ -59,6 +59,15 @@ public interface TGRLFactory extends EFactory
   GRLElement createGRLElement();
 
   /**
+   * Returns a new object of class '<em>Super Intentional Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Super Intentional Element</em>'.
+   * @generated
+   */
+  SuperIntentionalElement createSuperIntentionalElement();
+
+  /**
    * Returns a new object of class '<em>Intentional Element</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -66,6 +75,15 @@ public interface TGRLFactory extends EFactory
    * @generated
    */
   IntentionalElement createIntentionalElement();
+
+  /**
+   * Returns a new object of class '<em>Super Element Link</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Super Element Link</em>'.
+   * @generated
+   */
+  SuperElementLink createSuperElementLink();
 
   /**
    * Returns a new object of class '<em>Element Link</em>'.
@@ -158,6 +176,15 @@ public interface TGRLFactory extends EFactory
   Belief createBelief();
 
   /**
+   * Returns a new object of class '<em>Link End</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Link End</em>'.
+   * @generated
+   */
+  LinkEnd createLinkEnd();
+
+  /**
    * Returns a new object of class '<em>Decomposition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -237,6 +264,33 @@ public interface TGRLFactory extends EFactory
    * @generated
    */
   DependencyEnd createDependencyEnd();
+
+  /**
+   * Returns a new object of class '<em>Link Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Link Type</em>'.
+   * @generated
+   */
+  LinkType createLinkType();
+
+  /**
+   * Returns a new object of class '<em>Link</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Link</em>'.
+   * @generated
+   */
+  Link createLink();
+
+  /**
+   * Returns a new object of class '<em>in Line Link</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>in Line Link</em>'.
+   * @generated
+   */
+  inLineLink createinLineLink();
 
   /**
    * Returns a new object of class '<em>Strategy Group</em>'.
@@ -372,33 +426,6 @@ public interface TGRLFactory extends EFactory
    * @generated
    */
   Comment createComment();
-
-  /**
-   * Returns a new object of class '<em>Link Type</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Link Type</em>'.
-   * @generated
-   */
-  LinkType createLinkType();
-
-  /**
-   * Returns a new object of class '<em>Link</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Link</em>'.
-   * @generated
-   */
-  Link createLink();
-
-  /**
-   * Returns a new object of class '<em>in Line Link</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>in Line Link</em>'.
-   * @generated
-   */
-  inLineLink createinLineLink();
 
   /**
    * Returns a new object of class '<em>Indicator Group</em>'.

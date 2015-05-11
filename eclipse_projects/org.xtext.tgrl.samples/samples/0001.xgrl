@@ -1,65 +1,31 @@
-/*
- * grl model without name
- */ 
-grl {
+grl GRLName {
+	actor A1 {
+		name='Professor';
+		importance = medium;
+	}
+	actor A2 {
+		name = "Student";
+		importance = none;
+		metadata m1 = "Metadata1";
+		metadata m2 = "Metadata2";
+		metadata m3 = "Metadata3";
+	}
+	comment "sjdhfljksdajf";
+	softGoal S1{
+		metadata s1 = "Metadata1";
+		metadata s2 = "Metadata2";
+		metadata s3 = "Metadata3";
+	}
+	goal G1;
+	indicator I1;
+	resource R1;
+	belief B1 {
+		description = "sdfskjd";
+		metadata b1 = "Metadata1";
+		metadata b2 = "Metadata2";
+		metadata b3 = "Metadata3";
+		
+	}
+	task T1;
 	
 }
-
-/*
- * GRL nmodel with name.
- * This is used to reference later inside the project.
- */
-grl GRL1{
-	
-}
-/*
- * GRL Model + Goal 
- */
-grl GRL2{
- 	goal G1{ 	
- 			
- 	}
-   	softGoal SG1{
-  		
-  	}
-	Task T1{
-		
-	} 	
-	belief B1{
-		
-	}
-	resource R1{
-		
-	}
-	indicator I1{
-		
-	}
-}
-//------------------------------------------------------
-//These two GRL "GRL3" and "GRL4" are the same
-//------------------------------------------------------
-grl GRL3{
- 	goal G1{ 	
- 		contributes G2{Make},G3{10};	
- 	}
- 	goal G2{
- 		
- 	}
- 	goal G3{
- 		
- 	}
- }
- 
- grl GRL4{
- 	goal G1{ 	
- 	}
- 	goal G2{
- 		
- 	}
- 	goal G3{
- 		
- 	}
-	G1 contributes G2{Make},G3{10};	
- 
- }
-// ------------------------------------------------------

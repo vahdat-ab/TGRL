@@ -49,6 +49,7 @@ import org.xtext.grl.tgrl.tGRL.KPIEvalValueSet;
 import org.xtext.grl.tgrl.tGRL.KPIQualitativeEvalValueSet;
 import org.xtext.grl.tgrl.tGRL.KPIQuantitativeEvalValueSet;
 import org.xtext.grl.tgrl.tGRL.Link;
+import org.xtext.grl.tgrl.tGRL.LinkEnd;
 import org.xtext.grl.tgrl.tGRL.LinkType;
 import org.xtext.grl.tgrl.tGRL.Mapping;
 import org.xtext.grl.tgrl.tGRL.Metadata;
@@ -59,6 +60,8 @@ import org.xtext.grl.tgrl.tGRL.QualitativeMapping;
 import org.xtext.grl.tgrl.tGRL.Resource;
 import org.xtext.grl.tgrl.tGRL.Softgoal;
 import org.xtext.grl.tgrl.tGRL.StrategyGroup;
+import org.xtext.grl.tgrl.tGRL.SuperElementLink;
+import org.xtext.grl.tgrl.tGRL.SuperIntentionalElement;
 import org.xtext.grl.tgrl.tGRL.TGRLFactory;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 import org.xtext.grl.tgrl.tGRL.Task;
@@ -120,7 +123,9 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
       case TGRLPackage.ELEMENT: return createElement();
       case TGRLPackage.GRL_BASE_ELEMENT: return createGRLBaseElement();
       case TGRLPackage.GRL_ELEMENT: return createGRLElement();
+      case TGRLPackage.SUPER_INTENTIONAL_ELEMENT: return createSuperIntentionalElement();
       case TGRLPackage.INTENTIONAL_ELEMENT: return createIntentionalElement();
+      case TGRLPackage.SUPER_ELEMENT_LINK: return createSuperElementLink();
       case TGRLPackage.ELEMENT_LINK: return createElementLink();
       case TGRLPackage.IN_LINE_ELEMENT_LINK: return createInLineElementLink();
       case TGRLPackage.GRL_SPECIFICATION: return createGRLSpecification();
@@ -131,6 +136,7 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
       case TGRLPackage.RESOURCE: return createResource();
       case TGRLPackage.INDICATOR: return createIndicator();
       case TGRLPackage.BELIEF: return createBelief();
+      case TGRLPackage.LINK_END: return createLinkEnd();
       case TGRLPackage.DECOMPOSITION: return createDecomposition();
       case TGRLPackage.IN_LINE_DECOMPOSITION: return createInLineDecomposition();
       case TGRLPackage.DECOMPOSITION_END: return createDecompositionEnd();
@@ -140,6 +146,9 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
       case TGRLPackage.DEPENDENCY: return createDependency();
       case TGRLPackage.IN_LINE_DEPENDENCY: return createInLineDependency();
       case TGRLPackage.DEPENDENCY_END: return createDependencyEnd();
+      case TGRLPackage.LINK_TYPE: return createLinkType();
+      case TGRLPackage.LINK: return createLink();
+      case TGRLPackage.IN_LINE_LINK: return createinLineLink();
       case TGRLPackage.STRATEGY_GROUP: return createStrategyGroup();
       case TGRLPackage.EVALUATION_STRATEGY: return createEvaluationStrategy();
       case TGRLPackage.EVALUATION: return createEvaluation();
@@ -155,9 +164,6 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
       case TGRLPackage.CONTRIBUTION_RANGE: return createContributionRange();
       case TGRLPackage.METADATA: return createMetadata();
       case TGRLPackage.COMMENT: return createComment();
-      case TGRLPackage.LINK_TYPE: return createLinkType();
-      case TGRLPackage.LINK: return createLink();
-      case TGRLPackage.IN_LINE_LINK: return createinLineLink();
       case TGRLPackage.INDICATOR_GROUP: return createIndicatorGroup();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -275,10 +281,32 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public SuperIntentionalElement createSuperIntentionalElement()
+  {
+    SuperIntentionalElementImpl superIntentionalElement = new SuperIntentionalElementImpl();
+    return superIntentionalElement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public IntentionalElement createIntentionalElement()
   {
     IntentionalElementImpl intentionalElement = new IntentionalElementImpl();
     return intentionalElement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SuperElementLink createSuperElementLink()
+  {
+    SuperElementLinkImpl superElementLink = new SuperElementLinkImpl();
+    return superElementLink;
   }
 
   /**
@@ -396,6 +424,17 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public LinkEnd createLinkEnd()
+  {
+    LinkEndImpl linkEnd = new LinkEndImpl();
+    return linkEnd;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Decomposition createDecomposition()
   {
     DecompositionImpl decomposition = new DecompositionImpl();
@@ -488,6 +527,39 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
   {
     DependencyEndImpl dependencyEnd = new DependencyEndImpl();
     return dependencyEnd;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LinkType createLinkType()
+  {
+    LinkTypeImpl linkType = new LinkTypeImpl();
+    return linkType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Link createLink()
+  {
+    LinkImpl link = new LinkImpl();
+    return link;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public inLineLink createinLineLink()
+  {
+    inLineLinkImpl inLineLink = new inLineLinkImpl();
+    return inLineLink;
   }
 
   /**
@@ -653,39 +725,6 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
   {
     CommentImpl comment = new CommentImpl();
     return comment;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LinkType createLinkType()
-  {
-    LinkTypeImpl linkType = new LinkTypeImpl();
-    return linkType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Link createLink()
-  {
-    LinkImpl link = new LinkImpl();
-    return link;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public inLineLink createinLineLink()
-  {
-    inLineLinkImpl inLineLink = new inLineLinkImpl();
-    return inLineLink;
   }
 
   /**

@@ -5,53 +5,46 @@ package org.xtext.grl.tgrl.tGRL.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.grl.tgrl.tGRL.DependencyEnd;
+import org.xtext.grl.tgrl.tGRL.LinkEnd;
+import org.xtext.grl.tgrl.tGRL.SuperIntentionalElement;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Dependency End</b></em>'.
+ * An implementation of the model object '<em><b>Link End</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.DependencyEndImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.LinkEndImpl#getDestName <em>Dest Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
+public class LinkEndImpl extends MinimalEObjectImpl.Container implements LinkEnd
 {
   /**
-   * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+   * The cached value of the '{@link #getDestName() <em>Dest Name</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDescription()
+   * @see #getDestName()
    * @generated
    * @ordered
    */
-  protected static final String DESCRIPTION_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDescription()
-   * @generated
-   * @ordered
-   */
-  protected String description = DESCRIPTION_EDEFAULT;
+  protected SuperIntentionalElement destName;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DependencyEndImpl()
+  protected LinkEndImpl()
   {
     super();
   }
@@ -64,7 +57,7 @@ public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.DEPENDENCY_END;
+    return TGRLPackage.Literals.LINK_END;
   }
 
   /**
@@ -72,9 +65,19 @@ public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getDescription()
+  public SuperIntentionalElement getDestName()
   {
-    return description;
+    if (destName != null && destName.eIsProxy())
+    {
+      InternalEObject oldDestName = (InternalEObject)destName;
+      destName = (SuperIntentionalElement)eResolveProxy(oldDestName);
+      if (destName != oldDestName)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.LINK_END__DEST_NAME, oldDestName, destName));
+      }
+    }
+    return destName;
   }
 
   /**
@@ -82,12 +85,22 @@ public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDescription(String newDescription)
+  public SuperIntentionalElement basicGetDestName()
   {
-    String oldDescription = description;
-    description = newDescription;
+    return destName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDestName(SuperIntentionalElement newDestName)
+  {
+    SuperIntentionalElement oldDestName = destName;
+    destName = newDestName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.DEPENDENCY_END__DESCRIPTION, oldDescription, description));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.LINK_END__DEST_NAME, oldDestName, destName));
   }
 
   /**
@@ -100,8 +113,9 @@ public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
   {
     switch (featureID)
     {
-      case TGRLPackage.DEPENDENCY_END__DESCRIPTION:
-        return getDescription();
+      case TGRLPackage.LINK_END__DEST_NAME:
+        if (resolve) return getDestName();
+        return basicGetDestName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -116,8 +130,8 @@ public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
   {
     switch (featureID)
     {
-      case TGRLPackage.DEPENDENCY_END__DESCRIPTION:
-        setDescription((String)newValue);
+      case TGRLPackage.LINK_END__DEST_NAME:
+        setDestName((SuperIntentionalElement)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -133,8 +147,8 @@ public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
   {
     switch (featureID)
     {
-      case TGRLPackage.DEPENDENCY_END__DESCRIPTION:
-        setDescription(DESCRIPTION_EDEFAULT);
+      case TGRLPackage.LINK_END__DEST_NAME:
+        setDestName((SuperIntentionalElement)null);
         return;
     }
     super.eUnset(featureID);
@@ -150,27 +164,10 @@ public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
   {
     switch (featureID)
     {
-      case TGRLPackage.DEPENDENCY_END__DESCRIPTION:
-        return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+      case TGRLPackage.LINK_END__DEST_NAME:
+        return destName != null;
     }
     return super.eIsSet(featureID);
   }
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (description: ");
-    result.append(description);
-    result.append(')');
-    return result.toString();
-  }
-
-} //DependencyEndImpl
+} //LinkEndImpl

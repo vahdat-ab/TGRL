@@ -40,6 +40,7 @@ import org.xtext.grl.tgrl.tGRL.KPIEvalValueSet;
 import org.xtext.grl.tgrl.tGRL.KPIQualitativeEvalValueSet;
 import org.xtext.grl.tgrl.tGRL.KPIQuantitativeEvalValueSet;
 import org.xtext.grl.tgrl.tGRL.Link;
+import org.xtext.grl.tgrl.tGRL.LinkEnd;
 import org.xtext.grl.tgrl.tGRL.LinkType;
 import org.xtext.grl.tgrl.tGRL.Mapping;
 import org.xtext.grl.tgrl.tGRL.Metadata;
@@ -48,6 +49,8 @@ import org.xtext.grl.tgrl.tGRL.QualitativeMapping;
 import org.xtext.grl.tgrl.tGRL.Resource;
 import org.xtext.grl.tgrl.tGRL.Softgoal;
 import org.xtext.grl.tgrl.tGRL.StrategyGroup;
+import org.xtext.grl.tgrl.tGRL.SuperElementLink;
+import org.xtext.grl.tgrl.tGRL.SuperIntentionalElement;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 import org.xtext.grl.tgrl.tGRL.Task;
 import org.xtext.grl.tgrl.tGRL.inLineLink;
@@ -146,13 +149,34 @@ public class TGRLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case TGRLPackage.SUPER_INTENTIONAL_ELEMENT:
+      {
+        SuperIntentionalElement superIntentionalElement = (SuperIntentionalElement)theEObject;
+        T result = caseSuperIntentionalElement(superIntentionalElement);
+        if (result == null) result = caseGRLElement(superIntentionalElement);
+        if (result == null) result = caseGRLBaseElement(superIntentionalElement);
+        if (result == null) result = caseElement(superIntentionalElement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case TGRLPackage.INTENTIONAL_ELEMENT:
       {
         IntentionalElement intentionalElement = (IntentionalElement)theEObject;
         T result = caseIntentionalElement(intentionalElement);
+        if (result == null) result = caseSuperIntentionalElement(intentionalElement);
         if (result == null) result = caseGRLElement(intentionalElement);
         if (result == null) result = caseGRLBaseElement(intentionalElement);
         if (result == null) result = caseElement(intentionalElement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.SUPER_ELEMENT_LINK:
+      {
+        SuperElementLink superElementLink = (SuperElementLink)theEObject;
+        T result = caseSuperElementLink(superElementLink);
+        if (result == null) result = caseGRLElement(superElementLink);
+        if (result == null) result = caseGRLBaseElement(superElementLink);
+        if (result == null) result = caseElement(superElementLink);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -160,6 +184,7 @@ public class TGRLSwitch<T> extends Switch<T>
       {
         ElementLink elementLink = (ElementLink)theEObject;
         T result = caseElementLink(elementLink);
+        if (result == null) result = caseSuperElementLink(elementLink);
         if (result == null) result = caseGRLElement(elementLink);
         if (result == null) result = caseGRLBaseElement(elementLink);
         if (result == null) result = caseElement(elementLink);
@@ -198,6 +223,7 @@ public class TGRLSwitch<T> extends Switch<T>
         Softgoal softgoal = (Softgoal)theEObject;
         T result = caseSoftgoal(softgoal);
         if (result == null) result = caseIntentionalElement(softgoal);
+        if (result == null) result = caseSuperIntentionalElement(softgoal);
         if (result == null) result = caseGRLElement(softgoal);
         if (result == null) result = caseGRLBaseElement(softgoal);
         if (result == null) result = caseElement(softgoal);
@@ -209,6 +235,7 @@ public class TGRLSwitch<T> extends Switch<T>
         Goal goal = (Goal)theEObject;
         T result = caseGoal(goal);
         if (result == null) result = caseIntentionalElement(goal);
+        if (result == null) result = caseSuperIntentionalElement(goal);
         if (result == null) result = caseGRLElement(goal);
         if (result == null) result = caseGRLBaseElement(goal);
         if (result == null) result = caseElement(goal);
@@ -220,6 +247,7 @@ public class TGRLSwitch<T> extends Switch<T>
         Task task = (Task)theEObject;
         T result = caseTask(task);
         if (result == null) result = caseIntentionalElement(task);
+        if (result == null) result = caseSuperIntentionalElement(task);
         if (result == null) result = caseGRLElement(task);
         if (result == null) result = caseGRLBaseElement(task);
         if (result == null) result = caseElement(task);
@@ -231,6 +259,7 @@ public class TGRLSwitch<T> extends Switch<T>
         Resource resource = (Resource)theEObject;
         T result = caseResource(resource);
         if (result == null) result = caseIntentionalElement(resource);
+        if (result == null) result = caseSuperIntentionalElement(resource);
         if (result == null) result = caseGRLElement(resource);
         if (result == null) result = caseGRLBaseElement(resource);
         if (result == null) result = caseElement(resource);
@@ -242,6 +271,7 @@ public class TGRLSwitch<T> extends Switch<T>
         Indicator indicator = (Indicator)theEObject;
         T result = caseIndicator(indicator);
         if (result == null) result = caseIntentionalElement(indicator);
+        if (result == null) result = caseSuperIntentionalElement(indicator);
         if (result == null) result = caseGRLElement(indicator);
         if (result == null) result = caseGRLBaseElement(indicator);
         if (result == null) result = caseElement(indicator);
@@ -252,10 +282,17 @@ public class TGRLSwitch<T> extends Switch<T>
       {
         Belief belief = (Belief)theEObject;
         T result = caseBelief(belief);
-        if (result == null) result = caseIntentionalElement(belief);
+        if (result == null) result = caseSuperIntentionalElement(belief);
         if (result == null) result = caseGRLElement(belief);
         if (result == null) result = caseGRLBaseElement(belief);
         if (result == null) result = caseElement(belief);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.LINK_END:
+      {
+        LinkEnd linkEnd = (LinkEnd)theEObject;
+        T result = caseLinkEnd(linkEnd);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -264,6 +301,7 @@ public class TGRLSwitch<T> extends Switch<T>
         Decomposition decomposition = (Decomposition)theEObject;
         T result = caseDecomposition(decomposition);
         if (result == null) result = caseElementLink(decomposition);
+        if (result == null) result = caseSuperElementLink(decomposition);
         if (result == null) result = caseGRLElement(decomposition);
         if (result == null) result = caseGRLBaseElement(decomposition);
         if (result == null) result = caseElement(decomposition);
@@ -284,6 +322,7 @@ public class TGRLSwitch<T> extends Switch<T>
       {
         DecompositionEnd decompositionEnd = (DecompositionEnd)theEObject;
         T result = caseDecompositionEnd(decompositionEnd);
+        if (result == null) result = caseLinkEnd(decompositionEnd);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -292,6 +331,7 @@ public class TGRLSwitch<T> extends Switch<T>
         Contribution contribution = (Contribution)theEObject;
         T result = caseContribution(contribution);
         if (result == null) result = caseElementLink(contribution);
+        if (result == null) result = caseSuperElementLink(contribution);
         if (result == null) result = caseGRLElement(contribution);
         if (result == null) result = caseGRLBaseElement(contribution);
         if (result == null) result = caseElement(contribution);
@@ -312,6 +352,7 @@ public class TGRLSwitch<T> extends Switch<T>
       {
         ContributionEnd contributionEnd = (ContributionEnd)theEObject;
         T result = caseContributionEnd(contributionEnd);
+        if (result == null) result = caseLinkEnd(contributionEnd);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -320,6 +361,7 @@ public class TGRLSwitch<T> extends Switch<T>
         Dependency dependency = (Dependency)theEObject;
         T result = caseDependency(dependency);
         if (result == null) result = caseElementLink(dependency);
+        if (result == null) result = caseSuperElementLink(dependency);
         if (result == null) result = caseGRLElement(dependency);
         if (result == null) result = caseGRLBaseElement(dependency);
         if (result == null) result = caseElement(dependency);
@@ -340,6 +382,38 @@ public class TGRLSwitch<T> extends Switch<T>
       {
         DependencyEnd dependencyEnd = (DependencyEnd)theEObject;
         T result = caseDependencyEnd(dependencyEnd);
+        if (result == null) result = caseLinkEnd(dependencyEnd);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.LINK_TYPE:
+      {
+        LinkType linkType = (LinkType)theEObject;
+        T result = caseLinkType(linkType);
+        if (result == null) result = caseGRLElement(linkType);
+        if (result == null) result = caseGRLBaseElement(linkType);
+        if (result == null) result = caseElement(linkType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.LINK:
+      {
+        Link link = (Link)theEObject;
+        T result = caseLink(link);
+        if (result == null) result = caseSuperElementLink(link);
+        if (result == null) result = caseGRLElement(link);
+        if (result == null) result = caseGRLBaseElement(link);
+        if (result == null) result = caseElement(link);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TGRLPackage.IN_LINE_LINK:
+      {
+        inLineLink inLineLink = (inLineLink)theEObject;
+        T result = caseinLineLink(inLineLink);
+        if (result == null) result = caseInLineElementLink(inLineLink);
+        if (result == null) result = caseGRLBaseElement(inLineLink);
+        if (result == null) result = caseElement(inLineLink);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -476,37 +550,6 @@ public class TGRLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TGRLPackage.LINK_TYPE:
-      {
-        LinkType linkType = (LinkType)theEObject;
-        T result = caseLinkType(linkType);
-        if (result == null) result = caseGRLElement(linkType);
-        if (result == null) result = caseGRLBaseElement(linkType);
-        if (result == null) result = caseElement(linkType);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case TGRLPackage.LINK:
-      {
-        Link link = (Link)theEObject;
-        T result = caseLink(link);
-        if (result == null) result = caseElementLink(link);
-        if (result == null) result = caseGRLElement(link);
-        if (result == null) result = caseGRLBaseElement(link);
-        if (result == null) result = caseElement(link);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case TGRLPackage.IN_LINE_LINK:
-      {
-        inLineLink inLineLink = (inLineLink)theEObject;
-        T result = caseinLineLink(inLineLink);
-        if (result == null) result = caseInLineElementLink(inLineLink);
-        if (result == null) result = caseGRLBaseElement(inLineLink);
-        if (result == null) result = caseElement(inLineLink);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case TGRLPackage.INDICATOR_GROUP:
       {
         IndicatorGroup indicatorGroup = (IndicatorGroup)theEObject;
@@ -586,6 +629,22 @@ public class TGRLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Super Intentional Element</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Super Intentional Element</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSuperIntentionalElement(SuperIntentionalElement object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Intentional Element</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -597,6 +656,22 @@ public class TGRLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseIntentionalElement(IntentionalElement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Super Element Link</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Super Element Link</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSuperElementLink(SuperElementLink object)
   {
     return null;
   }
@@ -762,6 +837,22 @@ public class TGRLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Link End</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Link End</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLinkEnd(LinkEnd object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Decomposition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -901,6 +992,54 @@ public class TGRLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDependencyEnd(DependencyEnd object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Link Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Link Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLinkType(LinkType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Link</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Link</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLink(Link object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>in Line Link</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>in Line Link</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseinLineLink(inLineLink object)
   {
     return null;
   }
@@ -1141,54 +1280,6 @@ public class TGRLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseComment(Comment object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Link Type</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Link Type</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseLinkType(LinkType object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Link</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Link</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseLink(Link object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>in Line Link</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>in Line Link</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseinLineLink(inLineLink object)
   {
     return null;
   }

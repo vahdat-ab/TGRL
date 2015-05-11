@@ -16,7 +16,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *
  * @generated
  */
-public class BeliefImpl extends IntentionalElementImpl implements Belief
+public class BeliefImpl extends SuperIntentionalElementImpl implements Belief
 {
   /**
    * <!-- begin-user-doc -->

@@ -22,16 +22,26 @@
     </scenarioGroups>
   </ucmspec>
   <grlspec>
-[for (actor : Actor | gRLspecs.grlElements->selectByType(Actor))]
-	<actors name="[label/]" id="[id/]" description="[description/]" [getColor(actor)/] importance="[importance/]" importanceQuantitative="[importanceQuantitative/]" contRefs="[id/]R"/>
+[for (actor : Actor | gRLspecifications.grlElements->selectByKind(Actor))]
+	<actors name="[label/]" id="[id/]" description="[description/]" importance="[importance.toString().toUpperFirst()/]" importanceQuantitative="[importanceQuantitative/]" contRefs="[id/]R"[if (metaData->size()>0)]>
+	[PrintMetaData(metaData)/]
+	</actors>
+	[else]/>		
+	[/if]	
 [/for]
-[for (intentionalElement : IntentionalElement | getAllIntentionalElements(aModel))]
-	<intElements name="[label/]" id="[id/]" description="[description/]" [getColor(intentionalElement)/] decompositionType = "[decompositionType/]" importance="[importance/]" importanceQuantitative="[importanceQuantitative/]" [getType(intentionalElement)/]  [getLinkSrc(aModel, intentionalElement)/] [getLinksDest(aModel, intentionalElement)/] refs="[id/]R"/>
+
+[for (intentionalElement : IntentionalElement | getAllSuperIntentionalElements(aModel)->selectByKind(IntentionalElement))]
+	<intElements name="[label/]" id="[id/]" description="[description/]" decompositionType = "[decompositionType.toString().toUpperFirst()/]" importance="[importance.toString().toUpperFirst()/]" importanceQuantitative="[importanceQuantitative/]" [getType(intentionalElement)/]  [comment][getLinkSrc(aModel, intentionalElement)/] [getLinksDest(aModel, intentionalElement)/][/comment] refs="[id/]R"[if (metaData->size()>0)]>
+	[PrintMetaData(metaData)/]
+	</intElements>
+	[else]/>		
+	[/if]
 [/for]
-[for (connection : Connection | getAllConnections(aModel))]
+
+[comment][for (connection : Connection | getAllConnections(aModel))]
 	<links [getLinkType(connection)/] name="" id="[id/]" refs="//@urndef/@specDiagrams.0/@connections.[i+topIndex-1/]" dest="[dest.name/]" src="[src.name/]"/>
 	
-[/for]
+[/for][/comment]
 
     <groups name="StrategiesGroup3" id="3" strategies="4"/>
     <strategies name="EvaluationStrategy4" id="4" author="Vahdat" group="3"/>
@@ -44,19 +54,32 @@
   </grlspec>
   <urndef>
     <specDiagrams xsi:type="grl:GRLGraph" name="GRLGraph2" id="2">
-[for (intentionalElement : IntentionalElement | getAllIntentionalElements(aModel))]
-      <nodes xsi:type="grl:IntentionalElementRef" name="Int[id/]R" [getSucc(aModel, intentionalElement)/] [getPred(aModel, intentionalElement)/] id="[id/]R" def="[id/]">
+[for (intentionalElement : IntentionalElement | getAllSuperIntentionalElements(aModel)->selectByKind(IntentionalElement))]
+      <nodes xsi:type="grl:IntentionalElementRef" name="Int[id/]R" [comment][getSucc(aModel, intentionalElement)/] [getPred(aModel, intentionalElement)/][/comment] id="[id/]R" def="[id/]">
         <metadata name="_height" value="45"/>
         <metadata name="_width" value="110"/>
       </nodes>
 [/for]
-[for (element : ElementLink | getAllElementLink(aModel))]
-	<connections xsi:type="grl:LinkRef" source="[src.id/]R" target="[dest.id/]R" link="[id/]"/>
+[for (belief : Belief | getAllSuperIntentionalElements(aModel)->selectByKind(Belief))]
+	 <nodes xsi:type="grl:Belief" name="[label/]" id="78" description="[description/]"[if (metaData->size()>0)]>
+	[PrintMetaData(metaData)/]
+	</nodes>
+	[else]/>		
+	[/if]	
+[comment] <metadata name="AAAA" value="BBBBB"/>[/comment]
 [/for]
-[for (actor : Actor | gRLspecs.actors)]
+
+
+[comment][for (element : ElementLink | getAllElementLink(aModel))]
+	<connections xsi:type="grl:LinkRef" source="[src.id/]R" target="[dest.id/]R" link="[id/]"/>
+[/for][/comment]
+[for (actor : Actor | gRLspecifications.grlElements->selectByKind(Actor))]
       <contRefs xsi:type="grl:ActorRef" name="ActorRef[id/]R" id="[id/]R" [getNodes(actor)/] width="200" height="200" contDef="[id/]">
         <label/>
       </contRefs>
+[/for]
+[for (grlcomment : Comment | gRLspecifications.grlElements->selectByKind(Comment))]
+	<comments description="[content/]" x="10" y="10" width="200" height="100" fillColor="255,255,200"/>
 [/for]
     </specDiagrams>
   </urndef>
