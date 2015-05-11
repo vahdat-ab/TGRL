@@ -13,14 +13,14 @@ Model:
 	gRLspecifications+=GRLSpecification*;
 
 Element:
-	GRLSpecification | GRLBaseElement
+	GRLSpecification | GRLBaseElement  
 ;
 GRLBaseElement:
-	 GRLElement | InLineElementLink | Mapping
+	 GRLElement | Mapping 
 ;
 GRLElement:
 	
-	SuperIntentionalElement | SuperElementLink | Actor | StrategyGroup | IndicatorGroup | EvaluationStrategy | Evaluation | 
+	SuperIntentionalElement | NormalElementLink | Actor | StrategyGroup | IndicatorGroup | EvaluationStrategy | Evaluation | 
 	ContributionGroup |	ContributionContext | 
 	QualitativeMapping | Metadata | Comment | LinkType 
 	
@@ -32,16 +32,6 @@ IntentionalElement:
 	 Softgoal | Goal  | Task | Resource | Indicator 
 ;
 
-SuperElementLink:
-	ElementLink | Link
-;
-ElementLink: 
-	Decomposition | Contribution | Dependency
-;
-
-InLineElementLink: 
-	InLineDecomposition | InLineContribution | InLineDependency | inLineLink
-;
 GRLSpecification: 
 	'grl' (name=ID)? '{'
 		(grlElements+=GRLElement  )*
@@ -73,7 +63,7 @@ Actor:
 			('importance' '='  (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE) ';')?&
 			('description' '=' description=STRING ';')?&
 			(metaData+=Metadata)*&
-			(elemets+=SuperIntentionalElement  | elemets+=SuperElementLink)*
+			(elemets+=SuperIntentionalElement  | elemets+=NormalElementLink)*
 			)
 			
 		'}'			
@@ -207,17 +197,61 @@ Belief:
 	)
 ;	
 //*******************************************ElementLink*******************************************
-LinkEnd:
-	DecompositionEnd | ContributionEnd | DependencyEnd
+ElementLink:
+	NormalElementLink | InLineElementLink
 ;
-Decomposition: 
+EndLink:
+	DecompositionEnd  | DependencyEnd | ContributionEnd	
+;
+
+NormalElementLink:
+	NormalDecomposition | NormalContribution | NormalDependency | NormalLink
+;
+
+NormalLink:
+	src = [GRLElement | QualifiedName] type = [LinkType | QualifiedName] dest += [GRLElement | QualifiedName] (',' dest += [GRLElement | QualifiedName])* ';'
+;
+
+//Question:
+//A Dependency describes how a source actor definition depends on a destination actor definition (the dependee) for an intentional element or indicator (the dependum).
+NormalDependency:
+	src=[SuperIntentionalElement | QualifiedName] 'dependsOn' dest+=DependencyEnd  (','dest+=DependencyEnd)* ';'
+;
+
+NormalContribution:
+	src=[SuperIntentionalElement | QualifiedName] 'contributesTo' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
+			/*
+			 *TODO I must give a default value, which is 25, to this attribute.
+			 * 		This can be done through the post processing mechanism in xText 
+			 */
+//			('quantitativeContribution' '=' quantitativeContribution=QUALITATIVEVALUE ';')?&
+//			('correlation' '=' correlation=BOOLEAN ';')?&
+;
+
+NormalDecomposition:
 	src=[SuperIntentionalElement | QualifiedName] 'decomposedBy' dest+=DecompositionEnd (','dest+=DecompositionEnd)* ';'
-//			('name' '=' label = STRING ';')?&
-//			('description' '=' description=STRING ';')?&
 ;
+
+InLineElementLink:
+	InLineDecomposition | InLineContribution | InLineDependency | InLineLink
+;
+
+InLineLink:
+	type = [LinkType | QualifiedName] dest += [GRLElement | QualifiedName] (',' dest += [GRLElement | QualifiedName])* ';'
+;
+
+InLineDependency:
+	'dependsOn' dest+=DependencyEnd (','dest+=DependencyEnd)* ';'
+;
+
+InLineContribution:
+	'contributesTo' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
+;
+
 InLineDecomposition:
 	'decomposedBy' dest+=DecompositionEnd (','dest+=DecompositionEnd)* ';'
 ;
+
 DecompositionEnd:
 	destName=[SuperIntentionalElement | QualifiedName] 
 	(
@@ -225,21 +259,6 @@ DecompositionEnd:
 			(description=STRING)?
 		'}'	
 	)?
-;
-Contribution: 
-	src=[SuperIntentionalElement | QualifiedName] 'contributesTo' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
-//			('name' '=' label = STRING ';')?&
-//			('contribution' '=' contribution=ContributionType ';')?&
-			/*
-			 *TODO I must give a default value, which is 25, to this attribute.
-			 * 		This can be done through the post processing mechanism in xText 
-			 */
-//			('quantitativeContribution' '=' quantitativeContribution=QUALITATIVEVALUE ';')?&
-//			('correlation' '=' correlation=BOOLEAN ';')?&
-//			('description' '=' description=STRING ';')?&				
-;
-InLineContribution:
-	'contributesTo' dest+=ContributionEnd (',' dest+=ContributionEnd)*';'
 ;
 ContributionEnd:
    (name = ID)?
@@ -251,17 +270,6 @@ ContributionEnd:
 	)?
 ;
 
-//Question:
-//A Dependency describes how a source actor definition (the depender) depends on a destination actor definition (the dependee) for an intentional element or indicator (the dependum).
-
-Dependency:
-	src=[SuperIntentionalElement | QualifiedName] 'dependsOn' dest+=DependencyEnd (','dest+=DependencyEnd)* ';'
-//			('name' '=' label = STRING ';')?&
-//			('description' '=' c ';')?&
-;
-InLineDependency:
-	'dependsOn' dest+=DependencyEnd (','dest+=DependencyEnd)* ';'
-;
 DependencyEnd:
 	destName = [SuperIntentionalElement | QualifiedName] 
 	(
@@ -274,15 +282,6 @@ DependencyEnd:
 LinkType:
 	'link' name = ID ';'
 ;
-
-Link :
-	src = [GRLElement | QualifiedName] type = [LinkType | QualifiedName] dest += [GRLElement | QualifiedName] (',' dest += [GRLElement | QualifiedName])* ';'
-;
-
-inLineLink:
-	type = [LinkType | QualifiedName] dest += [GRLElement | QualifiedName] (',' dest += [GRLElement | QualifiedName])* ';'
-;
-
 //*******************************************Strategy*******************************************
 StrategyGroup: 
 	'strategyGroup' name=ID 'includes' strategies+=[EvaluationStrategy | QualifiedName](',' strategies+=[EvaluationStrategy | QualifiedName])* ';'
@@ -348,7 +347,7 @@ QualitativeMapping:
 	'qualitativeMapping' name=ID '{'
 		(
 			(metaData+=Metadata)*&
-			(mappin+=Mapping)*
+			(mappings+=Mapping)*
 		)
 					
 	'}'

@@ -5,11 +5,15 @@
 	= invoke('org.eclipse.acceleo.module.tgrl.java.services.ModelFeatures', 'getAllSuperIntentionalElements(org.xtext.grl.tgrl.tGRL.Model)', Sequence{arg0})
 /]
 
-[query public getAllElementLink(arg0 : Model) : Sequence(ElementLink)
+[query public getAllElementLink(arg0 : Model) : Sequence(OclAny)
 	= invoke('org.eclipse.acceleo.module.tgrl.java.services.ModelFeatures', 'getAllElementLink(org.xtext.grl.tgrl.tGRL.Model)', Sequence{arg0})
 /]
 
-[query public getAllConnections(arg0 : Model) : Sequence(OclAny)
-	= invoke('org.eclipse.acceleo.module.tgrl.java.services.ModelFeatures', 'getAllConnections(org.xtext.grl.tgrl.tGRL.Model)', Sequence{arg0})
+[query public getAllNormalDecompositions(arg0 : Model) : Sequence(OclAny)
+	= invoke('org.eclipse.acceleo.module.tgrl.java.services.ModelFeatures', 'getAllNormalDecompositions(org.xtext.grl.tgrl.tGRL.Model)', Sequence{arg0})
+/]
+
+[query public getAllQualitativeMappings(arg0 : Model) : Sequence(OclAny)
+	= invoke('org.eclipse.acceleo.module.tgrl.java.services.ModelFeatures', 'getAllQualitativeMappings(org.xtext.grl.tgrl.tGRL.Model)', Sequence{arg0})
 /]
 

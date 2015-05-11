@@ -1,0 +1,30 @@
+grl GRLName {
+	actor A1 {
+		name='Professor';
+		importance = medium;
+	}
+	actor A2 {
+		name = "Student";
+		importance = none;
+		metadata m1 = "Metadata1";
+		metadata m2 = "Metadata2";
+		metadata m3 = "Metadata3";
+	}
+	comment "sjdhfljksdajf";
+	softGoal S1{
+		metadata s1 = "Metadata1";
+		metadata s2 = "Metadata2";
+		metadata s3 = "Metadata3";
+	}
+	goal G1;
+	indicator I1;
+	resource R1;
+	belief B1 {
+		description = "sdfskjd";
+		metadata b1 = "Metadata1";
+		metadata b2 = "Metadata2";
+		metadata b3 = "Metadata3";
+		
+	}
+	task T1;
+}

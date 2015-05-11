@@ -1,31 +1,28 @@
-grl GRLName {
-	actor A1 {
-		name='Professor';
-		importance = medium;
-	}
-	actor A2 {
-		name = "Student";
-		importance = none;
-		metadata m1 = "Metadata1";
-		metadata m2 = "Metadata2";
-		metadata m3 = "Metadata3";
-	}
-	comment "sjdhfljksdajf";
-	softGoal S1{
-		metadata s1 = "Metadata1";
-		metadata s2 = "Metadata2";
-		metadata s3 = "Metadata3";
-	}
-	goal G1;
-	indicator I1;
-	resource R1;
-	belief B1 {
-		description = "sdfskjd";
-		metadata b1 = "Metadata1";
-		metadata b2 = "Metadata2";
-		metadata b3 = "Metadata3";
-		
-	}
-	task T1;
+grl {
+//	softGoal SG1{
+//		name = "SG1";
+//	}
+//	softGoal SG2{
+//		name = "SG2";
+//	}
+//	softGoal SG3{
+//		name = "SG3";
+//	}
+//	SG1 decomposedBy SG2,SG3;
+//	
 	
+//	softGoal S1{
+//		name = "S1";
+//	}
+//	softGoal S2{
+//		name = "S2";
+//	}
+//	softGoal S3{
+//		name = "S3";
+//	}
+//	S1 decomposedBy S2,S3;
+qualitativeMapping A {
+	"test1",0,none,false;
+	"test2",50,satisfied,true;
+}
 }

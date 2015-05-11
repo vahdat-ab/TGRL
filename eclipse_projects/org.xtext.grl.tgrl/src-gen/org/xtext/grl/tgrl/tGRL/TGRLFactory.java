@@ -77,33 +77,6 @@ public interface TGRLFactory extends EFactory
   IntentionalElement createIntentionalElement();
 
   /**
-   * Returns a new object of class '<em>Super Element Link</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Super Element Link</em>'.
-   * @generated
-   */
-  SuperElementLink createSuperElementLink();
-
-  /**
-   * Returns a new object of class '<em>Element Link</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Element Link</em>'.
-   * @generated
-   */
-  ElementLink createElementLink();
-
-  /**
-   * Returns a new object of class '<em>In Line Element Link</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>In Line Element Link</em>'.
-   * @generated
-   */
-  InLineElementLink createInLineElementLink();
-
-  /**
    * Returns a new object of class '<em>GRL Specification</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -176,22 +149,103 @@ public interface TGRLFactory extends EFactory
   Belief createBelief();
 
   /**
-   * Returns a new object of class '<em>Link End</em>'.
+   * Returns a new object of class '<em>Element Link</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Link End</em>'.
+   * @return a new object of class '<em>Element Link</em>'.
    * @generated
    */
-  LinkEnd createLinkEnd();
+  ElementLink createElementLink();
 
   /**
-   * Returns a new object of class '<em>Decomposition</em>'.
+   * Returns a new object of class '<em>End Link</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Decomposition</em>'.
+   * @return a new object of class '<em>End Link</em>'.
    * @generated
    */
-  Decomposition createDecomposition();
+  EndLink createEndLink();
+
+  /**
+   * Returns a new object of class '<em>Normal Element Link</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Normal Element Link</em>'.
+   * @generated
+   */
+  NormalElementLink createNormalElementLink();
+
+  /**
+   * Returns a new object of class '<em>Normal Link</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Normal Link</em>'.
+   * @generated
+   */
+  NormalLink createNormalLink();
+
+  /**
+   * Returns a new object of class '<em>Normal Dependency</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Normal Dependency</em>'.
+   * @generated
+   */
+  NormalDependency createNormalDependency();
+
+  /**
+   * Returns a new object of class '<em>Normal Contribution</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Normal Contribution</em>'.
+   * @generated
+   */
+  NormalContribution createNormalContribution();
+
+  /**
+   * Returns a new object of class '<em>Normal Decomposition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Normal Decomposition</em>'.
+   * @generated
+   */
+  NormalDecomposition createNormalDecomposition();
+
+  /**
+   * Returns a new object of class '<em>In Line Element Link</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>In Line Element Link</em>'.
+   * @generated
+   */
+  InLineElementLink createInLineElementLink();
+
+  /**
+   * Returns a new object of class '<em>In Line Link</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>In Line Link</em>'.
+   * @generated
+   */
+  InLineLink createInLineLink();
+
+  /**
+   * Returns a new object of class '<em>In Line Dependency</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>In Line Dependency</em>'.
+   * @generated
+   */
+  InLineDependency createInLineDependency();
+
+  /**
+   * Returns a new object of class '<em>In Line Contribution</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>In Line Contribution</em>'.
+   * @generated
+   */
+  InLineContribution createInLineContribution();
 
   /**
    * Returns a new object of class '<em>In Line Decomposition</em>'.
@@ -212,24 +266,6 @@ public interface TGRLFactory extends EFactory
   DecompositionEnd createDecompositionEnd();
 
   /**
-   * Returns a new object of class '<em>Contribution</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Contribution</em>'.
-   * @generated
-   */
-  Contribution createContribution();
-
-  /**
-   * Returns a new object of class '<em>In Line Contribution</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>In Line Contribution</em>'.
-   * @generated
-   */
-  InLineContribution createInLineContribution();
-
-  /**
    * Returns a new object of class '<em>Contribution End</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -237,24 +273,6 @@ public interface TGRLFactory extends EFactory
    * @generated
    */
   ContributionEnd createContributionEnd();
-
-  /**
-   * Returns a new object of class '<em>Dependency</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Dependency</em>'.
-   * @generated
-   */
-  Dependency createDependency();
-
-  /**
-   * Returns a new object of class '<em>In Line Dependency</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>In Line Dependency</em>'.
-   * @generated
-   */
-  InLineDependency createInLineDependency();
 
   /**
    * Returns a new object of class '<em>Dependency End</em>'.
@@ -273,24 +291,6 @@ public interface TGRLFactory extends EFactory
    * @generated
    */
   LinkType createLinkType();
-
-  /**
-   * Returns a new object of class '<em>Link</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Link</em>'.
-   * @generated
-   */
-  Link createLink();
-
-  /**
-   * Returns a new object of class '<em>in Line Link</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>in Line Link</em>'.
-   * @generated
-   */
-  inLineLink createinLineLink();
 
   /**
    * Returns a new object of class '<em>Strategy Group</em>'.

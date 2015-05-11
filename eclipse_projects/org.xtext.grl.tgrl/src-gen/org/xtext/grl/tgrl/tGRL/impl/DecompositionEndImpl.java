@@ -24,7 +24,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *
  * @generated
  */
-public class DecompositionEndImpl extends LinkEndImpl implements DecompositionEnd
+public class DecompositionEndImpl extends EndLinkImpl implements DecompositionEnd
 {
   /**
    * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.

@@ -1,4 +1,4 @@
-','=30
+','=29
 '.'=55
 ':'=51
 ';'=17
@@ -12,10 +12,10 @@
 'contributesTo'=31
 'contribution'=50
 'contributionGroup'=49
-'decomposedBy'=29
+'decomposedBy'=32
 'decompositionType'=23
 'denied'=70
-'dependsOn'=32
+'dependsOn'=30
 'description'=21
 'end'=40
 'eval'=45

@@ -4,6 +4,8 @@ package org.xtext.grl.tgrl.tGRL.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.xtext.grl.tgrl.tGRL.ElementLink;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
@@ -16,7 +18,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *
  * @generated
  */
-public class ElementLinkImpl extends SuperElementLinkImpl implements ElementLink
+public class ElementLinkImpl extends MinimalEObjectImpl.Container implements ElementLink
 {
   /**
    * <!-- begin-user-doc -->

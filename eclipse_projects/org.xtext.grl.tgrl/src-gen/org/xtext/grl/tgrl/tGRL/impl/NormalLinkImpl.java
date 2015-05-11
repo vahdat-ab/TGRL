@@ -16,26 +16,37 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.xtext.grl.tgrl.tGRL.GRLElement;
-import org.xtext.grl.tgrl.tGRL.Link;
 import org.xtext.grl.tgrl.tGRL.LinkType;
+import org.xtext.grl.tgrl.tGRL.NormalLink;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Link</b></em>'.
+ * An implementation of the model object '<em><b>Normal Link</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.LinkImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.LinkImpl#getDest <em>Dest</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.NormalLinkImpl#getSrc <em>Src</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.NormalLinkImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.NormalLinkImpl#getDest <em>Dest</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class LinkImpl extends SuperElementLinkImpl implements Link
+public class NormalLinkImpl extends NormalElementLinkImpl implements NormalLink
 {
+  /**
+   * The cached value of the '{@link #getSrc() <em>Src</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSrc()
+   * @generated
+   * @ordered
+   */
+  protected GRLElement src;
+
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' reference.
    * <!-- begin-user-doc -->
@@ -61,7 +72,7 @@ public class LinkImpl extends SuperElementLinkImpl implements Link
    * <!-- end-user-doc -->
    * @generated
    */
-  protected LinkImpl()
+  protected NormalLinkImpl()
   {
     super();
   }
@@ -74,7 +85,50 @@ public class LinkImpl extends SuperElementLinkImpl implements Link
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.LINK;
+    return TGRLPackage.Literals.NORMAL_LINK;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GRLElement getSrc()
+  {
+    if (src != null && src.eIsProxy())
+    {
+      InternalEObject oldSrc = (InternalEObject)src;
+      src = (GRLElement)eResolveProxy(oldSrc);
+      if (src != oldSrc)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.NORMAL_LINK__SRC, oldSrc, src));
+      }
+    }
+    return src;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GRLElement basicGetSrc()
+  {
+    return src;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSrc(GRLElement newSrc)
+  {
+    GRLElement oldSrc = src;
+    src = newSrc;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.NORMAL_LINK__SRC, oldSrc, src));
   }
 
   /**
@@ -91,7 +145,7 @@ public class LinkImpl extends SuperElementLinkImpl implements Link
       if (type != oldType)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.LINK__TYPE, oldType, type));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.NORMAL_LINK__TYPE, oldType, type));
       }
     }
     return type;
@@ -117,7 +171,7 @@ public class LinkImpl extends SuperElementLinkImpl implements Link
     LinkType oldType = type;
     type = newType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.LINK__TYPE, oldType, type));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.NORMAL_LINK__TYPE, oldType, type));
   }
 
   /**
@@ -129,7 +183,7 @@ public class LinkImpl extends SuperElementLinkImpl implements Link
   {
     if (dest == null)
     {
-      dest = new EObjectResolvingEList<GRLElement>(GRLElement.class, this, TGRLPackage.LINK__DEST);
+      dest = new EObjectResolvingEList<GRLElement>(GRLElement.class, this, TGRLPackage.NORMAL_LINK__DEST);
     }
     return dest;
   }
@@ -144,10 +198,13 @@ public class LinkImpl extends SuperElementLinkImpl implements Link
   {
     switch (featureID)
     {
-      case TGRLPackage.LINK__TYPE:
+      case TGRLPackage.NORMAL_LINK__SRC:
+        if (resolve) return getSrc();
+        return basicGetSrc();
+      case TGRLPackage.NORMAL_LINK__TYPE:
         if (resolve) return getType();
         return basicGetType();
-      case TGRLPackage.LINK__DEST:
+      case TGRLPackage.NORMAL_LINK__DEST:
         return getDest();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -164,10 +221,13 @@ public class LinkImpl extends SuperElementLinkImpl implements Link
   {
     switch (featureID)
     {
-      case TGRLPackage.LINK__TYPE:
+      case TGRLPackage.NORMAL_LINK__SRC:
+        setSrc((GRLElement)newValue);
+        return;
+      case TGRLPackage.NORMAL_LINK__TYPE:
         setType((LinkType)newValue);
         return;
-      case TGRLPackage.LINK__DEST:
+      case TGRLPackage.NORMAL_LINK__DEST:
         getDest().clear();
         getDest().addAll((Collection<? extends GRLElement>)newValue);
         return;
@@ -185,10 +245,13 @@ public class LinkImpl extends SuperElementLinkImpl implements Link
   {
     switch (featureID)
     {
-      case TGRLPackage.LINK__TYPE:
+      case TGRLPackage.NORMAL_LINK__SRC:
+        setSrc((GRLElement)null);
+        return;
+      case TGRLPackage.NORMAL_LINK__TYPE:
         setType((LinkType)null);
         return;
-      case TGRLPackage.LINK__DEST:
+      case TGRLPackage.NORMAL_LINK__DEST:
         getDest().clear();
         return;
     }
@@ -205,12 +268,14 @@ public class LinkImpl extends SuperElementLinkImpl implements Link
   {
     switch (featureID)
     {
-      case TGRLPackage.LINK__TYPE:
+      case TGRLPackage.NORMAL_LINK__SRC:
+        return src != null;
+      case TGRLPackage.NORMAL_LINK__TYPE:
         return type != null;
-      case TGRLPackage.LINK__DEST:
+      case TGRLPackage.NORMAL_LINK__DEST:
         return dest != null && !dest.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //LinkImpl
+} //NormalLinkImpl

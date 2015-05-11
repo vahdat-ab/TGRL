@@ -15,7 +15,6 @@ import org.xtext.grl.tgrl.tGRL.Actor;
 import org.xtext.grl.tgrl.tGRL.Belief;
 import org.xtext.grl.tgrl.tGRL.Color;
 import org.xtext.grl.tgrl.tGRL.Comment;
-import org.xtext.grl.tgrl.tGRL.Contribution;
 import org.xtext.grl.tgrl.tGRL.ContributionChange;
 import org.xtext.grl.tgrl.tGRL.ContributionContext;
 import org.xtext.grl.tgrl.tGRL.ContributionEnd;
@@ -23,13 +22,12 @@ import org.xtext.grl.tgrl.tGRL.ContributionGroup;
 import org.xtext.grl.tgrl.tGRL.ContributionRange;
 import org.xtext.grl.tgrl.tGRL.ContributionType;
 import org.xtext.grl.tgrl.tGRL.Criticality;
-import org.xtext.grl.tgrl.tGRL.Decomposition;
 import org.xtext.grl.tgrl.tGRL.DecompositionEnd;
 import org.xtext.grl.tgrl.tGRL.DecompositionType;
-import org.xtext.grl.tgrl.tGRL.Dependency;
 import org.xtext.grl.tgrl.tGRL.DependencyEnd;
 import org.xtext.grl.tgrl.tGRL.Element;
 import org.xtext.grl.tgrl.tGRL.ElementLink;
+import org.xtext.grl.tgrl.tGRL.EndLink;
 import org.xtext.grl.tgrl.tGRL.Evaluation;
 import org.xtext.grl.tgrl.tGRL.EvaluationRange;
 import org.xtext.grl.tgrl.tGRL.EvaluationStrategy;
@@ -42,30 +40,32 @@ import org.xtext.grl.tgrl.tGRL.InLineContribution;
 import org.xtext.grl.tgrl.tGRL.InLineDecomposition;
 import org.xtext.grl.tgrl.tGRL.InLineDependency;
 import org.xtext.grl.tgrl.tGRL.InLineElementLink;
+import org.xtext.grl.tgrl.tGRL.InLineLink;
 import org.xtext.grl.tgrl.tGRL.Indicator;
 import org.xtext.grl.tgrl.tGRL.IndicatorGroup;
 import org.xtext.grl.tgrl.tGRL.IntentionalElement;
 import org.xtext.grl.tgrl.tGRL.KPIEvalValueSet;
 import org.xtext.grl.tgrl.tGRL.KPIQualitativeEvalValueSet;
 import org.xtext.grl.tgrl.tGRL.KPIQuantitativeEvalValueSet;
-import org.xtext.grl.tgrl.tGRL.Link;
-import org.xtext.grl.tgrl.tGRL.LinkEnd;
 import org.xtext.grl.tgrl.tGRL.LinkType;
 import org.xtext.grl.tgrl.tGRL.Mapping;
 import org.xtext.grl.tgrl.tGRL.Metadata;
 import org.xtext.grl.tgrl.tGRL.Model;
+import org.xtext.grl.tgrl.tGRL.NormalContribution;
+import org.xtext.grl.tgrl.tGRL.NormalDecomposition;
+import org.xtext.grl.tgrl.tGRL.NormalDependency;
+import org.xtext.grl.tgrl.tGRL.NormalElementLink;
+import org.xtext.grl.tgrl.tGRL.NormalLink;
 import org.xtext.grl.tgrl.tGRL.Priority;
 import org.xtext.grl.tgrl.tGRL.QualitativeLabel;
 import org.xtext.grl.tgrl.tGRL.QualitativeMapping;
 import org.xtext.grl.tgrl.tGRL.Resource;
 import org.xtext.grl.tgrl.tGRL.Softgoal;
 import org.xtext.grl.tgrl.tGRL.StrategyGroup;
-import org.xtext.grl.tgrl.tGRL.SuperElementLink;
 import org.xtext.grl.tgrl.tGRL.SuperIntentionalElement;
 import org.xtext.grl.tgrl.tGRL.TGRLFactory;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 import org.xtext.grl.tgrl.tGRL.Task;
-import org.xtext.grl.tgrl.tGRL.inLineLink;
 
 /**
  * <!-- begin-user-doc -->
@@ -125,9 +125,6 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
       case TGRLPackage.GRL_ELEMENT: return createGRLElement();
       case TGRLPackage.SUPER_INTENTIONAL_ELEMENT: return createSuperIntentionalElement();
       case TGRLPackage.INTENTIONAL_ELEMENT: return createIntentionalElement();
-      case TGRLPackage.SUPER_ELEMENT_LINK: return createSuperElementLink();
-      case TGRLPackage.ELEMENT_LINK: return createElementLink();
-      case TGRLPackage.IN_LINE_ELEMENT_LINK: return createInLineElementLink();
       case TGRLPackage.GRL_SPECIFICATION: return createGRLSpecification();
       case TGRLPackage.ACTOR: return createActor();
       case TGRLPackage.SOFTGOAL: return createSoftgoal();
@@ -136,19 +133,22 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
       case TGRLPackage.RESOURCE: return createResource();
       case TGRLPackage.INDICATOR: return createIndicator();
       case TGRLPackage.BELIEF: return createBelief();
-      case TGRLPackage.LINK_END: return createLinkEnd();
-      case TGRLPackage.DECOMPOSITION: return createDecomposition();
+      case TGRLPackage.ELEMENT_LINK: return createElementLink();
+      case TGRLPackage.END_LINK: return createEndLink();
+      case TGRLPackage.NORMAL_ELEMENT_LINK: return createNormalElementLink();
+      case TGRLPackage.NORMAL_LINK: return createNormalLink();
+      case TGRLPackage.NORMAL_DEPENDENCY: return createNormalDependency();
+      case TGRLPackage.NORMAL_CONTRIBUTION: return createNormalContribution();
+      case TGRLPackage.NORMAL_DECOMPOSITION: return createNormalDecomposition();
+      case TGRLPackage.IN_LINE_ELEMENT_LINK: return createInLineElementLink();
+      case TGRLPackage.IN_LINE_LINK: return createInLineLink();
+      case TGRLPackage.IN_LINE_DEPENDENCY: return createInLineDependency();
+      case TGRLPackage.IN_LINE_CONTRIBUTION: return createInLineContribution();
       case TGRLPackage.IN_LINE_DECOMPOSITION: return createInLineDecomposition();
       case TGRLPackage.DECOMPOSITION_END: return createDecompositionEnd();
-      case TGRLPackage.CONTRIBUTION: return createContribution();
-      case TGRLPackage.IN_LINE_CONTRIBUTION: return createInLineContribution();
       case TGRLPackage.CONTRIBUTION_END: return createContributionEnd();
-      case TGRLPackage.DEPENDENCY: return createDependency();
-      case TGRLPackage.IN_LINE_DEPENDENCY: return createInLineDependency();
       case TGRLPackage.DEPENDENCY_END: return createDependencyEnd();
       case TGRLPackage.LINK_TYPE: return createLinkType();
-      case TGRLPackage.LINK: return createLink();
-      case TGRLPackage.IN_LINE_LINK: return createinLineLink();
       case TGRLPackage.STRATEGY_GROUP: return createStrategyGroup();
       case TGRLPackage.EVALUATION_STRATEGY: return createEvaluationStrategy();
       case TGRLPackage.EVALUATION: return createEvaluation();
@@ -303,39 +303,6 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SuperElementLink createSuperElementLink()
-  {
-    SuperElementLinkImpl superElementLink = new SuperElementLinkImpl();
-    return superElementLink;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ElementLink createElementLink()
-  {
-    ElementLinkImpl elementLink = new ElementLinkImpl();
-    return elementLink;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public InLineElementLink createInLineElementLink()
-  {
-    InLineElementLinkImpl inLineElementLink = new InLineElementLinkImpl();
-    return inLineElementLink;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public GRLSpecification createGRLSpecification()
   {
     GRLSpecificationImpl grlSpecification = new GRLSpecificationImpl();
@@ -424,10 +391,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public LinkEnd createLinkEnd()
+  public ElementLink createElementLink()
   {
-    LinkEndImpl linkEnd = new LinkEndImpl();
-    return linkEnd;
+    ElementLinkImpl elementLink = new ElementLinkImpl();
+    return elementLink;
   }
 
   /**
@@ -435,10 +402,109 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Decomposition createDecomposition()
+  public EndLink createEndLink()
   {
-    DecompositionImpl decomposition = new DecompositionImpl();
-    return decomposition;
+    EndLinkImpl endLink = new EndLinkImpl();
+    return endLink;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NormalElementLink createNormalElementLink()
+  {
+    NormalElementLinkImpl normalElementLink = new NormalElementLinkImpl();
+    return normalElementLink;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NormalLink createNormalLink()
+  {
+    NormalLinkImpl normalLink = new NormalLinkImpl();
+    return normalLink;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NormalDependency createNormalDependency()
+  {
+    NormalDependencyImpl normalDependency = new NormalDependencyImpl();
+    return normalDependency;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NormalContribution createNormalContribution()
+  {
+    NormalContributionImpl normalContribution = new NormalContributionImpl();
+    return normalContribution;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NormalDecomposition createNormalDecomposition()
+  {
+    NormalDecompositionImpl normalDecomposition = new NormalDecompositionImpl();
+    return normalDecomposition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InLineElementLink createInLineElementLink()
+  {
+    InLineElementLinkImpl inLineElementLink = new InLineElementLinkImpl();
+    return inLineElementLink;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InLineLink createInLineLink()
+  {
+    InLineLinkImpl inLineLink = new InLineLinkImpl();
+    return inLineLink;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InLineDependency createInLineDependency()
+  {
+    InLineDependencyImpl inLineDependency = new InLineDependencyImpl();
+    return inLineDependency;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InLineContribution createInLineContribution()
+  {
+    InLineContributionImpl inLineContribution = new InLineContributionImpl();
+    return inLineContribution;
   }
 
   /**
@@ -468,54 +534,10 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Contribution createContribution()
-  {
-    ContributionImpl contribution = new ContributionImpl();
-    return contribution;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public InLineContribution createInLineContribution()
-  {
-    InLineContributionImpl inLineContribution = new InLineContributionImpl();
-    return inLineContribution;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public ContributionEnd createContributionEnd()
   {
     ContributionEndImpl contributionEnd = new ContributionEndImpl();
     return contributionEnd;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Dependency createDependency()
-  {
-    DependencyImpl dependency = new DependencyImpl();
-    return dependency;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public InLineDependency createInLineDependency()
-  {
-    InLineDependencyImpl inLineDependency = new InLineDependencyImpl();
-    return inLineDependency;
   }
 
   /**
@@ -538,28 +560,6 @@ public class TGRLFactoryImpl extends EFactoryImpl implements TGRLFactory
   {
     LinkTypeImpl linkType = new LinkTypeImpl();
     return linkType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Link createLink()
-  {
-    LinkImpl link = new LinkImpl();
-    return link;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public inLineLink createinLineLink()
-  {
-    inLineLinkImpl inLineLink = new inLineLinkImpl();
-    return inLineLink;
   }
 
   /**

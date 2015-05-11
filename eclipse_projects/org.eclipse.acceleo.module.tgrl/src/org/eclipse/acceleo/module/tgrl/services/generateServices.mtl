@@ -2,23 +2,36 @@
 [module generateServices('http://www.xtext.org/grl/tgrl/TGRL')]
 [import org::eclipse::acceleo::module::tgrl::java::services::generateModelFeatures /]
 
-[comment][template public getLinkSrc(inModel : Model ,inIntentionalElement : IntentionalElement, type:OclType) post(trim())]
-[if (getAllElementLink(inModel)->select(src.id=inIntentionalElement.id)->selectByType(Decomposition)->size()>0)]
-linksSrc="[for (element : ElementLink | getAllElementLink(inModel)->select(src.id=inIntentionalElement.id))][id/] [/for]"
+[template public getLinkSrc(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
+[comment][for (nDecomposition : NormalDecomposition | getAllNormalDecompositions(inModel).oclAsType(NormalDecomposition))]
+	[for (ddecompositionEdn : DecompositionEnd | dest)]
+		
+	[/for]
+[/for][/comment]
+
+[if (getAllNormalDecompositions(inModel).oclAsType(NormalDecomposition)->select(src.id=inIntentionalElement.id)->size()>0)]
+linksSrc="[for (element : NormalDecomposition | getAllNormalDecompositions(inModel).oclAsType(NormalDecomposition)->select(src.id=inIntentionalElement.id))][id/] [/for]"
 [/if]
+
+[comment][for (nDecomposition : NormalDecomposition | getAllNormalDecompositions(inModel).oclAsType(NormalDecomposition))]
+[if (src.id = inIntentionalElement.id)]linksSrc="[id/]"[/if]
+[/for][/comment]
 [/template]
 [template public getLinksDest(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
-[if (getAllElementLink(inModel).oclas ->select( =inIntentionalElement.name)->size()>0)]
-linksDest="[for (element : ElementLink | getAllElementLink(inModel)->select(dest.name=inIntentionalElement.name))][id/] [/for]"
-[/if]
-[/template][/comment]
+[for (nDecomposition : NormalDecomposition | getAllNormalDecompositions(inModel).oclAsType(NormalDecomposition))]
+[for (decompostionEnd : DecompositionEnd | dest)]
+[if (id = inIntentionalElement.id)]linksDest="[id/]"[/if]
+[/for]
+[/for]
+[/template]
 [comment][template public getSucc(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
-[if (getAllElementLink(inModel)->select(src.name=inIntentionalElement.name)->size()>0)]
-succ="[for (element : ElementLink | getAllElementLink(inModel)->select(src.name=inIntentionalElement.name))]
+
+[if (getAllNormalDecompositions(inModel).oclAsType(NormalDecomposition)->select(src.name=inIntentionalElement.name)->size()>0)]
+succ="[for (element : NormalDecomposition | getAllNormalDecompositions(inModel).oclAsType(NormalDecomposition)->select(src.name=inIntentionalElement.name))]
 [for (loopElement : ElementLink | getAllElementLink(inModel)->asSequence())][if (name =element.name)] //@urndef/@specDiagrams.0/@connections.[i-1/][/if][/for][/for]"
 [/if]
-[/template]
-[template public getPred(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
+[/template][/comment]
+[comment][template public getPred(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
 [if (getAllElementLink(inModel)->select(dest.name=inIntentionalElement.name)->size()>0)]
 pred="[for (element : ElementLink | getAllElementLink(inModel)->select(dest.name=inIntentionalElement.name))]
 [for (loopElement : ElementLink | getAllElementLink(inModel)->asSequence())][if (name =element.name)] //@urndef/@specDiagrams.0/@connections.[i-1/][/if][/for][/for]"
@@ -97,3 +110,8 @@ filled="true" fillColor="255,255,160"
 <metadata name="[name/]" value="[value/]"/>
 [/for]
 [/template]
+
+[template public PrintKPIHeader(inModel : Model) post(trim())]
+[if (getAllQualitativeMappings()->size()>0)]xmlns:grl.kpimodel="http:///grl/kpimodel.ecore"[/if]
+[/template]
+

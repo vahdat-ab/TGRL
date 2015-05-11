@@ -21,7 +21,7 @@ package org.xtext.grl.tgrl.tGRL;
  * @model
  * @generated
  */
-public interface ContributionEnd extends LinkEnd
+public interface ContributionEnd extends EndLink
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.

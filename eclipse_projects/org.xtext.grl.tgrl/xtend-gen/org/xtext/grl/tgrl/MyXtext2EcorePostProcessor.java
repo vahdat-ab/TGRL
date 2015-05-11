@@ -25,9 +25,17 @@ public class MyXtext2EcorePostProcessor implements IXtext2EcorePostProcessor {
     EList<EClassifier> _eClassifiers = p.getEClassifiers();
     Iterable<EClass> _filter = Iterables.<EClass>filter(_eClassifiers, EClass.class);
     for (final EClass c : _filter) {
+      boolean _or = false;
       String _name = c.getName();
       boolean _equals = Objects.equal(_name, "Element");
       if (_equals) {
+        _or = true;
+      } else {
+        String _name_1 = c.getName();
+        boolean _equals_1 = Objects.equal(_name_1, "EndLink");
+        _or = _equals_1;
+      }
+      if (_or) {
         this.handle(c);
       }
     }

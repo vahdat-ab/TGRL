@@ -16,25 +16,25 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.xtext.grl.tgrl.tGRL.GRLElement;
+import org.xtext.grl.tgrl.tGRL.InLineLink;
 import org.xtext.grl.tgrl.tGRL.LinkType;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
-import org.xtext.grl.tgrl.tGRL.inLineLink;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>in Line Link</b></em>'.
+ * An implementation of the model object '<em><b>In Line Link</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.inLineLinkImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.inLineLinkImpl#getDest <em>Dest</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.InLineLinkImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.InLineLinkImpl#getDest <em>Dest</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class inLineLinkImpl extends InLineElementLinkImpl implements inLineLink
+public class InLineLinkImpl extends InLineElementLinkImpl implements InLineLink
 {
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' reference.
@@ -61,7 +61,7 @@ public class inLineLinkImpl extends InLineElementLinkImpl implements inLineLink
    * <!-- end-user-doc -->
    * @generated
    */
-  protected inLineLinkImpl()
+  protected InLineLinkImpl()
   {
     super();
   }
@@ -213,4 +213,4 @@ public class inLineLinkImpl extends InLineElementLinkImpl implements inLineLink
     return super.eIsSet(featureID);
   }
 
-} //inLineLinkImpl
+} //InLineLinkImpl

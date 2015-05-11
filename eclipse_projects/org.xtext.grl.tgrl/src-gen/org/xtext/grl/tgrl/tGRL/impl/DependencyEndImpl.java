@@ -24,7 +24,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *
  * @generated
  */
-public class DependencyEndImpl extends LinkEndImpl implements DependencyEnd
+public class DependencyEndImpl extends EndLinkImpl implements DependencyEnd
 {
   /**
    * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.

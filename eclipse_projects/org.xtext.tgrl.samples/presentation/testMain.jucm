@@ -1,29 +1,20 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grl="http:///grl.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="Vahdat" created="February 16, 2015 7:08:06 PM EST" modified="May 11, 2015 12:10:51 AM EDT" specVersion="29" urnVersion="1.27" nextGlobalID="84">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grl="http:///grl.ecore" xmlns:grl.kpimodel="http:///grl/kpimodel.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="Vahdat" created="February 16, 2015 7:08:06 PM EST" modified="May 11, 2015 11:03:24 AM EDT" specVersion="52" urnVersion="1.27" nextGlobalID="111">
   <ucmspec/>
   <grlspec>
-    <intElements name="Softgoal81" id="81" refs="82">
-      <metadata name="sssss" value="ssssss"/>
-    </intElements>
-    <groups name="StrategiesGroup3" id="3" strategies="4"/>
-    <strategies name="EvaluationStrategy4" id="4" author="Vahdat" group="3"/>
     <impactModel/>
     <indicatorGroup name="Time" id="7" isRedesignCategory="true"/>
     <indicatorGroup name="Cost" id="8" isRedesignCategory="true"/>
     <indicatorGroup name="Quality" id="9" isRedesignCategory="true"/>
     <indicatorGroup name="Flexibility" id="10" isRedesignCategory="true"/>
+    <KPIConversion xsi:type="grl.kpimodel:QualitativeMappings" name="QualitativeMappingsVahdat" id="111">
+      <mapping realWorldLabel="A" qualitativeEvaluation="None"/>
+      <mapping realWorldLabel="B" evaluation="-101" qualitativeEvaluation="Conflict" exceeds="true"/>
+    </KPIConversion>
     <featureModel/>
   </grlspec>
   <urndef>
-    <specDiagrams xsi:type="grl:GRLGraph" name="GRLGraph2" id="2">
-      <nodes xsi:type="grl:Belief" name="Belief79" id="79" description="Description..." x="402" y="178" author="Vahdat">
-        <metadata name="AAAA" value="BBBBB"/>
-      </nodes>
-      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef82" id="82" x="740" y="113" def="81">
-        <metadata name="_height" value="45"/>
-        <metadata name="_width" value="110"/>
-      </nodes>
-    </specDiagrams>
+    <specDiagrams xsi:type="grl:GRLGraph" name="GRLGraph2" id="2"/>
   </urndef>
   <metadata name="_Use0to100EvaluationRange" value="false"/>
 </urn:URNspec>

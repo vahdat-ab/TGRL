@@ -9,6 +9,7 @@ import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.parser.DefaultEcoreElementFactory;
 import org.eclipse.xtext.parser.IAstFactory;
 import org.xtext.grl.tgrl.tGRL.Element;
+import org.xtext.grl.tgrl.tGRL.EndLink;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
@@ -30,10 +31,13 @@ public class TGRLRuntimeModule extends org.xtext.grl.tgrl.AbstractTGRLRuntimeMod
 			
 				Element element = (Element) object;        
 				element.setId(id);
-			id++;
+				id++;
 			}
-		}
-	
+			if(object instanceof EndLink) {
+				EndLink elink = (EndLink)object;
+				elink.setId(100);
+			}
+		}	
 	}
 
 }

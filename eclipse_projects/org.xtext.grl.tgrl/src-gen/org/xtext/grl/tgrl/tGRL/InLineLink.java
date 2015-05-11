@@ -6,22 +6,22 @@ import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Link</b></em>'.
+ * A representation of the model object '<em><b>In Line Link</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.Link#getType <em>Type</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.Link#getDest <em>Dest</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.InLineLink#getType <em>Type</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.InLineLink#getDest <em>Dest</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getLink()
+ * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getInLineLink()
  * @model
  * @generated
  */
-public interface Link extends SuperElementLink
+public interface InLineLink extends InLineElementLink
 {
   /**
    * Returns the value of the '<em><b>Type</b></em>' reference.
@@ -33,14 +33,14 @@ public interface Link extends SuperElementLink
    * <!-- end-user-doc -->
    * @return the value of the '<em>Type</em>' reference.
    * @see #setType(LinkType)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getLink_Type()
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getInLineLink_Type()
    * @model
    * @generated
    */
   LinkType getType();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Link#getType <em>Type</em>}' reference.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.InLineLink#getType <em>Type</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Type</em>' reference.
@@ -59,10 +59,10 @@ public interface Link extends SuperElementLink
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Dest</em>' reference list.
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getLink_Dest()
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getInLineLink_Dest()
    * @model
    * @generated
    */
   EList<GRLElement> getDest();
 
-} // Link
+} // InLineLink

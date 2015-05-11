@@ -27,7 +27,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *
  * @generated
  */
-public class ContributionEndImpl extends LinkEndImpl implements ContributionEnd
+public class ContributionEndImpl extends EndLinkImpl implements ContributionEnd
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.

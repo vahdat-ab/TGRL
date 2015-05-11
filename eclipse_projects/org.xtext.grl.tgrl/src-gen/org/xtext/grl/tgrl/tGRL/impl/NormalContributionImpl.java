@@ -4,6 +4,7 @@ package org.xtext.grl.tgrl.tGRL.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -11,28 +12,42 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.xtext.grl.tgrl.tGRL.Contribution;
 import org.xtext.grl.tgrl.tGRL.ContributionEnd;
+import org.xtext.grl.tgrl.tGRL.NormalContribution;
+import org.xtext.grl.tgrl.tGRL.SuperIntentionalElement;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Contribution</b></em>'.
+ * An implementation of the model object '<em><b>Normal Contribution</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.ContributionImpl#getDest <em>Dest</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.NormalContributionImpl#getSrc <em>Src</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.NormalContributionImpl#getDest <em>Dest</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ContributionImpl extends ElementLinkImpl implements Contribution
+public class NormalContributionImpl extends NormalElementLinkImpl implements NormalContribution
 {
+  /**
+   * The cached value of the '{@link #getSrc() <em>Src</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSrc()
+   * @generated
+   * @ordered
+   */
+  protected SuperIntentionalElement src;
+
   /**
    * The cached value of the '{@link #getDest() <em>Dest</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -48,7 +63,7 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ContributionImpl()
+  protected NormalContributionImpl()
   {
     super();
   }
@@ -61,7 +76,50 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.CONTRIBUTION;
+    return TGRLPackage.Literals.NORMAL_CONTRIBUTION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SuperIntentionalElement getSrc()
+  {
+    if (src != null && src.eIsProxy())
+    {
+      InternalEObject oldSrc = (InternalEObject)src;
+      src = (SuperIntentionalElement)eResolveProxy(oldSrc);
+      if (src != oldSrc)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.NORMAL_CONTRIBUTION__SRC, oldSrc, src));
+      }
+    }
+    return src;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SuperIntentionalElement basicGetSrc()
+  {
+    return src;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSrc(SuperIntentionalElement newSrc)
+  {
+    SuperIntentionalElement oldSrc = src;
+    src = newSrc;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.NORMAL_CONTRIBUTION__SRC, oldSrc, src));
   }
 
   /**
@@ -73,7 +131,7 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
   {
     if (dest == null)
     {
-      dest = new EObjectContainmentEList<ContributionEnd>(ContributionEnd.class, this, TGRLPackage.CONTRIBUTION__DEST);
+      dest = new EObjectContainmentEList<ContributionEnd>(ContributionEnd.class, this, TGRLPackage.NORMAL_CONTRIBUTION__DEST);
     }
     return dest;
   }
@@ -88,7 +146,7 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION__DEST:
+      case TGRLPackage.NORMAL_CONTRIBUTION__DEST:
         return ((InternalEList<?>)getDest()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -104,7 +162,10 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION__DEST:
+      case TGRLPackage.NORMAL_CONTRIBUTION__SRC:
+        if (resolve) return getSrc();
+        return basicGetSrc();
+      case TGRLPackage.NORMAL_CONTRIBUTION__DEST:
         return getDest();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -121,7 +182,10 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION__DEST:
+      case TGRLPackage.NORMAL_CONTRIBUTION__SRC:
+        setSrc((SuperIntentionalElement)newValue);
+        return;
+      case TGRLPackage.NORMAL_CONTRIBUTION__DEST:
         getDest().clear();
         getDest().addAll((Collection<? extends ContributionEnd>)newValue);
         return;
@@ -139,7 +203,10 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION__DEST:
+      case TGRLPackage.NORMAL_CONTRIBUTION__SRC:
+        setSrc((SuperIntentionalElement)null);
+        return;
+      case TGRLPackage.NORMAL_CONTRIBUTION__DEST:
         getDest().clear();
         return;
     }
@@ -156,10 +223,12 @@ public class ContributionImpl extends ElementLinkImpl implements Contribution
   {
     switch (featureID)
     {
-      case TGRLPackage.CONTRIBUTION__DEST:
+      case TGRLPackage.NORMAL_CONTRIBUTION__SRC:
+        return src != null;
+      case TGRLPackage.NORMAL_CONTRIBUTION__DEST:
         return dest != null && !dest.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //ContributionImpl
+} //NormalContributionImpl

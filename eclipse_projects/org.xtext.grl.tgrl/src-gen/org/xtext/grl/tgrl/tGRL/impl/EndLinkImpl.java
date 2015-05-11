@@ -10,24 +10,25 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.grl.tgrl.tGRL.LinkEnd;
+import org.xtext.grl.tgrl.tGRL.EndLink;
 import org.xtext.grl.tgrl.tGRL.SuperIntentionalElement;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Link End</b></em>'.
+ * An implementation of the model object '<em><b>End Link</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.LinkEndImpl#getDestName <em>Dest Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EndLinkImpl#getDestName <em>Dest Name</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EndLinkImpl#getId <em>Id</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class LinkEndImpl extends MinimalEObjectImpl.Container implements LinkEnd
+public class EndLinkImpl extends MinimalEObjectImpl.Container implements EndLink
 {
   /**
    * The cached value of the '{@link #getDestName() <em>Dest Name</em>}' reference.
@@ -40,11 +41,31 @@ public class LinkEndImpl extends MinimalEObjectImpl.Container implements LinkEnd
   protected SuperIntentionalElement destName;
 
   /**
+   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getId()
+   * @generated
+   * @ordered
+   */
+  protected static final int ID_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getId()
+   * @generated
+   * @ordered
+   */
+  protected int id = ID_EDEFAULT;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected LinkEndImpl()
+  protected EndLinkImpl()
   {
     super();
   }
@@ -57,7 +78,7 @@ public class LinkEndImpl extends MinimalEObjectImpl.Container implements LinkEnd
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.LINK_END;
+    return TGRLPackage.Literals.END_LINK;
   }
 
   /**
@@ -74,7 +95,7 @@ public class LinkEndImpl extends MinimalEObjectImpl.Container implements LinkEnd
       if (destName != oldDestName)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.LINK_END__DEST_NAME, oldDestName, destName));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TGRLPackage.END_LINK__DEST_NAME, oldDestName, destName));
       }
     }
     return destName;
@@ -100,7 +121,30 @@ public class LinkEndImpl extends MinimalEObjectImpl.Container implements LinkEnd
     SuperIntentionalElement oldDestName = destName;
     destName = newDestName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.LINK_END__DEST_NAME, oldDestName, destName));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.END_LINK__DEST_NAME, oldDestName, destName));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public int getId()
+  {
+    return id;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setId(int newId)
+  {
+    int oldId = id;
+    id = newId;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.END_LINK__ID, oldId, id));
   }
 
   /**
@@ -113,9 +157,11 @@ public class LinkEndImpl extends MinimalEObjectImpl.Container implements LinkEnd
   {
     switch (featureID)
     {
-      case TGRLPackage.LINK_END__DEST_NAME:
+      case TGRLPackage.END_LINK__DEST_NAME:
         if (resolve) return getDestName();
         return basicGetDestName();
+      case TGRLPackage.END_LINK__ID:
+        return getId();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -130,8 +176,11 @@ public class LinkEndImpl extends MinimalEObjectImpl.Container implements LinkEnd
   {
     switch (featureID)
     {
-      case TGRLPackage.LINK_END__DEST_NAME:
+      case TGRLPackage.END_LINK__DEST_NAME:
         setDestName((SuperIntentionalElement)newValue);
+        return;
+      case TGRLPackage.END_LINK__ID:
+        setId((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -147,8 +196,11 @@ public class LinkEndImpl extends MinimalEObjectImpl.Container implements LinkEnd
   {
     switch (featureID)
     {
-      case TGRLPackage.LINK_END__DEST_NAME:
+      case TGRLPackage.END_LINK__DEST_NAME:
         setDestName((SuperIntentionalElement)null);
+        return;
+      case TGRLPackage.END_LINK__ID:
+        setId(ID_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -164,10 +216,29 @@ public class LinkEndImpl extends MinimalEObjectImpl.Container implements LinkEnd
   {
     switch (featureID)
     {
-      case TGRLPackage.LINK_END__DEST_NAME:
+      case TGRLPackage.END_LINK__DEST_NAME:
         return destName != null;
+      case TGRLPackage.END_LINK__ID:
+        return id != ID_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
 
-} //LinkEndImpl
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (id: ");
+    result.append(id);
+    result.append(')');
+    return result.toString();
+  }
+
+} //EndLinkImpl

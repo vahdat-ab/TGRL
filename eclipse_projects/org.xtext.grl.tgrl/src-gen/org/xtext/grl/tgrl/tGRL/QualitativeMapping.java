@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.QualitativeMapping#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.QualitativeMapping#getMetaData <em>Meta Data</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.QualitativeMapping#getMappin <em>Mappin</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.QualitativeMapping#getMappings <em>Mappings</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,19 +67,19 @@ public interface QualitativeMapping extends GRLElement
   EList<Metadata> getMetaData();
 
   /**
-   * Returns the value of the '<em><b>Mappin</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Mappings</b></em>' containment reference list.
    * The list contents are of type {@link org.xtext.grl.tgrl.tGRL.Mapping}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Mappin</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Mappings</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Mappin</em>' containment reference list.
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getQualitativeMapping_Mappin()
+   * @return the value of the '<em>Mappings</em>' containment reference list.
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getQualitativeMapping_Mappings()
    * @model containment="true"
    * @generated
    */
-  EList<Mapping> getMappin();
+  EList<Mapping> getMappings();
 
 } // QualitativeMapping

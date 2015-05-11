@@ -4,26 +4,26 @@ package org.xtext.grl.tgrl.tGRL.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.xtext.grl.tgrl.tGRL.InLineElementLink;
+import org.xtext.grl.tgrl.tGRL.NormalElementLink;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>In Line Element Link</b></em>'.
+ * An implementation of the model object '<em><b>Normal Element Link</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class InLineElementLinkImpl extends ElementLinkImpl implements InLineElementLink
+public class NormalElementLinkImpl extends GRLElementImpl implements NormalElementLink
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected InLineElementLinkImpl()
+  protected NormalElementLinkImpl()
   {
     super();
   }
@@ -36,7 +36,7 @@ public class InLineElementLinkImpl extends ElementLinkImpl implements InLineElem
   @Override
   protected EClass eStaticClass()
   {
-    return TGRLPackage.Literals.IN_LINE_ELEMENT_LINK;
+    return TGRLPackage.Literals.NORMAL_ELEMENT_LINK;
   }
 
-} //InLineElementLinkImpl
+} //NormalElementLinkImpl

@@ -19,7 +19,7 @@ package org.xtext.grl.tgrl.tGRL;
  * @model
  * @generated
  */
-public interface DependencyEnd extends LinkEnd
+public interface DependencyEnd extends EndLink
 {
   /**
    * Returns the value of the '<em><b>Description</b></em>' attribute.

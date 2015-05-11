@@ -13,6 +13,6 @@ package org.xtext.grl.tgrl.tGRL;
  * @model
  * @generated
  */
-public interface InLineElementLink extends GRLBaseElement
+public interface InLineElementLink extends ElementLink
 {
 } // InLineElementLink

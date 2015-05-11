@@ -31,7 +31,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * <ul>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.QualitativeMappingImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.QualitativeMappingImpl#getMetaData <em>Meta Data</em>}</li>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.QualitativeMappingImpl#getMappin <em>Mappin</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.QualitativeMappingImpl#getMappings <em>Mappings</em>}</li>
  * </ul>
  * </p>
  *
@@ -70,14 +70,14 @@ public class QualitativeMappingImpl extends GRLElementImpl implements Qualitativ
   protected EList<Metadata> metaData;
 
   /**
-   * The cached value of the '{@link #getMappin() <em>Mappin</em>}' containment reference list.
+   * The cached value of the '{@link #getMappings() <em>Mappings</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMappin()
+   * @see #getMappings()
    * @generated
    * @ordered
    */
-  protected EList<Mapping> mappin;
+  protected EList<Mapping> mappings;
 
   /**
    * <!-- begin-user-doc -->
@@ -142,13 +142,13 @@ public class QualitativeMappingImpl extends GRLElementImpl implements Qualitativ
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Mapping> getMappin()
+  public EList<Mapping> getMappings()
   {
-    if (mappin == null)
+    if (mappings == null)
     {
-      mappin = new EObjectContainmentEList<Mapping>(Mapping.class, this, TGRLPackage.QUALITATIVE_MAPPING__MAPPIN);
+      mappings = new EObjectContainmentEList<Mapping>(Mapping.class, this, TGRLPackage.QUALITATIVE_MAPPING__MAPPINGS);
     }
-    return mappin;
+    return mappings;
   }
 
   /**
@@ -163,8 +163,8 @@ public class QualitativeMappingImpl extends GRLElementImpl implements Qualitativ
     {
       case TGRLPackage.QUALITATIVE_MAPPING__META_DATA:
         return ((InternalEList<?>)getMetaData()).basicRemove(otherEnd, msgs);
-      case TGRLPackage.QUALITATIVE_MAPPING__MAPPIN:
-        return ((InternalEList<?>)getMappin()).basicRemove(otherEnd, msgs);
+      case TGRLPackage.QUALITATIVE_MAPPING__MAPPINGS:
+        return ((InternalEList<?>)getMappings()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -183,8 +183,8 @@ public class QualitativeMappingImpl extends GRLElementImpl implements Qualitativ
         return getName();
       case TGRLPackage.QUALITATIVE_MAPPING__META_DATA:
         return getMetaData();
-      case TGRLPackage.QUALITATIVE_MAPPING__MAPPIN:
-        return getMappin();
+      case TGRLPackage.QUALITATIVE_MAPPING__MAPPINGS:
+        return getMappings();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -207,9 +207,9 @@ public class QualitativeMappingImpl extends GRLElementImpl implements Qualitativ
         getMetaData().clear();
         getMetaData().addAll((Collection<? extends Metadata>)newValue);
         return;
-      case TGRLPackage.QUALITATIVE_MAPPING__MAPPIN:
-        getMappin().clear();
-        getMappin().addAll((Collection<? extends Mapping>)newValue);
+      case TGRLPackage.QUALITATIVE_MAPPING__MAPPINGS:
+        getMappings().clear();
+        getMappings().addAll((Collection<? extends Mapping>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -231,8 +231,8 @@ public class QualitativeMappingImpl extends GRLElementImpl implements Qualitativ
       case TGRLPackage.QUALITATIVE_MAPPING__META_DATA:
         getMetaData().clear();
         return;
-      case TGRLPackage.QUALITATIVE_MAPPING__MAPPIN:
-        getMappin().clear();
+      case TGRLPackage.QUALITATIVE_MAPPING__MAPPINGS:
+        getMappings().clear();
         return;
     }
     super.eUnset(featureID);
@@ -252,8 +252,8 @@ public class QualitativeMappingImpl extends GRLElementImpl implements Qualitativ
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case TGRLPackage.QUALITATIVE_MAPPING__META_DATA:
         return metaData != null && !metaData.isEmpty();
-      case TGRLPackage.QUALITATIVE_MAPPING__MAPPIN:
-        return mappin != null && !mappin.isEmpty();
+      case TGRLPackage.QUALITATIVE_MAPPING__MAPPINGS:
+        return mappings != null && !mappings.isEmpty();
     }
     return super.eIsSet(featureID);
   }

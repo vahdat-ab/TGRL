@@ -90,11 +90,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//IntentionalElement/importanceQuantitative"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//IntentionalElement/elementLinks"/>
     </genClasses>
-    <genClasses ecoreClass="TGRL.ecore#//SuperElementLink">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//SuperElementLink/src"/>
-    </genClasses>
-    <genClasses ecoreClass="TGRL.ecore#//ElementLink"/>
-    <genClasses ecoreClass="TGRL.ecore#//InLineElementLink"/>
     <genClasses ecoreClass="TGRL.ecore#//GRLSpecification">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//GRLSpecification/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//GRLSpecification/grlElements"/>
@@ -114,11 +109,39 @@
     <genClasses ecoreClass="TGRL.ecore#//Resource"/>
     <genClasses ecoreClass="TGRL.ecore#//Indicator"/>
     <genClasses ecoreClass="TGRL.ecore#//Belief"/>
-    <genClasses ecoreClass="TGRL.ecore#//LinkEnd">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//LinkEnd/destName"/>
+    <genClasses ecoreClass="TGRL.ecore#//ElementLink"/>
+    <genClasses ecoreClass="TGRL.ecore#//EndLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//EndLink/destName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//EndLink/id"/>
     </genClasses>
-    <genClasses ecoreClass="TGRL.ecore#//Decomposition">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Decomposition/dest"/>
+    <genClasses ecoreClass="TGRL.ecore#//NormalElementLink"/>
+    <genClasses ecoreClass="TGRL.ecore#//NormalLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//NormalLink/src"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//NormalLink/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//NormalLink/dest"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//NormalDependency">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//NormalDependency/src"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//NormalDependency/dest"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//NormalContribution">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//NormalContribution/src"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//NormalContribution/dest"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//NormalDecomposition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//NormalDecomposition/src"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//NormalDecomposition/dest"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//InLineElementLink"/>
+    <genClasses ecoreClass="TGRL.ecore#//InLineLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//InLineLink/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//InLineLink/dest"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//InLineDependency">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//InLineDependency/dest"/>
+    </genClasses>
+    <genClasses ecoreClass="TGRL.ecore#//InLineContribution">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//InLineContribution/dest"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//InLineDecomposition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//InLineDecomposition/dest"/>
@@ -126,36 +149,16 @@
     <genClasses ecoreClass="TGRL.ecore#//DecompositionEnd">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//DecompositionEnd/description"/>
     </genClasses>
-    <genClasses ecoreClass="TGRL.ecore#//Contribution">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Contribution/dest"/>
-    </genClasses>
-    <genClasses ecoreClass="TGRL.ecore#//InLineContribution">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//InLineContribution/dest"/>
-    </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//ContributionEnd">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionEnd/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionEnd/contribution"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//ContributionEnd/quantitativeContribution"/>
-    </genClasses>
-    <genClasses ecoreClass="TGRL.ecore#//Dependency">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Dependency/dest"/>
-    </genClasses>
-    <genClasses ecoreClass="TGRL.ecore#//InLineDependency">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//InLineDependency/dest"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//DependencyEnd">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//DependencyEnd/description"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//LinkType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//LinkType/name"/>
-    </genClasses>
-    <genClasses ecoreClass="TGRL.ecore#//Link">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//Link/type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//Link/dest"/>
-    </genClasses>
-    <genClasses ecoreClass="TGRL.ecore#//inLineLink">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//inLineLink/type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TGRL.ecore#//inLineLink/dest"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//StrategyGroup">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//StrategyGroup/name"/>
@@ -194,7 +197,7 @@
     <genClasses ecoreClass="TGRL.ecore#//QualitativeMapping">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//QualitativeMapping/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//QualitativeMapping/metaData"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//QualitativeMapping/mappin"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//QualitativeMapping/mappings"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//Mapping">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Mapping/name"/>
