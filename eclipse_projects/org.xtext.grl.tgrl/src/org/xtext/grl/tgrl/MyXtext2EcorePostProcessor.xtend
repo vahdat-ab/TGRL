@@ -23,7 +23,7 @@ class MyXtext2EcorePostProcessor implements IXtext2EcorePostProcessor {
      
     def process(EPackage p) {
         for (c : p.EClassifiers.filter(typeof(EClass))) {
-            if (c.name == "Element" || c.name == "EndLink") {
+            if ((c.name == "Element") || (c.name =="EndLink") ) {
                 c.handle
             }
         }

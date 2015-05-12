@@ -21,9 +21,9 @@ public class TGRLSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected TGRLGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_Actor_SemicolonKeyword_2_0_or___LeftCurlyBracketKeyword_2_1_0_RightCurlyBracketKeyword_2_1_2__;
 	protected AbstractElementAlias match_Belief_SemicolonKeyword_2_0_or___LeftCurlyBracketKeyword_2_1_0_RightCurlyBracketKeyword_2_1_2__;
-	protected AbstractElementAlias match_ContributionEnd___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q;
-	protected AbstractElementAlias match_DecompositionEnd___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q;
-	protected AbstractElementAlias match_DependencyEnd___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q;
+	protected AbstractElementAlias match_ContributionEnd___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q;
+	protected AbstractElementAlias match_DecompositionEnd___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q;
+	protected AbstractElementAlias match_DependencyEnd___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q;
 	protected AbstractElementAlias match_Evaluation_SemicolonKeyword_3_1_q_or___LeftCurlyBracketKeyword_3_0_0_0_or_RightCurlyBracketKeyword_3_0_2_1__a;
 	protected AbstractElementAlias match_Evaluation___LeftCurlyBracketKeyword_3_0_0_0_or_RightCurlyBracketKeyword_3_0_2_1__a;
 	protected AbstractElementAlias match_Evaluation___RightCurlyBracketKeyword_3_0_2_1_LeftCurlyBracketKeyword_3_0_0_0_a__p;
@@ -40,9 +40,9 @@ public class TGRLSyntacticSequencer extends AbstractSyntacticSequencer {
 		grammarAccess = (TGRLGrammarAccess) access;
 		match_Actor_SemicolonKeyword_2_0_or___LeftCurlyBracketKeyword_2_1_0_RightCurlyBracketKeyword_2_1_2__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getActorAccess().getLeftCurlyBracketKeyword_2_1_0()), new TokenAlias(false, false, grammarAccess.getActorAccess().getRightCurlyBracketKeyword_2_1_2())), new TokenAlias(false, false, grammarAccess.getActorAccess().getSemicolonKeyword_2_0()));
 		match_Belief_SemicolonKeyword_2_0_or___LeftCurlyBracketKeyword_2_1_0_RightCurlyBracketKeyword_2_1_2__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getBeliefAccess().getLeftCurlyBracketKeyword_2_1_0()), new TokenAlias(false, false, grammarAccess.getBeliefAccess().getRightCurlyBracketKeyword_2_1_2())), new TokenAlias(false, false, grammarAccess.getBeliefAccess().getSemicolonKeyword_2_0()));
-		match_ContributionEnd___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getContributionEndAccess().getLeftCurlyBracketKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getContributionEndAccess().getRightCurlyBracketKeyword_2_2()));
-		match_DecompositionEnd___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getDecompositionEndAccess().getLeftCurlyBracketKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getDecompositionEndAccess().getRightCurlyBracketKeyword_1_2()));
-		match_DependencyEnd___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getDependencyEndAccess().getLeftCurlyBracketKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getDependencyEndAccess().getRightCurlyBracketKeyword_1_2()));
+		match_ContributionEnd___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getContributionEndAccess().getLeftCurlyBracketKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getContributionEndAccess().getRightCurlyBracketKeyword_3_2()));
+		match_DecompositionEnd___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getDecompositionEndAccess().getLeftCurlyBracketKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getDecompositionEndAccess().getRightCurlyBracketKeyword_2_2()));
+		match_DependencyEnd___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getDependencyEndAccess().getLeftCurlyBracketKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getDependencyEndAccess().getRightCurlyBracketKeyword_2_2()));
 		match_Evaluation_SemicolonKeyword_3_1_q_or___LeftCurlyBracketKeyword_3_0_0_0_or_RightCurlyBracketKeyword_3_0_2_1__a = new AlternativeAlias(false, false, new AlternativeAlias(true, true, new TokenAlias(false, false, grammarAccess.getEvaluationAccess().getLeftCurlyBracketKeyword_3_0_0_0()), new TokenAlias(false, false, grammarAccess.getEvaluationAccess().getRightCurlyBracketKeyword_3_0_2_1())), new TokenAlias(false, true, grammarAccess.getEvaluationAccess().getSemicolonKeyword_3_1()));
 		match_Evaluation___LeftCurlyBracketKeyword_3_0_0_0_or_RightCurlyBracketKeyword_3_0_2_1__a = new AlternativeAlias(true, true, new TokenAlias(false, false, grammarAccess.getEvaluationAccess().getLeftCurlyBracketKeyword_3_0_0_0()), new TokenAlias(false, false, grammarAccess.getEvaluationAccess().getRightCurlyBracketKeyword_3_0_2_1()));
 		match_Evaluation___RightCurlyBracketKeyword_3_0_2_1_LeftCurlyBracketKeyword_3_0_0_0_a__p = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getEvaluationAccess().getRightCurlyBracketKeyword_3_0_2_1()), new TokenAlias(true, true, grammarAccess.getEvaluationAccess().getLeftCurlyBracketKeyword_3_0_0_0()));
@@ -71,12 +71,12 @@ public class TGRLSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_Actor_SemicolonKeyword_2_0_or___LeftCurlyBracketKeyword_2_1_0_RightCurlyBracketKeyword_2_1_2__(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Belief_SemicolonKeyword_2_0_or___LeftCurlyBracketKeyword_2_1_0_RightCurlyBracketKeyword_2_1_2__.equals(syntax))
 				emit_Belief_SemicolonKeyword_2_0_or___LeftCurlyBracketKeyword_2_1_0_RightCurlyBracketKeyword_2_1_2__(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ContributionEnd___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q.equals(syntax))
-				emit_ContributionEnd___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_DecompositionEnd___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q.equals(syntax))
-				emit_DecompositionEnd___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_DependencyEnd___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q.equals(syntax))
-				emit_DependencyEnd___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_ContributionEnd___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q.equals(syntax))
+				emit_ContributionEnd___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_DecompositionEnd___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q.equals(syntax))
+				emit_DecompositionEnd___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_DependencyEnd___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q.equals(syntax))
+				emit_DependencyEnd___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Evaluation_SemicolonKeyword_3_1_q_or___LeftCurlyBracketKeyword_3_0_0_0_or_RightCurlyBracketKeyword_3_0_2_1__a.equals(syntax))
 				emit_Evaluation_SemicolonKeyword_3_1_q_or___LeftCurlyBracketKeyword_3_0_0_0_or_RightCurlyBracketKeyword_3_0_2_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Evaluation___LeftCurlyBracketKeyword_3_0_0_0_or_RightCurlyBracketKeyword_3_0_2_1__a.equals(syntax))
@@ -121,7 +121,7 @@ public class TGRLSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     ('{' '}')?
 	 */
-	protected void emit_ContributionEnd___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ContributionEnd___LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -129,7 +129,7 @@ public class TGRLSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     ('{' '}')?
 	 */
-	protected void emit_DecompositionEnd___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_DecompositionEnd___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -137,7 +137,7 @@ public class TGRLSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     ('{' '}')?
 	 */
-	protected void emit_DependencyEnd___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_DependencyEnd___LeftCurlyBracketKeyword_2_0_RightCurlyBracketKeyword_2_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

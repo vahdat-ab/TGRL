@@ -1,38 +1,38 @@
-grl {
-//	softGoal SG1{
-//		name = "SG1";
-//	}
-//	softGoal SG2{
-//		name = "SG2";
-//	}
-//	softGoal SG3{
-//		name = "SG3";
-//	}
-//	SG1 decomposedBy SG2,SG3;
-//	
-	
-//	softGoal S1{
-//		name = "S1";
-//	}
-//	softGoal S2{
-//		name = "S2";
-//	}
-//	softGoal S3{
-//		name = "S3";
-//	}
-//	S1 decomposedBy S2,S3;
-//qualitativeMapping A {
-//	metadata AAAAAA="AAAAAAA";
-//	metadata BBBBB="BBBBBBB";
-//	"test1",0,none,false;
-//	"test2",50,satisfied,true;
-//	
-//}
-
-strategyGroup SG1 includes ES1,ES3;
-strategyGroup SG2 includes ES2,ES4;
-strategy ES1 extends ES2,ES4{}
-strategy ES2{}
-strategy ES3 extends ES1,ES4{}
-strategy ES4{}
-}
+grl{
+	 	actor Vendor {
+ 			
+ 		name = "Vendor"; 
+ 		description = "the provider of the product who aims to make high profit while satisfying customer needs"; 
+ 		//importance = 75; 
+ 		
+ 		
+  		//related to non-functional requirements
+ 		softGoal HighLevelofSatisfaction {
+ 			name= " High Level of Satisfaction";
+ 			description = " high degree of customer satisfaction, it's importance is 25"; 
+ 			
+ 			//*************** I WISH IF THERE IS KEYWORDS FOR IMPORTANCE (BOTH QUANTITATIVE AND QULITATIVE):) *******************************
+ 			importance=25;
+  
+// 			dependsOn Customer.HighQualityOfProduct { "this goal strongly depends on the high quality of product" };
+ 		} // end of softGoal HighLevelofSatisfaction  
+ 		
+ 		softGoal MakeProfits { 
+ 			name = "Make Profit"; 
+ 			description = " Make Profit goal, it's importance is 75";
+ 			importance=75;
+// 			dependsOn Revenues{"this goal is significantly affected by Revenues" };  //****** CONFUSED WHERE TO PUT THE SEMI-COLONS :) *******
+ 			 			
+ 			} // end of softGoal MakeProfits 
+ 		
+ 		indicator Revenues{
+ 		description = "this is an indicator" ;
+ 		name = "Revenues";
+ 		importance=medium ;
+// 		contributesTo MakeProfits { make }, MakeProfits {100} ; // for both text and icon values.		 		
+ 		}// end of indicator Revenues
+ 		
+ 		
+ 		 		
+ 	 }// end of Vendor
+ }

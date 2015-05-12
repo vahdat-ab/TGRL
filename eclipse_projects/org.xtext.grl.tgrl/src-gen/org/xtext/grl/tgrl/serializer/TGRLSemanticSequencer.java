@@ -182,7 +182,9 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case TGRLPackage.IN_LINE_CONTRIBUTION:
-				if(context == grammarAccess.getElementLinkRule() ||
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getElementLinkRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
 				   context == grammarAccess.getInLineContributionRule() ||
 				   context == grammarAccess.getInLineElementLinkRule()) {
 					sequence_InLineContribution(context, (InLineContribution) semanticObject); 
@@ -190,7 +192,9 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case TGRLPackage.IN_LINE_DECOMPOSITION:
-				if(context == grammarAccess.getElementLinkRule() ||
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getElementLinkRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
 				   context == grammarAccess.getInLineDecompositionRule() ||
 				   context == grammarAccess.getInLineElementLinkRule()) {
 					sequence_InLineDecomposition(context, (InLineDecomposition) semanticObject); 
@@ -198,7 +202,9 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case TGRLPackage.IN_LINE_DEPENDENCY:
-				if(context == grammarAccess.getElementLinkRule() ||
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getElementLinkRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
 				   context == grammarAccess.getInLineDependencyRule() ||
 				   context == grammarAccess.getInLineElementLinkRule()) {
 					sequence_InLineDependency(context, (InLineDependency) semanticObject); 
@@ -206,7 +212,9 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case TGRLPackage.IN_LINE_LINK:
-				if(context == grammarAccess.getElementLinkRule() ||
+				if(context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getElementLinkRule() ||
+				   context == grammarAccess.getGRLBaseElementRule() ||
 				   context == grammarAccess.getInLineElementLinkRule() ||
 				   context == grammarAccess.getInLineLinkRule()) {
 					sequence_InLineLink(context, (InLineLink) semanticObject); 

@@ -59,12 +59,13 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cGRLElementParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cMappingParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cInLineElementLinkParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//GRLBaseElement:
-		//	GRLElement | Mapping;
+		//	GRLElement | Mapping | InLineElementLink;
 		public ParserRule getRule() { return rule; }
 
-		//GRLElement | Mapping
+		//GRLElement | Mapping | InLineElementLink
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//GRLElement
@@ -72,6 +73,9 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Mapping
 		public RuleCall getMappingParserRuleCall_1() { return cMappingParserRuleCall_1; }
+
+		//InLineElementLink
+		public RuleCall getInLineElementLinkParserRuleCall_2() { return cInLineElementLinkParserRuleCall_2; }
 	}
 
 	public class GRLElementElements extends AbstractParserRuleElementFinder {
@@ -1560,25 +1564,25 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	public class EndLinkElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EndLink");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cDecompositionEndParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cDependencyEndParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cContributionEndParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cDependencyEndParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cContributionEndParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cDecompositionEndParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//EndLink:
-		//	DecompositionEnd | DependencyEnd | ContributionEnd;
+		//	DependencyEnd | ContributionEnd | DecompositionEnd;
 		public ParserRule getRule() { return rule; }
 
-		//DecompositionEnd | DependencyEnd | ContributionEnd
+		//DependencyEnd | ContributionEnd | DecompositionEnd
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//DecompositionEnd
-		public RuleCall getDecompositionEndParserRuleCall_0() { return cDecompositionEndParserRuleCall_0; }
-
 		//DependencyEnd
-		public RuleCall getDependencyEndParserRuleCall_1() { return cDependencyEndParserRuleCall_1; }
+		public RuleCall getDependencyEndParserRuleCall_0() { return cDependencyEndParserRuleCall_0; }
 
 		//ContributionEnd
-		public RuleCall getContributionEndParserRuleCall_2() { return cContributionEndParserRuleCall_2; }
+		public RuleCall getContributionEndParserRuleCall_1() { return cContributionEndParserRuleCall_1; }
+
+		//DecompositionEnd
+		public RuleCall getDecompositionEndParserRuleCall_2() { return cDecompositionEndParserRuleCall_2; }
 	}
 
 	public class NormalElementLinkElements extends AbstractParserRuleElementFinder {
@@ -2081,78 +2085,25 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	public class DecompositionEndElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DecompositionEnd");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cDestNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cDestNameSuperIntentionalElementCrossReference_0_0 = (CrossReference)cDestNameAssignment_0.eContents().get(0);
-		private final RuleCall cDestNameSuperIntentionalElementQualifiedNameParserRuleCall_0_0_1 = (RuleCall)cDestNameSuperIntentionalElementCrossReference_0_0.eContents().get(1);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cDescriptionAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cDescriptionSTRINGTerminalRuleCall_1_1_0 = (RuleCall)cDescriptionAssignment_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
-		
-		//DecompositionEnd:
-		//	destName=[SuperIntentionalElement|QualifiedName] ("{" description=STRING? "}")?;
-		public ParserRule getRule() { return rule; }
-
-		//destName=[SuperIntentionalElement|QualifiedName] ("{" description=STRING? "}")?
-		public Group getGroup() { return cGroup; }
-
-		//destName=[SuperIntentionalElement|QualifiedName]
-		public Assignment getDestNameAssignment_0() { return cDestNameAssignment_0; }
-
-		//[SuperIntentionalElement|QualifiedName]
-		public CrossReference getDestNameSuperIntentionalElementCrossReference_0_0() { return cDestNameSuperIntentionalElementCrossReference_0_0; }
-
-		//QualifiedName
-		public RuleCall getDestNameSuperIntentionalElementQualifiedNameParserRuleCall_0_0_1() { return cDestNameSuperIntentionalElementQualifiedNameParserRuleCall_0_0_1; }
-
-		//("{" description=STRING? "}")?
-		public Group getGroup_1() { return cGroup_1; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_1_0() { return cLeftCurlyBracketKeyword_1_0; }
-
-		//description=STRING?
-		public Assignment getDescriptionAssignment_1_1() { return cDescriptionAssignment_1_1; }
-
-		//STRING
-		public RuleCall getDescriptionSTRINGTerminalRuleCall_1_1_0() { return cDescriptionSTRINGTerminalRuleCall_1_1_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_1_2() { return cRightCurlyBracketKeyword_1_2; }
-	}
-
-	public class ContributionEndElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ContributionEnd");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Action cDecompositionEndAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cDestNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final CrossReference cDestNameSuperIntentionalElementCrossReference_1_0 = (CrossReference)cDestNameAssignment_1.eContents().get(0);
 		private final RuleCall cDestNameSuperIntentionalElementQualifiedNameParserRuleCall_1_0_1 = (RuleCall)cDestNameSuperIntentionalElementCrossReference_1_0.eContents().get(1);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cLeftCurlyBracketKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Alternatives cAlternatives_2_1 = (Alternatives)cGroup_2.eContents().get(1);
-		private final Assignment cContributionAssignment_2_1_0 = (Assignment)cAlternatives_2_1.eContents().get(0);
-		private final RuleCall cContributionContributionTypeEnumRuleCall_2_1_0_0 = (RuleCall)cContributionAssignment_2_1_0.eContents().get(0);
-		private final Assignment cQuantitativeContributionAssignment_2_1_1 = (Assignment)cAlternatives_2_1.eContents().get(1);
-		private final RuleCall cQuantitativeContributionQUALITATIVEVALUETerminalRuleCall_2_1_1_0 = (RuleCall)cQuantitativeContributionAssignment_2_1_1.eContents().get(0);
+		private final Assignment cDescriptionAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cDescriptionSTRINGTerminalRuleCall_2_1_0 = (RuleCall)cDescriptionAssignment_2_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		
-		//ContributionEnd:
-		//	name=ID? destName=[SuperIntentionalElement|QualifiedName] ("{" (contribution=ContributionType |
-		//	quantitativeContribution=QUALITATIVEVALUE)? "}")?;
+		//DecompositionEnd:
+		//	{DecompositionEnd} destName=[SuperIntentionalElement|QualifiedName] ("{" description=STRING? "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID? destName=[SuperIntentionalElement|QualifiedName] ("{" (contribution=ContributionType |
-		//quantitativeContribution=QUALITATIVEVALUE)? "}")?
+		//{DecompositionEnd} destName=[SuperIntentionalElement|QualifiedName] ("{" description=STRING? "}")?
 		public Group getGroup() { return cGroup; }
 
-		//name=ID?
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+		//{DecompositionEnd}
+		public Action getDecompositionEndAction_0() { return cDecompositionEndAction_0; }
 
 		//destName=[SuperIntentionalElement|QualifiedName]
 		public Assignment getDestNameAssignment_1() { return cDestNameAssignment_1; }
@@ -2163,73 +2114,138 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//QualifiedName
 		public RuleCall getDestNameSuperIntentionalElementQualifiedNameParserRuleCall_1_0_1() { return cDestNameSuperIntentionalElementQualifiedNameParserRuleCall_1_0_1; }
 
-		//("{" (contribution=ContributionType | quantitativeContribution=QUALITATIVEVALUE)? "}")?
+		//("{" description=STRING? "}")?
 		public Group getGroup_2() { return cGroup_2; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2_0() { return cLeftCurlyBracketKeyword_2_0; }
 
-		//(contribution=ContributionType | quantitativeContribution=QUALITATIVEVALUE)?
-		public Alternatives getAlternatives_2_1() { return cAlternatives_2_1; }
+		//description=STRING?
+		public Assignment getDescriptionAssignment_2_1() { return cDescriptionAssignment_2_1; }
 
-		//contribution=ContributionType
-		public Assignment getContributionAssignment_2_1_0() { return cContributionAssignment_2_1_0; }
-
-		//ContributionType
-		public RuleCall getContributionContributionTypeEnumRuleCall_2_1_0_0() { return cContributionContributionTypeEnumRuleCall_2_1_0_0; }
-
-		//quantitativeContribution=QUALITATIVEVALUE
-		public Assignment getQuantitativeContributionAssignment_2_1_1() { return cQuantitativeContributionAssignment_2_1_1; }
-
-		//QUALITATIVEVALUE
-		public RuleCall getQuantitativeContributionQUALITATIVEVALUETerminalRuleCall_2_1_1_0() { return cQuantitativeContributionQUALITATIVEVALUETerminalRuleCall_2_1_1_0; }
+		//STRING
+		public RuleCall getDescriptionSTRINGTerminalRuleCall_2_1_0() { return cDescriptionSTRINGTerminalRuleCall_2_1_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_2_2() { return cRightCurlyBracketKeyword_2_2; }
 	}
 
+	public class ContributionEndElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ContributionEnd");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cContributionEndAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cDestNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cDestNameSuperIntentionalElementCrossReference_2_0 = (CrossReference)cDestNameAssignment_2.eContents().get(0);
+		private final RuleCall cDestNameSuperIntentionalElementQualifiedNameParserRuleCall_2_0_1 = (RuleCall)cDestNameSuperIntentionalElementCrossReference_2_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Alternatives cAlternatives_3_1 = (Alternatives)cGroup_3.eContents().get(1);
+		private final Assignment cContributionAssignment_3_1_0 = (Assignment)cAlternatives_3_1.eContents().get(0);
+		private final RuleCall cContributionContributionTypeEnumRuleCall_3_1_0_0 = (RuleCall)cContributionAssignment_3_1_0.eContents().get(0);
+		private final Assignment cQuantitativeContributionAssignment_3_1_1 = (Assignment)cAlternatives_3_1.eContents().get(1);
+		private final RuleCall cQuantitativeContributionQUALITATIVEVALUETerminalRuleCall_3_1_1_0 = (RuleCall)cQuantitativeContributionAssignment_3_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		
+		//ContributionEnd:
+		//	{ContributionEnd} name=ID? destName=[SuperIntentionalElement|QualifiedName] ("{" (contribution=ContributionType |
+		//	quantitativeContribution=QUALITATIVEVALUE)? "}")?;
+		public ParserRule getRule() { return rule; }
+
+		//{ContributionEnd} name=ID? destName=[SuperIntentionalElement|QualifiedName] ("{" (contribution=ContributionType |
+		//quantitativeContribution=QUALITATIVEVALUE)? "}")?
+		public Group getGroup() { return cGroup; }
+
+		//{ContributionEnd}
+		public Action getContributionEndAction_0() { return cContributionEndAction_0; }
+
+		//name=ID?
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//destName=[SuperIntentionalElement|QualifiedName]
+		public Assignment getDestNameAssignment_2() { return cDestNameAssignment_2; }
+
+		//[SuperIntentionalElement|QualifiedName]
+		public CrossReference getDestNameSuperIntentionalElementCrossReference_2_0() { return cDestNameSuperIntentionalElementCrossReference_2_0; }
+
+		//QualifiedName
+		public RuleCall getDestNameSuperIntentionalElementQualifiedNameParserRuleCall_2_0_1() { return cDestNameSuperIntentionalElementQualifiedNameParserRuleCall_2_0_1; }
+
+		//("{" (contribution=ContributionType | quantitativeContribution=QUALITATIVEVALUE)? "}")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
+
+		//(contribution=ContributionType | quantitativeContribution=QUALITATIVEVALUE)?
+		public Alternatives getAlternatives_3_1() { return cAlternatives_3_1; }
+
+		//contribution=ContributionType
+		public Assignment getContributionAssignment_3_1_0() { return cContributionAssignment_3_1_0; }
+
+		//ContributionType
+		public RuleCall getContributionContributionTypeEnumRuleCall_3_1_0_0() { return cContributionContributionTypeEnumRuleCall_3_1_0_0; }
+
+		//quantitativeContribution=QUALITATIVEVALUE
+		public Assignment getQuantitativeContributionAssignment_3_1_1() { return cQuantitativeContributionAssignment_3_1_1; }
+
+		//QUALITATIVEVALUE
+		public RuleCall getQuantitativeContributionQUALITATIVEVALUETerminalRuleCall_3_1_1_0() { return cQuantitativeContributionQUALITATIVEVALUETerminalRuleCall_3_1_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3_2() { return cRightCurlyBracketKeyword_3_2; }
+	}
+
 	public class DependencyEndElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DependencyEnd");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cDestNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cDestNameSuperIntentionalElementCrossReference_0_0 = (CrossReference)cDestNameAssignment_0.eContents().get(0);
-		private final RuleCall cDestNameSuperIntentionalElementQualifiedNameParserRuleCall_0_0_1 = (RuleCall)cDestNameSuperIntentionalElementCrossReference_0_0.eContents().get(1);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cDescriptionAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cDescriptionSTRINGTerminalRuleCall_1_1_0 = (RuleCall)cDescriptionAssignment_1_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
+		private final Action cDependencyEndAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cDestNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cDestNameSuperIntentionalElementCrossReference_1_0 = (CrossReference)cDestNameAssignment_1.eContents().get(0);
+		private final RuleCall cDestNameSuperIntentionalElementQualifiedNameParserRuleCall_1_0_1 = (RuleCall)cDestNameSuperIntentionalElementCrossReference_1_0.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cLeftCurlyBracketKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cDescriptionAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cDescriptionSTRINGTerminalRuleCall_2_1_0 = (RuleCall)cDescriptionAssignment_2_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		
 		//DependencyEnd:
-		//	destName=[SuperIntentionalElement|QualifiedName] ("{" description=STRING? "}")?;
+		//	{DependencyEnd} destName=[SuperIntentionalElement|QualifiedName] ("{" description=STRING? "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//destName=[SuperIntentionalElement|QualifiedName] ("{" description=STRING? "}")?
+		//{DependencyEnd} destName=[SuperIntentionalElement|QualifiedName] ("{" description=STRING? "}")?
 		public Group getGroup() { return cGroup; }
 
+		//{DependencyEnd}
+		public Action getDependencyEndAction_0() { return cDependencyEndAction_0; }
+
 		//destName=[SuperIntentionalElement|QualifiedName]
-		public Assignment getDestNameAssignment_0() { return cDestNameAssignment_0; }
+		public Assignment getDestNameAssignment_1() { return cDestNameAssignment_1; }
 
 		//[SuperIntentionalElement|QualifiedName]
-		public CrossReference getDestNameSuperIntentionalElementCrossReference_0_0() { return cDestNameSuperIntentionalElementCrossReference_0_0; }
+		public CrossReference getDestNameSuperIntentionalElementCrossReference_1_0() { return cDestNameSuperIntentionalElementCrossReference_1_0; }
 
 		//QualifiedName
-		public RuleCall getDestNameSuperIntentionalElementQualifiedNameParserRuleCall_0_0_1() { return cDestNameSuperIntentionalElementQualifiedNameParserRuleCall_0_0_1; }
+		public RuleCall getDestNameSuperIntentionalElementQualifiedNameParserRuleCall_1_0_1() { return cDestNameSuperIntentionalElementQualifiedNameParserRuleCall_1_0_1; }
 
 		//("{" description=STRING? "}")?
-		public Group getGroup_1() { return cGroup_1; }
+		public Group getGroup_2() { return cGroup_2; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_1_0() { return cLeftCurlyBracketKeyword_1_0; }
+		public Keyword getLeftCurlyBracketKeyword_2_0() { return cLeftCurlyBracketKeyword_2_0; }
 
 		//description=STRING?
-		public Assignment getDescriptionAssignment_1_1() { return cDescriptionAssignment_1_1; }
+		public Assignment getDescriptionAssignment_2_1() { return cDescriptionAssignment_2_1; }
 
 		//STRING
-		public RuleCall getDescriptionSTRINGTerminalRuleCall_1_1_0() { return cDescriptionSTRINGTerminalRuleCall_1_1_0; }
+		public RuleCall getDescriptionSTRINGTerminalRuleCall_2_1_0() { return cDescriptionSTRINGTerminalRuleCall_2_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_1_2() { return cRightCurlyBracketKeyword_1_2; }
+		public Keyword getRightCurlyBracketKeyword_2_2() { return cRightCurlyBracketKeyword_2_2; }
 	}
 
 	public class LinkTypeElements extends AbstractParserRuleElementFinder {
@@ -4124,7 +4140,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//GRLBaseElement:
-	//	GRLElement | Mapping;
+	//	GRLElement | Mapping | InLineElementLink;
 	public GRLBaseElementElements getGRLBaseElementAccess() {
 		return pGRLBaseElement;
 	}
@@ -4298,7 +4314,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//EndLink:
-	//	DecompositionEnd | DependencyEnd | ContributionEnd;
+	//	DependencyEnd | ContributionEnd | DecompositionEnd;
 	public EndLinkElements getEndLinkAccess() {
 		return pEndLink;
 	}
@@ -4416,7 +4432,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DecompositionEnd:
-	//	destName=[SuperIntentionalElement|QualifiedName] ("{" description=STRING? "}")?;
+	//	{DecompositionEnd} destName=[SuperIntentionalElement|QualifiedName] ("{" description=STRING? "}")?;
 	public DecompositionEndElements getDecompositionEndAccess() {
 		return pDecompositionEnd;
 	}
@@ -4426,7 +4442,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ContributionEnd:
-	//	name=ID? destName=[SuperIntentionalElement|QualifiedName] ("{" (contribution=ContributionType |
+	//	{ContributionEnd} name=ID? destName=[SuperIntentionalElement|QualifiedName] ("{" (contribution=ContributionType |
 	//	quantitativeContribution=QUALITATIVEVALUE)? "}")?;
 	public ContributionEndElements getContributionEndAccess() {
 		return pContributionEnd;
@@ -4437,7 +4453,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DependencyEnd:
-	//	destName=[SuperIntentionalElement|QualifiedName] ("{" description=STRING? "}")?;
+	//	{DependencyEnd} destName=[SuperIntentionalElement|QualifiedName] ("{" description=STRING? "}")?;
 	public DependencyEndElements getDependencyEndAccess() {
 		return pDependencyEnd;
 	}

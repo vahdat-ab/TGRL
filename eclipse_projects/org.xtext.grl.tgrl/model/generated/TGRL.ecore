@@ -75,7 +75,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="dest" upperBound="-1" eType="#//DecompositionEnd"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InLineElementLink" eSuperTypes="#//ElementLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InLineElementLink" eSuperTypes="#//GRLBaseElement #//ElementLink"/>
   <eClassifiers xsi:type="ecore:EClass" name="InLineLink" eSuperTypes="#//InLineElementLink">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//LinkType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dest" unique="false" upperBound="-1"

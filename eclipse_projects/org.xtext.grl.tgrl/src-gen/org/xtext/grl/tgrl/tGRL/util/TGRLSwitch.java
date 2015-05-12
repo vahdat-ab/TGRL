@@ -336,7 +336,9 @@ public class TGRLSwitch<T> extends Switch<T>
       {
         InLineElementLink inLineElementLink = (InLineElementLink)theEObject;
         T result = caseInLineElementLink(inLineElementLink);
+        if (result == null) result = caseGRLBaseElement(inLineElementLink);
         if (result == null) result = caseElementLink(inLineElementLink);
+        if (result == null) result = caseElement(inLineElementLink);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -345,7 +347,9 @@ public class TGRLSwitch<T> extends Switch<T>
         InLineLink inLineLink = (InLineLink)theEObject;
         T result = caseInLineLink(inLineLink);
         if (result == null) result = caseInLineElementLink(inLineLink);
+        if (result == null) result = caseGRLBaseElement(inLineLink);
         if (result == null) result = caseElementLink(inLineLink);
+        if (result == null) result = caseElement(inLineLink);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -354,7 +358,9 @@ public class TGRLSwitch<T> extends Switch<T>
         InLineDependency inLineDependency = (InLineDependency)theEObject;
         T result = caseInLineDependency(inLineDependency);
         if (result == null) result = caseInLineElementLink(inLineDependency);
+        if (result == null) result = caseGRLBaseElement(inLineDependency);
         if (result == null) result = caseElementLink(inLineDependency);
+        if (result == null) result = caseElement(inLineDependency);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -363,7 +369,9 @@ public class TGRLSwitch<T> extends Switch<T>
         InLineContribution inLineContribution = (InLineContribution)theEObject;
         T result = caseInLineContribution(inLineContribution);
         if (result == null) result = caseInLineElementLink(inLineContribution);
+        if (result == null) result = caseGRLBaseElement(inLineContribution);
         if (result == null) result = caseElementLink(inLineContribution);
+        if (result == null) result = caseElement(inLineContribution);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -372,7 +380,9 @@ public class TGRLSwitch<T> extends Switch<T>
         InLineDecomposition inLineDecomposition = (InLineDecomposition)theEObject;
         T result = caseInLineDecomposition(inLineDecomposition);
         if (result == null) result = caseInLineElementLink(inLineDecomposition);
+        if (result == null) result = caseGRLBaseElement(inLineDecomposition);
         if (result == null) result = caseElementLink(inLineDecomposition);
+        if (result == null) result = caseElement(inLineDecomposition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

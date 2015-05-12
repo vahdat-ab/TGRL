@@ -2199,6 +2199,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     normalDependencyEClass.getESuperTypes().add(this.getNormalElementLink());
     normalContributionEClass.getESuperTypes().add(this.getNormalElementLink());
     normalDecompositionEClass.getESuperTypes().add(this.getNormalElementLink());
+    inLineElementLinkEClass.getESuperTypes().add(this.getGRLBaseElement());
     inLineElementLinkEClass.getESuperTypes().add(this.getElementLink());
     inLineLinkEClass.getESuperTypes().add(this.getInLineElementLink());
     inLineDependencyEClass.getESuperTypes().add(this.getInLineElementLink());

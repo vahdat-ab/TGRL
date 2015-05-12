@@ -3,40 +3,50 @@
 [import org::eclipse::acceleo::module::tgrl::java::services::generateModelFeatures /]
 
 [template public getLinkSrc(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
-[comment][for (nDecomposition : NormalDecomposition | getAllNormalDecompositions(inModel).oclAsType(NormalDecomposition))]
-	[for (ddecompositionEdn : DecompositionEnd | dest)]
-		
-	[/for]
-[/for][/comment]
-
-[if (getAllNormalDecompositions(inModel).oclAsType(NormalDecomposition)->select(src.id=inIntentionalElement.id)->size()>0)]
-linksSrc="[for (element : NormalDecomposition | getAllNormalDecompositions(inModel).oclAsType(NormalDecomposition)->select(src.id=inIntentionalElement.id))][id/] [/for]"
-[/if]
-
-[comment][for (nDecomposition : NormalDecomposition | getAllNormalDecompositions(inModel).oclAsType(NormalDecomposition))]
-[if (src.id = inIntentionalElement.id)]linksSrc="[id/]"[/if]
-[/for][/comment]
+linksSrc="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(ElementLink))]
+	[if (elementLink.oclIsTypeOf(NormalDecomposition))]
+[if (elementLink.oclAsType(NormalDecomposition).src=inIntentionalElement)][for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)][end.id/]L [/for][/if]
+	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
+[if (elementLink.oclAsType(NormalContribution).src=inIntentionalElement)][for (end : ContributionEnd |elementLink.oclAsType(NormalContribution).dest)][end.id/]L [/for][/if]
+	[elseif (elementLink.oclIsTypeOf(NormalDependency))]
+[if (elementLink.oclAsType(NormalDependency).src=inIntentionalElement)][for (end : DependencyEnd |elementLink.oclAsType(NormalDependency).dest)][end.id/]L [/for][/if]
+[/if][/for]"
 [/template]
+
 [template public getLinksDest(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
-[for (nDecomposition : NormalDecomposition | getAllNormalDecompositions(inModel).oclAsType(NormalDecomposition))]
-[for (decompostionEnd : DecompositionEnd | dest)]
-[if (id = inIntentionalElement.id)]linksDest="[id/]"[/if]
-[/for]
-[/for]
+linksDest="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(ElementLink))]
+	[if (elementLink.oclIsTypeOf(NormalDecomposition))]
+[for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)][if (findSuperIntentionalElement(inModel, end.destName).name=inIntentionalElement.name)][end.id/]L [/if][/for]
+	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
+[for (end : ContributionEnd |elementLink.oclAsType(NormalContribution).dest)][if (findSuperIntentionalElement(inModel, end.destName).name=inIntentionalElement.name)][end.id/]L [/if][/for]
+	[elseif (elementLink.oclIsTypeOf(NormalDependency))]
+[for (end : DependencyEnd |elementLink.oclAsType(NormalDependency).dest)][if (findSuperIntentionalElement(inModel, end.destName).name=inIntentionalElement.name)][end.id/]L [/if][/for]
+[/if][/for]"
 [/template]
-[comment][template public getSucc(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
 
-[if (getAllNormalDecompositions(inModel).oclAsType(NormalDecomposition)->select(src.name=inIntentionalElement.name)->size()>0)]
-succ="[for (element : NormalDecomposition | getAllNormalDecompositions(inModel).oclAsType(NormalDecomposition)->select(src.name=inIntentionalElement.name))]
-[for (loopElement : ElementLink | getAllElementLink(inModel)->asSequence())][if (name =element.name)] //@urndef/@specDiagrams.0/@connections.[i-1/][/if][/for][/for]"
-[/if]
-[/template][/comment]
-[comment][template public getPred(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
-[if (getAllElementLink(inModel)->select(dest.name=inIntentionalElement.name)->size()>0)]
-pred="[for (element : ElementLink | getAllElementLink(inModel)->select(dest.name=inIntentionalElement.name))]
-[for (loopElement : ElementLink | getAllElementLink(inModel)->asSequence())][if (name =element.name)] //@urndef/@specDiagrams.0/@connections.[i-1/][/if][/for][/for]"
-[/if]
-[/template][/comment]
+
+[template public getSucc(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
+succ="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(ElementLink))]
+	[if (elementLink.oclIsTypeOf(NormalDecomposition))]
+[if (elementLink.oclAsType(NormalDecomposition).src=inIntentionalElement)][for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)]//@urndef/@specDiagrams.0/@connections.[end.id/] [/for][/if]
+	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
+[if (elementLink.oclAsType(NormalContribution).src=inIntentionalElement)][for (end : ContributionEnd |elementLink.oclAsType(NormalContribution).dest)]//@urndef/@specDiagrams.0/@connections.[end.id/] [/for][/if]
+	[elseif (elementLink.oclIsTypeOf(NormalDependency))]
+[if (elementLink.oclAsType(NormalDependency).src=inIntentionalElement)][for (end : DependencyEnd |elementLink.oclAsType(NormalDependency).dest)]//@urndef/@specDiagrams.0/@connections.[end.id/] [/for][/if]
+[/if][/for]"
+[/template]
+
+[template public getPred(inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
+pred="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(ElementLink))]
+	[if (elementLink.oclIsTypeOf(NormalDecomposition))]
+[for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)][if (findSuperIntentionalElement(inModel, end.destName).name=inIntentionalElement.name)]//@urndef/@specDiagrams.0/@connections.[end.id/] [/if][/for]
+	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
+[for (end : ContributionEnd |elementLink.oclAsType(NormalContribution).dest)][if (findSuperIntentionalElement(inModel, end.destName).name=inIntentionalElement.name)]//@urndef/@specDiagrams.0/@connections.[end.id/] [/if][/for]
+	[elseif (elementLink.oclIsTypeOf(NormalDependency))]
+[for (end : DependencyEnd |elementLink.oclAsType(NormalDependency).dest)][if (findSuperIntentionalElement(inModel, end.destName).name=inIntentionalElement.name)]//@urndef/@specDiagrams.0/@connections.[end.id/] [/if][/for]
+[/if][/for]"
+[/template]
+
 [template public getType(inIntentionalElement : IntentionalElement) post(trim())]
 [if (oclIsKindOf(Softgoal))]
 [elseif (oclIsKindOf(Goal))]
@@ -49,6 +59,7 @@ type="Indicator"
 type="Ressource"
 [/if]
 [/template]
+
 [comment][template public getLinkType(inConnection : Connection) post(trim())]
 xsi:type="grl:[if (oclIsKindOf(DecompositionEnds))]
 Decomposition"
@@ -59,9 +70,10 @@ Contribution" contribution="[inElementLink.oclAsType(Contribution).contribution/
 [else]correlation="[inElementLink.oclAsType(Contribution).correlation.toString()/]"[/if]
 [/if]
 [/template][/comment]
+
 [template public getNodes(inActor : Actor) post(trim())]
-[if (elemets->selectByType(IntentionalElement)->size()>0)]
-nodes="[for (elementLink : IntentionalElement | elemets->selectByType(IntentionalElement))][id/]R [/for]"
+[if (elemets->selectByKind(SuperIntentionalElement)->size()>0)]
+nodes="[for (elementLink : SuperIntentionalElement | elemets->selectByKind(SuperIntentionalElement))][id/]R [/for]"
 [/if]	
 [/template]
 

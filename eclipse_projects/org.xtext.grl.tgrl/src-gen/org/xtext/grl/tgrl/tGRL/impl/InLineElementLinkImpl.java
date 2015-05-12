@@ -16,7 +16,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *
  * @generated
  */
-public class InLineElementLinkImpl extends ElementLinkImpl implements InLineElementLink
+public class InLineElementLinkImpl extends GRLBaseElementImpl implements InLineElementLink
 {
   /**
    * <!-- begin-user-doc -->

@@ -1322,13 +1322,22 @@ public interface TGRLPackage extends EPackage
   int IN_LINE_ELEMENT_LINK = 21;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IN_LINE_ELEMENT_LINK__ID = GRL_BASE_ELEMENT__ID;
+
+  /**
    * The number of structural features of the '<em>In Line Element Link</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int IN_LINE_ELEMENT_LINK_FEATURE_COUNT = ELEMENT_LINK_FEATURE_COUNT + 0;
+  int IN_LINE_ELEMENT_LINK_FEATURE_COUNT = GRL_BASE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.InLineLinkImpl <em>In Line Link</em>}' class.
@@ -1339,6 +1348,15 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   int IN_LINE_LINK = 22;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IN_LINE_LINK__ID = IN_LINE_ELEMENT_LINK__ID;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' reference.
@@ -1378,6 +1396,15 @@ public interface TGRLPackage extends EPackage
   int IN_LINE_DEPENDENCY = 23;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IN_LINE_DEPENDENCY__ID = IN_LINE_ELEMENT_LINK__ID;
+
+  /**
    * The feature id for the '<em><b>Dest</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1406,6 +1433,15 @@ public interface TGRLPackage extends EPackage
   int IN_LINE_CONTRIBUTION = 24;
 
   /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IN_LINE_CONTRIBUTION__ID = IN_LINE_ELEMENT_LINK__ID;
+
+  /**
    * The feature id for the '<em><b>Dest</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1432,6 +1468,15 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   int IN_LINE_DECOMPOSITION = 25;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IN_LINE_DECOMPOSITION__ID = IN_LINE_ELEMENT_LINK__ID;
 
   /**
    * The feature id for the '<em><b>Dest</b></em>' containment reference list.

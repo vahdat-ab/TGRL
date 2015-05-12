@@ -13,14 +13,14 @@ Model:
 	gRLspecifications+=GRLSpecification*;
 
 Element:
-	GRLSpecification | GRLBaseElement  
+	GRLSpecification | GRLBaseElement 
 ;
 GRLBaseElement:
-	 GRLElement | Mapping 
+	 GRLElement | Mapping  | InLineElementLink
 ;
 GRLElement:
 	
-	SuperIntentionalElement | NormalElementLink | Actor | StrategyGroup | IndicatorGroup | EvaluationStrategy | Evaluation | 
+	SuperIntentionalElement | NormalElementLink| Actor | StrategyGroup | IndicatorGroup | EvaluationStrategy | Evaluation | 
 	ContributionGroup |	ContributionContext | 
 	QualitativeMapping | Metadata | Comment | LinkType 
 	
@@ -201,7 +201,7 @@ ElementLink:
 	NormalElementLink | InLineElementLink
 ;
 EndLink:
-	DecompositionEnd  | DependencyEnd | ContributionEnd	
+	 DependencyEnd | ContributionEnd | DecompositionEnd
 ;
 
 NormalElementLink:
@@ -253,6 +253,7 @@ InLineDecomposition:
 ;
 
 DecompositionEnd:
+	{DecompositionEnd}
 	destName=[SuperIntentionalElement | QualifiedName] 
 	(
 		'{'
@@ -261,6 +262,7 @@ DecompositionEnd:
 	)?
 ;
 ContributionEnd:
+	{ContributionEnd}
    (name = ID)?
 	destName = [SuperIntentionalElement | QualifiedName]
 	(
@@ -271,6 +273,7 @@ ContributionEnd:
 ;
 
 DependencyEnd:
+	{DependencyEnd}
 	destName = [SuperIntentionalElement | QualifiedName] 
 	(
 		'{'

@@ -4,14 +4,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.xtext.grl.tgrl.tGRL.Actor;
+import org.xtext.grl.tgrl.tGRL.ContributionEnd;
+import org.xtext.grl.tgrl.tGRL.DecompositionEnd;
+import org.xtext.grl.tgrl.tGRL.DependencyEnd;
 import org.xtext.grl.tgrl.tGRL.ElementLink;
 import org.xtext.grl.tgrl.tGRL.EvaluationStrategy;
 import org.xtext.grl.tgrl.tGRL.GRLElement;
 import org.xtext.grl.tgrl.tGRL.GRLSpecification;
+import org.xtext.grl.tgrl.tGRL.InLineContribution;
+import org.xtext.grl.tgrl.tGRL.InLineDecomposition;
+import org.xtext.grl.tgrl.tGRL.InLineDependency;
+import org.xtext.grl.tgrl.tGRL.InLineElementLink;
+import org.xtext.grl.tgrl.tGRL.InLineLink;
+import org.xtext.grl.tgrl.tGRL.IntentionalElement;
 import org.xtext.grl.tgrl.tGRL.Model;
+import org.xtext.grl.tgrl.tGRL.NormalContribution;
 import org.xtext.grl.tgrl.tGRL.NormalDecomposition;
+import org.xtext.grl.tgrl.tGRL.NormalDependency;
+import org.xtext.grl.tgrl.tGRL.NormalElementLink;
+import org.xtext.grl.tgrl.tGRL.NormalLink;
 import org.xtext.grl.tgrl.tGRL.QualitativeMapping;
 import org.xtext.grl.tgrl.tGRL.SuperIntentionalElement;
+import org.xtext.grl.tgrl.tGRL.TGRLFactory;
+import org.xtext.grl.tgrl.tGRL.TGRLPackage;
+import org.xtext.grl.tgrl.tGRL.impl.ElementLinkImpl;
+import org.xtext.grl.tgrl.tGRL.impl.NormalDecompositionImpl;
+import org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl;
 
 public class ModelFeatures {
 	public List<SuperIntentionalElement> getAllSuperIntentionalElements(Model inModel)	{
@@ -32,24 +50,24 @@ public class ModelFeatures {
 		}		
 		return output;
 	}
-	public List<ElementLink> getAllElementLink(Model inModel)	{
-		List<ElementLink> output = new ArrayList<ElementLink>();
-		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
-			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
-				if (grlElement1 instanceof ElementLink) {
-					output.add((ElementLink)grlElement1);	
-				} else if (grlElement1 instanceof Actor){
-						for (GRLElement grlElement2 : ((Actor)grlElement1).getElemets()) {
-							if (grlElement2 instanceof ElementLink) {
-								output.add((ElementLink)grlElement2);	
-							}
-						}
-				}
-			}
-
-		}		
-		return output;
-	}
+//	public List<ElementLink> getAllElementLink(Model inModel)	{
+//		List<ElementLink> output = new ArrayList<ElementLink>();
+//		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
+//			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
+//				if (grlElement1 instanceof ElementLink) {
+//					output.add((ElementLink)grlElement1);	
+//				} else if (grlElement1 instanceof Actor){
+//						for (GRLElement grlElement2 : ((Actor)grlElement1).getElemets()) {
+//							if (grlElement2 instanceof ElementLink) {
+//								output.add((ElementLink)grlElement2);	
+//							}
+//						}
+//				}
+//			}
+//
+//		}		
+//		return output;
+//	}
 	public List<NormalDecomposition> getAllNormalDecompositions(Model inModel){
 		List<NormalDecomposition> output = new ArrayList<NormalDecomposition>();
 		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
@@ -95,6 +113,98 @@ public class ModelFeatures {
 			}		
 		}
 		return output;
+	}
+
+	public List<ElementLink> getAllElementLinksFromIntentionalElement(IntentionalElement inIntentionalElement){
+		List<ElementLink> output = new ArrayList<ElementLink>();	
+		for(InLineElementLink inLineElement:inIntentionalElement.getElementLinks()){
+			if(inLineElement instanceof InLineDecomposition){
+				NormalDecomposition newElement = TGRLFactory.eINSTANCE.createNormalDecomposition();
+				newElement.setSrc(inIntentionalElement);
+				for(DecompositionEnd dEnd : ((InLineDecomposition)inLineElement).getDest() )	{
+					newElement.getDest().add(dEnd);
+				}
+//				newElement.
+//				newElement.getDest().addAll(((InLineDecomposition) inLineElement).getDest());
+				output.add(newElement);
+			} else if(inLineElement instanceof InLineDependency){
+				NormalDependency newElement = TGRLFactory.eINSTANCE.createNormalDependency();
+				newElement.setSrc(inIntentionalElement);
+				newElement.getDest().addAll(((InLineDependency) inLineElement).getDest());
+				output.add(newElement);
+			} else if(inLineElement instanceof InLineContribution){
+				NormalContribution newElement = TGRLFactory.eINSTANCE.createNormalContribution();
+				newElement.setSrc(inIntentionalElement);
+				newElement.getDest().addAll(((InLineContribution) inLineElement).getDest());
+				output.add(newElement);
+			} else if(inLineElement instanceof InLineLink){
+				NormalLink newElement = TGRLFactory.eINSTANCE.createNormalLink();
+				newElement.setSrc(inIntentionalElement);
+				newElement.getDest().addAll(((InLineLink) inLineElement).getDest());
+				output.add(newElement);
+			}
+		}
+		return output;
+	}
+
+	public List<ElementLink> getAllElementLinks(Model inModel){
+		List<ElementLink> output = new ArrayList<ElementLink>();
+		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
+			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
+				if(grlElement1 instanceof ElementLink){
+					output.add((ElementLink)grlElement1);
+				}
+				else if(grlElement1 instanceof IntentionalElement){
+					output.addAll(getAllElementLinksFromIntentionalElement((IntentionalElement)grlElement1));
+				} 
+				else if (grlElement1 instanceof Actor){
+					for(GRLElement grlElement : ((Actor)grlElement1).getElemets()){
+						if (grlElement instanceof IntentionalElement){
+							output.addAll(getAllElementLinksFromIntentionalElement((IntentionalElement)grlElement));
+						} else if (grlElement instanceof NormalElementLink){
+							output.add((ElementLink)grlElement);
+						}
+					}
+				}
+			}		
+		}
+		int index=0;
+		for(ElementLink eLink : output){
+			if(eLink instanceof NormalDecomposition){
+				for(DecompositionEnd dEnd: ((NormalDecomposition)eLink).getDest()){
+					dEnd.setId(index);
+					index++;
+				}
+			} else if(eLink instanceof NormalDependency){
+				for(DependencyEnd dEnd: ((NormalDependency)eLink).getDest()){
+					dEnd.setId(index);
+					index++;
+				}
+			} else if(eLink instanceof NormalContribution){
+				for(ContributionEnd dEnd: ((NormalContribution)eLink).getDest()){
+					dEnd.setId(index);
+					index++;
+				}
+			} else if(eLink instanceof NormalLink){
+				for(GRLElement dEnd: ((NormalLink)eLink).getDest()){
+					dEnd.setId(index);
+					index++;
+				}
+			}			
+		}
+	return output;
+}	
+	
+	public SuperIntentionalElement findSuperIntentionalElement(Model inModel,SuperIntentionalElement inSuperIntentionalElement) {
+		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
+			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
+				if(grlElement1 instanceof SuperIntentionalElement){
+					if (grlElement1.equals(inSuperIntentionalElement)) return (SuperIntentionalElement)grlElement1;
+				}
+			}		
+		}
+		return null;
+		
 	}
 	
 //	public List<Connection> getAllConnections(Model inModel){

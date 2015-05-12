@@ -22,6 +22,8 @@
     </scenarioGroups>
   </ucmspec>
   <grlspec>
+
+
 [for (actor : Actor | gRLspecifications.grlElements->selectByKind(Actor))]
 	<actors name="[label/]" id="[id/]" description="[description/]" importance="[importance.toString().toUpperFirst()/]" importanceQuantitative="[importanceQuantitative/]" contRefs="[id/]R"[if (metaData->size()>0)]>
 	[PrintMetaData(metaData)/]
@@ -29,7 +31,6 @@
 	[else]/>		
 	[/if]	
 [/for]
-
 [for (intentionalElement : IntentionalElement | getAllSuperIntentionalElements(aModel)->selectByKind(IntentionalElement))]
 	<intElements name="[label/]" id="[id/]" description="[description/]" decompositionType = "[decompositionType.toString().toUpperFirst()/]" importance="[importance.toString().toUpperFirst()/]" importanceQuantitative="[importanceQuantitative/]" [getType(intentionalElement)/] [getLinkSrc(aModel, intentionalElement)/] [getLinksDest(aModel, intentionalElement)/] refs="[id/]R"[if (metaData->size()>0)]>
 	[PrintMetaData(metaData)/]
@@ -37,13 +38,23 @@
 	[else]/>		
 	[/if]
 [/for]
-
-[for (nDecomposition : NormalDecomposition | getAllNormalDecompositions(aModel).oclAsType(NormalDecomposition))]
-[for (decompositionEnd : DecompositionEnd | dest)]
-	<links xsi:type="grl:Decomposition" name="" id="[decompositionEnd.id/][nDecomposition.src.id/]" refs="//@urndef/@specDiagrams.0/@connections.[decompositionEnd.id/]" dest="[decompositionEnd.destName.id/]" src="[nDecomposition.src.id/]"/>
+[comment]*****************************************ElementLink**********************************************[/comment]
+[for (elementLink : ElementLink | getAllElementLinks(aModel).oclAsType(ElementLink))]
+	[if (elementLink.oclIsTypeOf(NormalDecomposition))]
+	[for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)]	
+	<links xsi:type="grl:Decomposition" name="" id="[end.id/]L" refs="//@urndef/@specDiagrams.0/@connections.[end.id/]" dest="[end.destName.id/]" src="[elementLink.oclAsType(NormalDecomposition).src.id/]"/>
+    [/for]
+	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
+	[for (end : ContributionEnd |elementLink.oclAsType(NormalContribution).dest)]	
+	<links xsi:type="grl:Contribution" name="" id="[end.id/]L" refs="//@urndef/@specDiagrams.0/@connections.[end.id/]" dest="[end.destName.id/]" src="[elementLink.oclAsType(NormalContribution).src.id/]"/>
+    [/for]
+	[elseif (elementLink.oclIsTypeOf(NormalDependency))]
+	[for (end : DependencyEnd |elementLink.oclAsType(NormalDependency).dest)]	
+	<links xsi:type="grl:Contribution" name="" id="[end.id/]L" refs="//@urndef/@specDiagrams.0/@connections.[end.id/]" dest="[end.destName.id/]" src="[elementLink.oclAsType(NormalDependency).src.id/]"/>
+    [/for]
+	[/if]
 [/for]
-[/for]
-
+[comment]*****************************************ElementLink**********************************************[/comment]
 [comment]*****************************************Strategy**********************************************[/comment]
 [for (grlSpec : GRLSpecification | gRLspecifications)]
 [for (strategtGroup : StrategyGroup	 | grlElements->selectByType(StrategyGroup))]
@@ -76,7 +87,7 @@
   <urndef>
     <specDiagrams xsi:type="grl:GRLGraph" name="GRLGraph2" id="2">
 [for (intentionalElement : IntentionalElement | getAllSuperIntentionalElements(aModel)->selectByKind(IntentionalElement))]
-      <nodes xsi:type="grl:IntentionalElementRef" name="Int[id/]R" [comment][getSucc(aModel, intentionalElement)/] [getPred(aModel, intentionalElement)/][/comment] id="[id/]R" def="[id/]">
+      <nodes xsi:type="grl:IntentionalElementRef" name="Int[id/]R" [getSucc(aModel, intentionalElement)/] [getPred(aModel, intentionalElement)/] id="[id/]R" def="[id/]">
         <metadata name="_height" value="45"/>
         <metadata name="_width" value="110"/>
       </nodes>
@@ -89,13 +100,23 @@
 	[/if]	
 [/for]
 
-
-[for (nDecomposition : NormalDecomposition | getAllNormalDecompositions(aModel).oclAsType(NormalDecomposition))]
-	[for (decompositionEnd : DecompositionEnd | dest)]
-		<connections xsi:type="grl:LinkRef" source="[nDecomposition.src.id/]R" target="[decompositionEnd.id/]R" link="[nDecomposition.id/]"/>
-	[/for]
-	
+[comment]*****************************************************ElementLink*****************************************[/comment]
+[for (elementLink : ElementLink | getAllElementLinks(aModel).oclAsType(ElementLink))]
+	[if (elementLink.oclIsTypeOf(NormalDecomposition))]
+	[for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)]	
+	<connections xsi:type="grl:LinkRef" source="[elementLink.oclAsType(NormalDecomposition).src.id/]R" target="[end.destName.id/]R" link="[end.id/]"/>
+    [/for]
+	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
+	[for (end : ContributionEnd |elementLink.oclAsType(NormalContribution).dest)]	
+	<connections xsi:type="grl:LinkRef" source="[elementLink.oclAsType(NormalContribution).src.id/]R" target="[end.destName.id/]R" link="[end.id/]"/>
+    [/for]
+	[elseif (elementLink.oclIsTypeOf(NormalDependency))]
+	[for (end : DependencyEnd |elementLink.oclAsType(NormalDependency).dest)]	
+	<connections xsi:type="grl:LinkRef" source="[elementLink.oclAsType(NormalDependency).src.id/]R" target="[end.destName.id/]R" link="[end.id/]"/>
+    [/for]
+	[/if]
 [/for]
+[comment]*****************************************************ElementLink*****************************************[/comment]
 [for (actor : Actor | gRLspecifications.grlElements->selectByKind(Actor))]
       <contRefs xsi:type="grl:ActorRef" name="ActorRef[id/]R" id="[id/]R" [getNodes(actor)/] width="200" height="200" contDef="[id/]">
         <label/>

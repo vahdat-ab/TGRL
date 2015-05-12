@@ -21,5 +21,6 @@ Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
 Export-Package: org.eclipse.acceleo.module.tgrl.main
 Import-Package: org.xtext.grl.tgrl,
- org.xtext.grl.tgrl.tGRL
+ org.xtext.grl.tgrl.tGRL,
+ org.xtext.grl.tgrl.tGRL.impl
 
