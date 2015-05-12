@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.xtext.grl.tgrl.tGRL.Actor;
 import org.xtext.grl.tgrl.tGRL.ElementLink;
+import org.xtext.grl.tgrl.tGRL.EvaluationStrategy;
 import org.xtext.grl.tgrl.tGRL.GRLElement;
 import org.xtext.grl.tgrl.tGRL.GRLSpecification;
 import org.xtext.grl.tgrl.tGRL.Model;
@@ -74,6 +75,22 @@ public class ModelFeatures {
 			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
 				if (grlElement1 instanceof QualitativeMapping) {
 					output.add((QualitativeMapping)grlElement1);
+				} 
+			}		
+		}
+		return output;
+	}
+	
+	public List<EvaluationStrategy> getAllParentStrategis(Model inModel,EvaluationStrategy inEvaluationStrategy){
+		List<EvaluationStrategy> output = new ArrayList<EvaluationStrategy>();
+		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
+			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
+				if (grlElement1 instanceof EvaluationStrategy) {
+					for (EvaluationStrategy evaluationStrategy : ((EvaluationStrategy)grlElement1).getSuperStrategies()) {
+						if (evaluationStrategy.equals(inEvaluationStrategy)){
+							output.add((EvaluationStrategy)grlElement1);
+						}
+					}
 				} 
 			}		
 		}

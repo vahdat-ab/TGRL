@@ -17,3 +17,7 @@
 	= invoke('org.eclipse.acceleo.module.tgrl.java.services.ModelFeatures', 'getAllQualitativeMappings(org.xtext.grl.tgrl.tGRL.Model)', Sequence{arg0})
 /]
 
+[query public getAllParentStrategis(arg0 : Model, arg1 : EvaluationStrategy) : Sequence(OclAny)
+	= invoke('org.eclipse.acceleo.module.tgrl.java.services.ModelFeatures', 'getAllParentStrategis(org.xtext.grl.tgrl.tGRL.Model, org.xtext.grl.tgrl.tGRL.EvaluationStrategy)', Sequence{arg0, arg1})
+/]
+

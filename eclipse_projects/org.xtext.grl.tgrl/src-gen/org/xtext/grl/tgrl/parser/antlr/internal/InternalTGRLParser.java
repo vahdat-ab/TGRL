@@ -9319,7 +9319,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStrategyGroup"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3580:1: ruleStrategyGroup returns [EObject current=null] : (otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3580:1: ruleStrategyGroup returns [EObject current=null] : (otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= ';' ) ;
     public final EObject ruleStrategyGroup() throws RecognitionException {
         EObject current = null;
 
@@ -9332,11 +9332,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3583:28: ( (otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3584:1: (otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3583:28: ( (otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3584:1: (otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3584:1: (otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3584:3: otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3584:1: (otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3584:3: otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= ';'
             {
             otherlv_0=(Token)match(input,34,FOLLOW_34_in_ruleStrategyGroup8820); 
 
@@ -9368,97 +9368,114 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,35,FOLLOW_35_in_ruleStrategyGroup8854); 
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3606:2: (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )?
+            int alt60=2;
+            int LA60_0 = input.LA(1);
 
-                	newLeafNode(otherlv_2, grammarAccess.getStrategyGroupAccess().getIncludesKeyword_2());
-                
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3610:1: ( ( ruleQualifiedName ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3611:1: ( ruleQualifiedName )
-            {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3611:1: ( ruleQualifiedName )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3612:3: ruleQualifiedName
-            {
+            if ( (LA60_0==35) ) {
+                alt60=1;
+            }
+            switch (alt60) {
+                case 1 :
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3606:4: otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
+                    {
+                    otherlv_2=(Token)match(input,35,FOLLOW_35_in_ruleStrategyGroup8855); 
 
-            			if (current==null) {
-            	            current = createModelElement(grammarAccess.getStrategyGroupRule());
-            	        }
-                    
-             
-            	        newCompositeNode(grammarAccess.getStrategyGroupAccess().getStrategiesEvaluationStrategyCrossReference_3_0()); 
-            	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleStrategyGroup8877);
-            ruleQualifiedName();
+                        	newLeafNode(otherlv_2, grammarAccess.getStrategyGroupAccess().getIncludesKeyword_2_0());
+                        
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3610:1: ( ( ruleQualifiedName ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3611:1: ( ruleQualifiedName )
+                    {
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3611:1: ( ruleQualifiedName )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3612:3: ruleQualifiedName
+                    {
 
-            state._fsp--;
+                    			if (current==null) {
+                    	            current = createModelElement(grammarAccess.getStrategyGroupRule());
+                    	        }
+                            
+                     
+                    	        newCompositeNode(grammarAccess.getStrategyGroupAccess().getStrategiesEvaluationStrategyCrossReference_2_1_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleStrategyGroup8878);
+                    ruleQualifiedName();
 
-             
-            	        afterParserOrEnumRuleCall();
-            	    
+                    state._fsp--;
+
+                     
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3625:2: (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
+                    loop59:
+                    do {
+                        int alt59=2;
+                        int LA59_0 = input.LA(1);
+
+                        if ( (LA59_0==29) ) {
+                            alt59=1;
+                        }
+
+
+                        switch (alt59) {
+                    	case 1 :
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3625:4: otherlv_4= ',' ( ( ruleQualifiedName ) )
+                    	    {
+                    	    otherlv_4=(Token)match(input,29,FOLLOW_29_in_ruleStrategyGroup8891); 
+
+                    	        	newLeafNode(otherlv_4, grammarAccess.getStrategyGroupAccess().getCommaKeyword_2_2_0());
+                    	        
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3629:1: ( ( ruleQualifiedName ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3630:1: ( ruleQualifiedName )
+                    	    {
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3630:1: ( ruleQualifiedName )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3631:3: ruleQualifiedName
+                    	    {
+
+                    	    			if (current==null) {
+                    	    	            current = createModelElement(grammarAccess.getStrategyGroupRule());
+                    	    	        }
+                    	            
+                    	     
+                    	    	        newCompositeNode(grammarAccess.getStrategyGroupAccess().getStrategiesEvaluationStrategyCrossReference_2_2_1_0()); 
+                    	    	    
+                    	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleStrategyGroup8914);
+                    	    ruleQualifiedName();
+
+                    	    state._fsp--;
+
+                    	     
+                    	    	        afterParserOrEnumRuleCall();
+                    	    	    
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop59;
+                        }
+                    } while (true);
+
+
+                    }
+                    break;
 
             }
 
+            otherlv_6=(Token)match(input,17,FOLLOW_17_in_ruleStrategyGroup8930); 
 
-            }
-
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3625:2: (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
-            loop59:
-            do {
-                int alt59=2;
-                int LA59_0 = input.LA(1);
-
-                if ( (LA59_0==29) ) {
-                    alt59=1;
-                }
-
-
-                switch (alt59) {
-            	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3625:4: otherlv_4= ',' ( ( ruleQualifiedName ) )
-            	    {
-            	    otherlv_4=(Token)match(input,29,FOLLOW_29_in_ruleStrategyGroup8890); 
-
-            	        	newLeafNode(otherlv_4, grammarAccess.getStrategyGroupAccess().getCommaKeyword_4_0());
-            	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3629:1: ( ( ruleQualifiedName ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3630:1: ( ruleQualifiedName )
-            	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3630:1: ( ruleQualifiedName )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3631:3: ruleQualifiedName
-            	    {
-
-            	    			if (current==null) {
-            	    	            current = createModelElement(grammarAccess.getStrategyGroupRule());
-            	    	        }
-            	            
-            	     
-            	    	        newCompositeNode(grammarAccess.getStrategyGroupAccess().getStrategiesEvaluationStrategyCrossReference_4_1_0()); 
-            	    	    
-            	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleStrategyGroup8913);
-            	    ruleQualifiedName();
-
-            	    state._fsp--;
-
-            	     
-            	    	        afterParserOrEnumRuleCall();
-            	    	    
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop59;
-                }
-            } while (true);
-
-            otherlv_6=(Token)match(input,17,FOLLOW_17_in_ruleStrategyGroup8927); 
-
-                	newLeafNode(otherlv_6, grammarAccess.getStrategyGroupAccess().getSemicolonKeyword_5());
+                	newLeafNode(otherlv_6, grammarAccess.getStrategyGroupAccess().getSemicolonKeyword_3());
                 
 
             }
@@ -9493,13 +9510,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3658:2: iv_ruleEvaluationStrategy= ruleEvaluationStrategy EOF
             {
              newCompositeNode(grammarAccess.getEvaluationStrategyRule()); 
-            pushFollow(FOLLOW_ruleEvaluationStrategy_in_entryRuleEvaluationStrategy8963);
+            pushFollow(FOLLOW_ruleEvaluationStrategy_in_entryRuleEvaluationStrategy8966);
             iv_ruleEvaluationStrategy=ruleEvaluationStrategy();
 
             state._fsp--;
 
              current =iv_ruleEvaluationStrategy; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEvaluationStrategy8973); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEvaluationStrategy8976); 
 
             }
 
@@ -9541,7 +9558,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3669:1: (otherlv_0= 'strategy' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3669:3: otherlv_0= 'strategy' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}'
             {
-            otherlv_0=(Token)match(input,36,FOLLOW_36_in_ruleEvaluationStrategy9010); 
+            otherlv_0=(Token)match(input,36,FOLLOW_36_in_ruleEvaluationStrategy9013); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEvaluationStrategyAccess().getStrategyKeyword_0());
                 
@@ -9551,7 +9568,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3674:1: (lv_name_1_0= RULE_ID )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3675:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEvaluationStrategy9027); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEvaluationStrategy9030); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getEvaluationStrategyAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -9572,17 +9589,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
 
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3691:2: (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )?
-            int alt61=2;
-            int LA61_0 = input.LA(1);
+            int alt62=2;
+            int LA62_0 = input.LA(1);
 
-            if ( (LA61_0==37) ) {
-                alt61=1;
+            if ( (LA62_0==37) ) {
+                alt62=1;
             }
-            switch (alt61) {
+            switch (alt62) {
                 case 1 :
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3691:4: otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
                     {
-                    otherlv_2=(Token)match(input,37,FOLLOW_37_in_ruleEvaluationStrategy9045); 
+                    otherlv_2=(Token)match(input,37,FOLLOW_37_in_ruleEvaluationStrategy9048); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getEvaluationStrategyAccess().getExtendsKeyword_2_0());
                         
@@ -9600,7 +9617,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getEvaluationStrategyAccess().getSuperStrategiesEvaluationStrategyCrossReference_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleEvaluationStrategy9068);
+                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleEvaluationStrategy9071);
                     ruleQualifiedName();
 
                     state._fsp--;
@@ -9615,21 +9632,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
 
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3710:2: (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
-                    loop60:
+                    loop61:
                     do {
-                        int alt60=2;
-                        int LA60_0 = input.LA(1);
+                        int alt61=2;
+                        int LA61_0 = input.LA(1);
 
-                        if ( (LA60_0==29) ) {
-                            alt60=1;
+                        if ( (LA61_0==29) ) {
+                            alt61=1;
                         }
 
 
-                        switch (alt60) {
+                        switch (alt61) {
                     	case 1 :
                     	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3710:4: otherlv_4= ',' ( ( ruleQualifiedName ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,29,FOLLOW_29_in_ruleEvaluationStrategy9081); 
+                    	    otherlv_4=(Token)match(input,29,FOLLOW_29_in_ruleEvaluationStrategy9084); 
 
                     	        	newLeafNode(otherlv_4, grammarAccess.getEvaluationStrategyAccess().getCommaKeyword_2_2_0());
                     	        
@@ -9647,7 +9664,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	     
                     	    	        newCompositeNode(grammarAccess.getEvaluationStrategyAccess().getSuperStrategiesEvaluationStrategyCrossReference_2_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleEvaluationStrategy9104);
+                    	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleEvaluationStrategy9107);
                     	    ruleQualifiedName();
 
                     	    state._fsp--;
@@ -9666,7 +9683,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop60;
+                    	    break loop61;
                         }
                     } while (true);
 
@@ -9676,7 +9693,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,14,FOLLOW_14_in_ruleEvaluationStrategy9120); 
+            otherlv_6=(Token)match(input,14,FOLLOW_14_in_ruleEvaluationStrategy9123); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getEvaluationStrategyAccess().getLeftCurlyBracketKeyword_3());
                 
@@ -9693,20 +9710,20 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3740:3: ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )*
             {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3740:3: ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )*
-            loop64:
+            loop65:
             do {
-                int alt64=3;
-                int LA64_0 = input.LA(1);
+                int alt65=3;
+                int LA65_0 = input.LA(1);
 
-                if ( LA64_0 ==52 && getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_4(), 0) ) {
-                    alt64=1;
+                if ( LA65_0 ==52 && getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_4(), 0) ) {
+                    alt65=1;
                 }
-                else if ( LA64_0 ==RULE_ID && getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_4(), 1) ) {
-                    alt64=2;
+                else if ( LA65_0 ==RULE_ID && getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_4(), 1) ) {
+                    alt65=2;
                 }
 
 
-                switch (alt64) {
+                switch (alt65) {
             	case 1 :
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3742:4: ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) )
             	    {
@@ -9723,24 +9740,24 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_4(), 0);
             	    	 				
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3747:6: ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+
-            	    int cnt62=0;
-            	    loop62:
+            	    int cnt63=0;
+            	    loop63:
             	    do {
-            	        int alt62=2;
-            	        int LA62_0 = input.LA(1);
+            	        int alt63=2;
+            	        int LA63_0 = input.LA(1);
 
-            	        if ( (LA62_0==52) ) {
-            	            int LA62_2 = input.LA(2);
+            	        if ( (LA63_0==52) ) {
+            	            int LA63_2 = input.LA(2);
 
             	            if ( ((true)) ) {
-            	                alt62=1;
+            	                alt63=1;
             	            }
 
 
             	        }
 
 
-            	        switch (alt62) {
+            	        switch (alt63) {
             	    	case 1 :
             	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3747:7: {...}? => ( (lv_metaData_8_0= ruleMetadata ) )
             	    	    {
@@ -9756,7 +9773,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    	     
             	    	    	        newCompositeNode(grammarAccess.getEvaluationStrategyAccess().getMetaDataMetadataParserRuleCall_4_0_0()); 
             	    	    	    
-            	    	    pushFollow(FOLLOW_ruleMetadata_in_ruleEvaluationStrategy9186);
+            	    	    pushFollow(FOLLOW_ruleMetadata_in_ruleEvaluationStrategy9189);
             	    	    lv_metaData_8_0=ruleMetadata();
 
             	    	    state._fsp--;
@@ -9770,102 +9787,6 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    	           			"metaData",
             	    	            		lv_metaData_8_0, 
             	    	            		"Metadata");
-            	    	    	        afterParserOrEnumRuleCall();
-            	    	    	    
-
-            	    	    }
-
-
-            	    	    }
-
-
-            	    	    }
-            	    	    break;
-
-            	    	default :
-            	    	    if ( cnt62 >= 1 ) break loop62;
-            	                EarlyExitException eee =
-            	                    new EarlyExitException(62, input);
-            	                throw eee;
-            	        }
-            	        cnt62++;
-            	    } while (true);
-
-            	     
-            	    	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_4());
-            	    	 				
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 2 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3772:4: ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) )
-            	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3772:4: ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3773:5: {...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ )
-            	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_4(), 1) ) {
-            	        throw new FailedPredicateException(input, "ruleEvaluationStrategy", "getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_4(), 1)");
-            	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3773:115: ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3774:6: ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+
-            	    {
-            	     
-            	    	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_4(), 1);
-            	    	 				
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3777:6: ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+
-            	    int cnt63=0;
-            	    loop63:
-            	    do {
-            	        int alt63=2;
-            	        int LA63_0 = input.LA(1);
-
-            	        if ( (LA63_0==RULE_ID) ) {
-            	            int LA63_2 = input.LA(2);
-
-            	            if ( ((true)) ) {
-            	                alt63=1;
-            	            }
-
-
-            	        }
-
-
-            	        switch (alt63) {
-            	    	case 1 :
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3777:7: {...}? => ( (lv_evaluations_9_0= ruleEvaluation ) )
-            	    	    {
-            	    	    if ( !((true)) ) {
-            	    	        throw new FailedPredicateException(input, "ruleEvaluationStrategy", "true");
-            	    	    }
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3777:16: ( (lv_evaluations_9_0= ruleEvaluation ) )
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3778:1: (lv_evaluations_9_0= ruleEvaluation )
-            	    	    {
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3778:1: (lv_evaluations_9_0= ruleEvaluation )
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3779:3: lv_evaluations_9_0= ruleEvaluation
-            	    	    {
-            	    	     
-            	    	    	        newCompositeNode(grammarAccess.getEvaluationStrategyAccess().getEvaluationsEvaluationParserRuleCall_4_1_0()); 
-            	    	    	    
-            	    	    pushFollow(FOLLOW_ruleEvaluation_in_ruleEvaluationStrategy9262);
-            	    	    lv_evaluations_9_0=ruleEvaluation();
-
-            	    	    state._fsp--;
-
-
-            	    	    	        if (current==null) {
-            	    	    	            current = createModelElementForParent(grammarAccess.getEvaluationStrategyRule());
-            	    	    	        }
-            	    	           		add(
-            	    	           			current, 
-            	    	           			"evaluations",
-            	    	            		lv_evaluations_9_0, 
-            	    	            		"Evaluation");
             	    	    	        afterParserOrEnumRuleCall();
             	    	    	    
 
@@ -9899,9 +9820,105 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
             	    break;
+            	case 2 :
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3772:4: ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) )
+            	    {
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3772:4: ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3773:5: {...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ )
+            	    {
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_4(), 1) ) {
+            	        throw new FailedPredicateException(input, "ruleEvaluationStrategy", "getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_4(), 1)");
+            	    }
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3773:115: ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3774:6: ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+
+            	    {
+            	     
+            	    	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_4(), 1);
+            	    	 				
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3777:6: ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+
+            	    int cnt64=0;
+            	    loop64:
+            	    do {
+            	        int alt64=2;
+            	        int LA64_0 = input.LA(1);
+
+            	        if ( (LA64_0==RULE_ID) ) {
+            	            int LA64_2 = input.LA(2);
+
+            	            if ( ((true)) ) {
+            	                alt64=1;
+            	            }
+
+
+            	        }
+
+
+            	        switch (alt64) {
+            	    	case 1 :
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3777:7: {...}? => ( (lv_evaluations_9_0= ruleEvaluation ) )
+            	    	    {
+            	    	    if ( !((true)) ) {
+            	    	        throw new FailedPredicateException(input, "ruleEvaluationStrategy", "true");
+            	    	    }
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3777:16: ( (lv_evaluations_9_0= ruleEvaluation ) )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3778:1: (lv_evaluations_9_0= ruleEvaluation )
+            	    	    {
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3778:1: (lv_evaluations_9_0= ruleEvaluation )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3779:3: lv_evaluations_9_0= ruleEvaluation
+            	    	    {
+            	    	     
+            	    	    	        newCompositeNode(grammarAccess.getEvaluationStrategyAccess().getEvaluationsEvaluationParserRuleCall_4_1_0()); 
+            	    	    	    
+            	    	    pushFollow(FOLLOW_ruleEvaluation_in_ruleEvaluationStrategy9265);
+            	    	    lv_evaluations_9_0=ruleEvaluation();
+
+            	    	    state._fsp--;
+
+
+            	    	    	        if (current==null) {
+            	    	    	            current = createModelElementForParent(grammarAccess.getEvaluationStrategyRule());
+            	    	    	        }
+            	    	           		add(
+            	    	           			current, 
+            	    	           			"evaluations",
+            	    	            		lv_evaluations_9_0, 
+            	    	            		"Evaluation");
+            	    	    	        afterParserOrEnumRuleCall();
+            	    	    	    
+
+            	    	    }
+
+
+            	    	    }
+
+
+            	    	    }
+            	    	    break;
+
+            	    	default :
+            	    	    if ( cnt64 >= 1 ) break loop64;
+            	                EarlyExitException eee =
+            	                    new EarlyExitException(64, input);
+            	                throw eee;
+            	        }
+            	        cnt64++;
+            	    } while (true);
+
+            	     
+            	    	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_4());
+            	    	 				
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
 
             	default :
-            	    break loop64;
+            	    break loop65;
                 }
             } while (true);
 
@@ -9917,7 +9934,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_10=(Token)match(input,15,FOLLOW_15_in_ruleEvaluationStrategy9315); 
+            otherlv_10=(Token)match(input,15,FOLLOW_15_in_ruleEvaluationStrategy9318); 
 
                 	newLeafNode(otherlv_10, grammarAccess.getEvaluationStrategyAccess().getRightCurlyBracketKeyword_5());
                 
@@ -9954,13 +9971,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3823:2: iv_ruleEvaluation= ruleEvaluation EOF
             {
              newCompositeNode(grammarAccess.getEvaluationRule()); 
-            pushFollow(FOLLOW_ruleEvaluation_in_entryRuleEvaluation9351);
+            pushFollow(FOLLOW_ruleEvaluation_in_entryRuleEvaluation9354);
             iv_ruleEvaluation=ruleEvaluation();
 
             state._fsp--;
 
              current =iv_ruleEvaluation; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEvaluation9361); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEvaluation9364); 
 
             }
 
@@ -10019,7 +10036,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getEvaluationAccess().getIntentionalElementSuperIntentionalElementCrossReference_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleEvaluation9409);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleEvaluation9412);
             ruleQualifiedName();
 
             state._fsp--;
@@ -10033,27 +10050,27 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,19,FOLLOW_19_in_ruleEvaluation9421); 
+            otherlv_1=(Token)match(input,19,FOLLOW_19_in_ruleEvaluation9424); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getEvaluationAccess().getEqualsSignKeyword_1());
                 
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3853:1: ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) )
-            int alt65=2;
-            int LA65_0 = input.LA(1);
+            int alt66=2;
+            int LA66_0 = input.LA(1);
 
-            if ( (LA65_0==56||LA65_0==66||(LA65_0>=70 && LA65_0<=74)) ) {
-                alt65=1;
+            if ( (LA66_0==56||LA66_0==66||(LA66_0>=70 && LA66_0<=74)) ) {
+                alt66=1;
             }
-            else if ( (LA65_0==RULE_QUALITATIVEVALUE) ) {
-                alt65=2;
+            else if ( (LA66_0==RULE_QUALITATIVEVALUE) ) {
+                alt66=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 65, 0, input);
+                    new NoViableAltException("", 66, 0, input);
 
                 throw nvae;
             }
-            switch (alt65) {
+            switch (alt66) {
                 case 1 :
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3853:2: ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) )
                     {
@@ -10066,7 +10083,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getEvaluationAccess().getQualitativeEvaluationQualitativeLabelEnumRuleCall_2_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleQualitativeLabel_in_ruleEvaluation9443);
+                    pushFollow(FOLLOW_ruleQualitativeLabel_in_ruleEvaluation9446);
                     lv_qualitativeEvaluation_2_0=ruleQualitativeLabel();
 
                     state._fsp--;
@@ -10100,7 +10117,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3873:1: (lv_evaluation_3_0= RULE_QUALITATIVEVALUE )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3874:3: lv_evaluation_3_0= RULE_QUALITATIVEVALUE
                     {
-                    lv_evaluation_3_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluation9466); 
+                    lv_evaluation_3_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluation9469); 
 
                     			newLeafNode(lv_evaluation_3_0, grammarAccess.getEvaluationAccess().getEvaluationQUALITATIVEVALUETerminalRuleCall_2_1_0()); 
                     		
@@ -10127,22 +10144,22 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
 
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3890:3: ( ( ( ( ( ({...}? => ( ({...}? => (otherlv_5= '{' ( ( (lv_exceeds_6_0= 'exceeds' ) ) otherlv_7= ';' )? ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_8_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_kpiEvalValueSet_9_0= ruleKPIEvalValueSet ) )? otherlv_10= '}' ) ) ) ) )+ {...}?) ) ) | otherlv_11= ';' )
-            int alt69=2;
-            int LA69_0 = input.LA(1);
+            int alt70=2;
+            int LA70_0 = input.LA(1);
 
-            if ( ((LA69_0>=14 && LA69_0<=15)||(LA69_0>=39 && LA69_0<=47)) ) {
-                alt69=1;
+            if ( ((LA70_0>=14 && LA70_0<=15)||(LA70_0>=39 && LA70_0<=47)) ) {
+                alt70=1;
             }
-            else if ( (LA69_0==17) ) {
-                alt69=2;
+            else if ( (LA70_0==17) ) {
+                alt70=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 69, 0, input);
+                    new NoViableAltException("", 70, 0, input);
 
                 throw nvae;
             }
-            switch (alt69) {
+            switch (alt70) {
                 case 1 :
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3890:4: ( ( ( ( ({...}? => ( ({...}? => (otherlv_5= '{' ( ( (lv_exceeds_6_0= 'exceeds' ) ) otherlv_7= ';' )? ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_8_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_kpiEvalValueSet_9_0= ruleKPIEvalValueSet ) )? otherlv_10= '}' ) ) ) ) )+ {...}?) ) )
                     {
@@ -10159,33 +10176,33 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3897:3: ( ({...}? => ( ({...}? => (otherlv_5= '{' ( ( (lv_exceeds_6_0= 'exceeds' ) ) otherlv_7= ';' )? ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_8_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_kpiEvalValueSet_9_0= ruleKPIEvalValueSet ) )? otherlv_10= '}' ) ) ) ) )+ {...}?
                     {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3897:3: ( ({...}? => ( ({...}? => (otherlv_5= '{' ( ( (lv_exceeds_6_0= 'exceeds' ) ) otherlv_7= ';' )? ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_8_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_kpiEvalValueSet_9_0= ruleKPIEvalValueSet ) )? otherlv_10= '}' ) ) ) ) )+
-                    int cnt68=0;
-                    loop68:
+                    int cnt69=0;
+                    loop69:
                     do {
-                        int alt68=4;
-                        int LA68_0 = input.LA(1);
+                        int alt69=4;
+                        int LA69_0 = input.LA(1);
 
-                        if ( (LA68_0==15) ) {
-                            int LA68_2 = input.LA(2);
+                        if ( (LA69_0==15) ) {
+                            int LA69_2 = input.LA(2);
 
                             if ( getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0(), 2) ) {
-                                alt68=3;
+                                alt69=3;
                             }
 
 
                         }
-                        else if ( LA68_0 ==14 && getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0(), 0) ) {
-                            alt68=1;
+                        else if ( LA69_0 ==14 && getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0(), 0) ) {
+                            alt69=1;
                         }
-                        else if ( LA68_0 >=39 && LA68_0<=41 && getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0(), 1) ) {
-                            alt68=2;
+                        else if ( LA69_0 >=39 && LA69_0<=41 && getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0(), 1) ) {
+                            alt69=2;
                         }
-                        else if ( LA68_0 >=42 && LA68_0<=47 && getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0(), 2) ) {
-                            alt68=3;
+                        else if ( LA69_0 >=42 && LA69_0<=47 && getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0(), 2) ) {
+                            alt69=3;
                         }
 
 
-                        switch (alt68) {
+                        switch (alt69) {
                     	case 1 :
                     	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3899:4: ({...}? => ( ({...}? => (otherlv_5= '{' ( ( (lv_exceeds_6_0= 'exceeds' ) ) otherlv_7= ';' )? ) ) ) )
                     	    {
@@ -10210,18 +10227,18 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3904:16: (otherlv_5= '{' ( ( (lv_exceeds_6_0= 'exceeds' ) ) otherlv_7= ';' )? )
                     	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3904:18: otherlv_5= '{' ( ( (lv_exceeds_6_0= 'exceeds' ) ) otherlv_7= ';' )?
                     	    {
-                    	    otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleEvaluation9531); 
+                    	    otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleEvaluation9534); 
 
                     	        	newLeafNode(otherlv_5, grammarAccess.getEvaluationAccess().getLeftCurlyBracketKeyword_3_0_0_0());
                     	        
                     	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3908:1: ( ( (lv_exceeds_6_0= 'exceeds' ) ) otherlv_7= ';' )?
-                    	    int alt66=2;
-                    	    int LA66_0 = input.LA(1);
+                    	    int alt67=2;
+                    	    int LA67_0 = input.LA(1);
 
-                    	    if ( (LA66_0==38) ) {
-                    	        alt66=1;
+                    	    if ( (LA67_0==38) ) {
+                    	        alt67=1;
                     	    }
-                    	    switch (alt66) {
+                    	    switch (alt67) {
                     	        case 1 :
                     	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3908:2: ( (lv_exceeds_6_0= 'exceeds' ) ) otherlv_7= ';'
                     	            {
@@ -10231,7 +10248,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3909:1: (lv_exceeds_6_0= 'exceeds' )
                     	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3910:3: lv_exceeds_6_0= 'exceeds'
                     	            {
-                    	            lv_exceeds_6_0=(Token)match(input,38,FOLLOW_38_in_ruleEvaluation9550); 
+                    	            lv_exceeds_6_0=(Token)match(input,38,FOLLOW_38_in_ruleEvaluation9553); 
 
                     	                    newLeafNode(lv_exceeds_6_0, grammarAccess.getEvaluationAccess().getExceedsExceedsKeyword_3_0_0_1_0_0());
                     	                
@@ -10247,7 +10264,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     	            }
 
-                    	            otherlv_7=(Token)match(input,17,FOLLOW_17_in_ruleEvaluation9575); 
+                    	            otherlv_7=(Token)match(input,17,FOLLOW_17_in_ruleEvaluation9578); 
 
                     	                	newLeafNode(otherlv_7, grammarAccess.getEvaluationAccess().getSemicolonKeyword_3_0_0_1_1());
                     	                
@@ -10305,7 +10322,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	     
                     	    	        newCompositeNode(grammarAccess.getEvaluationAccess().getEvalRangeEvaluationRangeParserRuleCall_3_0_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleEvaluationRange_in_ruleEvaluation9653);
+                    	    pushFollow(FOLLOW_ruleEvaluationRange_in_ruleEvaluation9656);
                     	    lv_evalRange_8_0=ruleEvaluationRange();
 
                     	    state._fsp--;
@@ -10367,13 +10384,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3969:17: ( (lv_kpiEvalValueSet_9_0= ruleKPIEvalValueSet ) )? otherlv_10= '}'
                     	    {
                     	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3969:17: ( (lv_kpiEvalValueSet_9_0= ruleKPIEvalValueSet ) )?
-                    	    int alt67=2;
-                    	    int LA67_0 = input.LA(1);
+                    	    int alt68=2;
+                    	    int LA68_0 = input.LA(1);
 
-                    	    if ( ((LA67_0>=42 && LA67_0<=47)) ) {
-                    	        alt67=1;
+                    	    if ( ((LA68_0>=42 && LA68_0<=47)) ) {
+                    	        alt68=1;
                     	    }
-                    	    switch (alt67) {
+                    	    switch (alt68) {
                     	        case 1 :
                     	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3970:1: (lv_kpiEvalValueSet_9_0= ruleKPIEvalValueSet )
                     	            {
@@ -10383,7 +10400,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	             
                     	            	        newCompositeNode(grammarAccess.getEvaluationAccess().getKpiEvalValueSetKPIEvalValueSetParserRuleCall_3_0_2_0_0()); 
                     	            	    
-                    	            pushFollow(FOLLOW_ruleKPIEvalValueSet_in_ruleEvaluation9729);
+                    	            pushFollow(FOLLOW_ruleKPIEvalValueSet_in_ruleEvaluation9732);
                     	            lv_kpiEvalValueSet_9_0=ruleKPIEvalValueSet();
 
                     	            state._fsp--;
@@ -10408,7 +10425,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_10=(Token)match(input,15,FOLLOW_15_in_ruleEvaluation9742); 
+                    	    otherlv_10=(Token)match(input,15,FOLLOW_15_in_ruleEvaluation9745); 
 
                     	        	newLeafNode(otherlv_10, grammarAccess.getEvaluationAccess().getRightCurlyBracketKeyword_3_0_2_1());
                     	        
@@ -10432,12 +10449,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    if ( cnt68 >= 1 ) break loop68;
+                    	    if ( cnt69 >= 1 ) break loop69;
                                 EarlyExitException eee =
-                                    new EarlyExitException(68, input);
+                                    new EarlyExitException(69, input);
                                 throw eee;
                         }
-                        cnt68++;
+                        cnt69++;
                     } while (true);
 
                     if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0()) ) {
@@ -10461,7 +10478,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                 case 2 :
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4007:7: otherlv_11= ';'
                     {
-                    otherlv_11=(Token)match(input,17,FOLLOW_17_in_ruleEvaluation9807); 
+                    otherlv_11=(Token)match(input,17,FOLLOW_17_in_ruleEvaluation9810); 
 
                         	newLeafNode(otherlv_11, grammarAccess.getEvaluationAccess().getSemicolonKeyword_3_1());
                         
@@ -10504,13 +10521,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4021:2: iv_ruleEvaluationRange= ruleEvaluationRange EOF
             {
              newCompositeNode(grammarAccess.getEvaluationRangeRule()); 
-            pushFollow(FOLLOW_ruleEvaluationRange_in_entryRuleEvaluationRange9844);
+            pushFollow(FOLLOW_ruleEvaluationRange_in_entryRuleEvaluationRange9847);
             iv_ruleEvaluationRange=ruleEvaluationRange();
 
             state._fsp--;
 
              current =iv_ruleEvaluationRange; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEvaluationRange9854); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEvaluationRange9857); 
 
             }
 
@@ -10564,17 +10581,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4039:3: ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_INT ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_INT ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_INT ) ) otherlv_12= ';' ) ) ) ) )+ {...}?
             {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4039:3: ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_INT ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_INT ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_INT ) ) otherlv_12= ';' ) ) ) ) )+
-            int cnt70=0;
-            loop70:
+            int cnt71=0;
+            loop71:
             do {
-                int alt70=4;
+                int alt71=4;
                 switch ( input.LA(1) ) {
                 case 39:
                     {
-                    int LA70_2 = input.LA(2);
+                    int LA71_2 = input.LA(2);
 
                     if ( getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationRangeAccess().getUnorderedGroup(), 0) ) {
-                        alt70=1;
+                        alt71=1;
                     }
 
 
@@ -10582,10 +10599,10 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     break;
                 case 40:
                     {
-                    int LA70_3 = input.LA(2);
+                    int LA71_3 = input.LA(2);
 
                     if ( getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationRangeAccess().getUnorderedGroup(), 1) ) {
-                        alt70=2;
+                        alt71=2;
                     }
 
 
@@ -10593,10 +10610,10 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     break;
                 case 41:
                     {
-                    int LA70_4 = input.LA(2);
+                    int LA71_4 = input.LA(2);
 
                     if ( getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationRangeAccess().getUnorderedGroup(), 2) ) {
-                        alt70=3;
+                        alt71=3;
                     }
 
 
@@ -10605,7 +10622,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                 }
 
-                switch (alt70) {
+                switch (alt71) {
             	case 1 :
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4041:4: ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_INT ) ) otherlv_4= ';' ) ) ) )
             	    {
@@ -10630,11 +10647,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4046:16: (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_INT ) ) otherlv_4= ';' )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4046:18: otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_INT ) ) otherlv_4= ';'
             	    {
-            	    otherlv_1=(Token)match(input,39,FOLLOW_39_in_ruleEvaluationRange9936); 
+            	    otherlv_1=(Token)match(input,39,FOLLOW_39_in_ruleEvaluationRange9939); 
 
             	        	newLeafNode(otherlv_1, grammarAccess.getEvaluationRangeAccess().getStartKeyword_0_0());
             	        
-            	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleEvaluationRange9948); 
+            	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleEvaluationRange9951); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getEvaluationRangeAccess().getEqualsSignKeyword_0_1());
             	        
@@ -10644,7 +10661,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4055:1: (lv_start_3_0= RULE_INT )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4056:3: lv_start_3_0= RULE_INT
             	    {
-            	    lv_start_3_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleEvaluationRange9965); 
+            	    lv_start_3_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleEvaluationRange9968); 
 
             	    			newLeafNode(lv_start_3_0, grammarAccess.getEvaluationRangeAccess().getStartINTTerminalRuleCall_0_2_0()); 
             	    		
@@ -10664,7 +10681,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleEvaluationRange9982); 
+            	    otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleEvaluationRange9985); 
 
             	        	newLeafNode(otherlv_4, grammarAccess.getEvaluationRangeAccess().getSemicolonKeyword_0_3());
             	        
@@ -10710,11 +10727,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4088:16: (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_INT ) ) otherlv_8= ';' )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4088:18: otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_INT ) ) otherlv_8= ';'
             	    {
-            	    otherlv_5=(Token)match(input,40,FOLLOW_40_in_ruleEvaluationRange10050); 
+            	    otherlv_5=(Token)match(input,40,FOLLOW_40_in_ruleEvaluationRange10053); 
 
             	        	newLeafNode(otherlv_5, grammarAccess.getEvaluationRangeAccess().getEndKeyword_1_0());
             	        
-            	    otherlv_6=(Token)match(input,19,FOLLOW_19_in_ruleEvaluationRange10062); 
+            	    otherlv_6=(Token)match(input,19,FOLLOW_19_in_ruleEvaluationRange10065); 
 
             	        	newLeafNode(otherlv_6, grammarAccess.getEvaluationRangeAccess().getEqualsSignKeyword_1_1());
             	        
@@ -10724,7 +10741,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4097:1: (lv_end_7_0= RULE_INT )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4098:3: lv_end_7_0= RULE_INT
             	    {
-            	    lv_end_7_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleEvaluationRange10079); 
+            	    lv_end_7_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleEvaluationRange10082); 
 
             	    			newLeafNode(lv_end_7_0, grammarAccess.getEvaluationRangeAccess().getEndINTTerminalRuleCall_1_2_0()); 
             	    		
@@ -10744,7 +10761,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_8=(Token)match(input,17,FOLLOW_17_in_ruleEvaluationRange10096); 
+            	    otherlv_8=(Token)match(input,17,FOLLOW_17_in_ruleEvaluationRange10099); 
 
             	        	newLeafNode(otherlv_8, grammarAccess.getEvaluationRangeAccess().getSemicolonKeyword_1_3());
             	        
@@ -10790,11 +10807,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4130:16: (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_INT ) ) otherlv_12= ';' )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4130:18: otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_INT ) ) otherlv_12= ';'
             	    {
-            	    otherlv_9=(Token)match(input,41,FOLLOW_41_in_ruleEvaluationRange10164); 
+            	    otherlv_9=(Token)match(input,41,FOLLOW_41_in_ruleEvaluationRange10167); 
 
             	        	newLeafNode(otherlv_9, grammarAccess.getEvaluationRangeAccess().getStepKeyword_2_0());
             	        
-            	    otherlv_10=(Token)match(input,19,FOLLOW_19_in_ruleEvaluationRange10176); 
+            	    otherlv_10=(Token)match(input,19,FOLLOW_19_in_ruleEvaluationRange10179); 
 
             	        	newLeafNode(otherlv_10, grammarAccess.getEvaluationRangeAccess().getEqualsSignKeyword_2_1());
             	        
@@ -10804,7 +10821,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4139:1: (lv_step_11_0= RULE_INT )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4140:3: lv_step_11_0= RULE_INT
             	    {
-            	    lv_step_11_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleEvaluationRange10193); 
+            	    lv_step_11_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleEvaluationRange10196); 
 
             	    			newLeafNode(lv_step_11_0, grammarAccess.getEvaluationRangeAccess().getStepINTTerminalRuleCall_2_2_0()); 
             	    		
@@ -10824,7 +10841,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_12=(Token)match(input,17,FOLLOW_17_in_ruleEvaluationRange10210); 
+            	    otherlv_12=(Token)match(input,17,FOLLOW_17_in_ruleEvaluationRange10213); 
 
             	        	newLeafNode(otherlv_12, grammarAccess.getEvaluationRangeAccess().getSemicolonKeyword_2_3());
             	        
@@ -10848,12 +10865,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt70 >= 1 ) break loop70;
+            	    if ( cnt71 >= 1 ) break loop71;
                         EarlyExitException eee =
-                            new EarlyExitException(70, input);
+                            new EarlyExitException(71, input);
                         throw eee;
                 }
-                cnt70++;
+                cnt71++;
             } while (true);
 
             if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getEvaluationRangeAccess().getUnorderedGroup()) ) {
@@ -10901,13 +10918,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4185:2: iv_ruleKPIEvalValueSet= ruleKPIEvalValueSet EOF
             {
              newCompositeNode(grammarAccess.getKPIEvalValueSetRule()); 
-            pushFollow(FOLLOW_ruleKPIEvalValueSet_in_entryRuleKPIEvalValueSet10292);
+            pushFollow(FOLLOW_ruleKPIEvalValueSet_in_entryRuleKPIEvalValueSet10295);
             iv_ruleKPIEvalValueSet=ruleKPIEvalValueSet();
 
             state._fsp--;
 
              current =iv_ruleKPIEvalValueSet; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleKPIEvalValueSet10302); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleKPIEvalValueSet10305); 
 
             }
 
@@ -10941,29 +10958,29 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4196:1: (this_KPIQuantitativeEvalValueSet_0= ruleKPIQuantitativeEvalValueSet | this_KPIQualitativeEvalValueSet_1= ruleKPIQualitativeEvalValueSet )
             {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4196:1: (this_KPIQuantitativeEvalValueSet_0= ruleKPIQuantitativeEvalValueSet | this_KPIQualitativeEvalValueSet_1= ruleKPIQualitativeEvalValueSet )
-            int alt71=2;
-            int LA71_0 = input.LA(1);
+            int alt72=2;
+            int LA72_0 = input.LA(1);
 
-            if ( ((LA71_0>=42 && LA71_0<=46)) ) {
-                alt71=1;
+            if ( ((LA72_0>=42 && LA72_0<=46)) ) {
+                alt72=1;
             }
-            else if ( (LA71_0==47) ) {
-                alt71=2;
+            else if ( (LA72_0==47) ) {
+                alt72=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 71, 0, input);
+                    new NoViableAltException("", 72, 0, input);
 
                 throw nvae;
             }
-            switch (alt71) {
+            switch (alt72) {
                 case 1 :
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4197:5: this_KPIQuantitativeEvalValueSet_0= ruleKPIQuantitativeEvalValueSet
                     {
                      
                             newCompositeNode(grammarAccess.getKPIEvalValueSetAccess().getKPIQuantitativeEvalValueSetParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleKPIQuantitativeEvalValueSet_in_ruleKPIEvalValueSet10349);
+                    pushFollow(FOLLOW_ruleKPIQuantitativeEvalValueSet_in_ruleKPIEvalValueSet10352);
                     this_KPIQuantitativeEvalValueSet_0=ruleKPIQuantitativeEvalValueSet();
 
                     state._fsp--;
@@ -10981,7 +10998,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                      
                             newCompositeNode(grammarAccess.getKPIEvalValueSetAccess().getKPIQualitativeEvalValueSetParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleKPIQualitativeEvalValueSet_in_ruleKPIEvalValueSet10376);
+                    pushFollow(FOLLOW_ruleKPIQualitativeEvalValueSet_in_ruleKPIEvalValueSet10379);
                     this_KPIQualitativeEvalValueSet_1=ruleKPIQualitativeEvalValueSet();
 
                     state._fsp--;
@@ -11026,13 +11043,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4225:2: iv_ruleKPIQuantitativeEvalValueSet= ruleKPIQuantitativeEvalValueSet EOF
             {
              newCompositeNode(grammarAccess.getKPIQuantitativeEvalValueSetRule()); 
-            pushFollow(FOLLOW_ruleKPIQuantitativeEvalValueSet_in_entryRuleKPIQuantitativeEvalValueSet10411);
+            pushFollow(FOLLOW_ruleKPIQuantitativeEvalValueSet_in_entryRuleKPIQuantitativeEvalValueSet10414);
             iv_ruleKPIQuantitativeEvalValueSet=ruleKPIQuantitativeEvalValueSet();
 
             state._fsp--;
 
              current =iv_ruleKPIQuantitativeEvalValueSet; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleKPIQuantitativeEvalValueSet10421); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleKPIQuantitativeEvalValueSet10424); 
 
             }
 
@@ -11094,30 +11111,30 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4243:3: ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?
             {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4243:3: ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+
-            int cnt72=0;
-            loop72:
+            int cnt73=0;
+            loop73:
             do {
-                int alt72=6;
-                int LA72_0 = input.LA(1);
+                int alt73=6;
+                int LA73_0 = input.LA(1);
 
-                if ( LA72_0 ==42 && getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 0) ) {
-                    alt72=1;
+                if ( LA73_0 ==42 && getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 0) ) {
+                    alt73=1;
                 }
-                else if ( LA72_0 ==43 && getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 1) ) {
-                    alt72=2;
+                else if ( LA73_0 ==43 && getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 1) ) {
+                    alt73=2;
                 }
-                else if ( LA72_0 ==44 && getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 2) ) {
-                    alt72=3;
+                else if ( LA73_0 ==44 && getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 2) ) {
+                    alt73=3;
                 }
-                else if ( LA72_0 ==45 && getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 3) ) {
-                    alt72=4;
+                else if ( LA73_0 ==45 && getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 3) ) {
+                    alt73=4;
                 }
-                else if ( LA72_0 ==46 && getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 4) ) {
-                    alt72=5;
+                else if ( LA73_0 ==46 && getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 4) ) {
+                    alt73=5;
                 }
 
 
-                switch (alt72) {
+                switch (alt73) {
             	case 1 :
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4245:4: ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) )
             	    {
@@ -11142,11 +11159,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4250:16: (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4250:18: otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';'
             	    {
-            	    otherlv_1=(Token)match(input,42,FOLLOW_42_in_ruleKPIQuantitativeEvalValueSet10503); 
+            	    otherlv_1=(Token)match(input,42,FOLLOW_42_in_ruleKPIQuantitativeEvalValueSet10506); 
 
             	        	newLeafNode(otherlv_1, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getTargetKeyword_0_0());
             	        
-            	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10515); 
+            	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10518); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getEqualsSignKeyword_0_1());
             	        
@@ -11156,7 +11173,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4259:1: (lv_targetValue_3_0= RULE_DOUBLE )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4260:3: lv_targetValue_3_0= RULE_DOUBLE
             	    {
-            	    lv_targetValue_3_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet10532); 
+            	    lv_targetValue_3_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet10535); 
 
             	    			newLeafNode(lv_targetValue_3_0, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getTargetValueDOUBLETerminalRuleCall_0_2_0()); 
             	    		
@@ -11176,7 +11193,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet10549); 
+            	    otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet10552); 
 
             	        	newLeafNode(otherlv_4, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getSemicolonKeyword_0_3());
             	        
@@ -11222,11 +11239,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4292:16: (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4292:18: otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';'
             	    {
-            	    otherlv_5=(Token)match(input,43,FOLLOW_43_in_ruleKPIQuantitativeEvalValueSet10617); 
+            	    otherlv_5=(Token)match(input,43,FOLLOW_43_in_ruleKPIQuantitativeEvalValueSet10620); 
 
             	        	newLeafNode(otherlv_5, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getThresholdKeyword_1_0());
             	        
-            	    otherlv_6=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10629); 
+            	    otherlv_6=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10632); 
 
             	        	newLeafNode(otherlv_6, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getEqualsSignKeyword_1_1());
             	        
@@ -11236,7 +11253,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4301:1: (lv_thresholdValue_7_0= RULE_DOUBLE )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4302:3: lv_thresholdValue_7_0= RULE_DOUBLE
             	    {
-            	    lv_thresholdValue_7_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet10646); 
+            	    lv_thresholdValue_7_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet10649); 
 
             	    			newLeafNode(lv_thresholdValue_7_0, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getThresholdValueDOUBLETerminalRuleCall_1_2_0()); 
             	    		
@@ -11256,7 +11273,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_8=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet10663); 
+            	    otherlv_8=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet10666); 
 
             	        	newLeafNode(otherlv_8, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getSemicolonKeyword_1_3());
             	        
@@ -11302,11 +11319,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4334:16: (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4334:18: otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';'
             	    {
-            	    otherlv_9=(Token)match(input,44,FOLLOW_44_in_ruleKPIQuantitativeEvalValueSet10731); 
+            	    otherlv_9=(Token)match(input,44,FOLLOW_44_in_ruleKPIQuantitativeEvalValueSet10734); 
 
             	        	newLeafNode(otherlv_9, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getWorstKeyword_2_0());
             	        
-            	    otherlv_10=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10743); 
+            	    otherlv_10=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10746); 
 
             	        	newLeafNode(otherlv_10, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getEqualsSignKeyword_2_1());
             	        
@@ -11316,7 +11333,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4343:1: (lv_worstValue_11_0= RULE_DOUBLE )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4344:3: lv_worstValue_11_0= RULE_DOUBLE
             	    {
-            	    lv_worstValue_11_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet10760); 
+            	    lv_worstValue_11_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet10763); 
 
             	    			newLeafNode(lv_worstValue_11_0, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getWorstValueDOUBLETerminalRuleCall_2_2_0()); 
             	    		
@@ -11336,7 +11353,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_12=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet10777); 
+            	    otherlv_12=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet10780); 
 
             	        	newLeafNode(otherlv_12, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getSemicolonKeyword_2_3());
             	        
@@ -11382,11 +11399,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4376:16: (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4376:18: otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';'
             	    {
-            	    otherlv_13=(Token)match(input,45,FOLLOW_45_in_ruleKPIQuantitativeEvalValueSet10845); 
+            	    otherlv_13=(Token)match(input,45,FOLLOW_45_in_ruleKPIQuantitativeEvalValueSet10848); 
 
             	        	newLeafNode(otherlv_13, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getEvalKeyword_3_0());
             	        
-            	    otherlv_14=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10857); 
+            	    otherlv_14=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10860); 
 
             	        	newLeafNode(otherlv_14, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getEqualsSignKeyword_3_1());
             	        
@@ -11396,7 +11413,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4385:1: (lv_evaluationValue_15_0= RULE_DOUBLE )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4386:3: lv_evaluationValue_15_0= RULE_DOUBLE
             	    {
-            	    lv_evaluationValue_15_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet10874); 
+            	    lv_evaluationValue_15_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet10877); 
 
             	    			newLeafNode(lv_evaluationValue_15_0, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getEvaluationValueDOUBLETerminalRuleCall_3_2_0()); 
             	    		
@@ -11416,7 +11433,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_16=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet10891); 
+            	    otherlv_16=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet10894); 
 
             	        	newLeafNode(otherlv_16, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getSemicolonKeyword_3_3());
             	        
@@ -11462,11 +11479,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4418:16: (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4418:18: otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';'
             	    {
-            	    otherlv_17=(Token)match(input,46,FOLLOW_46_in_ruleKPIQuantitativeEvalValueSet10959); 
+            	    otherlv_17=(Token)match(input,46,FOLLOW_46_in_ruleKPIQuantitativeEvalValueSet10962); 
 
             	        	newLeafNode(otherlv_17, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnitKeyword_4_0());
             	        
-            	    otherlv_18=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10971); 
+            	    otherlv_18=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10974); 
 
             	        	newLeafNode(otherlv_18, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getEqualsSignKeyword_4_1());
             	        
@@ -11476,7 +11493,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4427:1: (lv_unit_19_0= RULE_STRING )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4428:3: lv_unit_19_0= RULE_STRING
             	    {
-            	    lv_unit_19_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleKPIQuantitativeEvalValueSet10988); 
+            	    lv_unit_19_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleKPIQuantitativeEvalValueSet10991); 
 
             	    			newLeafNode(lv_unit_19_0, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnitSTRINGTerminalRuleCall_4_2_0()); 
             	    		
@@ -11496,7 +11513,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_20=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11005); 
+            	    otherlv_20=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11008); 
 
             	        	newLeafNode(otherlv_20, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getSemicolonKeyword_4_3());
             	        
@@ -11520,12 +11537,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt72 >= 1 ) break loop72;
+            	    if ( cnt73 >= 1 ) break loop73;
                         EarlyExitException eee =
-                            new EarlyExitException(72, input);
+                            new EarlyExitException(73, input);
                         throw eee;
                 }
-                cnt72++;
+                cnt73++;
             } while (true);
 
             if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup()) ) {
@@ -11573,13 +11590,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4473:2: iv_ruleKPIQualitativeEvalValueSet= ruleKPIQualitativeEvalValueSet EOF
             {
              newCompositeNode(grammarAccess.getKPIQualitativeEvalValueSetRule()); 
-            pushFollow(FOLLOW_ruleKPIQualitativeEvalValueSet_in_entryRuleKPIQualitativeEvalValueSet11087);
+            pushFollow(FOLLOW_ruleKPIQualitativeEvalValueSet_in_entryRuleKPIQualitativeEvalValueSet11090);
             iv_ruleKPIQualitativeEvalValueSet=ruleKPIQualitativeEvalValueSet();
 
             state._fsp--;
 
              current =iv_ruleKPIQualitativeEvalValueSet; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleKPIQualitativeEvalValueSet11097); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleKPIQualitativeEvalValueSet11100); 
 
             }
 
@@ -11614,11 +11631,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4484:1: (otherlv_0= 'qualeval' otherlv_1= '=' ( ( ruleQualifiedName ) ) otherlv_3= ';' )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4484:3: otherlv_0= 'qualeval' otherlv_1= '=' ( ( ruleQualifiedName ) ) otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,47,FOLLOW_47_in_ruleKPIQualitativeEvalValueSet11134); 
+            otherlv_0=(Token)match(input,47,FOLLOW_47_in_ruleKPIQualitativeEvalValueSet11137); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getKPIQualitativeEvalValueSetAccess().getQualevalKeyword_0());
                 
-            otherlv_1=(Token)match(input,19,FOLLOW_19_in_ruleKPIQualitativeEvalValueSet11146); 
+            otherlv_1=(Token)match(input,19,FOLLOW_19_in_ruleKPIQualitativeEvalValueSet11149); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getKPIQualitativeEvalValueSetAccess().getEqualsSignKeyword_1());
                 
@@ -11636,7 +11653,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getKPIQualitativeEvalValueSetAccess().getQualitativeEvaluationValueMappingCrossReference_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleKPIQualitativeEvalValueSet11169);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleKPIQualitativeEvalValueSet11172);
             ruleQualifiedName();
 
             state._fsp--;
@@ -11650,7 +11667,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,17,FOLLOW_17_in_ruleKPIQualitativeEvalValueSet11181); 
+            otherlv_3=(Token)match(input,17,FOLLOW_17_in_ruleKPIQualitativeEvalValueSet11184); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getKPIQualitativeEvalValueSetAccess().getSemicolonKeyword_3());
                 
@@ -11687,13 +11704,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4521:2: iv_ruleQualitativeMapping= ruleQualitativeMapping EOF
             {
              newCompositeNode(grammarAccess.getQualitativeMappingRule()); 
-            pushFollow(FOLLOW_ruleQualitativeMapping_in_entryRuleQualitativeMapping11217);
+            pushFollow(FOLLOW_ruleQualitativeMapping_in_entryRuleQualitativeMapping11220);
             iv_ruleQualitativeMapping=ruleQualitativeMapping();
 
             state._fsp--;
 
              current =iv_ruleQualitativeMapping; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQualitativeMapping11227); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQualitativeMapping11230); 
 
             }
 
@@ -11733,7 +11750,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4532:1: (otherlv_0= 'qualitativeMapping' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) ) ) otherlv_6= '}' )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4532:3: otherlv_0= 'qualitativeMapping' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) ) ) otherlv_6= '}'
             {
-            otherlv_0=(Token)match(input,48,FOLLOW_48_in_ruleQualitativeMapping11264); 
+            otherlv_0=(Token)match(input,48,FOLLOW_48_in_ruleQualitativeMapping11267); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getQualitativeMappingAccess().getQualitativeMappingKeyword_0());
                 
@@ -11743,7 +11760,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4537:1: (lv_name_1_0= RULE_ID )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4538:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualitativeMapping11281); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualitativeMapping11284); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getQualitativeMappingAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -11763,7 +11780,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleQualitativeMapping11298); 
+            otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleQualitativeMapping11301); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getQualitativeMappingAccess().getLeftCurlyBracketKeyword_2());
                 
@@ -11780,20 +11797,20 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4565:3: ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )*
             {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4565:3: ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )*
-            loop75:
+            loop76:
             do {
-                int alt75=3;
-                int LA75_0 = input.LA(1);
+                int alt76=3;
+                int LA76_0 = input.LA(1);
 
-                if ( LA75_0 ==52 && getUnorderedGroupHelper().canSelect(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 0) ) {
-                    alt75=1;
+                if ( LA76_0 ==52 && getUnorderedGroupHelper().canSelect(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 0) ) {
+                    alt76=1;
                 }
-                else if ( LA75_0 ==RULE_STRING && getUnorderedGroupHelper().canSelect(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 1) ) {
-                    alt75=2;
+                else if ( LA76_0 ==RULE_STRING && getUnorderedGroupHelper().canSelect(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 1) ) {
+                    alt76=2;
                 }
 
 
-                switch (alt75) {
+                switch (alt76) {
             	case 1 :
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4567:4: ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) )
             	    {
@@ -11810,24 +11827,24 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    	 				  getUnorderedGroupHelper().select(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 0);
             	    	 				
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4572:6: ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+
-            	    int cnt73=0;
-            	    loop73:
+            	    int cnt74=0;
+            	    loop74:
             	    do {
-            	        int alt73=2;
-            	        int LA73_0 = input.LA(1);
+            	        int alt74=2;
+            	        int LA74_0 = input.LA(1);
 
-            	        if ( (LA73_0==52) ) {
-            	            int LA73_2 = input.LA(2);
+            	        if ( (LA74_0==52) ) {
+            	            int LA74_2 = input.LA(2);
 
             	            if ( ((true)) ) {
-            	                alt73=1;
+            	                alt74=1;
             	            }
 
 
             	        }
 
 
-            	        switch (alt73) {
+            	        switch (alt74) {
             	    	case 1 :
             	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4572:7: {...}? => ( (lv_metaData_4_0= ruleMetadata ) )
             	    	    {
@@ -11843,7 +11860,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    	     
             	    	    	        newCompositeNode(grammarAccess.getQualitativeMappingAccess().getMetaDataMetadataParserRuleCall_3_0_0()); 
             	    	    	    
-            	    	    pushFollow(FOLLOW_ruleMetadata_in_ruleQualitativeMapping11364);
+            	    	    pushFollow(FOLLOW_ruleMetadata_in_ruleQualitativeMapping11367);
             	    	    lv_metaData_4_0=ruleMetadata();
 
             	    	    state._fsp--;
@@ -11857,102 +11874,6 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    	           			"metaData",
             	    	            		lv_metaData_4_0, 
             	    	            		"Metadata");
-            	    	    	        afterParserOrEnumRuleCall();
-            	    	    	    
-
-            	    	    }
-
-
-            	    	    }
-
-
-            	    	    }
-            	    	    break;
-
-            	    	default :
-            	    	    if ( cnt73 >= 1 ) break loop73;
-            	                EarlyExitException eee =
-            	                    new EarlyExitException(73, input);
-            	                throw eee;
-            	        }
-            	        cnt73++;
-            	    } while (true);
-
-            	     
-            	    	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3());
-            	    	 				
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 2 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4597:4: ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) )
-            	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4597:4: ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4598:5: {...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ )
-            	    {
-            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 1) ) {
-            	        throw new FailedPredicateException(input, "ruleQualitativeMapping", "getUnorderedGroupHelper().canSelect(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 1)");
-            	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4598:115: ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4599:6: ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+
-            	    {
-            	     
-            	    	 				  getUnorderedGroupHelper().select(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 1);
-            	    	 				
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4602:6: ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+
-            	    int cnt74=0;
-            	    loop74:
-            	    do {
-            	        int alt74=2;
-            	        int LA74_0 = input.LA(1);
-
-            	        if ( (LA74_0==RULE_STRING) ) {
-            	            int LA74_2 = input.LA(2);
-
-            	            if ( ((true)) ) {
-            	                alt74=1;
-            	            }
-
-
-            	        }
-
-
-            	        switch (alt74) {
-            	    	case 1 :
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4602:7: {...}? => ( (lv_mappings_5_0= ruleMapping ) )
-            	    	    {
-            	    	    if ( !((true)) ) {
-            	    	        throw new FailedPredicateException(input, "ruleQualitativeMapping", "true");
-            	    	    }
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4602:16: ( (lv_mappings_5_0= ruleMapping ) )
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4603:1: (lv_mappings_5_0= ruleMapping )
-            	    	    {
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4603:1: (lv_mappings_5_0= ruleMapping )
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4604:3: lv_mappings_5_0= ruleMapping
-            	    	    {
-            	    	     
-            	    	    	        newCompositeNode(grammarAccess.getQualitativeMappingAccess().getMappingsMappingParserRuleCall_3_1_0()); 
-            	    	    	    
-            	    	    pushFollow(FOLLOW_ruleMapping_in_ruleQualitativeMapping11440);
-            	    	    lv_mappings_5_0=ruleMapping();
-
-            	    	    state._fsp--;
-
-
-            	    	    	        if (current==null) {
-            	    	    	            current = createModelElementForParent(grammarAccess.getQualitativeMappingRule());
-            	    	    	        }
-            	    	           		add(
-            	    	           			current, 
-            	    	           			"mappings",
-            	    	            		lv_mappings_5_0, 
-            	    	            		"Mapping");
             	    	    	        afterParserOrEnumRuleCall();
             	    	    	    
 
@@ -11986,9 +11907,105 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
             	    break;
+            	case 2 :
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4597:4: ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) )
+            	    {
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4597:4: ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4598:5: {...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ )
+            	    {
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 1) ) {
+            	        throw new FailedPredicateException(input, "ruleQualitativeMapping", "getUnorderedGroupHelper().canSelect(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 1)");
+            	    }
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4598:115: ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4599:6: ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+
+            	    {
+            	     
+            	    	 				  getUnorderedGroupHelper().select(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 1);
+            	    	 				
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4602:6: ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+
+            	    int cnt75=0;
+            	    loop75:
+            	    do {
+            	        int alt75=2;
+            	        int LA75_0 = input.LA(1);
+
+            	        if ( (LA75_0==RULE_STRING) ) {
+            	            int LA75_2 = input.LA(2);
+
+            	            if ( ((true)) ) {
+            	                alt75=1;
+            	            }
+
+
+            	        }
+
+
+            	        switch (alt75) {
+            	    	case 1 :
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4602:7: {...}? => ( (lv_mappings_5_0= ruleMapping ) )
+            	    	    {
+            	    	    if ( !((true)) ) {
+            	    	        throw new FailedPredicateException(input, "ruleQualitativeMapping", "true");
+            	    	    }
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4602:16: ( (lv_mappings_5_0= ruleMapping ) )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4603:1: (lv_mappings_5_0= ruleMapping )
+            	    	    {
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4603:1: (lv_mappings_5_0= ruleMapping )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4604:3: lv_mappings_5_0= ruleMapping
+            	    	    {
+            	    	     
+            	    	    	        newCompositeNode(grammarAccess.getQualitativeMappingAccess().getMappingsMappingParserRuleCall_3_1_0()); 
+            	    	    	    
+            	    	    pushFollow(FOLLOW_ruleMapping_in_ruleQualitativeMapping11443);
+            	    	    lv_mappings_5_0=ruleMapping();
+
+            	    	    state._fsp--;
+
+
+            	    	    	        if (current==null) {
+            	    	    	            current = createModelElementForParent(grammarAccess.getQualitativeMappingRule());
+            	    	    	        }
+            	    	           		add(
+            	    	           			current, 
+            	    	           			"mappings",
+            	    	            		lv_mappings_5_0, 
+            	    	            		"Mapping");
+            	    	    	        afterParserOrEnumRuleCall();
+            	    	    	    
+
+            	    	    }
+
+
+            	    	    }
+
+
+            	    	    }
+            	    	    break;
+
+            	    	default :
+            	    	    if ( cnt75 >= 1 ) break loop75;
+            	                EarlyExitException eee =
+            	                    new EarlyExitException(75, input);
+            	                throw eee;
+            	        }
+            	        cnt75++;
+            	    } while (true);
+
+            	     
+            	    	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3());
+            	    	 				
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
 
             	default :
-            	    break loop75;
+            	    break loop76;
                 }
             } while (true);
 
@@ -12004,7 +12021,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,15,FOLLOW_15_in_ruleQualitativeMapping11493); 
+            otherlv_6=(Token)match(input,15,FOLLOW_15_in_ruleQualitativeMapping11496); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getQualitativeMappingAccess().getRightCurlyBracketKeyword_4());
                 
@@ -12041,13 +12058,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4648:2: iv_ruleMapping= ruleMapping EOF
             {
              newCompositeNode(grammarAccess.getMappingRule()); 
-            pushFollow(FOLLOW_ruleMapping_in_entryRuleMapping11529);
+            pushFollow(FOLLOW_ruleMapping_in_entryRuleMapping11532);
             iv_ruleMapping=ruleMapping();
 
             state._fsp--;
 
              current =iv_ruleMapping; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMapping11539); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMapping11542); 
 
             }
 
@@ -12065,7 +12082,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMapping"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4655:1: ruleMapping returns [EObject current=null] : ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) otherlv_7= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4655:1: ruleMapping returns [EObject current=null] : ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )? otherlv_7= ';' ) ;
     public final EObject ruleMapping() throws RecognitionException {
         EObject current = null;
 
@@ -12083,11 +12100,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4658:28: ( ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) otherlv_7= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4659:1: ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) otherlv_7= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4658:28: ( ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )? otherlv_7= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4659:1: ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )? otherlv_7= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4659:1: ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) otherlv_7= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4659:2: ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) otherlv_7= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4659:1: ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )? otherlv_7= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4659:2: ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )? otherlv_7= ';'
             {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4659:2: ( (lv_name_0_0= RULE_STRING ) )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4660:1: (lv_name_0_0= RULE_STRING )
@@ -12095,7 +12112,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4660:1: (lv_name_0_0= RULE_STRING )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4661:3: lv_name_0_0= RULE_STRING
             {
-            lv_name_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMapping11581); 
+            lv_name_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMapping11584); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getMappingAccess().getNameSTRINGTerminalRuleCall_0_0()); 
             		
@@ -12115,7 +12132,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,29,FOLLOW_29_in_ruleMapping11598); 
+            otherlv_1=(Token)match(input,29,FOLLOW_29_in_ruleMapping11601); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getMappingAccess().getCommaKeyword_1());
                 
@@ -12125,7 +12142,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4682:1: (lv_evaluation_2_0= RULE_QUALITATIVEVALUE )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4683:3: lv_evaluation_2_0= RULE_QUALITATIVEVALUE
             {
-            lv_evaluation_2_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleMapping11615); 
+            lv_evaluation_2_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleMapping11618); 
 
             			newLeafNode(lv_evaluation_2_0, grammarAccess.getMappingAccess().getEvaluationQUALITATIVEVALUETerminalRuleCall_2_0()); 
             		
@@ -12145,7 +12162,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,29,FOLLOW_29_in_ruleMapping11632); 
+            otherlv_3=(Token)match(input,29,FOLLOW_29_in_ruleMapping11635); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getMappingAccess().getCommaKeyword_3());
                 
@@ -12158,7 +12175,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getMappingAccess().getQualitativeEvaluationQualitativeLabelEnumRuleCall_4_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualitativeLabel_in_ruleMapping11653);
+            pushFollow(FOLLOW_ruleQualitativeLabel_in_ruleMapping11656);
             lv_qualitativeEvaluation_4_0=ruleQualitativeLabel();
 
             state._fsp--;
@@ -12180,44 +12197,61 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,29,FOLLOW_29_in_ruleMapping11665); 
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4721:2: (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )?
+            int alt77=2;
+            int LA77_0 = input.LA(1);
 
-                	newLeafNode(otherlv_5, grammarAccess.getMappingAccess().getCommaKeyword_5());
-                
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4725:1: ( (lv_exceeds_6_0= ruleBoolean ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4726:1: (lv_exceeds_6_0= ruleBoolean )
-            {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4726:1: (lv_exceeds_6_0= ruleBoolean )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4727:3: lv_exceeds_6_0= ruleBoolean
-            {
-             
-            	        newCompositeNode(grammarAccess.getMappingAccess().getExceedsBooleanEnumRuleCall_6_0()); 
-            	    
-            pushFollow(FOLLOW_ruleBoolean_in_ruleMapping11686);
-            lv_exceeds_6_0=ruleBoolean();
+            if ( (LA77_0==29) ) {
+                alt77=1;
+            }
+            switch (alt77) {
+                case 1 :
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4721:4: otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) )
+                    {
+                    otherlv_5=(Token)match(input,29,FOLLOW_29_in_ruleMapping11669); 
 
-            state._fsp--;
+                        	newLeafNode(otherlv_5, grammarAccess.getMappingAccess().getCommaKeyword_5_0());
+                        
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4725:1: ( (lv_exceeds_6_0= ruleBoolean ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4726:1: (lv_exceeds_6_0= ruleBoolean )
+                    {
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4726:1: (lv_exceeds_6_0= ruleBoolean )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4727:3: lv_exceeds_6_0= ruleBoolean
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getMappingAccess().getExceedsBooleanEnumRuleCall_5_1_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleBoolean_in_ruleMapping11690);
+                    lv_exceeds_6_0=ruleBoolean();
+
+                    state._fsp--;
 
 
-            	        if (current==null) {
-            	            current = createModelElementForParent(grammarAccess.getMappingRule());
-            	        }
-                   		set(
-                   			current, 
-                   			"exceeds",
-                    		lv_exceeds_6_0, 
-                    		"Boolean");
-            	        afterParserOrEnumRuleCall();
-            	    
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getMappingRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"exceeds",
+                            		lv_exceeds_6_0, 
+                            		"Boolean");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
 
             }
 
+            otherlv_7=(Token)match(input,17,FOLLOW_17_in_ruleMapping11704); 
 
-            }
-
-            otherlv_7=(Token)match(input,17,FOLLOW_17_in_ruleMapping11698); 
-
-                	newLeafNode(otherlv_7, grammarAccess.getMappingAccess().getSemicolonKeyword_7());
+                	newLeafNode(otherlv_7, grammarAccess.getMappingAccess().getSemicolonKeyword_6());
                 
 
             }
@@ -12252,13 +12286,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4757:2: iv_ruleContributionGroup= ruleContributionGroup EOF
             {
              newCompositeNode(grammarAccess.getContributionGroupRule()); 
-            pushFollow(FOLLOW_ruleContributionGroup_in_entryRuleContributionGroup11734);
+            pushFollow(FOLLOW_ruleContributionGroup_in_entryRuleContributionGroup11740);
             iv_ruleContributionGroup=ruleContributionGroup();
 
             state._fsp--;
 
              current =iv_ruleContributionGroup; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionGroup11744); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionGroup11750); 
 
             }
 
@@ -12297,7 +12331,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4768:1: (otherlv_0= 'contributionGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ';' )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4768:3: otherlv_0= 'contributionGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ';'
             {
-            otherlv_0=(Token)match(input,49,FOLLOW_49_in_ruleContributionGroup11781); 
+            otherlv_0=(Token)match(input,49,FOLLOW_49_in_ruleContributionGroup11787); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getContributionGroupAccess().getContributionGroupKeyword_0());
                 
@@ -12307,7 +12341,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4773:1: (lv_name_1_0= RULE_ID )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4774:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionGroup11798); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionGroup11804); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getContributionGroupAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -12327,7 +12361,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,35,FOLLOW_35_in_ruleContributionGroup11815); 
+            otherlv_2=(Token)match(input,35,FOLLOW_35_in_ruleContributionGroup11821); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getContributionGroupAccess().getIncludesKeyword_2());
                 
@@ -12342,7 +12376,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	            current = createModelElement(grammarAccess.getContributionGroupRule());
             	        }
                     
-            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionGroup11835); 
+            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionGroup11841); 
 
             		newLeafNode(otherlv_3, grammarAccess.getContributionGroupAccess().getContribsContributionContextCrossReference_3_0()); 
             	
@@ -12353,21 +12387,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
 
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4807:2: (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )*
-            loop76:
+            loop78:
             do {
-                int alt76=2;
-                int LA76_0 = input.LA(1);
+                int alt78=2;
+                int LA78_0 = input.LA(1);
 
-                if ( (LA76_0==29) ) {
-                    alt76=1;
+                if ( (LA78_0==29) ) {
+                    alt78=1;
                 }
 
 
-                switch (alt76) {
+                switch (alt78) {
             	case 1 :
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4807:4: otherlv_4= ',' ( (otherlv_5= RULE_ID ) )
             	    {
-            	    otherlv_4=(Token)match(input,29,FOLLOW_29_in_ruleContributionGroup11848); 
+            	    otherlv_4=(Token)match(input,29,FOLLOW_29_in_ruleContributionGroup11854); 
 
             	        	newLeafNode(otherlv_4, grammarAccess.getContributionGroupAccess().getCommaKeyword_4_0());
             	        
@@ -12382,7 +12416,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    	            current = createModelElement(grammarAccess.getContributionGroupRule());
             	    	        }
             	            
-            	    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionGroup11868); 
+            	    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionGroup11874); 
 
             	    		newLeafNode(otherlv_5, grammarAccess.getContributionGroupAccess().getContribsContributionContextCrossReference_4_1_0()); 
             	    	
@@ -12397,11 +12431,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop76;
+            	    break loop78;
                 }
             } while (true);
 
-            otherlv_6=(Token)match(input,17,FOLLOW_17_in_ruleContributionGroup11882); 
+            otherlv_6=(Token)match(input,17,FOLLOW_17_in_ruleContributionGroup11888); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getContributionGroupAccess().getSemicolonKeyword_5());
                 
@@ -12438,13 +12472,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4838:2: iv_ruleContributionContext= ruleContributionContext EOF
             {
              newCompositeNode(grammarAccess.getContributionContextRule()); 
-            pushFollow(FOLLOW_ruleContributionContext_in_entryRuleContributionContext11918);
+            pushFollow(FOLLOW_ruleContributionContext_in_entryRuleContributionContext11924);
             iv_ruleContributionContext=ruleContributionContext();
 
             state._fsp--;
 
              current =iv_ruleContributionContext; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionContext11928); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionContext11934); 
 
             }
 
@@ -12486,7 +12520,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4849:1: (otherlv_0= 'contribution' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) ) ) otherlv_10= '}' )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4849:3: otherlv_0= 'contribution' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) ) ) otherlv_10= '}'
             {
-            otherlv_0=(Token)match(input,50,FOLLOW_50_in_ruleContributionContext11965); 
+            otherlv_0=(Token)match(input,50,FOLLOW_50_in_ruleContributionContext11971); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getContributionContextAccess().getContributionKeyword_0());
                 
@@ -12496,7 +12530,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4854:1: (lv_name_1_0= RULE_ID )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4855:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionContext11982); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionContext11988); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getContributionContextAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -12517,17 +12551,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
 
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4871:2: (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )?
-            int alt78=2;
-            int LA78_0 = input.LA(1);
+            int alt80=2;
+            int LA80_0 = input.LA(1);
 
-            if ( (LA78_0==37) ) {
-                alt78=1;
+            if ( (LA80_0==37) ) {
+                alt80=1;
             }
-            switch (alt78) {
+            switch (alt80) {
                 case 1 :
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4871:4: otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
                     {
-                    otherlv_2=(Token)match(input,37,FOLLOW_37_in_ruleContributionContext12000); 
+                    otherlv_2=(Token)match(input,37,FOLLOW_37_in_ruleContributionContext12006); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getContributionContextAccess().getExtendsKeyword_2_0());
                         
@@ -12545,7 +12579,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getContributionContextAccess().getSuperContributionContextsContributionContextCrossReference_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleContributionContext12023);
+                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleContributionContext12029);
                     ruleQualifiedName();
 
                     state._fsp--;
@@ -12560,21 +12594,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
 
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4890:2: (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
-                    loop77:
+                    loop79:
                     do {
-                        int alt77=2;
-                        int LA77_0 = input.LA(1);
+                        int alt79=2;
+                        int LA79_0 = input.LA(1);
 
-                        if ( (LA77_0==29) ) {
-                            alt77=1;
+                        if ( (LA79_0==29) ) {
+                            alt79=1;
                         }
 
 
-                        switch (alt77) {
+                        switch (alt79) {
                     	case 1 :
                     	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4890:4: otherlv_4= ',' ( ( ruleQualifiedName ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,29,FOLLOW_29_in_ruleContributionContext12036); 
+                    	    otherlv_4=(Token)match(input,29,FOLLOW_29_in_ruleContributionContext12042); 
 
                     	        	newLeafNode(otherlv_4, grammarAccess.getContributionContextAccess().getCommaKeyword_2_2_0());
                     	        
@@ -12592,7 +12626,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	     
                     	    	        newCompositeNode(grammarAccess.getContributionContextAccess().getSuperContributionContextsContributionContextCrossReference_2_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleContributionContext12059);
+                    	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleContributionContext12065);
                     	    ruleQualifiedName();
 
                     	    state._fsp--;
@@ -12611,7 +12645,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop77;
+                    	    break loop79;
                         }
                     } while (true);
 
@@ -12621,7 +12655,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,14,FOLLOW_14_in_ruleContributionContext12075); 
+            otherlv_6=(Token)match(input,14,FOLLOW_14_in_ruleContributionContext12081); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getContributionContextAccess().getLeftCurlyBracketKeyword_3());
                 
@@ -12638,20 +12672,20 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4920:3: ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )*
             {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4920:3: ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )*
-            loop81:
+            loop83:
             do {
-                int alt81=3;
-                int LA81_0 = input.LA(1);
+                int alt83=3;
+                int LA83_0 = input.LA(1);
 
-                if ( LA81_0 ==52 && getUnorderedGroupHelper().canSelect(grammarAccess.getContributionContextAccess().getUnorderedGroup_4(), 0) ) {
-                    alt81=1;
+                if ( LA83_0 ==52 && getUnorderedGroupHelper().canSelect(grammarAccess.getContributionContextAccess().getUnorderedGroup_4(), 0) ) {
+                    alt83=1;
                 }
-                else if ( LA81_0 ==RULE_ID && getUnorderedGroupHelper().canSelect(grammarAccess.getContributionContextAccess().getUnorderedGroup_4(), 1) ) {
-                    alt81=2;
+                else if ( LA83_0 ==RULE_ID && getUnorderedGroupHelper().canSelect(grammarAccess.getContributionContextAccess().getUnorderedGroup_4(), 1) ) {
+                    alt83=2;
                 }
 
 
-                switch (alt81) {
+                switch (alt83) {
             	case 1 :
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4922:4: ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) )
             	    {
@@ -12668,24 +12702,24 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    	 				  getUnorderedGroupHelper().select(grammarAccess.getContributionContextAccess().getUnorderedGroup_4(), 0);
             	    	 				
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4927:6: ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+
-            	    int cnt79=0;
-            	    loop79:
+            	    int cnt81=0;
+            	    loop81:
             	    do {
-            	        int alt79=2;
-            	        int LA79_0 = input.LA(1);
+            	        int alt81=2;
+            	        int LA81_0 = input.LA(1);
 
-            	        if ( (LA79_0==52) ) {
-            	            int LA79_2 = input.LA(2);
+            	        if ( (LA81_0==52) ) {
+            	            int LA81_2 = input.LA(2);
 
             	            if ( ((true)) ) {
-            	                alt79=1;
+            	                alt81=1;
             	            }
 
 
             	        }
 
 
-            	        switch (alt79) {
+            	        switch (alt81) {
             	    	case 1 :
             	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4927:7: {...}? => ( (lv_metaData_8_0= ruleMetadata ) )
             	    	    {
@@ -12701,7 +12735,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    	     
             	    	    	        newCompositeNode(grammarAccess.getContributionContextAccess().getMetaDataMetadataParserRuleCall_4_0_0()); 
             	    	    	    
-            	    	    pushFollow(FOLLOW_ruleMetadata_in_ruleContributionContext12141);
+            	    	    pushFollow(FOLLOW_ruleMetadata_in_ruleContributionContext12147);
             	    	    lv_metaData_8_0=ruleMetadata();
 
             	    	    state._fsp--;
@@ -12728,12 +12762,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    	    break;
 
             	    	default :
-            	    	    if ( cnt79 >= 1 ) break loop79;
+            	    	    if ( cnt81 >= 1 ) break loop81;
             	                EarlyExitException eee =
-            	                    new EarlyExitException(79, input);
+            	                    new EarlyExitException(81, input);
             	                throw eee;
             	        }
-            	        cnt79++;
+            	        cnt81++;
             	    } while (true);
 
             	     
@@ -12764,24 +12798,24 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    	 				  getUnorderedGroupHelper().select(grammarAccess.getContributionContextAccess().getUnorderedGroup_4(), 1);
             	    	 				
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4957:6: ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+
-            	    int cnt80=0;
-            	    loop80:
+            	    int cnt82=0;
+            	    loop82:
             	    do {
-            	        int alt80=2;
-            	        int LA80_0 = input.LA(1);
+            	        int alt82=2;
+            	        int LA82_0 = input.LA(1);
 
-            	        if ( (LA80_0==RULE_ID) ) {
-            	            int LA80_2 = input.LA(2);
+            	        if ( (LA82_0==RULE_ID) ) {
+            	            int LA82_2 = input.LA(2);
 
             	            if ( ((true)) ) {
-            	                alt80=1;
+            	                alt82=1;
             	            }
 
 
             	        }
 
 
-            	        switch (alt80) {
+            	        switch (alt82) {
             	    	case 1 :
             	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4957:7: {...}? => ( (lv_changes_9_0= ruleContributionChange ) )
             	    	    {
@@ -12797,7 +12831,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    	     
             	    	    	        newCompositeNode(grammarAccess.getContributionContextAccess().getChangesContributionChangeParserRuleCall_4_1_0()); 
             	    	    	    
-            	    	    pushFollow(FOLLOW_ruleContributionChange_in_ruleContributionContext12217);
+            	    	    pushFollow(FOLLOW_ruleContributionChange_in_ruleContributionContext12223);
             	    	    lv_changes_9_0=ruleContributionChange();
 
             	    	    state._fsp--;
@@ -12824,12 +12858,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    	    break;
 
             	    	default :
-            	    	    if ( cnt80 >= 1 ) break loop80;
+            	    	    if ( cnt82 >= 1 ) break loop82;
             	                EarlyExitException eee =
-            	                    new EarlyExitException(80, input);
+            	                    new EarlyExitException(82, input);
             	                throw eee;
             	        }
-            	        cnt80++;
+            	        cnt82++;
             	    } while (true);
 
             	     
@@ -12846,7 +12880,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop81;
+            	    break loop83;
                 }
             } while (true);
 
@@ -12862,7 +12896,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_10=(Token)match(input,15,FOLLOW_15_in_ruleContributionContext12270); 
+            otherlv_10=(Token)match(input,15,FOLLOW_15_in_ruleContributionContext12276); 
 
                 	newLeafNode(otherlv_10, grammarAccess.getContributionContextAccess().getRightCurlyBracketKeyword_5());
                 
@@ -12899,13 +12933,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5003:2: iv_ruleContributionChange= ruleContributionChange EOF
             {
              newCompositeNode(grammarAccess.getContributionChangeRule()); 
-            pushFollow(FOLLOW_ruleContributionChange_in_entryRuleContributionChange12306);
+            pushFollow(FOLLOW_ruleContributionChange_in_entryRuleContributionChange12312);
             iv_ruleContributionChange=ruleContributionChange();
 
             state._fsp--;
 
              current =iv_ruleContributionChange; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionChange12316); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionChange12322); 
 
             }
 
@@ -12960,7 +12994,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getContributionChangeAccess().getContributionContributionEndCrossReference_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleContributionChange12364);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleContributionChange12370);
             ruleQualifiedName();
 
             state._fsp--;
@@ -12974,27 +13008,27 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,51,FOLLOW_51_in_ruleContributionChange12376); 
+            otherlv_1=(Token)match(input,51,FOLLOW_51_in_ruleContributionChange12382); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getContributionChangeAccess().getColonKeyword_1());
                 
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5033:1: ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) )
-            int alt82=2;
-            int LA82_0 = input.LA(1);
+            int alt84=2;
+            int LA84_0 = input.LA(1);
 
-            if ( ((LA82_0>=63 && LA82_0<=69)) ) {
-                alt82=1;
+            if ( ((LA84_0>=63 && LA84_0<=69)) ) {
+                alt84=1;
             }
-            else if ( (LA82_0==RULE_QUALITATIVEVALUE) ) {
-                alt82=2;
+            else if ( (LA84_0==RULE_QUALITATIVEVALUE) ) {
+                alt84=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 82, 0, input);
+                    new NoViableAltException("", 84, 0, input);
 
                 throw nvae;
             }
-            switch (alt82) {
+            switch (alt84) {
                 case 1 :
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5033:2: ( (lv_newContribution_2_0= ruleContributionType ) )
                     {
@@ -13007,7 +13041,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getContributionChangeAccess().getNewContributionContributionTypeEnumRuleCall_2_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleContributionType_in_ruleContributionChange12398);
+                    pushFollow(FOLLOW_ruleContributionType_in_ruleContributionChange12404);
                     lv_newContribution_2_0=ruleContributionType();
 
                     state._fsp--;
@@ -13041,7 +13075,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5053:1: (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5054:3: lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE
                     {
-                    lv_newQuantitativeContribution_3_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionChange12421); 
+                    lv_newQuantitativeContribution_3_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionChange12427); 
 
                     			newLeafNode(lv_newQuantitativeContribution_3_0, grammarAccess.getContributionChangeAccess().getNewQuantitativeContributionQUALITATIVEVALUETerminalRuleCall_2_1_0()); 
                     		
@@ -13068,26 +13102,26 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
 
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5070:3: (otherlv_4= ';' | (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' ) )
-            int alt83=2;
-            int LA83_0 = input.LA(1);
+            int alt85=2;
+            int LA85_0 = input.LA(1);
 
-            if ( (LA83_0==17) ) {
-                alt83=1;
+            if ( (LA85_0==17) ) {
+                alt85=1;
             }
-            else if ( (LA83_0==14) ) {
-                alt83=2;
+            else if ( (LA85_0==14) ) {
+                alt85=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 83, 0, input);
+                    new NoViableAltException("", 85, 0, input);
 
                 throw nvae;
             }
-            switch (alt83) {
+            switch (alt85) {
                 case 1 :
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5070:5: otherlv_4= ';'
                     {
-                    otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleContributionChange12440); 
+                    otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleContributionChange12446); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getContributionChangeAccess().getSemicolonKeyword_3_0());
                         
@@ -13100,7 +13134,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5075:6: (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5075:8: otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}'
                     {
-                    otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleContributionChange12459); 
+                    otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleContributionChange12465); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getContributionChangeAccess().getLeftCurlyBracketKeyword_3_1_0());
                         
@@ -13113,7 +13147,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getContributionChangeAccess().getContribRangeContributionRangeParserRuleCall_3_1_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleContributionRange_in_ruleContributionChange12480);
+                    pushFollow(FOLLOW_ruleContributionRange_in_ruleContributionChange12486);
                     lv_contribRange_6_0=ruleContributionRange();
 
                     state._fsp--;
@@ -13135,7 +13169,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_7=(Token)match(input,15,FOLLOW_15_in_ruleContributionChange12492); 
+                    otherlv_7=(Token)match(input,15,FOLLOW_15_in_ruleContributionChange12498); 
 
                         	newLeafNode(otherlv_7, grammarAccess.getContributionChangeAccess().getRightCurlyBracketKeyword_3_1_2());
                         
@@ -13181,13 +13215,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5111:2: iv_ruleContributionRange= ruleContributionRange EOF
             {
              newCompositeNode(grammarAccess.getContributionRangeRule()); 
-            pushFollow(FOLLOW_ruleContributionRange_in_entryRuleContributionRange12530);
+            pushFollow(FOLLOW_ruleContributionRange_in_entryRuleContributionRange12536);
             iv_ruleContributionRange=ruleContributionRange();
 
             state._fsp--;
 
              current =iv_ruleContributionRange; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionRange12540); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionRange12546); 
 
             }
 
@@ -13241,24 +13275,24 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5129:3: ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_INT ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_INT ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_INT ) ) otherlv_12= ';' ) ) ) ) )+ {...}?
             {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5129:3: ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_INT ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_INT ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_INT ) ) otherlv_12= ';' ) ) ) ) )+
-            int cnt84=0;
-            loop84:
+            int cnt86=0;
+            loop86:
             do {
-                int alt84=4;
-                int LA84_0 = input.LA(1);
+                int alt86=4;
+                int LA86_0 = input.LA(1);
 
-                if ( LA84_0 ==39 && getUnorderedGroupHelper().canSelect(grammarAccess.getContributionRangeAccess().getUnorderedGroup(), 0) ) {
-                    alt84=1;
+                if ( LA86_0 ==39 && getUnorderedGroupHelper().canSelect(grammarAccess.getContributionRangeAccess().getUnorderedGroup(), 0) ) {
+                    alt86=1;
                 }
-                else if ( LA84_0 ==40 && getUnorderedGroupHelper().canSelect(grammarAccess.getContributionRangeAccess().getUnorderedGroup(), 1) ) {
-                    alt84=2;
+                else if ( LA86_0 ==40 && getUnorderedGroupHelper().canSelect(grammarAccess.getContributionRangeAccess().getUnorderedGroup(), 1) ) {
+                    alt86=2;
                 }
-                else if ( LA84_0 ==41 && getUnorderedGroupHelper().canSelect(grammarAccess.getContributionRangeAccess().getUnorderedGroup(), 2) ) {
-                    alt84=3;
+                else if ( LA86_0 ==41 && getUnorderedGroupHelper().canSelect(grammarAccess.getContributionRangeAccess().getUnorderedGroup(), 2) ) {
+                    alt86=3;
                 }
 
 
-                switch (alt84) {
+                switch (alt86) {
             	case 1 :
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5131:4: ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_INT ) ) otherlv_4= ';' ) ) ) )
             	    {
@@ -13283,11 +13317,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5136:16: (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_INT ) ) otherlv_4= ';' )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5136:18: otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_INT ) ) otherlv_4= ';'
             	    {
-            	    otherlv_1=(Token)match(input,39,FOLLOW_39_in_ruleContributionRange12622); 
+            	    otherlv_1=(Token)match(input,39,FOLLOW_39_in_ruleContributionRange12628); 
 
             	        	newLeafNode(otherlv_1, grammarAccess.getContributionRangeAccess().getStartKeyword_0_0());
             	        
-            	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleContributionRange12634); 
+            	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleContributionRange12640); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getContributionRangeAccess().getEqualsSignKeyword_0_1());
             	        
@@ -13297,7 +13331,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5145:1: (lv_start_3_0= RULE_INT )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5146:3: lv_start_3_0= RULE_INT
             	    {
-            	    lv_start_3_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleContributionRange12651); 
+            	    lv_start_3_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleContributionRange12657); 
 
             	    			newLeafNode(lv_start_3_0, grammarAccess.getContributionRangeAccess().getStartINTTerminalRuleCall_0_2_0()); 
             	    		
@@ -13317,7 +13351,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleContributionRange12668); 
+            	    otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleContributionRange12674); 
 
             	        	newLeafNode(otherlv_4, grammarAccess.getContributionRangeAccess().getSemicolonKeyword_0_3());
             	        
@@ -13363,11 +13397,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5178:16: (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_INT ) ) otherlv_8= ';' )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5178:18: otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_INT ) ) otherlv_8= ';'
             	    {
-            	    otherlv_5=(Token)match(input,40,FOLLOW_40_in_ruleContributionRange12736); 
+            	    otherlv_5=(Token)match(input,40,FOLLOW_40_in_ruleContributionRange12742); 
 
             	        	newLeafNode(otherlv_5, grammarAccess.getContributionRangeAccess().getEndKeyword_1_0());
             	        
-            	    otherlv_6=(Token)match(input,19,FOLLOW_19_in_ruleContributionRange12748); 
+            	    otherlv_6=(Token)match(input,19,FOLLOW_19_in_ruleContributionRange12754); 
 
             	        	newLeafNode(otherlv_6, grammarAccess.getContributionRangeAccess().getEqualsSignKeyword_1_1());
             	        
@@ -13377,7 +13411,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5187:1: (lv_end_7_0= RULE_INT )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5188:3: lv_end_7_0= RULE_INT
             	    {
-            	    lv_end_7_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleContributionRange12765); 
+            	    lv_end_7_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleContributionRange12771); 
 
             	    			newLeafNode(lv_end_7_0, grammarAccess.getContributionRangeAccess().getEndINTTerminalRuleCall_1_2_0()); 
             	    		
@@ -13397,7 +13431,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_8=(Token)match(input,17,FOLLOW_17_in_ruleContributionRange12782); 
+            	    otherlv_8=(Token)match(input,17,FOLLOW_17_in_ruleContributionRange12788); 
 
             	        	newLeafNode(otherlv_8, grammarAccess.getContributionRangeAccess().getSemicolonKeyword_1_3());
             	        
@@ -13443,11 +13477,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5220:16: (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_INT ) ) otherlv_12= ';' )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5220:18: otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_INT ) ) otherlv_12= ';'
             	    {
-            	    otherlv_9=(Token)match(input,41,FOLLOW_41_in_ruleContributionRange12850); 
+            	    otherlv_9=(Token)match(input,41,FOLLOW_41_in_ruleContributionRange12856); 
 
             	        	newLeafNode(otherlv_9, grammarAccess.getContributionRangeAccess().getStepKeyword_2_0());
             	        
-            	    otherlv_10=(Token)match(input,19,FOLLOW_19_in_ruleContributionRange12862); 
+            	    otherlv_10=(Token)match(input,19,FOLLOW_19_in_ruleContributionRange12868); 
 
             	        	newLeafNode(otherlv_10, grammarAccess.getContributionRangeAccess().getEqualsSignKeyword_2_1());
             	        
@@ -13457,7 +13491,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5229:1: (lv_step_11_0= RULE_INT )
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5230:3: lv_step_11_0= RULE_INT
             	    {
-            	    lv_step_11_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleContributionRange12879); 
+            	    lv_step_11_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleContributionRange12885); 
 
             	    			newLeafNode(lv_step_11_0, grammarAccess.getContributionRangeAccess().getStepINTTerminalRuleCall_2_2_0()); 
             	    		
@@ -13477,7 +13511,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_12=(Token)match(input,17,FOLLOW_17_in_ruleContributionRange12896); 
+            	    otherlv_12=(Token)match(input,17,FOLLOW_17_in_ruleContributionRange12902); 
 
             	        	newLeafNode(otherlv_12, grammarAccess.getContributionRangeAccess().getSemicolonKeyword_2_3());
             	        
@@ -13501,12 +13535,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt84 >= 1 ) break loop84;
+            	    if ( cnt86 >= 1 ) break loop86;
                         EarlyExitException eee =
-                            new EarlyExitException(84, input);
+                            new EarlyExitException(86, input);
                         throw eee;
                 }
-                cnt84++;
+                cnt86++;
             } while (true);
 
             if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getContributionRangeAccess().getUnorderedGroup()) ) {
@@ -13554,13 +13588,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5275:2: iv_ruleMetadata= ruleMetadata EOF
             {
              newCompositeNode(grammarAccess.getMetadataRule()); 
-            pushFollow(FOLLOW_ruleMetadata_in_entryRuleMetadata12978);
+            pushFollow(FOLLOW_ruleMetadata_in_entryRuleMetadata12984);
             iv_ruleMetadata=ruleMetadata();
 
             state._fsp--;
 
              current =iv_ruleMetadata; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMetadata12988); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMetadata12994); 
 
             }
 
@@ -13597,7 +13631,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5286:1: (otherlv_0= 'metadata' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= RULE_STRING ) ) otherlv_4= ';' )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5286:3: otherlv_0= 'metadata' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= RULE_STRING ) ) otherlv_4= ';'
             {
-            otherlv_0=(Token)match(input,52,FOLLOW_52_in_ruleMetadata13025); 
+            otherlv_0=(Token)match(input,52,FOLLOW_52_in_ruleMetadata13031); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getMetadataAccess().getMetadataKeyword_0());
                 
@@ -13607,7 +13641,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5291:1: (lv_name_1_0= RULE_ID )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5292:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMetadata13042); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMetadata13048); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getMetadataAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -13627,7 +13661,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleMetadata13059); 
+            otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleMetadata13065); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getMetadataAccess().getEqualsSignKeyword_2());
                 
@@ -13637,7 +13671,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5313:1: (lv_value_3_0= RULE_STRING )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5314:3: lv_value_3_0= RULE_STRING
             {
-            lv_value_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMetadata13076); 
+            lv_value_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMetadata13082); 
 
             			newLeafNode(lv_value_3_0, grammarAccess.getMetadataAccess().getValueSTRINGTerminalRuleCall_3_0()); 
             		
@@ -13657,7 +13691,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleMetadata13093); 
+            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleMetadata13099); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getMetadataAccess().getSemicolonKeyword_4());
                 
@@ -13694,13 +13728,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5344:2: iv_ruleComment= ruleComment EOF
             {
              newCompositeNode(grammarAccess.getCommentRule()); 
-            pushFollow(FOLLOW_ruleComment_in_entryRuleComment13129);
+            pushFollow(FOLLOW_ruleComment_in_entryRuleComment13135);
             iv_ruleComment=ruleComment();
 
             state._fsp--;
 
              current =iv_ruleComment; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleComment13139); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleComment13145); 
 
             }
 
@@ -13735,7 +13769,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5355:1: (otherlv_0= 'comment' ( (lv_content_1_0= RULE_STRING ) ) otherlv_2= ';' )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5355:3: otherlv_0= 'comment' ( (lv_content_1_0= RULE_STRING ) ) otherlv_2= ';'
             {
-            otherlv_0=(Token)match(input,53,FOLLOW_53_in_ruleComment13176); 
+            otherlv_0=(Token)match(input,53,FOLLOW_53_in_ruleComment13182); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getCommentAccess().getCommentKeyword_0());
                 
@@ -13745,7 +13779,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5360:1: (lv_content_1_0= RULE_STRING )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5361:3: lv_content_1_0= RULE_STRING
             {
-            lv_content_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleComment13193); 
+            lv_content_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleComment13199); 
 
             			newLeafNode(lv_content_1_0, grammarAccess.getCommentAccess().getContentSTRINGTerminalRuleCall_1_0()); 
             		
@@ -13765,7 +13799,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,17,FOLLOW_17_in_ruleComment13210); 
+            otherlv_2=(Token)match(input,17,FOLLOW_17_in_ruleComment13216); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getCommentAccess().getSemicolonKeyword_2());
                 
@@ -13802,13 +13836,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5391:2: iv_ruleIndicatorGroup= ruleIndicatorGroup EOF
             {
              newCompositeNode(grammarAccess.getIndicatorGroupRule()); 
-            pushFollow(FOLLOW_ruleIndicatorGroup_in_entryRuleIndicatorGroup13246);
+            pushFollow(FOLLOW_ruleIndicatorGroup_in_entryRuleIndicatorGroup13252);
             iv_ruleIndicatorGroup=ruleIndicatorGroup();
 
             state._fsp--;
 
              current =iv_ruleIndicatorGroup; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIndicatorGroup13256); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIndicatorGroup13262); 
 
             }
 
@@ -13845,7 +13879,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5402:1: (otherlv_0= 'indicatorGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';' )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5402:3: otherlv_0= 'indicatorGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';'
             {
-            otherlv_0=(Token)match(input,54,FOLLOW_54_in_ruleIndicatorGroup13293); 
+            otherlv_0=(Token)match(input,54,FOLLOW_54_in_ruleIndicatorGroup13299); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getIndicatorGroupAccess().getIndicatorGroupKeyword_0());
                 
@@ -13855,7 +13889,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5407:1: (lv_name_1_0= RULE_ID )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5408:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleIndicatorGroup13310); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleIndicatorGroup13316); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getIndicatorGroupAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -13875,7 +13909,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,35,FOLLOW_35_in_ruleIndicatorGroup13327); 
+            otherlv_2=(Token)match(input,35,FOLLOW_35_in_ruleIndicatorGroup13333); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getIndicatorGroupAccess().getIncludesKeyword_2());
                 
@@ -13893,7 +13927,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getIndicatorGroupAccess().getIndicatorsIndicatorCrossReference_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleIndicatorGroup13350);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleIndicatorGroup13356);
             ruleQualifiedName();
 
             state._fsp--;
@@ -13908,21 +13942,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
 
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5443:2: (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
-            loop85:
+            loop87:
             do {
-                int alt85=2;
-                int LA85_0 = input.LA(1);
+                int alt87=2;
+                int LA87_0 = input.LA(1);
 
-                if ( (LA85_0==29) ) {
-                    alt85=1;
+                if ( (LA87_0==29) ) {
+                    alt87=1;
                 }
 
 
-                switch (alt85) {
+                switch (alt87) {
             	case 1 :
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5443:4: otherlv_4= ',' ( ( ruleQualifiedName ) )
             	    {
-            	    otherlv_4=(Token)match(input,29,FOLLOW_29_in_ruleIndicatorGroup13363); 
+            	    otherlv_4=(Token)match(input,29,FOLLOW_29_in_ruleIndicatorGroup13369); 
 
             	        	newLeafNode(otherlv_4, grammarAccess.getIndicatorGroupAccess().getCommaKeyword_4_0());
             	        
@@ -13940,7 +13974,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	     
             	    	        newCompositeNode(grammarAccess.getIndicatorGroupAccess().getIndicatorsIndicatorCrossReference_4_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleIndicatorGroup13386);
+            	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleIndicatorGroup13392);
             	    ruleQualifiedName();
 
             	    state._fsp--;
@@ -13959,11 +13993,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop85;
+            	    break loop87;
                 }
             } while (true);
 
-            otherlv_6=(Token)match(input,17,FOLLOW_17_in_ruleIndicatorGroup13400); 
+            otherlv_6=(Token)match(input,17,FOLLOW_17_in_ruleIndicatorGroup13406); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getIndicatorGroupAccess().getSemicolonKeyword_5());
                 
@@ -14000,13 +14034,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5476:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
              newCompositeNode(grammarAccess.getQualifiedNameRule()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName13437);
+            pushFollow(FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName13443);
             iv_ruleQualifiedName=ruleQualifiedName();
 
             state._fsp--;
 
              current =iv_ruleQualifiedName.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedName13448); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedName13454); 
 
             }
 
@@ -14041,7 +14075,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5487:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5487:6: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName13488); 
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName13494); 
 
             		current.merge(this_ID_0);
                 
@@ -14049,26 +14083,26 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                 newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
                 
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5494:1: (kw= '.' this_ID_2= RULE_ID )*
-            loop86:
+            loop88:
             do {
-                int alt86=2;
-                int LA86_0 = input.LA(1);
+                int alt88=2;
+                int LA88_0 = input.LA(1);
 
-                if ( (LA86_0==55) ) {
-                    alt86=1;
+                if ( (LA88_0==55) ) {
+                    alt88=1;
                 }
 
 
-                switch (alt86) {
+                switch (alt88) {
             	case 1 :
             	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5495:2: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,55,FOLLOW_55_in_ruleQualifiedName13507); 
+            	    kw=(Token)match(input,55,FOLLOW_55_in_ruleQualifiedName13513); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
             	        
-            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName13522); 
+            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName13528); 
 
             	    		current.merge(this_ID_2);
             	        
@@ -14080,7 +14114,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop86;
+            	    break loop88;
                 }
             } while (true);
 
@@ -14120,43 +14154,43 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5518:1: ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'high' ) | (enumLiteral_2= 'medium' ) | (enumLiteral_3= 'low' ) )
             {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5518:1: ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'high' ) | (enumLiteral_2= 'medium' ) | (enumLiteral_3= 'low' ) )
-            int alt87=4;
+            int alt89=4;
             switch ( input.LA(1) ) {
             case 56:
                 {
-                alt87=1;
+                alt89=1;
                 }
                 break;
             case 57:
                 {
-                alt87=2;
+                alt89=2;
                 }
                 break;
             case 58:
                 {
-                alt87=3;
+                alt89=3;
                 }
                 break;
             case 59:
                 {
-                alt87=4;
+                alt89=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 87, 0, input);
+                    new NoViableAltException("", 89, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt87) {
+            switch (alt89) {
                 case 1 :
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5518:2: (enumLiteral_0= 'none' )
                     {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5518:2: (enumLiteral_0= 'none' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5518:4: enumLiteral_0= 'none'
                     {
-                    enumLiteral_0=(Token)match(input,56,FOLLOW_56_in_ruleImportanceType13583); 
+                    enumLiteral_0=(Token)match(input,56,FOLLOW_56_in_ruleImportanceType13589); 
 
                             current = grammarAccess.getImportanceTypeAccess().getNoneEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getImportanceTypeAccess().getNoneEnumLiteralDeclaration_0()); 
@@ -14173,7 +14207,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5524:6: (enumLiteral_1= 'high' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5524:8: enumLiteral_1= 'high'
                     {
-                    enumLiteral_1=(Token)match(input,57,FOLLOW_57_in_ruleImportanceType13600); 
+                    enumLiteral_1=(Token)match(input,57,FOLLOW_57_in_ruleImportanceType13606); 
 
                             current = grammarAccess.getImportanceTypeAccess().getHighEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getImportanceTypeAccess().getHighEnumLiteralDeclaration_1()); 
@@ -14190,7 +14224,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5530:6: (enumLiteral_2= 'medium' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5530:8: enumLiteral_2= 'medium'
                     {
-                    enumLiteral_2=(Token)match(input,58,FOLLOW_58_in_ruleImportanceType13617); 
+                    enumLiteral_2=(Token)match(input,58,FOLLOW_58_in_ruleImportanceType13623); 
 
                             current = grammarAccess.getImportanceTypeAccess().getMediumEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getImportanceTypeAccess().getMediumEnumLiteralDeclaration_2()); 
@@ -14207,7 +14241,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5536:6: (enumLiteral_3= 'low' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5536:8: enumLiteral_3= 'low'
                     {
-                    enumLiteral_3=(Token)match(input,59,FOLLOW_59_in_ruleImportanceType13634); 
+                    enumLiteral_3=(Token)match(input,59,FOLLOW_59_in_ruleImportanceType13640); 
 
                             current = grammarAccess.getImportanceTypeAccess().getLowEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getImportanceTypeAccess().getLowEnumLiteralDeclaration_3()); 
@@ -14253,38 +14287,38 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5549:1: ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) | (enumLiteral_2= 'xor' ) )
             {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5549:1: ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) | (enumLiteral_2= 'xor' ) )
-            int alt88=3;
+            int alt90=3;
             switch ( input.LA(1) ) {
             case 60:
                 {
-                alt88=1;
+                alt90=1;
                 }
                 break;
             case 61:
                 {
-                alt88=2;
+                alt90=2;
                 }
                 break;
             case 62:
                 {
-                alt88=3;
+                alt90=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 88, 0, input);
+                    new NoViableAltException("", 90, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt88) {
+            switch (alt90) {
                 case 1 :
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5549:2: (enumLiteral_0= 'and' )
                     {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5549:2: (enumLiteral_0= 'and' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5549:4: enumLiteral_0= 'and'
                     {
-                    enumLiteral_0=(Token)match(input,60,FOLLOW_60_in_ruleDecompositionType13679); 
+                    enumLiteral_0=(Token)match(input,60,FOLLOW_60_in_ruleDecompositionType13685); 
 
                             current = grammarAccess.getDecompositionTypeAccess().getAndEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getDecompositionTypeAccess().getAndEnumLiteralDeclaration_0()); 
@@ -14301,7 +14335,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5555:6: (enumLiteral_1= 'or' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5555:8: enumLiteral_1= 'or'
                     {
-                    enumLiteral_1=(Token)match(input,61,FOLLOW_61_in_ruleDecompositionType13696); 
+                    enumLiteral_1=(Token)match(input,61,FOLLOW_61_in_ruleDecompositionType13702); 
 
                             current = grammarAccess.getDecompositionTypeAccess().getOrEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getDecompositionTypeAccess().getOrEnumLiteralDeclaration_1()); 
@@ -14318,7 +14352,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5561:6: (enumLiteral_2= 'xor' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5561:8: enumLiteral_2= 'xor'
                     {
-                    enumLiteral_2=(Token)match(input,62,FOLLOW_62_in_ruleDecompositionType13713); 
+                    enumLiteral_2=(Token)match(input,62,FOLLOW_62_in_ruleDecompositionType13719); 
 
                             current = grammarAccess.getDecompositionTypeAccess().getXorEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getDecompositionTypeAccess().getXorEnumLiteralDeclaration_2()); 
@@ -14368,58 +14402,58 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5574:1: ( (enumLiteral_0= 'help' ) | (enumLiteral_1= 'make' ) | (enumLiteral_2= 'somePositive' ) | (enumLiteral_3= 'unknown' ) | (enumLiteral_4= 'someNegative' ) | (enumLiteral_5= 'hurt' ) | (enumLiteral_6= 'break' ) )
             {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5574:1: ( (enumLiteral_0= 'help' ) | (enumLiteral_1= 'make' ) | (enumLiteral_2= 'somePositive' ) | (enumLiteral_3= 'unknown' ) | (enumLiteral_4= 'someNegative' ) | (enumLiteral_5= 'hurt' ) | (enumLiteral_6= 'break' ) )
-            int alt89=7;
+            int alt91=7;
             switch ( input.LA(1) ) {
             case 63:
                 {
-                alt89=1;
+                alt91=1;
                 }
                 break;
             case 64:
                 {
-                alt89=2;
+                alt91=2;
                 }
                 break;
             case 65:
                 {
-                alt89=3;
+                alt91=3;
                 }
                 break;
             case 66:
                 {
-                alt89=4;
+                alt91=4;
                 }
                 break;
             case 67:
                 {
-                alt89=5;
+                alt91=5;
                 }
                 break;
             case 68:
                 {
-                alt89=6;
+                alt91=6;
                 }
                 break;
             case 69:
                 {
-                alt89=7;
+                alt91=7;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 89, 0, input);
+                    new NoViableAltException("", 91, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt89) {
+            switch (alt91) {
                 case 1 :
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5574:2: (enumLiteral_0= 'help' )
                     {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5574:2: (enumLiteral_0= 'help' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5574:4: enumLiteral_0= 'help'
                     {
-                    enumLiteral_0=(Token)match(input,63,FOLLOW_63_in_ruleContributionType13758); 
+                    enumLiteral_0=(Token)match(input,63,FOLLOW_63_in_ruleContributionType13764); 
 
                             current = grammarAccess.getContributionTypeAccess().getHelpEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getContributionTypeAccess().getHelpEnumLiteralDeclaration_0()); 
@@ -14436,7 +14470,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5580:6: (enumLiteral_1= 'make' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5580:8: enumLiteral_1= 'make'
                     {
-                    enumLiteral_1=(Token)match(input,64,FOLLOW_64_in_ruleContributionType13775); 
+                    enumLiteral_1=(Token)match(input,64,FOLLOW_64_in_ruleContributionType13781); 
 
                             current = grammarAccess.getContributionTypeAccess().getMakeEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getContributionTypeAccess().getMakeEnumLiteralDeclaration_1()); 
@@ -14453,7 +14487,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5586:6: (enumLiteral_2= 'somePositive' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5586:8: enumLiteral_2= 'somePositive'
                     {
-                    enumLiteral_2=(Token)match(input,65,FOLLOW_65_in_ruleContributionType13792); 
+                    enumLiteral_2=(Token)match(input,65,FOLLOW_65_in_ruleContributionType13798); 
 
                             current = grammarAccess.getContributionTypeAccess().getSomePositiveEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getContributionTypeAccess().getSomePositiveEnumLiteralDeclaration_2()); 
@@ -14470,7 +14504,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5592:6: (enumLiteral_3= 'unknown' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5592:8: enumLiteral_3= 'unknown'
                     {
-                    enumLiteral_3=(Token)match(input,66,FOLLOW_66_in_ruleContributionType13809); 
+                    enumLiteral_3=(Token)match(input,66,FOLLOW_66_in_ruleContributionType13815); 
 
                             current = grammarAccess.getContributionTypeAccess().getUnknownEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getContributionTypeAccess().getUnknownEnumLiteralDeclaration_3()); 
@@ -14487,7 +14521,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5598:6: (enumLiteral_4= 'someNegative' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5598:8: enumLiteral_4= 'someNegative'
                     {
-                    enumLiteral_4=(Token)match(input,67,FOLLOW_67_in_ruleContributionType13826); 
+                    enumLiteral_4=(Token)match(input,67,FOLLOW_67_in_ruleContributionType13832); 
 
                             current = grammarAccess.getContributionTypeAccess().getSomeNegativeEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getContributionTypeAccess().getSomeNegativeEnumLiteralDeclaration_4()); 
@@ -14504,7 +14538,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5604:6: (enumLiteral_5= 'hurt' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5604:8: enumLiteral_5= 'hurt'
                     {
-                    enumLiteral_5=(Token)match(input,68,FOLLOW_68_in_ruleContributionType13843); 
+                    enumLiteral_5=(Token)match(input,68,FOLLOW_68_in_ruleContributionType13849); 
 
                             current = grammarAccess.getContributionTypeAccess().getHurtEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getContributionTypeAccess().getHurtEnumLiteralDeclaration_5()); 
@@ -14521,7 +14555,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5610:6: (enumLiteral_6= 'break' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5610:8: enumLiteral_6= 'break'
                     {
-                    enumLiteral_6=(Token)match(input,69,FOLLOW_69_in_ruleContributionType13860); 
+                    enumLiteral_6=(Token)match(input,69,FOLLOW_69_in_ruleContributionType13866); 
 
                             current = grammarAccess.getContributionTypeAccess().getBreakEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_6, grammarAccess.getContributionTypeAccess().getBreakEnumLiteralDeclaration_6()); 
@@ -14571,58 +14605,58 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5623:1: ( (enumLiteral_0= 'denied' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'none' ) )
             {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5623:1: ( (enumLiteral_0= 'denied' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'none' ) )
-            int alt90=7;
+            int alt92=7;
             switch ( input.LA(1) ) {
             case 70:
                 {
-                alt90=1;
+                alt92=1;
                 }
                 break;
             case 71:
                 {
-                alt90=2;
+                alt92=2;
                 }
                 break;
             case 72:
                 {
-                alt90=3;
+                alt92=3;
                 }
                 break;
             case 73:
                 {
-                alt90=4;
+                alt92=4;
                 }
                 break;
             case 74:
                 {
-                alt90=5;
+                alt92=5;
                 }
                 break;
             case 66:
                 {
-                alt90=6;
+                alt92=6;
                 }
                 break;
             case 56:
                 {
-                alt90=7;
+                alt92=7;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 90, 0, input);
+                    new NoViableAltException("", 92, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt90) {
+            switch (alt92) {
                 case 1 :
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5623:2: (enumLiteral_0= 'denied' )
                     {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5623:2: (enumLiteral_0= 'denied' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5623:4: enumLiteral_0= 'denied'
                     {
-                    enumLiteral_0=(Token)match(input,70,FOLLOW_70_in_ruleQualitativeLabel13905); 
+                    enumLiteral_0=(Token)match(input,70,FOLLOW_70_in_ruleQualitativeLabel13911); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getDeniedEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getQualitativeLabelAccess().getDeniedEnumLiteralDeclaration_0()); 
@@ -14639,7 +14673,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5629:6: (enumLiteral_1= 'weaklyDenied' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5629:8: enumLiteral_1= 'weaklyDenied'
                     {
-                    enumLiteral_1=(Token)match(input,71,FOLLOW_71_in_ruleQualitativeLabel13922); 
+                    enumLiteral_1=(Token)match(input,71,FOLLOW_71_in_ruleQualitativeLabel13928); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getWeaklyDeniedEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getQualitativeLabelAccess().getWeaklyDeniedEnumLiteralDeclaration_1()); 
@@ -14656,7 +14690,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5635:6: (enumLiteral_2= 'weaklySatisfied' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5635:8: enumLiteral_2= 'weaklySatisfied'
                     {
-                    enumLiteral_2=(Token)match(input,72,FOLLOW_72_in_ruleQualitativeLabel13939); 
+                    enumLiteral_2=(Token)match(input,72,FOLLOW_72_in_ruleQualitativeLabel13945); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getWeaklySatisfiedEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getQualitativeLabelAccess().getWeaklySatisfiedEnumLiteralDeclaration_2()); 
@@ -14673,7 +14707,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5641:6: (enumLiteral_3= 'satisfied' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5641:8: enumLiteral_3= 'satisfied'
                     {
-                    enumLiteral_3=(Token)match(input,73,FOLLOW_73_in_ruleQualitativeLabel13956); 
+                    enumLiteral_3=(Token)match(input,73,FOLLOW_73_in_ruleQualitativeLabel13962); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getSatisfiedEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getQualitativeLabelAccess().getSatisfiedEnumLiteralDeclaration_3()); 
@@ -14690,7 +14724,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5647:6: (enumLiteral_4= 'conflict' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5647:8: enumLiteral_4= 'conflict'
                     {
-                    enumLiteral_4=(Token)match(input,74,FOLLOW_74_in_ruleQualitativeLabel13973); 
+                    enumLiteral_4=(Token)match(input,74,FOLLOW_74_in_ruleQualitativeLabel13979); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getConflictEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getQualitativeLabelAccess().getConflictEnumLiteralDeclaration_4()); 
@@ -14707,7 +14741,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5653:6: (enumLiteral_5= 'unknown' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5653:8: enumLiteral_5= 'unknown'
                     {
-                    enumLiteral_5=(Token)match(input,66,FOLLOW_66_in_ruleQualitativeLabel13990); 
+                    enumLiteral_5=(Token)match(input,66,FOLLOW_66_in_ruleQualitativeLabel13996); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getUnknownEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getQualitativeLabelAccess().getUnknownEnumLiteralDeclaration_5()); 
@@ -14724,7 +14758,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5659:6: (enumLiteral_6= 'none' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5659:8: enumLiteral_6= 'none'
                     {
-                    enumLiteral_6=(Token)match(input,56,FOLLOW_56_in_ruleQualitativeLabel14007); 
+                    enumLiteral_6=(Token)match(input,56,FOLLOW_56_in_ruleQualitativeLabel14013); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getNoneEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_6, grammarAccess.getQualitativeLabelAccess().getNoneEnumLiteralDeclaration_6()); 
@@ -14769,29 +14803,29 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5678:1: ( (enumLiteral_0= 'false' ) | (enumLiteral_1= 'true' ) )
             {
             // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5678:1: ( (enumLiteral_0= 'false' ) | (enumLiteral_1= 'true' ) )
-            int alt91=2;
-            int LA91_0 = input.LA(1);
+            int alt93=2;
+            int LA93_0 = input.LA(1);
 
-            if ( (LA91_0==75) ) {
-                alt91=1;
+            if ( (LA93_0==75) ) {
+                alt93=1;
             }
-            else if ( (LA91_0==76) ) {
-                alt91=2;
+            else if ( (LA93_0==76) ) {
+                alt93=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 91, 0, input);
+                    new NoViableAltException("", 93, 0, input);
 
                 throw nvae;
             }
-            switch (alt91) {
+            switch (alt93) {
                 case 1 :
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5678:2: (enumLiteral_0= 'false' )
                     {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5678:2: (enumLiteral_0= 'false' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5678:4: enumLiteral_0= 'false'
                     {
-                    enumLiteral_0=(Token)match(input,75,FOLLOW_75_in_ruleBoolean14058); 
+                    enumLiteral_0=(Token)match(input,75,FOLLOW_75_in_ruleBoolean14064); 
 
                             current = grammarAccess.getBooleanAccess().getFalseEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getBooleanAccess().getFalseEnumLiteralDeclaration_0()); 
@@ -14808,7 +14842,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5684:6: (enumLiteral_1= 'true' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5684:8: enumLiteral_1= 'true'
                     {
-                    enumLiteral_1=(Token)match(input,76,FOLLOW_76_in_ruleBoolean14075); 
+                    enumLiteral_1=(Token)match(input,76,FOLLOW_76_in_ruleBoolean14081); 
 
                             current = grammarAccess.getBooleanAccess().getTrueEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getBooleanAccess().getTrueEnumLiteralDeclaration_1()); 
@@ -14854,14 +14888,14 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
         "\1\66\1\uffff\1\67\12\uffff\1\4\2\uffff\1\67";
     static final String DFA3_acceptS =
         "\1\uffff\1\1\1\uffff\1\3\1\4\1\5\1\6\1\10\1\11\1\12\1\13\1\14\1"+
-        "\15\1\uffff\1\2\1\7\1\uffff";
+        "\15\1\uffff\1\7\1\2\1\uffff";
     static final String DFA3_specialS =
         "\21\uffff}>";
     static final String[] DFA3_transitionS = {
             "\1\2\13\uffff\1\3\5\uffff\1\1\1\uffff\5\1\4\uffff\1\14\1\4"+
             "\1\uffff\1\6\13\uffff\1\11\1\7\1\10\1\uffff\1\12\1\13\1\5",
             "",
-            "\1\16\16\uffff\1\17\12\uffff\3\16\26\uffff\1\15",
+            "\1\17\16\uffff\1\16\12\uffff\3\17\26\uffff\1\15",
             "",
             "",
             "",
@@ -14875,7 +14909,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             "\1\20",
             "",
             "",
-            "\1\16\16\uffff\1\17\12\uffff\3\16\26\uffff\1\15"
+            "\1\17\16\uffff\1\16\12\uffff\3\17\26\uffff\1\15"
     };
 
     static final short[] DFA3_eot = DFA.unpackEncodedString(DFA3_eotS);
@@ -14922,7 +14956,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
     static final String DFA11_acceptS =
         "\1\uffff\1\2\7\uffff\1\1";
     static final String DFA11_specialS =
-        "\2\uffff\1\2\1\3\1\0\1\4\1\1\1\5\1\6\1\uffff}>";
+        "\2\uffff\1\3\1\4\1\0\1\5\1\1\1\6\1\2\1\uffff}>";
     static final String[] DFA11_transitionS = {
             "\1\10\12\uffff\1\1\2\uffff\1\1\1\uffff\2\1\1\2\1\uffff\1\3"+
             "\1\4\1\5\1\6\1\7\27\uffff\1\1",
@@ -15004,6 +15038,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
+                        int LA11_8 = input.LA(1);
+
+                         
+                        int index11_8 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((true)) ) {s = 9;}
+
+                        else if ( (true) ) {s = 1;}
+
+                         
+                        input.seek(index11_8);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 3 : 
                         int LA11_2 = input.LA(1);
 
                          
@@ -15018,7 +15067,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                         input.seek(index11_2);
                         if ( s>=0 ) return s;
                         break;
-                    case 3 : 
+                    case 4 : 
                         int LA11_3 = input.LA(1);
 
                          
@@ -15033,7 +15082,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                         input.seek(index11_3);
                         if ( s>=0 ) return s;
                         break;
-                    case 4 : 
+                    case 5 : 
                         int LA11_5 = input.LA(1);
 
                          
@@ -15048,7 +15097,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                         input.seek(index11_5);
                         if ( s>=0 ) return s;
                         break;
-                    case 5 : 
+                    case 6 : 
                         int LA11_7 = input.LA(1);
 
                          
@@ -15061,21 +15110,6 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                          
                         input.seek(index11_7);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 6 : 
-                        int LA11_8 = input.LA(1);
-
-                         
-                        int index11_8 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( ((true)) ) {s = 9;}
-
-                        else if ( (true) ) {s = 1;}
-
-                         
-                        input.seek(index11_8);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -15452,194 +15486,194 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleStrategyGroup_in_entryRuleStrategyGroup8773 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleStrategyGroup8783 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_34_in_ruleStrategyGroup8820 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleStrategyGroup8837 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_ruleStrategyGroup8854 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleStrategyGroup8877 = new BitSet(new long[]{0x0000000020020000L});
-    public static final BitSet FOLLOW_29_in_ruleStrategyGroup8890 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleStrategyGroup8913 = new BitSet(new long[]{0x0000000020020000L});
-    public static final BitSet FOLLOW_17_in_ruleStrategyGroup8927 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEvaluationStrategy_in_entryRuleEvaluationStrategy8963 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEvaluationStrategy8973 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleEvaluationStrategy9010 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleEvaluationStrategy9027 = new BitSet(new long[]{0x0000002000004000L});
-    public static final BitSet FOLLOW_37_in_ruleEvaluationStrategy9045 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleEvaluationStrategy9068 = new BitSet(new long[]{0x0000000020004000L});
-    public static final BitSet FOLLOW_29_in_ruleEvaluationStrategy9081 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleEvaluationStrategy9104 = new BitSet(new long[]{0x0000000020004000L});
-    public static final BitSet FOLLOW_14_in_ruleEvaluationStrategy9120 = new BitSet(new long[]{0x0010000000008010L});
-    public static final BitSet FOLLOW_ruleMetadata_in_ruleEvaluationStrategy9186 = new BitSet(new long[]{0x0010000000008010L});
-    public static final BitSet FOLLOW_ruleEvaluation_in_ruleEvaluationStrategy9262 = new BitSet(new long[]{0x0010000000008010L});
-    public static final BitSet FOLLOW_15_in_ruleEvaluationStrategy9315 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEvaluation_in_entryRuleEvaluation9351 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEvaluation9361 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleEvaluation9409 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleEvaluation9421 = new BitSet(new long[]{0x0100000000000040L,0x00000000000007C4L});
-    public static final BitSet FOLLOW_ruleQualitativeLabel_in_ruleEvaluation9443 = new BitSet(new long[]{0x0000FF800002C000L});
-    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluation9466 = new BitSet(new long[]{0x0000FF800002C000L});
-    public static final BitSet FOLLOW_14_in_ruleEvaluation9531 = new BitSet(new long[]{0x0000FFC00000C002L});
-    public static final BitSet FOLLOW_38_in_ruleEvaluation9550 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleEvaluation9575 = new BitSet(new long[]{0x0000FF800000C002L});
-    public static final BitSet FOLLOW_ruleEvaluationRange_in_ruleEvaluation9653 = new BitSet(new long[]{0x0000FF800000C002L});
-    public static final BitSet FOLLOW_ruleKPIEvalValueSet_in_ruleEvaluation9729 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleEvaluation9742 = new BitSet(new long[]{0x0000FF800000C002L});
-    public static final BitSet FOLLOW_17_in_ruleEvaluation9807 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEvaluationRange_in_entryRuleEvaluationRange9844 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEvaluationRange9854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleEvaluationRange9936 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleEvaluationRange9948 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleEvaluationRange9965 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleEvaluationRange9982 = new BitSet(new long[]{0x0000038000000002L});
-    public static final BitSet FOLLOW_40_in_ruleEvaluationRange10050 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleEvaluationRange10062 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleEvaluationRange10079 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleEvaluationRange10096 = new BitSet(new long[]{0x0000038000000002L});
-    public static final BitSet FOLLOW_41_in_ruleEvaluationRange10164 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleEvaluationRange10176 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleEvaluationRange10193 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleEvaluationRange10210 = new BitSet(new long[]{0x0000038000000002L});
-    public static final BitSet FOLLOW_ruleKPIEvalValueSet_in_entryRuleKPIEvalValueSet10292 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleKPIEvalValueSet10302 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleKPIQuantitativeEvalValueSet_in_ruleKPIEvalValueSet10349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleKPIQualitativeEvalValueSet_in_ruleKPIEvalValueSet10376 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleKPIQuantitativeEvalValueSet_in_entryRuleKPIQuantitativeEvalValueSet10411 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleKPIQuantitativeEvalValueSet10421 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleKPIQuantitativeEvalValueSet10503 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10515 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet10532 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet10549 = new BitSet(new long[]{0x00007C0000000002L});
-    public static final BitSet FOLLOW_43_in_ruleKPIQuantitativeEvalValueSet10617 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10629 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet10646 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet10663 = new BitSet(new long[]{0x00007C0000000002L});
-    public static final BitSet FOLLOW_44_in_ruleKPIQuantitativeEvalValueSet10731 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10743 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet10760 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet10777 = new BitSet(new long[]{0x00007C0000000002L});
-    public static final BitSet FOLLOW_45_in_ruleKPIQuantitativeEvalValueSet10845 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10857 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet10874 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet10891 = new BitSet(new long[]{0x00007C0000000002L});
-    public static final BitSet FOLLOW_46_in_ruleKPIQuantitativeEvalValueSet10959 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10971 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleKPIQuantitativeEvalValueSet10988 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11005 = new BitSet(new long[]{0x00007C0000000002L});
-    public static final BitSet FOLLOW_ruleKPIQualitativeEvalValueSet_in_entryRuleKPIQualitativeEvalValueSet11087 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleKPIQualitativeEvalValueSet11097 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_ruleKPIQualitativeEvalValueSet11134 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleKPIQualitativeEvalValueSet11146 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleKPIQualitativeEvalValueSet11169 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleKPIQualitativeEvalValueSet11181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualitativeMapping_in_entryRuleQualitativeMapping11217 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQualitativeMapping11227 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_ruleQualitativeMapping11264 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleQualitativeMapping11281 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleQualitativeMapping11298 = new BitSet(new long[]{0x0010000000008020L});
-    public static final BitSet FOLLOW_ruleMetadata_in_ruleQualitativeMapping11364 = new BitSet(new long[]{0x0010000000008020L});
-    public static final BitSet FOLLOW_ruleMapping_in_ruleQualitativeMapping11440 = new BitSet(new long[]{0x0010000000008020L});
-    public static final BitSet FOLLOW_15_in_ruleQualitativeMapping11493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMapping_in_entryRuleMapping11529 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMapping11539 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleMapping11581 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleMapping11598 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleMapping11615 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleMapping11632 = new BitSet(new long[]{0x0100000000000000L,0x00000000000007C4L});
-    public static final BitSet FOLLOW_ruleQualitativeLabel_in_ruleMapping11653 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleMapping11665 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001800L});
-    public static final BitSet FOLLOW_ruleBoolean_in_ruleMapping11686 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleMapping11698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContributionGroup_in_entryRuleContributionGroup11734 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContributionGroup11744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_ruleContributionGroup11781 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionGroup11798 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_ruleContributionGroup11815 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionGroup11835 = new BitSet(new long[]{0x0000000020020000L});
-    public static final BitSet FOLLOW_29_in_ruleContributionGroup11848 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionGroup11868 = new BitSet(new long[]{0x0000000020020000L});
-    public static final BitSet FOLLOW_17_in_ruleContributionGroup11882 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContributionContext_in_entryRuleContributionContext11918 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContributionContext11928 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_ruleContributionContext11965 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionContext11982 = new BitSet(new long[]{0x0000002000004000L});
-    public static final BitSet FOLLOW_37_in_ruleContributionContext12000 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContributionContext12023 = new BitSet(new long[]{0x0000000020004000L});
-    public static final BitSet FOLLOW_29_in_ruleContributionContext12036 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContributionContext12059 = new BitSet(new long[]{0x0000000020004000L});
-    public static final BitSet FOLLOW_14_in_ruleContributionContext12075 = new BitSet(new long[]{0x0010000000008010L});
-    public static final BitSet FOLLOW_ruleMetadata_in_ruleContributionContext12141 = new BitSet(new long[]{0x0010000000008010L});
-    public static final BitSet FOLLOW_ruleContributionChange_in_ruleContributionContext12217 = new BitSet(new long[]{0x0010000000008010L});
-    public static final BitSet FOLLOW_15_in_ruleContributionContext12270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContributionChange_in_entryRuleContributionChange12306 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContributionChange12316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContributionChange12364 = new BitSet(new long[]{0x0008000000000000L});
-    public static final BitSet FOLLOW_51_in_ruleContributionChange12376 = new BitSet(new long[]{0x8000000000000040L,0x000000000000003FL});
-    public static final BitSet FOLLOW_ruleContributionType_in_ruleContributionChange12398 = new BitSet(new long[]{0x0000000000024000L});
-    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionChange12421 = new BitSet(new long[]{0x0000000000024000L});
-    public static final BitSet FOLLOW_17_in_ruleContributionChange12440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_ruleContributionChange12459 = new BitSet(new long[]{0x0000038000000000L});
-    public static final BitSet FOLLOW_ruleContributionRange_in_ruleContributionChange12480 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleContributionChange12492 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContributionRange_in_entryRuleContributionRange12530 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContributionRange12540 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleContributionRange12622 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleContributionRange12634 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleContributionRange12651 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleContributionRange12668 = new BitSet(new long[]{0x0000038000000002L});
-    public static final BitSet FOLLOW_40_in_ruleContributionRange12736 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleContributionRange12748 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleContributionRange12765 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleContributionRange12782 = new BitSet(new long[]{0x0000038000000002L});
-    public static final BitSet FOLLOW_41_in_ruleContributionRange12850 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleContributionRange12862 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleContributionRange12879 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleContributionRange12896 = new BitSet(new long[]{0x0000038000000002L});
-    public static final BitSet FOLLOW_ruleMetadata_in_entryRuleMetadata12978 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMetadata12988 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_ruleMetadata13025 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleMetadata13042 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleMetadata13059 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleMetadata13076 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleMetadata13093 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComment_in_entryRuleComment13129 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleComment13139 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_ruleComment13176 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleComment13193 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleComment13210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIndicatorGroup_in_entryRuleIndicatorGroup13246 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIndicatorGroup13256 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_ruleIndicatorGroup13293 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleIndicatorGroup13310 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_ruleIndicatorGroup13327 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleIndicatorGroup13350 = new BitSet(new long[]{0x0000000020020000L});
-    public static final BitSet FOLLOW_29_in_ruleIndicatorGroup13363 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleIndicatorGroup13386 = new BitSet(new long[]{0x0000000020020000L});
-    public static final BitSet FOLLOW_17_in_ruleIndicatorGroup13400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName13437 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName13448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName13488 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_55_in_ruleQualifiedName13507 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName13522 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_56_in_ruleImportanceType13583 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_ruleImportanceType13600 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_ruleImportanceType13617 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_ruleImportanceType13634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_ruleDecompositionType13679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_61_in_ruleDecompositionType13696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_62_in_ruleDecompositionType13713 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_ruleContributionType13758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_ruleContributionType13775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_ruleContributionType13792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_ruleContributionType13809 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_ruleContributionType13826 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_ruleContributionType13843 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_ruleContributionType13860 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_ruleQualitativeLabel13905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_ruleQualitativeLabel13922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_72_in_ruleQualitativeLabel13939 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_ruleQualitativeLabel13956 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_ruleQualitativeLabel13973 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_ruleQualitativeLabel13990 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_ruleQualitativeLabel14007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_75_in_ruleBoolean14058 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_76_in_ruleBoolean14075 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleStrategyGroup8837 = new BitSet(new long[]{0x0000000800020000L});
+    public static final BitSet FOLLOW_35_in_ruleStrategyGroup8855 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleStrategyGroup8878 = new BitSet(new long[]{0x0000000020020000L});
+    public static final BitSet FOLLOW_29_in_ruleStrategyGroup8891 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleStrategyGroup8914 = new BitSet(new long[]{0x0000000020020000L});
+    public static final BitSet FOLLOW_17_in_ruleStrategyGroup8930 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEvaluationStrategy_in_entryRuleEvaluationStrategy8966 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEvaluationStrategy8976 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleEvaluationStrategy9013 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleEvaluationStrategy9030 = new BitSet(new long[]{0x0000002000004000L});
+    public static final BitSet FOLLOW_37_in_ruleEvaluationStrategy9048 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleEvaluationStrategy9071 = new BitSet(new long[]{0x0000000020004000L});
+    public static final BitSet FOLLOW_29_in_ruleEvaluationStrategy9084 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleEvaluationStrategy9107 = new BitSet(new long[]{0x0000000020004000L});
+    public static final BitSet FOLLOW_14_in_ruleEvaluationStrategy9123 = new BitSet(new long[]{0x0010000000008010L});
+    public static final BitSet FOLLOW_ruleMetadata_in_ruleEvaluationStrategy9189 = new BitSet(new long[]{0x0010000000008010L});
+    public static final BitSet FOLLOW_ruleEvaluation_in_ruleEvaluationStrategy9265 = new BitSet(new long[]{0x0010000000008010L});
+    public static final BitSet FOLLOW_15_in_ruleEvaluationStrategy9318 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEvaluation_in_entryRuleEvaluation9354 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEvaluation9364 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleEvaluation9412 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleEvaluation9424 = new BitSet(new long[]{0x0100000000000040L,0x00000000000007C4L});
+    public static final BitSet FOLLOW_ruleQualitativeLabel_in_ruleEvaluation9446 = new BitSet(new long[]{0x0000FF800002C000L});
+    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluation9469 = new BitSet(new long[]{0x0000FF800002C000L});
+    public static final BitSet FOLLOW_14_in_ruleEvaluation9534 = new BitSet(new long[]{0x0000FFC00000C002L});
+    public static final BitSet FOLLOW_38_in_ruleEvaluation9553 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleEvaluation9578 = new BitSet(new long[]{0x0000FF800000C002L});
+    public static final BitSet FOLLOW_ruleEvaluationRange_in_ruleEvaluation9656 = new BitSet(new long[]{0x0000FF800000C002L});
+    public static final BitSet FOLLOW_ruleKPIEvalValueSet_in_ruleEvaluation9732 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleEvaluation9745 = new BitSet(new long[]{0x0000FF800000C002L});
+    public static final BitSet FOLLOW_17_in_ruleEvaluation9810 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEvaluationRange_in_entryRuleEvaluationRange9847 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEvaluationRange9857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleEvaluationRange9939 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleEvaluationRange9951 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleEvaluationRange9968 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleEvaluationRange9985 = new BitSet(new long[]{0x0000038000000002L});
+    public static final BitSet FOLLOW_40_in_ruleEvaluationRange10053 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleEvaluationRange10065 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleEvaluationRange10082 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleEvaluationRange10099 = new BitSet(new long[]{0x0000038000000002L});
+    public static final BitSet FOLLOW_41_in_ruleEvaluationRange10167 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleEvaluationRange10179 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleEvaluationRange10196 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleEvaluationRange10213 = new BitSet(new long[]{0x0000038000000002L});
+    public static final BitSet FOLLOW_ruleKPIEvalValueSet_in_entryRuleKPIEvalValueSet10295 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleKPIEvalValueSet10305 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleKPIQuantitativeEvalValueSet_in_ruleKPIEvalValueSet10352 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleKPIQualitativeEvalValueSet_in_ruleKPIEvalValueSet10379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleKPIQuantitativeEvalValueSet_in_entryRuleKPIQuantitativeEvalValueSet10414 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleKPIQuantitativeEvalValueSet10424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_ruleKPIQuantitativeEvalValueSet10506 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10518 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet10535 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet10552 = new BitSet(new long[]{0x00007C0000000002L});
+    public static final BitSet FOLLOW_43_in_ruleKPIQuantitativeEvalValueSet10620 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10632 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet10649 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet10666 = new BitSet(new long[]{0x00007C0000000002L});
+    public static final BitSet FOLLOW_44_in_ruleKPIQuantitativeEvalValueSet10734 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10746 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet10763 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet10780 = new BitSet(new long[]{0x00007C0000000002L});
+    public static final BitSet FOLLOW_45_in_ruleKPIQuantitativeEvalValueSet10848 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10860 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet10877 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet10894 = new BitSet(new long[]{0x00007C0000000002L});
+    public static final BitSet FOLLOW_46_in_ruleKPIQuantitativeEvalValueSet10962 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet10974 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleKPIQuantitativeEvalValueSet10991 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11008 = new BitSet(new long[]{0x00007C0000000002L});
+    public static final BitSet FOLLOW_ruleKPIQualitativeEvalValueSet_in_entryRuleKPIQualitativeEvalValueSet11090 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleKPIQualitativeEvalValueSet11100 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_ruleKPIQualitativeEvalValueSet11137 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleKPIQualitativeEvalValueSet11149 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleKPIQualitativeEvalValueSet11172 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleKPIQualitativeEvalValueSet11184 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualitativeMapping_in_entryRuleQualitativeMapping11220 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQualitativeMapping11230 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleQualitativeMapping11267 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualitativeMapping11284 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleQualitativeMapping11301 = new BitSet(new long[]{0x0010000000008020L});
+    public static final BitSet FOLLOW_ruleMetadata_in_ruleQualitativeMapping11367 = new BitSet(new long[]{0x0010000000008020L});
+    public static final BitSet FOLLOW_ruleMapping_in_ruleQualitativeMapping11443 = new BitSet(new long[]{0x0010000000008020L});
+    public static final BitSet FOLLOW_15_in_ruleQualitativeMapping11496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMapping_in_entryRuleMapping11532 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMapping11542 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleMapping11584 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleMapping11601 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleMapping11618 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleMapping11635 = new BitSet(new long[]{0x0100000000000000L,0x00000000000007C4L});
+    public static final BitSet FOLLOW_ruleQualitativeLabel_in_ruleMapping11656 = new BitSet(new long[]{0x0000000020020000L});
+    public static final BitSet FOLLOW_29_in_ruleMapping11669 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001800L});
+    public static final BitSet FOLLOW_ruleBoolean_in_ruleMapping11690 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleMapping11704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContributionGroup_in_entryRuleContributionGroup11740 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContributionGroup11750 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_ruleContributionGroup11787 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionGroup11804 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleContributionGroup11821 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionGroup11841 = new BitSet(new long[]{0x0000000020020000L});
+    public static final BitSet FOLLOW_29_in_ruleContributionGroup11854 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionGroup11874 = new BitSet(new long[]{0x0000000020020000L});
+    public static final BitSet FOLLOW_17_in_ruleContributionGroup11888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContributionContext_in_entryRuleContributionContext11924 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContributionContext11934 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_ruleContributionContext11971 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionContext11988 = new BitSet(new long[]{0x0000002000004000L});
+    public static final BitSet FOLLOW_37_in_ruleContributionContext12006 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContributionContext12029 = new BitSet(new long[]{0x0000000020004000L});
+    public static final BitSet FOLLOW_29_in_ruleContributionContext12042 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContributionContext12065 = new BitSet(new long[]{0x0000000020004000L});
+    public static final BitSet FOLLOW_14_in_ruleContributionContext12081 = new BitSet(new long[]{0x0010000000008010L});
+    public static final BitSet FOLLOW_ruleMetadata_in_ruleContributionContext12147 = new BitSet(new long[]{0x0010000000008010L});
+    public static final BitSet FOLLOW_ruleContributionChange_in_ruleContributionContext12223 = new BitSet(new long[]{0x0010000000008010L});
+    public static final BitSet FOLLOW_15_in_ruleContributionContext12276 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContributionChange_in_entryRuleContributionChange12312 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContributionChange12322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContributionChange12370 = new BitSet(new long[]{0x0008000000000000L});
+    public static final BitSet FOLLOW_51_in_ruleContributionChange12382 = new BitSet(new long[]{0x8000000000000040L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleContributionType_in_ruleContributionChange12404 = new BitSet(new long[]{0x0000000000024000L});
+    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionChange12427 = new BitSet(new long[]{0x0000000000024000L});
+    public static final BitSet FOLLOW_17_in_ruleContributionChange12446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_ruleContributionChange12465 = new BitSet(new long[]{0x0000038000000000L});
+    public static final BitSet FOLLOW_ruleContributionRange_in_ruleContributionChange12486 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleContributionChange12498 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContributionRange_in_entryRuleContributionRange12536 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContributionRange12546 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleContributionRange12628 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleContributionRange12640 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleContributionRange12657 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleContributionRange12674 = new BitSet(new long[]{0x0000038000000002L});
+    public static final BitSet FOLLOW_40_in_ruleContributionRange12742 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleContributionRange12754 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleContributionRange12771 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleContributionRange12788 = new BitSet(new long[]{0x0000038000000002L});
+    public static final BitSet FOLLOW_41_in_ruleContributionRange12856 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleContributionRange12868 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleContributionRange12885 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleContributionRange12902 = new BitSet(new long[]{0x0000038000000002L});
+    public static final BitSet FOLLOW_ruleMetadata_in_entryRuleMetadata12984 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMetadata12994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_ruleMetadata13031 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleMetadata13048 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleMetadata13065 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleMetadata13082 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleMetadata13099 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComment_in_entryRuleComment13135 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleComment13145 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_ruleComment13182 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleComment13199 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleComment13216 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIndicatorGroup_in_entryRuleIndicatorGroup13252 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIndicatorGroup13262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_ruleIndicatorGroup13299 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleIndicatorGroup13316 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleIndicatorGroup13333 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleIndicatorGroup13356 = new BitSet(new long[]{0x0000000020020000L});
+    public static final BitSet FOLLOW_29_in_ruleIndicatorGroup13369 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleIndicatorGroup13392 = new BitSet(new long[]{0x0000000020020000L});
+    public static final BitSet FOLLOW_17_in_ruleIndicatorGroup13406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName13443 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName13454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName13494 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_55_in_ruleQualifiedName13513 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName13528 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_56_in_ruleImportanceType13589 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_ruleImportanceType13606 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_ruleImportanceType13623 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_ruleImportanceType13640 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_ruleDecompositionType13685 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_ruleDecompositionType13702 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_62_in_ruleDecompositionType13719 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_ruleContributionType13764 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_ruleContributionType13781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_ruleContributionType13798 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_ruleContributionType13815 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_ruleContributionType13832 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_ruleContributionType13849 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_ruleContributionType13866 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_ruleQualitativeLabel13911 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_ruleQualitativeLabel13928 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_ruleQualitativeLabel13945 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_ruleQualitativeLabel13962 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_ruleQualitativeLabel13979 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_ruleQualitativeLabel13996 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_ruleQualitativeLabel14013 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_75_in_ruleBoolean14064 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_76_in_ruleBoolean14081 = new BitSet(new long[]{0x0000000000000002L});
 
 }

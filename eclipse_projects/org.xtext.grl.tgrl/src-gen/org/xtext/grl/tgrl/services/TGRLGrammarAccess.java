@@ -2266,25 +2266,26 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cStrategyGroupKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cIncludesKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cStrategiesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cStrategiesEvaluationStrategyCrossReference_3_0 = (CrossReference)cStrategiesAssignment_3.eContents().get(0);
-		private final RuleCall cStrategiesEvaluationStrategyQualifiedNameParserRuleCall_3_0_1 = (RuleCall)cStrategiesEvaluationStrategyCrossReference_3_0.eContents().get(1);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cCommaKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cStrategiesAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final CrossReference cStrategiesEvaluationStrategyCrossReference_4_1_0 = (CrossReference)cStrategiesAssignment_4_1.eContents().get(0);
-		private final RuleCall cStrategiesEvaluationStrategyQualifiedNameParserRuleCall_4_1_0_1 = (RuleCall)cStrategiesEvaluationStrategyCrossReference_4_1_0.eContents().get(1);
-		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cIncludesKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cStrategiesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final CrossReference cStrategiesEvaluationStrategyCrossReference_2_1_0 = (CrossReference)cStrategiesAssignment_2_1.eContents().get(0);
+		private final RuleCall cStrategiesEvaluationStrategyQualifiedNameParserRuleCall_2_1_0_1 = (RuleCall)cStrategiesEvaluationStrategyCrossReference_2_1_0.eContents().get(1);
+		private final Group cGroup_2_2 = (Group)cGroup_2.eContents().get(2);
+		private final Keyword cCommaKeyword_2_2_0 = (Keyword)cGroup_2_2.eContents().get(0);
+		private final Assignment cStrategiesAssignment_2_2_1 = (Assignment)cGroup_2_2.eContents().get(1);
+		private final CrossReference cStrategiesEvaluationStrategyCrossReference_2_2_1_0 = (CrossReference)cStrategiesAssignment_2_2_1.eContents().get(0);
+		private final RuleCall cStrategiesEvaluationStrategyQualifiedNameParserRuleCall_2_2_1_0_1 = (RuleCall)cStrategiesEvaluationStrategyCrossReference_2_2_1_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//// *******************************************Strategy*******************************************
 		//StrategyGroup:
-		//	"strategyGroup" name=ID "includes" strategies+=[EvaluationStrategy|QualifiedName] (","
-		//	strategies+=[EvaluationStrategy|QualifiedName])* ";";
+		//	"strategyGroup" name=ID ("includes" strategies+=[EvaluationStrategy|QualifiedName] (","
+		//	strategies+=[EvaluationStrategy|QualifiedName])*)? ";";
 		public ParserRule getRule() { return rule; }
 
-		//"strategyGroup" name=ID "includes" strategies+=[EvaluationStrategy|QualifiedName] (","
-		//strategies+=[EvaluationStrategy|QualifiedName])* ";"
+		//"strategyGroup" name=ID ("includes" strategies+=[EvaluationStrategy|QualifiedName] (","
+		//strategies+=[EvaluationStrategy|QualifiedName])*)? ";"
 		public Group getGroup() { return cGroup; }
 
 		//"strategyGroup"
@@ -2296,35 +2297,38 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
+		//("includes" strategies+=[EvaluationStrategy|QualifiedName] ("," strategies+=[EvaluationStrategy|QualifiedName])*)?
+		public Group getGroup_2() { return cGroup_2; }
+
 		//"includes"
-		public Keyword getIncludesKeyword_2() { return cIncludesKeyword_2; }
+		public Keyword getIncludesKeyword_2_0() { return cIncludesKeyword_2_0; }
 
 		//strategies+=[EvaluationStrategy|QualifiedName]
-		public Assignment getStrategiesAssignment_3() { return cStrategiesAssignment_3; }
+		public Assignment getStrategiesAssignment_2_1() { return cStrategiesAssignment_2_1; }
 
 		//[EvaluationStrategy|QualifiedName]
-		public CrossReference getStrategiesEvaluationStrategyCrossReference_3_0() { return cStrategiesEvaluationStrategyCrossReference_3_0; }
+		public CrossReference getStrategiesEvaluationStrategyCrossReference_2_1_0() { return cStrategiesEvaluationStrategyCrossReference_2_1_0; }
 
 		//QualifiedName
-		public RuleCall getStrategiesEvaluationStrategyQualifiedNameParserRuleCall_3_0_1() { return cStrategiesEvaluationStrategyQualifiedNameParserRuleCall_3_0_1; }
+		public RuleCall getStrategiesEvaluationStrategyQualifiedNameParserRuleCall_2_1_0_1() { return cStrategiesEvaluationStrategyQualifiedNameParserRuleCall_2_1_0_1; }
 
 		//("," strategies+=[EvaluationStrategy|QualifiedName])*
-		public Group getGroup_4() { return cGroup_4; }
+		public Group getGroup_2_2() { return cGroup_2_2; }
 
 		//","
-		public Keyword getCommaKeyword_4_0() { return cCommaKeyword_4_0; }
+		public Keyword getCommaKeyword_2_2_0() { return cCommaKeyword_2_2_0; }
 
 		//strategies+=[EvaluationStrategy|QualifiedName]
-		public Assignment getStrategiesAssignment_4_1() { return cStrategiesAssignment_4_1; }
+		public Assignment getStrategiesAssignment_2_2_1() { return cStrategiesAssignment_2_2_1; }
 
 		//[EvaluationStrategy|QualifiedName]
-		public CrossReference getStrategiesEvaluationStrategyCrossReference_4_1_0() { return cStrategiesEvaluationStrategyCrossReference_4_1_0; }
+		public CrossReference getStrategiesEvaluationStrategyCrossReference_2_2_1_0() { return cStrategiesEvaluationStrategyCrossReference_2_2_1_0; }
 
 		//QualifiedName
-		public RuleCall getStrategiesEvaluationStrategyQualifiedNameParserRuleCall_4_1_0_1() { return cStrategiesEvaluationStrategyQualifiedNameParserRuleCall_4_1_0_1; }
+		public RuleCall getStrategiesEvaluationStrategyQualifiedNameParserRuleCall_2_2_1_0_1() { return cStrategiesEvaluationStrategyQualifiedNameParserRuleCall_2_2_1_0_1; }
 
 		//";"
-		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class EvaluationStrategyElements extends AbstractParserRuleElementFinder {
@@ -2910,16 +2914,17 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cQualitativeEvaluationAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cQualitativeEvaluationQualitativeLabelEnumRuleCall_4_0 = (RuleCall)cQualitativeEvaluationAssignment_4.eContents().get(0);
-		private final Keyword cCommaKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cExceedsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cExceedsBooleanEnumRuleCall_6_0 = (RuleCall)cExceedsAssignment_6.eContents().get(0);
-		private final Keyword cSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cCommaKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cExceedsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cExceedsBooleanEnumRuleCall_5_1_0 = (RuleCall)cExceedsAssignment_5_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Mapping:
-		//	name=STRING "," evaluation=QUALITATIVEVALUE "," qualitativeEvaluation=QualitativeLabel "," exceeds=Boolean ";";
+		//	name=STRING "," evaluation=QUALITATIVEVALUE "," qualitativeEvaluation=QualitativeLabel ("," exceeds=Boolean)? ";";
 		public ParserRule getRule() { return rule; }
 
-		//name=STRING "," evaluation=QUALITATIVEVALUE "," qualitativeEvaluation=QualitativeLabel "," exceeds=Boolean ";"
+		//name=STRING "," evaluation=QUALITATIVEVALUE "," qualitativeEvaluation=QualitativeLabel ("," exceeds=Boolean)? ";"
 		public Group getGroup() { return cGroup; }
 
 		//name=STRING
@@ -2946,17 +2951,20 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//QualitativeLabel
 		public RuleCall getQualitativeEvaluationQualitativeLabelEnumRuleCall_4_0() { return cQualitativeEvaluationQualitativeLabelEnumRuleCall_4_0; }
 
+		//("," exceeds=Boolean)?
+		public Group getGroup_5() { return cGroup_5; }
+
 		//","
-		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
+		public Keyword getCommaKeyword_5_0() { return cCommaKeyword_5_0; }
 
 		//exceeds=Boolean
-		public Assignment getExceedsAssignment_6() { return cExceedsAssignment_6; }
+		public Assignment getExceedsAssignment_5_1() { return cExceedsAssignment_5_1; }
 
 		//Boolean
-		public RuleCall getExceedsBooleanEnumRuleCall_6_0() { return cExceedsBooleanEnumRuleCall_6_0; }
+		public RuleCall getExceedsBooleanEnumRuleCall_5_1_0() { return cExceedsBooleanEnumRuleCall_5_1_0; }
 
 		//";"
-		public Keyword getSemicolonKeyword_7() { return cSemicolonKeyword_7; }
+		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
 	}
 
 	public class ContributionGroupElements extends AbstractParserRuleElementFinder {
@@ -4450,8 +4458,8 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// *******************************************Strategy*******************************************
 	//StrategyGroup:
-	//	"strategyGroup" name=ID "includes" strategies+=[EvaluationStrategy|QualifiedName] (","
-	//	strategies+=[EvaluationStrategy|QualifiedName])* ";";
+	//	"strategyGroup" name=ID ("includes" strategies+=[EvaluationStrategy|QualifiedName] (","
+	//	strategies+=[EvaluationStrategy|QualifiedName])*)? ";";
 	public StrategyGroupElements getStrategyGroupAccess() {
 		return pStrategyGroup;
 	}
@@ -4553,7 +4561,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Mapping:
-	//	name=STRING "," evaluation=QUALITATIVEVALUE "," qualitativeEvaluation=QualitativeLabel "," exceeds=Boolean ";";
+	//	name=STRING "," evaluation=QUALITATIVEVALUE "," qualitativeEvaluation=QualitativeLabel ("," exceeds=Boolean)? ";";
 	public MappingElements getMappingAccess() {
 		return pMapping;
 	}

@@ -44,8 +44,18 @@
 [/for]
 [/for]
 
-    <groups name="StrategiesGroup3" id="3" strategies="4"/>
-    <strategies name="EvaluationStrategy4" id="4" author="Vahdat" group="3"/>
+[comment]*****************************************Strategy**********************************************[/comment]
+[for (grlSpec : GRLSpecification | gRLspecifications)]
+[for (strategtGroup : StrategyGroup	 | grlElements->selectByType(StrategyGroup))]
+	<groups name="[name/]" id="[id/]" [getIncludedStrategies(strategtGroup)/]/>
+[/for]
+[/for]
+[for (grlSpec : GRLSpecification | gRLspecifications)]
+[for (eStrategy : EvaluationStrategy	 | grlElements->selectByType(EvaluationStrategy))]
+	<strategies name="[name/]" id="[id/]" [getIncludedStrategies(eStrategy)/] [getParentStrategies(aModel,eStrategy)/]/>	
+[/for]
+[/for]
+[comment]*****************************************Strategy**********************************************[/comment]
     <impactModel/>
     <indicatorGroup name="Time" id="7" isRedesignCategory="true"/>
     <indicatorGroup name="Cost" id="8" isRedesignCategory="true"/>
@@ -53,6 +63,7 @@
     <indicatorGroup name="Flexibility" id="10" isRedesignCategory="true"/>
 	[for (qMapping : QualitativeMapping | getAllQualitativeMappings(aModel).oclAsType(QualitativeMapping))]
 	<KPIConversion xsi:type="grl.kpimodel:QualitativeMappings" name="[name/]" id="[id/]">
+	[PrintMetaData(metaData)/]
 	[for (mapping : Mapping | mappings)]
 		<mapping realWorldLabel="[mapping.name/]" evaluation="[evaluation/]" qualitativeEvaluation="[qualitativeEvaluation.toString().toUpperFirst()/]" exceeds="[exceeds/]"/>
 	[/for]    

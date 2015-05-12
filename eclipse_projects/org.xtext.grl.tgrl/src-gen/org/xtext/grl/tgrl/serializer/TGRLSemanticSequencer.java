@@ -650,7 +650,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=STRING evaluation=QUALITATIVEVALUE qualitativeEvaluation=QualitativeLabel exceeds=Boolean)
+	 *     (name=STRING evaluation=QUALITATIVEVALUE qualitativeEvaluation=QualitativeLabel exceeds=Boolean?)
 	 */
 	protected void sequence_Mapping(EObject context, Mapping semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -760,7 +760,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID strategies+=[EvaluationStrategy|QualifiedName] strategies+=[EvaluationStrategy|QualifiedName]*)
+	 *     (name=ID (strategies+=[EvaluationStrategy|QualifiedName] strategies+=[EvaluationStrategy|QualifiedName]*)?)
 	 */
 	protected void sequence_StrategyGroup(EObject context, StrategyGroup semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

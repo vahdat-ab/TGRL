@@ -21,8 +21,18 @@ grl {
 //		name = "S3";
 //	}
 //	S1 decomposedBy S2,S3;
-qualitativeMapping A {
-	"test1",0,none,false;
-	"test2",50,satisfied,true;
-}
+//qualitativeMapping A {
+//	metadata AAAAAA="AAAAAAA";
+//	metadata BBBBB="BBBBBBB";
+//	"test1",0,none,false;
+//	"test2",50,satisfied,true;
+//	
+//}
+
+strategyGroup SG1 includes ES1,ES3;
+strategyGroup SG2 includes ES2,ES4;
+strategy ES1 extends ES2,ES4{}
+strategy ES2{}
+strategy ES3 extends ES1,ES4{}
+strategy ES4{}
 }

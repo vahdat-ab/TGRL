@@ -3603,9 +3603,9 @@ ruleStrategyGroup returns [EObject current=null]
 	    }
 
 )
-)	otherlv_2='includes' 
+)(	otherlv_2='includes' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getStrategyGroupAccess().getIncludesKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getStrategyGroupAccess().getIncludesKeyword_2_0());
     }
 (
 (
@@ -3615,7 +3615,7 @@ ruleStrategyGroup returns [EObject current=null]
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getStrategyGroupAccess().getStrategiesEvaluationStrategyCrossReference_3_0()); 
+	        newCompositeNode(grammarAccess.getStrategyGroupAccess().getStrategiesEvaluationStrategyCrossReference_2_1_0()); 
 	    }
 		ruleQualifiedName		{ 
 	        afterParserOrEnumRuleCall();
@@ -3624,7 +3624,7 @@ ruleStrategyGroup returns [EObject current=null]
 )
 )(	otherlv_4=',' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getStrategyGroupAccess().getCommaKeyword_4_0());
+    	newLeafNode(otherlv_4, grammarAccess.getStrategyGroupAccess().getCommaKeyword_2_2_0());
     }
 (
 (
@@ -3634,16 +3634,16 @@ ruleStrategyGroup returns [EObject current=null]
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getStrategyGroupAccess().getStrategiesEvaluationStrategyCrossReference_4_1_0()); 
+	        newCompositeNode(grammarAccess.getStrategyGroupAccess().getStrategiesEvaluationStrategyCrossReference_2_2_1_0()); 
 	    }
 		ruleQualifiedName		{ 
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*	otherlv_6=';' 
+))*)?	otherlv_6=';' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getStrategyGroupAccess().getSemicolonKeyword_5());
+    	newLeafNode(otherlv_6, grammarAccess.getStrategyGroupAccess().getSemicolonKeyword_3());
     }
 )
 ;
@@ -4718,14 +4718,14 @@ ruleMapping returns [EObject current=null]
 	    }
 
 )
-)	otherlv_5=',' 
+)(	otherlv_5=',' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getMappingAccess().getCommaKeyword_5());
+    	newLeafNode(otherlv_5, grammarAccess.getMappingAccess().getCommaKeyword_5_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMappingAccess().getExceedsBooleanEnumRuleCall_6_0()); 
+	        newCompositeNode(grammarAccess.getMappingAccess().getExceedsBooleanEnumRuleCall_5_1_0()); 
 	    }
 		lv_exceeds_6_0=ruleBoolean		{
 	        if ($current==null) {
@@ -4740,9 +4740,9 @@ ruleMapping returns [EObject current=null]
 	    }
 
 )
-)	otherlv_7=';' 
+))?	otherlv_7=';' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getMappingAccess().getSemicolonKeyword_7());
+    	newLeafNode(otherlv_7, grammarAccess.getMappingAccess().getSemicolonKeyword_6());
     }
 )
 ;

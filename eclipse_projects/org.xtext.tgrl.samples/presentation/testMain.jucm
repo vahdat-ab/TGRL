@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grl="http:///grl.ecore" xmlns:grl.kpimodel="http:///grl/kpimodel.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="Vahdat" created="February 16, 2015 7:08:06 PM EST" modified="May 11, 2015 11:03:24 AM EDT" specVersion="52" urnVersion="1.27" nextGlobalID="111">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grl="http:///grl.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="Vahdat" created="February 16, 2015 7:08:06 PM EST" modified="May 11, 2015 9:21:15 PM EDT" specVersion="71" urnVersion="1.27" nextGlobalID="133">
   <ucmspec/>
   <grlspec>
+    <groups name="SG1" id="127" strategies="129 130"/>
+    <groups name="SG2" id="128" strategies="132 133"/>
+    <strategies name="ES1" id="129" author="Vahdat" group="127" includedStrategies="132"/>
+    <strategies name="ES3" id="130" author="Vahdat" group="127"/>
+    <strategies name="ES2" id="132" author="Vahdat" group="128" parentStrategies="129"/>
+    <strategies name="ES4" id="133" author="Vahdat" group="128"/>
     <impactModel/>
     <indicatorGroup name="Time" id="7" isRedesignCategory="true"/>
     <indicatorGroup name="Cost" id="8" isRedesignCategory="true"/>
     <indicatorGroup name="Quality" id="9" isRedesignCategory="true"/>
     <indicatorGroup name="Flexibility" id="10" isRedesignCategory="true"/>
-    <KPIConversion xsi:type="grl.kpimodel:QualitativeMappings" name="QualitativeMappingsVahdat" id="111">
-      <mapping realWorldLabel="A" qualitativeEvaluation="None"/>
-      <mapping realWorldLabel="B" evaluation="-101" qualitativeEvaluation="Conflict" exceeds="true"/>
-    </KPIConversion>
     <featureModel/>
   </grlspec>
   <urndef>
