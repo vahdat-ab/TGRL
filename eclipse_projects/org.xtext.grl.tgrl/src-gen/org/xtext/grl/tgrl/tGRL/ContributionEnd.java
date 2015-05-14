@@ -87,12 +87,12 @@ public interface ContributionEnd extends EndLink
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Quantitative Contribution</em>' attribute.
-   * @see #setQuantitativeContribution(int)
+   * @see #setQuantitativeContribution(String)
    * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionEnd_QuantitativeContribution()
    * @model
    * @generated
    */
-  int getQuantitativeContribution();
+  String getQuantitativeContribution();
 
   /**
    * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ContributionEnd#getQuantitativeContribution <em>Quantitative Contribution</em>}' attribute.
@@ -102,6 +102,6 @@ public interface ContributionEnd extends EndLink
    * @see #getQuantitativeContribution()
    * @generated
    */
-  void setQuantitativeContribution(int value);
+  void setQuantitativeContribution(String value);
 
 } // ContributionEnd

@@ -112,7 +112,7 @@ public class ActorImpl extends GRLElementImpl implements Actor
    * @generated
    * @ordered
    */
-  protected static final int IMPORTANCE_QUANTITATIVE_EDEFAULT = 0;
+  protected static final String IMPORTANCE_QUANTITATIVE_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getImportanceQuantitative() <em>Importance Quantitative</em>}' attribute.
@@ -122,7 +122,7 @@ public class ActorImpl extends GRLElementImpl implements Actor
    * @generated
    * @ordered
    */
-  protected int importanceQuantitative = IMPORTANCE_QUANTITATIVE_EDEFAULT;
+  protected String importanceQuantitative = IMPORTANCE_QUANTITATIVE_EDEFAULT;
 
   /**
    * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -259,7 +259,7 @@ public class ActorImpl extends GRLElementImpl implements Actor
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getImportanceQuantitative()
+  public String getImportanceQuantitative()
   {
     return importanceQuantitative;
   }
@@ -269,9 +269,9 @@ public class ActorImpl extends GRLElementImpl implements Actor
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setImportanceQuantitative(int newImportanceQuantitative)
+  public void setImportanceQuantitative(String newImportanceQuantitative)
   {
-    int oldImportanceQuantitative = importanceQuantitative;
+    String oldImportanceQuantitative = importanceQuantitative;
     importanceQuantitative = newImportanceQuantitative;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.ACTOR__IMPORTANCE_QUANTITATIVE, oldImportanceQuantitative, importanceQuantitative));
@@ -395,7 +395,7 @@ public class ActorImpl extends GRLElementImpl implements Actor
         setImportance((ImportanceType)newValue);
         return;
       case TGRLPackage.ACTOR__IMPORTANCE_QUANTITATIVE:
-        setImportanceQuantitative((Integer)newValue);
+        setImportanceQuantitative((String)newValue);
         return;
       case TGRLPackage.ACTOR__DESCRIPTION:
         setDescription((String)newValue);
@@ -464,7 +464,7 @@ public class ActorImpl extends GRLElementImpl implements Actor
       case TGRLPackage.ACTOR__IMPORTANCE:
         return importance != IMPORTANCE_EDEFAULT;
       case TGRLPackage.ACTOR__IMPORTANCE_QUANTITATIVE:
-        return importanceQuantitative != IMPORTANCE_QUANTITATIVE_EDEFAULT;
+        return IMPORTANCE_QUANTITATIVE_EDEFAULT == null ? importanceQuantitative != null : !IMPORTANCE_QUANTITATIVE_EDEFAULT.equals(importanceQuantitative);
       case TGRLPackage.ACTOR__DESCRIPTION:
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
       case TGRLPackage.ACTOR__META_DATA:

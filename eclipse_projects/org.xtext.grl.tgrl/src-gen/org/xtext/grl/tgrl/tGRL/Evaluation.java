@@ -90,12 +90,12 @@ public interface Evaluation extends GRLElement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Evaluation</em>' attribute.
-   * @see #setEvaluation(int)
+   * @see #setEvaluation(String)
    * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getEvaluation_Evaluation()
    * @model
    * @generated
    */
-  int getEvaluation();
+  String getEvaluation();
 
   /**
    * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Evaluation#getEvaluation <em>Evaluation</em>}' attribute.
@@ -105,7 +105,7 @@ public interface Evaluation extends GRLElement
    * @see #getEvaluation()
    * @generated
    */
-  void setEvaluation(int value);
+  void setEvaluation(String value);
 
   /**
    * Returns the value of the '<em><b>Exceeds</b></em>' attribute.

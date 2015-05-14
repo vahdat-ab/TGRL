@@ -118,12 +118,12 @@ public interface Actor extends GRLElement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Importance Quantitative</em>' attribute.
-   * @see #setImportanceQuantitative(int)
+   * @see #setImportanceQuantitative(String)
    * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getActor_ImportanceQuantitative()
    * @model
    * @generated
    */
-  int getImportanceQuantitative();
+  String getImportanceQuantitative();
 
   /**
    * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Actor#getImportanceQuantitative <em>Importance Quantitative</em>}' attribute.
@@ -133,7 +133,7 @@ public interface Actor extends GRLElement
    * @see #getImportanceQuantitative()
    * @generated
    */
-  void setImportanceQuantitative(int value);
+  void setImportanceQuantitative(String value);
 
   /**
    * Returns the value of the '<em><b>Description</b></em>' attribute.

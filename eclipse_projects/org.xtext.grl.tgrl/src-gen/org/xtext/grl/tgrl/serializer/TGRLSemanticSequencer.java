@@ -496,10 +496,23 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (start=INT end=INT step=INT)
+	 *     (vahdat=QUALITATIVEVALUE end=QUALITATIVEVALUE step=QUALITATIVEVALUE)
 	 */
 	protected void sequence_EvaluationRange(EObject context, EvaluationRange semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, TGRLPackage.Literals.EVALUATION_RANGE__VAHDAT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TGRLPackage.Literals.EVALUATION_RANGE__VAHDAT));
+			if(transientValues.isValueTransient(semanticObject, TGRLPackage.Literals.EVALUATION_RANGE__END) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TGRLPackage.Literals.EVALUATION_RANGE__END));
+			if(transientValues.isValueTransient(semanticObject, TGRLPackage.Literals.EVALUATION_RANGE__STEP) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TGRLPackage.Literals.EVALUATION_RANGE__STEP));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getEvaluationRangeAccess().getVahdatQUALITATIVEVALUETerminalRuleCall_0_2_0(), semanticObject.getVahdat());
+		feeder.accept(grammarAccess.getEvaluationRangeAccess().getEndQUALITATIVEVALUETerminalRuleCall_1_2_0(), semanticObject.getEnd());
+		feeder.accept(grammarAccess.getEvaluationRangeAccess().getStepQUALITATIVEVALUETerminalRuleCall_2_2_0(), semanticObject.getStep());
+		feeder.finish();
 	}
 	
 	

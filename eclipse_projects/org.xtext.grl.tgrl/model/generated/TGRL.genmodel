@@ -179,7 +179,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Evaluation/kpiEvalValueSet"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//EvaluationRange">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//EvaluationRange/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//EvaluationRange/vahdat"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//EvaluationRange/end"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//EvaluationRange/step"/>
     </genClasses>

@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getStart <em>Start</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getVahdat <em>Vahdat</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getEnd <em>End</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getStep <em>Step</em>}</li>
  * </ul>
@@ -25,30 +25,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface EvaluationRange extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Start</b></em>' attribute.
+   * Returns the value of the '<em><b>Vahdat</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Start</em>' attribute isn't clear,
+   * If the meaning of the '<em>Vahdat</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Start</em>' attribute.
-   * @see #setStart(int)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getEvaluationRange_Start()
+   * @return the value of the '<em>Vahdat</em>' attribute.
+   * @see #setVahdat(String)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getEvaluationRange_Vahdat()
    * @model
    * @generated
    */
-  int getStart();
+  String getVahdat();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getStart <em>Start</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getVahdat <em>Vahdat</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Start</em>' attribute.
-   * @see #getStart()
+   * @param value the new value of the '<em>Vahdat</em>' attribute.
+   * @see #getVahdat()
    * @generated
    */
-  void setStart(int value);
+  void setVahdat(String value);
 
   /**
    * Returns the value of the '<em><b>End</b></em>' attribute.
@@ -59,12 +59,12 @@ public interface EvaluationRange extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>End</em>' attribute.
-   * @see #setEnd(int)
+   * @see #setEnd(String)
    * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getEvaluationRange_End()
    * @model
    * @generated
    */
-  int getEnd();
+  String getEnd();
 
   /**
    * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getEnd <em>End</em>}' attribute.
@@ -74,7 +74,7 @@ public interface EvaluationRange extends EObject
    * @see #getEnd()
    * @generated
    */
-  void setEnd(int value);
+  void setEnd(String value);
 
   /**
    * Returns the value of the '<em><b>Step</b></em>' attribute.
@@ -85,12 +85,12 @@ public interface EvaluationRange extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Step</em>' attribute.
-   * @see #setStep(int)
+   * @see #setStep(String)
    * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getEvaluationRange_Step()
    * @model
    * @generated
    */
-  int getStep();
+  String getStep();
 
   /**
    * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getStep <em>Step</em>}' attribute.
@@ -100,6 +100,6 @@ public interface EvaluationRange extends EObject
    * @see #getStep()
    * @generated
    */
-  void setStep(int value);
+  void setStep(String value);
 
 } // EvaluationRange

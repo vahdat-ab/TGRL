@@ -73,7 +73,7 @@ public class ContributionChangeImpl extends MinimalEObjectImpl.Container impleme
    * @generated
    * @ordered
    */
-  protected static final int NEW_QUANTITATIVE_CONTRIBUTION_EDEFAULT = 0;
+  protected static final String NEW_QUANTITATIVE_CONTRIBUTION_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getNewQuantitativeContribution() <em>New Quantitative Contribution</em>}' attribute.
@@ -83,7 +83,7 @@ public class ContributionChangeImpl extends MinimalEObjectImpl.Container impleme
    * @generated
    * @ordered
    */
-  protected int newQuantitativeContribution = NEW_QUANTITATIVE_CONTRIBUTION_EDEFAULT;
+  protected String newQuantitativeContribution = NEW_QUANTITATIVE_CONTRIBUTION_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getContribRange() <em>Contrib Range</em>}' containment reference.
@@ -187,7 +187,7 @@ public class ContributionChangeImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getNewQuantitativeContribution()
+  public String getNewQuantitativeContribution()
   {
     return newQuantitativeContribution;
   }
@@ -197,9 +197,9 @@ public class ContributionChangeImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNewQuantitativeContribution(int newNewQuantitativeContribution)
+  public void setNewQuantitativeContribution(String newNewQuantitativeContribution)
   {
-    int oldNewQuantitativeContribution = newQuantitativeContribution;
+    String oldNewQuantitativeContribution = newQuantitativeContribution;
     newQuantitativeContribution = newNewQuantitativeContribution;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION_CHANGE__NEW_QUANTITATIVE_CONTRIBUTION, oldNewQuantitativeContribution, newQuantitativeContribution));
@@ -309,7 +309,7 @@ public class ContributionChangeImpl extends MinimalEObjectImpl.Container impleme
         setNewContribution((ContributionType)newValue);
         return;
       case TGRLPackage.CONTRIBUTION_CHANGE__NEW_QUANTITATIVE_CONTRIBUTION:
-        setNewQuantitativeContribution((Integer)newValue);
+        setNewQuantitativeContribution((String)newValue);
         return;
       case TGRLPackage.CONTRIBUTION_CHANGE__CONTRIB_RANGE:
         setContribRange((ContributionRange)newValue);
@@ -359,7 +359,7 @@ public class ContributionChangeImpl extends MinimalEObjectImpl.Container impleme
       case TGRLPackage.CONTRIBUTION_CHANGE__NEW_CONTRIBUTION:
         return newContribution != NEW_CONTRIBUTION_EDEFAULT;
       case TGRLPackage.CONTRIBUTION_CHANGE__NEW_QUANTITATIVE_CONTRIBUTION:
-        return newQuantitativeContribution != NEW_QUANTITATIVE_CONTRIBUTION_EDEFAULT;
+        return NEW_QUANTITATIVE_CONTRIBUTION_EDEFAULT == null ? newQuantitativeContribution != null : !NEW_QUANTITATIVE_CONTRIBUTION_EDEFAULT.equals(newQuantitativeContribution);
       case TGRLPackage.CONTRIBUTION_CHANGE__CONTRIB_RANGE:
         return contribRange != null;
     }

@@ -2455,35 +2455,34 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cEvaluationAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
 		private final RuleCall cEvaluationQUALITATIVEVALUETerminalRuleCall_2_1_0 = (RuleCall)cEvaluationAssignment_2_1.eContents().get(0);
 		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
-		private final UnorderedGroup cUnorderedGroup_3_0 = (UnorderedGroup)cAlternatives_3.eContents().get(0);
-		private final Group cGroup_3_0_0 = (Group)cUnorderedGroup_3_0.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3_0_0_0 = (Keyword)cGroup_3_0_0.eContents().get(0);
-		private final Group cGroup_3_0_0_1 = (Group)cGroup_3_0_0.eContents().get(1);
-		private final Assignment cExceedsAssignment_3_0_0_1_0 = (Assignment)cGroup_3_0_0_1.eContents().get(0);
-		private final Keyword cExceedsExceedsKeyword_3_0_0_1_0_0 = (Keyword)cExceedsAssignment_3_0_0_1_0.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_0_0_1_1 = (Keyword)cGroup_3_0_0_1.eContents().get(1);
-		private final Assignment cEvalRangeAssignment_3_0_1 = (Assignment)cUnorderedGroup_3_0.eContents().get(1);
-		private final RuleCall cEvalRangeEvaluationRangeParserRuleCall_3_0_1_0 = (RuleCall)cEvalRangeAssignment_3_0_1.eContents().get(0);
-		private final Group cGroup_3_0_2 = (Group)cUnorderedGroup_3_0.eContents().get(2);
-		private final Assignment cKpiEvalValueSetAssignment_3_0_2_0 = (Assignment)cGroup_3_0_2.eContents().get(0);
-		private final RuleCall cKpiEvalValueSetKPIEvalValueSetParserRuleCall_3_0_2_0_0 = (RuleCall)cKpiEvalValueSetAssignment_3_0_2_0.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_3_0_2_1 = (Keyword)cGroup_3_0_2.eContents().get(1);
+		private final Group cGroup_3_0 = (Group)cAlternatives_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3_0_0 = (Keyword)cGroup_3_0.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_3_0_1 = (UnorderedGroup)cGroup_3_0.eContents().get(1);
+		private final Group cGroup_3_0_1_0 = (Group)cUnorderedGroup_3_0_1.eContents().get(0);
+		private final Assignment cExceedsAssignment_3_0_1_0_0 = (Assignment)cGroup_3_0_1_0.eContents().get(0);
+		private final Keyword cExceedsExceedsKeyword_3_0_1_0_0_0 = (Keyword)cExceedsAssignment_3_0_1_0_0.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3_0_1_0_1 = (Keyword)cGroup_3_0_1_0.eContents().get(1);
+		private final Assignment cEvalRangeAssignment_3_0_1_1 = (Assignment)cUnorderedGroup_3_0_1.eContents().get(1);
+		private final RuleCall cEvalRangeEvaluationRangeParserRuleCall_3_0_1_1_0 = (RuleCall)cEvalRangeAssignment_3_0_1_1.eContents().get(0);
+		private final Assignment cKpiEvalValueSetAssignment_3_0_1_2 = (Assignment)cUnorderedGroup_3_0_1.eContents().get(2);
+		private final RuleCall cKpiEvalValueSetKPIEvalValueSetParserRuleCall_3_0_1_2_0 = (RuleCall)cKpiEvalValueSetAssignment_3_0_1_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_0_2 = (Keyword)cGroup_3_0.eContents().get(2);
 		private final Keyword cSemicolonKeyword_3_1 = (Keyword)cAlternatives_3.eContents().get(1);
 		
 		//Evaluation: / *
 		//	 *TODO I must give a default value for evaluation, which is zero, to this attribute.
 		//	 * 		This can be done through the post processing mechanism in xText 
 		//	 * / intentionalElement=[SuperIntentionalElement|QualifiedName] "=" (qualitativeEvaluation=QualitativeLabel |
-		//	evaluation=QUALITATIVEVALUE) ("{" (exceeds?="exceeds" ";")? & evalRange=EvaluationRange? &
-		//	kpiEvalValueSet=KPIEvalValueSet? "}" | ";");
+		//	evaluation=QUALITATIVEVALUE) ("{" ((exceeds?="exceeds" ";")? & evalRange=EvaluationRange? &
+		//	kpiEvalValueSet=KPIEvalValueSet?) "}" | ";");
 		public ParserRule getRule() { return rule; }
 
 		/// *
 		//	 *TODO I must give a default value for evaluation, which is zero, to this attribute.
 		//	 * 		This can be done through the post processing mechanism in xText 
 		//	 * / intentionalElement=[SuperIntentionalElement|QualifiedName] "=" (qualitativeEvaluation=QualitativeLabel |
-		//evaluation=QUALITATIVEVALUE) ("{" (exceeds?="exceeds" ";")? & evalRange=EvaluationRange? &
-		//kpiEvalValueSet=KPIEvalValueSet? "}" | ";")
+		//evaluation=QUALITATIVEVALUE) ("{" ((exceeds?="exceeds" ";")? & evalRange=EvaluationRange? &
+		//kpiEvalValueSet=KPIEvalValueSet?) "}" | ";")
 		public Group getGroup() { return cGroup; }
 
 		/// *
@@ -2516,47 +2515,44 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//QUALITATIVEVALUE
 		public RuleCall getEvaluationQUALITATIVEVALUETerminalRuleCall_2_1_0() { return cEvaluationQUALITATIVEVALUETerminalRuleCall_2_1_0; }
 
-		//"{" (exceeds?="exceeds" ";")? & evalRange=EvaluationRange? & kpiEvalValueSet=KPIEvalValueSet? "}" | ";"
+		//"{" ((exceeds?="exceeds" ";")? & evalRange=EvaluationRange? & kpiEvalValueSet=KPIEvalValueSet?) "}" | ";"
 		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 
-		//"{" (exceeds?="exceeds" ";")? & evalRange=EvaluationRange? & kpiEvalValueSet=KPIEvalValueSet? "}"
-		public UnorderedGroup getUnorderedGroup_3_0() { return cUnorderedGroup_3_0; }
-
-		//"{" (exceeds?="exceeds" ";")?
-		public Group getGroup_3_0_0() { return cGroup_3_0_0; }
+		//"{" ((exceeds?="exceeds" ";")? & evalRange=EvaluationRange? & kpiEvalValueSet=KPIEvalValueSet?) "}"
+		public Group getGroup_3_0() { return cGroup_3_0; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3_0_0_0() { return cLeftCurlyBracketKeyword_3_0_0_0; }
+		public Keyword getLeftCurlyBracketKeyword_3_0_0() { return cLeftCurlyBracketKeyword_3_0_0; }
+
+		//(exceeds?="exceeds" ";")? & evalRange=EvaluationRange? & kpiEvalValueSet=KPIEvalValueSet?
+		public UnorderedGroup getUnorderedGroup_3_0_1() { return cUnorderedGroup_3_0_1; }
 
 		//(exceeds?="exceeds" ";")?
-		public Group getGroup_3_0_0_1() { return cGroup_3_0_0_1; }
+		public Group getGroup_3_0_1_0() { return cGroup_3_0_1_0; }
 
 		//exceeds?="exceeds"
-		public Assignment getExceedsAssignment_3_0_0_1_0() { return cExceedsAssignment_3_0_0_1_0; }
+		public Assignment getExceedsAssignment_3_0_1_0_0() { return cExceedsAssignment_3_0_1_0_0; }
 
 		//"exceeds"
-		public Keyword getExceedsExceedsKeyword_3_0_0_1_0_0() { return cExceedsExceedsKeyword_3_0_0_1_0_0; }
+		public Keyword getExceedsExceedsKeyword_3_0_1_0_0_0() { return cExceedsExceedsKeyword_3_0_1_0_0_0; }
 
 		//";"
-		public Keyword getSemicolonKeyword_3_0_0_1_1() { return cSemicolonKeyword_3_0_0_1_1; }
+		public Keyword getSemicolonKeyword_3_0_1_0_1() { return cSemicolonKeyword_3_0_1_0_1; }
 
 		//evalRange=EvaluationRange?
-		public Assignment getEvalRangeAssignment_3_0_1() { return cEvalRangeAssignment_3_0_1; }
+		public Assignment getEvalRangeAssignment_3_0_1_1() { return cEvalRangeAssignment_3_0_1_1; }
 
 		//EvaluationRange
-		public RuleCall getEvalRangeEvaluationRangeParserRuleCall_3_0_1_0() { return cEvalRangeEvaluationRangeParserRuleCall_3_0_1_0; }
-
-		//kpiEvalValueSet=KPIEvalValueSet? "}"
-		public Group getGroup_3_0_2() { return cGroup_3_0_2; }
+		public RuleCall getEvalRangeEvaluationRangeParserRuleCall_3_0_1_1_0() { return cEvalRangeEvaluationRangeParserRuleCall_3_0_1_1_0; }
 
 		//kpiEvalValueSet=KPIEvalValueSet?
-		public Assignment getKpiEvalValueSetAssignment_3_0_2_0() { return cKpiEvalValueSetAssignment_3_0_2_0; }
+		public Assignment getKpiEvalValueSetAssignment_3_0_1_2() { return cKpiEvalValueSetAssignment_3_0_1_2; }
 
 		//KPIEvalValueSet
-		public RuleCall getKpiEvalValueSetKPIEvalValueSetParserRuleCall_3_0_2_0_0() { return cKpiEvalValueSetKPIEvalValueSetParserRuleCall_3_0_2_0_0; }
+		public RuleCall getKpiEvalValueSetKPIEvalValueSetParserRuleCall_3_0_1_2_0() { return cKpiEvalValueSetKPIEvalValueSetParserRuleCall_3_0_1_2_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_3_0_2_1() { return cRightCurlyBracketKeyword_3_0_2_1; }
+		public Keyword getRightCurlyBracketKeyword_3_0_2() { return cRightCurlyBracketKeyword_3_0_2; }
 
 		//";"
 		public Keyword getSemicolonKeyword_3_1() { return cSemicolonKeyword_3_1; }
@@ -2564,40 +2560,40 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class EvaluationRangeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EvaluationRange");
-		private final UnorderedGroup cUnorderedGroup = (UnorderedGroup)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cUnorderedGroup.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
 		private final Keyword cStartKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Assignment cStartAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
-		private final RuleCall cStartINTTerminalRuleCall_0_2_0 = (RuleCall)cStartAssignment_0_2.eContents().get(0);
+		private final Assignment cVahdatAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
+		private final RuleCall cVahdatQUALITATIVEVALUETerminalRuleCall_0_2_0 = (RuleCall)cVahdatAssignment_0_2.eContents().get(0);
 		private final Keyword cSemicolonKeyword_0_3 = (Keyword)cGroup_0.eContents().get(3);
-		private final Group cGroup_1 = (Group)cUnorderedGroup.eContents().get(1);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cEndKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
 		private final Assignment cEndAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final RuleCall cEndINTTerminalRuleCall_1_2_0 = (RuleCall)cEndAssignment_1_2.eContents().get(0);
+		private final RuleCall cEndQUALITATIVEVALUETerminalRuleCall_1_2_0 = (RuleCall)cEndAssignment_1_2.eContents().get(0);
 		private final Keyword cSemicolonKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
-		private final Group cGroup_2 = (Group)cUnorderedGroup.eContents().get(2);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cStepKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
 		private final Assignment cStepAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final RuleCall cStepINTTerminalRuleCall_2_2_0 = (RuleCall)cStepAssignment_2_2.eContents().get(0);
+		private final RuleCall cStepQUALITATIVEVALUETerminalRuleCall_2_2_0 = (RuleCall)cStepAssignment_2_2.eContents().get(0);
 		private final Keyword cSemicolonKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
 		
 		//EvaluationRange:
-		//	"start" "=" start=INT ";" / *
+		//	("start" "=" vahdat=QUALITATIVEVALUE ";") ("end" "=" end=QUALITATIVEVALUE ";") / *
 		//	 *TODO I must give a default value, which is 1, to this attribute.
 		//	 * 		This can be done through the post processing mechanism in xText 
-		//	 * / & "end" "=" end=INT ";" & "step" "=" step=INT ";";
+		//	 * / ("step" "=" step=QUALITATIVEVALUE ";");
 		public ParserRule getRule() { return rule; }
 
-		//"start" "=" start=INT ";" / *
+		//("start" "=" vahdat=QUALITATIVEVALUE ";") ("end" "=" end=QUALITATIVEVALUE ";") / *
 		//	 *TODO I must give a default value, which is 1, to this attribute.
 		//	 * 		This can be done through the post processing mechanism in xText 
-		//	 * / & "end" "=" end=INT ";" & "step" "=" step=INT ";"
-		public UnorderedGroup getUnorderedGroup() { return cUnorderedGroup; }
+		//	 * / ("step" "=" step=QUALITATIVEVALUE ";")
+		public Group getGroup() { return cGroup; }
 
-		//"start" "=" start=INT ";"
+		//"start" "=" vahdat=QUALITATIVEVALUE ";"
 		public Group getGroup_0() { return cGroup_0; }
 
 		//"start"
@@ -2606,16 +2602,16 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//"="
 		public Keyword getEqualsSignKeyword_0_1() { return cEqualsSignKeyword_0_1; }
 
-		//start=INT
-		public Assignment getStartAssignment_0_2() { return cStartAssignment_0_2; }
+		//vahdat=QUALITATIVEVALUE
+		public Assignment getVahdatAssignment_0_2() { return cVahdatAssignment_0_2; }
 
-		//INT
-		public RuleCall getStartINTTerminalRuleCall_0_2_0() { return cStartINTTerminalRuleCall_0_2_0; }
+		//QUALITATIVEVALUE
+		public RuleCall getVahdatQUALITATIVEVALUETerminalRuleCall_0_2_0() { return cVahdatQUALITATIVEVALUETerminalRuleCall_0_2_0; }
 
 		//";"
 		public Keyword getSemicolonKeyword_0_3() { return cSemicolonKeyword_0_3; }
 
-		//"end" "=" end=INT ";"
+		//"end" "=" end=QUALITATIVEVALUE ";"
 		public Group getGroup_1() { return cGroup_1; }
 
 		//"end"
@@ -2624,16 +2620,16 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//"="
 		public Keyword getEqualsSignKeyword_1_1() { return cEqualsSignKeyword_1_1; }
 
-		//end=INT
+		//end=QUALITATIVEVALUE
 		public Assignment getEndAssignment_1_2() { return cEndAssignment_1_2; }
 
-		//INT
-		public RuleCall getEndINTTerminalRuleCall_1_2_0() { return cEndINTTerminalRuleCall_1_2_0; }
+		//QUALITATIVEVALUE
+		public RuleCall getEndQUALITATIVEVALUETerminalRuleCall_1_2_0() { return cEndQUALITATIVEVALUETerminalRuleCall_1_2_0; }
 
 		//";"
 		public Keyword getSemicolonKeyword_1_3() { return cSemicolonKeyword_1_3; }
 
-		//"step" "=" step=INT ";"
+		//"step" "=" step=QUALITATIVEVALUE ";"
 		public Group getGroup_2() { return cGroup_2; }
 
 		//"step"
@@ -2642,11 +2638,11 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//"="
 		public Keyword getEqualsSignKeyword_2_1() { return cEqualsSignKeyword_2_1; }
 
-		//step=INT
+		//step=QUALITATIVEVALUE
 		public Assignment getStepAssignment_2_2() { return cStepAssignment_2_2; }
 
-		//INT
-		public RuleCall getStepINTTerminalRuleCall_2_2_0() { return cStepINTTerminalRuleCall_2_2_0; }
+		//QUALITATIVEVALUE
+		public RuleCall getStepQUALITATIVEVALUETerminalRuleCall_2_2_0() { return cStepQUALITATIVEVALUETerminalRuleCall_2_2_0; }
 
 		//";"
 		public Keyword getSemicolonKeyword_2_3() { return cSemicolonKeyword_2_3; }
@@ -4499,8 +4495,8 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	//	 *TODO I must give a default value for evaluation, which is zero, to this attribute.
 	//	 * 		This can be done through the post processing mechanism in xText 
 	//	 * / intentionalElement=[SuperIntentionalElement|QualifiedName] "=" (qualitativeEvaluation=QualitativeLabel |
-	//	evaluation=QUALITATIVEVALUE) ("{" (exceeds?="exceeds" ";")? & evalRange=EvaluationRange? &
-	//	kpiEvalValueSet=KPIEvalValueSet? "}" | ";");
+	//	evaluation=QUALITATIVEVALUE) ("{" ((exceeds?="exceeds" ";")? & evalRange=EvaluationRange? &
+	//	kpiEvalValueSet=KPIEvalValueSet?) "}" | ";");
 	public EvaluationElements getEvaluationAccess() {
 		return pEvaluation;
 	}
@@ -4510,10 +4506,10 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//EvaluationRange:
-	//	"start" "=" start=INT ";" / *
+	//	("start" "=" vahdat=QUALITATIVEVALUE ";") ("end" "=" end=QUALITATIVEVALUE ";") / *
 	//	 *TODO I must give a default value, which is 1, to this attribute.
 	//	 * 		This can be done through the post processing mechanism in xText 
-	//	 * / & "end" "=" end=INT ";" & "step" "=" step=INT ";";
+	//	 * / ("step" "=" step=QUALITATIVEVALUE ";");
 	public EvaluationRangeElements getEvaluationRangeAccess() {
 		return pEvaluationRange;
 	}
@@ -4780,7 +4776,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	////terminal OCTINT: '0' ('0'..'7')+;
 	////terminal DOUBLE returns ecore::EDouble: DECINT (('.' DIGIT*) | (('.' DIGIT*)? ('E'|'e') ('-'|'+')? DECINT));  // Use terminal to avoid 'e' turning into a keyword
 	////terminal DECINT: '0' | ('1'..'9' DIGIT*);
-	//terminal QUALITATIVEVALUE returns ecore::EInt:
+	//terminal QUALITATIVEVALUE:
 	//	("-" | "+")? ("0".."9" "0".."9"? | "100");
 	public TerminalRule getQUALITATIVEVALUERule() {
 		return tQUALITATIVEVALUE;

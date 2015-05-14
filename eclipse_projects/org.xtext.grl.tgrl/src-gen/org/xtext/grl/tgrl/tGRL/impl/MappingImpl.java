@@ -58,7 +58,7 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
    * @generated
    * @ordered
    */
-  protected static final int EVALUATION_EDEFAULT = 0;
+  protected static final String EVALUATION_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getEvaluation() <em>Evaluation</em>}' attribute.
@@ -68,7 +68,7 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
    * @generated
    * @ordered
    */
-  protected int evaluation = EVALUATION_EDEFAULT;
+  protected String evaluation = EVALUATION_EDEFAULT;
 
   /**
    * The default value of the '{@link #getQualitativeEvaluation() <em>Qualitative Evaluation</em>}' attribute.
@@ -159,7 +159,7 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getEvaluation()
+  public String getEvaluation()
   {
     return evaluation;
   }
@@ -169,9 +169,9 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEvaluation(int newEvaluation)
+  public void setEvaluation(String newEvaluation)
   {
-    int oldEvaluation = evaluation;
+    String oldEvaluation = evaluation;
     evaluation = newEvaluation;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.MAPPING__EVALUATION, oldEvaluation, evaluation));
@@ -259,7 +259,7 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
         setName((String)newValue);
         return;
       case TGRLPackage.MAPPING__EVALUATION:
-        setEvaluation((Integer)newValue);
+        setEvaluation((String)newValue);
         return;
       case TGRLPackage.MAPPING__QUALITATIVE_EVALUATION:
         setQualitativeEvaluation((QualitativeLabel)newValue);
@@ -310,7 +310,7 @@ public class MappingImpl extends GRLBaseElementImpl implements Mapping
       case TGRLPackage.MAPPING__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case TGRLPackage.MAPPING__EVALUATION:
-        return evaluation != EVALUATION_EDEFAULT;
+        return EVALUATION_EDEFAULT == null ? evaluation != null : !EVALUATION_EDEFAULT.equals(evaluation);
       case TGRLPackage.MAPPING__QUALITATIVE_EVALUATION:
         return qualitativeEvaluation != QUALITATIVE_EVALUATION_EDEFAULT;
       case TGRLPackage.MAPPING__EXCEEDS:

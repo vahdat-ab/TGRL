@@ -3915,29 +3915,29 @@ ruleEvaluation returns [EObject current=null]
 	    }
 
 )
-))((
+))((	otherlv_4='{' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getEvaluationAccess().getLeftCurlyBracketKeyword_3_0_0());
+    }
+(
 
 (
 	{ 
-	  getUnorderedGroupHelper().enter(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0());
+	  getUnorderedGroupHelper().enter(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0_1());
 	}
 	(
 		(
 
 			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0(), 0)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0_1(), 0)}?=>(
 					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0(), 0);
+	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0_1(), 0);
 	 				}
-					({true}?=>(	otherlv_5='{' 
-    {
-    	newLeafNode(otherlv_5, grammarAccess.getEvaluationAccess().getLeftCurlyBracketKeyword_3_0_0_0());
-    }
-((
+					({true}?=>((
 (
 		lv_exceeds_6_0=	'exceeds' 
     {
-        newLeafNode(lv_exceeds_6_0, grammarAccess.getEvaluationAccess().getExceedsExceedsKeyword_3_0_0_1_0_0());
+        newLeafNode(lv_exceeds_6_0, grammarAccess.getEvaluationAccess().getExceedsExceedsKeyword_3_0_1_0_0_0());
     }
  
 	    {
@@ -3950,24 +3950,24 @@ ruleEvaluation returns [EObject current=null]
 )
 )	otherlv_7=';' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getEvaluationAccess().getSemicolonKeyword_3_0_0_1_1());
+    	newLeafNode(otherlv_7, grammarAccess.getEvaluationAccess().getSemicolonKeyword_3_0_1_0_1());
     }
-)?))
+))
 					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0());
+	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0_1());
 	 				}
  				)
 			)  |
 
 			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0(), 1)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0_1(), 1)}?=>(
 					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0(), 1);
+	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0_1(), 1);
 	 				}
 					({true}?=>(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getEvaluationAccess().getEvalRangeEvaluationRangeParserRuleCall_3_0_1_0()); 
+	        newCompositeNode(grammarAccess.getEvaluationAccess().getEvalRangeEvaluationRangeParserRuleCall_3_0_1_1_0()); 
 	    }
 		lv_evalRange_8_0=ruleEvaluationRange		{
 	        if ($current==null) {
@@ -3984,20 +3984,20 @@ ruleEvaluation returns [EObject current=null]
 )
 ))
 					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0());
+	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0_1());
 	 				}
  				)
 			)  |
 
 			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0(), 2)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0_1(), 2)}?=>(
 					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0(), 2);
+	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0_1(), 2);
 	 				}
-					({true}?=>((
+					({true}?=>(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getEvaluationAccess().getKpiEvalValueSetKPIEvalValueSetParserRuleCall_3_0_2_0_0()); 
+	        newCompositeNode(grammarAccess.getEvaluationAccess().getKpiEvalValueSetKPIEvalValueSetParserRuleCall_3_0_1_2_0()); 
 	    }
 		lv_kpiEvalValueSet_9_0=ruleKPIEvalValueSet		{
 	        if ($current==null) {
@@ -4012,25 +4012,24 @@ ruleEvaluation returns [EObject current=null]
 	    }
 
 )
-)?	otherlv_10='}' 
-    {
-    	newLeafNode(otherlv_10, grammarAccess.getEvaluationAccess().getRightCurlyBracketKeyword_3_0_2_1());
-    }
 ))
 					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0());
+	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0_1());
 	 				}
  				)
 			)  
 
-		)+
-	  	{getUnorderedGroupHelper().canLeave(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0())}?	
+		)*	
 	)
 )
 	{ 
-	  getUnorderedGroupHelper().leave(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0());
+	  getUnorderedGroupHelper().leave(grammarAccess.getEvaluationAccess().getUnorderedGroup_3_0_1());
 	}
 
+)	otherlv_10='}' 
+    {
+    	newLeafNode(otherlv_10, grammarAccess.getEvaluationAccess().getRightCurlyBracketKeyword_3_0_2());
+    }
 )
     |	otherlv_11=';' 
     {
@@ -4057,33 +4056,19 @@ ruleEvaluationRange returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(
-
-(
-	{ 
-	  getUnorderedGroupHelper().enter(grammarAccess.getEvaluationRangeAccess().getUnorderedGroup());
-	}
-	(
-		(
-
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationRangeAccess().getUnorderedGroup(), 0)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationRangeAccess().getUnorderedGroup(), 0);
-	 				}
-					({true}?=>(	otherlv_1='start' 
+((	otherlv_0='start' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getEvaluationRangeAccess().getStartKeyword_0_0());
+    	newLeafNode(otherlv_0, grammarAccess.getEvaluationRangeAccess().getStartKeyword_0_0());
     }
-	otherlv_2='=' 
+	otherlv_1='=' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getEvaluationRangeAccess().getEqualsSignKeyword_0_1());
+    	newLeafNode(otherlv_1, grammarAccess.getEvaluationRangeAccess().getEqualsSignKeyword_0_1());
     }
 (
 (
-		lv_start_3_0=RULE_INT
+		lv_vahdat_2_0=RULE_QUALITATIVEVALUE
 		{
-			newLeafNode(lv_start_3_0, grammarAccess.getEvaluationRangeAccess().getStartINTTerminalRuleCall_0_2_0()); 
+			newLeafNode(lv_vahdat_2_0, grammarAccess.getEvaluationRangeAccess().getVahdatQUALITATIVEVALUETerminalRuleCall_0_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -4091,41 +4076,29 @@ ruleEvaluationRange returns [EObject current=null]
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"start",
-        		lv_start_3_0, 
-        		"INT");
+       			"vahdat",
+        		lv_vahdat_2_0, 
+        		"QUALITATIVEVALUE");
 	    }
 
 )
-)	otherlv_4=';' 
+)	otherlv_3=';' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getEvaluationRangeAccess().getSemicolonKeyword_0_3());
+    	newLeafNode(otherlv_3, grammarAccess.getEvaluationRangeAccess().getSemicolonKeyword_0_3());
     }
-))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getEvaluationRangeAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  |
-
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationRangeAccess().getUnorderedGroup(), 1)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationRangeAccess().getUnorderedGroup(), 1);
-	 				}
-					({true}?=>(	otherlv_5='end' 
+)(	otherlv_4='end' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getEvaluationRangeAccess().getEndKeyword_1_0());
+    	newLeafNode(otherlv_4, grammarAccess.getEvaluationRangeAccess().getEndKeyword_1_0());
     }
-	otherlv_6='=' 
+	otherlv_5='=' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getEvaluationRangeAccess().getEqualsSignKeyword_1_1());
+    	newLeafNode(otherlv_5, grammarAccess.getEvaluationRangeAccess().getEqualsSignKeyword_1_1());
     }
 (
 (
-		lv_end_7_0=RULE_INT
+		lv_end_6_0=RULE_QUALITATIVEVALUE
 		{
-			newLeafNode(lv_end_7_0, grammarAccess.getEvaluationRangeAccess().getEndINTTerminalRuleCall_1_2_0()); 
+			newLeafNode(lv_end_6_0, grammarAccess.getEvaluationRangeAccess().getEndQUALITATIVEVALUETerminalRuleCall_1_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -4134,40 +4107,28 @@ ruleEvaluationRange returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"end",
-        		lv_end_7_0, 
-        		"INT");
+        		lv_end_6_0, 
+        		"QUALITATIVEVALUE");
 	    }
 
 )
-)	otherlv_8=';' 
+)	otherlv_7=';' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getEvaluationRangeAccess().getSemicolonKeyword_1_3());
+    	newLeafNode(otherlv_7, grammarAccess.getEvaluationRangeAccess().getSemicolonKeyword_1_3());
     }
-))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getEvaluationRangeAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  |
-
-			( 
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationRangeAccess().getUnorderedGroup(), 2)}?=>(
-					{ 
-	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationRangeAccess().getUnorderedGroup(), 2);
-	 				}
-					({true}?=>(	otherlv_9='step' 
+)(	otherlv_8='step' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getEvaluationRangeAccess().getStepKeyword_2_0());
+    	newLeafNode(otherlv_8, grammarAccess.getEvaluationRangeAccess().getStepKeyword_2_0());
     }
-	otherlv_10='=' 
+	otherlv_9='=' 
     {
-    	newLeafNode(otherlv_10, grammarAccess.getEvaluationRangeAccess().getEqualsSignKeyword_2_1());
+    	newLeafNode(otherlv_9, grammarAccess.getEvaluationRangeAccess().getEqualsSignKeyword_2_1());
     }
 (
 (
-		lv_step_11_0=RULE_INT
+		lv_step_10_0=RULE_QUALITATIVEVALUE
 		{
-			newLeafNode(lv_step_11_0, grammarAccess.getEvaluationRangeAccess().getStepINTTerminalRuleCall_2_2_0()); 
+			newLeafNode(lv_step_10_0, grammarAccess.getEvaluationRangeAccess().getStepQUALITATIVEVALUETerminalRuleCall_2_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -4176,31 +4137,16 @@ ruleEvaluationRange returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"step",
-        		lv_step_11_0, 
-        		"INT");
+        		lv_step_10_0, 
+        		"QUALITATIVEVALUE");
 	    }
 
 )
-)	otherlv_12=';' 
+)	otherlv_11=';' 
     {
-    	newLeafNode(otherlv_12, grammarAccess.getEvaluationRangeAccess().getSemicolonKeyword_2_3());
+    	newLeafNode(otherlv_11, grammarAccess.getEvaluationRangeAccess().getSemicolonKeyword_2_3());
     }
 ))
-					{ 
-	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getEvaluationRangeAccess().getUnorderedGroup());
-	 				}
- 				)
-			)  
-
-		)+
-	  	{getUnorderedGroupHelper().canLeave(grammarAccess.getEvaluationRangeAccess().getUnorderedGroup())}?	
-	)
-)
-	{ 
-	  getUnorderedGroupHelper().leave(grammarAccess.getEvaluationRangeAccess().getUnorderedGroup());
-	}
-
-)
 ;
 
 

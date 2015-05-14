@@ -89,12 +89,12 @@ public interface ContributionChange extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>New Quantitative Contribution</em>' attribute.
-   * @see #setNewQuantitativeContribution(int)
+   * @see #setNewQuantitativeContribution(String)
    * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionChange_NewQuantitativeContribution()
    * @model
    * @generated
    */
-  int getNewQuantitativeContribution();
+  String getNewQuantitativeContribution();
 
   /**
    * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ContributionChange#getNewQuantitativeContribution <em>New Quantitative Contribution</em>}' attribute.
@@ -104,7 +104,7 @@ public interface ContributionChange extends EObject
    * @see #getNewQuantitativeContribution()
    * @generated
    */
-  void setNewQuantitativeContribution(int value);
+  void setNewQuantitativeContribution(String value);
 
   /**
    * Returns the value of the '<em><b>Contrib Range</b></em>' containment reference.

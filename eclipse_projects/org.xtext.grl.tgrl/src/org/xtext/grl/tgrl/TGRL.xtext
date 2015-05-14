@@ -303,16 +303,18 @@ Evaluation:
 	 *TODO I must give a default value for evaluation, which is zero, to this attribute.
 	 * 		This can be done through the post processing mechanism in xText 
 	 */	
-	intentionalElement = [SuperIntentionalElement | QualifiedName] '=' (qualitativeEvaluation=QualitativeLabel | evaluation = QUALITATIVEVALUE )('{' (exceeds?='exceeds'';')?& (evalRange=EvaluationRange)?& (kpiEvalValueSet = KPIEvalValueSet)? '}' | ';')
+	intentionalElement = [SuperIntentionalElement | QualifiedName] '=' (qualitativeEvaluation=QualitativeLabel | evaluation = QUALITATIVEVALUE ) 
+	( ('{'(  (exceeds?='exceeds'';')?& (evalRange=EvaluationRange)?& (kpiEvalValueSet = KPIEvalValueSet)?  )'}') | (';'))
+
 ;
 EvaluationRange: 
-	('start' '=' start=INT ';')&
-	('end' '=' end=INT ';')&
+	('start' '=' vahdat=QUALITATIVEVALUE ';')
+	('end' '=' end=QUALITATIVEVALUE ';')
 	/*
 	 *TODO I must give a default value, which is 1, to this attribute.
 	 * 		This can be done through the post processing mechanism in xText 
 	 */	
-	('step' '=' step=INT ';')
+	('step' '=' step=QUALITATIVEVALUE ';')
 ;
 //**************************************************************************************
 KPIEvalValueSet:
@@ -459,4 +461,4 @@ terminal DOUBLE returns ecore::EDouble: INT ('.' INT+);
 //terminal OCTINT: '0' ('0'..'7')+;
 //terminal DOUBLE returns ecore::EDouble: DECINT (('.' DIGIT*) | (('.' DIGIT*)? ('E'|'e') ('-'|'+')? DECINT));  // Use terminal to avoid 'e' turning into a keyword
 //terminal DECINT: '0' | ('1'..'9' DIGIT*);
-terminal QUALITATIVEVALUE returns ecore::EInt: ('-'|'+')? ( (('0'..'9')('0'..'9')?) | ('100')) ;
+terminal QUALITATIVEVALUE : ('-'|'+')? ( (('0'..'9')('0'..'9')?) | ('100')) ;

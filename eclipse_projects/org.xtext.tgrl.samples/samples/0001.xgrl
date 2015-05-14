@@ -1,38 +1,88 @@
-grl{
-	 	actor Vendor {
- 			
- 		name = "Vendor"; 
- 		description = "the provider of the product who aims to make high profit while satisfying customer needs"; 
- 		//importance = 75; 
- 		
- 		
-  		//related to non-functional requirements
- 		softGoal HighLevelofSatisfaction {
- 			name= " High Level of Satisfaction";
- 			description = " high degree of customer satisfaction, it's importance is 25"; 
- 			
- 			//*************** I WISH IF THERE IS KEYWORDS FOR IMPORTANCE (BOTH QUANTITATIVE AND QULITATIVE):) *******************************
- 			importance=25;
-  
-// 			dependsOn Customer.HighQualityOfProduct { "this goal strongly depends on the high quality of product" };
- 		} // end of softGoal HighLevelofSatisfaction  
- 		
- 		softGoal MakeProfits { 
- 			name = "Make Profit"; 
- 			description = " Make Profit goal, it's importance is 75";
- 			importance=75;
-// 			dependsOn Revenues{"this goal is significantly affected by Revenues" };  //****** CONFUSED WHERE TO PUT THE SEMI-COLONS :) *******
- 			 			
- 			} // end of softGoal MakeProfits 
- 		
- 		indicator Revenues{
- 		description = "this is an indicator" ;
- 		name = "Revenues";
- 		importance=medium ;
-// 		contributesTo MakeProfits { make }, MakeProfits {100} ; // for both text and icon values.		 		
- 		}// end of indicator Revenues
- 		
- 		
- 		 		
- 	 }// end of Vendor
+////grl grlName {
+//
+////}
+////grl{
+////	softGoal LCost{
+////		name = "Low Cost";  
+////		description = "to keep down the cost of network ";
+////		importance = high;
+////	}
+////	belief LNHardware{
+////		name = "Less need for new hardware";
+////		description = "This is a key element in keeping 
+////		down the cost of networks"; 
+////	}
+////actor Vendor {
+////	name = "Vendor"; 
+////	description = "the provider of the product who aims to
+////          make high profit while satisfying customer needs"; 
+////	importance = 75; 
+//// 	softGoal MakeProfits { 
+//// 		name = "Make Profit"; 
+//// 		description = " Make Profit goal";
+//// 		importance=75; 
+//// 		
+//// 	} // end of softGoal MakeProfits
+////	indicator Revenues{
+////		description = "this is an indicator" ;
+////		name = "Revenues";
+////		importance =medium ;	
+////		contributesTo MakeProfits { make } ;	 		
+////	}
+////}
+//// Vendor.MakeProfits dependsOn Vendor.Revenues{"this goal is significantly affected by Revenues" };	
+//// Vendor.Revenues contributesTo Vendor.MakeProfits {make};	
+////  	softGoal SG1;
+////	softGoal SG2;
+////	softGoal SG3;
+////	link correlatesTo;
+////	SG1 correlatesTo SG2,SG3;
+//// }	
+////  softGoal HPerformace {
+////   name = "High Performance";
+////  }
+////  softGoal HEvolveability {
+////   name = "High Evolveability";
+////  }
+////  softGoal MHUtilization{
+////   name = "Maximum Hardware Utilization";
+////  }
+////  softGoal MCInfrastructure {
+////   name = "Minimum Changes to Infrastructure";
+////  }
+////  softGoal HThroughput {
+////   name = "High Throughput";
+////  }
+//grl GRLModel {
+//	softGoal SG1 {
+//		//this is a comment
+//	}
+//	softGoal SG2{
+//		metadata color = "red";
+//	}
+//	comment "This model is demo model"
+//}
+////strategy strategy2 extends strategy1 {
+////	SG3 = weaklyDenied;
+////}
+//}
+
+grl GRLModel{
+actor Vendor {
+  name = "Vendor"; 
+    description = "the provider of the product who aims to
+          make high profit while satisfying customer needs"; 
+    importance = 75; 
+    softGoal MakeProfits { 
+ 	name = "Make Profit"; 
+ 	description = " Make Profit goal";
+ 	importance=75; 
+    }
+    indicator Revenues{
+	description = "this is an indicator" ;		name = "Revenues";
+	importance =medium ;		 		
+   }	
  }
+
+}
+

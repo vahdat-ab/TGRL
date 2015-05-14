@@ -1,5 +1,6 @@
 package org.eclipse.acceleo.module.tgrl.java.services;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -121,11 +122,7 @@ public class ModelFeatures {
 			if(inLineElement instanceof InLineDecomposition){
 				NormalDecomposition newElement = TGRLFactory.eINSTANCE.createNormalDecomposition();
 				newElement.setSrc(inIntentionalElement);
-				for(DecompositionEnd dEnd : ((InLineDecomposition)inLineElement).getDest() )	{
-					newElement.getDest().add(dEnd);
-				}
-//				newElement.
-//				newElement.getDest().addAll(((InLineDecomposition) inLineElement).getDest());
+				newElement.getDest().addAll(((InLineDecomposition) inLineElement).getDest());
 				output.add(newElement);
 			} else if(inLineElement instanceof InLineDependency){
 				NormalDependency newElement = TGRLFactory.eINSTANCE.createNormalDependency();
@@ -196,6 +193,7 @@ public class ModelFeatures {
 }	
 	
 	public SuperIntentionalElement findSuperIntentionalElement(Model inModel,SuperIntentionalElement inSuperIntentionalElement) {
+		
 		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
 			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
 				if(grlElement1 instanceof SuperIntentionalElement){

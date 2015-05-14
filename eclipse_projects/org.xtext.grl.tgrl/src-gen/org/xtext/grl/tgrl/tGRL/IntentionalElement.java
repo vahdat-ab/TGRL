@@ -92,12 +92,12 @@ public interface IntentionalElement extends SuperIntentionalElement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Importance Quantitative</em>' attribute.
-   * @see #setImportanceQuantitative(int)
+   * @see #setImportanceQuantitative(String)
    * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getIntentionalElement_ImportanceQuantitative()
    * @model
    * @generated
    */
-  int getImportanceQuantitative();
+  String getImportanceQuantitative();
 
   /**
    * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.IntentionalElement#getImportanceQuantitative <em>Importance Quantitative</em>}' attribute.
@@ -107,7 +107,7 @@ public interface IntentionalElement extends SuperIntentionalElement
    * @see #getImportanceQuantitative()
    * @generated
    */
-  void setImportanceQuantitative(int value);
+  void setImportanceQuantitative(String value);
 
   /**
    * Returns the value of the '<em><b>Element Links</b></em>' containment reference list.

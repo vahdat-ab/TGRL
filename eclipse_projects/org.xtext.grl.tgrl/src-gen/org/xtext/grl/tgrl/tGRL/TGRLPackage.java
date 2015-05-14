@@ -1892,13 +1892,13 @@ public interface TGRLPackage extends EPackage
   int EVALUATION_RANGE = 33;
 
   /**
-   * The feature id for the '<em><b>Start</b></em>' attribute.
+   * The feature id for the '<em><b>Vahdat</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EVALUATION_RANGE__START = 0;
+  int EVALUATION_RANGE__VAHDAT = 0;
 
   /**
    * The feature id for the '<em><b>End</b></em>' attribute.
@@ -3502,15 +3502,15 @@ public interface TGRLPackage extends EPackage
   EClass getEvaluationRange();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getStart <em>Start</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getVahdat <em>Vahdat</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Start</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.EvaluationRange#getStart()
+   * @return the meta object for the attribute '<em>Vahdat</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.EvaluationRange#getVahdat()
    * @see #getEvaluationRange()
    * @generated
    */
-  EAttribute getEvaluationRange_Start();
+  EAttribute getEvaluationRange_Vahdat();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getEnd <em>End</em>}'.
@@ -4863,12 +4863,12 @@ public interface TGRLPackage extends EPackage
     EClass EVALUATION_RANGE = eINSTANCE.getEvaluationRange();
 
     /**
-     * The meta object literal for the '<em><b>Start</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Vahdat</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EVALUATION_RANGE__START = eINSTANCE.getEvaluationRange_Start();
+    EAttribute EVALUATION_RANGE__VAHDAT = eINSTANCE.getEvaluationRange_Vahdat();
 
     /**
      * The meta object literal for the '<em><b>End</b></em>' attribute feature.

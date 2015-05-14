@@ -77,7 +77,7 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
    * @generated
    * @ordered
    */
-  protected static final int EVALUATION_EDEFAULT = 0;
+  protected static final String EVALUATION_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getEvaluation() <em>Evaluation</em>}' attribute.
@@ -87,7 +87,7 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
    * @generated
    * @ordered
    */
-  protected int evaluation = EVALUATION_EDEFAULT;
+  protected String evaluation = EVALUATION_EDEFAULT;
 
   /**
    * The default value of the '{@link #isExceeds() <em>Exceeds</em>}' attribute.
@@ -221,7 +221,7 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getEvaluation()
+  public String getEvaluation()
   {
     return evaluation;
   }
@@ -231,9 +231,9 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEvaluation(int newEvaluation)
+  public void setEvaluation(String newEvaluation)
   {
-    int oldEvaluation = evaluation;
+    String oldEvaluation = evaluation;
     evaluation = newEvaluation;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.EVALUATION__EVALUATION, oldEvaluation, evaluation));
@@ -420,7 +420,7 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
         setQualitativeEvaluation((QualitativeLabel)newValue);
         return;
       case TGRLPackage.EVALUATION__EVALUATION:
-        setEvaluation((Integer)newValue);
+        setEvaluation((String)newValue);
         return;
       case TGRLPackage.EVALUATION__EXCEEDS:
         setExceeds((Boolean)newValue);
@@ -482,7 +482,7 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
       case TGRLPackage.EVALUATION__QUALITATIVE_EVALUATION:
         return qualitativeEvaluation != QUALITATIVE_EVALUATION_EDEFAULT;
       case TGRLPackage.EVALUATION__EVALUATION:
-        return evaluation != EVALUATION_EDEFAULT;
+        return EVALUATION_EDEFAULT == null ? evaluation != null : !EVALUATION_EDEFAULT.equals(evaluation);
       case TGRLPackage.EVALUATION__EXCEEDS:
         return exceeds != EXCEEDS_EDEFAULT;
       case TGRLPackage.EVALUATION__EVAL_RANGE:

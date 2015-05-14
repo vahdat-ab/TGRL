@@ -46,11 +46,11 @@
     [/for]
 	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
 	[for (end : ContributionEnd |elementLink.oclAsType(NormalContribution).dest)]	
-	<links xsi:type="grl:Contribution" name="" id="[end.id/]L" refs="//@urndef/@specDiagrams.0/@connections.[end.id/]" dest="[end.destName.id/]" src="[elementLink.oclAsType(NormalContribution).src.id/]"/>
+	<links xsi:type="grl:Contribution" name="" id="[end.id/]L" refs="//@urndef/@specDiagrams.0/@connections.[end.id/]" dest="[end.destName.id/]" src="[elementLink.oclAsType(NormalContribution).src.id/]" contribution="[contribution.toString().toUpperFirst()/]"/>
     [/for]
 	[elseif (elementLink.oclIsTypeOf(NormalDependency))]
 	[for (end : DependencyEnd |elementLink.oclAsType(NormalDependency).dest)]	
-	<links xsi:type="grl:Contribution" name="" id="[end.id/]L" refs="//@urndef/@specDiagrams.0/@connections.[end.id/]" dest="[end.destName.id/]" src="[elementLink.oclAsType(NormalDependency).src.id/]"/>
+	<links xsi:type="grl:Dependency" name="" id="[end.id/]L" refs="//@urndef/@specDiagrams.0/@connections.[end.id/]" dest="[end.destName.id/]" src="[elementLink.oclAsType(NormalDependency).src.id/]"/>
     [/for]
 	[/if]
 [/for]

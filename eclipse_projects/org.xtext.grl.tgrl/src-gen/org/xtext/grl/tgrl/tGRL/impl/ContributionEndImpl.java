@@ -77,7 +77,7 @@ public class ContributionEndImpl extends EndLinkImpl implements ContributionEnd
    * @generated
    * @ordered
    */
-  protected static final int QUANTITATIVE_CONTRIBUTION_EDEFAULT = 0;
+  protected static final String QUANTITATIVE_CONTRIBUTION_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getQuantitativeContribution() <em>Quantitative Contribution</em>}' attribute.
@@ -87,7 +87,7 @@ public class ContributionEndImpl extends EndLinkImpl implements ContributionEnd
    * @generated
    * @ordered
    */
-  protected int quantitativeContribution = QUANTITATIVE_CONTRIBUTION_EDEFAULT;
+  protected String quantitativeContribution = QUANTITATIVE_CONTRIBUTION_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -161,7 +161,7 @@ public class ContributionEndImpl extends EndLinkImpl implements ContributionEnd
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getQuantitativeContribution()
+  public String getQuantitativeContribution()
   {
     return quantitativeContribution;
   }
@@ -171,9 +171,9 @@ public class ContributionEndImpl extends EndLinkImpl implements ContributionEnd
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setQuantitativeContribution(int newQuantitativeContribution)
+  public void setQuantitativeContribution(String newQuantitativeContribution)
   {
-    int oldQuantitativeContribution = quantitativeContribution;
+    String oldQuantitativeContribution = quantitativeContribution;
     quantitativeContribution = newQuantitativeContribution;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION_END__QUANTITATIVE_CONTRIBUTION, oldQuantitativeContribution, quantitativeContribution));
@@ -216,7 +216,7 @@ public class ContributionEndImpl extends EndLinkImpl implements ContributionEnd
         setContribution((ContributionType)newValue);
         return;
       case TGRLPackage.CONTRIBUTION_END__QUANTITATIVE_CONTRIBUTION:
-        setQuantitativeContribution((Integer)newValue);
+        setQuantitativeContribution((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -260,7 +260,7 @@ public class ContributionEndImpl extends EndLinkImpl implements ContributionEnd
       case TGRLPackage.CONTRIBUTION_END__CONTRIBUTION:
         return contribution != CONTRIBUTION_EDEFAULT;
       case TGRLPackage.CONTRIBUTION_END__QUANTITATIVE_CONTRIBUTION:
-        return quantitativeContribution != QUANTITATIVE_CONTRIBUTION_EDEFAULT;
+        return QUANTITATIVE_CONTRIBUTION_EDEFAULT == null ? quantitativeContribution != null : !QUANTITATIVE_CONTRIBUTION_EDEFAULT.equals(quantitativeContribution);
     }
     return super.eIsSet(featureID);
   }

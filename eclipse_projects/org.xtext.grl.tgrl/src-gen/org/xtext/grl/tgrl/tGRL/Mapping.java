@@ -59,12 +59,12 @@ public interface Mapping extends GRLBaseElement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Evaluation</em>' attribute.
-   * @see #setEvaluation(int)
+   * @see #setEvaluation(String)
    * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getMapping_Evaluation()
    * @model
    * @generated
    */
-  int getEvaluation();
+  String getEvaluation();
 
   /**
    * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.Mapping#getEvaluation <em>Evaluation</em>}' attribute.
@@ -74,7 +74,7 @@ public interface Mapping extends GRLBaseElement
    * @see #getEvaluation()
    * @generated
    */
-  void setEvaluation(int value);
+  void setEvaluation(String value);
 
   /**
    * Returns the value of the '<em><b>Qualitative Evaluation</b></em>' attribute.
