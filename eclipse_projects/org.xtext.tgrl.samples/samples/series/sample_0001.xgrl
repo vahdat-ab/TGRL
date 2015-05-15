@@ -1,0 +1,9 @@
+grl Model1 {
+	actor A1;
+	softGoal SG1;
+	goal G1;
+	indicator I1;
+	belief B1;
+	resource R1;
+	task T1;	
+}

@@ -138,3 +138,37 @@ filled="true" fillColor="255,255,160"
 [template public getParentStrategies (inModel : Model ,aEvaluationStrategy : EvaluationStrategy) ]
 [if (getAllParentStrategis(inModel,aEvaluationStrategy)->size()>0)]parentStrategies="[for (eStrategy : EvaluationStrategy | getAllParentStrategis(inModel,aEvaluationStrategy).oclAsType(EvaluationStrategy))][eStrategy.id/] [/for]"[/if]
 [/template]
+
+
+
+[template public getImportance (inGRLElement : GRLElement) ]
+[if (inGRLElement.oclIsTypeOf(Actor))]
+[if (not (inGRLElement).oclAsType(Actor).importance.oclIsUndefined())] importance="[(inGRLElement).oclAsType(Actor).importance.toString().toUpperFirst()/]" [/if]
+[else]
+[if (not (inGRLElement).oclAsType(IntentionalElement).importance.oclIsUndefined())] importance="[(inGRLElement).oclAsType(IntentionalElement).importance.toString().toUpperFirst()/]" [/if][/if]
+[/template]
+
+[template public getImportanceQuantitative(inGRLElement : GRLElement) ]
+[if (inGRLElement.oclIsTypeOf(Actor))]
+[if (not (inGRLElement).oclAsType(Actor).importanceQuantitative.oclIsUndefined())] importanceQuantitative="[(inGRLElement).oclAsType(Actor).importanceQuantitative/]" [/if]
+[else]
+[if (not (inGRLElement).oclAsType(IntentionalElement).importanceQuantitative.oclIsUndefined())] importanceQuantitative="[(inGRLElement).oclAsType(IntentionalElement).importanceQuantitative/]" [/if]
+[/if]
+[/template]
+[template public getContributionType (inContributionEnd : ContributionEnd) ]
+contribution="[contribution.toString().toUpperFirst()/]"[if (quantitativeContribution.oclIsInvalid())][getImplicitQuantitativeContribution(contribution)/][/if]
+[/template]
+
+[template public getImplicitQuantitativeContribution (inContributionType : ContributionType) ]
+[if (inContributionType.toString().equalsIgnoreCase('make'))] quantitativeContribution = "100" 
+[elseif (inContributionType.toString().equalsIgnoreCase('help'))] quantitativeContribution = "25" 
+[elseif (inContributionType.toString().equalsIgnoreCase('somePositive'))] quantitativeContribution = "75" 
+[elseif (inContributionType.toString().equalsIgnoreCase('unknown'))] quantitativeContribution = "0" 
+[elseif (inContributionType.toString().equalsIgnoreCase('someNegative'))] quantitativeContribution = "-75" 
+[elseif (inContributionType.toString().equalsIgnoreCase('hurt'))] quantitativeContribution = "-25" 
+[elseif (inContributionType.toString().equalsIgnoreCase('break'))] quantitativeContribution = "-100" 
+[/if]
+[/template]
+[template public getQuantitativeContribution (aContributionEnd : ContributionEnd) ]
+[if (not quantitativeContribution.oclIsInvalid())] quantitativeContribution ="[quantitativeContribution/]" [/if]
+[/template]

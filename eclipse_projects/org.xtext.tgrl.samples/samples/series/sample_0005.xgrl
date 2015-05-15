@@ -1,0 +1,43 @@
+grl Model1 {
+	actor A1 {
+		name="my actor.";
+		description = "my description for the actor.";
+		importance = 10;
+		metadata A1_Metatadata = "my soft actor's metadata.";
+	}
+	softGoal SG1{
+		name = "my soft goal";
+		description = "my description for the soft goal.";
+		importance = 20;
+		metadata SG1_Metatadata = "my soft goal's metadata.";
+	}
+	goal G1 {
+		name = "my goal";
+		description = "my description for the goal.";
+		importance = 30;
+		metadata G1_Metatadata = "my goal's metadata.";
+	}
+	indicator I1{
+		name="my indicator";
+		description = "my description for the indicator.";
+		importance = 40;
+		metadata I1_Metatadata = "my indicator's metadata.";
+	}
+	belief B1{
+		name = "my belief";
+		description = "my description for the belief.";
+		metadata B1_Metatadata = "my belief's metadata.";
+	}
+	resource R1{
+		name = "my resource";
+		description = "my description for the resource.";
+		importance = 50;
+		metadata R1_Metatadata = "my resource's metadata.";
+	}
+	task T1 {
+		name = "my task";
+		description = "my description for the task.";
+		importance = 60;
+		metadata T1_Metatadata = "my task's metadata.";
+	}	
+}

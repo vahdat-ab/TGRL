@@ -1,0 +1,30 @@
+grl Model1 {
+	actor A1 {
+		name="my actor.";
+		description = "my description for the actor.";
+	}
+	softGoal SG1{
+		name = "my soft goal";
+		description = "my description for the soft goal.";
+	}
+	goal G1 {
+		name = "my goal";
+		description = "my description for the goal.";
+	}
+	indicator I1{
+		name="my indicator";
+		description = "my description for the indicator.";
+	}
+	belief B1{
+		name = "my belief";
+		description = "my description for the belief.";
+	}
+	resource R1{
+		name = "my resource";
+		description = "my description for the resource.";
+	}
+	task T1 {
+		name = "my task";
+		description = "my description for the task.";
+	}	
+}
