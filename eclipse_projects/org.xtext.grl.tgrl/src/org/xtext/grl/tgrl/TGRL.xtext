@@ -291,12 +291,14 @@ StrategyGroup:
 ;
 EvaluationStrategy: 
 	'strategy' name=ID ('extends' superStrategies+=[EvaluationStrategy | QualifiedName](',' superStrategies+=[EvaluationStrategy | QualifiedName])* )?
-	'{'
-		(
+	((
+		'{'
+			(
 			(metaData+=Metadata)*&
 			evaluations+=Evaluation*
-		)
-	'}'
+			)
+		'}'
+	) | (';'))
 ;
 Evaluation:
 	/*

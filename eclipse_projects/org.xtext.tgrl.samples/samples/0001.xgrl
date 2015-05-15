@@ -1,20 +1,4 @@
 grl Model1 {
-	softGoal SG1{
-		name = "soft goal 1";
-	}
-	softGoal SG2{
-		name = "soft goal 2";
-	}
-	softGoal SG3 {
-		name = "soft goal 3";
-	}
-	softGoal SG4 {
-		name = "soft goal 4";
-	}
-	softGoal SG5 {
-		name = "soft goal 5";
-	}
-	
-	SG1 contributesTo SG2{100};
-	SG3 contributesTo SG4{100},SG5{-25};
+	softGoal SG1;
+
 }

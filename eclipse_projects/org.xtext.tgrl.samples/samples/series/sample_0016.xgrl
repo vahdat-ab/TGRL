@@ -1,0 +1,5 @@
+grl Model1 {
+	strategy ST1;
+	strategy ST2;
+	strategyGroup STG1 includes ST1,ST2;
+}

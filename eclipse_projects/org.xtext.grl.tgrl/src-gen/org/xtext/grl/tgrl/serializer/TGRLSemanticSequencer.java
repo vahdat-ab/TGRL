@@ -521,8 +521,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (
 	 *         name=ID 
 	 *         (superStrategies+=[EvaluationStrategy|QualifiedName] superStrategies+=[EvaluationStrategy|QualifiedName]*)? 
-	 *         metaData+=Metadata* 
-	 *         evaluations+=Evaluation*
+	 *         (metaData+=Metadata* evaluations+=Evaluation*)?
 	 *     )
 	 */
 	protected void sequence_EvaluationStrategy(EObject context, EvaluationStrategy semanticObject) {

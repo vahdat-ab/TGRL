@@ -2363,21 +2363,26 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cSuperStrategiesAssignment_2_2_1 = (Assignment)cGroup_2_2.eContents().get(1);
 		private final CrossReference cSuperStrategiesEvaluationStrategyCrossReference_2_2_1_0 = (CrossReference)cSuperStrategiesAssignment_2_2_1.eContents().get(0);
 		private final RuleCall cSuperStrategiesEvaluationStrategyQualifiedNameParserRuleCall_2_2_1_0_1 = (RuleCall)cSuperStrategiesEvaluationStrategyCrossReference_2_2_1_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final UnorderedGroup cUnorderedGroup_4 = (UnorderedGroup)cGroup.eContents().get(4);
-		private final Assignment cMetaDataAssignment_4_0 = (Assignment)cUnorderedGroup_4.eContents().get(0);
-		private final RuleCall cMetaDataMetadataParserRuleCall_4_0_0 = (RuleCall)cMetaDataAssignment_4_0.eContents().get(0);
-		private final Assignment cEvaluationsAssignment_4_1 = (Assignment)cUnorderedGroup_4.eContents().get(1);
-		private final RuleCall cEvaluationsEvaluationParserRuleCall_4_1_0 = (RuleCall)cEvaluationsAssignment_4_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
+		private final Group cGroup_3_0 = (Group)cAlternatives_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3_0_0 = (Keyword)cGroup_3_0.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_3_0_1 = (UnorderedGroup)cGroup_3_0.eContents().get(1);
+		private final Assignment cMetaDataAssignment_3_0_1_0 = (Assignment)cUnorderedGroup_3_0_1.eContents().get(0);
+		private final RuleCall cMetaDataMetadataParserRuleCall_3_0_1_0_0 = (RuleCall)cMetaDataAssignment_3_0_1_0.eContents().get(0);
+		private final Assignment cEvaluationsAssignment_3_0_1_1 = (Assignment)cUnorderedGroup_3_0_1.eContents().get(1);
+		private final RuleCall cEvaluationsEvaluationParserRuleCall_3_0_1_1_0 = (RuleCall)cEvaluationsAssignment_3_0_1_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_0_2 = (Keyword)cGroup_3_0.eContents().get(2);
+		private final Keyword cSemicolonKeyword_3_1 = (Keyword)cAlternatives_3.eContents().get(1);
 		
 		//EvaluationStrategy:
 		//	"strategy" name=ID ("extends" superStrategies+=[EvaluationStrategy|QualifiedName] (","
-		//	superStrategies+=[EvaluationStrategy|QualifiedName])*)? "{" (metaData+=Metadata* & evaluations+=Evaluation*) "}";
+		//	superStrategies+=[EvaluationStrategy|QualifiedName])*)? ("{" (metaData+=Metadata* & evaluations+=Evaluation*) "}" |
+		//	";");
 		public ParserRule getRule() { return rule; }
 
 		//"strategy" name=ID ("extends" superStrategies+=[EvaluationStrategy|QualifiedName] (","
-		//superStrategies+=[EvaluationStrategy|QualifiedName])*)? "{" (metaData+=Metadata* & evaluations+=Evaluation*) "}"
+		//superStrategies+=[EvaluationStrategy|QualifiedName])*)? ("{" (metaData+=Metadata* & evaluations+=Evaluation*) "}" |
+		//";")
 		public Group getGroup() { return cGroup; }
 
 		//"strategy"
@@ -2420,26 +2425,35 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//QualifiedName
 		public RuleCall getSuperStrategiesEvaluationStrategyQualifiedNameParserRuleCall_2_2_1_0_1() { return cSuperStrategiesEvaluationStrategyQualifiedNameParserRuleCall_2_2_1_0_1; }
 
+		//"{" (metaData+=Metadata* & evaluations+=Evaluation*) "}" | ";"
+		public Alternatives getAlternatives_3() { return cAlternatives_3; }
+
+		//"{" (metaData+=Metadata* & evaluations+=Evaluation*) "}"
+		public Group getGroup_3_0() { return cGroup_3_0; }
+
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_3_0_0() { return cLeftCurlyBracketKeyword_3_0_0; }
 
 		//metaData+=Metadata* & evaluations+=Evaluation*
-		public UnorderedGroup getUnorderedGroup_4() { return cUnorderedGroup_4; }
+		public UnorderedGroup getUnorderedGroup_3_0_1() { return cUnorderedGroup_3_0_1; }
 
 		//metaData+=Metadata*
-		public Assignment getMetaDataAssignment_4_0() { return cMetaDataAssignment_4_0; }
+		public Assignment getMetaDataAssignment_3_0_1_0() { return cMetaDataAssignment_3_0_1_0; }
 
 		//Metadata
-		public RuleCall getMetaDataMetadataParserRuleCall_4_0_0() { return cMetaDataMetadataParserRuleCall_4_0_0; }
+		public RuleCall getMetaDataMetadataParserRuleCall_3_0_1_0_0() { return cMetaDataMetadataParserRuleCall_3_0_1_0_0; }
 
 		//evaluations+=Evaluation*
-		public Assignment getEvaluationsAssignment_4_1() { return cEvaluationsAssignment_4_1; }
+		public Assignment getEvaluationsAssignment_3_0_1_1() { return cEvaluationsAssignment_3_0_1_1; }
 
 		//Evaluation
-		public RuleCall getEvaluationsEvaluationParserRuleCall_4_1_0() { return cEvaluationsEvaluationParserRuleCall_4_1_0; }
+		public RuleCall getEvaluationsEvaluationParserRuleCall_3_0_1_1_0() { return cEvaluationsEvaluationParserRuleCall_3_0_1_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_3_0_2() { return cRightCurlyBracketKeyword_3_0_2; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3_1() { return cSemicolonKeyword_3_1; }
 	}
 
 	public class EvaluationElements extends AbstractParserRuleElementFinder {
@@ -4482,7 +4496,8 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 
 	//EvaluationStrategy:
 	//	"strategy" name=ID ("extends" superStrategies+=[EvaluationStrategy|QualifiedName] (","
-	//	superStrategies+=[EvaluationStrategy|QualifiedName])*)? "{" (metaData+=Metadata* & evaluations+=Evaluation*) "}";
+	//	superStrategies+=[EvaluationStrategy|QualifiedName])*)? ("{" (metaData+=Metadata* & evaluations+=Evaluation*) "}" |
+	//	";");
 	public EvaluationStrategyElements getEvaluationStrategyAccess() {
 		return pEvaluationStrategy;
 	}

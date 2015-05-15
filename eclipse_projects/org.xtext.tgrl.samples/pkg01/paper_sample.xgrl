@@ -3,33 +3,26 @@ grl GRL1 {
 		name="Service provider";
 		softGoal SG1{
 			name = "Minimum Changes to Infrastructure";	
-			color = yellow;	
 			
 		}
-		System.G2 depends G1;
+		System.G2 dependsOn System.G1;
 		softGoal SG2{
 			name = " Low Cost";
-			color = lightYellow;
 		}
 		softGoal SG3{
 			name = "High Performance";
-			color = lightGreen;
 		}
 		softGoal SG4{
 			name = "Maximum Hardware Utilisation";
-			color = lightGreen;
 		}
 		softGoal SG5{
 			name = "High Throughput";
-			color = lightGreen;
 		}
 		softGoal SG6{
 			name = "Minimum Message Exchange";
-			color = green;
 		}
 		softGoal SG7{
 			name = "Minimum Switch Loop";
-			color = red;
 		}
 		
 	}
@@ -37,42 +30,42 @@ grl GRL1 {
 		name = 'System';
 		goal G1{
 			name = "Determine Data Location";
-			High;
+			importance = high;
 		}
 		goal G2{
 			name = "Determine Service Location";
 		}
-		Task T1{
+		task T1{
 			name = "Data in Service Control Point";
 		}
-		Task T2{
+		task T2{
 			name = "Data in New Service Node";
 		}
-		Task T3{
+		task T3{
 			name="Install Service Node";
 		}
-		Task T4{
+		task T4{
 			name = "Service in Central Switch";
 		}
-		Task T5 {
+		task T5 {
 			name = "Service in Service Control Point";
 		}
 	}
 		
 	actor Vendor{
 		name = "Vendor";
-		100;
+		importance= 100;
 		goal G1 {
 			name="Service Nodes Ready For Sale";
-			100;
+			importance = 100;
 		}
 		
 	}
 	resource I1{
 		name = "Service Node";
-		High;
-		decompositionType = And;
+		importance = high;
+		decompositionType = and;
 	}
- 	I1 depends Vendor.G1;
- 	System.T1 contributes ServiceProvider.SG1 {Hurt};
+ 	I1 dependsOn Vendor.G1;
+ 	System.T1 contributesTo ServiceProvider.SG1 {hurt};
 }

@@ -1,0 +1,15 @@
+grl Model1 {
+	softGoal SG1;
+	softGoal SG2;
+	softGoal SG3;
+	softGoal SG4;	
+	strategy ST1{
+		SG1 = conflict;
+		SG2 = unknown;
+	}
+	strategy ST2 {
+		SG3 = 15;
+		SG4 = -100;
+	}
+	strategyGroup STG1 includes ST1,ST2;
+}
