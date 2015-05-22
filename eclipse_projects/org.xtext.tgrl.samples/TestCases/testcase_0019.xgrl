@@ -1,0 +1,10 @@
+grl {
+	softGoal S1{
+		name = "Test1";
+	}	
+}
+grl {
+	softGoal S1{
+		name = "Test2";
+	}	
+}

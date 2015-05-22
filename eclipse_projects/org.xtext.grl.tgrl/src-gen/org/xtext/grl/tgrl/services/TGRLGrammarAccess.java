@@ -199,16 +199,17 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	public class GRLSpecificationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "GRLSpecification");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cGrlKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cGrlElementsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cGrlElementsGRLElementParserRuleCall_3_0 = (RuleCall)cGrlElementsAssignment_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Action cGRLSpecificationAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cGrlKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cGrlElementsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cGrlElementsGRLElementParserRuleCall_4_0 = (RuleCall)cGrlElementsAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//GRLSpecification:
-		//	"grl" name=ID? "{" grlElements+=GRLElement* //		(
+		//	{GRLSpecification} "grl" name=ID? "{" grlElements+=GRLElement* //		(
 		//	//			(impactModel=ImpactModel)?
 		//	//			(
 		//	//				links+=ElementLink | actors+=Actor | intElements+=SuperIntentionalElement | 
@@ -220,7 +221,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//	"}";
 		public ParserRule getRule() { return rule; }
 
-		//"grl" name=ID? "{" grlElements+=GRLElement* //		(
+		//{GRLSpecification} "grl" name=ID? "{" grlElements+=GRLElement* //		(
 		////			(impactModel=ImpactModel)?
 		////			(
 		////				links+=ElementLink | actors+=Actor | intElements+=SuperIntentionalElement | 
@@ -232,23 +233,26 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//"}"
 		public Group getGroup() { return cGroup; }
 
+		//{GRLSpecification}
+		public Action getGRLSpecificationAction_0() { return cGRLSpecificationAction_0; }
+
 		//"grl"
-		public Keyword getGrlKeyword_0() { return cGrlKeyword_0; }
+		public Keyword getGrlKeyword_1() { return cGrlKeyword_1; }
 
 		//name=ID?
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//grlElements+=GRLElement*
-		public Assignment getGrlElementsAssignment_3() { return cGrlElementsAssignment_3; }
+		public Assignment getGrlElementsAssignment_4() { return cGrlElementsAssignment_4; }
 
 		//GRLElement
-		public RuleCall getGrlElementsGRLElementParserRuleCall_3_0() { return cGrlElementsGRLElementParserRuleCall_3_0; }
+		public RuleCall getGrlElementsGRLElementParserRuleCall_4_0() { return cGrlElementsGRLElementParserRuleCall_4_0; }
 
 		////		(
 		////			(impactModel=ImpactModel)?
@@ -260,7 +264,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		////			)*	
 		////		)
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class ActorElements extends AbstractParserRuleElementFinder {
@@ -4191,7 +4195,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//GRLSpecification:
-	//	"grl" name=ID? "{" grlElements+=GRLElement* //		(
+	//	{GRLSpecification} "grl" name=ID? "{" grlElements+=GRLElement* //		(
 	//	//			(impactModel=ImpactModel)?
 	//	//			(
 	//	//				links+=ElementLink | actors+=Actor | intElements+=SuperIntentionalElement | 

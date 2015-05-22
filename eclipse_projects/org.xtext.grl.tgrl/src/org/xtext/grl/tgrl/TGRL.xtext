@@ -33,6 +33,7 @@ IntentionalElement:
 ;
 
 GRLSpecification: 
+	{GRLSpecification}
 	'grl' (name=ID)? '{'
 		(grlElements+=GRLElement  )*
 //		(

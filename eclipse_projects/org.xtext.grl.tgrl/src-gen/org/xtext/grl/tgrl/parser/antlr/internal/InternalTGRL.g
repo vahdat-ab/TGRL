@@ -429,15 +429,21 @@ ruleGRLSpecification returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='grl' 
+((
     {
-    	newLeafNode(otherlv_0, grammarAccess.getGRLSpecificationAccess().getGrlKeyword_0());
+        $current = forceCreateModelElement(
+            grammarAccess.getGRLSpecificationAccess().getGRLSpecificationAction_0(),
+            $current);
+    }
+)	otherlv_1='grl' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getGRLSpecificationAccess().getGrlKeyword_1());
     }
 (
 (
-		lv_name_1_0=RULE_ID
+		lv_name_2_0=RULE_ID
 		{
-			newLeafNode(lv_name_1_0, grammarAccess.getGRLSpecificationAccess().getNameIDTerminalRuleCall_1_0()); 
+			newLeafNode(lv_name_2_0, grammarAccess.getGRLSpecificationAccess().getNameIDTerminalRuleCall_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -446,36 +452,36 @@ ruleGRLSpecification returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"name",
-        		lv_name_1_0, 
+        		lv_name_2_0, 
         		"ID");
 	    }
 
 )
-)?	otherlv_2='{' 
+)?	otherlv_3='{' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getGRLSpecificationAccess().getLeftCurlyBracketKeyword_2());
+    	newLeafNode(otherlv_3, grammarAccess.getGRLSpecificationAccess().getLeftCurlyBracketKeyword_3());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getGRLSpecificationAccess().getGrlElementsGRLElementParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getGRLSpecificationAccess().getGrlElementsGRLElementParserRuleCall_4_0()); 
 	    }
-		lv_grlElements_3_0=ruleGRLElement		{
+		lv_grlElements_4_0=ruleGRLElement		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getGRLSpecificationRule());
 	        }
        		add(
        			$current, 
        			"grlElements",
-        		lv_grlElements_3_0, 
+        		lv_grlElements_4_0, 
         		"GRLElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*	otherlv_4='}' 
+)*	otherlv_5='}' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getGRLSpecificationAccess().getRightCurlyBracketKeyword_4());
+    	newLeafNode(otherlv_5, grammarAccess.getGRLSpecificationAccess().getRightCurlyBracketKeyword_5());
     }
 )
 ;

@@ -1,0 +1,10 @@
+grl GRLModel1 {
+	softGoal S1{
+		name = "Test1";
+	}	
+}
+grl GRLModel2{
+	softGoal S1{
+		name = "Test2";
+	}	
+}

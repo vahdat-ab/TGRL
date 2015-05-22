@@ -1,6 +1,6 @@
 package org.eclipse.acceleo.module.tgrl.java.services;
 
-import java.lang.reflect.Field;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,15 +27,12 @@ import org.xtext.grl.tgrl.tGRL.NormalLink;
 import org.xtext.grl.tgrl.tGRL.QualitativeMapping;
 import org.xtext.grl.tgrl.tGRL.SuperIntentionalElement;
 import org.xtext.grl.tgrl.tGRL.TGRLFactory;
-import org.xtext.grl.tgrl.tGRL.TGRLPackage;
-import org.xtext.grl.tgrl.tGRL.impl.ElementLinkImpl;
-import org.xtext.grl.tgrl.tGRL.impl.NormalDecompositionImpl;
-import org.xtext.grl.tgrl.tGRL.impl.TGRLPackageImpl;
+
 
 public class ModelFeatures {
-	public List<SuperIntentionalElement> getAllSuperIntentionalElements(Model inModel)	{
+	public List<SuperIntentionalElement> getAllSuperIntentionalElements(GRLSpecification grlspec,Model inModel)	{
 		List<SuperIntentionalElement> output = new ArrayList<SuperIntentionalElement>();
-		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
+//		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
 			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
 				if (grlElement1 instanceof SuperIntentionalElement) {
 					output.add((SuperIntentionalElement)grlElement1);	
@@ -48,30 +45,13 @@ public class ModelFeatures {
 				}
 			}
 
-		}		
+//		}		
 		return output;
 	}
-//	public List<ElementLink> getAllElementLink(Model inModel)	{
-//		List<ElementLink> output = new ArrayList<ElementLink>();
-//		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
-//			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
-//				if (grlElement1 instanceof ElementLink) {
-//					output.add((ElementLink)grlElement1);	
-//				} else if (grlElement1 instanceof Actor){
-//						for (GRLElement grlElement2 : ((Actor)grlElement1).getElemets()) {
-//							if (grlElement2 instanceof ElementLink) {
-//								output.add((ElementLink)grlElement2);	
-//							}
-//						}
-//				}
-//			}
-//
-//		}		
-//		return output;
-//	}
-	public List<NormalDecomposition> getAllNormalDecompositions(Model inModel){
+
+	public List<NormalDecomposition> getAllNormalDecompositions(GRLSpecification grlspec,Model inModel){
 		List<NormalDecomposition> output = new ArrayList<NormalDecomposition>();
-		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
+//		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
 			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
 				if (grlElement1 instanceof NormalDecomposition) {
 					output.add((NormalDecomposition)grlElement1);
@@ -84,25 +64,25 @@ public class ModelFeatures {
 						}
 				}
 			}		
-		}
+//		}
 		return output;
 	}	
 	
-	public List<QualitativeMapping> getAllQualitativeMappings(Model inModel){
+	public List<QualitativeMapping> getAllQualitativeMappings(GRLSpecification grlspec,Model inModel){
 		List<QualitativeMapping> output = new ArrayList<QualitativeMapping>();
-		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
+//		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
 			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
 				if (grlElement1 instanceof QualitativeMapping) {
 					output.add((QualitativeMapping)grlElement1);
 				} 
 			}		
-		}
+//		}
 		return output;
 	}
 	
-	public List<EvaluationStrategy> getAllParentStrategis(Model inModel,EvaluationStrategy inEvaluationStrategy){
+	public List<EvaluationStrategy> getAllParentStrategis(GRLSpecification grlspec,Model inModel,EvaluationStrategy inEvaluationStrategy){
 		List<EvaluationStrategy> output = new ArrayList<EvaluationStrategy>();
-		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
+//		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
 			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
 				if (grlElement1 instanceof EvaluationStrategy) {
 					for (EvaluationStrategy evaluationStrategy : ((EvaluationStrategy)grlElement1).getSuperStrategies()) {
@@ -112,7 +92,7 @@ public class ModelFeatures {
 					}
 				} 
 			}		
-		}
+//		}
 		return output;
 	}
 
@@ -144,9 +124,9 @@ public class ModelFeatures {
 		return output;
 	}
 
-	public List<ElementLink> getAllElementLinks(Model inModel){
+	public List<ElementLink> getAllElementLinks(GRLSpecification grlspec,Model inModel){
 		List<ElementLink> output = new ArrayList<ElementLink>();
-		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
+//		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
 			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
 				if(grlElement1 instanceof ElementLink){
 					output.add((ElementLink)grlElement1);
@@ -164,7 +144,7 @@ public class ModelFeatures {
 					}
 				}
 			}		
-		}
+//		}
 		int index=0;
 		for(ElementLink eLink : output){
 			if(eLink instanceof NormalDecomposition){
@@ -192,39 +172,16 @@ public class ModelFeatures {
 	return output;
 }	
 	
-	public SuperIntentionalElement findSuperIntentionalElement(Model inModel,SuperIntentionalElement inSuperIntentionalElement) {
+	public SuperIntentionalElement findSuperIntentionalElement(GRLSpecification grlspec,Model inModel,SuperIntentionalElement inSuperIntentionalElement) {
 		
-		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
+//		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
 			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
 				if(grlElement1 instanceof SuperIntentionalElement){
 					if (grlElement1.equals(inSuperIntentionalElement)) return (SuperIntentionalElement)grlElement1;
 				}
 			}		
-		}
+//		}
 		return null;
 		
 	}
-	
-//	public List<Connection> getAllConnections(Model inModel){
-//		List<Connection> output = new ArrayList<Connection>();
-//		for (ElementLink elementLink : getAllElementLink(inModel)) {
-//			if (elementLink instanceof DecompositionLink){
-//				for (Connection connection : ((DecompositionLink)elementLink).getConnections()) {
-//					output.add(connection);
-//				}
-//			}
-//			else if (elementLink instanceof ContributionLink){
-//				for (Connection connection : ((ContributionLink)elementLink).getConnections()) {
-//					output.add(connection);
-//				}
-//			}
-//			else if (elementLink instanceof DependencyLink){
-//				for (Connection connection : ((DependencyLink)elementLink).getConnections()) {
-//					output.add(connection);
-//				}
-//			}
-//				
-//		}
-//		return output;
-//	}
 }
