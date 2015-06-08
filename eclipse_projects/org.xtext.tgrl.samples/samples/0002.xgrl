@@ -18,13 +18,16 @@ grl SimpleExample {
                 	metadata stereotype="SomeValue";
                 }
                 task SecondOption {description = "Better alternative";}
+               softGoal A;
+    softGoal B;
+    A contributesTo B{20};
 
     }   
     
                
-                System.ProvideMainFunctionality decomposedBy System.FirstOption, System.SecondOption;
-                System.FirstOption contributesTo User.EasyToUse {hurt}; //Inside element                // Links defined outside its elements, with quantitative value
-                System.SecondOption contributesTo User.EasyToUse {50};
-                User.LowLearningTime contributesTo User.EasyToUse {40};
+//                System.ProvideMainFunctionality decomposedBy System.FirstOption, System.SecondOption;
+//                System.FirstOption contributesTo User.EasyToUse {hurt}; //Inside element                // Links defined outside its elements, with quantitative value
+//                System.SecondOption contributesTo User.EasyToUse {50};
+//                User.LowLearningTime contributesTo User.EasyToUse {40};
 				  
 }

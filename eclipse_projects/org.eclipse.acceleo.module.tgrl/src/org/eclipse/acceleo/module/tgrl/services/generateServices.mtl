@@ -156,7 +156,7 @@ filled="true" fillColor="255,255,160"
 [/if]
 [/template]
 [template public getContributionType (inContributionEnd : ContributionEnd) ]
-contribution="[contribution.toString().toUpperFirst()/]"[if (quantitativeContribution.oclIsInvalid())][getImplicitQuantitativeContribution(contribution)/][/if]
+contribution="[contribution.toString().toUpperFirst()/]"[if (inContributionEnd.quantitativeContribution.toString().equalsIgnoreCase(''))][getImplicitQuantitativeContribution(contribution)/][/if]
 [/template]
 
 [template public getImplicitQuantitativeContribution (inContributionType : ContributionType) ]
@@ -170,5 +170,6 @@ contribution="[contribution.toString().toUpperFirst()/]"[if (quantitativeContrib
 [/if]
 [/template]
 [template public getQuantitativeContribution (aContributionEnd : ContributionEnd) ]
-[if (not quantitativeContribution.oclIsInvalid())] quantitativeContribution ="[quantitativeContribution/]" [/if]
+[if (not aContributionEnd.quantitativeContribution.toString().equalsIgnoreCase(''))] quantitativeContribution ="[quantitativeContribution/]" [/if]
+
 [/template]

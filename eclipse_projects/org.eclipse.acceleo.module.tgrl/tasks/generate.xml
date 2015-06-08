@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="org.eclipse.acceleo.module.tgrl">
-    <property name="ECLIPSE_HOME" value="E:/eclipse-modeling-luna-SR1a"/>
-    <property name="ECLIPSE_WORKSPACE" value="E:/Workspaces/luna2"/>
+    <property name="ECLIPSE_HOME" value="../../../../../../../eclipse-modeling-luna-sr2"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../../workspace/luna"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="org.eclipse.acceleo.module.tgrl.libraryclasspath">
@@ -9,10 +9,10 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.runtime_3.10.0.v20140318-2214.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/javax.annotation_1.2.0.v201401042248.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/javax.inject_1.0.0.v20091030.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi_3.10.1.v20140909-1633.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi_3.10.2.v20150203-1939.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi.compatibility.state_1.0.1.v20140709-1414.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.common_3.6.200.v20130402-1505.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.jobs_3.6.0.v20140424-0053.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.jobs_3.6.1.v20141014-1248.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.runtime.compatibility.registry_3.5.300.v20140128-0851/runtime_registry_compatibility.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.registry_3.5.400.v20140428-1507.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.preferences_3.5.200.v20140224-1527.jar"/>

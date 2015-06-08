@@ -179,6 +179,14 @@ public class ModelFeatures {
 				if(grlElement1 instanceof SuperIntentionalElement){
 					if (grlElement1.equals(inSuperIntentionalElement)) return (SuperIntentionalElement)grlElement1;
 				}
+				else if (grlElement1 instanceof Actor){
+					for (GRLElement grlElement2 : ((Actor)grlElement1).getElemets()   ) {
+						if (grlElement2 instanceof SuperIntentionalElement){
+							if (grlElement2.equals(inSuperIntentionalElement)) return (SuperIntentionalElement)grlElement2;
+						}
+					}
+				}
+
 			}		
 //		}
 		return null;
