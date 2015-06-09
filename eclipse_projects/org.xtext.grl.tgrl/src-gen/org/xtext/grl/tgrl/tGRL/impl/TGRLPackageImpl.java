@@ -634,6 +634,16 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getSuperIntentionalElement_FillColor()
+  {
+    return (EAttribute)superIntentionalElementEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getIntentionalElement()
   {
     return intentionalElementEClass;
@@ -784,9 +794,19 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getActor_FillColor()
+  {
+    return (EAttribute)actorEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getActor_Elemets()
   {
-    return (EReference)actorEClass.getEStructuralFeatures().get(6);
+    return (EReference)actorEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -1394,7 +1414,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEvaluationRange_Vahdat()
+  public EAttribute getEvaluationRange_Start()
   {
     return (EAttribute)evaluationRangeEClass.getEStructuralFeatures().get(0);
   }
@@ -1974,6 +1994,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     createEAttribute(superIntentionalElementEClass, SUPER_INTENTIONAL_ELEMENT__LABEL);
     createEAttribute(superIntentionalElementEClass, SUPER_INTENTIONAL_ELEMENT__DESCRIPTION);
     createEReference(superIntentionalElementEClass, SUPER_INTENTIONAL_ELEMENT__META_DATA);
+    createEAttribute(superIntentionalElementEClass, SUPER_INTENTIONAL_ELEMENT__FILL_COLOR);
 
     intentionalElementEClass = createEClass(INTENTIONAL_ELEMENT);
     createEAttribute(intentionalElementEClass, INTENTIONAL_ELEMENT__DECOMPOSITION_TYPE);
@@ -1992,6 +2013,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     createEAttribute(actorEClass, ACTOR__IMPORTANCE_QUANTITATIVE);
     createEAttribute(actorEClass, ACTOR__DESCRIPTION);
     createEReference(actorEClass, ACTOR__META_DATA);
+    createEAttribute(actorEClass, ACTOR__FILL_COLOR);
     createEReference(actorEClass, ACTOR__ELEMETS);
 
     softgoalEClass = createEClass(SOFTGOAL);
@@ -2079,7 +2101,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     createEReference(evaluationEClass, EVALUATION__KPI_EVAL_VALUE_SET);
 
     evaluationRangeEClass = createEClass(EVALUATION_RANGE);
-    createEAttribute(evaluationRangeEClass, EVALUATION_RANGE__VAHDAT);
+    createEAttribute(evaluationRangeEClass, EVALUATION_RANGE__START);
     createEAttribute(evaluationRangeEClass, EVALUATION_RANGE__END);
     createEAttribute(evaluationRangeEClass, EVALUATION_RANGE__STEP);
 
@@ -2238,6 +2260,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEAttribute(getSuperIntentionalElement_Label(), theEcorePackage.getEString(), "label", null, 0, 1, SuperIntentionalElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSuperIntentionalElement_Description(), theEcorePackage.getEString(), "description", null, 0, 1, SuperIntentionalElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSuperIntentionalElement_MetaData(), this.getMetadata(), null, "metaData", null, 0, -1, SuperIntentionalElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSuperIntentionalElement_FillColor(), this.getColor(), "fillColor", null, 0, 1, SuperIntentionalElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(intentionalElementEClass, IntentionalElement.class, "IntentionalElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getIntentionalElement_DecompositionType(), this.getDecompositionType(), "decompositionType", null, 0, 1, IntentionalElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2256,6 +2279,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEAttribute(getActor_ImportanceQuantitative(), theEcorePackage.getEString(), "importanceQuantitative", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getActor_Description(), theEcorePackage.getEString(), "description", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getActor_MetaData(), this.getMetadata(), null, "metaData", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getActor_FillColor(), this.getColor(), "fillColor", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getActor_Elemets(), this.getGRLElement(), null, "elemets", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(softgoalEClass, Softgoal.class, "Softgoal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2343,7 +2367,7 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEReference(getEvaluation_KpiEvalValueSet(), this.getKPIEvalValueSet(), null, "kpiEvalValueSet", null, 0, 1, Evaluation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(evaluationRangeEClass, EvaluationRange.class, "EvaluationRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getEvaluationRange_Vahdat(), theEcorePackage.getEString(), "vahdat", null, 0, 1, EvaluationRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEvaluationRange_Start(), theEcorePackage.getEString(), "start", null, 0, 1, EvaluationRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEvaluationRange_End(), theEcorePackage.getEString(), "end", null, 0, 1, EvaluationRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEvaluationRange_Step(), theEcorePackage.getEString(), "step", null, 0, 1, EvaluationRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2387,9 +2411,9 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     initEReference(getContributionChange_ContribRange(), this.getContributionRange(), null, "contribRange", null, 0, 1, ContributionChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(contributionRangeEClass, ContributionRange.class, "ContributionRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getContributionRange_Start(), theEcorePackage.getEInt(), "start", null, 0, 1, ContributionRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getContributionRange_End(), theEcorePackage.getEInt(), "end", null, 0, 1, ContributionRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getContributionRange_Step(), theEcorePackage.getEInt(), "step", null, 0, 1, ContributionRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getContributionRange_Start(), theEcorePackage.getEString(), "start", null, 0, 1, ContributionRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getContributionRange_End(), theEcorePackage.getEString(), "end", null, 0, 1, ContributionRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getContributionRange_Step(), theEcorePackage.getEString(), "step", null, 0, 1, ContributionRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(metadataEClass, Metadata.class, "Metadata", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMetadata_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Metadata.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

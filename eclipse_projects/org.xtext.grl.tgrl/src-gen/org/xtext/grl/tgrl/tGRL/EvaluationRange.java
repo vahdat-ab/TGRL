@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getVahdat <em>Vahdat</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getStart <em>Start</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getEnd <em>End</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getStep <em>Step</em>}</li>
  * </ul>
@@ -25,30 +25,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface EvaluationRange extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Vahdat</b></em>' attribute.
+   * Returns the value of the '<em><b>Start</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Vahdat</em>' attribute isn't clear,
+   * If the meaning of the '<em>Start</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Vahdat</em>' attribute.
-   * @see #setVahdat(String)
-   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getEvaluationRange_Vahdat()
+   * @return the value of the '<em>Start</em>' attribute.
+   * @see #setStart(String)
+   * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getEvaluationRange_Start()
    * @model
    * @generated
    */
-  String getVahdat();
+  String getStart();
 
   /**
-   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getVahdat <em>Vahdat</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getStart <em>Start</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Vahdat</em>' attribute.
-   * @see #getVahdat()
+   * @param value the new value of the '<em>Start</em>' attribute.
+   * @see #getStart()
    * @generated
    */
-  void setVahdat(String value);
+  void setStart(String value);
 
   /**
    * Returns the value of the '<em><b>End</b></em>' attribute.

@@ -33,12 +33,12 @@ public interface ContributionRange extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Start</em>' attribute.
-   * @see #setStart(int)
+   * @see #setStart(String)
    * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionRange_Start()
    * @model
    * @generated
    */
-  int getStart();
+  String getStart();
 
   /**
    * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ContributionRange#getStart <em>Start</em>}' attribute.
@@ -48,7 +48,7 @@ public interface ContributionRange extends EObject
    * @see #getStart()
    * @generated
    */
-  void setStart(int value);
+  void setStart(String value);
 
   /**
    * Returns the value of the '<em><b>End</b></em>' attribute.
@@ -59,12 +59,12 @@ public interface ContributionRange extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>End</em>' attribute.
-   * @see #setEnd(int)
+   * @see #setEnd(String)
    * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionRange_End()
    * @model
    * @generated
    */
-  int getEnd();
+  String getEnd();
 
   /**
    * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ContributionRange#getEnd <em>End</em>}' attribute.
@@ -74,7 +74,7 @@ public interface ContributionRange extends EObject
    * @see #getEnd()
    * @generated
    */
-  void setEnd(int value);
+  void setEnd(String value);
 
   /**
    * Returns the value of the '<em><b>Step</b></em>' attribute.
@@ -85,12 +85,12 @@ public interface ContributionRange extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Step</em>' attribute.
-   * @see #setStep(int)
+   * @see #setStep(String)
    * @see org.xtext.grl.tgrl.tGRL.TGRLPackage#getContributionRange_Step()
    * @model
    * @generated
    */
-  int getStep();
+  String getStep();
 
   /**
    * Sets the value of the '{@link org.xtext.grl.tgrl.tGRL.ContributionRange#getStep <em>Step</em>}' attribute.
@@ -100,6 +100,6 @@ public interface ContributionRange extends EObject
    * @see #getStep()
    * @generated
    */
-  void setStep(int value);
+  void setStep(String value);
 
 } // ContributionRange

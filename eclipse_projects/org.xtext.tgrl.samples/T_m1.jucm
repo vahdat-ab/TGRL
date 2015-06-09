@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grl="http:///grl.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="Vahdat" created="February 16, 2015 7:08:06 PM EST" modified="June 8, 2015 11:05:13 PM EDT" specVersion="3" urnVersion="1.27" nextGlobalID="29">
+  <ucmspec>
+    <scenarioGroups name="ScenarioGroup5" id="5">
+      <scenarios name="ScenarioDef6" id="6"/>
+    </scenarioGroups>
+  </ucmspec>
+  <grlspec>
+    <intElements name="S1" id="21" description="" linksDest="25 26" refs="27"/>
+    <intElements name="S2" id="22" description="" linksSrc="25" refs="28"/>
+    <intElements name="S3" id="23" description="" linksSrc="26" refs="29"/>
+    <links xsi:type="grl:Decomposition" name="Decomposition0L" id="25" description="" refs="//@urndef/@specDiagrams.0/@connections.0" dest="21" src="22"/>
+    <links xsi:type="grl:Decomposition" name="Decomposition1L" id="26" description="" refs="//@urndef/@specDiagrams.0/@connections.1" dest="21" src="23"/>
+    <impactModel/>
+    <indicatorGroup name="Time" id="7" isRedesignCategory="true"/>
+    <indicatorGroup name="Cost" id="8" isRedesignCategory="true"/>
+    <indicatorGroup name="Quality" id="9" isRedesignCategory="true"/>
+    <indicatorGroup name="Flexibility" id="10" isRedesignCategory="true"/>
+    <featureModel/>
+  </grlspec>
+  <urndef>
+    <specDiagrams xsi:type="grl:GRLGraph" name="GRLGraph2" id="2">
+      <nodes xsi:type="grl:IntentionalElementRef" name="Int21R" id="27" x="169" y="72" pred="//@urndef/@specDiagrams.0/@connections.0 //@urndef/@specDiagrams.0/@connections.1" def="21">
+        <metadata name="_height" value="45"/>
+        <metadata name="_width" value="110"/>
+      </nodes>
+      <nodes xsi:type="grl:IntentionalElementRef" name="Int22R" id="28" x="105" y="189" succ="//@urndef/@specDiagrams.0/@connections.0" def="22">
+        <metadata name="_height" value="45"/>
+        <metadata name="_width" value="110"/>
+      </nodes>
+      <nodes xsi:type="grl:IntentionalElementRef" name="Int23R" id="29" x="233" y="189" succ="//@urndef/@specDiagrams.0/@connections.1" def="23">
+        <metadata name="_height" value="45"/>
+        <metadata name="_width" value="110"/>
+      </nodes>
+      <connections xsi:type="grl:LinkRef" source="28" target="27" link="25"/>
+      <connections xsi:type="grl:LinkRef" source="29" target="27" link="26"/>
+    </specDiagrams>
+  </urndef>
+  <metadata name="_Use0to100EvaluationRange" value="false"/>
+</urn:URNspec>

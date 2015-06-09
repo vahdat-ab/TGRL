@@ -83,6 +83,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//SuperIntentionalElement/label"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//SuperIntentionalElement/description"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//SuperIntentionalElement/metaData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//SuperIntentionalElement/fillColor"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//IntentionalElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//IntentionalElement/decompositionType"/>
@@ -101,6 +102,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Actor/importanceQuantitative"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Actor/description"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Actor/metaData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//Actor/fillColor"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Actor/elemets"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//Softgoal"/>
@@ -179,7 +181,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TGRL.ecore#//Evaluation/kpiEvalValueSet"/>
     </genClasses>
     <genClasses ecoreClass="TGRL.ecore#//EvaluationRange">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//EvaluationRange/vahdat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//EvaluationRange/start"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//EvaluationRange/end"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TGRL.ecore#//EvaluationRange/step"/>
     </genClasses>

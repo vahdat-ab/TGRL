@@ -37,7 +37,7 @@ public class ContributionRangeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected static final int START_EDEFAULT = 0;
+  protected static final String START_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getStart() <em>Start</em>}' attribute.
@@ -47,7 +47,7 @@ public class ContributionRangeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected int start = START_EDEFAULT;
+  protected String start = START_EDEFAULT;
 
   /**
    * The default value of the '{@link #getEnd() <em>End</em>}' attribute.
@@ -57,7 +57,7 @@ public class ContributionRangeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected static final int END_EDEFAULT = 0;
+  protected static final String END_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getEnd() <em>End</em>}' attribute.
@@ -67,7 +67,7 @@ public class ContributionRangeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected int end = END_EDEFAULT;
+  protected String end = END_EDEFAULT;
 
   /**
    * The default value of the '{@link #getStep() <em>Step</em>}' attribute.
@@ -77,7 +77,7 @@ public class ContributionRangeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected static final int STEP_EDEFAULT = 0;
+  protected static final String STEP_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getStep() <em>Step</em>}' attribute.
@@ -87,7 +87,7 @@ public class ContributionRangeImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected int step = STEP_EDEFAULT;
+  protected String step = STEP_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -115,7 +115,7 @@ public class ContributionRangeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getStart()
+  public String getStart()
   {
     return start;
   }
@@ -125,9 +125,9 @@ public class ContributionRangeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setStart(int newStart)
+  public void setStart(String newStart)
   {
-    int oldStart = start;
+    String oldStart = start;
     start = newStart;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION_RANGE__START, oldStart, start));
@@ -138,7 +138,7 @@ public class ContributionRangeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getEnd()
+  public String getEnd()
   {
     return end;
   }
@@ -148,9 +148,9 @@ public class ContributionRangeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEnd(int newEnd)
+  public void setEnd(String newEnd)
   {
-    int oldEnd = end;
+    String oldEnd = end;
     end = newEnd;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION_RANGE__END, oldEnd, end));
@@ -161,7 +161,7 @@ public class ContributionRangeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getStep()
+  public String getStep()
   {
     return step;
   }
@@ -171,9 +171,9 @@ public class ContributionRangeImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setStep(int newStep)
+  public void setStep(String newStep)
   {
-    int oldStep = step;
+    String oldStep = step;
     step = newStep;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.CONTRIBUTION_RANGE__STEP, oldStep, step));
@@ -210,13 +210,13 @@ public class ContributionRangeImpl extends MinimalEObjectImpl.Container implemen
     switch (featureID)
     {
       case TGRLPackage.CONTRIBUTION_RANGE__START:
-        setStart((Integer)newValue);
+        setStart((String)newValue);
         return;
       case TGRLPackage.CONTRIBUTION_RANGE__END:
-        setEnd((Integer)newValue);
+        setEnd((String)newValue);
         return;
       case TGRLPackage.CONTRIBUTION_RANGE__STEP:
-        setStep((Integer)newValue);
+        setStep((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -256,11 +256,11 @@ public class ContributionRangeImpl extends MinimalEObjectImpl.Container implemen
     switch (featureID)
     {
       case TGRLPackage.CONTRIBUTION_RANGE__START:
-        return start != START_EDEFAULT;
+        return START_EDEFAULT == null ? start != null : !START_EDEFAULT.equals(start);
       case TGRLPackage.CONTRIBUTION_RANGE__END:
-        return end != END_EDEFAULT;
+        return END_EDEFAULT == null ? end != null : !END_EDEFAULT.equals(end);
       case TGRLPackage.CONTRIBUTION_RANGE__STEP:
-        return step != STEP_EDEFAULT;
+        return STEP_EDEFAULT == null ? step != null : !STEP_EDEFAULT.equals(step);
     }
     return super.eIsSet(featureID);
   }

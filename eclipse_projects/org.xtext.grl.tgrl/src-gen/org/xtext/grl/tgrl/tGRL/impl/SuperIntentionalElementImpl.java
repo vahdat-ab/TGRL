@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.xtext.grl.tgrl.tGRL.Color;
 import org.xtext.grl.tgrl.tGRL.Metadata;
 import org.xtext.grl.tgrl.tGRL.SuperIntentionalElement;
 import org.xtext.grl.tgrl.tGRL.TGRLPackage;
@@ -32,6 +33,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.SuperIntentionalElementImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.SuperIntentionalElementImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.SuperIntentionalElementImpl#getMetaData <em>Meta Data</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.SuperIntentionalElementImpl#getFillColor <em>Fill Color</em>}</li>
  * </ul>
  * </p>
  *
@@ -108,6 +110,26 @@ public class SuperIntentionalElementImpl extends GRLElementImpl implements Super
    * @ordered
    */
   protected EList<Metadata> metaData;
+
+  /**
+   * The default value of the '{@link #getFillColor() <em>Fill Color</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFillColor()
+   * @generated
+   * @ordered
+   */
+  protected static final Color FILL_COLOR_EDEFAULT = Color.WHITE;
+
+  /**
+   * The cached value of the '{@link #getFillColor() <em>Fill Color</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFillColor()
+   * @generated
+   * @ordered
+   */
+  protected Color fillColor = FILL_COLOR_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -218,6 +240,29 @@ public class SuperIntentionalElementImpl extends GRLElementImpl implements Super
    * <!-- end-user-doc -->
    * @generated
    */
+  public Color getFillColor()
+  {
+    return fillColor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setFillColor(Color newFillColor)
+  {
+    Color oldFillColor = fillColor;
+    fillColor = newFillColor == null ? FILL_COLOR_EDEFAULT : newFillColor;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.SUPER_INTENTIONAL_ELEMENT__FILL_COLOR, oldFillColor, fillColor));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -247,6 +292,8 @@ public class SuperIntentionalElementImpl extends GRLElementImpl implements Super
         return getDescription();
       case TGRLPackage.SUPER_INTENTIONAL_ELEMENT__META_DATA:
         return getMetaData();
+      case TGRLPackage.SUPER_INTENTIONAL_ELEMENT__FILL_COLOR:
+        return getFillColor();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -275,6 +322,9 @@ public class SuperIntentionalElementImpl extends GRLElementImpl implements Super
         getMetaData().clear();
         getMetaData().addAll((Collection<? extends Metadata>)newValue);
         return;
+      case TGRLPackage.SUPER_INTENTIONAL_ELEMENT__FILL_COLOR:
+        setFillColor((Color)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -301,6 +351,9 @@ public class SuperIntentionalElementImpl extends GRLElementImpl implements Super
       case TGRLPackage.SUPER_INTENTIONAL_ELEMENT__META_DATA:
         getMetaData().clear();
         return;
+      case TGRLPackage.SUPER_INTENTIONAL_ELEMENT__FILL_COLOR:
+        setFillColor(FILL_COLOR_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -323,6 +376,8 @@ public class SuperIntentionalElementImpl extends GRLElementImpl implements Super
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
       case TGRLPackage.SUPER_INTENTIONAL_ELEMENT__META_DATA:
         return metaData != null && !metaData.isEmpty();
+      case TGRLPackage.SUPER_INTENTIONAL_ELEMENT__FILL_COLOR:
+        return fillColor != FILL_COLOR_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -344,6 +399,8 @@ public class SuperIntentionalElementImpl extends GRLElementImpl implements Super
     result.append(label);
     result.append(", description: ");
     result.append(description);
+    result.append(", fillColor: ");
+    result.append(fillColor);
     result.append(')');
     return result.toString();
   }

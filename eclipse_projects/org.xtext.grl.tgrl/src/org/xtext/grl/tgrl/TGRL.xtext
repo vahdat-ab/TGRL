@@ -64,6 +64,7 @@ Actor:
 			('importance' '='  (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE) ';')?&
 			('description' '=' description=STRING ';')?&
 			(metaData+=Metadata)*&
+			('color' '=' fillColor = Color ';')?&
 			(elemets+=SuperIntentionalElement  | elemets+=NormalElementLink)*
 			)
 			
@@ -88,6 +89,7 @@ Softgoal :
 				 */
 				('importance' '='  (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE) ';')?&
 				(metaData+=Metadata)*&
+				('color' '=' fillColor = Color ';')?&
 				(elementLinks+=InLineElementLink)*		
 			)
 		'}'	
@@ -110,6 +112,7 @@ Goal:
 			 */
 			('importance' '='  (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE) ';')?&
 			(metaData+=Metadata)*&		
+			('color' '=' fillColor = Color ';')?&
 			(elementLinks+=InLineElementLink)*
 		)		
 	'}'			
@@ -132,6 +135,7 @@ Task:
 				 */
 				('importance' '='  (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE) ';')?&
 				(metaData+=Metadata)*&	
+				('color' '=' fillColor = Color ';')?&	
 				(elementLinks+=InLineElementLink)*	 
 			)		
 		'}'			
@@ -154,6 +158,7 @@ Resource:
 				 */
 				('importance' '='  (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE) ';')?&
 				(metaData+=Metadata)*&	
+				('color' '=' fillColor = Color ';')?&
 				(elementLinks+=InLineElementLink)*	
 			)		
 		'}'			
@@ -176,6 +181,7 @@ Indicator:
 				 */
 				('importance' '='  (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE) ';')?&
 				(metaData+=Metadata)*&
+				('color' '=' fillColor = Color ';')?&
 				(elementLinks+=InLineElementLink)*			
 			)		
 		'}'			
@@ -191,6 +197,7 @@ Belief:
 			(
 				('name' '=' label = STRING ';')?&
 				(metaData+=Metadata)*&
+				('color' '=' fillColor = Color ';')?&
 				('description' '=' description=STRING ';')?
 			)		
 		'}'			
@@ -264,18 +271,21 @@ DecompositionEnd:
 ;
 ContributionEnd:
 	{ContributionEnd}
-   (name = ID)?
 	destName = [SuperIntentionalElement | QualifiedName]
 	(
 		'{'
-			(contribution=ContributionType | quantitativeContribution=QUALITATIVEVALUE)?
+			(
+			('name' '=' name = ID ';')?&
+			( (contribution=ContributionType | quantitativeContribution=QUALITATIVEVALUE)';')?
+			)
+			
 		'}'
 	)?
 ;
 
 DependencyEnd:
 	{DependencyEnd}
-	destName = [SuperIntentionalElement | QualifiedName] 
+	destName = [SuperIntentionalElement | QualifiedName]
 	(
 		'{'
 			(description=STRING)?
@@ -306,12 +316,17 @@ Evaluation:
 	 *TODO I must give a default value for evaluation, which is zero, to this attribute.
 	 * 		This can be done through the post processing mechanism in xText 
 	 */	
-	intentionalElement = [SuperIntentionalElement | QualifiedName] '=' (qualitativeEvaluation=QualitativeLabel | evaluation = QUALITATIVEVALUE ) 
-	( ('{'(  (exceeds?='exceeds'';')?& (evalRange=EvaluationRange)?& (kpiEvalValueSet = KPIEvalValueSet)?  )'}') | (';'))
+	intentionalElement = [SuperIntentionalElement | QualifiedName] '='
+	(
+		 ((qualitativeEvaluation=QualitativeLabel | evaluation = QUALITATIVEVALUE ) ';') |
+	  
+	     ('{'(  (exceeds?='exceeds'';')?& (evalRange=EvaluationRange)?& (kpiEvalValueSet = KPIEvalValueSet)?  )'}' ) 
+	
+	)
 
 ;
 EvaluationRange: 
-	('start' '=' vahdat=QUALITATIVEVALUE ';')
+	('start' '=' start=QUALITATIVEVALUE ';')
 	('end' '=' end=QUALITATIVEVALUE ';')
 	/*
 	 *TODO I must give a default value, which is 1, to this attribute.
@@ -385,16 +400,20 @@ ContributionChange:
 	 *TODO I must give a default value for v, which is 0, to this attribute.
 	 * 		This can be done through the post processing mechanism in xText 
 	 */	
-	contribution = [ContributionEnd | QualifiedName] ':' ( newContribution= ContributionType | newQuantitativeContribution = QUALITATIVEVALUE)(';'| ('{' contribRange = ContributionRange '}') )
+	contribution = [ContributionEnd | QualifiedName] '=' ( 
+		(
+			( newContribution= ContributionType | newQuantitativeContribution = QUALITATIVEVALUE)';') 
+			| ('{' contribRange = ContributionRange '}')
+	 	)
 ;
 ContributionRange: 
-	('start' '=' start=INT ';')&
-	('end' '=' end=INT ';')&
+	('start' '=' start=QUALITATIVEVALUE ';')&
+	('end' '=' end=QUALITATIVEVALUE ';')&
 	/*
 	 *TODO I must give a default value, which is 1, to this attribute.
 	 * 		This can be done through the post processing mechanism in xText 
 	 */	
-	('step' '=' step=INT ';')?
+	('step' '=' step=QUALITATIVEVALUE ';')?
 ;
 
 /*
@@ -408,7 +427,6 @@ Metadata:
 Comment:
 	'comment' content=STRING ';'
 ;
-
 
 IndicatorGroup :
 	'indicatorGroup' name=ID 'includes' indicators+=[Indicator | QualifiedName](',' indicators+=[Indicator | QualifiedName])* ';'

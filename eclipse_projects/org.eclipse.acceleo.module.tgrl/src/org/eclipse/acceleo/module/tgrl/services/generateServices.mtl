@@ -3,7 +3,7 @@
 [import org::eclipse::acceleo::module::tgrl::java::services::generateModelFeatures /]
 
 [template public getLinkSrc(grlSpec : GRLSpecification , inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
-linksSrc="[for (elementLink : ElementLink | getAllElementLinks(grlSpec,inModel).oclAsType(ElementLink))]
+linksDest="[for (elementLink : ElementLink | getAllElementLinks(grlSpec,inModel).oclAsType(ElementLink))]
 	[if (elementLink.oclIsTypeOf(NormalDecomposition))]
 [if (elementLink.oclAsType(NormalDecomposition).src=inIntentionalElement)][for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)][end.id/]L [/for][/if]
 	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
@@ -14,7 +14,7 @@ linksSrc="[for (elementLink : ElementLink | getAllElementLinks(grlSpec,inModel).
 [/template]
 
 [template public getLinksDest(grlSpec : GRLSpecification, inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
-linksDest="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(ElementLink))]
+linksSrc="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(ElementLink))]
 	[if (elementLink.oclIsTypeOf(NormalDecomposition))]
 [for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)][if (findSuperIntentionalElement(grlSpec,inModel, end.destName).name=inIntentionalElement.name)][end.id/]L [/if][/for]
 	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
@@ -26,7 +26,7 @@ linksDest="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsTy
 
 
 [template public getSucc(grlSpec : GRLSpecification, inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
-succ="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(ElementLink))]
+pred="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(ElementLink))]
 	[if (elementLink.oclIsTypeOf(NormalDecomposition))]
 [if (elementLink.oclAsType(NormalDecomposition).src=inIntentionalElement)][for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)]//@urndef/@specDiagrams.0/@connections.[end.id/] [/for][/if]
 	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
@@ -37,7 +37,7 @@ succ="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(El
 [/template]
 
 [template public getPred(grlSpec : GRLSpecification,inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
-pred="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(ElementLink))]
+succ="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(ElementLink))]
 	[if (elementLink.oclIsTypeOf(NormalDecomposition))]
 [for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)][if (findSuperIntentionalElement(grlSpec,inModel, end.destName).name=inIntentionalElement.name)]//@urndef/@specDiagrams.0/@connections.[end.id/] [/if][/for]
 	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
@@ -77,7 +77,7 @@ nodes="[for (elementLink : SuperIntentionalElement | elemets->selectByKind(Super
 [/if]	
 [/template]
 
-[comment][template public getColor(inGRLElement : GRLElement)]
+[template public getColor(inGRLElement : SuperIntentionalElement)]
 [if (fillColor.toString()='white')]
 [elseif (fillColor.toString()='black')]
 filled="true" fillColor="0,0,0"
@@ -110,7 +110,7 @@ filled="true" fillColor="255,160,255"
 [elseif (fillColor.toString()='lightYellow')]
 filled="true" fillColor="255,255,160"
 [/if]
-[/template][/comment]
+[/template]
 
 [template public getName(inSuperIntentionalElement : SuperIntentionalElement) post(trim())]
 [if (label='')]
@@ -138,8 +138,6 @@ filled="true" fillColor="255,255,160"
 [template public getParentStrategies (grlSpec : GRLSpecification,inModel : Model ,aEvaluationStrategy : EvaluationStrategy) ]
 [if (getAllParentStrategis(inModel,aEvaluationStrategy)->size()>0)]parentStrategies="[for (eStrategy : EvaluationStrategy | getAllParentStrategis(inModel,aEvaluationStrategy).oclAsType(EvaluationStrategy))][eStrategy.id/] [/for]"[/if]
 [/template]
-
-
 
 [template public getImportance (inGRLElement : GRLElement) ]
 [if (inGRLElement.oclIsTypeOf(Actor))]
@@ -171,5 +169,12 @@ contribution="[contribution.toString().toUpperFirst()/]"[if (inContributionEnd.q
 [/template]
 [template public getQuantitativeContribution (aContributionEnd : ContributionEnd) ]
 [if (not aContributionEnd.quantitativeContribution.toString().equalsIgnoreCase(''))] quantitativeContribution ="[quantitativeContribution/]" [/if]
+[/template]
 
+[template public getValidName (element : SuperIntentionalElement) ]
+[if (element.label.toString()='')]name="[element.name/]" [else]name="[element.label/]" [/if]
+[/template]
+
+[template public getValidName (element : Actor) ]
+[if (element.label.toString()='')]name="[element.name/]" [else]name="[element.label/]" [/if]
 [/template]

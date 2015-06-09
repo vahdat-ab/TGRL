@@ -225,13 +225,22 @@ public interface TGRLPackage extends EPackage
   int SUPER_INTENTIONAL_ELEMENT__META_DATA = GRL_ELEMENT_FEATURE_COUNT + 3;
 
   /**
+   * The feature id for the '<em><b>Fill Color</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUPER_INTENTIONAL_ELEMENT__FILL_COLOR = GRL_ELEMENT_FEATURE_COUNT + 4;
+
+  /**
    * The number of structural features of the '<em>Super Intentional Element</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SUPER_INTENTIONAL_ELEMENT_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 4;
+  int SUPER_INTENTIONAL_ELEMENT_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl <em>Intentional Element</em>}' class.
@@ -287,6 +296,15 @@ public interface TGRLPackage extends EPackage
    * @ordered
    */
   int INTENTIONAL_ELEMENT__META_DATA = SUPER_INTENTIONAL_ELEMENT__META_DATA;
+
+  /**
+   * The feature id for the '<em><b>Fill Color</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTENTIONAL_ELEMENT__FILL_COLOR = SUPER_INTENTIONAL_ELEMENT__FILL_COLOR;
 
   /**
    * The feature id for the '<em><b>Decomposition Type</b></em>' attribute.
@@ -453,13 +471,22 @@ public interface TGRLPackage extends EPackage
   int ACTOR__META_DATA = GRL_ELEMENT_FEATURE_COUNT + 5;
 
   /**
+   * The feature id for the '<em><b>Fill Color</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTOR__FILL_COLOR = GRL_ELEMENT_FEATURE_COUNT + 6;
+
+  /**
    * The feature id for the '<em><b>Elemets</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ACTOR__ELEMETS = GRL_ELEMENT_FEATURE_COUNT + 6;
+  int ACTOR__ELEMETS = GRL_ELEMENT_FEATURE_COUNT + 7;
 
   /**
    * The number of structural features of the '<em>Actor</em>' class.
@@ -468,7 +495,7 @@ public interface TGRLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACTOR_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 7;
+  int ACTOR_FEATURE_COUNT = GRL_ELEMENT_FEATURE_COUNT + 8;
 
   /**
    * The meta object id for the '{@link org.xtext.grl.tgrl.tGRL.impl.SoftgoalImpl <em>Softgoal</em>}' class.
@@ -524,6 +551,15 @@ public interface TGRLPackage extends EPackage
    * @ordered
    */
   int SOFTGOAL__META_DATA = INTENTIONAL_ELEMENT__META_DATA;
+
+  /**
+   * The feature id for the '<em><b>Fill Color</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOFTGOAL__FILL_COLOR = INTENTIONAL_ELEMENT__FILL_COLOR;
 
   /**
    * The feature id for the '<em><b>Decomposition Type</b></em>' attribute.
@@ -626,6 +662,15 @@ public interface TGRLPackage extends EPackage
   int GOAL__META_DATA = INTENTIONAL_ELEMENT__META_DATA;
 
   /**
+   * The feature id for the '<em><b>Fill Color</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GOAL__FILL_COLOR = INTENTIONAL_ELEMENT__FILL_COLOR;
+
+  /**
    * The feature id for the '<em><b>Decomposition Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -724,6 +769,15 @@ public interface TGRLPackage extends EPackage
    * @ordered
    */
   int TASK__META_DATA = INTENTIONAL_ELEMENT__META_DATA;
+
+  /**
+   * The feature id for the '<em><b>Fill Color</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TASK__FILL_COLOR = INTENTIONAL_ELEMENT__FILL_COLOR;
 
   /**
    * The feature id for the '<em><b>Decomposition Type</b></em>' attribute.
@@ -826,6 +880,15 @@ public interface TGRLPackage extends EPackage
   int RESOURCE__META_DATA = INTENTIONAL_ELEMENT__META_DATA;
 
   /**
+   * The feature id for the '<em><b>Fill Color</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RESOURCE__FILL_COLOR = INTENTIONAL_ELEMENT__FILL_COLOR;
+
+  /**
    * The feature id for the '<em><b>Decomposition Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -926,6 +989,15 @@ public interface TGRLPackage extends EPackage
   int INDICATOR__META_DATA = INTENTIONAL_ELEMENT__META_DATA;
 
   /**
+   * The feature id for the '<em><b>Fill Color</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDICATOR__FILL_COLOR = INTENTIONAL_ELEMENT__FILL_COLOR;
+
+  /**
    * The feature id for the '<em><b>Decomposition Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1024,6 +1096,15 @@ public interface TGRLPackage extends EPackage
    * @ordered
    */
   int BELIEF__META_DATA = SUPER_INTENTIONAL_ELEMENT__META_DATA;
+
+  /**
+   * The feature id for the '<em><b>Fill Color</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BELIEF__FILL_COLOR = SUPER_INTENTIONAL_ELEMENT__FILL_COLOR;
 
   /**
    * The number of structural features of the '<em>Belief</em>' class.
@@ -1892,13 +1973,13 @@ public interface TGRLPackage extends EPackage
   int EVALUATION_RANGE = 33;
 
   /**
-   * The feature id for the '<em><b>Vahdat</b></em>' attribute.
+   * The feature id for the '<em><b>Start</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EVALUATION_RANGE__VAHDAT = 0;
+  int EVALUATION_RANGE__START = 0;
 
   /**
    * The feature id for the '<em><b>End</b></em>' attribute.
@@ -2695,6 +2776,17 @@ public interface TGRLPackage extends EPackage
   EReference getSuperIntentionalElement_MetaData();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.SuperIntentionalElement#getFillColor <em>Fill Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Fill Color</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.SuperIntentionalElement#getFillColor()
+   * @see #getSuperIntentionalElement()
+   * @generated
+   */
+  EAttribute getSuperIntentionalElement_FillColor();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.grl.tgrl.tGRL.IntentionalElement <em>Intentional Element</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2855,6 +2947,17 @@ public interface TGRLPackage extends EPackage
    * @generated
    */
   EReference getActor_MetaData();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.Actor#getFillColor <em>Fill Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Fill Color</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.Actor#getFillColor()
+   * @see #getActor()
+   * @generated
+   */
+  EAttribute getActor_FillColor();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.grl.tgrl.tGRL.Actor#getElemets <em>Elemets</em>}'.
@@ -3502,15 +3605,15 @@ public interface TGRLPackage extends EPackage
   EClass getEvaluationRange();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getVahdat <em>Vahdat</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getStart <em>Start</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Vahdat</em>'.
-   * @see org.xtext.grl.tgrl.tGRL.EvaluationRange#getVahdat()
+   * @return the meta object for the attribute '<em>Start</em>'.
+   * @see org.xtext.grl.tgrl.tGRL.EvaluationRange#getStart()
    * @see #getEvaluationRange()
    * @generated
    */
-  EAttribute getEvaluationRange_Vahdat();
+  EAttribute getEvaluationRange_Start();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.grl.tgrl.tGRL.EvaluationRange#getEnd <em>End</em>}'.
@@ -4197,6 +4300,14 @@ public interface TGRLPackage extends EPackage
     EReference SUPER_INTENTIONAL_ELEMENT__META_DATA = eINSTANCE.getSuperIntentionalElement_MetaData();
 
     /**
+     * The meta object literal for the '<em><b>Fill Color</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUPER_INTENTIONAL_ELEMENT__FILL_COLOR = eINSTANCE.getSuperIntentionalElement_FillColor();
+
+    /**
      * The meta object literal for the '{@link org.xtext.grl.tgrl.tGRL.impl.IntentionalElementImpl <em>Intentional Element</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4321,6 +4432,14 @@ public interface TGRLPackage extends EPackage
      * @generated
      */
     EReference ACTOR__META_DATA = eINSTANCE.getActor_MetaData();
+
+    /**
+     * The meta object literal for the '<em><b>Fill Color</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ACTOR__FILL_COLOR = eINSTANCE.getActor_FillColor();
 
     /**
      * The meta object literal for the '<em><b>Elemets</b></em>' containment reference list feature.
@@ -4863,12 +4982,12 @@ public interface TGRLPackage extends EPackage
     EClass EVALUATION_RANGE = eINSTANCE.getEvaluationRange();
 
     /**
-     * The meta object literal for the '<em><b>Vahdat</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Start</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EVALUATION_RANGE__VAHDAT = eINSTANCE.getEvaluationRange_Vahdat();
+    EAttribute EVALUATION_RANGE__START = eINSTANCE.getEvaluationRange_Start();
 
     /**
      * The meta object literal for the '<em><b>End</b></em>' attribute feature.

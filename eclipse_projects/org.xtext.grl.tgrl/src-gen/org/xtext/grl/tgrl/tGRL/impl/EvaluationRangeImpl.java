@@ -19,7 +19,7 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationRangeImpl#getVahdat <em>Vahdat</em>}</li>
+ *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationRangeImpl#getStart <em>Start</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationRangeImpl#getEnd <em>End</em>}</li>
  *   <li>{@link org.xtext.grl.tgrl.tGRL.impl.EvaluationRangeImpl#getStep <em>Step</em>}</li>
  * </ul>
@@ -30,24 +30,24 @@ import org.xtext.grl.tgrl.tGRL.TGRLPackage;
 public class EvaluationRangeImpl extends MinimalEObjectImpl.Container implements EvaluationRange
 {
   /**
-   * The default value of the '{@link #getVahdat() <em>Vahdat</em>}' attribute.
+   * The default value of the '{@link #getStart() <em>Start</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVahdat()
+   * @see #getStart()
    * @generated
    * @ordered
    */
-  protected static final String VAHDAT_EDEFAULT = null;
+  protected static final String START_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getVahdat() <em>Vahdat</em>}' attribute.
+   * The cached value of the '{@link #getStart() <em>Start</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVahdat()
+   * @see #getStart()
    * @generated
    * @ordered
    */
-  protected String vahdat = VAHDAT_EDEFAULT;
+  protected String start = START_EDEFAULT;
 
   /**
    * The default value of the '{@link #getEnd() <em>End</em>}' attribute.
@@ -115,9 +115,9 @@ public class EvaluationRangeImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getVahdat()
+  public String getStart()
   {
-    return vahdat;
+    return start;
   }
 
   /**
@@ -125,12 +125,12 @@ public class EvaluationRangeImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVahdat(String newVahdat)
+  public void setStart(String newStart)
   {
-    String oldVahdat = vahdat;
-    vahdat = newVahdat;
+    String oldStart = start;
+    start = newStart;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.EVALUATION_RANGE__VAHDAT, oldVahdat, vahdat));
+      eNotify(new ENotificationImpl(this, Notification.SET, TGRLPackage.EVALUATION_RANGE__START, oldStart, start));
   }
 
   /**
@@ -189,8 +189,8 @@ public class EvaluationRangeImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case TGRLPackage.EVALUATION_RANGE__VAHDAT:
-        return getVahdat();
+      case TGRLPackage.EVALUATION_RANGE__START:
+        return getStart();
       case TGRLPackage.EVALUATION_RANGE__END:
         return getEnd();
       case TGRLPackage.EVALUATION_RANGE__STEP:
@@ -209,8 +209,8 @@ public class EvaluationRangeImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case TGRLPackage.EVALUATION_RANGE__VAHDAT:
-        setVahdat((String)newValue);
+      case TGRLPackage.EVALUATION_RANGE__START:
+        setStart((String)newValue);
         return;
       case TGRLPackage.EVALUATION_RANGE__END:
         setEnd((String)newValue);
@@ -232,8 +232,8 @@ public class EvaluationRangeImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case TGRLPackage.EVALUATION_RANGE__VAHDAT:
-        setVahdat(VAHDAT_EDEFAULT);
+      case TGRLPackage.EVALUATION_RANGE__START:
+        setStart(START_EDEFAULT);
         return;
       case TGRLPackage.EVALUATION_RANGE__END:
         setEnd(END_EDEFAULT);
@@ -255,8 +255,8 @@ public class EvaluationRangeImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case TGRLPackage.EVALUATION_RANGE__VAHDAT:
-        return VAHDAT_EDEFAULT == null ? vahdat != null : !VAHDAT_EDEFAULT.equals(vahdat);
+      case TGRLPackage.EVALUATION_RANGE__START:
+        return START_EDEFAULT == null ? start != null : !START_EDEFAULT.equals(start);
       case TGRLPackage.EVALUATION_RANGE__END:
         return END_EDEFAULT == null ? end != null : !END_EDEFAULT.equals(end);
       case TGRLPackage.EVALUATION_RANGE__STEP:
@@ -276,8 +276,8 @@ public class EvaluationRangeImpl extends MinimalEObjectImpl.Container implements
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (vahdat: ");
-    result.append(vahdat);
+    result.append(" (start: ");
+    result.append(start);
     result.append(", end: ");
     result.append(end);
     result.append(", step: ");

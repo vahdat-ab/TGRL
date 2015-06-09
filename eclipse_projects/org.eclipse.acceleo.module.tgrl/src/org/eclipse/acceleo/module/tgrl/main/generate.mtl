@@ -26,7 +26,7 @@
 
 [comment]*****************************************Actor**********************************************[/comment]
 [for (actor : Actor | grlSpec.grlElements->selectByKind(Actor))]
-	<actors name="[label/]" id="[id/]" description="[description/]" [getImportance(actor)/][getImportanceQuantitative(actor) /]contRefs="[id/]R"[if (metaData->size()>0)]>
+	<actors [getValidName(actor)/] id="[id/]" description="[description/]" [getImportance(actor)/][getImportanceQuantitative(actor) /]contRefs="[id/]R"[if (metaData->size()>0)]>
 	[PrintMetaData(metaData)/]
 	</actors>
 	[else]/>		
@@ -34,7 +34,7 @@
 [/for]
 [comment]*****************************************Intentional Elements**********************************************[/comment]
 [for (intentionalElement : IntentionalElement | getAllSuperIntentionalElements(aModel)->selectByKind(IntentionalElement))]
-	<intElements name="[label/]" id="[id/]" description="[description/]" decompositionType = "[decompositionType.toString().toUpperFirst()/]" [getImportance(intentionalElement)/][getImportanceQuantitative(intentionalElement)/][getType(intentionalElement)/] [getLinkSrc(grlSpec,aModel, intentionalElement)/] [getLinksDest(grlSpec,aModel, intentionalElement)/] refs="[id/]R"[if (metaData->size()>0)]>
+	<intElements [getValidName(intentionalElement)/] id="[id/]" description="[description/]" [getColor(intentionalElement)/] decompositionType = "[decompositionType.toString().toUpperFirst()/]" [getImportance(intentionalElement)/][getImportanceQuantitative(intentionalElement)/][getType(intentionalElement)/] [getLinkSrc(grlSpec,aModel, intentionalElement)/] [getLinksDest(grlSpec,aModel, intentionalElement)/] refs="[id/]R"[if (metaData->size()>0)]>
 	[PrintMetaData(metaData)/]
 	</intElements>
 	[else]/>		
@@ -44,7 +44,7 @@
 [for (elementLink : ElementLink | getAllElementLinks(aModel).oclAsType(ElementLink))]
 	[if (elementLink.oclIsTypeOf(NormalDecomposition))]
 	[for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)]	
-	<links xsi:type="grl:Decomposition" name="" description="[description/]"  id="[end.id/]L" refs="//@urndef/@specDiagrams.0/@connections.[end.id/]" dest="[end.destName.id/]" src="[elementLink.oclAsType(NormalDecomposition).src.id/]"/>
+	<links xsi:type="grl:Decomposition" name="" description="[description/]"  id="[end.id/]L" refs="//@urndef/@specDiagrams.0/@connections.[end.id/]" src="[end.destName.id/]" dest="[elementLink.oclAsType(NormalDecomposition).src.id/]"/>
     [/for]
 	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
 	[for (end : ContributionEnd |elementLink.oclAsType(NormalContribution).dest)]	
@@ -91,7 +91,7 @@
       </nodes>
 [/for]
 [for (belief : Belief | getAllSuperIntentionalElements(aModel)->selectByKind(Belief))]
-	 <nodes xsi:type="grl:Belief" name="[label/]" id="[id/]R" description="[description/]"[if (metaData->size()>0)]>
+	 <nodes xsi:type="grl:Belief" [getValidName(belief)/] id="[id/]R" [getColor(belief)/] description="[description/]"[if (metaData->size()>0)]>
 	[PrintMetaData(metaData)/]
 	</nodes>
 	[else]/>		
@@ -102,15 +102,15 @@
 [for (elementLink : ElementLink | getAllElementLinks(aModel).oclAsType(ElementLink))]
 	[if (elementLink.oclIsTypeOf(NormalDecomposition))]
 	[for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)]	
-	<connections xsi:type="grl:LinkRef" source="[elementLink.oclAsType(NormalDecomposition).src.id/]R" target="[end.destName.id/]R" link="[end.id/]"/>
+	<connections xsi:type="grl:LinkRef" target="[elementLink.oclAsType(NormalDecomposition).src.id/]R" source="[end.destName.id/]R" link="[end.id/]L"/>
     [/for]
 	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
 	[for (end : ContributionEnd |elementLink.oclAsType(NormalContribution).dest)]	
-	<connections xsi:type="grl:LinkRef" source="[elementLink.oclAsType(NormalContribution).src.id/]R" target="[end.destName.id/]R" link="[end.id/]"/>
+	<connections xsi:type="grl:LinkRef" source="[elementLink.oclAsType(NormalContribution).src.id/]R" target="[end.destName.id/]R" link="[end.id/]L"/>
     [/for]
 	[elseif (elementLink.oclIsTypeOf(NormalDependency))]
 	[for (end : DependencyEnd |elementLink.oclAsType(NormalDependency).dest)]	
-	<connections xsi:type="grl:LinkRef" source="[elementLink.oclAsType(NormalDependency).src.id/]R" target="[end.destName.id/]R" link="[end.id/]"/>
+	<connections xsi:type="grl:LinkRef" source="[elementLink.oclAsType(NormalDependency).src.id/]R" target="[end.destName.id/]R" link="[end.id/]L"/>
     [/for]
 	[/if]
 [/for]
@@ -133,3 +133,4 @@
 [comment] End of the For command [/comment]
 [/for]
 [/template]
+

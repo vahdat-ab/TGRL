@@ -395,6 +395,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE)? 
 	 *             description=STRING? 
 	 *             metaData+=Metadata* 
+	 *             fillColor=Color? 
 	 *             (elemets+=SuperIntentionalElement | elemets+=NormalElementLink)*
 	 *         )?
 	 *     )
@@ -406,7 +407,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID (label=STRING? metaData+=Metadata* description=STRING?)?)
+	 *     (name=ID (label=STRING? metaData+=Metadata* fillColor=Color? description=STRING?)?)
 	 */
 	protected void sequence_Belief(EObject context, Belief semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -426,8 +427,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         contribution=[ContributionEnd|QualifiedName] 
-	 *         (newContribution=ContributionType | newQuantitativeContribution=QUALITATIVEVALUE) 
-	 *         contribRange=ContributionRange?
+	 *         (newContribution=ContributionType | newQuantitativeContribution=QUALITATIVEVALUE | contribRange=ContributionRange)
 	 *     )
 	 */
 	protected void sequence_ContributionChange(EObject context, ContributionChange semanticObject) {
@@ -451,7 +451,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID? destName=[SuperIntentionalElement|QualifiedName] (contribution=ContributionType | quantitativeContribution=QUALITATIVEVALUE)?)
+	 *     (destName=[SuperIntentionalElement|QualifiedName] (name=ID? (contribution=ContributionType | quantitativeContribution=QUALITATIVEVALUE)?)?)
 	 */
 	protected void sequence_ContributionEnd(EObject context, ContributionEnd semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -469,7 +469,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (start=INT end=INT step=INT?)
+	 *     (start=QUALITATIVEVALUE end=QUALITATIVEVALUE step=QUALITATIVEVALUE?)
 	 */
 	protected void sequence_ContributionRange(EObject context, ContributionRange semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -496,12 +496,12 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (vahdat=QUALITATIVEVALUE end=QUALITATIVEVALUE step=QUALITATIVEVALUE)
+	 *     (start=QUALITATIVEVALUE end=QUALITATIVEVALUE step=QUALITATIVEVALUE)
 	 */
 	protected void sequence_EvaluationRange(EObject context, EvaluationRange semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, TGRLPackage.Literals.EVALUATION_RANGE__VAHDAT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TGRLPackage.Literals.EVALUATION_RANGE__VAHDAT));
+			if(transientValues.isValueTransient(semanticObject, TGRLPackage.Literals.EVALUATION_RANGE__START) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TGRLPackage.Literals.EVALUATION_RANGE__START));
 			if(transientValues.isValueTransient(semanticObject, TGRLPackage.Literals.EVALUATION_RANGE__END) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TGRLPackage.Literals.EVALUATION_RANGE__END));
 			if(transientValues.isValueTransient(semanticObject, TGRLPackage.Literals.EVALUATION_RANGE__STEP) == ValueTransient.YES)
@@ -509,7 +509,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getEvaluationRangeAccess().getVahdatQUALITATIVEVALUETerminalRuleCall_0_2_0(), semanticObject.getVahdat());
+		feeder.accept(grammarAccess.getEvaluationRangeAccess().getStartQUALITATIVEVALUETerminalRuleCall_0_2_0(), semanticObject.getStart());
 		feeder.accept(grammarAccess.getEvaluationRangeAccess().getEndQUALITATIVEVALUETerminalRuleCall_1_2_0(), semanticObject.getEnd());
 		feeder.accept(grammarAccess.getEvaluationRangeAccess().getStepQUALITATIVEVALUETerminalRuleCall_2_2_0(), semanticObject.getStep());
 		feeder.finish();
@@ -533,8 +533,11 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         intentionalElement=[SuperIntentionalElement|QualifiedName] 
-	 *         (qualitativeEvaluation=QualitativeLabel | evaluation=QUALITATIVEVALUE) 
-	 *         (exceeds?='exceeds'? evalRange=EvaluationRange? kpiEvalValueSet=KPIEvalValueSet?)?
+	 *         (
+	 *             qualitativeEvaluation=QualitativeLabel | 
+	 *             evaluation=QUALITATIVEVALUE | 
+	 *             (exceeds?='exceeds'? evalRange=EvaluationRange? kpiEvalValueSet=KPIEvalValueSet?)
+	 *         )
 	 *     )
 	 */
 	protected void sequence_Evaluation(EObject context, Evaluation semanticObject) {
@@ -561,6 +564,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             decompositionType=DecompositionType? 
 	 *             (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE)? 
 	 *             metaData+=Metadata* 
+	 *             fillColor=Color? 
 	 *             elementLinks+=InLineElementLink*
 	 *         )?
 	 *     )
@@ -625,6 +629,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             decompositionType=DecompositionType? 
 	 *             (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE)? 
 	 *             metaData+=Metadata* 
+	 *             fillColor=Color? 
 	 *             elementLinks+=InLineElementLink*
 	 *         )?
 	 *     )
@@ -750,6 +755,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             decompositionType=DecompositionType? 
 	 *             (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE)? 
 	 *             metaData+=Metadata* 
+	 *             fillColor=Color? 
 	 *             elementLinks+=InLineElementLink*
 	 *         )?
 	 *     )
@@ -769,6 +775,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             decompositionType=DecompositionType? 
 	 *             (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE)? 
 	 *             metaData+=Metadata* 
+	 *             fillColor=Color? 
 	 *             elementLinks+=InLineElementLink*
 	 *         )?
 	 *     )
@@ -797,6 +804,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *             decompositionType=DecompositionType? 
 	 *             (importance=ImportanceType | importanceQuantitative=QUALITATIVEVALUE)? 
 	 *             metaData+=Metadata* 
+	 *             fillColor=Color? 
 	 *             elementLinks+=InLineElementLink*
 	 *         )?
 	 *     )
