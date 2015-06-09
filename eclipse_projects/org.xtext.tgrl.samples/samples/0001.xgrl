@@ -49,8 +49,8 @@ grl SimpleExample {
 	// URN links
 	link independentFrom; // Link type definition
 //	System independentFrom User;
-	softGoal SSS1;
-	softGoal SSS2;
-	SSS1 decomposedBy SSS2;
-//	SSS1 independentFrom SSS2;
+	actor SSS1;
+	actor SSS2;
+//	SSS1 decomposedBy SSS2;
+	SSS1 independentFrom SSS2;
 }
