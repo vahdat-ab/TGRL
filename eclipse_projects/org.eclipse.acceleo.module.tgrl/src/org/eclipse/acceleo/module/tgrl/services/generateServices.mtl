@@ -77,7 +77,7 @@ nodes="[for (elementLink : SuperIntentionalElement | elemets->selectByKind(Super
 [/if]	
 [/template]
 
-[template public getColor(inGRLElement : SuperIntentionalElement)]
+[template public getColor(inGRLElement : SuperIntentionalElement) ]
 [if (fillColor.toString()='white')]
 [elseif (fillColor.toString()='black')]
 filled="true" fillColor="0,0,0"
@@ -108,8 +108,7 @@ filled="true" fillColor="255,160,160"
 [elseif (fillColor.toString()='lightPurple')]
 filled="true" fillColor="255,160,255"
 [elseif (fillColor.toString()='lightYellow')]
-filled="true" fillColor="255,255,160"
-[/if]
+filled="true" fillColor="255,255,160" [/if]
 [/template]
 
 [template public getName(inSuperIntentionalElement : SuperIntentionalElement) post(trim())]
@@ -127,34 +126,31 @@ filled="true" fillColor="255,255,160"
 [if (getAllQualitativeMappings(grlSpec,inModel)->size()>0)]xmlns:grl.kpimodel="http:///grl/kpimodel.ecore"[/if]
 [/template]
 
-[template public getIncludedStrategies (aStrategyGroup : StrategyGroup) ]
-[if (strategies->size()>0)]strategies="[for (eStrategy : EvaluationStrategy | strategies)][eStrategy.id/] [/for]"[/if]
+[template public getIncludedStrategies (aStrategyGroup : StrategyGroup) post (trim()) ]
+[if (strategies->size()>0)] strategies="[for (eStrategy : EvaluationStrategy | strategies)][eStrategy.id/] [/for]"[/if]
 [/template]
 
-[template public getIncludedStrategies (aEvaluationStrategy : EvaluationStrategy) ]
-[if (superStrategies->size()>0)]includedStrategies="[for (eStrategy : EvaluationStrategy | superStrategies)][eStrategy.id/] [/for]"[/if]
+[template public getIncludedStrategies (aEvaluationStrategy : EvaluationStrategy) post (trim()) ]
+[if (superStrategies->size()>0)] includedStrategies="[for (eStrategy : EvaluationStrategy | superStrategies)][eStrategy.id/] [/for]"[/if]
 [/template]
 
 [template public getParentStrategies (grlSpec : GRLSpecification,inModel : Model ,aEvaluationStrategy : EvaluationStrategy) ]
-[if (getAllParentStrategis(inModel,aEvaluationStrategy)->size()>0)]parentStrategies="[for (eStrategy : EvaluationStrategy | getAllParentStrategis(inModel,aEvaluationStrategy).oclAsType(EvaluationStrategy))][eStrategy.id/] [/for]"[/if]
+[if (getAllParentStrategis(inModel,aEvaluationStrategy)->size()>0)] parentStrategies="[for (eStrategy : EvaluationStrategy | getAllParentStrategis(inModel,aEvaluationStrategy).oclAsType(EvaluationStrategy))][eStrategy.id/] [/for]"[/if]
 [/template]
 
-[template public getImportance (inGRLElement : GRLElement) ]
-[if (inGRLElement.oclIsTypeOf(Actor))]
-[if (not (inGRLElement).oclAsType(Actor).importance.oclIsUndefined())] importance="[(inGRLElement).oclAsType(Actor).importance.toString().toUpperFirst()/]" [/if]
+[template public getImportance (inGRLElement : GRLElement) post (trim()) ]
+[if (inGRLElement.oclIsTypeOf(Actor))][if (not (inGRLElement).oclAsType(Actor).importance.oclIsUndefined())] importance="[(inGRLElement).oclAsType(Actor).importance.toString().toUpperFirst()/]" [/if]
 [else]
 [if (not (inGRLElement).oclAsType(IntentionalElement).importance.oclIsUndefined())] importance="[(inGRLElement).oclAsType(IntentionalElement).importance.toString().toUpperFirst()/]" [/if][/if]
 [/template]
 
-[template public getImportanceQuantitative(inGRLElement : GRLElement) ]
-[if (inGRLElement.oclIsTypeOf(Actor))]
-[if (not (inGRLElement).oclAsType(Actor).importanceQuantitative.oclIsUndefined())] importanceQuantitative="[(inGRLElement).oclAsType(Actor).importanceQuantitative/]" [/if]
+[template public getImportanceQuantitative(inGRLElement : GRLElement) post (trim()) ]
+[if (inGRLElement.oclIsTypeOf(Actor))][if (not (inGRLElement).oclAsType(Actor).importanceQuantitative.oclIsUndefined())] importanceQuantitative="[(inGRLElement).oclAsType(Actor).importanceQuantitative/]" [/if]
 [else]
-[if (not (inGRLElement).oclAsType(IntentionalElement).importanceQuantitative.oclIsUndefined())] importanceQuantitative="[(inGRLElement).oclAsType(IntentionalElement).importanceQuantitative/]" [/if]
-[/if]
+[if (not (inGRLElement).oclAsType(IntentionalElement).importanceQuantitative.oclIsUndefined())] importanceQuantitative="[(inGRLElement).oclAsType(IntentionalElement).importanceQuantitative/]" [/if][/if]
 [/template]
-[template public getContributionType (inContributionEnd : ContributionEnd) ]
-contribution="[contribution.toString().toUpperFirst()/]"[if (inContributionEnd.quantitativeContribution.toString().equalsIgnoreCase(''))][getImplicitQuantitativeContribution(contribution)/][/if]
+[template public getContributionType (inContributionEnd : ContributionEnd) post (trim())]
+contribution="[contribution.toString().toUpperFirst()/]" [if (inContributionEnd.quantitativeContribution.toString().equalsIgnoreCase(''))][getImplicitQuantitativeContribution(contribution)/][/if]
 [/template]
 
 [template public getImplicitQuantitativeContribution (inContributionType : ContributionType) ]
@@ -164,17 +160,16 @@ contribution="[contribution.toString().toUpperFirst()/]"[if (inContributionEnd.q
 [elseif (inContributionType.toString().equalsIgnoreCase('unknown'))] quantitativeContribution = "0" 
 [elseif (inContributionType.toString().equalsIgnoreCase('someNegative'))] quantitativeContribution = "-75" 
 [elseif (inContributionType.toString().equalsIgnoreCase('hurt'))] quantitativeContribution = "-25" 
-[elseif (inContributionType.toString().equalsIgnoreCase('break'))] quantitativeContribution = "-100" 
-[/if]
+[elseif (inContributionType.toString().equalsIgnoreCase('break'))] quantitativeContribution = "-100" [/if]
 [/template]
-[template public getQuantitativeContribution (aContributionEnd : ContributionEnd) ]
+[template public getQuantitativeContribution (aContributionEnd : ContributionEnd) post (trim()) ]
 [if (not aContributionEnd.quantitativeContribution.toString().equalsIgnoreCase(''))] quantitativeContribution ="[quantitativeContribution/]" [/if]
 [/template]
 
-[template public getValidName (element : SuperIntentionalElement) ]
+[template public getValidName (element : SuperIntentionalElement) post (trim()) ]
 [if (element.label.toString()='')]name="[element.name/]" [else]name="[element.label/]" [/if]
 [/template]
 
-[template public getValidName (element : Actor) ]
+[template public getValidName (element : Actor) post (trim()) ]
 [if (element.label.toString()='')]name="[element.name/]" [else]name="[element.label/]" [/if]
 [/template]

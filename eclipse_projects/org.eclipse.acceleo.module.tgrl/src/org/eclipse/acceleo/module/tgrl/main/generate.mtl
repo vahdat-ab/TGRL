@@ -26,7 +26,7 @@
 
 [comment]*****************************************Actor**********************************************[/comment]
 [for (actor : Actor | grlSpec.grlElements->selectByKind(Actor))]
-	<actors [getValidName(actor)/] id="[id/]" description="[description/]" [getImportance(actor)/][getImportanceQuantitative(actor) /]contRefs="[id/]R"[if (metaData->size()>0)]>
+	<actors [getValidName(actor)/] id="[id/]" description="[description/]" [getImportance(actor)/] [getImportanceQuantitative(actor) /] contRefs="[id/]R"[if (metaData->size()>0)]>
 	[PrintMetaData(metaData)/]
 	</actors>
 	[else]/>		
@@ -34,7 +34,7 @@
 [/for]
 [comment]*****************************************Intentional Elements**********************************************[/comment]
 [for (intentionalElement : IntentionalElement | getAllSuperIntentionalElements(aModel)->selectByKind(IntentionalElement))]
-	<intElements [getValidName(intentionalElement)/] id="[id/]" description="[description/]" [getColor(intentionalElement)/] decompositionType = "[decompositionType.toString().toUpperFirst()/]" [getImportance(intentionalElement)/][getImportanceQuantitative(intentionalElement)/][getType(intentionalElement)/] [getLinkSrc(grlSpec,aModel, intentionalElement)/] [getLinksDest(grlSpec,aModel, intentionalElement)/] refs="[id/]R"[if (metaData->size()>0)]>
+	<intElements [getValidName(intentionalElement)/] id="[id/]" description="[description/]" [getColor(intentionalElement)/] decompositionType = "[decompositionType.toString().toUpperFirst()/]" [getImportance(intentionalElement)/] [getImportanceQuantitative(intentionalElement)/] [getType(intentionalElement)/] [getLinkSrc(grlSpec,aModel, intentionalElement)/] [getLinksDest(grlSpec,aModel, intentionalElement)/] refs="[id/]R"[if (metaData->size()>0)]>
 	[PrintMetaData(metaData)/]
 	</intElements>
 	[else]/>		
@@ -48,7 +48,7 @@
     [/for]
 	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
 	[for (end : ContributionEnd |elementLink.oclAsType(NormalContribution).dest)]	
-	<links xsi:type="grl:Contribution" name="" [comment]description="[description/]"[/comment]  id="[end.id/]L" refs="//@urndef/@specDiagrams.0/@connections.[end.id/]" dest="[end.destName.id/]" src="[elementLink.oclAsType(NormalContribution).src.id/]" [getContributionType(end)/][getQuantitativeContribution(end)/]/>
+	<links xsi:type="grl:Contribution" name="" [comment]description="[description/]"[/comment]  id="[end.id/]L" refs="//@urndef/@specDiagrams.0/@connections.[end.id/]" dest="[end.destName.id/]" src="[elementLink.oclAsType(NormalContribution).src.id/]" [getContributionType(end)/] [getQuantitativeContribution(end)/]/>
     [/for]
 	[elseif (elementLink.oclIsTypeOf(NormalDependency))]
 	[for (end : DependencyEnd |elementLink.oclAsType(NormalDependency).dest)]	

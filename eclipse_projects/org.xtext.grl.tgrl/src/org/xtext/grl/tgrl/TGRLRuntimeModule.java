@@ -33,9 +33,9 @@ public class TGRLRuntimeModule extends org.xtext.grl.tgrl.AbstractTGRLRuntimeMod
 			super.set(object, feature, value, ruleName, node);
 			if (object instanceof Element) {
 				
-				Element element = (Element) object;        
-				element.setId(id);
-				id++;
+				Element element = (Element) object;    
+					element.setId(id);
+					id++;
 			} else if (object instanceof EndLink){
 				EndLink element1 = (EndLink) object;        
 				element1.setId(id);

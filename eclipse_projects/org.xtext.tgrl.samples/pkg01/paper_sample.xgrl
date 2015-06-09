@@ -67,5 +67,5 @@ grl GRL1 {
 		decompositionType = and;
 	}
  	I1 dependsOn Vendor.G1;
- 	System.T1 contributesTo ServiceProvider.SG1 {hurt};
+ 	System.T1 contributesTo ServiceProvider.SG1 {hurt;};
 }

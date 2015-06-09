@@ -1,13 +1,56 @@
-grl T{
-	softGoal S1{
-	
-		
-	}
-	 softGoal S2{
+grl SimpleExample {
+//    comment "This is a simple TGRL illustrative model"; // Model comment
+//    	
+//    actor User {	
+//    	// Default name is the ID name, "User" in this case.
+//    	// Goal with specific name and quantitative importance.
+//		softGoal EasyToUse {name="Have a system that is easy to use"; importance = 100;}
+//    	indicator LowLearningTime; // Indicator definition
+//    }
+//    
+//    actor System {
+//    	// Goal with qualitative importance, and OR decomposition type
+//    	goal ProvideMainFunctionality {importance = high; decompositionType=or;} 
+//    	task FirstOption {metadata stereotype="SomeValue";}
+//    	task SecondOption {description = "Better alternative";}
+//    	
+//    	ProvideMainFunctionality decomposedBy FirstOption, SecondOption;
+//    	FirstOption contributesTo User.EasyToUse {hurt;}; //Inside element
+//    }    
+//	
+//	// Links defined outside its elements, with quantitative value
+//	System.SecondOption contributesTo User.EasyToUse {name=C1;50;};
+//	User.LowLearningTime contributesTo User.EasyToUse {name=C2;40;};
+//	
+//	strategy SelectFirst {
+//		System.FirstOption = satisfied; 
+//		User.LowLearningTime = {unit="minutes"; target=30.0; threshold=60.0; 
+//						worst=120.0; eval=90.0;}
+//	}
+//	strategy SelectSecond extends SelectFirst { // Strategy inclusion!
+//		System.FirstOption = none; // Overridden
+//		System.SecondOption = 100; // Added, quantitatively this time
+//	}
+//	strategy RangeExample extends SelectFirst {
+//		System.FirstOption = {start = 10; end = 40; step = 5;}
+//	}
+//	strategyGroup MyGroup includes SelectFirst, SelectSecond, RangeExample;
+//	// Contribution overrides
+//	contributionGroup SomeOverrides includes FirstOverride, SecondOverride;
+//	contribution FirstOverride {
+//		C1 = 30;
+//		C2 = make;
+//	}
+//	contribution SecondOverride extends FirstOverride {
+//		C1 = {start = -40; end = 0; step = 10;}
+//	}
+//	
 
-	 }
-	 softGoal S3{
-
-	 }
-	 S1 decomposedBy S2,S3;
+	// URN links
+	link independentFrom; // Link type definition
+//	System independentFrom User;
+	softGoal SSS1;
+	softGoal SSS2;
+	SSS1 decomposedBy SSS2;
+//	SSS1 independentFrom SSS2;
 }
