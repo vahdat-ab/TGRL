@@ -78,7 +78,41 @@ nodes="[for (elementLink : SuperIntentionalElement | elemets->selectByKind(Super
 [/template]
 
 [template public getColor(inGRLElement : SuperIntentionalElement) ]
-[if (fillColor.toString()='white')]
+[if (Color.toString()='white')]
+[elseif (fillColor.toString()='black')]
+filled="true" fillColor="0,0,0"
+[elseif (fillColor.toString()='blue')]
+filled="true" fillColor="96,96,191"
+[elseif (fillColor.toString()='green')]
+filled="true" fillColor="96,191,96"
+[elseif (fillColor.toString()='cyan')]
+filled="true" fillColor="96,191,191"
+[elseif (fillColor.toString()='red')]
+filled="true" fillColor="191,96,96"
+[elseif (fillColor.toString()='purple')]
+filled="true" fillColor="191,96,191"
+[elseif (fillColor.toString()='yellow')]
+filled="true" fillColor="191,191,96"
+[elseif (fillColor.toString()='gray')]
+filled="true" fillColor="160,160,160"
+[elseif (fillColor.toString()='lightGray')]
+filled="true" fillColor="191,191,191"
+[elseif (fillColor.toString()='lightBlue')]
+filled="true" fillColor="160,160,255"
+[elseif (fillColor.toString()='lightGreen')]
+filled="true" fillColor="160,255,160"
+[elseif (fillColor.toString()='lightCray')]
+filled="true" fillColor="160,255,255"
+[elseif (fillColor.toString()='lightRed')]
+filled="true" fillColor="255,160,160"
+[elseif (fillColor.toString()='lightPurple')]
+filled="true" fillColor="255,160,255"
+[elseif (fillColor.toString()='lightYellow')]
+filled="true" fillColor="255,255,160" [/if]
+[/template]
+
+[template public getColor(inActor : Actor) ]
+[if (Color.toString()='white')]
 [elseif (fillColor.toString()='black')]
 filled="true" fillColor="0,0,0"
 [elseif (fillColor.toString()='blue')]

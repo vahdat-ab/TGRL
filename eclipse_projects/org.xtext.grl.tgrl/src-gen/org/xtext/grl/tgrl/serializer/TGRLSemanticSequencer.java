@@ -729,7 +729,7 @@ public class TGRLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (src=[GRLElement|QualifiedName] type=[LinkType|QualifiedName] dest+=[GRLElement|QualifiedName] dest+=[GRLElement|QualifiedName]*)
+	 *     (src=[GRLElement|ID] type=[LinkType|ID] dest+=[GRLElement|ID] dest+=[GRLElement|ID]*)
 	 */
 	protected void sequence_NormalLink(EObject context, NormalLink semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

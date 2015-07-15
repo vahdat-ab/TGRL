@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="org.eclipse.acceleo.module.tgrl">
-    <property name="ECLIPSE_HOME" value="../../../../../../../eclipse-modeling-luna-sr2"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../../../workspace/luna"/>
+    <property name="ECLIPSE_HOME" value="E:/eclipse-luna"/>
+    <property name="ECLIPSE_WORKSPACE" value="E:/Workspaces/LunaSR2"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="org.eclipse.acceleo.module.tgrl.libraryclasspath">

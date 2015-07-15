@@ -162,12 +162,14 @@ public class ModelFeatures {
 					dEnd.setId(index);
 					index++;
 				}
-			} else if(eLink instanceof NormalLink){
-				for(GRLElement dEnd: ((NormalLink)eLink).getDest()){
-					dEnd.setId(index);
-					index++;
-				}
-			}			
+			}
+//			else if(eLink instanceof NormalLink){
+//				for(GRLElement dEnd: ((NormalLink)eLink).getDest()){
+//
+//					//dEnd.setId(index);
+//					//index++;
+//				}
+//			}			
 		}
 	return output;
 }	

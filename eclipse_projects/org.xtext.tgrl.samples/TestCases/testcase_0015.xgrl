@@ -15,6 +15,6 @@ grl Model1 {
 		name = "soft goal 5";
 	}
 	
-	SG1 contributesTo SG2{100};
-	SG3 contributesTo SG4{100},SG5{-25};
+	SG1 contributesTo SG2{100;};
+	SG3 contributesTo SG4{100;},SG5{-25;};
 }

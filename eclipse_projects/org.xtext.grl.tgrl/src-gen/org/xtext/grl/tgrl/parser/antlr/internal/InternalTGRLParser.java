@@ -7589,107 +7589,90 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNormalLink"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2938:1: ruleNormalLink returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) (otherlv_3= ',' ( ( ruleQualifiedName ) ) )* otherlv_5= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2938:1: ruleNormalLink returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* otherlv_5= ';' ) ;
     public final EObject ruleNormalLink() throws RecognitionException {
         EObject current = null;
 
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token otherlv_2=null;
         Token otherlv_3=null;
+        Token otherlv_4=null;
         Token otherlv_5=null;
 
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2941:28: ( ( ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) (otherlv_3= ',' ( ( ruleQualifiedName ) ) )* otherlv_5= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2942:1: ( ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) (otherlv_3= ',' ( ( ruleQualifiedName ) ) )* otherlv_5= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2941:28: ( ( ( (otherlv_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* otherlv_5= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2942:1: ( ( (otherlv_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* otherlv_5= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2942:1: ( ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) (otherlv_3= ',' ( ( ruleQualifiedName ) ) )* otherlv_5= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2942:2: ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) (otherlv_3= ',' ( ( ruleQualifiedName ) ) )* otherlv_5= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2942:1: ( ( (otherlv_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* otherlv_5= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2942:2: ( (otherlv_0= RULE_ID ) ) ( (otherlv_1= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )* otherlv_5= ';'
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2942:2: ( ( ruleQualifiedName ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2943:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2942:2: ( (otherlv_0= RULE_ID ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2943:1: (otherlv_0= RULE_ID )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2943:1: ( ruleQualifiedName )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2944:3: ruleQualifiedName
-            {
-
-            			if (current==null) {
-            	            current = createModelElement(grammarAccess.getNormalLinkRule());
-            	        }
-                    
-             
-            	        newCompositeNode(grammarAccess.getNormalLinkAccess().getSrcGRLElementCrossReference_0_0()); 
-            	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleNormalLink7546);
-            ruleQualifiedName();
-
-            state._fsp--;
-
-             
-            	        afterParserOrEnumRuleCall();
-            	    
-
-            }
-
-
-            }
-
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2957:2: ( ( ruleQualifiedName ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2958:1: ( ruleQualifiedName )
-            {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2958:1: ( ruleQualifiedName )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2959:3: ruleQualifiedName
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2943:1: (otherlv_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2944:3: otherlv_0= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getNormalLinkRule());
             	        }
                     
-             
-            	        newCompositeNode(grammarAccess.getNormalLinkAccess().getTypeLinkTypeCrossReference_1_0()); 
-            	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleNormalLink7569);
-            ruleQualifiedName();
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNormalLink7543); 
 
-            state._fsp--;
-
-             
-            	        afterParserOrEnumRuleCall();
-            	    
+            		newLeafNode(otherlv_0, grammarAccess.getNormalLinkAccess().getSrcGRLElementCrossReference_0_0()); 
+            	
 
             }
 
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2972:2: ( ( ruleQualifiedName ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2973:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2955:2: ( (otherlv_1= RULE_ID ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2956:1: (otherlv_1= RULE_ID )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2973:1: ( ruleQualifiedName )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2974:3: ruleQualifiedName
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2956:1: (otherlv_1= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2957:3: otherlv_1= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getNormalLinkRule());
             	        }
                     
-             
-            	        newCompositeNode(grammarAccess.getNormalLinkAccess().getDestGRLElementCrossReference_2_0()); 
-            	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleNormalLink7592);
-            ruleQualifiedName();
+            otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNormalLink7563); 
 
-            state._fsp--;
-
-             
-            	        afterParserOrEnumRuleCall();
-            	    
+            		newLeafNode(otherlv_1, grammarAccess.getNormalLinkAccess().getTypeLinkTypeCrossReference_1_0()); 
+            	
 
             }
 
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2987:2: (otherlv_3= ',' ( ( ruleQualifiedName ) ) )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2968:2: ( (otherlv_2= RULE_ID ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2969:1: (otherlv_2= RULE_ID )
+            {
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2969:1: (otherlv_2= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2970:3: otherlv_2= RULE_ID
+            {
+
+            			if (current==null) {
+            	            current = createModelElement(grammarAccess.getNormalLinkRule());
+            	        }
+                    
+            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNormalLink7583); 
+
+            		newLeafNode(otherlv_2, grammarAccess.getNormalLinkAccess().getDestGRLElementCrossReference_2_0()); 
+            	
+
+            }
+
+
+            }
+
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2981:2: (otherlv_3= ',' ( (otherlv_4= RULE_ID ) ) )*
             loop43:
             do {
                 int alt43=2;
@@ -7702,34 +7685,27 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                 switch (alt43) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2987:4: otherlv_3= ',' ( ( ruleQualifiedName ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2981:4: otherlv_3= ',' ( (otherlv_4= RULE_ID ) )
             	    {
-            	    otherlv_3=(Token)match(input,30,FOLLOW_30_in_ruleNormalLink7605); 
+            	    otherlv_3=(Token)match(input,30,FOLLOW_30_in_ruleNormalLink7596); 
 
             	        	newLeafNode(otherlv_3, grammarAccess.getNormalLinkAccess().getCommaKeyword_3_0());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2991:1: ( ( ruleQualifiedName ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2992:1: ( ruleQualifiedName )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2985:1: ( (otherlv_4= RULE_ID ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2986:1: (otherlv_4= RULE_ID )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2992:1: ( ruleQualifiedName )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2993:3: ruleQualifiedName
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2986:1: (otherlv_4= RULE_ID )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:2987:3: otherlv_4= RULE_ID
             	    {
 
             	    			if (current==null) {
             	    	            current = createModelElement(grammarAccess.getNormalLinkRule());
             	    	        }
             	            
-            	     
-            	    	        newCompositeNode(grammarAccess.getNormalLinkAccess().getDestGRLElementCrossReference_3_1_0()); 
-            	    	    
-            	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleNormalLink7628);
-            	    ruleQualifiedName();
+            	    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNormalLink7616); 
 
-            	    state._fsp--;
-
-            	     
-            	    	        afterParserOrEnumRuleCall();
-            	    	    
+            	    		newLeafNode(otherlv_4, grammarAccess.getNormalLinkAccess().getDestGRLElementCrossReference_3_1_0()); 
+            	    	
 
             	    }
 
@@ -7745,7 +7721,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_5=(Token)match(input,17,FOLLOW_17_in_ruleNormalLink7642); 
+            otherlv_5=(Token)match(input,17,FOLLOW_17_in_ruleNormalLink7630); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getNormalLinkAccess().getSemicolonKeyword_4());
                 
@@ -7770,7 +7746,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNormalDependency"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3018:1: entryRuleNormalDependency returns [EObject current=null] : iv_ruleNormalDependency= ruleNormalDependency EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3010:1: entryRuleNormalDependency returns [EObject current=null] : iv_ruleNormalDependency= ruleNormalDependency EOF ;
     public final EObject entryRuleNormalDependency() throws RecognitionException {
         EObject current = null;
 
@@ -7778,17 +7754,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3019:2: (iv_ruleNormalDependency= ruleNormalDependency EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3020:2: iv_ruleNormalDependency= ruleNormalDependency EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3011:2: (iv_ruleNormalDependency= ruleNormalDependency EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3012:2: iv_ruleNormalDependency= ruleNormalDependency EOF
             {
              newCompositeNode(grammarAccess.getNormalDependencyRule()); 
-            pushFollow(FOLLOW_ruleNormalDependency_in_entryRuleNormalDependency7678);
+            pushFollow(FOLLOW_ruleNormalDependency_in_entryRuleNormalDependency7666);
             iv_ruleNormalDependency=ruleNormalDependency();
 
             state._fsp--;
 
              current =iv_ruleNormalDependency; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNormalDependency7688); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNormalDependency7676); 
 
             }
 
@@ -7806,7 +7782,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNormalDependency"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3027:1: ruleNormalDependency returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) otherlv_1= 'dependsOn' ( (lv_dest_2_0= ruleDependencyEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDependencyEnd ) ) )* otherlv_5= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3019:1: ruleNormalDependency returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) otherlv_1= 'dependsOn' ( (lv_dest_2_0= ruleDependencyEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDependencyEnd ) ) )* otherlv_5= ';' ) ;
     public final EObject ruleNormalDependency() throws RecognitionException {
         EObject current = null;
 
@@ -7821,17 +7797,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3030:28: ( ( ( ( ruleQualifiedName ) ) otherlv_1= 'dependsOn' ( (lv_dest_2_0= ruleDependencyEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDependencyEnd ) ) )* otherlv_5= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3031:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'dependsOn' ( (lv_dest_2_0= ruleDependencyEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDependencyEnd ) ) )* otherlv_5= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3022:28: ( ( ( ( ruleQualifiedName ) ) otherlv_1= 'dependsOn' ( (lv_dest_2_0= ruleDependencyEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDependencyEnd ) ) )* otherlv_5= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3023:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'dependsOn' ( (lv_dest_2_0= ruleDependencyEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDependencyEnd ) ) )* otherlv_5= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3031:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'dependsOn' ( (lv_dest_2_0= ruleDependencyEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDependencyEnd ) ) )* otherlv_5= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3031:2: ( ( ruleQualifiedName ) ) otherlv_1= 'dependsOn' ( (lv_dest_2_0= ruleDependencyEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDependencyEnd ) ) )* otherlv_5= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3023:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'dependsOn' ( (lv_dest_2_0= ruleDependencyEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDependencyEnd ) ) )* otherlv_5= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3023:2: ( ( ruleQualifiedName ) ) otherlv_1= 'dependsOn' ( (lv_dest_2_0= ruleDependencyEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDependencyEnd ) ) )* otherlv_5= ';'
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3031:2: ( ( ruleQualifiedName ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3032:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3023:2: ( ( ruleQualifiedName ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3024:1: ( ruleQualifiedName )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3032:1: ( ruleQualifiedName )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3033:3: ruleQualifiedName
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3024:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3025:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -7841,7 +7817,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getNormalDependencyAccess().getSrcSuperIntentionalElementCrossReference_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleNormalDependency7736);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleNormalDependency7724);
             ruleQualifiedName();
 
             state._fsp--;
@@ -7855,20 +7831,20 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,31,FOLLOW_31_in_ruleNormalDependency7748); 
+            otherlv_1=(Token)match(input,31,FOLLOW_31_in_ruleNormalDependency7736); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getNormalDependencyAccess().getDependsOnKeyword_1());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3050:1: ( (lv_dest_2_0= ruleDependencyEnd ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3051:1: (lv_dest_2_0= ruleDependencyEnd )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3042:1: ( (lv_dest_2_0= ruleDependencyEnd ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3043:1: (lv_dest_2_0= ruleDependencyEnd )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3051:1: (lv_dest_2_0= ruleDependencyEnd )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3052:3: lv_dest_2_0= ruleDependencyEnd
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3043:1: (lv_dest_2_0= ruleDependencyEnd )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3044:3: lv_dest_2_0= ruleDependencyEnd
             {
              
             	        newCompositeNode(grammarAccess.getNormalDependencyAccess().getDestDependencyEndParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleDependencyEnd_in_ruleNormalDependency7769);
+            pushFollow(FOLLOW_ruleDependencyEnd_in_ruleNormalDependency7757);
             lv_dest_2_0=ruleDependencyEnd();
 
             state._fsp--;
@@ -7890,7 +7866,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3068:2: (otherlv_3= ',' ( (lv_dest_4_0= ruleDependencyEnd ) ) )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3060:2: (otherlv_3= ',' ( (lv_dest_4_0= ruleDependencyEnd ) ) )*
             loop44:
             do {
                 int alt44=2;
@@ -7903,22 +7879,22 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                 switch (alt44) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3068:4: otherlv_3= ',' ( (lv_dest_4_0= ruleDependencyEnd ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3060:4: otherlv_3= ',' ( (lv_dest_4_0= ruleDependencyEnd ) )
             	    {
-            	    otherlv_3=(Token)match(input,30,FOLLOW_30_in_ruleNormalDependency7782); 
+            	    otherlv_3=(Token)match(input,30,FOLLOW_30_in_ruleNormalDependency7770); 
 
             	        	newLeafNode(otherlv_3, grammarAccess.getNormalDependencyAccess().getCommaKeyword_3_0());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3072:1: ( (lv_dest_4_0= ruleDependencyEnd ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3073:1: (lv_dest_4_0= ruleDependencyEnd )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3064:1: ( (lv_dest_4_0= ruleDependencyEnd ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3065:1: (lv_dest_4_0= ruleDependencyEnd )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3073:1: (lv_dest_4_0= ruleDependencyEnd )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3074:3: lv_dest_4_0= ruleDependencyEnd
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3065:1: (lv_dest_4_0= ruleDependencyEnd )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3066:3: lv_dest_4_0= ruleDependencyEnd
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getNormalDependencyAccess().getDestDependencyEndParserRuleCall_3_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleDependencyEnd_in_ruleNormalDependency7803);
+            	    pushFollow(FOLLOW_ruleDependencyEnd_in_ruleNormalDependency7791);
             	    lv_dest_4_0=ruleDependencyEnd();
 
             	    state._fsp--;
@@ -7949,7 +7925,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_5=(Token)match(input,17,FOLLOW_17_in_ruleNormalDependency7817); 
+            otherlv_5=(Token)match(input,17,FOLLOW_17_in_ruleNormalDependency7805); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getNormalDependencyAccess().getSemicolonKeyword_4());
                 
@@ -7974,7 +7950,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNormalContribution"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3102:1: entryRuleNormalContribution returns [EObject current=null] : iv_ruleNormalContribution= ruleNormalContribution EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3094:1: entryRuleNormalContribution returns [EObject current=null] : iv_ruleNormalContribution= ruleNormalContribution EOF ;
     public final EObject entryRuleNormalContribution() throws RecognitionException {
         EObject current = null;
 
@@ -7982,17 +7958,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3103:2: (iv_ruleNormalContribution= ruleNormalContribution EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3104:2: iv_ruleNormalContribution= ruleNormalContribution EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3095:2: (iv_ruleNormalContribution= ruleNormalContribution EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3096:2: iv_ruleNormalContribution= ruleNormalContribution EOF
             {
              newCompositeNode(grammarAccess.getNormalContributionRule()); 
-            pushFollow(FOLLOW_ruleNormalContribution_in_entryRuleNormalContribution7853);
+            pushFollow(FOLLOW_ruleNormalContribution_in_entryRuleNormalContribution7841);
             iv_ruleNormalContribution=ruleNormalContribution();
 
             state._fsp--;
 
              current =iv_ruleNormalContribution; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNormalContribution7863); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNormalContribution7851); 
 
             }
 
@@ -8010,7 +7986,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNormalContribution"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3111:1: ruleNormalContribution returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) otherlv_1= 'contributesTo' ( (lv_dest_2_0= ruleContributionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleContributionEnd ) ) )* otherlv_5= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3103:1: ruleNormalContribution returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) otherlv_1= 'contributesTo' ( (lv_dest_2_0= ruleContributionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleContributionEnd ) ) )* otherlv_5= ';' ) ;
     public final EObject ruleNormalContribution() throws RecognitionException {
         EObject current = null;
 
@@ -8025,17 +8001,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3114:28: ( ( ( ( ruleQualifiedName ) ) otherlv_1= 'contributesTo' ( (lv_dest_2_0= ruleContributionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleContributionEnd ) ) )* otherlv_5= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3115:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'contributesTo' ( (lv_dest_2_0= ruleContributionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleContributionEnd ) ) )* otherlv_5= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3106:28: ( ( ( ( ruleQualifiedName ) ) otherlv_1= 'contributesTo' ( (lv_dest_2_0= ruleContributionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleContributionEnd ) ) )* otherlv_5= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3107:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'contributesTo' ( (lv_dest_2_0= ruleContributionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleContributionEnd ) ) )* otherlv_5= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3115:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'contributesTo' ( (lv_dest_2_0= ruleContributionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleContributionEnd ) ) )* otherlv_5= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3115:2: ( ( ruleQualifiedName ) ) otherlv_1= 'contributesTo' ( (lv_dest_2_0= ruleContributionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleContributionEnd ) ) )* otherlv_5= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3107:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'contributesTo' ( (lv_dest_2_0= ruleContributionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleContributionEnd ) ) )* otherlv_5= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3107:2: ( ( ruleQualifiedName ) ) otherlv_1= 'contributesTo' ( (lv_dest_2_0= ruleContributionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleContributionEnd ) ) )* otherlv_5= ';'
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3115:2: ( ( ruleQualifiedName ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3116:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3107:2: ( ( ruleQualifiedName ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3108:1: ( ruleQualifiedName )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3116:1: ( ruleQualifiedName )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3117:3: ruleQualifiedName
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3108:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3109:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -8045,7 +8021,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getNormalContributionAccess().getSrcSuperIntentionalElementCrossReference_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleNormalContribution7911);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleNormalContribution7899);
             ruleQualifiedName();
 
             state._fsp--;
@@ -8059,20 +8035,20 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,32,FOLLOW_32_in_ruleNormalContribution7923); 
+            otherlv_1=(Token)match(input,32,FOLLOW_32_in_ruleNormalContribution7911); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getNormalContributionAccess().getContributesToKeyword_1());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3134:1: ( (lv_dest_2_0= ruleContributionEnd ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3135:1: (lv_dest_2_0= ruleContributionEnd )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3126:1: ( (lv_dest_2_0= ruleContributionEnd ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3127:1: (lv_dest_2_0= ruleContributionEnd )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3135:1: (lv_dest_2_0= ruleContributionEnd )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3136:3: lv_dest_2_0= ruleContributionEnd
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3127:1: (lv_dest_2_0= ruleContributionEnd )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3128:3: lv_dest_2_0= ruleContributionEnd
             {
              
             	        newCompositeNode(grammarAccess.getNormalContributionAccess().getDestContributionEndParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleContributionEnd_in_ruleNormalContribution7944);
+            pushFollow(FOLLOW_ruleContributionEnd_in_ruleNormalContribution7932);
             lv_dest_2_0=ruleContributionEnd();
 
             state._fsp--;
@@ -8094,7 +8070,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3152:2: (otherlv_3= ',' ( (lv_dest_4_0= ruleContributionEnd ) ) )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3144:2: (otherlv_3= ',' ( (lv_dest_4_0= ruleContributionEnd ) ) )*
             loop45:
             do {
                 int alt45=2;
@@ -8107,22 +8083,22 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                 switch (alt45) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3152:4: otherlv_3= ',' ( (lv_dest_4_0= ruleContributionEnd ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3144:4: otherlv_3= ',' ( (lv_dest_4_0= ruleContributionEnd ) )
             	    {
-            	    otherlv_3=(Token)match(input,30,FOLLOW_30_in_ruleNormalContribution7957); 
+            	    otherlv_3=(Token)match(input,30,FOLLOW_30_in_ruleNormalContribution7945); 
 
             	        	newLeafNode(otherlv_3, grammarAccess.getNormalContributionAccess().getCommaKeyword_3_0());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3156:1: ( (lv_dest_4_0= ruleContributionEnd ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3157:1: (lv_dest_4_0= ruleContributionEnd )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3148:1: ( (lv_dest_4_0= ruleContributionEnd ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3149:1: (lv_dest_4_0= ruleContributionEnd )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3157:1: (lv_dest_4_0= ruleContributionEnd )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3158:3: lv_dest_4_0= ruleContributionEnd
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3149:1: (lv_dest_4_0= ruleContributionEnd )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3150:3: lv_dest_4_0= ruleContributionEnd
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getNormalContributionAccess().getDestContributionEndParserRuleCall_3_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleContributionEnd_in_ruleNormalContribution7978);
+            	    pushFollow(FOLLOW_ruleContributionEnd_in_ruleNormalContribution7966);
             	    lv_dest_4_0=ruleContributionEnd();
 
             	    state._fsp--;
@@ -8153,7 +8129,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_5=(Token)match(input,17,FOLLOW_17_in_ruleNormalContribution7992); 
+            otherlv_5=(Token)match(input,17,FOLLOW_17_in_ruleNormalContribution7980); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getNormalContributionAccess().getSemicolonKeyword_4());
                 
@@ -8178,7 +8154,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNormalDecomposition"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3186:1: entryRuleNormalDecomposition returns [EObject current=null] : iv_ruleNormalDecomposition= ruleNormalDecomposition EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3178:1: entryRuleNormalDecomposition returns [EObject current=null] : iv_ruleNormalDecomposition= ruleNormalDecomposition EOF ;
     public final EObject entryRuleNormalDecomposition() throws RecognitionException {
         EObject current = null;
 
@@ -8186,17 +8162,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3187:2: (iv_ruleNormalDecomposition= ruleNormalDecomposition EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3188:2: iv_ruleNormalDecomposition= ruleNormalDecomposition EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3179:2: (iv_ruleNormalDecomposition= ruleNormalDecomposition EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3180:2: iv_ruleNormalDecomposition= ruleNormalDecomposition EOF
             {
              newCompositeNode(grammarAccess.getNormalDecompositionRule()); 
-            pushFollow(FOLLOW_ruleNormalDecomposition_in_entryRuleNormalDecomposition8028);
+            pushFollow(FOLLOW_ruleNormalDecomposition_in_entryRuleNormalDecomposition8016);
             iv_ruleNormalDecomposition=ruleNormalDecomposition();
 
             state._fsp--;
 
              current =iv_ruleNormalDecomposition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNormalDecomposition8038); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNormalDecomposition8026); 
 
             }
 
@@ -8214,7 +8190,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNormalDecomposition"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3195:1: ruleNormalDecomposition returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) otherlv_1= 'decomposedBy' ( (lv_dest_2_0= ruleDecompositionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDecompositionEnd ) ) )* otherlv_5= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3187:1: ruleNormalDecomposition returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) otherlv_1= 'decomposedBy' ( (lv_dest_2_0= ruleDecompositionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDecompositionEnd ) ) )* otherlv_5= ';' ) ;
     public final EObject ruleNormalDecomposition() throws RecognitionException {
         EObject current = null;
 
@@ -8229,17 +8205,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3198:28: ( ( ( ( ruleQualifiedName ) ) otherlv_1= 'decomposedBy' ( (lv_dest_2_0= ruleDecompositionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDecompositionEnd ) ) )* otherlv_5= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3199:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'decomposedBy' ( (lv_dest_2_0= ruleDecompositionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDecompositionEnd ) ) )* otherlv_5= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3190:28: ( ( ( ( ruleQualifiedName ) ) otherlv_1= 'decomposedBy' ( (lv_dest_2_0= ruleDecompositionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDecompositionEnd ) ) )* otherlv_5= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3191:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'decomposedBy' ( (lv_dest_2_0= ruleDecompositionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDecompositionEnd ) ) )* otherlv_5= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3199:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'decomposedBy' ( (lv_dest_2_0= ruleDecompositionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDecompositionEnd ) ) )* otherlv_5= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3199:2: ( ( ruleQualifiedName ) ) otherlv_1= 'decomposedBy' ( (lv_dest_2_0= ruleDecompositionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDecompositionEnd ) ) )* otherlv_5= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3191:1: ( ( ( ruleQualifiedName ) ) otherlv_1= 'decomposedBy' ( (lv_dest_2_0= ruleDecompositionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDecompositionEnd ) ) )* otherlv_5= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3191:2: ( ( ruleQualifiedName ) ) otherlv_1= 'decomposedBy' ( (lv_dest_2_0= ruleDecompositionEnd ) ) (otherlv_3= ',' ( (lv_dest_4_0= ruleDecompositionEnd ) ) )* otherlv_5= ';'
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3199:2: ( ( ruleQualifiedName ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3200:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3191:2: ( ( ruleQualifiedName ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3192:1: ( ruleQualifiedName )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3200:1: ( ruleQualifiedName )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3201:3: ruleQualifiedName
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3192:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3193:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -8249,7 +8225,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getNormalDecompositionAccess().getSrcSuperIntentionalElementCrossReference_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleNormalDecomposition8086);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleNormalDecomposition8074);
             ruleQualifiedName();
 
             state._fsp--;
@@ -8263,20 +8239,20 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,33,FOLLOW_33_in_ruleNormalDecomposition8098); 
+            otherlv_1=(Token)match(input,33,FOLLOW_33_in_ruleNormalDecomposition8086); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getNormalDecompositionAccess().getDecomposedByKeyword_1());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3218:1: ( (lv_dest_2_0= ruleDecompositionEnd ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3219:1: (lv_dest_2_0= ruleDecompositionEnd )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3210:1: ( (lv_dest_2_0= ruleDecompositionEnd ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3211:1: (lv_dest_2_0= ruleDecompositionEnd )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3219:1: (lv_dest_2_0= ruleDecompositionEnd )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3220:3: lv_dest_2_0= ruleDecompositionEnd
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3211:1: (lv_dest_2_0= ruleDecompositionEnd )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3212:3: lv_dest_2_0= ruleDecompositionEnd
             {
              
             	        newCompositeNode(grammarAccess.getNormalDecompositionAccess().getDestDecompositionEndParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleDecompositionEnd_in_ruleNormalDecomposition8119);
+            pushFollow(FOLLOW_ruleDecompositionEnd_in_ruleNormalDecomposition8107);
             lv_dest_2_0=ruleDecompositionEnd();
 
             state._fsp--;
@@ -8298,7 +8274,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3236:2: (otherlv_3= ',' ( (lv_dest_4_0= ruleDecompositionEnd ) ) )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3228:2: (otherlv_3= ',' ( (lv_dest_4_0= ruleDecompositionEnd ) ) )*
             loop46:
             do {
                 int alt46=2;
@@ -8311,22 +8287,22 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                 switch (alt46) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3236:4: otherlv_3= ',' ( (lv_dest_4_0= ruleDecompositionEnd ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3228:4: otherlv_3= ',' ( (lv_dest_4_0= ruleDecompositionEnd ) )
             	    {
-            	    otherlv_3=(Token)match(input,30,FOLLOW_30_in_ruleNormalDecomposition8132); 
+            	    otherlv_3=(Token)match(input,30,FOLLOW_30_in_ruleNormalDecomposition8120); 
 
             	        	newLeafNode(otherlv_3, grammarAccess.getNormalDecompositionAccess().getCommaKeyword_3_0());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3240:1: ( (lv_dest_4_0= ruleDecompositionEnd ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3241:1: (lv_dest_4_0= ruleDecompositionEnd )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3232:1: ( (lv_dest_4_0= ruleDecompositionEnd ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3233:1: (lv_dest_4_0= ruleDecompositionEnd )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3241:1: (lv_dest_4_0= ruleDecompositionEnd )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3242:3: lv_dest_4_0= ruleDecompositionEnd
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3233:1: (lv_dest_4_0= ruleDecompositionEnd )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3234:3: lv_dest_4_0= ruleDecompositionEnd
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getNormalDecompositionAccess().getDestDecompositionEndParserRuleCall_3_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleDecompositionEnd_in_ruleNormalDecomposition8153);
+            	    pushFollow(FOLLOW_ruleDecompositionEnd_in_ruleNormalDecomposition8141);
             	    lv_dest_4_0=ruleDecompositionEnd();
 
             	    state._fsp--;
@@ -8357,7 +8333,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_5=(Token)match(input,17,FOLLOW_17_in_ruleNormalDecomposition8167); 
+            otherlv_5=(Token)match(input,17,FOLLOW_17_in_ruleNormalDecomposition8155); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getNormalDecompositionAccess().getSemicolonKeyword_4());
                 
@@ -8382,7 +8358,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInLineElementLink"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3270:1: entryRuleInLineElementLink returns [EObject current=null] : iv_ruleInLineElementLink= ruleInLineElementLink EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3262:1: entryRuleInLineElementLink returns [EObject current=null] : iv_ruleInLineElementLink= ruleInLineElementLink EOF ;
     public final EObject entryRuleInLineElementLink() throws RecognitionException {
         EObject current = null;
 
@@ -8390,17 +8366,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3271:2: (iv_ruleInLineElementLink= ruleInLineElementLink EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3272:2: iv_ruleInLineElementLink= ruleInLineElementLink EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3263:2: (iv_ruleInLineElementLink= ruleInLineElementLink EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3264:2: iv_ruleInLineElementLink= ruleInLineElementLink EOF
             {
              newCompositeNode(grammarAccess.getInLineElementLinkRule()); 
-            pushFollow(FOLLOW_ruleInLineElementLink_in_entryRuleInLineElementLink8203);
+            pushFollow(FOLLOW_ruleInLineElementLink_in_entryRuleInLineElementLink8191);
             iv_ruleInLineElementLink=ruleInLineElementLink();
 
             state._fsp--;
 
              current =iv_ruleInLineElementLink; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInLineElementLink8213); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInLineElementLink8201); 
 
             }
 
@@ -8418,7 +8394,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInLineElementLink"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3279:1: ruleInLineElementLink returns [EObject current=null] : (this_InLineDecomposition_0= ruleInLineDecomposition | this_InLineContribution_1= ruleInLineContribution | this_InLineDependency_2= ruleInLineDependency | this_InLineLink_3= ruleInLineLink ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3271:1: ruleInLineElementLink returns [EObject current=null] : (this_InLineDecomposition_0= ruleInLineDecomposition | this_InLineContribution_1= ruleInLineContribution | this_InLineDependency_2= ruleInLineDependency | this_InLineLink_3= ruleInLineLink ) ;
     public final EObject ruleInLineElementLink() throws RecognitionException {
         EObject current = null;
 
@@ -8434,10 +8410,10 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3282:28: ( (this_InLineDecomposition_0= ruleInLineDecomposition | this_InLineContribution_1= ruleInLineContribution | this_InLineDependency_2= ruleInLineDependency | this_InLineLink_3= ruleInLineLink ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3283:1: (this_InLineDecomposition_0= ruleInLineDecomposition | this_InLineContribution_1= ruleInLineContribution | this_InLineDependency_2= ruleInLineDependency | this_InLineLink_3= ruleInLineLink )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3274:28: ( (this_InLineDecomposition_0= ruleInLineDecomposition | this_InLineContribution_1= ruleInLineContribution | this_InLineDependency_2= ruleInLineDependency | this_InLineLink_3= ruleInLineLink ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3275:1: (this_InLineDecomposition_0= ruleInLineDecomposition | this_InLineContribution_1= ruleInLineContribution | this_InLineDependency_2= ruleInLineDependency | this_InLineLink_3= ruleInLineLink )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3283:1: (this_InLineDecomposition_0= ruleInLineDecomposition | this_InLineContribution_1= ruleInLineContribution | this_InLineDependency_2= ruleInLineDependency | this_InLineLink_3= ruleInLineLink )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3275:1: (this_InLineDecomposition_0= ruleInLineDecomposition | this_InLineContribution_1= ruleInLineContribution | this_InLineDependency_2= ruleInLineDependency | this_InLineLink_3= ruleInLineLink )
             int alt47=4;
             switch ( input.LA(1) ) {
             case 33:
@@ -8469,12 +8445,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             switch (alt47) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3284:5: this_InLineDecomposition_0= ruleInLineDecomposition
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3276:5: this_InLineDecomposition_0= ruleInLineDecomposition
                     {
                      
                             newCompositeNode(grammarAccess.getInLineElementLinkAccess().getInLineDecompositionParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleInLineDecomposition_in_ruleInLineElementLink8260);
+                    pushFollow(FOLLOW_ruleInLineDecomposition_in_ruleInLineElementLink8248);
                     this_InLineDecomposition_0=ruleInLineDecomposition();
 
                     state._fsp--;
@@ -8487,12 +8463,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3294:5: this_InLineContribution_1= ruleInLineContribution
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3286:5: this_InLineContribution_1= ruleInLineContribution
                     {
                      
                             newCompositeNode(grammarAccess.getInLineElementLinkAccess().getInLineContributionParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleInLineContribution_in_ruleInLineElementLink8287);
+                    pushFollow(FOLLOW_ruleInLineContribution_in_ruleInLineElementLink8275);
                     this_InLineContribution_1=ruleInLineContribution();
 
                     state._fsp--;
@@ -8505,12 +8481,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3304:5: this_InLineDependency_2= ruleInLineDependency
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3296:5: this_InLineDependency_2= ruleInLineDependency
                     {
                      
                             newCompositeNode(grammarAccess.getInLineElementLinkAccess().getInLineDependencyParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleInLineDependency_in_ruleInLineElementLink8314);
+                    pushFollow(FOLLOW_ruleInLineDependency_in_ruleInLineElementLink8302);
                     this_InLineDependency_2=ruleInLineDependency();
 
                     state._fsp--;
@@ -8523,12 +8499,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3314:5: this_InLineLink_3= ruleInLineLink
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3306:5: this_InLineLink_3= ruleInLineLink
                     {
                      
                             newCompositeNode(grammarAccess.getInLineElementLinkAccess().getInLineLinkParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleInLineLink_in_ruleInLineElementLink8341);
+                    pushFollow(FOLLOW_ruleInLineLink_in_ruleInLineElementLink8329);
                     this_InLineLink_3=ruleInLineLink();
 
                     state._fsp--;
@@ -8561,7 +8537,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInLineLink"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3330:1: entryRuleInLineLink returns [EObject current=null] : iv_ruleInLineLink= ruleInLineLink EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3322:1: entryRuleInLineLink returns [EObject current=null] : iv_ruleInLineLink= ruleInLineLink EOF ;
     public final EObject entryRuleInLineLink() throws RecognitionException {
         EObject current = null;
 
@@ -8569,17 +8545,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3331:2: (iv_ruleInLineLink= ruleInLineLink EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3332:2: iv_ruleInLineLink= ruleInLineLink EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3323:2: (iv_ruleInLineLink= ruleInLineLink EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3324:2: iv_ruleInLineLink= ruleInLineLink EOF
             {
              newCompositeNode(grammarAccess.getInLineLinkRule()); 
-            pushFollow(FOLLOW_ruleInLineLink_in_entryRuleInLineLink8376);
+            pushFollow(FOLLOW_ruleInLineLink_in_entryRuleInLineLink8364);
             iv_ruleInLineLink=ruleInLineLink();
 
             state._fsp--;
 
              current =iv_ruleInLineLink; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInLineLink8386); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInLineLink8374); 
 
             }
 
@@ -8597,7 +8573,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInLineLink"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3339:1: ruleInLineLink returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) (otherlv_2= ',' ( ( ruleQualifiedName ) ) )* otherlv_4= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3331:1: ruleInLineLink returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) (otherlv_2= ',' ( ( ruleQualifiedName ) ) )* otherlv_4= ';' ) ;
     public final EObject ruleInLineLink() throws RecognitionException {
         EObject current = null;
 
@@ -8607,17 +8583,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3342:28: ( ( ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) (otherlv_2= ',' ( ( ruleQualifiedName ) ) )* otherlv_4= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3343:1: ( ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) (otherlv_2= ',' ( ( ruleQualifiedName ) ) )* otherlv_4= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3334:28: ( ( ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) (otherlv_2= ',' ( ( ruleQualifiedName ) ) )* otherlv_4= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3335:1: ( ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) (otherlv_2= ',' ( ( ruleQualifiedName ) ) )* otherlv_4= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3343:1: ( ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) (otherlv_2= ',' ( ( ruleQualifiedName ) ) )* otherlv_4= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3343:2: ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) (otherlv_2= ',' ( ( ruleQualifiedName ) ) )* otherlv_4= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3335:1: ( ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) (otherlv_2= ',' ( ( ruleQualifiedName ) ) )* otherlv_4= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3335:2: ( ( ruleQualifiedName ) ) ( ( ruleQualifiedName ) ) (otherlv_2= ',' ( ( ruleQualifiedName ) ) )* otherlv_4= ';'
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3343:2: ( ( ruleQualifiedName ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3344:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3335:2: ( ( ruleQualifiedName ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3336:1: ( ruleQualifiedName )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3344:1: ( ruleQualifiedName )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3345:3: ruleQualifiedName
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3336:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3337:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -8627,7 +8603,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getInLineLinkAccess().getTypeLinkTypeCrossReference_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleInLineLink8434);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleInLineLink8422);
             ruleQualifiedName();
 
             state._fsp--;
@@ -8641,11 +8617,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3358:2: ( ( ruleQualifiedName ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3359:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3350:2: ( ( ruleQualifiedName ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3351:1: ( ruleQualifiedName )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3359:1: ( ruleQualifiedName )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3360:3: ruleQualifiedName
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3351:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3352:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -8655,7 +8631,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getInLineLinkAccess().getDestGRLElementCrossReference_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleInLineLink8457);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleInLineLink8445);
             ruleQualifiedName();
 
             state._fsp--;
@@ -8669,7 +8645,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3373:2: (otherlv_2= ',' ( ( ruleQualifiedName ) ) )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3365:2: (otherlv_2= ',' ( ( ruleQualifiedName ) ) )*
             loop48:
             do {
                 int alt48=2;
@@ -8682,17 +8658,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                 switch (alt48) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3373:4: otherlv_2= ',' ( ( ruleQualifiedName ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3365:4: otherlv_2= ',' ( ( ruleQualifiedName ) )
             	    {
-            	    otherlv_2=(Token)match(input,30,FOLLOW_30_in_ruleInLineLink8470); 
+            	    otherlv_2=(Token)match(input,30,FOLLOW_30_in_ruleInLineLink8458); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getInLineLinkAccess().getCommaKeyword_2_0());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3377:1: ( ( ruleQualifiedName ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3378:1: ( ruleQualifiedName )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3369:1: ( ( ruleQualifiedName ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3370:1: ( ruleQualifiedName )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3378:1: ( ruleQualifiedName )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3379:3: ruleQualifiedName
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3370:1: ( ruleQualifiedName )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3371:3: ruleQualifiedName
             	    {
 
             	    			if (current==null) {
@@ -8702,7 +8678,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	     
             	    	        newCompositeNode(grammarAccess.getInLineLinkAccess().getDestGRLElementCrossReference_2_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleInLineLink8493);
+            	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleInLineLink8481);
             	    ruleQualifiedName();
 
             	    state._fsp--;
@@ -8725,7 +8701,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleInLineLink8507); 
+            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleInLineLink8495); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getInLineLinkAccess().getSemicolonKeyword_3());
                 
@@ -8750,7 +8726,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInLineDependency"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3404:1: entryRuleInLineDependency returns [EObject current=null] : iv_ruleInLineDependency= ruleInLineDependency EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3396:1: entryRuleInLineDependency returns [EObject current=null] : iv_ruleInLineDependency= ruleInLineDependency EOF ;
     public final EObject entryRuleInLineDependency() throws RecognitionException {
         EObject current = null;
 
@@ -8758,17 +8734,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3405:2: (iv_ruleInLineDependency= ruleInLineDependency EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3406:2: iv_ruleInLineDependency= ruleInLineDependency EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3397:2: (iv_ruleInLineDependency= ruleInLineDependency EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3398:2: iv_ruleInLineDependency= ruleInLineDependency EOF
             {
              newCompositeNode(grammarAccess.getInLineDependencyRule()); 
-            pushFollow(FOLLOW_ruleInLineDependency_in_entryRuleInLineDependency8543);
+            pushFollow(FOLLOW_ruleInLineDependency_in_entryRuleInLineDependency8531);
             iv_ruleInLineDependency=ruleInLineDependency();
 
             state._fsp--;
 
              current =iv_ruleInLineDependency; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInLineDependency8553); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInLineDependency8541); 
 
             }
 
@@ -8786,7 +8762,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInLineDependency"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3413:1: ruleInLineDependency returns [EObject current=null] : (otherlv_0= 'dependsOn' ( (lv_dest_1_0= ruleDependencyEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDependencyEnd ) ) )* otherlv_4= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3405:1: ruleInLineDependency returns [EObject current=null] : (otherlv_0= 'dependsOn' ( (lv_dest_1_0= ruleDependencyEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDependencyEnd ) ) )* otherlv_4= ';' ) ;
     public final EObject ruleInLineDependency() throws RecognitionException {
         EObject current = null;
 
@@ -8801,26 +8777,26 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3416:28: ( (otherlv_0= 'dependsOn' ( (lv_dest_1_0= ruleDependencyEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDependencyEnd ) ) )* otherlv_4= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3417:1: (otherlv_0= 'dependsOn' ( (lv_dest_1_0= ruleDependencyEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDependencyEnd ) ) )* otherlv_4= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3408:28: ( (otherlv_0= 'dependsOn' ( (lv_dest_1_0= ruleDependencyEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDependencyEnd ) ) )* otherlv_4= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3409:1: (otherlv_0= 'dependsOn' ( (lv_dest_1_0= ruleDependencyEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDependencyEnd ) ) )* otherlv_4= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3417:1: (otherlv_0= 'dependsOn' ( (lv_dest_1_0= ruleDependencyEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDependencyEnd ) ) )* otherlv_4= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3417:3: otherlv_0= 'dependsOn' ( (lv_dest_1_0= ruleDependencyEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDependencyEnd ) ) )* otherlv_4= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3409:1: (otherlv_0= 'dependsOn' ( (lv_dest_1_0= ruleDependencyEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDependencyEnd ) ) )* otherlv_4= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3409:3: otherlv_0= 'dependsOn' ( (lv_dest_1_0= ruleDependencyEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDependencyEnd ) ) )* otherlv_4= ';'
             {
-            otherlv_0=(Token)match(input,31,FOLLOW_31_in_ruleInLineDependency8590); 
+            otherlv_0=(Token)match(input,31,FOLLOW_31_in_ruleInLineDependency8578); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getInLineDependencyAccess().getDependsOnKeyword_0());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3421:1: ( (lv_dest_1_0= ruleDependencyEnd ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3422:1: (lv_dest_1_0= ruleDependencyEnd )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3413:1: ( (lv_dest_1_0= ruleDependencyEnd ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3414:1: (lv_dest_1_0= ruleDependencyEnd )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3422:1: (lv_dest_1_0= ruleDependencyEnd )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3423:3: lv_dest_1_0= ruleDependencyEnd
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3414:1: (lv_dest_1_0= ruleDependencyEnd )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3415:3: lv_dest_1_0= ruleDependencyEnd
             {
              
             	        newCompositeNode(grammarAccess.getInLineDependencyAccess().getDestDependencyEndParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleDependencyEnd_in_ruleInLineDependency8611);
+            pushFollow(FOLLOW_ruleDependencyEnd_in_ruleInLineDependency8599);
             lv_dest_1_0=ruleDependencyEnd();
 
             state._fsp--;
@@ -8842,7 +8818,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3439:2: (otherlv_2= ',' ( (lv_dest_3_0= ruleDependencyEnd ) ) )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3431:2: (otherlv_2= ',' ( (lv_dest_3_0= ruleDependencyEnd ) ) )*
             loop49:
             do {
                 int alt49=2;
@@ -8855,22 +8831,22 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                 switch (alt49) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3439:4: otherlv_2= ',' ( (lv_dest_3_0= ruleDependencyEnd ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3431:4: otherlv_2= ',' ( (lv_dest_3_0= ruleDependencyEnd ) )
             	    {
-            	    otherlv_2=(Token)match(input,30,FOLLOW_30_in_ruleInLineDependency8624); 
+            	    otherlv_2=(Token)match(input,30,FOLLOW_30_in_ruleInLineDependency8612); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getInLineDependencyAccess().getCommaKeyword_2_0());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3443:1: ( (lv_dest_3_0= ruleDependencyEnd ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3444:1: (lv_dest_3_0= ruleDependencyEnd )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3435:1: ( (lv_dest_3_0= ruleDependencyEnd ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3436:1: (lv_dest_3_0= ruleDependencyEnd )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3444:1: (lv_dest_3_0= ruleDependencyEnd )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3445:3: lv_dest_3_0= ruleDependencyEnd
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3436:1: (lv_dest_3_0= ruleDependencyEnd )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3437:3: lv_dest_3_0= ruleDependencyEnd
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getInLineDependencyAccess().getDestDependencyEndParserRuleCall_2_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleDependencyEnd_in_ruleInLineDependency8645);
+            	    pushFollow(FOLLOW_ruleDependencyEnd_in_ruleInLineDependency8633);
             	    lv_dest_3_0=ruleDependencyEnd();
 
             	    state._fsp--;
@@ -8901,7 +8877,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleInLineDependency8659); 
+            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleInLineDependency8647); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getInLineDependencyAccess().getSemicolonKeyword_3());
                 
@@ -8926,7 +8902,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInLineContribution"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3473:1: entryRuleInLineContribution returns [EObject current=null] : iv_ruleInLineContribution= ruleInLineContribution EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3465:1: entryRuleInLineContribution returns [EObject current=null] : iv_ruleInLineContribution= ruleInLineContribution EOF ;
     public final EObject entryRuleInLineContribution() throws RecognitionException {
         EObject current = null;
 
@@ -8934,17 +8910,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3474:2: (iv_ruleInLineContribution= ruleInLineContribution EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3475:2: iv_ruleInLineContribution= ruleInLineContribution EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3466:2: (iv_ruleInLineContribution= ruleInLineContribution EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3467:2: iv_ruleInLineContribution= ruleInLineContribution EOF
             {
              newCompositeNode(grammarAccess.getInLineContributionRule()); 
-            pushFollow(FOLLOW_ruleInLineContribution_in_entryRuleInLineContribution8695);
+            pushFollow(FOLLOW_ruleInLineContribution_in_entryRuleInLineContribution8683);
             iv_ruleInLineContribution=ruleInLineContribution();
 
             state._fsp--;
 
              current =iv_ruleInLineContribution; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInLineContribution8705); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInLineContribution8693); 
 
             }
 
@@ -8962,7 +8938,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInLineContribution"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3482:1: ruleInLineContribution returns [EObject current=null] : (otherlv_0= 'contributesTo' ( (lv_dest_1_0= ruleContributionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleContributionEnd ) ) )* otherlv_4= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3474:1: ruleInLineContribution returns [EObject current=null] : (otherlv_0= 'contributesTo' ( (lv_dest_1_0= ruleContributionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleContributionEnd ) ) )* otherlv_4= ';' ) ;
     public final EObject ruleInLineContribution() throws RecognitionException {
         EObject current = null;
 
@@ -8977,26 +8953,26 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3485:28: ( (otherlv_0= 'contributesTo' ( (lv_dest_1_0= ruleContributionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleContributionEnd ) ) )* otherlv_4= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3486:1: (otherlv_0= 'contributesTo' ( (lv_dest_1_0= ruleContributionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleContributionEnd ) ) )* otherlv_4= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3477:28: ( (otherlv_0= 'contributesTo' ( (lv_dest_1_0= ruleContributionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleContributionEnd ) ) )* otherlv_4= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3478:1: (otherlv_0= 'contributesTo' ( (lv_dest_1_0= ruleContributionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleContributionEnd ) ) )* otherlv_4= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3486:1: (otherlv_0= 'contributesTo' ( (lv_dest_1_0= ruleContributionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleContributionEnd ) ) )* otherlv_4= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3486:3: otherlv_0= 'contributesTo' ( (lv_dest_1_0= ruleContributionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleContributionEnd ) ) )* otherlv_4= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3478:1: (otherlv_0= 'contributesTo' ( (lv_dest_1_0= ruleContributionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleContributionEnd ) ) )* otherlv_4= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3478:3: otherlv_0= 'contributesTo' ( (lv_dest_1_0= ruleContributionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleContributionEnd ) ) )* otherlv_4= ';'
             {
-            otherlv_0=(Token)match(input,32,FOLLOW_32_in_ruleInLineContribution8742); 
+            otherlv_0=(Token)match(input,32,FOLLOW_32_in_ruleInLineContribution8730); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getInLineContributionAccess().getContributesToKeyword_0());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3490:1: ( (lv_dest_1_0= ruleContributionEnd ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3491:1: (lv_dest_1_0= ruleContributionEnd )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3482:1: ( (lv_dest_1_0= ruleContributionEnd ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3483:1: (lv_dest_1_0= ruleContributionEnd )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3491:1: (lv_dest_1_0= ruleContributionEnd )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3492:3: lv_dest_1_0= ruleContributionEnd
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3483:1: (lv_dest_1_0= ruleContributionEnd )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3484:3: lv_dest_1_0= ruleContributionEnd
             {
              
             	        newCompositeNode(grammarAccess.getInLineContributionAccess().getDestContributionEndParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleContributionEnd_in_ruleInLineContribution8763);
+            pushFollow(FOLLOW_ruleContributionEnd_in_ruleInLineContribution8751);
             lv_dest_1_0=ruleContributionEnd();
 
             state._fsp--;
@@ -9018,7 +8994,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3508:2: (otherlv_2= ',' ( (lv_dest_3_0= ruleContributionEnd ) ) )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3500:2: (otherlv_2= ',' ( (lv_dest_3_0= ruleContributionEnd ) ) )*
             loop50:
             do {
                 int alt50=2;
@@ -9031,22 +9007,22 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                 switch (alt50) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3508:4: otherlv_2= ',' ( (lv_dest_3_0= ruleContributionEnd ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3500:4: otherlv_2= ',' ( (lv_dest_3_0= ruleContributionEnd ) )
             	    {
-            	    otherlv_2=(Token)match(input,30,FOLLOW_30_in_ruleInLineContribution8776); 
+            	    otherlv_2=(Token)match(input,30,FOLLOW_30_in_ruleInLineContribution8764); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getInLineContributionAccess().getCommaKeyword_2_0());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3512:1: ( (lv_dest_3_0= ruleContributionEnd ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3513:1: (lv_dest_3_0= ruleContributionEnd )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3504:1: ( (lv_dest_3_0= ruleContributionEnd ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3505:1: (lv_dest_3_0= ruleContributionEnd )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3513:1: (lv_dest_3_0= ruleContributionEnd )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3514:3: lv_dest_3_0= ruleContributionEnd
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3505:1: (lv_dest_3_0= ruleContributionEnd )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3506:3: lv_dest_3_0= ruleContributionEnd
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getInLineContributionAccess().getDestContributionEndParserRuleCall_2_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleContributionEnd_in_ruleInLineContribution8797);
+            	    pushFollow(FOLLOW_ruleContributionEnd_in_ruleInLineContribution8785);
             	    lv_dest_3_0=ruleContributionEnd();
 
             	    state._fsp--;
@@ -9077,7 +9053,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleInLineContribution8811); 
+            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleInLineContribution8799); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getInLineContributionAccess().getSemicolonKeyword_3());
                 
@@ -9102,7 +9078,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInLineDecomposition"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3542:1: entryRuleInLineDecomposition returns [EObject current=null] : iv_ruleInLineDecomposition= ruleInLineDecomposition EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3534:1: entryRuleInLineDecomposition returns [EObject current=null] : iv_ruleInLineDecomposition= ruleInLineDecomposition EOF ;
     public final EObject entryRuleInLineDecomposition() throws RecognitionException {
         EObject current = null;
 
@@ -9110,17 +9086,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3543:2: (iv_ruleInLineDecomposition= ruleInLineDecomposition EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3544:2: iv_ruleInLineDecomposition= ruleInLineDecomposition EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3535:2: (iv_ruleInLineDecomposition= ruleInLineDecomposition EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3536:2: iv_ruleInLineDecomposition= ruleInLineDecomposition EOF
             {
              newCompositeNode(grammarAccess.getInLineDecompositionRule()); 
-            pushFollow(FOLLOW_ruleInLineDecomposition_in_entryRuleInLineDecomposition8847);
+            pushFollow(FOLLOW_ruleInLineDecomposition_in_entryRuleInLineDecomposition8835);
             iv_ruleInLineDecomposition=ruleInLineDecomposition();
 
             state._fsp--;
 
              current =iv_ruleInLineDecomposition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInLineDecomposition8857); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleInLineDecomposition8845); 
 
             }
 
@@ -9138,7 +9114,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInLineDecomposition"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3551:1: ruleInLineDecomposition returns [EObject current=null] : (otherlv_0= 'decomposedBy' ( (lv_dest_1_0= ruleDecompositionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDecompositionEnd ) ) )* otherlv_4= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3543:1: ruleInLineDecomposition returns [EObject current=null] : (otherlv_0= 'decomposedBy' ( (lv_dest_1_0= ruleDecompositionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDecompositionEnd ) ) )* otherlv_4= ';' ) ;
     public final EObject ruleInLineDecomposition() throws RecognitionException {
         EObject current = null;
 
@@ -9153,26 +9129,26 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3554:28: ( (otherlv_0= 'decomposedBy' ( (lv_dest_1_0= ruleDecompositionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDecompositionEnd ) ) )* otherlv_4= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3555:1: (otherlv_0= 'decomposedBy' ( (lv_dest_1_0= ruleDecompositionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDecompositionEnd ) ) )* otherlv_4= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3546:28: ( (otherlv_0= 'decomposedBy' ( (lv_dest_1_0= ruleDecompositionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDecompositionEnd ) ) )* otherlv_4= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3547:1: (otherlv_0= 'decomposedBy' ( (lv_dest_1_0= ruleDecompositionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDecompositionEnd ) ) )* otherlv_4= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3555:1: (otherlv_0= 'decomposedBy' ( (lv_dest_1_0= ruleDecompositionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDecompositionEnd ) ) )* otherlv_4= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3555:3: otherlv_0= 'decomposedBy' ( (lv_dest_1_0= ruleDecompositionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDecompositionEnd ) ) )* otherlv_4= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3547:1: (otherlv_0= 'decomposedBy' ( (lv_dest_1_0= ruleDecompositionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDecompositionEnd ) ) )* otherlv_4= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3547:3: otherlv_0= 'decomposedBy' ( (lv_dest_1_0= ruleDecompositionEnd ) ) (otherlv_2= ',' ( (lv_dest_3_0= ruleDecompositionEnd ) ) )* otherlv_4= ';'
             {
-            otherlv_0=(Token)match(input,33,FOLLOW_33_in_ruleInLineDecomposition8894); 
+            otherlv_0=(Token)match(input,33,FOLLOW_33_in_ruleInLineDecomposition8882); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getInLineDecompositionAccess().getDecomposedByKeyword_0());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3559:1: ( (lv_dest_1_0= ruleDecompositionEnd ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3560:1: (lv_dest_1_0= ruleDecompositionEnd )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3551:1: ( (lv_dest_1_0= ruleDecompositionEnd ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3552:1: (lv_dest_1_0= ruleDecompositionEnd )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3560:1: (lv_dest_1_0= ruleDecompositionEnd )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3561:3: lv_dest_1_0= ruleDecompositionEnd
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3552:1: (lv_dest_1_0= ruleDecompositionEnd )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3553:3: lv_dest_1_0= ruleDecompositionEnd
             {
              
             	        newCompositeNode(grammarAccess.getInLineDecompositionAccess().getDestDecompositionEndParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleDecompositionEnd_in_ruleInLineDecomposition8915);
+            pushFollow(FOLLOW_ruleDecompositionEnd_in_ruleInLineDecomposition8903);
             lv_dest_1_0=ruleDecompositionEnd();
 
             state._fsp--;
@@ -9194,7 +9170,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3577:2: (otherlv_2= ',' ( (lv_dest_3_0= ruleDecompositionEnd ) ) )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3569:2: (otherlv_2= ',' ( (lv_dest_3_0= ruleDecompositionEnd ) ) )*
             loop51:
             do {
                 int alt51=2;
@@ -9207,22 +9183,22 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                 switch (alt51) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3577:4: otherlv_2= ',' ( (lv_dest_3_0= ruleDecompositionEnd ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3569:4: otherlv_2= ',' ( (lv_dest_3_0= ruleDecompositionEnd ) )
             	    {
-            	    otherlv_2=(Token)match(input,30,FOLLOW_30_in_ruleInLineDecomposition8928); 
+            	    otherlv_2=(Token)match(input,30,FOLLOW_30_in_ruleInLineDecomposition8916); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getInLineDecompositionAccess().getCommaKeyword_2_0());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3581:1: ( (lv_dest_3_0= ruleDecompositionEnd ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3582:1: (lv_dest_3_0= ruleDecompositionEnd )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3573:1: ( (lv_dest_3_0= ruleDecompositionEnd ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3574:1: (lv_dest_3_0= ruleDecompositionEnd )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3582:1: (lv_dest_3_0= ruleDecompositionEnd )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3583:3: lv_dest_3_0= ruleDecompositionEnd
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3574:1: (lv_dest_3_0= ruleDecompositionEnd )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3575:3: lv_dest_3_0= ruleDecompositionEnd
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getInLineDecompositionAccess().getDestDecompositionEndParserRuleCall_2_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleDecompositionEnd_in_ruleInLineDecomposition8949);
+            	    pushFollow(FOLLOW_ruleDecompositionEnd_in_ruleInLineDecomposition8937);
             	    lv_dest_3_0=ruleDecompositionEnd();
 
             	    state._fsp--;
@@ -9253,7 +9229,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleInLineDecomposition8963); 
+            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleInLineDecomposition8951); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getInLineDecompositionAccess().getSemicolonKeyword_3());
                 
@@ -9278,7 +9254,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDecompositionEnd"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3611:1: entryRuleDecompositionEnd returns [EObject current=null] : iv_ruleDecompositionEnd= ruleDecompositionEnd EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3603:1: entryRuleDecompositionEnd returns [EObject current=null] : iv_ruleDecompositionEnd= ruleDecompositionEnd EOF ;
     public final EObject entryRuleDecompositionEnd() throws RecognitionException {
         EObject current = null;
 
@@ -9286,17 +9262,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3612:2: (iv_ruleDecompositionEnd= ruleDecompositionEnd EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3613:2: iv_ruleDecompositionEnd= ruleDecompositionEnd EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3604:2: (iv_ruleDecompositionEnd= ruleDecompositionEnd EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3605:2: iv_ruleDecompositionEnd= ruleDecompositionEnd EOF
             {
              newCompositeNode(grammarAccess.getDecompositionEndRule()); 
-            pushFollow(FOLLOW_ruleDecompositionEnd_in_entryRuleDecompositionEnd8999);
+            pushFollow(FOLLOW_ruleDecompositionEnd_in_entryRuleDecompositionEnd8987);
             iv_ruleDecompositionEnd=ruleDecompositionEnd();
 
             state._fsp--;
 
              current =iv_ruleDecompositionEnd; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDecompositionEnd9009); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDecompositionEnd8997); 
 
             }
 
@@ -9314,7 +9290,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDecompositionEnd"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3620:1: ruleDecompositionEnd returns [EObject current=null] : ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )? ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3612:1: ruleDecompositionEnd returns [EObject current=null] : ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )? ) ;
     public final EObject ruleDecompositionEnd() throws RecognitionException {
         EObject current = null;
 
@@ -9325,14 +9301,14 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3623:28: ( ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )? ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3624:1: ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )? )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3615:28: ( ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )? ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3616:1: ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )? )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3624:1: ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )? )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3624:2: () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )?
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3616:1: ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )? )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3616:2: () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )?
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3624:2: ()
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3625:5: 
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3616:2: ()
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3617:5: 
             {
 
                     current = forceCreateModelElement(
@@ -9342,11 +9318,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3630:2: ( ( ruleQualifiedName ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3631:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3622:2: ( ( ruleQualifiedName ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3623:1: ( ruleQualifiedName )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3631:1: ( ruleQualifiedName )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3632:3: ruleQualifiedName
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3623:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3624:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -9356,7 +9332,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getDecompositionEndAccess().getDestNameSuperIntentionalElementCrossReference_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleDecompositionEnd9066);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleDecompositionEnd9054);
             ruleQualifiedName();
 
             state._fsp--;
@@ -9370,7 +9346,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3645:2: (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )?
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3637:2: (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )?
             int alt53=2;
             int LA53_0 = input.LA(1);
 
@@ -9379,13 +9355,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
             switch (alt53) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3645:4: otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3637:4: otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}'
                     {
-                    otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleDecompositionEnd9079); 
+                    otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleDecompositionEnd9067); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getDecompositionEndAccess().getLeftCurlyBracketKeyword_2_0());
                         
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3649:1: ( (lv_description_3_0= RULE_STRING ) )?
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3641:1: ( (lv_description_3_0= RULE_STRING ) )?
                     int alt52=2;
                     int LA52_0 = input.LA(1);
 
@@ -9394,12 +9370,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt52) {
                         case 1 :
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3650:1: (lv_description_3_0= RULE_STRING )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3642:1: (lv_description_3_0= RULE_STRING )
                             {
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3650:1: (lv_description_3_0= RULE_STRING )
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3651:3: lv_description_3_0= RULE_STRING
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3642:1: (lv_description_3_0= RULE_STRING )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3643:3: lv_description_3_0= RULE_STRING
                             {
-                            lv_description_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleDecompositionEnd9096); 
+                            lv_description_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleDecompositionEnd9084); 
 
                             			newLeafNode(lv_description_3_0, grammarAccess.getDecompositionEndAccess().getDescriptionSTRINGTerminalRuleCall_2_1_0()); 
                             		
@@ -9422,7 +9398,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_4=(Token)match(input,15,FOLLOW_15_in_ruleDecompositionEnd9114); 
+                    otherlv_4=(Token)match(input,15,FOLLOW_15_in_ruleDecompositionEnd9102); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getDecompositionEndAccess().getRightCurlyBracketKeyword_2_2());
                         
@@ -9453,7 +9429,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContributionEnd"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3679:1: entryRuleContributionEnd returns [EObject current=null] : iv_ruleContributionEnd= ruleContributionEnd EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3671:1: entryRuleContributionEnd returns [EObject current=null] : iv_ruleContributionEnd= ruleContributionEnd EOF ;
     public final EObject entryRuleContributionEnd() throws RecognitionException {
         EObject current = null;
 
@@ -9461,17 +9437,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3680:2: (iv_ruleContributionEnd= ruleContributionEnd EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3681:2: iv_ruleContributionEnd= ruleContributionEnd EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3672:2: (iv_ruleContributionEnd= ruleContributionEnd EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3673:2: iv_ruleContributionEnd= ruleContributionEnd EOF
             {
              newCompositeNode(grammarAccess.getContributionEndRule()); 
-            pushFollow(FOLLOW_ruleContributionEnd_in_entryRuleContributionEnd9152);
+            pushFollow(FOLLOW_ruleContributionEnd_in_entryRuleContributionEnd9140);
             iv_ruleContributionEnd=ruleContributionEnd();
 
             state._fsp--;
 
              current =iv_ruleContributionEnd; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionEnd9162); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionEnd9150); 
 
             }
 
@@ -9489,7 +9465,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContributionEnd"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3688:1: ruleContributionEnd returns [EObject current=null] : ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) ) ) otherlv_11= '}' )? ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3680:1: ruleContributionEnd returns [EObject current=null] : ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) ) ) otherlv_11= '}' )? ) ;
     public final EObject ruleContributionEnd() throws RecognitionException {
         EObject current = null;
 
@@ -9507,14 +9483,14 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3691:28: ( ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) ) ) otherlv_11= '}' )? ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3692:1: ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) ) ) otherlv_11= '}' )? )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3683:28: ( ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) ) ) otherlv_11= '}' )? ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3684:1: ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) ) ) otherlv_11= '}' )? )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3692:1: ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) ) ) otherlv_11= '}' )? )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3692:2: () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) ) ) otherlv_11= '}' )?
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3684:1: ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) ) ) otherlv_11= '}' )? )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3684:2: () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) ) ) otherlv_11= '}' )?
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3692:2: ()
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3693:5: 
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3684:2: ()
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3685:5: 
             {
 
                     current = forceCreateModelElement(
@@ -9524,11 +9500,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3698:2: ( ( ruleQualifiedName ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3699:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3690:2: ( ( ruleQualifiedName ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3691:1: ( ruleQualifiedName )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3699:1: ( ruleQualifiedName )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3700:3: ruleQualifiedName
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3691:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3692:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -9538,7 +9514,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getContributionEndAccess().getDestNameSuperIntentionalElementCrossReference_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleContributionEnd9219);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleContributionEnd9207);
             ruleQualifiedName();
 
             state._fsp--;
@@ -9552,7 +9528,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3713:2: (otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) ) ) otherlv_11= '}' )?
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3705:2: (otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) ) ) otherlv_11= '}' )?
             int alt56=2;
             int LA56_0 = input.LA(1);
 
@@ -9561,25 +9537,25 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
             switch (alt56) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3713:4: otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) ) ) otherlv_11= '}'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3705:4: otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) ) ) otherlv_11= '}'
                     {
-                    otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleContributionEnd9232); 
+                    otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleContributionEnd9220); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getContributionEndAccess().getLeftCurlyBracketKeyword_2_0());
                         
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3717:1: ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) ) )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3719:1: ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3709:1: ( ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3711:1: ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3719:1: ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3720:2: ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3711:1: ( ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3712:2: ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* )
                     {
                      
                     	  getUnorderedGroupHelper().enter(grammarAccess.getContributionEndAccess().getUnorderedGroup_2_1());
                     	
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3723:2: ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3724:3: ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )*
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3715:2: ( ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )* )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3716:3: ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )*
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3724:3: ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )*
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3716:3: ( ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) ) | ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) ) )*
                     loop55:
                     do {
                         int alt55=3;
@@ -9595,44 +9571,44 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                         switch (alt55) {
                     	case 1 :
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3726:4: ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3718:4: ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) )
                     	    {
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3726:4: ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3727:5: {...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3718:4: ({...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3719:5: {...}? => ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) )
                     	    {
                     	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getContributionEndAccess().getUnorderedGroup_2_1(), 0) ) {
                     	        throw new FailedPredicateException(input, "ruleContributionEnd", "getUnorderedGroupHelper().canSelect(grammarAccess.getContributionEndAccess().getUnorderedGroup_2_1(), 0)");
                     	    }
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3727:114: ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3728:6: ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3719:114: ( ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3720:6: ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) )
                     	    {
                     	     
                     	    	 				  getUnorderedGroupHelper().select(grammarAccess.getContributionEndAccess().getUnorderedGroup_2_1(), 0);
                     	    	 				
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3731:6: ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3731:7: {...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3723:6: ({...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3723:7: {...}? => (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' )
                     	    {
                     	    if ( !((true)) ) {
                     	        throw new FailedPredicateException(input, "ruleContributionEnd", "true");
                     	    }
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3731:16: (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3731:18: otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';'
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3723:16: (otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';' )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3723:18: otherlv_4= 'name' otherlv_5= '=' ( (lv_name_6_0= RULE_ID ) ) otherlv_7= ';'
                     	    {
-                    	    otherlv_4=(Token)match(input,18,FOLLOW_18_in_ruleContributionEnd9290); 
+                    	    otherlv_4=(Token)match(input,18,FOLLOW_18_in_ruleContributionEnd9278); 
 
                     	        	newLeafNode(otherlv_4, grammarAccess.getContributionEndAccess().getNameKeyword_2_1_0_0());
                     	        
-                    	    otherlv_5=(Token)match(input,19,FOLLOW_19_in_ruleContributionEnd9302); 
+                    	    otherlv_5=(Token)match(input,19,FOLLOW_19_in_ruleContributionEnd9290); 
 
                     	        	newLeafNode(otherlv_5, grammarAccess.getContributionEndAccess().getEqualsSignKeyword_2_1_0_1());
                     	        
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3739:1: ( (lv_name_6_0= RULE_ID ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3740:1: (lv_name_6_0= RULE_ID )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3731:1: ( (lv_name_6_0= RULE_ID ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3732:1: (lv_name_6_0= RULE_ID )
                     	    {
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3740:1: (lv_name_6_0= RULE_ID )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3741:3: lv_name_6_0= RULE_ID
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3732:1: (lv_name_6_0= RULE_ID )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3733:3: lv_name_6_0= RULE_ID
                     	    {
-                    	    lv_name_6_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionEnd9319); 
+                    	    lv_name_6_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionEnd9307); 
 
                     	    			newLeafNode(lv_name_6_0, grammarAccess.getContributionEndAccess().getNameIDTerminalRuleCall_2_1_0_2_0()); 
                     	    		
@@ -9652,7 +9628,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_7=(Token)match(input,17,FOLLOW_17_in_ruleContributionEnd9336); 
+                    	    otherlv_7=(Token)match(input,17,FOLLOW_17_in_ruleContributionEnd9324); 
 
                     	        	newLeafNode(otherlv_7, grammarAccess.getContributionEndAccess().getSemicolonKeyword_2_1_0_3());
                     	        
@@ -9675,30 +9651,30 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3768:4: ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3760:4: ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) )
                     	    {
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3768:4: ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3769:5: {...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3760:4: ({...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3761:5: {...}? => ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) )
                     	    {
                     	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getContributionEndAccess().getUnorderedGroup_2_1(), 1) ) {
                     	        throw new FailedPredicateException(input, "ruleContributionEnd", "getUnorderedGroupHelper().canSelect(grammarAccess.getContributionEndAccess().getUnorderedGroup_2_1(), 1)");
                     	    }
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3769:114: ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3770:6: ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3761:114: ( ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3762:6: ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) )
                     	    {
                     	     
                     	    	 				  getUnorderedGroupHelper().select(grammarAccess.getContributionEndAccess().getUnorderedGroup_2_1(), 1);
                     	    	 				
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3773:6: ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3773:7: {...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3765:6: ({...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3765:7: {...}? => ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' )
                     	    {
                     	    if ( !((true)) ) {
                     	        throw new FailedPredicateException(input, "ruleContributionEnd", "true");
                     	    }
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3773:16: ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3773:17: ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';'
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3765:16: ( ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';' )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3765:17: ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_10= ';'
                     	    {
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3773:17: ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3765:17: ( ( (lv_contribution_8_0= ruleContributionType ) ) | ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) ) )
                     	    int alt54=2;
                     	    int LA54_0 = input.LA(1);
 
@@ -9716,18 +9692,18 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	    }
                     	    switch (alt54) {
                     	        case 1 :
-                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3773:18: ( (lv_contribution_8_0= ruleContributionType ) )
+                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3765:18: ( (lv_contribution_8_0= ruleContributionType ) )
                     	            {
-                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3773:18: ( (lv_contribution_8_0= ruleContributionType ) )
-                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3774:1: (lv_contribution_8_0= ruleContributionType )
+                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3765:18: ( (lv_contribution_8_0= ruleContributionType ) )
+                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3766:1: (lv_contribution_8_0= ruleContributionType )
                     	            {
-                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3774:1: (lv_contribution_8_0= ruleContributionType )
-                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3775:3: lv_contribution_8_0= ruleContributionType
+                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3766:1: (lv_contribution_8_0= ruleContributionType )
+                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3767:3: lv_contribution_8_0= ruleContributionType
                     	            {
                     	             
                     	            	        newCompositeNode(grammarAccess.getContributionEndAccess().getContributionContributionTypeEnumRuleCall_2_1_1_0_0_0()); 
                     	            	    
-                    	            pushFollow(FOLLOW_ruleContributionType_in_ruleContributionEnd9414);
+                    	            pushFollow(FOLLOW_ruleContributionType_in_ruleContributionEnd9402);
                     	            lv_contribution_8_0=ruleContributionType();
 
                     	            state._fsp--;
@@ -9753,15 +9729,15 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	            }
                     	            break;
                     	        case 2 :
-                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3792:6: ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) )
+                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3784:6: ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) )
                     	            {
-                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3792:6: ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) )
-                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3793:1: (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE )
+                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3784:6: ( (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE ) )
+                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3785:1: (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE )
                     	            {
-                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3793:1: (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE )
-                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3794:3: lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE
+                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3785:1: (lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE )
+                    	            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3786:3: lv_quantitativeContribution_9_0= RULE_QUALITATIVEVALUE
                     	            {
-                    	            lv_quantitativeContribution_9_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionEnd9437); 
+                    	            lv_quantitativeContribution_9_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionEnd9425); 
 
                     	            			newLeafNode(lv_quantitativeContribution_9_0, grammarAccess.getContributionEndAccess().getQuantitativeContributionQUALITATIVEVALUETerminalRuleCall_2_1_1_0_1_0()); 
                     	            		
@@ -9787,7 +9763,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_10=(Token)match(input,17,FOLLOW_17_in_ruleContributionEnd9455); 
+                    	    otherlv_10=(Token)match(input,17,FOLLOW_17_in_ruleContributionEnd9443); 
 
                     	        	newLeafNode(otherlv_10, grammarAccess.getContributionEndAccess().getSemicolonKeyword_2_1_1_1());
                     	        
@@ -9827,7 +9803,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_11=(Token)match(input,15,FOLLOW_15_in_ruleContributionEnd9508); 
+                    otherlv_11=(Token)match(input,15,FOLLOW_15_in_ruleContributionEnd9496); 
 
                         	newLeafNode(otherlv_11, grammarAccess.getContributionEndAccess().getRightCurlyBracketKeyword_2_2());
                         
@@ -9858,7 +9834,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDependencyEnd"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3840:1: entryRuleDependencyEnd returns [EObject current=null] : iv_ruleDependencyEnd= ruleDependencyEnd EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3832:1: entryRuleDependencyEnd returns [EObject current=null] : iv_ruleDependencyEnd= ruleDependencyEnd EOF ;
     public final EObject entryRuleDependencyEnd() throws RecognitionException {
         EObject current = null;
 
@@ -9866,17 +9842,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3841:2: (iv_ruleDependencyEnd= ruleDependencyEnd EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3842:2: iv_ruleDependencyEnd= ruleDependencyEnd EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3833:2: (iv_ruleDependencyEnd= ruleDependencyEnd EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3834:2: iv_ruleDependencyEnd= ruleDependencyEnd EOF
             {
              newCompositeNode(grammarAccess.getDependencyEndRule()); 
-            pushFollow(FOLLOW_ruleDependencyEnd_in_entryRuleDependencyEnd9546);
+            pushFollow(FOLLOW_ruleDependencyEnd_in_entryRuleDependencyEnd9534);
             iv_ruleDependencyEnd=ruleDependencyEnd();
 
             state._fsp--;
 
              current =iv_ruleDependencyEnd; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDependencyEnd9556); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDependencyEnd9544); 
 
             }
 
@@ -9894,7 +9870,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDependencyEnd"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3849:1: ruleDependencyEnd returns [EObject current=null] : ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )? ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3841:1: ruleDependencyEnd returns [EObject current=null] : ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )? ) ;
     public final EObject ruleDependencyEnd() throws RecognitionException {
         EObject current = null;
 
@@ -9905,14 +9881,14 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3852:28: ( ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )? ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3853:1: ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )? )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3844:28: ( ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )? ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3845:1: ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )? )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3853:1: ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )? )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3853:2: () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )?
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3845:1: ( () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )? )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3845:2: () ( ( ruleQualifiedName ) ) (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )?
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3853:2: ()
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3854:5: 
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3845:2: ()
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3846:5: 
             {
 
                     current = forceCreateModelElement(
@@ -9922,11 +9898,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3859:2: ( ( ruleQualifiedName ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3860:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3851:2: ( ( ruleQualifiedName ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3852:1: ( ruleQualifiedName )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3860:1: ( ruleQualifiedName )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3861:3: ruleQualifiedName
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3852:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3853:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -9936,7 +9912,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getDependencyEndAccess().getDestNameSuperIntentionalElementCrossReference_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleDependencyEnd9613);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleDependencyEnd9601);
             ruleQualifiedName();
 
             state._fsp--;
@@ -9950,7 +9926,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3874:2: (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )?
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3866:2: (otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}' )?
             int alt58=2;
             int LA58_0 = input.LA(1);
 
@@ -9959,13 +9935,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
             switch (alt58) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3874:4: otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3866:4: otherlv_2= '{' ( (lv_description_3_0= RULE_STRING ) )? otherlv_4= '}'
                     {
-                    otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleDependencyEnd9626); 
+                    otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleDependencyEnd9614); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getDependencyEndAccess().getLeftCurlyBracketKeyword_2_0());
                         
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3878:1: ( (lv_description_3_0= RULE_STRING ) )?
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3870:1: ( (lv_description_3_0= RULE_STRING ) )?
                     int alt57=2;
                     int LA57_0 = input.LA(1);
 
@@ -9974,12 +9950,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt57) {
                         case 1 :
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3879:1: (lv_description_3_0= RULE_STRING )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3871:1: (lv_description_3_0= RULE_STRING )
                             {
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3879:1: (lv_description_3_0= RULE_STRING )
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3880:3: lv_description_3_0= RULE_STRING
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3871:1: (lv_description_3_0= RULE_STRING )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3872:3: lv_description_3_0= RULE_STRING
                             {
-                            lv_description_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleDependencyEnd9643); 
+                            lv_description_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleDependencyEnd9631); 
 
                             			newLeafNode(lv_description_3_0, grammarAccess.getDependencyEndAccess().getDescriptionSTRINGTerminalRuleCall_2_1_0()); 
                             		
@@ -10002,7 +9978,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_4=(Token)match(input,15,FOLLOW_15_in_ruleDependencyEnd9661); 
+                    otherlv_4=(Token)match(input,15,FOLLOW_15_in_ruleDependencyEnd9649); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getDependencyEndAccess().getRightCurlyBracketKeyword_2_2());
                         
@@ -10033,7 +10009,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLinkType"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3908:1: entryRuleLinkType returns [EObject current=null] : iv_ruleLinkType= ruleLinkType EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3900:1: entryRuleLinkType returns [EObject current=null] : iv_ruleLinkType= ruleLinkType EOF ;
     public final EObject entryRuleLinkType() throws RecognitionException {
         EObject current = null;
 
@@ -10041,17 +10017,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3909:2: (iv_ruleLinkType= ruleLinkType EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3910:2: iv_ruleLinkType= ruleLinkType EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3901:2: (iv_ruleLinkType= ruleLinkType EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3902:2: iv_ruleLinkType= ruleLinkType EOF
             {
              newCompositeNode(grammarAccess.getLinkTypeRule()); 
-            pushFollow(FOLLOW_ruleLinkType_in_entryRuleLinkType9699);
+            pushFollow(FOLLOW_ruleLinkType_in_entryRuleLinkType9687);
             iv_ruleLinkType=ruleLinkType();
 
             state._fsp--;
 
              current =iv_ruleLinkType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLinkType9709); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLinkType9697); 
 
             }
 
@@ -10069,7 +10045,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLinkType"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3917:1: ruleLinkType returns [EObject current=null] : (otherlv_0= 'link' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3909:1: ruleLinkType returns [EObject current=null] : (otherlv_0= 'link' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
     public final EObject ruleLinkType() throws RecognitionException {
         EObject current = null;
 
@@ -10080,23 +10056,23 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3920:28: ( (otherlv_0= 'link' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3921:1: (otherlv_0= 'link' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3912:28: ( (otherlv_0= 'link' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3913:1: (otherlv_0= 'link' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3921:1: (otherlv_0= 'link' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3921:3: otherlv_0= 'link' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3913:1: (otherlv_0= 'link' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3913:3: otherlv_0= 'link' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';'
             {
-            otherlv_0=(Token)match(input,34,FOLLOW_34_in_ruleLinkType9746); 
+            otherlv_0=(Token)match(input,34,FOLLOW_34_in_ruleLinkType9734); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getLinkTypeAccess().getLinkKeyword_0());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3925:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3926:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3917:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3918:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3926:1: (lv_name_1_0= RULE_ID )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3927:3: lv_name_1_0= RULE_ID
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3918:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3919:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLinkType9763); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLinkType9751); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getLinkTypeAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -10116,7 +10092,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,17,FOLLOW_17_in_ruleLinkType9780); 
+            otherlv_2=(Token)match(input,17,FOLLOW_17_in_ruleLinkType9768); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getLinkTypeAccess().getSemicolonKeyword_2());
                 
@@ -10141,7 +10117,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStrategyGroup"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3955:1: entryRuleStrategyGroup returns [EObject current=null] : iv_ruleStrategyGroup= ruleStrategyGroup EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3947:1: entryRuleStrategyGroup returns [EObject current=null] : iv_ruleStrategyGroup= ruleStrategyGroup EOF ;
     public final EObject entryRuleStrategyGroup() throws RecognitionException {
         EObject current = null;
 
@@ -10149,17 +10125,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3956:2: (iv_ruleStrategyGroup= ruleStrategyGroup EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3957:2: iv_ruleStrategyGroup= ruleStrategyGroup EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3948:2: (iv_ruleStrategyGroup= ruleStrategyGroup EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3949:2: iv_ruleStrategyGroup= ruleStrategyGroup EOF
             {
              newCompositeNode(grammarAccess.getStrategyGroupRule()); 
-            pushFollow(FOLLOW_ruleStrategyGroup_in_entryRuleStrategyGroup9816);
+            pushFollow(FOLLOW_ruleStrategyGroup_in_entryRuleStrategyGroup9804);
             iv_ruleStrategyGroup=ruleStrategyGroup();
 
             state._fsp--;
 
              current =iv_ruleStrategyGroup; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStrategyGroup9826); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStrategyGroup9814); 
 
             }
 
@@ -10177,7 +10153,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStrategyGroup"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3964:1: ruleStrategyGroup returns [EObject current=null] : (otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3956:1: ruleStrategyGroup returns [EObject current=null] : (otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= ';' ) ;
     public final EObject ruleStrategyGroup() throws RecognitionException {
         EObject current = null;
 
@@ -10190,23 +10166,23 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3967:28: ( (otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3968:1: (otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3959:28: ( (otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3960:1: (otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3968:1: (otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3968:3: otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3960:1: (otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3960:3: otherlv_0= 'strategyGroup' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= ';'
             {
-            otherlv_0=(Token)match(input,35,FOLLOW_35_in_ruleStrategyGroup9863); 
+            otherlv_0=(Token)match(input,35,FOLLOW_35_in_ruleStrategyGroup9851); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getStrategyGroupAccess().getStrategyGroupKeyword_0());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3972:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3973:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3964:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3965:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3973:1: (lv_name_1_0= RULE_ID )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3974:3: lv_name_1_0= RULE_ID
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3965:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3966:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleStrategyGroup9880); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleStrategyGroup9868); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getStrategyGroupAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -10226,7 +10202,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3990:2: (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )?
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3982:2: (otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )?
             int alt60=2;
             int LA60_0 = input.LA(1);
 
@@ -10235,17 +10211,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
             switch (alt60) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3990:4: otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3982:4: otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
                     {
-                    otherlv_2=(Token)match(input,36,FOLLOW_36_in_ruleStrategyGroup9898); 
+                    otherlv_2=(Token)match(input,36,FOLLOW_36_in_ruleStrategyGroup9886); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getStrategyGroupAccess().getIncludesKeyword_2_0());
                         
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3994:1: ( ( ruleQualifiedName ) )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3995:1: ( ruleQualifiedName )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3986:1: ( ( ruleQualifiedName ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3987:1: ( ruleQualifiedName )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3995:1: ( ruleQualifiedName )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3996:3: ruleQualifiedName
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3987:1: ( ruleQualifiedName )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:3988:3: ruleQualifiedName
                     {
 
                     			if (current==null) {
@@ -10255,7 +10231,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getStrategyGroupAccess().getStrategiesEvaluationStrategyCrossReference_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleStrategyGroup9921);
+                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleStrategyGroup9909);
                     ruleQualifiedName();
 
                     state._fsp--;
@@ -10269,7 +10245,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4009:2: (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4001:2: (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
                     loop59:
                     do {
                         int alt59=2;
@@ -10282,17 +10258,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                         switch (alt59) {
                     	case 1 :
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4009:4: otherlv_4= ',' ( ( ruleQualifiedName ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4001:4: otherlv_4= ',' ( ( ruleQualifiedName ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,30,FOLLOW_30_in_ruleStrategyGroup9934); 
+                    	    otherlv_4=(Token)match(input,30,FOLLOW_30_in_ruleStrategyGroup9922); 
 
                     	        	newLeafNode(otherlv_4, grammarAccess.getStrategyGroupAccess().getCommaKeyword_2_2_0());
                     	        
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4013:1: ( ( ruleQualifiedName ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4014:1: ( ruleQualifiedName )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4005:1: ( ( ruleQualifiedName ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4006:1: ( ruleQualifiedName )
                     	    {
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4014:1: ( ruleQualifiedName )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4015:3: ruleQualifiedName
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4006:1: ( ruleQualifiedName )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4007:3: ruleQualifiedName
                     	    {
 
                     	    			if (current==null) {
@@ -10302,7 +10278,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	     
                     	    	        newCompositeNode(grammarAccess.getStrategyGroupAccess().getStrategiesEvaluationStrategyCrossReference_2_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleStrategyGroup9957);
+                    	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleStrategyGroup9945);
                     	    ruleQualifiedName();
 
                     	    state._fsp--;
@@ -10331,7 +10307,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,17,FOLLOW_17_in_ruleStrategyGroup9973); 
+            otherlv_6=(Token)match(input,17,FOLLOW_17_in_ruleStrategyGroup9961); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getStrategyGroupAccess().getSemicolonKeyword_3());
                 
@@ -10356,7 +10332,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEvaluationStrategy"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4040:1: entryRuleEvaluationStrategy returns [EObject current=null] : iv_ruleEvaluationStrategy= ruleEvaluationStrategy EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4032:1: entryRuleEvaluationStrategy returns [EObject current=null] : iv_ruleEvaluationStrategy= ruleEvaluationStrategy EOF ;
     public final EObject entryRuleEvaluationStrategy() throws RecognitionException {
         EObject current = null;
 
@@ -10364,17 +10340,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4041:2: (iv_ruleEvaluationStrategy= ruleEvaluationStrategy EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4042:2: iv_ruleEvaluationStrategy= ruleEvaluationStrategy EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4033:2: (iv_ruleEvaluationStrategy= ruleEvaluationStrategy EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4034:2: iv_ruleEvaluationStrategy= ruleEvaluationStrategy EOF
             {
              newCompositeNode(grammarAccess.getEvaluationStrategyRule()); 
-            pushFollow(FOLLOW_ruleEvaluationStrategy_in_entryRuleEvaluationStrategy10009);
+            pushFollow(FOLLOW_ruleEvaluationStrategy_in_entryRuleEvaluationStrategy9997);
             iv_ruleEvaluationStrategy=ruleEvaluationStrategy();
 
             state._fsp--;
 
              current =iv_ruleEvaluationStrategy; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEvaluationStrategy10019); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEvaluationStrategy10007); 
 
             }
 
@@ -10392,7 +10368,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEvaluationStrategy"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4049:1: ruleEvaluationStrategy returns [EObject current=null] : (otherlv_0= 'strategy' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? ( (otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' ) | otherlv_11= ';' ) ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4041:1: ruleEvaluationStrategy returns [EObject current=null] : (otherlv_0= 'strategy' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? ( (otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' ) | otherlv_11= ';' ) ) ;
     public final EObject ruleEvaluationStrategy() throws RecognitionException {
         EObject current = null;
 
@@ -10411,23 +10387,23 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4052:28: ( (otherlv_0= 'strategy' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? ( (otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' ) | otherlv_11= ';' ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4053:1: (otherlv_0= 'strategy' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? ( (otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' ) | otherlv_11= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4044:28: ( (otherlv_0= 'strategy' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? ( (otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' ) | otherlv_11= ';' ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4045:1: (otherlv_0= 'strategy' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? ( (otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' ) | otherlv_11= ';' ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4053:1: (otherlv_0= 'strategy' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? ( (otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' ) | otherlv_11= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4053:3: otherlv_0= 'strategy' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? ( (otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' ) | otherlv_11= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4045:1: (otherlv_0= 'strategy' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? ( (otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' ) | otherlv_11= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4045:3: otherlv_0= 'strategy' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? ( (otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' ) | otherlv_11= ';' )
             {
-            otherlv_0=(Token)match(input,37,FOLLOW_37_in_ruleEvaluationStrategy10056); 
+            otherlv_0=(Token)match(input,37,FOLLOW_37_in_ruleEvaluationStrategy10044); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEvaluationStrategyAccess().getStrategyKeyword_0());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4057:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4058:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4049:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4050:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4058:1: (lv_name_1_0= RULE_ID )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4059:3: lv_name_1_0= RULE_ID
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4050:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4051:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEvaluationStrategy10073); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleEvaluationStrategy10061); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getEvaluationStrategyAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -10447,7 +10423,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4075:2: (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )?
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4067:2: (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )?
             int alt62=2;
             int LA62_0 = input.LA(1);
 
@@ -10456,17 +10432,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
             switch (alt62) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4075:4: otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4067:4: otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
                     {
-                    otherlv_2=(Token)match(input,38,FOLLOW_38_in_ruleEvaluationStrategy10091); 
+                    otherlv_2=(Token)match(input,38,FOLLOW_38_in_ruleEvaluationStrategy10079); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getEvaluationStrategyAccess().getExtendsKeyword_2_0());
                         
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4079:1: ( ( ruleQualifiedName ) )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4080:1: ( ruleQualifiedName )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4071:1: ( ( ruleQualifiedName ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4072:1: ( ruleQualifiedName )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4080:1: ( ruleQualifiedName )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4081:3: ruleQualifiedName
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4072:1: ( ruleQualifiedName )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4073:3: ruleQualifiedName
                     {
 
                     			if (current==null) {
@@ -10476,7 +10452,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getEvaluationStrategyAccess().getSuperStrategiesEvaluationStrategyCrossReference_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleEvaluationStrategy10114);
+                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleEvaluationStrategy10102);
                     ruleQualifiedName();
 
                     state._fsp--;
@@ -10490,7 +10466,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4094:2: (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4086:2: (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
                     loop61:
                     do {
                         int alt61=2;
@@ -10503,17 +10479,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                         switch (alt61) {
                     	case 1 :
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4094:4: otherlv_4= ',' ( ( ruleQualifiedName ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4086:4: otherlv_4= ',' ( ( ruleQualifiedName ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,30,FOLLOW_30_in_ruleEvaluationStrategy10127); 
+                    	    otherlv_4=(Token)match(input,30,FOLLOW_30_in_ruleEvaluationStrategy10115); 
 
                     	        	newLeafNode(otherlv_4, grammarAccess.getEvaluationStrategyAccess().getCommaKeyword_2_2_0());
                     	        
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4098:1: ( ( ruleQualifiedName ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4099:1: ( ruleQualifiedName )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4090:1: ( ( ruleQualifiedName ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4091:1: ( ruleQualifiedName )
                     	    {
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4099:1: ( ruleQualifiedName )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4100:3: ruleQualifiedName
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4091:1: ( ruleQualifiedName )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4092:3: ruleQualifiedName
                     	    {
 
                     	    			if (current==null) {
@@ -10523,7 +10499,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	     
                     	    	        newCompositeNode(grammarAccess.getEvaluationStrategyAccess().getSuperStrategiesEvaluationStrategyCrossReference_2_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleEvaluationStrategy10150);
+                    	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleEvaluationStrategy10138);
                     	    ruleQualifiedName();
 
                     	    state._fsp--;
@@ -10552,7 +10528,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4113:6: ( (otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' ) | otherlv_11= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4105:6: ( (otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' ) | otherlv_11= ';' )
             int alt66=2;
             int LA66_0 = input.LA(1);
 
@@ -10570,28 +10546,28 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
             switch (alt66) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4113:7: (otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4105:7: (otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4113:7: (otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4113:9: otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4105:7: (otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4105:9: otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) ) otherlv_10= '}'
                     {
-                    otherlv_6=(Token)match(input,14,FOLLOW_14_in_ruleEvaluationStrategy10168); 
+                    otherlv_6=(Token)match(input,14,FOLLOW_14_in_ruleEvaluationStrategy10156); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getEvaluationStrategyAccess().getLeftCurlyBracketKeyword_3_0_0());
                         
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4117:1: ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4119:1: ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4109:1: ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4111:1: ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4119:1: ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4120:2: ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4111:1: ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4112:2: ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* )
                     {
                      
                     	  getUnorderedGroupHelper().enter(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_3_0_1());
                     	
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4123:2: ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4124:3: ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )*
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4115:2: ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )* )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4116:3: ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )*
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4124:3: ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )*
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4116:3: ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) ) )*
                     loop65:
                     do {
                         int alt65=3;
@@ -10607,21 +10583,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                         switch (alt65) {
                     	case 1 :
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4126:4: ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4118:4: ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) )
                     	    {
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4126:4: ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4127:5: {...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4118:4: ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4119:5: {...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ )
                     	    {
                     	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_3_0_1(), 0) ) {
                     	        throw new FailedPredicateException(input, "ruleEvaluationStrategy", "getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_3_0_1(), 0)");
                     	    }
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4127:119: ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4128:6: ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4119:119: ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4120:6: ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+
                     	    {
                     	     
                     	    	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_3_0_1(), 0);
                     	    	 				
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4131:6: ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4123:6: ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+
                     	    int cnt63=0;
                     	    loop63:
                     	    do {
@@ -10641,21 +10617,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     	        switch (alt63) {
                     	    	case 1 :
-                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4131:7: {...}? => ( (lv_metaData_8_0= ruleMetadata ) )
+                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4123:7: {...}? => ( (lv_metaData_8_0= ruleMetadata ) )
                     	    	    {
                     	    	    if ( !((true)) ) {
                     	    	        throw new FailedPredicateException(input, "ruleEvaluationStrategy", "true");
                     	    	    }
-                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4131:16: ( (lv_metaData_8_0= ruleMetadata ) )
-                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4132:1: (lv_metaData_8_0= ruleMetadata )
+                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4123:16: ( (lv_metaData_8_0= ruleMetadata ) )
+                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4124:1: (lv_metaData_8_0= ruleMetadata )
                     	    	    {
-                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4132:1: (lv_metaData_8_0= ruleMetadata )
-                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4133:3: lv_metaData_8_0= ruleMetadata
+                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4124:1: (lv_metaData_8_0= ruleMetadata )
+                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4125:3: lv_metaData_8_0= ruleMetadata
                     	    	    {
                     	    	     
                     	    	    	        newCompositeNode(grammarAccess.getEvaluationStrategyAccess().getMetaDataMetadataParserRuleCall_3_0_1_0_0()); 
                     	    	    	    
-                    	    	    pushFollow(FOLLOW_ruleMetadata_in_ruleEvaluationStrategy10234);
+                    	    	    pushFollow(FOLLOW_ruleMetadata_in_ruleEvaluationStrategy10222);
                     	    	    lv_metaData_8_0=ruleMetadata();
 
                     	    	    state._fsp--;
@@ -10703,21 +10679,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4156:4: ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4148:4: ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) )
                     	    {
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4156:4: ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4157:5: {...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4148:4: ({...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4149:5: {...}? => ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ )
                     	    {
                     	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_3_0_1(), 1) ) {
                     	        throw new FailedPredicateException(input, "ruleEvaluationStrategy", "getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_3_0_1(), 1)");
                     	    }
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4157:119: ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4158:6: ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4149:119: ( ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+ )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4150:6: ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+
                     	    {
                     	     
                     	    	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationStrategyAccess().getUnorderedGroup_3_0_1(), 1);
                     	    	 				
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4161:6: ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4153:6: ({...}? => ( (lv_evaluations_9_0= ruleEvaluation ) ) )+
                     	    int cnt64=0;
                     	    loop64:
                     	    do {
@@ -10737,21 +10713,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     	        switch (alt64) {
                     	    	case 1 :
-                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4161:7: {...}? => ( (lv_evaluations_9_0= ruleEvaluation ) )
+                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4153:7: {...}? => ( (lv_evaluations_9_0= ruleEvaluation ) )
                     	    	    {
                     	    	    if ( !((true)) ) {
                     	    	        throw new FailedPredicateException(input, "ruleEvaluationStrategy", "true");
                     	    	    }
-                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4161:16: ( (lv_evaluations_9_0= ruleEvaluation ) )
-                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4162:1: (lv_evaluations_9_0= ruleEvaluation )
+                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4153:16: ( (lv_evaluations_9_0= ruleEvaluation ) )
+                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4154:1: (lv_evaluations_9_0= ruleEvaluation )
                     	    	    {
-                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4162:1: (lv_evaluations_9_0= ruleEvaluation )
-                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4163:3: lv_evaluations_9_0= ruleEvaluation
+                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4154:1: (lv_evaluations_9_0= ruleEvaluation )
+                    	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4155:3: lv_evaluations_9_0= ruleEvaluation
                     	    	    {
                     	    	     
                     	    	    	        newCompositeNode(grammarAccess.getEvaluationStrategyAccess().getEvaluationsEvaluationParserRuleCall_3_0_1_1_0()); 
                     	    	    	    
-                    	    	    pushFollow(FOLLOW_ruleEvaluation_in_ruleEvaluationStrategy10310);
+                    	    	    pushFollow(FOLLOW_ruleEvaluation_in_ruleEvaluationStrategy10298);
                     	    	    lv_evaluations_9_0=ruleEvaluation();
 
                     	    	    state._fsp--;
@@ -10816,7 +10792,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_10=(Token)match(input,15,FOLLOW_15_in_ruleEvaluationStrategy10363); 
+                    otherlv_10=(Token)match(input,15,FOLLOW_15_in_ruleEvaluationStrategy10351); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getEvaluationStrategyAccess().getRightCurlyBracketKeyword_3_0_2());
                         
@@ -10827,9 +10803,9 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4198:7: otherlv_11= ';'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4190:7: otherlv_11= ';'
                     {
-                    otherlv_11=(Token)match(input,17,FOLLOW_17_in_ruleEvaluationStrategy10382); 
+                    otherlv_11=(Token)match(input,17,FOLLOW_17_in_ruleEvaluationStrategy10370); 
 
                         	newLeafNode(otherlv_11, grammarAccess.getEvaluationStrategyAccess().getSemicolonKeyword_3_1());
                         
@@ -10860,7 +10836,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEvaluation"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4210:1: entryRuleEvaluation returns [EObject current=null] : iv_ruleEvaluation= ruleEvaluation EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4202:1: entryRuleEvaluation returns [EObject current=null] : iv_ruleEvaluation= ruleEvaluation EOF ;
     public final EObject entryRuleEvaluation() throws RecognitionException {
         EObject current = null;
 
@@ -10868,17 +10844,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4211:2: (iv_ruleEvaluation= ruleEvaluation EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4212:2: iv_ruleEvaluation= ruleEvaluation EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4203:2: (iv_ruleEvaluation= ruleEvaluation EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4204:2: iv_ruleEvaluation= ruleEvaluation EOF
             {
              newCompositeNode(grammarAccess.getEvaluationRule()); 
-            pushFollow(FOLLOW_ruleEvaluation_in_entryRuleEvaluation10419);
+            pushFollow(FOLLOW_ruleEvaluation_in_entryRuleEvaluation10407);
             iv_ruleEvaluation=ruleEvaluation();
 
             state._fsp--;
 
              current =iv_ruleEvaluation; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEvaluation10429); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEvaluation10417); 
 
             }
 
@@ -10896,7 +10872,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEvaluation"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4219:1: ruleEvaluation returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}' ) ) ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4211:1: ruleEvaluation returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}' ) ) ) ;
     public final EObject ruleEvaluation() throws RecognitionException {
         EObject current = null;
 
@@ -10917,17 +10893,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4222:28: ( ( ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}' ) ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4223:1: ( ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}' ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4214:28: ( ( ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}' ) ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4215:1: ( ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}' ) ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4223:1: ( ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}' ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4223:2: ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4215:1: ( ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}' ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4215:2: ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}' ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4223:2: ( ( ruleQualifiedName ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4224:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4215:2: ( ( ruleQualifiedName ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4216:1: ( ruleQualifiedName )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4224:1: ( ruleQualifiedName )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4225:3: ruleQualifiedName
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4216:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4217:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -10937,7 +10913,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getEvaluationAccess().getIntentionalElementSuperIntentionalElementCrossReference_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleEvaluation10477);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleEvaluation10465);
             ruleQualifiedName();
 
             state._fsp--;
@@ -10951,11 +10927,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,19,FOLLOW_19_in_ruleEvaluation10489); 
+            otherlv_1=(Token)match(input,19,FOLLOW_19_in_ruleEvaluation10477); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getEvaluationAccess().getEqualsSignKeyword_1());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4242:1: ( ( ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4234:1: ( ( ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}' ) )
             int alt69=2;
             int LA69_0 = input.LA(1);
 
@@ -10973,12 +10949,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
             switch (alt69) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4242:2: ( ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4234:2: ( ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4242:2: ( ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4242:3: ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4234:2: ( ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4234:3: ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';'
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4242:3: ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4234:3: ( ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) ) | ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) ) )
                     int alt67=2;
                     int LA67_0 = input.LA(1);
 
@@ -10996,18 +10972,18 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt67) {
                         case 1 :
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4242:4: ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4234:4: ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) )
                             {
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4242:4: ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) )
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4243:1: (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4234:4: ( (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel ) )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4235:1: (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel )
                             {
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4243:1: (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel )
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4244:3: lv_qualitativeEvaluation_2_0= ruleQualitativeLabel
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4235:1: (lv_qualitativeEvaluation_2_0= ruleQualitativeLabel )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4236:3: lv_qualitativeEvaluation_2_0= ruleQualitativeLabel
                             {
                              
                             	        newCompositeNode(grammarAccess.getEvaluationAccess().getQualitativeEvaluationQualitativeLabelEnumRuleCall_2_0_0_0_0()); 
                             	    
-                            pushFollow(FOLLOW_ruleQualitativeLabel_in_ruleEvaluation10513);
+                            pushFollow(FOLLOW_ruleQualitativeLabel_in_ruleEvaluation10501);
                             lv_qualitativeEvaluation_2_0=ruleQualitativeLabel();
 
                             state._fsp--;
@@ -11033,15 +11009,15 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4261:6: ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4253:6: ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) )
                             {
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4261:6: ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) )
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4262:1: (lv_evaluation_3_0= RULE_QUALITATIVEVALUE )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4253:6: ( (lv_evaluation_3_0= RULE_QUALITATIVEVALUE ) )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4254:1: (lv_evaluation_3_0= RULE_QUALITATIVEVALUE )
                             {
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4262:1: (lv_evaluation_3_0= RULE_QUALITATIVEVALUE )
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4263:3: lv_evaluation_3_0= RULE_QUALITATIVEVALUE
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4254:1: (lv_evaluation_3_0= RULE_QUALITATIVEVALUE )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4255:3: lv_evaluation_3_0= RULE_QUALITATIVEVALUE
                             {
-                            lv_evaluation_3_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluation10536); 
+                            lv_evaluation_3_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluation10524); 
 
                             			newLeafNode(lv_evaluation_3_0, grammarAccess.getEvaluationAccess().getEvaluationQUALITATIVEVALUETerminalRuleCall_2_0_0_1_0()); 
                             		
@@ -11067,7 +11043,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleEvaluation10554); 
+                    otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleEvaluation10542); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getEvaluationAccess().getSemicolonKeyword_2_0_1());
                         
@@ -11078,28 +11054,28 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4284:6: (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4276:6: (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4284:6: (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4284:8: otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4276:6: (otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4276:8: otherlv_5= '{' ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) ) otherlv_11= '}'
                     {
-                    otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleEvaluation10574); 
+                    otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleEvaluation10562); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getEvaluationAccess().getLeftCurlyBracketKeyword_2_1_0());
                         
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4288:1: ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4290:1: ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4280:1: ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4282:1: ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4290:1: ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4291:2: ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4282:1: ( ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4283:2: ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* )
                     {
                      
                     	  getUnorderedGroupHelper().enter(grammarAccess.getEvaluationAccess().getUnorderedGroup_2_1_1());
                     	
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4294:2: ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4295:3: ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )*
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4286:2: ( ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )* )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4287:3: ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )*
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4295:3: ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )*
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4287:3: ( ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) ) )*
                     loop68:
                     do {
                         int alt68=4;
@@ -11118,36 +11094,36 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                         switch (alt68) {
                     	case 1 :
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4297:4: ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4289:4: ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) )
                     	    {
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4297:4: ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4298:5: {...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4289:4: ({...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4290:5: {...}? => ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) )
                     	    {
                     	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_2_1_1(), 0) ) {
                     	        throw new FailedPredicateException(input, "ruleEvaluation", "getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_2_1_1(), 0)");
                     	    }
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4298:111: ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4299:6: ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4290:111: ( ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4291:6: ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) )
                     	    {
                     	     
                     	    	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationAccess().getUnorderedGroup_2_1_1(), 0);
                     	    	 				
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4302:6: ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4302:7: {...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4294:6: ({...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4294:7: {...}? => ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' )
                     	    {
                     	    if ( !((true)) ) {
                     	        throw new FailedPredicateException(input, "ruleEvaluation", "true");
                     	    }
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4302:16: ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4302:17: ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';'
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4294:16: ( ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';' )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4294:17: ( (lv_exceeds_7_0= 'exceeds' ) ) otherlv_8= ';'
                     	    {
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4302:17: ( (lv_exceeds_7_0= 'exceeds' ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4303:1: (lv_exceeds_7_0= 'exceeds' )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4294:17: ( (lv_exceeds_7_0= 'exceeds' ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4295:1: (lv_exceeds_7_0= 'exceeds' )
                     	    {
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4303:1: (lv_exceeds_7_0= 'exceeds' )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4304:3: lv_exceeds_7_0= 'exceeds'
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4295:1: (lv_exceeds_7_0= 'exceeds' )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4296:3: lv_exceeds_7_0= 'exceeds'
                     	    {
-                    	    lv_exceeds_7_0=(Token)match(input,39,FOLLOW_39_in_ruleEvaluation10638); 
+                    	    lv_exceeds_7_0=(Token)match(input,39,FOLLOW_39_in_ruleEvaluation10626); 
 
                     	            newLeafNode(lv_exceeds_7_0, grammarAccess.getEvaluationAccess().getExceedsExceedsKeyword_2_1_1_0_0_0());
                     	        
@@ -11163,7 +11139,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_8=(Token)match(input,17,FOLLOW_17_in_ruleEvaluation10663); 
+                    	    otherlv_8=(Token)match(input,17,FOLLOW_17_in_ruleEvaluation10651); 
 
                     	        	newLeafNode(otherlv_8, grammarAccess.getEvaluationAccess().getSemicolonKeyword_2_1_1_0_1());
                     	        
@@ -11186,36 +11162,36 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4328:4: ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4320:4: ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) )
                     	    {
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4328:4: ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4329:5: {...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4320:4: ({...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4321:5: {...}? => ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) )
                     	    {
                     	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_2_1_1(), 1) ) {
                     	        throw new FailedPredicateException(input, "ruleEvaluation", "getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_2_1_1(), 1)");
                     	    }
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4329:111: ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4330:6: ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4321:111: ( ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4322:6: ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) )
                     	    {
                     	     
                     	    	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationAccess().getUnorderedGroup_2_1_1(), 1);
                     	    	 				
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4333:6: ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4333:7: {...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4325:6: ({...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4325:7: {...}? => ( (lv_evalRange_9_0= ruleEvaluationRange ) )
                     	    {
                     	    if ( !((true)) ) {
                     	        throw new FailedPredicateException(input, "ruleEvaluation", "true");
                     	    }
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4333:16: ( (lv_evalRange_9_0= ruleEvaluationRange ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4334:1: (lv_evalRange_9_0= ruleEvaluationRange )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4325:16: ( (lv_evalRange_9_0= ruleEvaluationRange ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4326:1: (lv_evalRange_9_0= ruleEvaluationRange )
                     	    {
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4334:1: (lv_evalRange_9_0= ruleEvaluationRange )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4335:3: lv_evalRange_9_0= ruleEvaluationRange
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4326:1: (lv_evalRange_9_0= ruleEvaluationRange )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4327:3: lv_evalRange_9_0= ruleEvaluationRange
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getEvaluationAccess().getEvalRangeEvaluationRangeParserRuleCall_2_1_1_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleEvaluationRange_in_ruleEvaluation10739);
+                    	    pushFollow(FOLLOW_ruleEvaluationRange_in_ruleEvaluation10727);
                     	    lv_evalRange_9_0=ruleEvaluationRange();
 
                     	    state._fsp--;
@@ -11253,36 +11229,36 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	    }
                     	    break;
                     	case 3 :
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4358:4: ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4350:4: ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) )
                     	    {
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4358:4: ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4359:5: {...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4350:4: ({...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4351:5: {...}? => ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) )
                     	    {
                     	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_2_1_1(), 2) ) {
                     	        throw new FailedPredicateException(input, "ruleEvaluation", "getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluationAccess().getUnorderedGroup_2_1_1(), 2)");
                     	    }
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4359:111: ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4360:6: ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4351:111: ( ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4352:6: ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) )
                     	    {
                     	     
                     	    	 				  getUnorderedGroupHelper().select(grammarAccess.getEvaluationAccess().getUnorderedGroup_2_1_1(), 2);
                     	    	 				
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4363:6: ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4363:7: {...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4355:6: ({...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4355:7: {...}? => ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) )
                     	    {
                     	    if ( !((true)) ) {
                     	        throw new FailedPredicateException(input, "ruleEvaluation", "true");
                     	    }
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4363:16: ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4364:1: (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4355:16: ( (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4356:1: (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet )
                     	    {
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4364:1: (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4365:3: lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4356:1: (lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4357:3: lv_kpiEvalValueSet_10_0= ruleKPIEvalValueSet
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getEvaluationAccess().getKpiEvalValueSetKPIEvalValueSetParserRuleCall_2_1_1_2_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleKPIEvalValueSet_in_ruleEvaluation10814);
+                    	    pushFollow(FOLLOW_ruleKPIEvalValueSet_in_ruleEvaluation10802);
                     	    lv_kpiEvalValueSet_10_0=ruleKPIEvalValueSet();
 
                     	    state._fsp--;
@@ -11337,7 +11313,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_11=(Token)match(input,15,FOLLOW_15_in_ruleEvaluation10866); 
+                    otherlv_11=(Token)match(input,15,FOLLOW_15_in_ruleEvaluation10854); 
 
                         	newLeafNode(otherlv_11, grammarAccess.getEvaluationAccess().getRightCurlyBracketKeyword_2_1_2());
                         
@@ -11371,7 +11347,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEvaluationRange"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4407:1: entryRuleEvaluationRange returns [EObject current=null] : iv_ruleEvaluationRange= ruleEvaluationRange EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4399:1: entryRuleEvaluationRange returns [EObject current=null] : iv_ruleEvaluationRange= ruleEvaluationRange EOF ;
     public final EObject entryRuleEvaluationRange() throws RecognitionException {
         EObject current = null;
 
@@ -11379,17 +11355,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4408:2: (iv_ruleEvaluationRange= ruleEvaluationRange EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4409:2: iv_ruleEvaluationRange= ruleEvaluationRange EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4400:2: (iv_ruleEvaluationRange= ruleEvaluationRange EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4401:2: iv_ruleEvaluationRange= ruleEvaluationRange EOF
             {
              newCompositeNode(grammarAccess.getEvaluationRangeRule()); 
-            pushFollow(FOLLOW_ruleEvaluationRange_in_entryRuleEvaluationRange10904);
+            pushFollow(FOLLOW_ruleEvaluationRange_in_entryRuleEvaluationRange10892);
             iv_ruleEvaluationRange=ruleEvaluationRange();
 
             state._fsp--;
 
              current =iv_ruleEvaluationRange; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEvaluationRange10914); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEvaluationRange10902); 
 
             }
 
@@ -11407,7 +11383,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEvaluationRange"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4416:1: ruleEvaluationRange returns [EObject current=null] : ( (otherlv_0= 'start' otherlv_1= '=' ( (lv_start_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ';' ) (otherlv_4= 'end' otherlv_5= '=' ( (lv_end_6_0= RULE_QUALITATIVEVALUE ) ) otherlv_7= ';' ) (otherlv_8= 'step' otherlv_9= '=' ( (lv_step_10_0= RULE_QUALITATIVEVALUE ) ) otherlv_11= ';' ) ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4408:1: ruleEvaluationRange returns [EObject current=null] : ( (otherlv_0= 'start' otherlv_1= '=' ( (lv_start_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ';' ) (otherlv_4= 'end' otherlv_5= '=' ( (lv_end_6_0= RULE_QUALITATIVEVALUE ) ) otherlv_7= ';' ) (otherlv_8= 'step' otherlv_9= '=' ( (lv_step_10_0= RULE_QUALITATIVEVALUE ) ) otherlv_11= ';' ) ) ;
     public final EObject ruleEvaluationRange() throws RecognitionException {
         EObject current = null;
 
@@ -11427,30 +11403,30 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4419:28: ( ( (otherlv_0= 'start' otherlv_1= '=' ( (lv_start_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ';' ) (otherlv_4= 'end' otherlv_5= '=' ( (lv_end_6_0= RULE_QUALITATIVEVALUE ) ) otherlv_7= ';' ) (otherlv_8= 'step' otherlv_9= '=' ( (lv_step_10_0= RULE_QUALITATIVEVALUE ) ) otherlv_11= ';' ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4420:1: ( (otherlv_0= 'start' otherlv_1= '=' ( (lv_start_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ';' ) (otherlv_4= 'end' otherlv_5= '=' ( (lv_end_6_0= RULE_QUALITATIVEVALUE ) ) otherlv_7= ';' ) (otherlv_8= 'step' otherlv_9= '=' ( (lv_step_10_0= RULE_QUALITATIVEVALUE ) ) otherlv_11= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4411:28: ( ( (otherlv_0= 'start' otherlv_1= '=' ( (lv_start_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ';' ) (otherlv_4= 'end' otherlv_5= '=' ( (lv_end_6_0= RULE_QUALITATIVEVALUE ) ) otherlv_7= ';' ) (otherlv_8= 'step' otherlv_9= '=' ( (lv_step_10_0= RULE_QUALITATIVEVALUE ) ) otherlv_11= ';' ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4412:1: ( (otherlv_0= 'start' otherlv_1= '=' ( (lv_start_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ';' ) (otherlv_4= 'end' otherlv_5= '=' ( (lv_end_6_0= RULE_QUALITATIVEVALUE ) ) otherlv_7= ';' ) (otherlv_8= 'step' otherlv_9= '=' ( (lv_step_10_0= RULE_QUALITATIVEVALUE ) ) otherlv_11= ';' ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4420:1: ( (otherlv_0= 'start' otherlv_1= '=' ( (lv_start_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ';' ) (otherlv_4= 'end' otherlv_5= '=' ( (lv_end_6_0= RULE_QUALITATIVEVALUE ) ) otherlv_7= ';' ) (otherlv_8= 'step' otherlv_9= '=' ( (lv_step_10_0= RULE_QUALITATIVEVALUE ) ) otherlv_11= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4420:2: (otherlv_0= 'start' otherlv_1= '=' ( (lv_start_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ';' ) (otherlv_4= 'end' otherlv_5= '=' ( (lv_end_6_0= RULE_QUALITATIVEVALUE ) ) otherlv_7= ';' ) (otherlv_8= 'step' otherlv_9= '=' ( (lv_step_10_0= RULE_QUALITATIVEVALUE ) ) otherlv_11= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4412:1: ( (otherlv_0= 'start' otherlv_1= '=' ( (lv_start_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ';' ) (otherlv_4= 'end' otherlv_5= '=' ( (lv_end_6_0= RULE_QUALITATIVEVALUE ) ) otherlv_7= ';' ) (otherlv_8= 'step' otherlv_9= '=' ( (lv_step_10_0= RULE_QUALITATIVEVALUE ) ) otherlv_11= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4412:2: (otherlv_0= 'start' otherlv_1= '=' ( (lv_start_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ';' ) (otherlv_4= 'end' otherlv_5= '=' ( (lv_end_6_0= RULE_QUALITATIVEVALUE ) ) otherlv_7= ';' ) (otherlv_8= 'step' otherlv_9= '=' ( (lv_step_10_0= RULE_QUALITATIVEVALUE ) ) otherlv_11= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4420:2: (otherlv_0= 'start' otherlv_1= '=' ( (lv_start_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4420:4: otherlv_0= 'start' otherlv_1= '=' ( (lv_start_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4412:2: (otherlv_0= 'start' otherlv_1= '=' ( (lv_start_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4412:4: otherlv_0= 'start' otherlv_1= '=' ( (lv_start_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleEvaluationRange10952); 
+            otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleEvaluationRange10940); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEvaluationRangeAccess().getStartKeyword_0_0());
                 
-            otherlv_1=(Token)match(input,19,FOLLOW_19_in_ruleEvaluationRange10964); 
+            otherlv_1=(Token)match(input,19,FOLLOW_19_in_ruleEvaluationRange10952); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getEvaluationRangeAccess().getEqualsSignKeyword_0_1());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4428:1: ( (lv_start_2_0= RULE_QUALITATIVEVALUE ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4429:1: (lv_start_2_0= RULE_QUALITATIVEVALUE )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4420:1: ( (lv_start_2_0= RULE_QUALITATIVEVALUE ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4421:1: (lv_start_2_0= RULE_QUALITATIVEVALUE )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4429:1: (lv_start_2_0= RULE_QUALITATIVEVALUE )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4430:3: lv_start_2_0= RULE_QUALITATIVEVALUE
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4421:1: (lv_start_2_0= RULE_QUALITATIVEVALUE )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4422:3: lv_start_2_0= RULE_QUALITATIVEVALUE
             {
-            lv_start_2_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluationRange10981); 
+            lv_start_2_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluationRange10969); 
 
             			newLeafNode(lv_start_2_0, grammarAccess.getEvaluationRangeAccess().getStartQUALITATIVEVALUETerminalRuleCall_0_2_0()); 
             		
@@ -11470,31 +11446,31 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,17,FOLLOW_17_in_ruleEvaluationRange10998); 
+            otherlv_3=(Token)match(input,17,FOLLOW_17_in_ruleEvaluationRange10986); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getEvaluationRangeAccess().getSemicolonKeyword_0_3());
                 
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4450:2: (otherlv_4= 'end' otherlv_5= '=' ( (lv_end_6_0= RULE_QUALITATIVEVALUE ) ) otherlv_7= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4450:4: otherlv_4= 'end' otherlv_5= '=' ( (lv_end_6_0= RULE_QUALITATIVEVALUE ) ) otherlv_7= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4442:2: (otherlv_4= 'end' otherlv_5= '=' ( (lv_end_6_0= RULE_QUALITATIVEVALUE ) ) otherlv_7= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4442:4: otherlv_4= 'end' otherlv_5= '=' ( (lv_end_6_0= RULE_QUALITATIVEVALUE ) ) otherlv_7= ';'
             {
-            otherlv_4=(Token)match(input,41,FOLLOW_41_in_ruleEvaluationRange11012); 
+            otherlv_4=(Token)match(input,41,FOLLOW_41_in_ruleEvaluationRange11000); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getEvaluationRangeAccess().getEndKeyword_1_0());
                 
-            otherlv_5=(Token)match(input,19,FOLLOW_19_in_ruleEvaluationRange11024); 
+            otherlv_5=(Token)match(input,19,FOLLOW_19_in_ruleEvaluationRange11012); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getEvaluationRangeAccess().getEqualsSignKeyword_1_1());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4458:1: ( (lv_end_6_0= RULE_QUALITATIVEVALUE ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4459:1: (lv_end_6_0= RULE_QUALITATIVEVALUE )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4450:1: ( (lv_end_6_0= RULE_QUALITATIVEVALUE ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4451:1: (lv_end_6_0= RULE_QUALITATIVEVALUE )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4459:1: (lv_end_6_0= RULE_QUALITATIVEVALUE )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4460:3: lv_end_6_0= RULE_QUALITATIVEVALUE
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4451:1: (lv_end_6_0= RULE_QUALITATIVEVALUE )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4452:3: lv_end_6_0= RULE_QUALITATIVEVALUE
             {
-            lv_end_6_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluationRange11041); 
+            lv_end_6_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluationRange11029); 
 
             			newLeafNode(lv_end_6_0, grammarAccess.getEvaluationRangeAccess().getEndQUALITATIVEVALUETerminalRuleCall_1_2_0()); 
             		
@@ -11514,31 +11490,31 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,17,FOLLOW_17_in_ruleEvaluationRange11058); 
+            otherlv_7=(Token)match(input,17,FOLLOW_17_in_ruleEvaluationRange11046); 
 
                 	newLeafNode(otherlv_7, grammarAccess.getEvaluationRangeAccess().getSemicolonKeyword_1_3());
                 
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4480:2: (otherlv_8= 'step' otherlv_9= '=' ( (lv_step_10_0= RULE_QUALITATIVEVALUE ) ) otherlv_11= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4480:4: otherlv_8= 'step' otherlv_9= '=' ( (lv_step_10_0= RULE_QUALITATIVEVALUE ) ) otherlv_11= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4472:2: (otherlv_8= 'step' otherlv_9= '=' ( (lv_step_10_0= RULE_QUALITATIVEVALUE ) ) otherlv_11= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4472:4: otherlv_8= 'step' otherlv_9= '=' ( (lv_step_10_0= RULE_QUALITATIVEVALUE ) ) otherlv_11= ';'
             {
-            otherlv_8=(Token)match(input,42,FOLLOW_42_in_ruleEvaluationRange11072); 
+            otherlv_8=(Token)match(input,42,FOLLOW_42_in_ruleEvaluationRange11060); 
 
                 	newLeafNode(otherlv_8, grammarAccess.getEvaluationRangeAccess().getStepKeyword_2_0());
                 
-            otherlv_9=(Token)match(input,19,FOLLOW_19_in_ruleEvaluationRange11084); 
+            otherlv_9=(Token)match(input,19,FOLLOW_19_in_ruleEvaluationRange11072); 
 
                 	newLeafNode(otherlv_9, grammarAccess.getEvaluationRangeAccess().getEqualsSignKeyword_2_1());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4488:1: ( (lv_step_10_0= RULE_QUALITATIVEVALUE ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4489:1: (lv_step_10_0= RULE_QUALITATIVEVALUE )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4480:1: ( (lv_step_10_0= RULE_QUALITATIVEVALUE ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4481:1: (lv_step_10_0= RULE_QUALITATIVEVALUE )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4489:1: (lv_step_10_0= RULE_QUALITATIVEVALUE )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4490:3: lv_step_10_0= RULE_QUALITATIVEVALUE
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4481:1: (lv_step_10_0= RULE_QUALITATIVEVALUE )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4482:3: lv_step_10_0= RULE_QUALITATIVEVALUE
             {
-            lv_step_10_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluationRange11101); 
+            lv_step_10_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluationRange11089); 
 
             			newLeafNode(lv_step_10_0, grammarAccess.getEvaluationRangeAccess().getStepQUALITATIVEVALUETerminalRuleCall_2_2_0()); 
             		
@@ -11558,7 +11534,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_11=(Token)match(input,17,FOLLOW_17_in_ruleEvaluationRange11118); 
+            otherlv_11=(Token)match(input,17,FOLLOW_17_in_ruleEvaluationRange11106); 
 
                 	newLeafNode(otherlv_11, grammarAccess.getEvaluationRangeAccess().getSemicolonKeyword_2_3());
                 
@@ -11586,7 +11562,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleKPIEvalValueSet"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4518:1: entryRuleKPIEvalValueSet returns [EObject current=null] : iv_ruleKPIEvalValueSet= ruleKPIEvalValueSet EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4510:1: entryRuleKPIEvalValueSet returns [EObject current=null] : iv_ruleKPIEvalValueSet= ruleKPIEvalValueSet EOF ;
     public final EObject entryRuleKPIEvalValueSet() throws RecognitionException {
         EObject current = null;
 
@@ -11594,17 +11570,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4519:2: (iv_ruleKPIEvalValueSet= ruleKPIEvalValueSet EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4520:2: iv_ruleKPIEvalValueSet= ruleKPIEvalValueSet EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4511:2: (iv_ruleKPIEvalValueSet= ruleKPIEvalValueSet EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4512:2: iv_ruleKPIEvalValueSet= ruleKPIEvalValueSet EOF
             {
              newCompositeNode(grammarAccess.getKPIEvalValueSetRule()); 
-            pushFollow(FOLLOW_ruleKPIEvalValueSet_in_entryRuleKPIEvalValueSet11155);
+            pushFollow(FOLLOW_ruleKPIEvalValueSet_in_entryRuleKPIEvalValueSet11143);
             iv_ruleKPIEvalValueSet=ruleKPIEvalValueSet();
 
             state._fsp--;
 
              current =iv_ruleKPIEvalValueSet; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleKPIEvalValueSet11165); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleKPIEvalValueSet11153); 
 
             }
 
@@ -11622,7 +11598,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleKPIEvalValueSet"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4527:1: ruleKPIEvalValueSet returns [EObject current=null] : (this_KPIQuantitativeEvalValueSet_0= ruleKPIQuantitativeEvalValueSet | this_KPIQualitativeEvalValueSet_1= ruleKPIQualitativeEvalValueSet ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4519:1: ruleKPIEvalValueSet returns [EObject current=null] : (this_KPIQuantitativeEvalValueSet_0= ruleKPIQuantitativeEvalValueSet | this_KPIQualitativeEvalValueSet_1= ruleKPIQualitativeEvalValueSet ) ;
     public final EObject ruleKPIEvalValueSet() throws RecognitionException {
         EObject current = null;
 
@@ -11634,10 +11610,10 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4530:28: ( (this_KPIQuantitativeEvalValueSet_0= ruleKPIQuantitativeEvalValueSet | this_KPIQualitativeEvalValueSet_1= ruleKPIQualitativeEvalValueSet ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4531:1: (this_KPIQuantitativeEvalValueSet_0= ruleKPIQuantitativeEvalValueSet | this_KPIQualitativeEvalValueSet_1= ruleKPIQualitativeEvalValueSet )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4522:28: ( (this_KPIQuantitativeEvalValueSet_0= ruleKPIQuantitativeEvalValueSet | this_KPIQualitativeEvalValueSet_1= ruleKPIQualitativeEvalValueSet ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4523:1: (this_KPIQuantitativeEvalValueSet_0= ruleKPIQuantitativeEvalValueSet | this_KPIQualitativeEvalValueSet_1= ruleKPIQualitativeEvalValueSet )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4531:1: (this_KPIQuantitativeEvalValueSet_0= ruleKPIQuantitativeEvalValueSet | this_KPIQualitativeEvalValueSet_1= ruleKPIQualitativeEvalValueSet )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4523:1: (this_KPIQuantitativeEvalValueSet_0= ruleKPIQuantitativeEvalValueSet | this_KPIQualitativeEvalValueSet_1= ruleKPIQualitativeEvalValueSet )
             int alt70=2;
             int LA70_0 = input.LA(1);
 
@@ -11655,12 +11631,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
             switch (alt70) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4532:5: this_KPIQuantitativeEvalValueSet_0= ruleKPIQuantitativeEvalValueSet
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4524:5: this_KPIQuantitativeEvalValueSet_0= ruleKPIQuantitativeEvalValueSet
                     {
                      
                             newCompositeNode(grammarAccess.getKPIEvalValueSetAccess().getKPIQuantitativeEvalValueSetParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleKPIQuantitativeEvalValueSet_in_ruleKPIEvalValueSet11212);
+                    pushFollow(FOLLOW_ruleKPIQuantitativeEvalValueSet_in_ruleKPIEvalValueSet11200);
                     this_KPIQuantitativeEvalValueSet_0=ruleKPIQuantitativeEvalValueSet();
 
                     state._fsp--;
@@ -11673,12 +11649,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4542:5: this_KPIQualitativeEvalValueSet_1= ruleKPIQualitativeEvalValueSet
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4534:5: this_KPIQualitativeEvalValueSet_1= ruleKPIQualitativeEvalValueSet
                     {
                      
                             newCompositeNode(grammarAccess.getKPIEvalValueSetAccess().getKPIQualitativeEvalValueSetParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleKPIQualitativeEvalValueSet_in_ruleKPIEvalValueSet11239);
+                    pushFollow(FOLLOW_ruleKPIQualitativeEvalValueSet_in_ruleKPIEvalValueSet11227);
                     this_KPIQualitativeEvalValueSet_1=ruleKPIQualitativeEvalValueSet();
 
                     state._fsp--;
@@ -11711,7 +11687,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleKPIQuantitativeEvalValueSet"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4558:1: entryRuleKPIQuantitativeEvalValueSet returns [EObject current=null] : iv_ruleKPIQuantitativeEvalValueSet= ruleKPIQuantitativeEvalValueSet EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4550:1: entryRuleKPIQuantitativeEvalValueSet returns [EObject current=null] : iv_ruleKPIQuantitativeEvalValueSet= ruleKPIQuantitativeEvalValueSet EOF ;
     public final EObject entryRuleKPIQuantitativeEvalValueSet() throws RecognitionException {
         EObject current = null;
 
@@ -11719,17 +11695,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4559:2: (iv_ruleKPIQuantitativeEvalValueSet= ruleKPIQuantitativeEvalValueSet EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4560:2: iv_ruleKPIQuantitativeEvalValueSet= ruleKPIQuantitativeEvalValueSet EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4551:2: (iv_ruleKPIQuantitativeEvalValueSet= ruleKPIQuantitativeEvalValueSet EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4552:2: iv_ruleKPIQuantitativeEvalValueSet= ruleKPIQuantitativeEvalValueSet EOF
             {
              newCompositeNode(grammarAccess.getKPIQuantitativeEvalValueSetRule()); 
-            pushFollow(FOLLOW_ruleKPIQuantitativeEvalValueSet_in_entryRuleKPIQuantitativeEvalValueSet11274);
+            pushFollow(FOLLOW_ruleKPIQuantitativeEvalValueSet_in_entryRuleKPIQuantitativeEvalValueSet11262);
             iv_ruleKPIQuantitativeEvalValueSet=ruleKPIQuantitativeEvalValueSet();
 
             state._fsp--;
 
              current =iv_ruleKPIQuantitativeEvalValueSet; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleKPIQuantitativeEvalValueSet11284); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleKPIQuantitativeEvalValueSet11272); 
 
             }
 
@@ -11747,7 +11723,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleKPIQuantitativeEvalValueSet"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4567:1: ruleKPIQuantitativeEvalValueSet returns [EObject current=null] : ( ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?) ) ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4559:1: ruleKPIQuantitativeEvalValueSet returns [EObject current=null] : ( ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?) ) ) ;
     public final EObject ruleKPIQuantitativeEvalValueSet() throws RecognitionException {
         EObject current = null;
 
@@ -11775,22 +11751,22 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4570:28: ( ( ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?) ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4571:1: ( ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4562:28: ( ( ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?) ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4563:1: ( ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?) ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4571:1: ( ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4573:1: ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4563:1: ( ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4565:1: ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4573:1: ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4574:2: ( ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?)
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4565:1: ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4566:2: ( ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?)
             {
              
             	  getUnorderedGroupHelper().enter(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup());
             	
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4577:2: ( ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?)
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4578:3: ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4569:2: ( ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?)
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4570:3: ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+ {...}?
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4578:3: ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4570:3: ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+
             int cnt71=0;
             loop71:
             do {
@@ -11798,44 +11774,44 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                 alt71 = dfa71.predict(input);
                 switch (alt71) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4580:4: ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4572:4: ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4580:4: ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4581:5: {...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4572:4: ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4573:5: {...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 0) ) {
             	        throw new FailedPredicateException(input, "ruleKPIQuantitativeEvalValueSet", "getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 0)");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4581:122: ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4582:6: ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4573:122: ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4574:6: ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) )
             	    {
             	     
             	    	 				  getUnorderedGroupHelper().select(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 0);
             	    	 				
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4585:6: ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4585:7: {...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4577:6: ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4577:7: {...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleKPIQuantitativeEvalValueSet", "true");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4585:16: (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4585:18: otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';'
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4577:16: (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4577:18: otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';'
             	    {
-            	    otherlv_1=(Token)match(input,43,FOLLOW_43_in_ruleKPIQuantitativeEvalValueSet11366); 
+            	    otherlv_1=(Token)match(input,43,FOLLOW_43_in_ruleKPIQuantitativeEvalValueSet11354); 
 
             	        	newLeafNode(otherlv_1, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getTargetKeyword_0_0());
             	        
-            	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11378); 
+            	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11366); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getEqualsSignKeyword_0_1());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4593:1: ( (lv_targetValue_3_0= RULE_DOUBLE ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4594:1: (lv_targetValue_3_0= RULE_DOUBLE )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4585:1: ( (lv_targetValue_3_0= RULE_DOUBLE ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4586:1: (lv_targetValue_3_0= RULE_DOUBLE )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4594:1: (lv_targetValue_3_0= RULE_DOUBLE )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4595:3: lv_targetValue_3_0= RULE_DOUBLE
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4586:1: (lv_targetValue_3_0= RULE_DOUBLE )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4587:3: lv_targetValue_3_0= RULE_DOUBLE
             	    {
-            	    lv_targetValue_3_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet11395); 
+            	    lv_targetValue_3_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet11383); 
 
             	    			newLeafNode(lv_targetValue_3_0, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getTargetValueDOUBLETerminalRuleCall_0_2_0()); 
             	    		
@@ -11855,7 +11831,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11412); 
+            	    otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11400); 
 
             	        	newLeafNode(otherlv_4, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getSemicolonKeyword_0_3());
             	        
@@ -11878,44 +11854,44 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4622:4: ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4614:4: ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4622:4: ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4623:5: {...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4614:4: ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4615:5: {...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 1) ) {
             	        throw new FailedPredicateException(input, "ruleKPIQuantitativeEvalValueSet", "getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 1)");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4623:122: ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4624:6: ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4615:122: ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4616:6: ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) )
             	    {
             	     
             	    	 				  getUnorderedGroupHelper().select(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 1);
             	    	 				
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4627:6: ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4627:7: {...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4619:6: ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4619:7: {...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleKPIQuantitativeEvalValueSet", "true");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4627:16: (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4627:18: otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';'
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4619:16: (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4619:18: otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';'
             	    {
-            	    otherlv_5=(Token)match(input,44,FOLLOW_44_in_ruleKPIQuantitativeEvalValueSet11480); 
+            	    otherlv_5=(Token)match(input,44,FOLLOW_44_in_ruleKPIQuantitativeEvalValueSet11468); 
 
             	        	newLeafNode(otherlv_5, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getThresholdKeyword_1_0());
             	        
-            	    otherlv_6=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11492); 
+            	    otherlv_6=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11480); 
 
             	        	newLeafNode(otherlv_6, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getEqualsSignKeyword_1_1());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4635:1: ( (lv_thresholdValue_7_0= RULE_DOUBLE ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4636:1: (lv_thresholdValue_7_0= RULE_DOUBLE )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4627:1: ( (lv_thresholdValue_7_0= RULE_DOUBLE ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4628:1: (lv_thresholdValue_7_0= RULE_DOUBLE )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4636:1: (lv_thresholdValue_7_0= RULE_DOUBLE )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4637:3: lv_thresholdValue_7_0= RULE_DOUBLE
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4628:1: (lv_thresholdValue_7_0= RULE_DOUBLE )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4629:3: lv_thresholdValue_7_0= RULE_DOUBLE
             	    {
-            	    lv_thresholdValue_7_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet11509); 
+            	    lv_thresholdValue_7_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet11497); 
 
             	    			newLeafNode(lv_thresholdValue_7_0, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getThresholdValueDOUBLETerminalRuleCall_1_2_0()); 
             	    		
@@ -11935,7 +11911,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_8=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11526); 
+            	    otherlv_8=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11514); 
 
             	        	newLeafNode(otherlv_8, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getSemicolonKeyword_1_3());
             	        
@@ -11958,44 +11934,44 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4664:4: ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4656:4: ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4664:4: ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4665:5: {...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4656:4: ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4657:5: {...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 2) ) {
             	        throw new FailedPredicateException(input, "ruleKPIQuantitativeEvalValueSet", "getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 2)");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4665:122: ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4666:6: ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4657:122: ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4658:6: ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) )
             	    {
             	     
             	    	 				  getUnorderedGroupHelper().select(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 2);
             	    	 				
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4669:6: ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4669:7: {...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4661:6: ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4661:7: {...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleKPIQuantitativeEvalValueSet", "true");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4669:16: (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4669:18: otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';'
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4661:16: (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4661:18: otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';'
             	    {
-            	    otherlv_9=(Token)match(input,45,FOLLOW_45_in_ruleKPIQuantitativeEvalValueSet11594); 
+            	    otherlv_9=(Token)match(input,45,FOLLOW_45_in_ruleKPIQuantitativeEvalValueSet11582); 
 
             	        	newLeafNode(otherlv_9, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getWorstKeyword_2_0());
             	        
-            	    otherlv_10=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11606); 
+            	    otherlv_10=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11594); 
 
             	        	newLeafNode(otherlv_10, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getEqualsSignKeyword_2_1());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4677:1: ( (lv_worstValue_11_0= RULE_DOUBLE ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4678:1: (lv_worstValue_11_0= RULE_DOUBLE )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4669:1: ( (lv_worstValue_11_0= RULE_DOUBLE ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4670:1: (lv_worstValue_11_0= RULE_DOUBLE )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4678:1: (lv_worstValue_11_0= RULE_DOUBLE )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4679:3: lv_worstValue_11_0= RULE_DOUBLE
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4670:1: (lv_worstValue_11_0= RULE_DOUBLE )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4671:3: lv_worstValue_11_0= RULE_DOUBLE
             	    {
-            	    lv_worstValue_11_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet11623); 
+            	    lv_worstValue_11_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet11611); 
 
             	    			newLeafNode(lv_worstValue_11_0, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getWorstValueDOUBLETerminalRuleCall_2_2_0()); 
             	    		
@@ -12015,7 +11991,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_12=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11640); 
+            	    otherlv_12=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11628); 
 
             	        	newLeafNode(otherlv_12, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getSemicolonKeyword_2_3());
             	        
@@ -12038,44 +12014,44 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 4 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4706:4: ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4698:4: ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4706:4: ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4707:5: {...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4698:4: ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4699:5: {...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 3) ) {
             	        throw new FailedPredicateException(input, "ruleKPIQuantitativeEvalValueSet", "getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 3)");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4707:122: ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4708:6: ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4699:122: ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4700:6: ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) )
             	    {
             	     
             	    	 				  getUnorderedGroupHelper().select(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 3);
             	    	 				
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4711:6: ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4711:7: {...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4703:6: ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4703:7: {...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleKPIQuantitativeEvalValueSet", "true");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4711:16: (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4711:18: otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';'
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4703:16: (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4703:18: otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';'
             	    {
-            	    otherlv_13=(Token)match(input,46,FOLLOW_46_in_ruleKPIQuantitativeEvalValueSet11708); 
+            	    otherlv_13=(Token)match(input,46,FOLLOW_46_in_ruleKPIQuantitativeEvalValueSet11696); 
 
             	        	newLeafNode(otherlv_13, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getEvalKeyword_3_0());
             	        
-            	    otherlv_14=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11720); 
+            	    otherlv_14=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11708); 
 
             	        	newLeafNode(otherlv_14, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getEqualsSignKeyword_3_1());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4719:1: ( (lv_evaluationValue_15_0= RULE_DOUBLE ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4720:1: (lv_evaluationValue_15_0= RULE_DOUBLE )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4711:1: ( (lv_evaluationValue_15_0= RULE_DOUBLE ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4712:1: (lv_evaluationValue_15_0= RULE_DOUBLE )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4720:1: (lv_evaluationValue_15_0= RULE_DOUBLE )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4721:3: lv_evaluationValue_15_0= RULE_DOUBLE
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4712:1: (lv_evaluationValue_15_0= RULE_DOUBLE )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4713:3: lv_evaluationValue_15_0= RULE_DOUBLE
             	    {
-            	    lv_evaluationValue_15_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet11737); 
+            	    lv_evaluationValue_15_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet11725); 
 
             	    			newLeafNode(lv_evaluationValue_15_0, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getEvaluationValueDOUBLETerminalRuleCall_3_2_0()); 
             	    		
@@ -12095,7 +12071,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_16=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11754); 
+            	    otherlv_16=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11742); 
 
             	        	newLeafNode(otherlv_16, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getSemicolonKeyword_3_3());
             	        
@@ -12118,44 +12094,44 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 5 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4748:4: ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4740:4: ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4748:4: ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4749:5: {...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4740:4: ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4741:5: {...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 4) ) {
             	        throw new FailedPredicateException(input, "ruleKPIQuantitativeEvalValueSet", "getUnorderedGroupHelper().canSelect(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 4)");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4749:122: ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4750:6: ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4741:122: ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4742:6: ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) )
             	    {
             	     
             	    	 				  getUnorderedGroupHelper().select(grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnorderedGroup(), 4);
             	    	 				
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4753:6: ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4753:7: {...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4745:6: ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4745:7: {...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleKPIQuantitativeEvalValueSet", "true");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4753:16: (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4753:18: otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';'
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4745:16: (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4745:18: otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';'
             	    {
-            	    otherlv_17=(Token)match(input,47,FOLLOW_47_in_ruleKPIQuantitativeEvalValueSet11822); 
+            	    otherlv_17=(Token)match(input,47,FOLLOW_47_in_ruleKPIQuantitativeEvalValueSet11810); 
 
             	        	newLeafNode(otherlv_17, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnitKeyword_4_0());
             	        
-            	    otherlv_18=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11834); 
+            	    otherlv_18=(Token)match(input,19,FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11822); 
 
             	        	newLeafNode(otherlv_18, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getEqualsSignKeyword_4_1());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4761:1: ( (lv_unit_19_0= RULE_STRING ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4762:1: (lv_unit_19_0= RULE_STRING )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4753:1: ( (lv_unit_19_0= RULE_STRING ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4754:1: (lv_unit_19_0= RULE_STRING )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4762:1: (lv_unit_19_0= RULE_STRING )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4763:3: lv_unit_19_0= RULE_STRING
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4754:1: (lv_unit_19_0= RULE_STRING )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4755:3: lv_unit_19_0= RULE_STRING
             	    {
-            	    lv_unit_19_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleKPIQuantitativeEvalValueSet11851); 
+            	    lv_unit_19_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleKPIQuantitativeEvalValueSet11839); 
 
             	    			newLeafNode(lv_unit_19_0, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getUnitSTRINGTerminalRuleCall_4_2_0()); 
             	    		
@@ -12175,7 +12151,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_20=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11868); 
+            	    otherlv_20=(Token)match(input,17,FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11856); 
 
             	        	newLeafNode(otherlv_20, grammarAccess.getKPIQuantitativeEvalValueSetAccess().getSemicolonKeyword_4_3());
             	        
@@ -12240,7 +12216,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleKPIQualitativeEvalValueSet"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4806:1: entryRuleKPIQualitativeEvalValueSet returns [EObject current=null] : iv_ruleKPIQualitativeEvalValueSet= ruleKPIQualitativeEvalValueSet EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4798:1: entryRuleKPIQualitativeEvalValueSet returns [EObject current=null] : iv_ruleKPIQualitativeEvalValueSet= ruleKPIQualitativeEvalValueSet EOF ;
     public final EObject entryRuleKPIQualitativeEvalValueSet() throws RecognitionException {
         EObject current = null;
 
@@ -12248,17 +12224,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4807:2: (iv_ruleKPIQualitativeEvalValueSet= ruleKPIQualitativeEvalValueSet EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4808:2: iv_ruleKPIQualitativeEvalValueSet= ruleKPIQualitativeEvalValueSet EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4799:2: (iv_ruleKPIQualitativeEvalValueSet= ruleKPIQualitativeEvalValueSet EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4800:2: iv_ruleKPIQualitativeEvalValueSet= ruleKPIQualitativeEvalValueSet EOF
             {
              newCompositeNode(grammarAccess.getKPIQualitativeEvalValueSetRule()); 
-            pushFollow(FOLLOW_ruleKPIQualitativeEvalValueSet_in_entryRuleKPIQualitativeEvalValueSet11950);
+            pushFollow(FOLLOW_ruleKPIQualitativeEvalValueSet_in_entryRuleKPIQualitativeEvalValueSet11938);
             iv_ruleKPIQualitativeEvalValueSet=ruleKPIQualitativeEvalValueSet();
 
             state._fsp--;
 
              current =iv_ruleKPIQualitativeEvalValueSet; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleKPIQualitativeEvalValueSet11960); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleKPIQualitativeEvalValueSet11948); 
 
             }
 
@@ -12276,7 +12252,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleKPIQualitativeEvalValueSet"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4815:1: ruleKPIQualitativeEvalValueSet returns [EObject current=null] : (otherlv_0= 'qualeval' otherlv_1= '=' ( ( ruleQualifiedName ) ) otherlv_3= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4807:1: ruleKPIQualitativeEvalValueSet returns [EObject current=null] : (otherlv_0= 'qualeval' otherlv_1= '=' ( ( ruleQualifiedName ) ) otherlv_3= ';' ) ;
     public final EObject ruleKPIQualitativeEvalValueSet() throws RecognitionException {
         EObject current = null;
 
@@ -12287,25 +12263,25 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4818:28: ( (otherlv_0= 'qualeval' otherlv_1= '=' ( ( ruleQualifiedName ) ) otherlv_3= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4819:1: (otherlv_0= 'qualeval' otherlv_1= '=' ( ( ruleQualifiedName ) ) otherlv_3= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4810:28: ( (otherlv_0= 'qualeval' otherlv_1= '=' ( ( ruleQualifiedName ) ) otherlv_3= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4811:1: (otherlv_0= 'qualeval' otherlv_1= '=' ( ( ruleQualifiedName ) ) otherlv_3= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4819:1: (otherlv_0= 'qualeval' otherlv_1= '=' ( ( ruleQualifiedName ) ) otherlv_3= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4819:3: otherlv_0= 'qualeval' otherlv_1= '=' ( ( ruleQualifiedName ) ) otherlv_3= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4811:1: (otherlv_0= 'qualeval' otherlv_1= '=' ( ( ruleQualifiedName ) ) otherlv_3= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4811:3: otherlv_0= 'qualeval' otherlv_1= '=' ( ( ruleQualifiedName ) ) otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,48,FOLLOW_48_in_ruleKPIQualitativeEvalValueSet11997); 
+            otherlv_0=(Token)match(input,48,FOLLOW_48_in_ruleKPIQualitativeEvalValueSet11985); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getKPIQualitativeEvalValueSetAccess().getQualevalKeyword_0());
                 
-            otherlv_1=(Token)match(input,19,FOLLOW_19_in_ruleKPIQualitativeEvalValueSet12009); 
+            otherlv_1=(Token)match(input,19,FOLLOW_19_in_ruleKPIQualitativeEvalValueSet11997); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getKPIQualitativeEvalValueSetAccess().getEqualsSignKeyword_1());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4827:1: ( ( ruleQualifiedName ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4828:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4819:1: ( ( ruleQualifiedName ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4820:1: ( ruleQualifiedName )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4828:1: ( ruleQualifiedName )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4829:3: ruleQualifiedName
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4820:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4821:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -12315,7 +12291,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getKPIQualitativeEvalValueSetAccess().getQualitativeEvaluationValueMappingCrossReference_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleKPIQualitativeEvalValueSet12032);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleKPIQualitativeEvalValueSet12020);
             ruleQualifiedName();
 
             state._fsp--;
@@ -12329,7 +12305,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,17,FOLLOW_17_in_ruleKPIQualitativeEvalValueSet12044); 
+            otherlv_3=(Token)match(input,17,FOLLOW_17_in_ruleKPIQualitativeEvalValueSet12032); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getKPIQualitativeEvalValueSetAccess().getSemicolonKeyword_3());
                 
@@ -12354,7 +12330,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualitativeMapping"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4854:1: entryRuleQualitativeMapping returns [EObject current=null] : iv_ruleQualitativeMapping= ruleQualitativeMapping EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4846:1: entryRuleQualitativeMapping returns [EObject current=null] : iv_ruleQualitativeMapping= ruleQualitativeMapping EOF ;
     public final EObject entryRuleQualitativeMapping() throws RecognitionException {
         EObject current = null;
 
@@ -12362,17 +12338,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4855:2: (iv_ruleQualitativeMapping= ruleQualitativeMapping EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4856:2: iv_ruleQualitativeMapping= ruleQualitativeMapping EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4847:2: (iv_ruleQualitativeMapping= ruleQualitativeMapping EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4848:2: iv_ruleQualitativeMapping= ruleQualitativeMapping EOF
             {
              newCompositeNode(grammarAccess.getQualitativeMappingRule()); 
-            pushFollow(FOLLOW_ruleQualitativeMapping_in_entryRuleQualitativeMapping12080);
+            pushFollow(FOLLOW_ruleQualitativeMapping_in_entryRuleQualitativeMapping12068);
             iv_ruleQualitativeMapping=ruleQualitativeMapping();
 
             state._fsp--;
 
              current =iv_ruleQualitativeMapping; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQualitativeMapping12090); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQualitativeMapping12078); 
 
             }
 
@@ -12390,7 +12366,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualitativeMapping"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4863:1: ruleQualitativeMapping returns [EObject current=null] : (otherlv_0= 'qualitativeMapping' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) ) ) otherlv_6= '}' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4855:1: ruleQualitativeMapping returns [EObject current=null] : (otherlv_0= 'qualitativeMapping' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) ) ) otherlv_6= '}' ) ;
     public final EObject ruleQualitativeMapping() throws RecognitionException {
         EObject current = null;
 
@@ -12406,23 +12382,23 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4866:28: ( (otherlv_0= 'qualitativeMapping' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) ) ) otherlv_6= '}' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4867:1: (otherlv_0= 'qualitativeMapping' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) ) ) otherlv_6= '}' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4858:28: ( (otherlv_0= 'qualitativeMapping' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) ) ) otherlv_6= '}' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4859:1: (otherlv_0= 'qualitativeMapping' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) ) ) otherlv_6= '}' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4867:1: (otherlv_0= 'qualitativeMapping' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) ) ) otherlv_6= '}' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4867:3: otherlv_0= 'qualitativeMapping' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) ) ) otherlv_6= '}'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4859:1: (otherlv_0= 'qualitativeMapping' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) ) ) otherlv_6= '}' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4859:3: otherlv_0= 'qualitativeMapping' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) ) ) otherlv_6= '}'
             {
-            otherlv_0=(Token)match(input,49,FOLLOW_49_in_ruleQualitativeMapping12127); 
+            otherlv_0=(Token)match(input,49,FOLLOW_49_in_ruleQualitativeMapping12115); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getQualitativeMappingAccess().getQualitativeMappingKeyword_0());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4871:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4872:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4863:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4864:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4872:1: (lv_name_1_0= RULE_ID )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4873:3: lv_name_1_0= RULE_ID
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4864:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4865:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualitativeMapping12144); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualitativeMapping12132); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getQualitativeMappingAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -12442,23 +12418,23 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleQualitativeMapping12161); 
+            otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleQualitativeMapping12149); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getQualitativeMappingAccess().getLeftCurlyBracketKeyword_2());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4893:1: ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4895:1: ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4885:1: ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4887:1: ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4895:1: ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4896:2: ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4887:1: ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4888:2: ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* )
             {
              
             	  getUnorderedGroupHelper().enter(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3());
             	
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4899:2: ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4900:3: ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4891:2: ( ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )* )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4892:3: ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )*
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4900:3: ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4892:3: ( ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) ) )*
             loop74:
             do {
                 int alt74=3;
@@ -12474,21 +12450,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                 switch (alt74) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4902:4: ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4894:4: ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4902:4: ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4903:5: {...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4894:4: ({...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4895:5: {...}? => ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 0) ) {
             	        throw new FailedPredicateException(input, "ruleQualitativeMapping", "getUnorderedGroupHelper().canSelect(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 0)");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4903:115: ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4904:6: ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4895:115: ( ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+ )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4896:6: ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+
             	    {
             	     
             	    	 				  getUnorderedGroupHelper().select(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 0);
             	    	 				
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4907:6: ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4899:6: ({...}? => ( (lv_metaData_4_0= ruleMetadata ) ) )+
             	    int cnt72=0;
             	    loop72:
             	    do {
@@ -12508,21 +12484,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	        switch (alt72) {
             	    	case 1 :
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4907:7: {...}? => ( (lv_metaData_4_0= ruleMetadata ) )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4899:7: {...}? => ( (lv_metaData_4_0= ruleMetadata ) )
             	    	    {
             	    	    if ( !((true)) ) {
             	    	        throw new FailedPredicateException(input, "ruleQualitativeMapping", "true");
             	    	    }
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4907:16: ( (lv_metaData_4_0= ruleMetadata ) )
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4908:1: (lv_metaData_4_0= ruleMetadata )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4899:16: ( (lv_metaData_4_0= ruleMetadata ) )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4900:1: (lv_metaData_4_0= ruleMetadata )
             	    	    {
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4908:1: (lv_metaData_4_0= ruleMetadata )
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4909:3: lv_metaData_4_0= ruleMetadata
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4900:1: (lv_metaData_4_0= ruleMetadata )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4901:3: lv_metaData_4_0= ruleMetadata
             	    	    {
             	    	     
             	    	    	        newCompositeNode(grammarAccess.getQualitativeMappingAccess().getMetaDataMetadataParserRuleCall_3_0_0()); 
             	    	    	    
-            	    	    pushFollow(FOLLOW_ruleMetadata_in_ruleQualitativeMapping12227);
+            	    	    pushFollow(FOLLOW_ruleMetadata_in_ruleQualitativeMapping12215);
             	    	    lv_metaData_4_0=ruleMetadata();
 
             	    	    state._fsp--;
@@ -12570,21 +12546,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4932:4: ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4924:4: ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4932:4: ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4933:5: {...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4924:4: ({...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4925:5: {...}? => ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 1) ) {
             	        throw new FailedPredicateException(input, "ruleQualitativeMapping", "getUnorderedGroupHelper().canSelect(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 1)");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4933:115: ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4934:6: ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4925:115: ( ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+ )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4926:6: ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+
             	    {
             	     
             	    	 				  getUnorderedGroupHelper().select(grammarAccess.getQualitativeMappingAccess().getUnorderedGroup_3(), 1);
             	    	 				
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4937:6: ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4929:6: ({...}? => ( (lv_mappings_5_0= ruleMapping ) ) )+
             	    int cnt73=0;
             	    loop73:
             	    do {
@@ -12604,21 +12580,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	        switch (alt73) {
             	    	case 1 :
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4937:7: {...}? => ( (lv_mappings_5_0= ruleMapping ) )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4929:7: {...}? => ( (lv_mappings_5_0= ruleMapping ) )
             	    	    {
             	    	    if ( !((true)) ) {
             	    	        throw new FailedPredicateException(input, "ruleQualitativeMapping", "true");
             	    	    }
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4937:16: ( (lv_mappings_5_0= ruleMapping ) )
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4938:1: (lv_mappings_5_0= ruleMapping )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4929:16: ( (lv_mappings_5_0= ruleMapping ) )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4930:1: (lv_mappings_5_0= ruleMapping )
             	    	    {
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4938:1: (lv_mappings_5_0= ruleMapping )
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4939:3: lv_mappings_5_0= ruleMapping
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4930:1: (lv_mappings_5_0= ruleMapping )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4931:3: lv_mappings_5_0= ruleMapping
             	    	    {
             	    	     
             	    	    	        newCompositeNode(grammarAccess.getQualitativeMappingAccess().getMappingsMappingParserRuleCall_3_1_0()); 
             	    	    	    
-            	    	    pushFollow(FOLLOW_ruleMapping_in_ruleQualitativeMapping12303);
+            	    	    pushFollow(FOLLOW_ruleMapping_in_ruleQualitativeMapping12291);
             	    	    lv_mappings_5_0=ruleMapping();
 
             	    	    state._fsp--;
@@ -12683,7 +12659,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,15,FOLLOW_15_in_ruleQualitativeMapping12356); 
+            otherlv_6=(Token)match(input,15,FOLLOW_15_in_ruleQualitativeMapping12344); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getQualitativeMappingAccess().getRightCurlyBracketKeyword_4());
                 
@@ -12708,7 +12684,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMapping"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4981:1: entryRuleMapping returns [EObject current=null] : iv_ruleMapping= ruleMapping EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4973:1: entryRuleMapping returns [EObject current=null] : iv_ruleMapping= ruleMapping EOF ;
     public final EObject entryRuleMapping() throws RecognitionException {
         EObject current = null;
 
@@ -12716,17 +12692,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4982:2: (iv_ruleMapping= ruleMapping EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4983:2: iv_ruleMapping= ruleMapping EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4974:2: (iv_ruleMapping= ruleMapping EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4975:2: iv_ruleMapping= ruleMapping EOF
             {
              newCompositeNode(grammarAccess.getMappingRule()); 
-            pushFollow(FOLLOW_ruleMapping_in_entryRuleMapping12392);
+            pushFollow(FOLLOW_ruleMapping_in_entryRuleMapping12380);
             iv_ruleMapping=ruleMapping();
 
             state._fsp--;
 
              current =iv_ruleMapping; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMapping12402); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMapping12390); 
 
             }
 
@@ -12744,7 +12720,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMapping"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4990:1: ruleMapping returns [EObject current=null] : ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )? otherlv_7= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4982:1: ruleMapping returns [EObject current=null] : ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )? otherlv_7= ';' ) ;
     public final EObject ruleMapping() throws RecognitionException {
         EObject current = null;
 
@@ -12762,19 +12738,19 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4993:28: ( ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )? otherlv_7= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4994:1: ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )? otherlv_7= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4985:28: ( ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )? otherlv_7= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4986:1: ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )? otherlv_7= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4994:1: ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )? otherlv_7= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4994:2: ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )? otherlv_7= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4986:1: ( ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )? otherlv_7= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4986:2: ( (lv_name_0_0= RULE_STRING ) ) otherlv_1= ',' ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) ) otherlv_3= ',' ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) ) (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )? otherlv_7= ';'
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4994:2: ( (lv_name_0_0= RULE_STRING ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4995:1: (lv_name_0_0= RULE_STRING )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4986:2: ( (lv_name_0_0= RULE_STRING ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4987:1: (lv_name_0_0= RULE_STRING )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4995:1: (lv_name_0_0= RULE_STRING )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4996:3: lv_name_0_0= RULE_STRING
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4987:1: (lv_name_0_0= RULE_STRING )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:4988:3: lv_name_0_0= RULE_STRING
             {
-            lv_name_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMapping12444); 
+            lv_name_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMapping12432); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getMappingAccess().getNameSTRINGTerminalRuleCall_0_0()); 
             		
@@ -12794,17 +12770,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleMapping12461); 
+            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleMapping12449); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getMappingAccess().getCommaKeyword_1());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5016:1: ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5017:1: (lv_evaluation_2_0= RULE_QUALITATIVEVALUE )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5008:1: ( (lv_evaluation_2_0= RULE_QUALITATIVEVALUE ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5009:1: (lv_evaluation_2_0= RULE_QUALITATIVEVALUE )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5017:1: (lv_evaluation_2_0= RULE_QUALITATIVEVALUE )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5018:3: lv_evaluation_2_0= RULE_QUALITATIVEVALUE
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5009:1: (lv_evaluation_2_0= RULE_QUALITATIVEVALUE )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5010:3: lv_evaluation_2_0= RULE_QUALITATIVEVALUE
             {
-            lv_evaluation_2_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleMapping12478); 
+            lv_evaluation_2_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleMapping12466); 
 
             			newLeafNode(lv_evaluation_2_0, grammarAccess.getMappingAccess().getEvaluationQUALITATIVEVALUETerminalRuleCall_2_0()); 
             		
@@ -12824,20 +12800,20 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,30,FOLLOW_30_in_ruleMapping12495); 
+            otherlv_3=(Token)match(input,30,FOLLOW_30_in_ruleMapping12483); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getMappingAccess().getCommaKeyword_3());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5038:1: ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5039:1: (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5030:1: ( (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5031:1: (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5039:1: (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5040:3: lv_qualitativeEvaluation_4_0= ruleQualitativeLabel
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5031:1: (lv_qualitativeEvaluation_4_0= ruleQualitativeLabel )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5032:3: lv_qualitativeEvaluation_4_0= ruleQualitativeLabel
             {
              
             	        newCompositeNode(grammarAccess.getMappingAccess().getQualitativeEvaluationQualitativeLabelEnumRuleCall_4_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualitativeLabel_in_ruleMapping12516);
+            pushFollow(FOLLOW_ruleQualitativeLabel_in_ruleMapping12504);
             lv_qualitativeEvaluation_4_0=ruleQualitativeLabel();
 
             state._fsp--;
@@ -12859,7 +12835,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5056:2: (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )?
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5048:2: (otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) ) )?
             int alt75=2;
             int LA75_0 = input.LA(1);
 
@@ -12868,22 +12844,22 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
             switch (alt75) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5056:4: otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5048:4: otherlv_5= ',' ( (lv_exceeds_6_0= ruleBoolean ) )
                     {
-                    otherlv_5=(Token)match(input,30,FOLLOW_30_in_ruleMapping12529); 
+                    otherlv_5=(Token)match(input,30,FOLLOW_30_in_ruleMapping12517); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getMappingAccess().getCommaKeyword_5_0());
                         
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5060:1: ( (lv_exceeds_6_0= ruleBoolean ) )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5061:1: (lv_exceeds_6_0= ruleBoolean )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5052:1: ( (lv_exceeds_6_0= ruleBoolean ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5053:1: (lv_exceeds_6_0= ruleBoolean )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5061:1: (lv_exceeds_6_0= ruleBoolean )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5062:3: lv_exceeds_6_0= ruleBoolean
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5053:1: (lv_exceeds_6_0= ruleBoolean )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5054:3: lv_exceeds_6_0= ruleBoolean
                     {
                      
                     	        newCompositeNode(grammarAccess.getMappingAccess().getExceedsBooleanEnumRuleCall_5_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleBoolean_in_ruleMapping12550);
+                    pushFollow(FOLLOW_ruleBoolean_in_ruleMapping12538);
                     lv_exceeds_6_0=ruleBoolean();
 
                     state._fsp--;
@@ -12911,7 +12887,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,17,FOLLOW_17_in_ruleMapping12564); 
+            otherlv_7=(Token)match(input,17,FOLLOW_17_in_ruleMapping12552); 
 
                 	newLeafNode(otherlv_7, grammarAccess.getMappingAccess().getSemicolonKeyword_6());
                 
@@ -12936,7 +12912,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContributionGroup"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5090:1: entryRuleContributionGroup returns [EObject current=null] : iv_ruleContributionGroup= ruleContributionGroup EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5082:1: entryRuleContributionGroup returns [EObject current=null] : iv_ruleContributionGroup= ruleContributionGroup EOF ;
     public final EObject entryRuleContributionGroup() throws RecognitionException {
         EObject current = null;
 
@@ -12944,17 +12920,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5091:2: (iv_ruleContributionGroup= ruleContributionGroup EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5092:2: iv_ruleContributionGroup= ruleContributionGroup EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5083:2: (iv_ruleContributionGroup= ruleContributionGroup EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5084:2: iv_ruleContributionGroup= ruleContributionGroup EOF
             {
              newCompositeNode(grammarAccess.getContributionGroupRule()); 
-            pushFollow(FOLLOW_ruleContributionGroup_in_entryRuleContributionGroup12600);
+            pushFollow(FOLLOW_ruleContributionGroup_in_entryRuleContributionGroup12588);
             iv_ruleContributionGroup=ruleContributionGroup();
 
             state._fsp--;
 
              current =iv_ruleContributionGroup; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionGroup12610); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionGroup12598); 
 
             }
 
@@ -12972,7 +12948,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContributionGroup"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5099:1: ruleContributionGroup returns [EObject current=null] : (otherlv_0= 'contributionGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5091:1: ruleContributionGroup returns [EObject current=null] : (otherlv_0= 'contributionGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ';' ) ;
     public final EObject ruleContributionGroup() throws RecognitionException {
         EObject current = null;
 
@@ -12987,23 +12963,23 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5102:28: ( (otherlv_0= 'contributionGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5103:1: (otherlv_0= 'contributionGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5094:28: ( (otherlv_0= 'contributionGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5095:1: (otherlv_0= 'contributionGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5103:1: (otherlv_0= 'contributionGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5103:3: otherlv_0= 'contributionGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5095:1: (otherlv_0= 'contributionGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5095:3: otherlv_0= 'contributionGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ';'
             {
-            otherlv_0=(Token)match(input,50,FOLLOW_50_in_ruleContributionGroup12647); 
+            otherlv_0=(Token)match(input,50,FOLLOW_50_in_ruleContributionGroup12635); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getContributionGroupAccess().getContributionGroupKeyword_0());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5107:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5108:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5099:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5100:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5108:1: (lv_name_1_0= RULE_ID )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5109:3: lv_name_1_0= RULE_ID
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5100:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5101:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionGroup12664); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionGroup12652); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getContributionGroupAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -13023,22 +12999,22 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,36,FOLLOW_36_in_ruleContributionGroup12681); 
+            otherlv_2=(Token)match(input,36,FOLLOW_36_in_ruleContributionGroup12669); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getContributionGroupAccess().getIncludesKeyword_2());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5129:1: ( (otherlv_3= RULE_ID ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5130:1: (otherlv_3= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5121:1: ( (otherlv_3= RULE_ID ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5122:1: (otherlv_3= RULE_ID )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5130:1: (otherlv_3= RULE_ID )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5131:3: otherlv_3= RULE_ID
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5122:1: (otherlv_3= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5123:3: otherlv_3= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getContributionGroupRule());
             	        }
                     
-            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionGroup12701); 
+            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionGroup12689); 
 
             		newLeafNode(otherlv_3, grammarAccess.getContributionGroupAccess().getContribsContributionContextCrossReference_3_0()); 
             	
@@ -13048,7 +13024,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5142:2: (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5134:2: (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )*
             loop76:
             do {
                 int alt76=2;
@@ -13061,24 +13037,24 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                 switch (alt76) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5142:4: otherlv_4= ',' ( (otherlv_5= RULE_ID ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5134:4: otherlv_4= ',' ( (otherlv_5= RULE_ID ) )
             	    {
-            	    otherlv_4=(Token)match(input,30,FOLLOW_30_in_ruleContributionGroup12714); 
+            	    otherlv_4=(Token)match(input,30,FOLLOW_30_in_ruleContributionGroup12702); 
 
             	        	newLeafNode(otherlv_4, grammarAccess.getContributionGroupAccess().getCommaKeyword_4_0());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5146:1: ( (otherlv_5= RULE_ID ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5147:1: (otherlv_5= RULE_ID )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5138:1: ( (otherlv_5= RULE_ID ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5139:1: (otherlv_5= RULE_ID )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5147:1: (otherlv_5= RULE_ID )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5148:3: otherlv_5= RULE_ID
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5139:1: (otherlv_5= RULE_ID )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5140:3: otherlv_5= RULE_ID
             	    {
 
             	    			if (current==null) {
             	    	            current = createModelElement(grammarAccess.getContributionGroupRule());
             	    	        }
             	            
-            	    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionGroup12734); 
+            	    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionGroup12722); 
 
             	    		newLeafNode(otherlv_5, grammarAccess.getContributionGroupAccess().getContribsContributionContextCrossReference_4_1_0()); 
             	    	
@@ -13097,7 +13073,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_6=(Token)match(input,17,FOLLOW_17_in_ruleContributionGroup12748); 
+            otherlv_6=(Token)match(input,17,FOLLOW_17_in_ruleContributionGroup12736); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getContributionGroupAccess().getSemicolonKeyword_5());
                 
@@ -13122,7 +13098,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContributionContext"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5171:1: entryRuleContributionContext returns [EObject current=null] : iv_ruleContributionContext= ruleContributionContext EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5163:1: entryRuleContributionContext returns [EObject current=null] : iv_ruleContributionContext= ruleContributionContext EOF ;
     public final EObject entryRuleContributionContext() throws RecognitionException {
         EObject current = null;
 
@@ -13130,17 +13106,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5172:2: (iv_ruleContributionContext= ruleContributionContext EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5173:2: iv_ruleContributionContext= ruleContributionContext EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5164:2: (iv_ruleContributionContext= ruleContributionContext EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5165:2: iv_ruleContributionContext= ruleContributionContext EOF
             {
              newCompositeNode(grammarAccess.getContributionContextRule()); 
-            pushFollow(FOLLOW_ruleContributionContext_in_entryRuleContributionContext12784);
+            pushFollow(FOLLOW_ruleContributionContext_in_entryRuleContributionContext12772);
             iv_ruleContributionContext=ruleContributionContext();
 
             state._fsp--;
 
              current =iv_ruleContributionContext; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionContext12794); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionContext12782); 
 
             }
 
@@ -13158,7 +13134,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContributionContext"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5180:1: ruleContributionContext returns [EObject current=null] : (otherlv_0= 'contribution' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) ) ) otherlv_10= '}' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5172:1: ruleContributionContext returns [EObject current=null] : (otherlv_0= 'contribution' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) ) ) otherlv_10= '}' ) ;
     public final EObject ruleContributionContext() throws RecognitionException {
         EObject current = null;
 
@@ -13176,23 +13152,23 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5183:28: ( (otherlv_0= 'contribution' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) ) ) otherlv_10= '}' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5184:1: (otherlv_0= 'contribution' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) ) ) otherlv_10= '}' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5175:28: ( (otherlv_0= 'contribution' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) ) ) otherlv_10= '}' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5176:1: (otherlv_0= 'contribution' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) ) ) otherlv_10= '}' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5184:1: (otherlv_0= 'contribution' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) ) ) otherlv_10= '}' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5184:3: otherlv_0= 'contribution' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) ) ) otherlv_10= '}'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5176:1: (otherlv_0= 'contribution' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) ) ) otherlv_10= '}' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5176:3: otherlv_0= 'contribution' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )? otherlv_6= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) ) ) otherlv_10= '}'
             {
-            otherlv_0=(Token)match(input,51,FOLLOW_51_in_ruleContributionContext12831); 
+            otherlv_0=(Token)match(input,51,FOLLOW_51_in_ruleContributionContext12819); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getContributionContextAccess().getContributionKeyword_0());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5188:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5189:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5180:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5181:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5189:1: (lv_name_1_0= RULE_ID )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5190:3: lv_name_1_0= RULE_ID
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5181:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5182:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionContext12848); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContributionContext12836); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getContributionContextAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -13212,7 +13188,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5206:2: (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )?
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5198:2: (otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* )?
             int alt78=2;
             int LA78_0 = input.LA(1);
 
@@ -13221,17 +13197,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
             switch (alt78) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5206:4: otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5198:4: otherlv_2= 'extends' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
                     {
-                    otherlv_2=(Token)match(input,38,FOLLOW_38_in_ruleContributionContext12866); 
+                    otherlv_2=(Token)match(input,38,FOLLOW_38_in_ruleContributionContext12854); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getContributionContextAccess().getExtendsKeyword_2_0());
                         
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5210:1: ( ( ruleQualifiedName ) )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5211:1: ( ruleQualifiedName )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5202:1: ( ( ruleQualifiedName ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5203:1: ( ruleQualifiedName )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5211:1: ( ruleQualifiedName )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5212:3: ruleQualifiedName
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5203:1: ( ruleQualifiedName )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5204:3: ruleQualifiedName
                     {
 
                     			if (current==null) {
@@ -13241,7 +13217,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                      
                     	        newCompositeNode(grammarAccess.getContributionContextAccess().getSuperContributionContextsContributionContextCrossReference_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleContributionContext12889);
+                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleContributionContext12877);
                     ruleQualifiedName();
 
                     state._fsp--;
@@ -13255,7 +13231,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5225:2: (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5217:2: (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
                     loop77:
                     do {
                         int alt77=2;
@@ -13268,17 +13244,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                         switch (alt77) {
                     	case 1 :
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5225:4: otherlv_4= ',' ( ( ruleQualifiedName ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5217:4: otherlv_4= ',' ( ( ruleQualifiedName ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,30,FOLLOW_30_in_ruleContributionContext12902); 
+                    	    otherlv_4=(Token)match(input,30,FOLLOW_30_in_ruleContributionContext12890); 
 
                     	        	newLeafNode(otherlv_4, grammarAccess.getContributionContextAccess().getCommaKeyword_2_2_0());
                     	        
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5229:1: ( ( ruleQualifiedName ) )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5230:1: ( ruleQualifiedName )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5221:1: ( ( ruleQualifiedName ) )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5222:1: ( ruleQualifiedName )
                     	    {
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5230:1: ( ruleQualifiedName )
-                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5231:3: ruleQualifiedName
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5222:1: ( ruleQualifiedName )
+                    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5223:3: ruleQualifiedName
                     	    {
 
                     	    			if (current==null) {
@@ -13288,7 +13264,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     	     
                     	    	        newCompositeNode(grammarAccess.getContributionContextAccess().getSuperContributionContextsContributionContextCrossReference_2_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleContributionContext12925);
+                    	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleContributionContext12913);
                     	    ruleQualifiedName();
 
                     	    state._fsp--;
@@ -13317,23 +13293,23 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,14,FOLLOW_14_in_ruleContributionContext12941); 
+            otherlv_6=(Token)match(input,14,FOLLOW_14_in_ruleContributionContext12929); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getContributionContextAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5248:1: ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5250:1: ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5240:1: ( ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5242:1: ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5250:1: ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5251:2: ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5242:1: ( ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5243:2: ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* )
             {
              
             	  getUnorderedGroupHelper().enter(grammarAccess.getContributionContextAccess().getUnorderedGroup_4());
             	
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5254:2: ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5255:3: ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5246:2: ( ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )* )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5247:3: ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )*
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5255:3: ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5247:3: ( ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) ) )*
             loop81:
             do {
                 int alt81=3;
@@ -13349,21 +13325,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                 switch (alt81) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5257:4: ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5249:4: ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5257:4: ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5258:5: {...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5249:4: ({...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5250:5: {...}? => ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getContributionContextAccess().getUnorderedGroup_4(), 0) ) {
             	        throw new FailedPredicateException(input, "ruleContributionContext", "getUnorderedGroupHelper().canSelect(grammarAccess.getContributionContextAccess().getUnorderedGroup_4(), 0)");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5258:116: ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5259:6: ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5250:116: ( ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+ )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5251:6: ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+
             	    {
             	     
             	    	 				  getUnorderedGroupHelper().select(grammarAccess.getContributionContextAccess().getUnorderedGroup_4(), 0);
             	    	 				
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5262:6: ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5254:6: ({...}? => ( (lv_metaData_8_0= ruleMetadata ) ) )+
             	    int cnt79=0;
             	    loop79:
             	    do {
@@ -13383,21 +13359,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	        switch (alt79) {
             	    	case 1 :
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5262:7: {...}? => ( (lv_metaData_8_0= ruleMetadata ) )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5254:7: {...}? => ( (lv_metaData_8_0= ruleMetadata ) )
             	    	    {
             	    	    if ( !((true)) ) {
             	    	        throw new FailedPredicateException(input, "ruleContributionContext", "true");
             	    	    }
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5262:16: ( (lv_metaData_8_0= ruleMetadata ) )
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5263:1: (lv_metaData_8_0= ruleMetadata )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5254:16: ( (lv_metaData_8_0= ruleMetadata ) )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5255:1: (lv_metaData_8_0= ruleMetadata )
             	    	    {
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5263:1: (lv_metaData_8_0= ruleMetadata )
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5264:3: lv_metaData_8_0= ruleMetadata
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5255:1: (lv_metaData_8_0= ruleMetadata )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5256:3: lv_metaData_8_0= ruleMetadata
             	    	    {
             	    	     
             	    	    	        newCompositeNode(grammarAccess.getContributionContextAccess().getMetaDataMetadataParserRuleCall_4_0_0()); 
             	    	    	    
-            	    	    pushFollow(FOLLOW_ruleMetadata_in_ruleContributionContext13007);
+            	    	    pushFollow(FOLLOW_ruleMetadata_in_ruleContributionContext12995);
             	    	    lv_metaData_8_0=ruleMetadata();
 
             	    	    state._fsp--;
@@ -13445,21 +13421,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5287:4: ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5279:4: ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5287:4: ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5288:5: {...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5279:4: ({...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5280:5: {...}? => ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getContributionContextAccess().getUnorderedGroup_4(), 1) ) {
             	        throw new FailedPredicateException(input, "ruleContributionContext", "getUnorderedGroupHelper().canSelect(grammarAccess.getContributionContextAccess().getUnorderedGroup_4(), 1)");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5288:116: ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5289:6: ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5280:116: ( ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+ )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5281:6: ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+
             	    {
             	     
             	    	 				  getUnorderedGroupHelper().select(grammarAccess.getContributionContextAccess().getUnorderedGroup_4(), 1);
             	    	 				
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5292:6: ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5284:6: ({...}? => ( (lv_changes_9_0= ruleContributionChange ) ) )+
             	    int cnt80=0;
             	    loop80:
             	    do {
@@ -13479,21 +13455,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	        switch (alt80) {
             	    	case 1 :
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5292:7: {...}? => ( (lv_changes_9_0= ruleContributionChange ) )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5284:7: {...}? => ( (lv_changes_9_0= ruleContributionChange ) )
             	    	    {
             	    	    if ( !((true)) ) {
             	    	        throw new FailedPredicateException(input, "ruleContributionContext", "true");
             	    	    }
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5292:16: ( (lv_changes_9_0= ruleContributionChange ) )
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5293:1: (lv_changes_9_0= ruleContributionChange )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5284:16: ( (lv_changes_9_0= ruleContributionChange ) )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5285:1: (lv_changes_9_0= ruleContributionChange )
             	    	    {
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5293:1: (lv_changes_9_0= ruleContributionChange )
-            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5294:3: lv_changes_9_0= ruleContributionChange
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5285:1: (lv_changes_9_0= ruleContributionChange )
+            	    	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5286:3: lv_changes_9_0= ruleContributionChange
             	    	    {
             	    	     
             	    	    	        newCompositeNode(grammarAccess.getContributionContextAccess().getChangesContributionChangeParserRuleCall_4_1_0()); 
             	    	    	    
-            	    	    pushFollow(FOLLOW_ruleContributionChange_in_ruleContributionContext13083);
+            	    	    pushFollow(FOLLOW_ruleContributionChange_in_ruleContributionContext13071);
             	    	    lv_changes_9_0=ruleContributionChange();
 
             	    	    state._fsp--;
@@ -13558,7 +13534,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_10=(Token)match(input,15,FOLLOW_15_in_ruleContributionContext13136); 
+            otherlv_10=(Token)match(input,15,FOLLOW_15_in_ruleContributionContext13124); 
 
                 	newLeafNode(otherlv_10, grammarAccess.getContributionContextAccess().getRightCurlyBracketKeyword_5());
                 
@@ -13583,7 +13559,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContributionChange"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5336:1: entryRuleContributionChange returns [EObject current=null] : iv_ruleContributionChange= ruleContributionChange EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5328:1: entryRuleContributionChange returns [EObject current=null] : iv_ruleContributionChange= ruleContributionChange EOF ;
     public final EObject entryRuleContributionChange() throws RecognitionException {
         EObject current = null;
 
@@ -13591,17 +13567,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5337:2: (iv_ruleContributionChange= ruleContributionChange EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5338:2: iv_ruleContributionChange= ruleContributionChange EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5329:2: (iv_ruleContributionChange= ruleContributionChange EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5330:2: iv_ruleContributionChange= ruleContributionChange EOF
             {
              newCompositeNode(grammarAccess.getContributionChangeRule()); 
-            pushFollow(FOLLOW_ruleContributionChange_in_entryRuleContributionChange13172);
+            pushFollow(FOLLOW_ruleContributionChange_in_entryRuleContributionChange13160);
             iv_ruleContributionChange=ruleContributionChange();
 
             state._fsp--;
 
              current =iv_ruleContributionChange; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionChange13182); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionChange13170); 
 
             }
 
@@ -13619,7 +13595,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContributionChange"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5345:1: ruleContributionChange returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' ) ) ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5337:1: ruleContributionChange returns [EObject current=null] : ( ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' ) ) ) ;
     public final EObject ruleContributionChange() throws RecognitionException {
         EObject current = null;
 
@@ -13636,17 +13612,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5348:28: ( ( ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' ) ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5349:1: ( ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5340:28: ( ( ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' ) ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5341:1: ( ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' ) ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5349:1: ( ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5349:2: ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5341:1: ( ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5341:2: ( ( ruleQualifiedName ) ) otherlv_1= '=' ( ( ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5349:2: ( ( ruleQualifiedName ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5350:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5341:2: ( ( ruleQualifiedName ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5342:1: ( ruleQualifiedName )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5350:1: ( ruleQualifiedName )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5351:3: ruleQualifiedName
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5342:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5343:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -13656,7 +13632,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getContributionChangeAccess().getContributionContributionEndCrossReference_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleContributionChange13230);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleContributionChange13218);
             ruleQualifiedName();
 
             state._fsp--;
@@ -13670,11 +13646,11 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,19,FOLLOW_19_in_ruleContributionChange13242); 
+            otherlv_1=(Token)match(input,19,FOLLOW_19_in_ruleContributionChange13230); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getContributionChangeAccess().getEqualsSignKeyword_1());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5368:1: ( ( ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5360:1: ( ( ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' ) | (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' ) )
             int alt83=2;
             int LA83_0 = input.LA(1);
 
@@ -13692,12 +13668,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
             switch (alt83) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5368:2: ( ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5360:2: ( ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5368:2: ( ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5368:3: ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5360:2: ( ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5360:3: ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) ) otherlv_4= ';'
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5368:3: ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5360:3: ( ( (lv_newContribution_2_0= ruleContributionType ) ) | ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) ) )
                     int alt82=2;
                     int LA82_0 = input.LA(1);
 
@@ -13715,18 +13691,18 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt82) {
                         case 1 :
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5368:4: ( (lv_newContribution_2_0= ruleContributionType ) )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5360:4: ( (lv_newContribution_2_0= ruleContributionType ) )
                             {
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5368:4: ( (lv_newContribution_2_0= ruleContributionType ) )
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5369:1: (lv_newContribution_2_0= ruleContributionType )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5360:4: ( (lv_newContribution_2_0= ruleContributionType ) )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5361:1: (lv_newContribution_2_0= ruleContributionType )
                             {
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5369:1: (lv_newContribution_2_0= ruleContributionType )
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5370:3: lv_newContribution_2_0= ruleContributionType
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5361:1: (lv_newContribution_2_0= ruleContributionType )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5362:3: lv_newContribution_2_0= ruleContributionType
                             {
                              
                             	        newCompositeNode(grammarAccess.getContributionChangeAccess().getNewContributionContributionTypeEnumRuleCall_2_0_0_0_0()); 
                             	    
-                            pushFollow(FOLLOW_ruleContributionType_in_ruleContributionChange13266);
+                            pushFollow(FOLLOW_ruleContributionType_in_ruleContributionChange13254);
                             lv_newContribution_2_0=ruleContributionType();
 
                             state._fsp--;
@@ -13752,15 +13728,15 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5387:6: ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5379:6: ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) )
                             {
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5387:6: ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) )
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5388:1: (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5379:6: ( (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE ) )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5380:1: (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE )
                             {
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5388:1: (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE )
-                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5389:3: lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5380:1: (lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE )
+                            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5381:3: lv_newQuantitativeContribution_3_0= RULE_QUALITATIVEVALUE
                             {
-                            lv_newQuantitativeContribution_3_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionChange13289); 
+                            lv_newQuantitativeContribution_3_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionChange13277); 
 
                             			newLeafNode(lv_newQuantitativeContribution_3_0, grammarAccess.getContributionChangeAccess().getNewQuantitativeContributionQUALITATIVEVALUETerminalRuleCall_2_0_0_1_0()); 
                             		
@@ -13786,7 +13762,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleContributionChange13307); 
+                    otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleContributionChange13295); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getContributionChangeAccess().getSemicolonKeyword_2_0_1());
                         
@@ -13797,25 +13773,25 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5410:6: (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5402:6: (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5410:6: (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5410:8: otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5402:6: (otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5402:8: otherlv_5= '{' ( (lv_contribRange_6_0= ruleContributionRange ) ) otherlv_7= '}'
                     {
-                    otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleContributionChange13327); 
+                    otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleContributionChange13315); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getContributionChangeAccess().getLeftCurlyBracketKeyword_2_1_0());
                         
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5414:1: ( (lv_contribRange_6_0= ruleContributionRange ) )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5415:1: (lv_contribRange_6_0= ruleContributionRange )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5406:1: ( (lv_contribRange_6_0= ruleContributionRange ) )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5407:1: (lv_contribRange_6_0= ruleContributionRange )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5415:1: (lv_contribRange_6_0= ruleContributionRange )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5416:3: lv_contribRange_6_0= ruleContributionRange
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5407:1: (lv_contribRange_6_0= ruleContributionRange )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5408:3: lv_contribRange_6_0= ruleContributionRange
                     {
                      
                     	        newCompositeNode(grammarAccess.getContributionChangeAccess().getContribRangeContributionRangeParserRuleCall_2_1_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleContributionRange_in_ruleContributionChange13348);
+                    pushFollow(FOLLOW_ruleContributionRange_in_ruleContributionChange13336);
                     lv_contribRange_6_0=ruleContributionRange();
 
                     state._fsp--;
@@ -13837,7 +13813,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_7=(Token)match(input,15,FOLLOW_15_in_ruleContributionChange13360); 
+                    otherlv_7=(Token)match(input,15,FOLLOW_15_in_ruleContributionChange13348); 
 
                         	newLeafNode(otherlv_7, grammarAccess.getContributionChangeAccess().getRightCurlyBracketKeyword_2_1_2());
                         
@@ -13871,7 +13847,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContributionRange"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5444:1: entryRuleContributionRange returns [EObject current=null] : iv_ruleContributionRange= ruleContributionRange EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5436:1: entryRuleContributionRange returns [EObject current=null] : iv_ruleContributionRange= ruleContributionRange EOF ;
     public final EObject entryRuleContributionRange() throws RecognitionException {
         EObject current = null;
 
@@ -13879,17 +13855,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5445:2: (iv_ruleContributionRange= ruleContributionRange EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5446:2: iv_ruleContributionRange= ruleContributionRange EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5437:2: (iv_ruleContributionRange= ruleContributionRange EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5438:2: iv_ruleContributionRange= ruleContributionRange EOF
             {
              newCompositeNode(grammarAccess.getContributionRangeRule()); 
-            pushFollow(FOLLOW_ruleContributionRange_in_entryRuleContributionRange13398);
+            pushFollow(FOLLOW_ruleContributionRange_in_entryRuleContributionRange13386);
             iv_ruleContributionRange=ruleContributionRange();
 
             state._fsp--;
 
              current =iv_ruleContributionRange; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionRange13408); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContributionRange13396); 
 
             }
 
@@ -13907,7 +13883,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContributionRange"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5453:1: ruleContributionRange returns [EObject current=null] : ( ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?) ) ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5445:1: ruleContributionRange returns [EObject current=null] : ( ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?) ) ) ;
     public final EObject ruleContributionRange() throws RecognitionException {
         EObject current = null;
 
@@ -13927,22 +13903,22 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5456:28: ( ( ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?) ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5457:1: ( ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5448:28: ( ( ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?) ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5449:1: ( ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?) ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5457:1: ( ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5459:1: ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5449:1: ( ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5451:1: ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5459:1: ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5460:2: ( ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?)
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5451:1: ( ( ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5452:2: ( ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?)
             {
              
             	  getUnorderedGroupHelper().enter(grammarAccess.getContributionRangeAccess().getUnorderedGroup());
             	
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5463:2: ( ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?)
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5464:3: ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5455:2: ( ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?)
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5456:3: ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+ {...}?
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5464:3: ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5456:3: ( ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) ) )+
             int cnt84=0;
             loop84:
             do {
@@ -13962,44 +13938,44 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                 switch (alt84) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5466:4: ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5458:4: ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5466:4: ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5467:5: {...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5458:4: ({...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5459:5: {...}? => ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getContributionRangeAccess().getUnorderedGroup(), 0) ) {
             	        throw new FailedPredicateException(input, "ruleContributionRange", "getUnorderedGroupHelper().canSelect(grammarAccess.getContributionRangeAccess().getUnorderedGroup(), 0)");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5467:112: ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5468:6: ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5459:112: ( ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5460:6: ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) )
             	    {
             	     
             	    	 				  getUnorderedGroupHelper().select(grammarAccess.getContributionRangeAccess().getUnorderedGroup(), 0);
             	    	 				
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5471:6: ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5471:7: {...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5463:6: ({...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5463:7: {...}? => (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleContributionRange", "true");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5471:16: (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5471:18: otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';'
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5463:16: (otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';' )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5463:18: otherlv_1= 'start' otherlv_2= '=' ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) ) otherlv_4= ';'
             	    {
-            	    otherlv_1=(Token)match(input,40,FOLLOW_40_in_ruleContributionRange13490); 
+            	    otherlv_1=(Token)match(input,40,FOLLOW_40_in_ruleContributionRange13478); 
 
             	        	newLeafNode(otherlv_1, grammarAccess.getContributionRangeAccess().getStartKeyword_0_0());
             	        
-            	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleContributionRange13502); 
+            	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleContributionRange13490); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getContributionRangeAccess().getEqualsSignKeyword_0_1());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5479:1: ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5480:1: (lv_start_3_0= RULE_QUALITATIVEVALUE )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5471:1: ( (lv_start_3_0= RULE_QUALITATIVEVALUE ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5472:1: (lv_start_3_0= RULE_QUALITATIVEVALUE )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5480:1: (lv_start_3_0= RULE_QUALITATIVEVALUE )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5481:3: lv_start_3_0= RULE_QUALITATIVEVALUE
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5472:1: (lv_start_3_0= RULE_QUALITATIVEVALUE )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5473:3: lv_start_3_0= RULE_QUALITATIVEVALUE
             	    {
-            	    lv_start_3_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionRange13519); 
+            	    lv_start_3_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionRange13507); 
 
             	    			newLeafNode(lv_start_3_0, grammarAccess.getContributionRangeAccess().getStartQUALITATIVEVALUETerminalRuleCall_0_2_0()); 
             	    		
@@ -14019,7 +13995,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleContributionRange13536); 
+            	    otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleContributionRange13524); 
 
             	        	newLeafNode(otherlv_4, grammarAccess.getContributionRangeAccess().getSemicolonKeyword_0_3());
             	        
@@ -14042,44 +14018,44 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5508:4: ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5500:4: ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5508:4: ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5509:5: {...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5500:4: ({...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5501:5: {...}? => ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getContributionRangeAccess().getUnorderedGroup(), 1) ) {
             	        throw new FailedPredicateException(input, "ruleContributionRange", "getUnorderedGroupHelper().canSelect(grammarAccess.getContributionRangeAccess().getUnorderedGroup(), 1)");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5509:112: ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5510:6: ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5501:112: ( ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5502:6: ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) )
             	    {
             	     
             	    	 				  getUnorderedGroupHelper().select(grammarAccess.getContributionRangeAccess().getUnorderedGroup(), 1);
             	    	 				
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5513:6: ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5513:7: {...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5505:6: ({...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5505:7: {...}? => (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleContributionRange", "true");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5513:16: (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5513:18: otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';'
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5505:16: (otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';' )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5505:18: otherlv_5= 'end' otherlv_6= '=' ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) ) otherlv_8= ';'
             	    {
-            	    otherlv_5=(Token)match(input,41,FOLLOW_41_in_ruleContributionRange13604); 
+            	    otherlv_5=(Token)match(input,41,FOLLOW_41_in_ruleContributionRange13592); 
 
             	        	newLeafNode(otherlv_5, grammarAccess.getContributionRangeAccess().getEndKeyword_1_0());
             	        
-            	    otherlv_6=(Token)match(input,19,FOLLOW_19_in_ruleContributionRange13616); 
+            	    otherlv_6=(Token)match(input,19,FOLLOW_19_in_ruleContributionRange13604); 
 
             	        	newLeafNode(otherlv_6, grammarAccess.getContributionRangeAccess().getEqualsSignKeyword_1_1());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5521:1: ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5522:1: (lv_end_7_0= RULE_QUALITATIVEVALUE )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5513:1: ( (lv_end_7_0= RULE_QUALITATIVEVALUE ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5514:1: (lv_end_7_0= RULE_QUALITATIVEVALUE )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5522:1: (lv_end_7_0= RULE_QUALITATIVEVALUE )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5523:3: lv_end_7_0= RULE_QUALITATIVEVALUE
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5514:1: (lv_end_7_0= RULE_QUALITATIVEVALUE )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5515:3: lv_end_7_0= RULE_QUALITATIVEVALUE
             	    {
-            	    lv_end_7_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionRange13633); 
+            	    lv_end_7_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionRange13621); 
 
             	    			newLeafNode(lv_end_7_0, grammarAccess.getContributionRangeAccess().getEndQUALITATIVEVALUETerminalRuleCall_1_2_0()); 
             	    		
@@ -14099,7 +14075,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_8=(Token)match(input,17,FOLLOW_17_in_ruleContributionRange13650); 
+            	    otherlv_8=(Token)match(input,17,FOLLOW_17_in_ruleContributionRange13638); 
 
             	        	newLeafNode(otherlv_8, grammarAccess.getContributionRangeAccess().getSemicolonKeyword_1_3());
             	        
@@ -14122,44 +14098,44 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5550:4: ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5542:4: ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5550:4: ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5551:5: {...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5542:4: ({...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5543:5: {...}? => ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getContributionRangeAccess().getUnorderedGroup(), 2) ) {
             	        throw new FailedPredicateException(input, "ruleContributionRange", "getUnorderedGroupHelper().canSelect(grammarAccess.getContributionRangeAccess().getUnorderedGroup(), 2)");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5551:112: ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5552:6: ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5543:112: ( ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5544:6: ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) )
             	    {
             	     
             	    	 				  getUnorderedGroupHelper().select(grammarAccess.getContributionRangeAccess().getUnorderedGroup(), 2);
             	    	 				
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5555:6: ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5555:7: {...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5547:6: ({...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5547:7: {...}? => (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleContributionRange", "true");
             	    }
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5555:16: (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5555:18: otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';'
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5547:16: (otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';' )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5547:18: otherlv_9= 'step' otherlv_10= '=' ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) ) otherlv_12= ';'
             	    {
-            	    otherlv_9=(Token)match(input,42,FOLLOW_42_in_ruleContributionRange13718); 
+            	    otherlv_9=(Token)match(input,42,FOLLOW_42_in_ruleContributionRange13706); 
 
             	        	newLeafNode(otherlv_9, grammarAccess.getContributionRangeAccess().getStepKeyword_2_0());
             	        
-            	    otherlv_10=(Token)match(input,19,FOLLOW_19_in_ruleContributionRange13730); 
+            	    otherlv_10=(Token)match(input,19,FOLLOW_19_in_ruleContributionRange13718); 
 
             	        	newLeafNode(otherlv_10, grammarAccess.getContributionRangeAccess().getEqualsSignKeyword_2_1());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5563:1: ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5564:1: (lv_step_11_0= RULE_QUALITATIVEVALUE )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5555:1: ( (lv_step_11_0= RULE_QUALITATIVEVALUE ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5556:1: (lv_step_11_0= RULE_QUALITATIVEVALUE )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5564:1: (lv_step_11_0= RULE_QUALITATIVEVALUE )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5565:3: lv_step_11_0= RULE_QUALITATIVEVALUE
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5556:1: (lv_step_11_0= RULE_QUALITATIVEVALUE )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5557:3: lv_step_11_0= RULE_QUALITATIVEVALUE
             	    {
-            	    lv_step_11_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionRange13747); 
+            	    lv_step_11_0=(Token)match(input,RULE_QUALITATIVEVALUE,FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionRange13735); 
 
             	    			newLeafNode(lv_step_11_0, grammarAccess.getContributionRangeAccess().getStepQUALITATIVEVALUETerminalRuleCall_2_2_0()); 
             	    		
@@ -14179,7 +14155,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_12=(Token)match(input,17,FOLLOW_17_in_ruleContributionRange13764); 
+            	    otherlv_12=(Token)match(input,17,FOLLOW_17_in_ruleContributionRange13752); 
 
             	        	newLeafNode(otherlv_12, grammarAccess.getContributionRangeAccess().getSemicolonKeyword_2_3());
             	        
@@ -14244,7 +14220,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMetadata"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5608:1: entryRuleMetadata returns [EObject current=null] : iv_ruleMetadata= ruleMetadata EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5600:1: entryRuleMetadata returns [EObject current=null] : iv_ruleMetadata= ruleMetadata EOF ;
     public final EObject entryRuleMetadata() throws RecognitionException {
         EObject current = null;
 
@@ -14252,17 +14228,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5609:2: (iv_ruleMetadata= ruleMetadata EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5610:2: iv_ruleMetadata= ruleMetadata EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5601:2: (iv_ruleMetadata= ruleMetadata EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5602:2: iv_ruleMetadata= ruleMetadata EOF
             {
              newCompositeNode(grammarAccess.getMetadataRule()); 
-            pushFollow(FOLLOW_ruleMetadata_in_entryRuleMetadata13846);
+            pushFollow(FOLLOW_ruleMetadata_in_entryRuleMetadata13834);
             iv_ruleMetadata=ruleMetadata();
 
             state._fsp--;
 
              current =iv_ruleMetadata; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMetadata13856); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMetadata13844); 
 
             }
 
@@ -14280,7 +14256,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMetadata"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5617:1: ruleMetadata returns [EObject current=null] : (otherlv_0= 'metadata' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= RULE_STRING ) ) otherlv_4= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5609:1: ruleMetadata returns [EObject current=null] : (otherlv_0= 'metadata' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= RULE_STRING ) ) otherlv_4= ';' ) ;
     public final EObject ruleMetadata() throws RecognitionException {
         EObject current = null;
 
@@ -14293,23 +14269,23 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5620:28: ( (otherlv_0= 'metadata' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= RULE_STRING ) ) otherlv_4= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5621:1: (otherlv_0= 'metadata' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= RULE_STRING ) ) otherlv_4= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5612:28: ( (otherlv_0= 'metadata' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= RULE_STRING ) ) otherlv_4= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5613:1: (otherlv_0= 'metadata' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= RULE_STRING ) ) otherlv_4= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5621:1: (otherlv_0= 'metadata' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= RULE_STRING ) ) otherlv_4= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5621:3: otherlv_0= 'metadata' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= RULE_STRING ) ) otherlv_4= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5613:1: (otherlv_0= 'metadata' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= RULE_STRING ) ) otherlv_4= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5613:3: otherlv_0= 'metadata' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= RULE_STRING ) ) otherlv_4= ';'
             {
-            otherlv_0=(Token)match(input,52,FOLLOW_52_in_ruleMetadata13893); 
+            otherlv_0=(Token)match(input,52,FOLLOW_52_in_ruleMetadata13881); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getMetadataAccess().getMetadataKeyword_0());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5625:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5626:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5617:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5618:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5626:1: (lv_name_1_0= RULE_ID )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5627:3: lv_name_1_0= RULE_ID
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5618:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5619:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMetadata13910); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleMetadata13898); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getMetadataAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -14329,17 +14305,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleMetadata13927); 
+            otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleMetadata13915); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getMetadataAccess().getEqualsSignKeyword_2());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5647:1: ( (lv_value_3_0= RULE_STRING ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5648:1: (lv_value_3_0= RULE_STRING )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5639:1: ( (lv_value_3_0= RULE_STRING ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5640:1: (lv_value_3_0= RULE_STRING )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5648:1: (lv_value_3_0= RULE_STRING )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5649:3: lv_value_3_0= RULE_STRING
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5640:1: (lv_value_3_0= RULE_STRING )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5641:3: lv_value_3_0= RULE_STRING
             {
-            lv_value_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMetadata13944); 
+            lv_value_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMetadata13932); 
 
             			newLeafNode(lv_value_3_0, grammarAccess.getMetadataAccess().getValueSTRINGTerminalRuleCall_3_0()); 
             		
@@ -14359,7 +14335,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleMetadata13961); 
+            otherlv_4=(Token)match(input,17,FOLLOW_17_in_ruleMetadata13949); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getMetadataAccess().getSemicolonKeyword_4());
                 
@@ -14384,7 +14360,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleComment"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5677:1: entryRuleComment returns [EObject current=null] : iv_ruleComment= ruleComment EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5669:1: entryRuleComment returns [EObject current=null] : iv_ruleComment= ruleComment EOF ;
     public final EObject entryRuleComment() throws RecognitionException {
         EObject current = null;
 
@@ -14392,17 +14368,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5678:2: (iv_ruleComment= ruleComment EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5679:2: iv_ruleComment= ruleComment EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5670:2: (iv_ruleComment= ruleComment EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5671:2: iv_ruleComment= ruleComment EOF
             {
              newCompositeNode(grammarAccess.getCommentRule()); 
-            pushFollow(FOLLOW_ruleComment_in_entryRuleComment13997);
+            pushFollow(FOLLOW_ruleComment_in_entryRuleComment13985);
             iv_ruleComment=ruleComment();
 
             state._fsp--;
 
              current =iv_ruleComment; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleComment14007); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleComment13995); 
 
             }
 
@@ -14420,7 +14396,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComment"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5686:1: ruleComment returns [EObject current=null] : (otherlv_0= 'comment' ( (lv_content_1_0= RULE_STRING ) ) otherlv_2= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5678:1: ruleComment returns [EObject current=null] : (otherlv_0= 'comment' ( (lv_content_1_0= RULE_STRING ) ) otherlv_2= ';' ) ;
     public final EObject ruleComment() throws RecognitionException {
         EObject current = null;
 
@@ -14431,23 +14407,23 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5689:28: ( (otherlv_0= 'comment' ( (lv_content_1_0= RULE_STRING ) ) otherlv_2= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5690:1: (otherlv_0= 'comment' ( (lv_content_1_0= RULE_STRING ) ) otherlv_2= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5681:28: ( (otherlv_0= 'comment' ( (lv_content_1_0= RULE_STRING ) ) otherlv_2= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5682:1: (otherlv_0= 'comment' ( (lv_content_1_0= RULE_STRING ) ) otherlv_2= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5690:1: (otherlv_0= 'comment' ( (lv_content_1_0= RULE_STRING ) ) otherlv_2= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5690:3: otherlv_0= 'comment' ( (lv_content_1_0= RULE_STRING ) ) otherlv_2= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5682:1: (otherlv_0= 'comment' ( (lv_content_1_0= RULE_STRING ) ) otherlv_2= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5682:3: otherlv_0= 'comment' ( (lv_content_1_0= RULE_STRING ) ) otherlv_2= ';'
             {
-            otherlv_0=(Token)match(input,53,FOLLOW_53_in_ruleComment14044); 
+            otherlv_0=(Token)match(input,53,FOLLOW_53_in_ruleComment14032); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getCommentAccess().getCommentKeyword_0());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5694:1: ( (lv_content_1_0= RULE_STRING ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5695:1: (lv_content_1_0= RULE_STRING )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5686:1: ( (lv_content_1_0= RULE_STRING ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5687:1: (lv_content_1_0= RULE_STRING )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5695:1: (lv_content_1_0= RULE_STRING )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5696:3: lv_content_1_0= RULE_STRING
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5687:1: (lv_content_1_0= RULE_STRING )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5688:3: lv_content_1_0= RULE_STRING
             {
-            lv_content_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleComment14061); 
+            lv_content_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleComment14049); 
 
             			newLeafNode(lv_content_1_0, grammarAccess.getCommentAccess().getContentSTRINGTerminalRuleCall_1_0()); 
             		
@@ -14467,7 +14443,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,17,FOLLOW_17_in_ruleComment14078); 
+            otherlv_2=(Token)match(input,17,FOLLOW_17_in_ruleComment14066); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getCommentAccess().getSemicolonKeyword_2());
                 
@@ -14492,7 +14468,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIndicatorGroup"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5724:1: entryRuleIndicatorGroup returns [EObject current=null] : iv_ruleIndicatorGroup= ruleIndicatorGroup EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5716:1: entryRuleIndicatorGroup returns [EObject current=null] : iv_ruleIndicatorGroup= ruleIndicatorGroup EOF ;
     public final EObject entryRuleIndicatorGroup() throws RecognitionException {
         EObject current = null;
 
@@ -14500,17 +14476,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5725:2: (iv_ruleIndicatorGroup= ruleIndicatorGroup EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5726:2: iv_ruleIndicatorGroup= ruleIndicatorGroup EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5717:2: (iv_ruleIndicatorGroup= ruleIndicatorGroup EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5718:2: iv_ruleIndicatorGroup= ruleIndicatorGroup EOF
             {
              newCompositeNode(grammarAccess.getIndicatorGroupRule()); 
-            pushFollow(FOLLOW_ruleIndicatorGroup_in_entryRuleIndicatorGroup14114);
+            pushFollow(FOLLOW_ruleIndicatorGroup_in_entryRuleIndicatorGroup14102);
             iv_ruleIndicatorGroup=ruleIndicatorGroup();
 
             state._fsp--;
 
              current =iv_ruleIndicatorGroup; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIndicatorGroup14124); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIndicatorGroup14112); 
 
             }
 
@@ -14528,7 +14504,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIndicatorGroup"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5733:1: ruleIndicatorGroup returns [EObject current=null] : (otherlv_0= 'indicatorGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';' ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5725:1: ruleIndicatorGroup returns [EObject current=null] : (otherlv_0= 'indicatorGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';' ) ;
     public final EObject ruleIndicatorGroup() throws RecognitionException {
         EObject current = null;
 
@@ -14541,23 +14517,23 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5736:28: ( (otherlv_0= 'indicatorGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';' ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5737:1: (otherlv_0= 'indicatorGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5728:28: ( (otherlv_0= 'indicatorGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5729:1: (otherlv_0= 'indicatorGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';' )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5737:1: (otherlv_0= 'indicatorGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5737:3: otherlv_0= 'indicatorGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5729:1: (otherlv_0= 'indicatorGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5729:3: otherlv_0= 'indicatorGroup' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'includes' ( ( ruleQualifiedName ) ) (otherlv_4= ',' ( ( ruleQualifiedName ) ) )* otherlv_6= ';'
             {
-            otherlv_0=(Token)match(input,54,FOLLOW_54_in_ruleIndicatorGroup14161); 
+            otherlv_0=(Token)match(input,54,FOLLOW_54_in_ruleIndicatorGroup14149); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getIndicatorGroupAccess().getIndicatorGroupKeyword_0());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5741:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5742:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5733:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5734:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5742:1: (lv_name_1_0= RULE_ID )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5743:3: lv_name_1_0= RULE_ID
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5734:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5735:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleIndicatorGroup14178); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleIndicatorGroup14166); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getIndicatorGroupAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -14577,15 +14553,15 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,36,FOLLOW_36_in_ruleIndicatorGroup14195); 
+            otherlv_2=(Token)match(input,36,FOLLOW_36_in_ruleIndicatorGroup14183); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getIndicatorGroupAccess().getIncludesKeyword_2());
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5763:1: ( ( ruleQualifiedName ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5764:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5755:1: ( ( ruleQualifiedName ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5756:1: ( ruleQualifiedName )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5764:1: ( ruleQualifiedName )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5765:3: ruleQualifiedName
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5756:1: ( ruleQualifiedName )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5757:3: ruleQualifiedName
             {
 
             			if (current==null) {
@@ -14595,7 +14571,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getIndicatorGroupAccess().getIndicatorsIndicatorCrossReference_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleQualifiedName_in_ruleIndicatorGroup14218);
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleIndicatorGroup14206);
             ruleQualifiedName();
 
             state._fsp--;
@@ -14609,7 +14585,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5778:2: (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5770:2: (otherlv_4= ',' ( ( ruleQualifiedName ) ) )*
             loop85:
             do {
                 int alt85=2;
@@ -14622,17 +14598,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                 switch (alt85) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5778:4: otherlv_4= ',' ( ( ruleQualifiedName ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5770:4: otherlv_4= ',' ( ( ruleQualifiedName ) )
             	    {
-            	    otherlv_4=(Token)match(input,30,FOLLOW_30_in_ruleIndicatorGroup14231); 
+            	    otherlv_4=(Token)match(input,30,FOLLOW_30_in_ruleIndicatorGroup14219); 
 
             	        	newLeafNode(otherlv_4, grammarAccess.getIndicatorGroupAccess().getCommaKeyword_4_0());
             	        
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5782:1: ( ( ruleQualifiedName ) )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5783:1: ( ruleQualifiedName )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5774:1: ( ( ruleQualifiedName ) )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5775:1: ( ruleQualifiedName )
             	    {
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5783:1: ( ruleQualifiedName )
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5784:3: ruleQualifiedName
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5775:1: ( ruleQualifiedName )
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5776:3: ruleQualifiedName
             	    {
 
             	    			if (current==null) {
@@ -14642,7 +14618,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             	     
             	    	        newCompositeNode(grammarAccess.getIndicatorGroupAccess().getIndicatorsIndicatorCrossReference_4_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleIndicatorGroup14254);
+            	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleIndicatorGroup14242);
             	    ruleQualifiedName();
 
             	    state._fsp--;
@@ -14665,7 +14641,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_6=(Token)match(input,17,FOLLOW_17_in_ruleIndicatorGroup14268); 
+            otherlv_6=(Token)match(input,17,FOLLOW_17_in_ruleIndicatorGroup14256); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getIndicatorGroupAccess().getSemicolonKeyword_5());
                 
@@ -14690,7 +14666,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5809:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5801:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -14698,17 +14674,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5810:2: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5811:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5802:2: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5803:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
              newCompositeNode(grammarAccess.getQualifiedNameRule()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName14305);
+            pushFollow(FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName14293);
             iv_ruleQualifiedName=ruleQualifiedName();
 
             state._fsp--;
 
              current =iv_ruleQualifiedName.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedName14316); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQualifiedName14304); 
 
             }
 
@@ -14726,7 +14702,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5818:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5810:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -14737,20 +14713,20 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5821:28: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5822:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5813:28: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5814:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5822:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5822:6: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5814:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5814:6: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName14356); 
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName14344); 
 
             		current.merge(this_ID_0);
                 
              
                 newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
                 
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5829:1: (kw= '.' this_ID_2= RULE_ID )*
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5821:1: (kw= '.' this_ID_2= RULE_ID )*
             loop86:
             do {
                 int alt86=2;
@@ -14763,14 +14739,14 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
                 switch (alt86) {
             	case 1 :
-            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5830:2: kw= '.' this_ID_2= RULE_ID
+            	    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5822:2: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,55,FOLLOW_55_in_ruleQualifiedName14375); 
+            	    kw=(Token)match(input,55,FOLLOW_55_in_ruleQualifiedName14363); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
             	        
-            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName14390); 
+            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleQualifiedName14378); 
 
             	    		current.merge(this_ID_2);
             	        
@@ -14807,7 +14783,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImportanceType"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5850:1: ruleImportanceType returns [Enumerator current=null] : ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'high' ) | (enumLiteral_2= 'medium' ) | (enumLiteral_3= 'low' ) ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5842:1: ruleImportanceType returns [Enumerator current=null] : ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'high' ) | (enumLiteral_2= 'medium' ) | (enumLiteral_3= 'low' ) ) ;
     public final Enumerator ruleImportanceType() throws RecognitionException {
         Enumerator current = null;
 
@@ -14818,10 +14794,10 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5852:28: ( ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'high' ) | (enumLiteral_2= 'medium' ) | (enumLiteral_3= 'low' ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5853:1: ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'high' ) | (enumLiteral_2= 'medium' ) | (enumLiteral_3= 'low' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5844:28: ( ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'high' ) | (enumLiteral_2= 'medium' ) | (enumLiteral_3= 'low' ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5845:1: ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'high' ) | (enumLiteral_2= 'medium' ) | (enumLiteral_3= 'low' ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5853:1: ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'high' ) | (enumLiteral_2= 'medium' ) | (enumLiteral_3= 'low' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5845:1: ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'high' ) | (enumLiteral_2= 'medium' ) | (enumLiteral_3= 'low' ) )
             int alt87=4;
             switch ( input.LA(1) ) {
             case 56:
@@ -14853,12 +14829,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             switch (alt87) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5853:2: (enumLiteral_0= 'none' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5845:2: (enumLiteral_0= 'none' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5853:2: (enumLiteral_0= 'none' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5853:4: enumLiteral_0= 'none'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5845:2: (enumLiteral_0= 'none' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5845:4: enumLiteral_0= 'none'
                     {
-                    enumLiteral_0=(Token)match(input,56,FOLLOW_56_in_ruleImportanceType14451); 
+                    enumLiteral_0=(Token)match(input,56,FOLLOW_56_in_ruleImportanceType14439); 
 
                             current = grammarAccess.getImportanceTypeAccess().getNoneEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getImportanceTypeAccess().getNoneEnumLiteralDeclaration_0()); 
@@ -14870,12 +14846,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5859:6: (enumLiteral_1= 'high' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5851:6: (enumLiteral_1= 'high' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5859:6: (enumLiteral_1= 'high' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5859:8: enumLiteral_1= 'high'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5851:6: (enumLiteral_1= 'high' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5851:8: enumLiteral_1= 'high'
                     {
-                    enumLiteral_1=(Token)match(input,57,FOLLOW_57_in_ruleImportanceType14468); 
+                    enumLiteral_1=(Token)match(input,57,FOLLOW_57_in_ruleImportanceType14456); 
 
                             current = grammarAccess.getImportanceTypeAccess().getHighEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getImportanceTypeAccess().getHighEnumLiteralDeclaration_1()); 
@@ -14887,12 +14863,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5865:6: (enumLiteral_2= 'medium' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5857:6: (enumLiteral_2= 'medium' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5865:6: (enumLiteral_2= 'medium' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5865:8: enumLiteral_2= 'medium'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5857:6: (enumLiteral_2= 'medium' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5857:8: enumLiteral_2= 'medium'
                     {
-                    enumLiteral_2=(Token)match(input,58,FOLLOW_58_in_ruleImportanceType14485); 
+                    enumLiteral_2=(Token)match(input,58,FOLLOW_58_in_ruleImportanceType14473); 
 
                             current = grammarAccess.getImportanceTypeAccess().getMediumEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getImportanceTypeAccess().getMediumEnumLiteralDeclaration_2()); 
@@ -14904,12 +14880,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5871:6: (enumLiteral_3= 'low' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5863:6: (enumLiteral_3= 'low' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5871:6: (enumLiteral_3= 'low' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5871:8: enumLiteral_3= 'low'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5863:6: (enumLiteral_3= 'low' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5863:8: enumLiteral_3= 'low'
                     {
-                    enumLiteral_3=(Token)match(input,59,FOLLOW_59_in_ruleImportanceType14502); 
+                    enumLiteral_3=(Token)match(input,59,FOLLOW_59_in_ruleImportanceType14490); 
 
                             current = grammarAccess.getImportanceTypeAccess().getLowEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getImportanceTypeAccess().getLowEnumLiteralDeclaration_3()); 
@@ -14941,7 +14917,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDecompositionType"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5881:1: ruleDecompositionType returns [Enumerator current=null] : ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) | (enumLiteral_2= 'xor' ) ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5873:1: ruleDecompositionType returns [Enumerator current=null] : ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) | (enumLiteral_2= 'xor' ) ) ;
     public final Enumerator ruleDecompositionType() throws RecognitionException {
         Enumerator current = null;
 
@@ -14951,10 +14927,10 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5883:28: ( ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) | (enumLiteral_2= 'xor' ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5884:1: ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) | (enumLiteral_2= 'xor' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5875:28: ( ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) | (enumLiteral_2= 'xor' ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5876:1: ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) | (enumLiteral_2= 'xor' ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5884:1: ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) | (enumLiteral_2= 'xor' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5876:1: ( (enumLiteral_0= 'and' ) | (enumLiteral_1= 'or' ) | (enumLiteral_2= 'xor' ) )
             int alt88=3;
             switch ( input.LA(1) ) {
             case 60:
@@ -14981,12 +14957,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             switch (alt88) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5884:2: (enumLiteral_0= 'and' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5876:2: (enumLiteral_0= 'and' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5884:2: (enumLiteral_0= 'and' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5884:4: enumLiteral_0= 'and'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5876:2: (enumLiteral_0= 'and' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5876:4: enumLiteral_0= 'and'
                     {
-                    enumLiteral_0=(Token)match(input,60,FOLLOW_60_in_ruleDecompositionType14547); 
+                    enumLiteral_0=(Token)match(input,60,FOLLOW_60_in_ruleDecompositionType14535); 
 
                             current = grammarAccess.getDecompositionTypeAccess().getAndEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getDecompositionTypeAccess().getAndEnumLiteralDeclaration_0()); 
@@ -14998,12 +14974,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5890:6: (enumLiteral_1= 'or' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5882:6: (enumLiteral_1= 'or' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5890:6: (enumLiteral_1= 'or' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5890:8: enumLiteral_1= 'or'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5882:6: (enumLiteral_1= 'or' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5882:8: enumLiteral_1= 'or'
                     {
-                    enumLiteral_1=(Token)match(input,61,FOLLOW_61_in_ruleDecompositionType14564); 
+                    enumLiteral_1=(Token)match(input,61,FOLLOW_61_in_ruleDecompositionType14552); 
 
                             current = grammarAccess.getDecompositionTypeAccess().getOrEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getDecompositionTypeAccess().getOrEnumLiteralDeclaration_1()); 
@@ -15015,12 +14991,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5896:6: (enumLiteral_2= 'xor' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5888:6: (enumLiteral_2= 'xor' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5896:6: (enumLiteral_2= 'xor' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5896:8: enumLiteral_2= 'xor'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5888:6: (enumLiteral_2= 'xor' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5888:8: enumLiteral_2= 'xor'
                     {
-                    enumLiteral_2=(Token)match(input,62,FOLLOW_62_in_ruleDecompositionType14581); 
+                    enumLiteral_2=(Token)match(input,62,FOLLOW_62_in_ruleDecompositionType14569); 
 
                             current = grammarAccess.getDecompositionTypeAccess().getXorEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getDecompositionTypeAccess().getXorEnumLiteralDeclaration_2()); 
@@ -15052,7 +15028,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContributionType"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5906:1: ruleContributionType returns [Enumerator current=null] : ( (enumLiteral_0= 'help' ) | (enumLiteral_1= 'make' ) | (enumLiteral_2= 'somePositive' ) | (enumLiteral_3= 'unknown' ) | (enumLiteral_4= 'someNegative' ) | (enumLiteral_5= 'hurt' ) | (enumLiteral_6= 'break' ) ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5898:1: ruleContributionType returns [Enumerator current=null] : ( (enumLiteral_0= 'help' ) | (enumLiteral_1= 'make' ) | (enumLiteral_2= 'somePositive' ) | (enumLiteral_3= 'unknown' ) | (enumLiteral_4= 'someNegative' ) | (enumLiteral_5= 'hurt' ) | (enumLiteral_6= 'break' ) ) ;
     public final Enumerator ruleContributionType() throws RecognitionException {
         Enumerator current = null;
 
@@ -15066,10 +15042,10 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5908:28: ( ( (enumLiteral_0= 'help' ) | (enumLiteral_1= 'make' ) | (enumLiteral_2= 'somePositive' ) | (enumLiteral_3= 'unknown' ) | (enumLiteral_4= 'someNegative' ) | (enumLiteral_5= 'hurt' ) | (enumLiteral_6= 'break' ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5909:1: ( (enumLiteral_0= 'help' ) | (enumLiteral_1= 'make' ) | (enumLiteral_2= 'somePositive' ) | (enumLiteral_3= 'unknown' ) | (enumLiteral_4= 'someNegative' ) | (enumLiteral_5= 'hurt' ) | (enumLiteral_6= 'break' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5900:28: ( ( (enumLiteral_0= 'help' ) | (enumLiteral_1= 'make' ) | (enumLiteral_2= 'somePositive' ) | (enumLiteral_3= 'unknown' ) | (enumLiteral_4= 'someNegative' ) | (enumLiteral_5= 'hurt' ) | (enumLiteral_6= 'break' ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5901:1: ( (enumLiteral_0= 'help' ) | (enumLiteral_1= 'make' ) | (enumLiteral_2= 'somePositive' ) | (enumLiteral_3= 'unknown' ) | (enumLiteral_4= 'someNegative' ) | (enumLiteral_5= 'hurt' ) | (enumLiteral_6= 'break' ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5909:1: ( (enumLiteral_0= 'help' ) | (enumLiteral_1= 'make' ) | (enumLiteral_2= 'somePositive' ) | (enumLiteral_3= 'unknown' ) | (enumLiteral_4= 'someNegative' ) | (enumLiteral_5= 'hurt' ) | (enumLiteral_6= 'break' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5901:1: ( (enumLiteral_0= 'help' ) | (enumLiteral_1= 'make' ) | (enumLiteral_2= 'somePositive' ) | (enumLiteral_3= 'unknown' ) | (enumLiteral_4= 'someNegative' ) | (enumLiteral_5= 'hurt' ) | (enumLiteral_6= 'break' ) )
             int alt89=7;
             switch ( input.LA(1) ) {
             case 63:
@@ -15116,12 +15092,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             switch (alt89) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5909:2: (enumLiteral_0= 'help' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5901:2: (enumLiteral_0= 'help' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5909:2: (enumLiteral_0= 'help' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5909:4: enumLiteral_0= 'help'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5901:2: (enumLiteral_0= 'help' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5901:4: enumLiteral_0= 'help'
                     {
-                    enumLiteral_0=(Token)match(input,63,FOLLOW_63_in_ruleContributionType14626); 
+                    enumLiteral_0=(Token)match(input,63,FOLLOW_63_in_ruleContributionType14614); 
 
                             current = grammarAccess.getContributionTypeAccess().getHelpEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getContributionTypeAccess().getHelpEnumLiteralDeclaration_0()); 
@@ -15133,12 +15109,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5915:6: (enumLiteral_1= 'make' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5907:6: (enumLiteral_1= 'make' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5915:6: (enumLiteral_1= 'make' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5915:8: enumLiteral_1= 'make'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5907:6: (enumLiteral_1= 'make' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5907:8: enumLiteral_1= 'make'
                     {
-                    enumLiteral_1=(Token)match(input,64,FOLLOW_64_in_ruleContributionType14643); 
+                    enumLiteral_1=(Token)match(input,64,FOLLOW_64_in_ruleContributionType14631); 
 
                             current = grammarAccess.getContributionTypeAccess().getMakeEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getContributionTypeAccess().getMakeEnumLiteralDeclaration_1()); 
@@ -15150,12 +15126,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5921:6: (enumLiteral_2= 'somePositive' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5913:6: (enumLiteral_2= 'somePositive' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5921:6: (enumLiteral_2= 'somePositive' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5921:8: enumLiteral_2= 'somePositive'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5913:6: (enumLiteral_2= 'somePositive' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5913:8: enumLiteral_2= 'somePositive'
                     {
-                    enumLiteral_2=(Token)match(input,65,FOLLOW_65_in_ruleContributionType14660); 
+                    enumLiteral_2=(Token)match(input,65,FOLLOW_65_in_ruleContributionType14648); 
 
                             current = grammarAccess.getContributionTypeAccess().getSomePositiveEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getContributionTypeAccess().getSomePositiveEnumLiteralDeclaration_2()); 
@@ -15167,12 +15143,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5927:6: (enumLiteral_3= 'unknown' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5919:6: (enumLiteral_3= 'unknown' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5927:6: (enumLiteral_3= 'unknown' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5927:8: enumLiteral_3= 'unknown'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5919:6: (enumLiteral_3= 'unknown' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5919:8: enumLiteral_3= 'unknown'
                     {
-                    enumLiteral_3=(Token)match(input,66,FOLLOW_66_in_ruleContributionType14677); 
+                    enumLiteral_3=(Token)match(input,66,FOLLOW_66_in_ruleContributionType14665); 
 
                             current = grammarAccess.getContributionTypeAccess().getUnknownEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getContributionTypeAccess().getUnknownEnumLiteralDeclaration_3()); 
@@ -15184,12 +15160,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5933:6: (enumLiteral_4= 'someNegative' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5925:6: (enumLiteral_4= 'someNegative' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5933:6: (enumLiteral_4= 'someNegative' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5933:8: enumLiteral_4= 'someNegative'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5925:6: (enumLiteral_4= 'someNegative' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5925:8: enumLiteral_4= 'someNegative'
                     {
-                    enumLiteral_4=(Token)match(input,67,FOLLOW_67_in_ruleContributionType14694); 
+                    enumLiteral_4=(Token)match(input,67,FOLLOW_67_in_ruleContributionType14682); 
 
                             current = grammarAccess.getContributionTypeAccess().getSomeNegativeEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getContributionTypeAccess().getSomeNegativeEnumLiteralDeclaration_4()); 
@@ -15201,12 +15177,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5939:6: (enumLiteral_5= 'hurt' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5931:6: (enumLiteral_5= 'hurt' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5939:6: (enumLiteral_5= 'hurt' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5939:8: enumLiteral_5= 'hurt'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5931:6: (enumLiteral_5= 'hurt' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5931:8: enumLiteral_5= 'hurt'
                     {
-                    enumLiteral_5=(Token)match(input,68,FOLLOW_68_in_ruleContributionType14711); 
+                    enumLiteral_5=(Token)match(input,68,FOLLOW_68_in_ruleContributionType14699); 
 
                             current = grammarAccess.getContributionTypeAccess().getHurtEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getContributionTypeAccess().getHurtEnumLiteralDeclaration_5()); 
@@ -15218,12 +15194,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5945:6: (enumLiteral_6= 'break' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5937:6: (enumLiteral_6= 'break' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5945:6: (enumLiteral_6= 'break' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5945:8: enumLiteral_6= 'break'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5937:6: (enumLiteral_6= 'break' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5937:8: enumLiteral_6= 'break'
                     {
-                    enumLiteral_6=(Token)match(input,69,FOLLOW_69_in_ruleContributionType14728); 
+                    enumLiteral_6=(Token)match(input,69,FOLLOW_69_in_ruleContributionType14716); 
 
                             current = grammarAccess.getContributionTypeAccess().getBreakEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_6, grammarAccess.getContributionTypeAccess().getBreakEnumLiteralDeclaration_6()); 
@@ -15255,7 +15231,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualitativeLabel"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5955:1: ruleQualitativeLabel returns [Enumerator current=null] : ( (enumLiteral_0= 'denied' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'none' ) ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5947:1: ruleQualitativeLabel returns [Enumerator current=null] : ( (enumLiteral_0= 'denied' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'none' ) ) ;
     public final Enumerator ruleQualitativeLabel() throws RecognitionException {
         Enumerator current = null;
 
@@ -15269,10 +15245,10 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5957:28: ( ( (enumLiteral_0= 'denied' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'none' ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5958:1: ( (enumLiteral_0= 'denied' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'none' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5949:28: ( ( (enumLiteral_0= 'denied' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'none' ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5950:1: ( (enumLiteral_0= 'denied' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'none' ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5958:1: ( (enumLiteral_0= 'denied' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'none' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5950:1: ( (enumLiteral_0= 'denied' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'none' ) )
             int alt90=7;
             switch ( input.LA(1) ) {
             case 70:
@@ -15319,12 +15295,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             switch (alt90) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5958:2: (enumLiteral_0= 'denied' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5950:2: (enumLiteral_0= 'denied' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5958:2: (enumLiteral_0= 'denied' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5958:4: enumLiteral_0= 'denied'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5950:2: (enumLiteral_0= 'denied' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5950:4: enumLiteral_0= 'denied'
                     {
-                    enumLiteral_0=(Token)match(input,70,FOLLOW_70_in_ruleQualitativeLabel14773); 
+                    enumLiteral_0=(Token)match(input,70,FOLLOW_70_in_ruleQualitativeLabel14761); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getDeniedEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getQualitativeLabelAccess().getDeniedEnumLiteralDeclaration_0()); 
@@ -15336,12 +15312,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5964:6: (enumLiteral_1= 'weaklyDenied' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5956:6: (enumLiteral_1= 'weaklyDenied' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5964:6: (enumLiteral_1= 'weaklyDenied' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5964:8: enumLiteral_1= 'weaklyDenied'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5956:6: (enumLiteral_1= 'weaklyDenied' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5956:8: enumLiteral_1= 'weaklyDenied'
                     {
-                    enumLiteral_1=(Token)match(input,71,FOLLOW_71_in_ruleQualitativeLabel14790); 
+                    enumLiteral_1=(Token)match(input,71,FOLLOW_71_in_ruleQualitativeLabel14778); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getWeaklyDeniedEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getQualitativeLabelAccess().getWeaklyDeniedEnumLiteralDeclaration_1()); 
@@ -15353,12 +15329,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5970:6: (enumLiteral_2= 'weaklySatisfied' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5962:6: (enumLiteral_2= 'weaklySatisfied' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5970:6: (enumLiteral_2= 'weaklySatisfied' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5970:8: enumLiteral_2= 'weaklySatisfied'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5962:6: (enumLiteral_2= 'weaklySatisfied' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5962:8: enumLiteral_2= 'weaklySatisfied'
                     {
-                    enumLiteral_2=(Token)match(input,72,FOLLOW_72_in_ruleQualitativeLabel14807); 
+                    enumLiteral_2=(Token)match(input,72,FOLLOW_72_in_ruleQualitativeLabel14795); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getWeaklySatisfiedEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getQualitativeLabelAccess().getWeaklySatisfiedEnumLiteralDeclaration_2()); 
@@ -15370,12 +15346,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5976:6: (enumLiteral_3= 'satisfied' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5968:6: (enumLiteral_3= 'satisfied' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5976:6: (enumLiteral_3= 'satisfied' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5976:8: enumLiteral_3= 'satisfied'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5968:6: (enumLiteral_3= 'satisfied' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5968:8: enumLiteral_3= 'satisfied'
                     {
-                    enumLiteral_3=(Token)match(input,73,FOLLOW_73_in_ruleQualitativeLabel14824); 
+                    enumLiteral_3=(Token)match(input,73,FOLLOW_73_in_ruleQualitativeLabel14812); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getSatisfiedEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getQualitativeLabelAccess().getSatisfiedEnumLiteralDeclaration_3()); 
@@ -15387,12 +15363,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5982:6: (enumLiteral_4= 'conflict' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5974:6: (enumLiteral_4= 'conflict' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5982:6: (enumLiteral_4= 'conflict' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5982:8: enumLiteral_4= 'conflict'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5974:6: (enumLiteral_4= 'conflict' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5974:8: enumLiteral_4= 'conflict'
                     {
-                    enumLiteral_4=(Token)match(input,74,FOLLOW_74_in_ruleQualitativeLabel14841); 
+                    enumLiteral_4=(Token)match(input,74,FOLLOW_74_in_ruleQualitativeLabel14829); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getConflictEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getQualitativeLabelAccess().getConflictEnumLiteralDeclaration_4()); 
@@ -15404,12 +15380,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5988:6: (enumLiteral_5= 'unknown' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5980:6: (enumLiteral_5= 'unknown' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5988:6: (enumLiteral_5= 'unknown' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5988:8: enumLiteral_5= 'unknown'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5980:6: (enumLiteral_5= 'unknown' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5980:8: enumLiteral_5= 'unknown'
                     {
-                    enumLiteral_5=(Token)match(input,66,FOLLOW_66_in_ruleQualitativeLabel14858); 
+                    enumLiteral_5=(Token)match(input,66,FOLLOW_66_in_ruleQualitativeLabel14846); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getUnknownEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getQualitativeLabelAccess().getUnknownEnumLiteralDeclaration_5()); 
@@ -15421,12 +15397,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5994:6: (enumLiteral_6= 'none' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5986:6: (enumLiteral_6= 'none' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5994:6: (enumLiteral_6= 'none' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5994:8: enumLiteral_6= 'none'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5986:6: (enumLiteral_6= 'none' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5986:8: enumLiteral_6= 'none'
                     {
-                    enumLiteral_6=(Token)match(input,56,FOLLOW_56_in_ruleQualitativeLabel14875); 
+                    enumLiteral_6=(Token)match(input,56,FOLLOW_56_in_ruleQualitativeLabel14863); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getNoneEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_6, grammarAccess.getQualitativeLabelAccess().getNoneEnumLiteralDeclaration_6()); 
@@ -15458,7 +15434,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleColor"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6004:1: ruleColor returns [Enumerator current=null] : ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'black' ) | (enumLiteral_2= 'blue' ) | (enumLiteral_3= 'green' ) | (enumLiteral_4= 'cyan' ) | (enumLiteral_5= 'red' ) | (enumLiteral_6= 'purple' ) | (enumLiteral_7= 'yellow' ) | (enumLiteral_8= 'gray' ) | (enumLiteral_9= 'lightGray' ) | (enumLiteral_10= 'lightBlue' ) | (enumLiteral_11= 'lightGreen' ) | (enumLiteral_12= 'lightCray' ) | (enumLiteral_13= 'lightRed' ) | (enumLiteral_14= 'lightPurple' ) | (enumLiteral_15= 'lightYellow' ) ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5996:1: ruleColor returns [Enumerator current=null] : ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'black' ) | (enumLiteral_2= 'blue' ) | (enumLiteral_3= 'green' ) | (enumLiteral_4= 'cyan' ) | (enumLiteral_5= 'red' ) | (enumLiteral_6= 'purple' ) | (enumLiteral_7= 'yellow' ) | (enumLiteral_8= 'gray' ) | (enumLiteral_9= 'lightGray' ) | (enumLiteral_10= 'lightBlue' ) | (enumLiteral_11= 'lightGreen' ) | (enumLiteral_12= 'lightCray' ) | (enumLiteral_13= 'lightRed' ) | (enumLiteral_14= 'lightPurple' ) | (enumLiteral_15= 'lightYellow' ) ) ;
     public final Enumerator ruleColor() throws RecognitionException {
         Enumerator current = null;
 
@@ -15481,10 +15457,10 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6006:28: ( ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'black' ) | (enumLiteral_2= 'blue' ) | (enumLiteral_3= 'green' ) | (enumLiteral_4= 'cyan' ) | (enumLiteral_5= 'red' ) | (enumLiteral_6= 'purple' ) | (enumLiteral_7= 'yellow' ) | (enumLiteral_8= 'gray' ) | (enumLiteral_9= 'lightGray' ) | (enumLiteral_10= 'lightBlue' ) | (enumLiteral_11= 'lightGreen' ) | (enumLiteral_12= 'lightCray' ) | (enumLiteral_13= 'lightRed' ) | (enumLiteral_14= 'lightPurple' ) | (enumLiteral_15= 'lightYellow' ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6007:1: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'black' ) | (enumLiteral_2= 'blue' ) | (enumLiteral_3= 'green' ) | (enumLiteral_4= 'cyan' ) | (enumLiteral_5= 'red' ) | (enumLiteral_6= 'purple' ) | (enumLiteral_7= 'yellow' ) | (enumLiteral_8= 'gray' ) | (enumLiteral_9= 'lightGray' ) | (enumLiteral_10= 'lightBlue' ) | (enumLiteral_11= 'lightGreen' ) | (enumLiteral_12= 'lightCray' ) | (enumLiteral_13= 'lightRed' ) | (enumLiteral_14= 'lightPurple' ) | (enumLiteral_15= 'lightYellow' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5998:28: ( ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'black' ) | (enumLiteral_2= 'blue' ) | (enumLiteral_3= 'green' ) | (enumLiteral_4= 'cyan' ) | (enumLiteral_5= 'red' ) | (enumLiteral_6= 'purple' ) | (enumLiteral_7= 'yellow' ) | (enumLiteral_8= 'gray' ) | (enumLiteral_9= 'lightGray' ) | (enumLiteral_10= 'lightBlue' ) | (enumLiteral_11= 'lightGreen' ) | (enumLiteral_12= 'lightCray' ) | (enumLiteral_13= 'lightRed' ) | (enumLiteral_14= 'lightPurple' ) | (enumLiteral_15= 'lightYellow' ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5999:1: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'black' ) | (enumLiteral_2= 'blue' ) | (enumLiteral_3= 'green' ) | (enumLiteral_4= 'cyan' ) | (enumLiteral_5= 'red' ) | (enumLiteral_6= 'purple' ) | (enumLiteral_7= 'yellow' ) | (enumLiteral_8= 'gray' ) | (enumLiteral_9= 'lightGray' ) | (enumLiteral_10= 'lightBlue' ) | (enumLiteral_11= 'lightGreen' ) | (enumLiteral_12= 'lightCray' ) | (enumLiteral_13= 'lightRed' ) | (enumLiteral_14= 'lightPurple' ) | (enumLiteral_15= 'lightYellow' ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6007:1: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'black' ) | (enumLiteral_2= 'blue' ) | (enumLiteral_3= 'green' ) | (enumLiteral_4= 'cyan' ) | (enumLiteral_5= 'red' ) | (enumLiteral_6= 'purple' ) | (enumLiteral_7= 'yellow' ) | (enumLiteral_8= 'gray' ) | (enumLiteral_9= 'lightGray' ) | (enumLiteral_10= 'lightBlue' ) | (enumLiteral_11= 'lightGreen' ) | (enumLiteral_12= 'lightCray' ) | (enumLiteral_13= 'lightRed' ) | (enumLiteral_14= 'lightPurple' ) | (enumLiteral_15= 'lightYellow' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5999:1: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'black' ) | (enumLiteral_2= 'blue' ) | (enumLiteral_3= 'green' ) | (enumLiteral_4= 'cyan' ) | (enumLiteral_5= 'red' ) | (enumLiteral_6= 'purple' ) | (enumLiteral_7= 'yellow' ) | (enumLiteral_8= 'gray' ) | (enumLiteral_9= 'lightGray' ) | (enumLiteral_10= 'lightBlue' ) | (enumLiteral_11= 'lightGreen' ) | (enumLiteral_12= 'lightCray' ) | (enumLiteral_13= 'lightRed' ) | (enumLiteral_14= 'lightPurple' ) | (enumLiteral_15= 'lightYellow' ) )
             int alt91=16;
             switch ( input.LA(1) ) {
             case 75:
@@ -15576,12 +15552,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             switch (alt91) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6007:2: (enumLiteral_0= 'white' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5999:2: (enumLiteral_0= 'white' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6007:2: (enumLiteral_0= 'white' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6007:4: enumLiteral_0= 'white'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5999:2: (enumLiteral_0= 'white' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5999:4: enumLiteral_0= 'white'
                     {
-                    enumLiteral_0=(Token)match(input,75,FOLLOW_75_in_ruleColor14920); 
+                    enumLiteral_0=(Token)match(input,75,FOLLOW_75_in_ruleColor14908); 
 
                             current = grammarAccess.getColorAccess().getWhiteEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getColorAccess().getWhiteEnumLiteralDeclaration_0()); 
@@ -15593,12 +15569,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6013:6: (enumLiteral_1= 'black' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6005:6: (enumLiteral_1= 'black' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6013:6: (enumLiteral_1= 'black' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6013:8: enumLiteral_1= 'black'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6005:6: (enumLiteral_1= 'black' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6005:8: enumLiteral_1= 'black'
                     {
-                    enumLiteral_1=(Token)match(input,76,FOLLOW_76_in_ruleColor14937); 
+                    enumLiteral_1=(Token)match(input,76,FOLLOW_76_in_ruleColor14925); 
 
                             current = grammarAccess.getColorAccess().getBlackEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getColorAccess().getBlackEnumLiteralDeclaration_1()); 
@@ -15610,12 +15586,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6019:6: (enumLiteral_2= 'blue' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6011:6: (enumLiteral_2= 'blue' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6019:6: (enumLiteral_2= 'blue' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6019:8: enumLiteral_2= 'blue'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6011:6: (enumLiteral_2= 'blue' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6011:8: enumLiteral_2= 'blue'
                     {
-                    enumLiteral_2=(Token)match(input,77,FOLLOW_77_in_ruleColor14954); 
+                    enumLiteral_2=(Token)match(input,77,FOLLOW_77_in_ruleColor14942); 
 
                             current = grammarAccess.getColorAccess().getBlueEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getColorAccess().getBlueEnumLiteralDeclaration_2()); 
@@ -15627,12 +15603,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6025:6: (enumLiteral_3= 'green' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6017:6: (enumLiteral_3= 'green' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6025:6: (enumLiteral_3= 'green' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6025:8: enumLiteral_3= 'green'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6017:6: (enumLiteral_3= 'green' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6017:8: enumLiteral_3= 'green'
                     {
-                    enumLiteral_3=(Token)match(input,78,FOLLOW_78_in_ruleColor14971); 
+                    enumLiteral_3=(Token)match(input,78,FOLLOW_78_in_ruleColor14959); 
 
                             current = grammarAccess.getColorAccess().getGreenEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getColorAccess().getGreenEnumLiteralDeclaration_3()); 
@@ -15644,12 +15620,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6031:6: (enumLiteral_4= 'cyan' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6023:6: (enumLiteral_4= 'cyan' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6031:6: (enumLiteral_4= 'cyan' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6031:8: enumLiteral_4= 'cyan'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6023:6: (enumLiteral_4= 'cyan' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6023:8: enumLiteral_4= 'cyan'
                     {
-                    enumLiteral_4=(Token)match(input,79,FOLLOW_79_in_ruleColor14988); 
+                    enumLiteral_4=(Token)match(input,79,FOLLOW_79_in_ruleColor14976); 
 
                             current = grammarAccess.getColorAccess().getCyanEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getColorAccess().getCyanEnumLiteralDeclaration_4()); 
@@ -15661,12 +15637,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6037:6: (enumLiteral_5= 'red' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6029:6: (enumLiteral_5= 'red' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6037:6: (enumLiteral_5= 'red' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6037:8: enumLiteral_5= 'red'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6029:6: (enumLiteral_5= 'red' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6029:8: enumLiteral_5= 'red'
                     {
-                    enumLiteral_5=(Token)match(input,80,FOLLOW_80_in_ruleColor15005); 
+                    enumLiteral_5=(Token)match(input,80,FOLLOW_80_in_ruleColor14993); 
 
                             current = grammarAccess.getColorAccess().getRedEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getColorAccess().getRedEnumLiteralDeclaration_5()); 
@@ -15678,12 +15654,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6043:6: (enumLiteral_6= 'purple' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6035:6: (enumLiteral_6= 'purple' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6043:6: (enumLiteral_6= 'purple' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6043:8: enumLiteral_6= 'purple'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6035:6: (enumLiteral_6= 'purple' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6035:8: enumLiteral_6= 'purple'
                     {
-                    enumLiteral_6=(Token)match(input,81,FOLLOW_81_in_ruleColor15022); 
+                    enumLiteral_6=(Token)match(input,81,FOLLOW_81_in_ruleColor15010); 
 
                             current = grammarAccess.getColorAccess().getPurpleEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_6, grammarAccess.getColorAccess().getPurpleEnumLiteralDeclaration_6()); 
@@ -15695,12 +15671,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6049:6: (enumLiteral_7= 'yellow' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6041:6: (enumLiteral_7= 'yellow' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6049:6: (enumLiteral_7= 'yellow' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6049:8: enumLiteral_7= 'yellow'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6041:6: (enumLiteral_7= 'yellow' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6041:8: enumLiteral_7= 'yellow'
                     {
-                    enumLiteral_7=(Token)match(input,82,FOLLOW_82_in_ruleColor15039); 
+                    enumLiteral_7=(Token)match(input,82,FOLLOW_82_in_ruleColor15027); 
 
                             current = grammarAccess.getColorAccess().getYellowEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_7, grammarAccess.getColorAccess().getYellowEnumLiteralDeclaration_7()); 
@@ -15712,12 +15688,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6055:6: (enumLiteral_8= 'gray' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6047:6: (enumLiteral_8= 'gray' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6055:6: (enumLiteral_8= 'gray' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6055:8: enumLiteral_8= 'gray'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6047:6: (enumLiteral_8= 'gray' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6047:8: enumLiteral_8= 'gray'
                     {
-                    enumLiteral_8=(Token)match(input,83,FOLLOW_83_in_ruleColor15056); 
+                    enumLiteral_8=(Token)match(input,83,FOLLOW_83_in_ruleColor15044); 
 
                             current = grammarAccess.getColorAccess().getGrayEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_8, grammarAccess.getColorAccess().getGrayEnumLiteralDeclaration_8()); 
@@ -15729,12 +15705,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6061:6: (enumLiteral_9= 'lightGray' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6053:6: (enumLiteral_9= 'lightGray' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6061:6: (enumLiteral_9= 'lightGray' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6061:8: enumLiteral_9= 'lightGray'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6053:6: (enumLiteral_9= 'lightGray' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6053:8: enumLiteral_9= 'lightGray'
                     {
-                    enumLiteral_9=(Token)match(input,84,FOLLOW_84_in_ruleColor15073); 
+                    enumLiteral_9=(Token)match(input,84,FOLLOW_84_in_ruleColor15061); 
 
                             current = grammarAccess.getColorAccess().getLightGrayEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_9, grammarAccess.getColorAccess().getLightGrayEnumLiteralDeclaration_9()); 
@@ -15746,12 +15722,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6067:6: (enumLiteral_10= 'lightBlue' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6059:6: (enumLiteral_10= 'lightBlue' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6067:6: (enumLiteral_10= 'lightBlue' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6067:8: enumLiteral_10= 'lightBlue'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6059:6: (enumLiteral_10= 'lightBlue' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6059:8: enumLiteral_10= 'lightBlue'
                     {
-                    enumLiteral_10=(Token)match(input,85,FOLLOW_85_in_ruleColor15090); 
+                    enumLiteral_10=(Token)match(input,85,FOLLOW_85_in_ruleColor15078); 
 
                             current = grammarAccess.getColorAccess().getLightBlueEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_10, grammarAccess.getColorAccess().getLightBlueEnumLiteralDeclaration_10()); 
@@ -15763,12 +15739,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6073:6: (enumLiteral_11= 'lightGreen' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6065:6: (enumLiteral_11= 'lightGreen' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6073:6: (enumLiteral_11= 'lightGreen' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6073:8: enumLiteral_11= 'lightGreen'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6065:6: (enumLiteral_11= 'lightGreen' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6065:8: enumLiteral_11= 'lightGreen'
                     {
-                    enumLiteral_11=(Token)match(input,86,FOLLOW_86_in_ruleColor15107); 
+                    enumLiteral_11=(Token)match(input,86,FOLLOW_86_in_ruleColor15095); 
 
                             current = grammarAccess.getColorAccess().getLightGreenEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_11, grammarAccess.getColorAccess().getLightGreenEnumLiteralDeclaration_11()); 
@@ -15780,12 +15756,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6079:6: (enumLiteral_12= 'lightCray' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6071:6: (enumLiteral_12= 'lightCray' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6079:6: (enumLiteral_12= 'lightCray' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6079:8: enumLiteral_12= 'lightCray'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6071:6: (enumLiteral_12= 'lightCray' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6071:8: enumLiteral_12= 'lightCray'
                     {
-                    enumLiteral_12=(Token)match(input,87,FOLLOW_87_in_ruleColor15124); 
+                    enumLiteral_12=(Token)match(input,87,FOLLOW_87_in_ruleColor15112); 
 
                             current = grammarAccess.getColorAccess().getLightCrayEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_12, grammarAccess.getColorAccess().getLightCrayEnumLiteralDeclaration_12()); 
@@ -15797,12 +15773,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6085:6: (enumLiteral_13= 'lightRed' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6077:6: (enumLiteral_13= 'lightRed' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6085:6: (enumLiteral_13= 'lightRed' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6085:8: enumLiteral_13= 'lightRed'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6077:6: (enumLiteral_13= 'lightRed' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6077:8: enumLiteral_13= 'lightRed'
                     {
-                    enumLiteral_13=(Token)match(input,88,FOLLOW_88_in_ruleColor15141); 
+                    enumLiteral_13=(Token)match(input,88,FOLLOW_88_in_ruleColor15129); 
 
                             current = grammarAccess.getColorAccess().getLightRedEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_13, grammarAccess.getColorAccess().getLightRedEnumLiteralDeclaration_13()); 
@@ -15814,12 +15790,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6091:6: (enumLiteral_14= 'lightPurple' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6083:6: (enumLiteral_14= 'lightPurple' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6091:6: (enumLiteral_14= 'lightPurple' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6091:8: enumLiteral_14= 'lightPurple'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6083:6: (enumLiteral_14= 'lightPurple' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6083:8: enumLiteral_14= 'lightPurple'
                     {
-                    enumLiteral_14=(Token)match(input,89,FOLLOW_89_in_ruleColor15158); 
+                    enumLiteral_14=(Token)match(input,89,FOLLOW_89_in_ruleColor15146); 
 
                             current = grammarAccess.getColorAccess().getLightPurpleEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_14, grammarAccess.getColorAccess().getLightPurpleEnumLiteralDeclaration_14()); 
@@ -15831,12 +15807,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 16 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6097:6: (enumLiteral_15= 'lightYellow' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6089:6: (enumLiteral_15= 'lightYellow' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6097:6: (enumLiteral_15= 'lightYellow' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6097:8: enumLiteral_15= 'lightYellow'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6089:6: (enumLiteral_15= 'lightYellow' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6089:8: enumLiteral_15= 'lightYellow'
                     {
-                    enumLiteral_15=(Token)match(input,90,FOLLOW_90_in_ruleColor15175); 
+                    enumLiteral_15=(Token)match(input,90,FOLLOW_90_in_ruleColor15163); 
 
                             current = grammarAccess.getColorAccess().getLightYellowEnumLiteralDeclaration_15().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_15, grammarAccess.getColorAccess().getLightYellowEnumLiteralDeclaration_15()); 
@@ -15868,7 +15844,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBoolean"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6111:1: ruleBoolean returns [Enumerator current=null] : ( (enumLiteral_0= 'false' ) | (enumLiteral_1= 'true' ) ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6103:1: ruleBoolean returns [Enumerator current=null] : ( (enumLiteral_0= 'false' ) | (enumLiteral_1= 'true' ) ) ;
     public final Enumerator ruleBoolean() throws RecognitionException {
         Enumerator current = null;
 
@@ -15877,10 +15853,10 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6113:28: ( ( (enumLiteral_0= 'false' ) | (enumLiteral_1= 'true' ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6114:1: ( (enumLiteral_0= 'false' ) | (enumLiteral_1= 'true' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6105:28: ( ( (enumLiteral_0= 'false' ) | (enumLiteral_1= 'true' ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6106:1: ( (enumLiteral_0= 'false' ) | (enumLiteral_1= 'true' ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6114:1: ( (enumLiteral_0= 'false' ) | (enumLiteral_1= 'true' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6106:1: ( (enumLiteral_0= 'false' ) | (enumLiteral_1= 'true' ) )
             int alt92=2;
             int LA92_0 = input.LA(1);
 
@@ -15898,12 +15874,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             }
             switch (alt92) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6114:2: (enumLiteral_0= 'false' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6106:2: (enumLiteral_0= 'false' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6114:2: (enumLiteral_0= 'false' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6114:4: enumLiteral_0= 'false'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6106:2: (enumLiteral_0= 'false' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6106:4: enumLiteral_0= 'false'
                     {
-                    enumLiteral_0=(Token)match(input,91,FOLLOW_91_in_ruleBoolean15224); 
+                    enumLiteral_0=(Token)match(input,91,FOLLOW_91_in_ruleBoolean15212); 
 
                             current = grammarAccess.getBooleanAccess().getFalseEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getBooleanAccess().getFalseEnumLiteralDeclaration_0()); 
@@ -15915,12 +15891,12 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6120:6: (enumLiteral_1= 'true' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6112:6: (enumLiteral_1= 'true' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6120:6: (enumLiteral_1= 'true' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6120:8: enumLiteral_1= 'true'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6112:6: (enumLiteral_1= 'true' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:6112:8: enumLiteral_1= 'true'
                     {
-                    enumLiteral_1=(Token)match(input,92,FOLLOW_92_in_ruleBoolean15241); 
+                    enumLiteral_1=(Token)match(input,92,FOLLOW_92_in_ruleBoolean15229); 
 
                             current = grammarAccess.getBooleanAccess().getTrueEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getBooleanAccess().getTrueEnumLiteralDeclaration_1()); 
@@ -15959,17 +15935,17 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
     protected DFA42 dfa42 = new DFA42(this);
     protected DFA71 dfa71 = new DFA71(this);
     static final String DFA2_eotS =
-        "\12\uffff";
+        "\10\uffff";
     static final String DFA2_eofS =
-        "\12\uffff";
+        "\10\uffff";
     static final String DFA2_minS =
-        "\1\4\1\uffff\1\4\2\uffff\5\4";
+        "\1\4\1\uffff\1\4\2\uffff\3\4";
     static final String DFA2_maxS =
-        "\1\66\1\uffff\1\67\2\uffff\1\4\2\67\1\4\1\67";
+        "\1\66\1\uffff\1\67\2\uffff\1\4\2\67";
     static final String DFA2_acceptS =
-        "\1\uffff\1\1\1\uffff\1\2\1\3\5\uffff";
+        "\1\uffff\1\1\1\uffff\1\2\1\3\3\uffff";
     static final String DFA2_specialS =
-        "\12\uffff}>";
+        "\10\uffff}>";
     static final String[] DFA2_transitionS = {
             "\1\2\1\3\12\uffff\1\1\6\uffff\1\1\1\uffff\5\1\1\uffff\3\4\2"+
             "\1\1\uffff\1\1\13\uffff\6\1",
@@ -15978,10 +15954,8 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             "",
             "",
             "\1\7",
-            "\1\1\14\uffff\1\4\14\uffff\1\4\30\uffff\1\10",
-            "\1\6\16\uffff\1\1\13\uffff\3\1\25\uffff\1\5",
-            "\1\11",
-            "\1\1\14\uffff\1\4\14\uffff\1\4\30\uffff\1\10"
+            "\1\1\14\uffff\1\4\14\uffff\1\4\30\uffff\1\4",
+            "\1\4\16\uffff\1\1\13\uffff\3\1\25\uffff\1\5"
     };
 
     static final short[] DFA2_eot = DFA.unpackEncodedString(DFA2_eotS);
@@ -16022,19 +15996,20 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
     static final String DFA3_eofS =
         "\21\uffff";
     static final String DFA3_minS =
-        "\1\4\1\uffff\1\4\12\uffff\1\4\2\uffff\1\4";
+        "\1\4\1\uffff\1\4\13\uffff\1\4\1\uffff\1\23";
     static final String DFA3_maxS =
-        "\1\66\1\uffff\1\67\12\uffff\1\4\2\uffff\1\67";
+        "\1\66\1\uffff\1\67\13\uffff\1\4\1\uffff\1\67";
     static final String DFA3_acceptS =
         "\1\uffff\1\1\1\uffff\1\3\1\4\1\5\1\6\1\10\1\11\1\12\1\13\1\14\1"+
-        "\15\1\uffff\1\2\1\7\1\uffff";
+        "\15\1\2\1\uffff\1\7\1\uffff";
     static final String DFA3_specialS =
         "\21\uffff}>";
     static final String[] DFA3_transitionS = {
             "\1\2\13\uffff\1\3\6\uffff\1\1\1\uffff\5\1\4\uffff\1\14\1\4"+
             "\1\uffff\1\6\13\uffff\1\11\1\7\1\10\1\12\1\13\1\5",
             "",
-            "\1\16\16\uffff\1\17\13\uffff\3\16\25\uffff\1\15",
+            "\1\15\16\uffff\1\17\13\uffff\3\15\25\uffff\1\16",
+            "",
             "",
             "",
             "",
@@ -16047,8 +16022,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             "",
             "\1\20",
             "",
-            "",
-            "\1\16\16\uffff\1\17\13\uffff\3\16\25\uffff\1\15"
+            "\1\17\13\uffff\3\15\25\uffff\1\16"
     };
 
     static final short[] DFA3_eot = DFA.unpackEncodedString(DFA3_eotS);
@@ -16095,7 +16069,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
     static final String DFA11_acceptS =
         "\1\uffff\1\2\7\uffff\1\1";
     static final String DFA11_specialS =
-        "\2\uffff\1\6\1\1\1\2\1\3\1\4\1\5\1\0\1\uffff}>";
+        "\2\uffff\1\5\1\0\1\1\1\2\1\3\1\4\1\6\1\uffff}>";
     static final String[] DFA11_transitionS = {
             "\1\10\12\uffff\1\1\2\uffff\1\1\1\uffff\3\1\1\2\1\uffff\1\3"+
             "\1\4\1\5\1\6\1\7\26\uffff\1\1",
@@ -16147,21 +16121,6 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA11_8 = input.LA(1);
-
-                         
-                        int index11_8 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( ((true)) ) {s = 9;}
-
-                        else if ( (true) ) {s = 1;}
-
-                         
-                        input.seek(index11_8);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
                         int LA11_3 = input.LA(1);
 
                          
@@ -16176,7 +16135,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                         input.seek(index11_3);
                         if ( s>=0 ) return s;
                         break;
-                    case 2 : 
+                    case 1 : 
                         int LA11_4 = input.LA(1);
 
                          
@@ -16191,7 +16150,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                         input.seek(index11_4);
                         if ( s>=0 ) return s;
                         break;
-                    case 3 : 
+                    case 2 : 
                         int LA11_5 = input.LA(1);
 
                          
@@ -16206,7 +16165,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                         input.seek(index11_5);
                         if ( s>=0 ) return s;
                         break;
-                    case 4 : 
+                    case 3 : 
                         int LA11_6 = input.LA(1);
 
                          
@@ -16221,7 +16180,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                         input.seek(index11_6);
                         if ( s>=0 ) return s;
                         break;
-                    case 5 : 
+                    case 4 : 
                         int LA11_7 = input.LA(1);
 
                          
@@ -16236,7 +16195,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                         input.seek(index11_7);
                         if ( s>=0 ) return s;
                         break;
-                    case 6 : 
+                    case 5 : 
                         int LA11_2 = input.LA(1);
 
                          
@@ -16251,6 +16210,21 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                         input.seek(index11_2);
                         if ( s>=0 ) return s;
                         break;
+                    case 6 : 
+                        int LA11_8 = input.LA(1);
+
+                         
+                        int index11_8 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( ((true)) ) {s = 9;}
+
+                        else if ( (true) ) {s = 1;}
+
+                         
+                        input.seek(index11_8);
+                        if ( s>=0 ) return s;
+                        break;
             }
             NoViableAltException nvae =
                 new NoViableAltException(getDescription(), 11, _s, input);
@@ -16263,22 +16237,22 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
     static final String DFA42_eofS =
         "\10\uffff";
     static final String DFA42_minS =
-        "\3\4\4\uffff\1\4";
+        "\2\4\1\uffff\1\4\3\uffff\1\37";
     static final String DFA42_maxS =
-        "\1\4\1\67\1\4\4\uffff\1\67";
+        "\1\4\1\67\1\uffff\1\4\3\uffff\1\67";
     static final String DFA42_acceptS =
-        "\3\uffff\1\2\1\1\1\4\1\3\1\uffff";
+        "\2\uffff\1\4\1\uffff\1\2\1\3\1\1\1\uffff";
     static final String DFA42_specialS =
         "\10\uffff}>";
     static final String[] DFA42_transitionS = {
             "\1\1",
-            "\1\5\32\uffff\1\6\1\3\1\4\25\uffff\1\2",
+            "\1\2\32\uffff\1\5\1\4\1\6\25\uffff\1\3",
+            "",
             "\1\7",
             "",
             "",
             "",
-            "",
-            "\1\5\32\uffff\1\6\1\3\1\4\25\uffff\1\2"
+            "\1\5\1\4\1\6\25\uffff\1\3"
     };
 
     static final short[] DFA42_eot = DFA.unpackEncodedString(DFA42_eotS);
@@ -16371,7 +16345,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
             this.transition = DFA71_transition;
         }
         public String getDescription() {
-            return "()+ loopback of 4578:3: ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+";
+            return "()+ loopback of 4570:3: ( ({...}? => ( ({...}? => (otherlv_1= 'target' otherlv_2= '=' ( (lv_targetValue_3_0= RULE_DOUBLE ) ) otherlv_4= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_5= 'threshold' otherlv_6= '=' ( (lv_thresholdValue_7_0= RULE_DOUBLE ) ) otherlv_8= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'worst' otherlv_10= '=' ( (lv_worstValue_11_0= RULE_DOUBLE ) ) otherlv_12= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'eval' otherlv_14= '=' ( (lv_evaluationValue_15_0= RULE_DOUBLE ) ) otherlv_16= ';' ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'unit' otherlv_18= '=' ( (lv_unit_19_0= RULE_STRING ) ) otherlv_20= ';' ) ) ) ) )+";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -16707,307 +16681,307 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleNormalLink_in_ruleNormalElementLink7453 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleNormalLink_in_entryRuleNormalLink7488 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleNormalLink7498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleNormalLink7546 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleNormalLink7569 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleNormalLink7592 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_30_in_ruleNormalLink7605 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleNormalLink7628 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_17_in_ruleNormalLink7642 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNormalDependency_in_entryRuleNormalDependency7678 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNormalDependency7688 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleNormalDependency7736 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleNormalDependency7748 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleDependencyEnd_in_ruleNormalDependency7769 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_30_in_ruleNormalDependency7782 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleDependencyEnd_in_ruleNormalDependency7803 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_17_in_ruleNormalDependency7817 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNormalContribution_in_entryRuleNormalContribution7853 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNormalContribution7863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleNormalContribution7911 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleNormalContribution7923 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleContributionEnd_in_ruleNormalContribution7944 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_30_in_ruleNormalContribution7957 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleContributionEnd_in_ruleNormalContribution7978 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_17_in_ruleNormalContribution7992 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNormalDecomposition_in_entryRuleNormalDecomposition8028 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNormalDecomposition8038 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleNormalDecomposition8086 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_ruleNormalDecomposition8098 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleDecompositionEnd_in_ruleNormalDecomposition8119 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_30_in_ruleNormalDecomposition8132 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleDecompositionEnd_in_ruleNormalDecomposition8153 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_17_in_ruleNormalDecomposition8167 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInLineElementLink_in_entryRuleInLineElementLink8203 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInLineElementLink8213 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInLineDecomposition_in_ruleInLineElementLink8260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInLineContribution_in_ruleInLineElementLink8287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInLineDependency_in_ruleInLineElementLink8314 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInLineLink_in_ruleInLineElementLink8341 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInLineLink_in_entryRuleInLineLink8376 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInLineLink8386 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleInLineLink8434 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleInLineLink8457 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_30_in_ruleInLineLink8470 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleInLineLink8493 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_17_in_ruleInLineLink8507 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInLineDependency_in_entryRuleInLineDependency8543 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInLineDependency8553 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleInLineDependency8590 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleDependencyEnd_in_ruleInLineDependency8611 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_30_in_ruleInLineDependency8624 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleDependencyEnd_in_ruleInLineDependency8645 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_17_in_ruleInLineDependency8659 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInLineContribution_in_entryRuleInLineContribution8695 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInLineContribution8705 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleInLineContribution8742 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleContributionEnd_in_ruleInLineContribution8763 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_30_in_ruleInLineContribution8776 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleContributionEnd_in_ruleInLineContribution8797 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_17_in_ruleInLineContribution8811 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInLineDecomposition_in_entryRuleInLineDecomposition8847 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInLineDecomposition8857 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleInLineDecomposition8894 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleDecompositionEnd_in_ruleInLineDecomposition8915 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_30_in_ruleInLineDecomposition8928 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleDecompositionEnd_in_ruleInLineDecomposition8949 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_17_in_ruleInLineDecomposition8963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDecompositionEnd_in_entryRuleDecompositionEnd8999 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDecompositionEnd9009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleDecompositionEnd9066 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_14_in_ruleDecompositionEnd9079 = new BitSet(new long[]{0x0000000000008020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleDecompositionEnd9096 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleDecompositionEnd9114 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContributionEnd_in_entryRuleContributionEnd9152 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContributionEnd9162 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContributionEnd9219 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_14_in_ruleContributionEnd9232 = new BitSet(new long[]{0x8000000000048040L,0x000000000000003FL});
-    public static final BitSet FOLLOW_18_in_ruleContributionEnd9290 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleContributionEnd9302 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionEnd9319 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleContributionEnd9336 = new BitSet(new long[]{0x8000000000048040L,0x000000000000003FL});
-    public static final BitSet FOLLOW_ruleContributionType_in_ruleContributionEnd9414 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionEnd9437 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleContributionEnd9455 = new BitSet(new long[]{0x8000000000048040L,0x000000000000003FL});
-    public static final BitSet FOLLOW_15_in_ruleContributionEnd9508 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDependencyEnd_in_entryRuleDependencyEnd9546 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDependencyEnd9556 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleDependencyEnd9613 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_14_in_ruleDependencyEnd9626 = new BitSet(new long[]{0x0000000000008020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleDependencyEnd9643 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleDependencyEnd9661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLinkType_in_entryRuleLinkType9699 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLinkType9709 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleLinkType9746 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLinkType9763 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleLinkType9780 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStrategyGroup_in_entryRuleStrategyGroup9816 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStrategyGroup9826 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleStrategyGroup9863 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleStrategyGroup9880 = new BitSet(new long[]{0x0000001000020000L});
-    public static final BitSet FOLLOW_36_in_ruleStrategyGroup9898 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleStrategyGroup9921 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_30_in_ruleStrategyGroup9934 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleStrategyGroup9957 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_17_in_ruleStrategyGroup9973 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEvaluationStrategy_in_entryRuleEvaluationStrategy10009 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEvaluationStrategy10019 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleEvaluationStrategy10056 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleEvaluationStrategy10073 = new BitSet(new long[]{0x0000004000024000L});
-    public static final BitSet FOLLOW_38_in_ruleEvaluationStrategy10091 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleEvaluationStrategy10114 = new BitSet(new long[]{0x0000000040024000L});
-    public static final BitSet FOLLOW_30_in_ruleEvaluationStrategy10127 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleEvaluationStrategy10150 = new BitSet(new long[]{0x0000000040024000L});
-    public static final BitSet FOLLOW_14_in_ruleEvaluationStrategy10168 = new BitSet(new long[]{0x0010000000008010L});
-    public static final BitSet FOLLOW_ruleMetadata_in_ruleEvaluationStrategy10234 = new BitSet(new long[]{0x0010000000008010L});
-    public static final BitSet FOLLOW_ruleEvaluation_in_ruleEvaluationStrategy10310 = new BitSet(new long[]{0x0010000000008010L});
-    public static final BitSet FOLLOW_15_in_ruleEvaluationStrategy10363 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleEvaluationStrategy10382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEvaluation_in_entryRuleEvaluation10419 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEvaluation10429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleEvaluation10477 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleEvaluation10489 = new BitSet(new long[]{0x0100000000004040L,0x00000000000007C4L});
-    public static final BitSet FOLLOW_ruleQualitativeLabel_in_ruleEvaluation10513 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluation10536 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleEvaluation10554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_ruleEvaluation10574 = new BitSet(new long[]{0x0001F98000008000L});
-    public static final BitSet FOLLOW_39_in_ruleEvaluation10638 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleEvaluation10663 = new BitSet(new long[]{0x0001F98000008000L});
-    public static final BitSet FOLLOW_ruleEvaluationRange_in_ruleEvaluation10739 = new BitSet(new long[]{0x0001F98000008000L});
-    public static final BitSet FOLLOW_ruleKPIEvalValueSet_in_ruleEvaluation10814 = new BitSet(new long[]{0x0001F98000008000L});
-    public static final BitSet FOLLOW_15_in_ruleEvaluation10866 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEvaluationRange_in_entryRuleEvaluationRange10904 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEvaluationRange10914 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleEvaluationRange10952 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleEvaluationRange10964 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluationRange10981 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleEvaluationRange10998 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_41_in_ruleEvaluationRange11012 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleEvaluationRange11024 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluationRange11041 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleEvaluationRange11058 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_42_in_ruleEvaluationRange11072 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleEvaluationRange11084 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluationRange11101 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleEvaluationRange11118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleKPIEvalValueSet_in_entryRuleKPIEvalValueSet11155 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleKPIEvalValueSet11165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleKPIQuantitativeEvalValueSet_in_ruleKPIEvalValueSet11212 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleKPIQualitativeEvalValueSet_in_ruleKPIEvalValueSet11239 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleKPIQuantitativeEvalValueSet_in_entryRuleKPIQuantitativeEvalValueSet11274 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleKPIQuantitativeEvalValueSet11284 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_ruleKPIQuantitativeEvalValueSet11366 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11378 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet11395 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11412 = new BitSet(new long[]{0x0000F80000000002L});
-    public static final BitSet FOLLOW_44_in_ruleKPIQuantitativeEvalValueSet11480 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11492 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet11509 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11526 = new BitSet(new long[]{0x0000F80000000002L});
-    public static final BitSet FOLLOW_45_in_ruleKPIQuantitativeEvalValueSet11594 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11606 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet11623 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11640 = new BitSet(new long[]{0x0000F80000000002L});
-    public static final BitSet FOLLOW_46_in_ruleKPIQuantitativeEvalValueSet11708 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11720 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet11737 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11754 = new BitSet(new long[]{0x0000F80000000002L});
-    public static final BitSet FOLLOW_47_in_ruleKPIQuantitativeEvalValueSet11822 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11834 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleKPIQuantitativeEvalValueSet11851 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11868 = new BitSet(new long[]{0x0000F80000000002L});
-    public static final BitSet FOLLOW_ruleKPIQualitativeEvalValueSet_in_entryRuleKPIQualitativeEvalValueSet11950 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleKPIQualitativeEvalValueSet11960 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_ruleKPIQualitativeEvalValueSet11997 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleKPIQualitativeEvalValueSet12009 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleKPIQualitativeEvalValueSet12032 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleKPIQualitativeEvalValueSet12044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualitativeMapping_in_entryRuleQualitativeMapping12080 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQualitativeMapping12090 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_ruleQualitativeMapping12127 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleQualitativeMapping12144 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleQualitativeMapping12161 = new BitSet(new long[]{0x0010000000008020L});
-    public static final BitSet FOLLOW_ruleMetadata_in_ruleQualitativeMapping12227 = new BitSet(new long[]{0x0010000000008020L});
-    public static final BitSet FOLLOW_ruleMapping_in_ruleQualitativeMapping12303 = new BitSet(new long[]{0x0010000000008020L});
-    public static final BitSet FOLLOW_15_in_ruleQualitativeMapping12356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMapping_in_entryRuleMapping12392 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMapping12402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleMapping12444 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleMapping12461 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleMapping12478 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleMapping12495 = new BitSet(new long[]{0x0100000000000000L,0x00000000000007C4L});
-    public static final BitSet FOLLOW_ruleQualitativeLabel_in_ruleMapping12516 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_30_in_ruleMapping12529 = new BitSet(new long[]{0x0000000000000000L,0x0000000018000000L});
-    public static final BitSet FOLLOW_ruleBoolean_in_ruleMapping12550 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleMapping12564 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContributionGroup_in_entryRuleContributionGroup12600 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContributionGroup12610 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_ruleContributionGroup12647 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionGroup12664 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleContributionGroup12681 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionGroup12701 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_30_in_ruleContributionGroup12714 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionGroup12734 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_17_in_ruleContributionGroup12748 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContributionContext_in_entryRuleContributionContext12784 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContributionContext12794 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_ruleContributionContext12831 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionContext12848 = new BitSet(new long[]{0x0000004000004000L});
-    public static final BitSet FOLLOW_38_in_ruleContributionContext12866 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContributionContext12889 = new BitSet(new long[]{0x0000000040004000L});
-    public static final BitSet FOLLOW_30_in_ruleContributionContext12902 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContributionContext12925 = new BitSet(new long[]{0x0000000040004000L});
-    public static final BitSet FOLLOW_14_in_ruleContributionContext12941 = new BitSet(new long[]{0x0010000000008010L});
-    public static final BitSet FOLLOW_ruleMetadata_in_ruleContributionContext13007 = new BitSet(new long[]{0x0010000000008010L});
-    public static final BitSet FOLLOW_ruleContributionChange_in_ruleContributionContext13083 = new BitSet(new long[]{0x0010000000008010L});
-    public static final BitSet FOLLOW_15_in_ruleContributionContext13136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContributionChange_in_entryRuleContributionChange13172 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContributionChange13182 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContributionChange13230 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleContributionChange13242 = new BitSet(new long[]{0x8000000000004040L,0x000000000000003FL});
-    public static final BitSet FOLLOW_ruleContributionType_in_ruleContributionChange13266 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionChange13289 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleContributionChange13307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_ruleContributionChange13327 = new BitSet(new long[]{0x0000070000000000L});
-    public static final BitSet FOLLOW_ruleContributionRange_in_ruleContributionChange13348 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleContributionChange13360 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContributionRange_in_entryRuleContributionRange13398 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContributionRange13408 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleContributionRange13490 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleContributionRange13502 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionRange13519 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleContributionRange13536 = new BitSet(new long[]{0x0000070000000002L});
-    public static final BitSet FOLLOW_41_in_ruleContributionRange13604 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleContributionRange13616 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionRange13633 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleContributionRange13650 = new BitSet(new long[]{0x0000070000000002L});
-    public static final BitSet FOLLOW_42_in_ruleContributionRange13718 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleContributionRange13730 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionRange13747 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleContributionRange13764 = new BitSet(new long[]{0x0000070000000002L});
-    public static final BitSet FOLLOW_ruleMetadata_in_entryRuleMetadata13846 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMetadata13856 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_ruleMetadata13893 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleMetadata13910 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleMetadata13927 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleMetadata13944 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleMetadata13961 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComment_in_entryRuleComment13997 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleComment14007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_ruleComment14044 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleComment14061 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleComment14078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIndicatorGroup_in_entryRuleIndicatorGroup14114 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIndicatorGroup14124 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_ruleIndicatorGroup14161 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleIndicatorGroup14178 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleIndicatorGroup14195 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleIndicatorGroup14218 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_30_in_ruleIndicatorGroup14231 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleIndicatorGroup14254 = new BitSet(new long[]{0x0000000040020000L});
-    public static final BitSet FOLLOW_17_in_ruleIndicatorGroup14268 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName14305 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName14316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName14356 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_55_in_ruleQualifiedName14375 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName14390 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_56_in_ruleImportanceType14451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_ruleImportanceType14468 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_ruleImportanceType14485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_ruleImportanceType14502 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_ruleDecompositionType14547 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_61_in_ruleDecompositionType14564 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_62_in_ruleDecompositionType14581 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_ruleContributionType14626 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_ruleContributionType14643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_ruleContributionType14660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_ruleContributionType14677 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_ruleContributionType14694 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_ruleContributionType14711 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_ruleContributionType14728 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_ruleQualitativeLabel14773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_ruleQualitativeLabel14790 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_72_in_ruleQualitativeLabel14807 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_ruleQualitativeLabel14824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_ruleQualitativeLabel14841 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_ruleQualitativeLabel14858 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_ruleQualitativeLabel14875 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_75_in_ruleColor14920 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_76_in_ruleColor14937 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_77_in_ruleColor14954 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_78_in_ruleColor14971 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_79_in_ruleColor14988 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_80_in_ruleColor15005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_81_in_ruleColor15022 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_82_in_ruleColor15039 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_ruleColor15056 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_84_in_ruleColor15073 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_85_in_ruleColor15090 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_86_in_ruleColor15107 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_87_in_ruleColor15124 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_88_in_ruleColor15141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_89_in_ruleColor15158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_90_in_ruleColor15175 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_91_in_ruleBoolean15224 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_92_in_ruleBoolean15241 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleNormalLink7543 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleNormalLink7563 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleNormalLink7583 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_30_in_ruleNormalLink7596 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleNormalLink7616 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_17_in_ruleNormalLink7630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNormalDependency_in_entryRuleNormalDependency7666 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNormalDependency7676 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleNormalDependency7724 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleNormalDependency7736 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleDependencyEnd_in_ruleNormalDependency7757 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_30_in_ruleNormalDependency7770 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleDependencyEnd_in_ruleNormalDependency7791 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_17_in_ruleNormalDependency7805 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNormalContribution_in_entryRuleNormalContribution7841 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNormalContribution7851 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleNormalContribution7899 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleNormalContribution7911 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleContributionEnd_in_ruleNormalContribution7932 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_30_in_ruleNormalContribution7945 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleContributionEnd_in_ruleNormalContribution7966 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_17_in_ruleNormalContribution7980 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNormalDecomposition_in_entryRuleNormalDecomposition8016 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNormalDecomposition8026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleNormalDecomposition8074 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_ruleNormalDecomposition8086 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleDecompositionEnd_in_ruleNormalDecomposition8107 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_30_in_ruleNormalDecomposition8120 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleDecompositionEnd_in_ruleNormalDecomposition8141 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_17_in_ruleNormalDecomposition8155 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInLineElementLink_in_entryRuleInLineElementLink8191 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInLineElementLink8201 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInLineDecomposition_in_ruleInLineElementLink8248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInLineContribution_in_ruleInLineElementLink8275 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInLineDependency_in_ruleInLineElementLink8302 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInLineLink_in_ruleInLineElementLink8329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInLineLink_in_entryRuleInLineLink8364 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInLineLink8374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleInLineLink8422 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleInLineLink8445 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_30_in_ruleInLineLink8458 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleInLineLink8481 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_17_in_ruleInLineLink8495 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInLineDependency_in_entryRuleInLineDependency8531 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInLineDependency8541 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleInLineDependency8578 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleDependencyEnd_in_ruleInLineDependency8599 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_30_in_ruleInLineDependency8612 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleDependencyEnd_in_ruleInLineDependency8633 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_17_in_ruleInLineDependency8647 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInLineContribution_in_entryRuleInLineContribution8683 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInLineContribution8693 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleInLineContribution8730 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleContributionEnd_in_ruleInLineContribution8751 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_30_in_ruleInLineContribution8764 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleContributionEnd_in_ruleInLineContribution8785 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_17_in_ruleInLineContribution8799 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInLineDecomposition_in_entryRuleInLineDecomposition8835 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleInLineDecomposition8845 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_ruleInLineDecomposition8882 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleDecompositionEnd_in_ruleInLineDecomposition8903 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_30_in_ruleInLineDecomposition8916 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleDecompositionEnd_in_ruleInLineDecomposition8937 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_17_in_ruleInLineDecomposition8951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDecompositionEnd_in_entryRuleDecompositionEnd8987 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDecompositionEnd8997 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleDecompositionEnd9054 = new BitSet(new long[]{0x0000000000004002L});
+    public static final BitSet FOLLOW_14_in_ruleDecompositionEnd9067 = new BitSet(new long[]{0x0000000000008020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleDecompositionEnd9084 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleDecompositionEnd9102 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContributionEnd_in_entryRuleContributionEnd9140 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContributionEnd9150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContributionEnd9207 = new BitSet(new long[]{0x0000000000004002L});
+    public static final BitSet FOLLOW_14_in_ruleContributionEnd9220 = new BitSet(new long[]{0x8000000000048040L,0x000000000000003FL});
+    public static final BitSet FOLLOW_18_in_ruleContributionEnd9278 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleContributionEnd9290 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionEnd9307 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleContributionEnd9324 = new BitSet(new long[]{0x8000000000048040L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleContributionType_in_ruleContributionEnd9402 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionEnd9425 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleContributionEnd9443 = new BitSet(new long[]{0x8000000000048040L,0x000000000000003FL});
+    public static final BitSet FOLLOW_15_in_ruleContributionEnd9496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDependencyEnd_in_entryRuleDependencyEnd9534 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDependencyEnd9544 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleDependencyEnd9601 = new BitSet(new long[]{0x0000000000004002L});
+    public static final BitSet FOLLOW_14_in_ruleDependencyEnd9614 = new BitSet(new long[]{0x0000000000008020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleDependencyEnd9631 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleDependencyEnd9649 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLinkType_in_entryRuleLinkType9687 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLinkType9697 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_ruleLinkType9734 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleLinkType9751 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleLinkType9768 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStrategyGroup_in_entryRuleStrategyGroup9804 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStrategyGroup9814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleStrategyGroup9851 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleStrategyGroup9868 = new BitSet(new long[]{0x0000001000020000L});
+    public static final BitSet FOLLOW_36_in_ruleStrategyGroup9886 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleStrategyGroup9909 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_30_in_ruleStrategyGroup9922 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleStrategyGroup9945 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_17_in_ruleStrategyGroup9961 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEvaluationStrategy_in_entryRuleEvaluationStrategy9997 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEvaluationStrategy10007 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleEvaluationStrategy10044 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleEvaluationStrategy10061 = new BitSet(new long[]{0x0000004000024000L});
+    public static final BitSet FOLLOW_38_in_ruleEvaluationStrategy10079 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleEvaluationStrategy10102 = new BitSet(new long[]{0x0000000040024000L});
+    public static final BitSet FOLLOW_30_in_ruleEvaluationStrategy10115 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleEvaluationStrategy10138 = new BitSet(new long[]{0x0000000040024000L});
+    public static final BitSet FOLLOW_14_in_ruleEvaluationStrategy10156 = new BitSet(new long[]{0x0010000000008010L});
+    public static final BitSet FOLLOW_ruleMetadata_in_ruleEvaluationStrategy10222 = new BitSet(new long[]{0x0010000000008010L});
+    public static final BitSet FOLLOW_ruleEvaluation_in_ruleEvaluationStrategy10298 = new BitSet(new long[]{0x0010000000008010L});
+    public static final BitSet FOLLOW_15_in_ruleEvaluationStrategy10351 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleEvaluationStrategy10370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEvaluation_in_entryRuleEvaluation10407 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEvaluation10417 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleEvaluation10465 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleEvaluation10477 = new BitSet(new long[]{0x0100000000004040L,0x00000000000007C4L});
+    public static final BitSet FOLLOW_ruleQualitativeLabel_in_ruleEvaluation10501 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluation10524 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleEvaluation10542 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_ruleEvaluation10562 = new BitSet(new long[]{0x0001F98000008000L});
+    public static final BitSet FOLLOW_39_in_ruleEvaluation10626 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleEvaluation10651 = new BitSet(new long[]{0x0001F98000008000L});
+    public static final BitSet FOLLOW_ruleEvaluationRange_in_ruleEvaluation10727 = new BitSet(new long[]{0x0001F98000008000L});
+    public static final BitSet FOLLOW_ruleKPIEvalValueSet_in_ruleEvaluation10802 = new BitSet(new long[]{0x0001F98000008000L});
+    public static final BitSet FOLLOW_15_in_ruleEvaluation10854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEvaluationRange_in_entryRuleEvaluationRange10892 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEvaluationRange10902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleEvaluationRange10940 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleEvaluationRange10952 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluationRange10969 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleEvaluationRange10986 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_41_in_ruleEvaluationRange11000 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleEvaluationRange11012 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluationRange11029 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleEvaluationRange11046 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_42_in_ruleEvaluationRange11060 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleEvaluationRange11072 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleEvaluationRange11089 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleEvaluationRange11106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleKPIEvalValueSet_in_entryRuleKPIEvalValueSet11143 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleKPIEvalValueSet11153 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleKPIQuantitativeEvalValueSet_in_ruleKPIEvalValueSet11200 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleKPIQualitativeEvalValueSet_in_ruleKPIEvalValueSet11227 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleKPIQuantitativeEvalValueSet_in_entryRuleKPIQuantitativeEvalValueSet11262 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleKPIQuantitativeEvalValueSet11272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_ruleKPIQuantitativeEvalValueSet11354 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11366 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet11383 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11400 = new BitSet(new long[]{0x0000F80000000002L});
+    public static final BitSet FOLLOW_44_in_ruleKPIQuantitativeEvalValueSet11468 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11480 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet11497 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11514 = new BitSet(new long[]{0x0000F80000000002L});
+    public static final BitSet FOLLOW_45_in_ruleKPIQuantitativeEvalValueSet11582 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11594 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet11611 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11628 = new BitSet(new long[]{0x0000F80000000002L});
+    public static final BitSet FOLLOW_46_in_ruleKPIQuantitativeEvalValueSet11696 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11708 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleKPIQuantitativeEvalValueSet11725 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11742 = new BitSet(new long[]{0x0000F80000000002L});
+    public static final BitSet FOLLOW_47_in_ruleKPIQuantitativeEvalValueSet11810 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleKPIQuantitativeEvalValueSet11822 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleKPIQuantitativeEvalValueSet11839 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleKPIQuantitativeEvalValueSet11856 = new BitSet(new long[]{0x0000F80000000002L});
+    public static final BitSet FOLLOW_ruleKPIQualitativeEvalValueSet_in_entryRuleKPIQualitativeEvalValueSet11938 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleKPIQualitativeEvalValueSet11948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleKPIQualitativeEvalValueSet11985 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleKPIQualitativeEvalValueSet11997 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleKPIQualitativeEvalValueSet12020 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleKPIQualitativeEvalValueSet12032 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualitativeMapping_in_entryRuleQualitativeMapping12068 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQualitativeMapping12078 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_ruleQualitativeMapping12115 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualitativeMapping12132 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleQualitativeMapping12149 = new BitSet(new long[]{0x0010000000008020L});
+    public static final BitSet FOLLOW_ruleMetadata_in_ruleQualitativeMapping12215 = new BitSet(new long[]{0x0010000000008020L});
+    public static final BitSet FOLLOW_ruleMapping_in_ruleQualitativeMapping12291 = new BitSet(new long[]{0x0010000000008020L});
+    public static final BitSet FOLLOW_15_in_ruleQualitativeMapping12344 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMapping_in_entryRuleMapping12380 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMapping12390 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleMapping12432 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleMapping12449 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleMapping12466 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleMapping12483 = new BitSet(new long[]{0x0100000000000000L,0x00000000000007C4L});
+    public static final BitSet FOLLOW_ruleQualitativeLabel_in_ruleMapping12504 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_30_in_ruleMapping12517 = new BitSet(new long[]{0x0000000000000000L,0x0000000018000000L});
+    public static final BitSet FOLLOW_ruleBoolean_in_ruleMapping12538 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleMapping12552 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContributionGroup_in_entryRuleContributionGroup12588 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContributionGroup12598 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_ruleContributionGroup12635 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionGroup12652 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleContributionGroup12669 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionGroup12689 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_30_in_ruleContributionGroup12702 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionGroup12722 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_17_in_ruleContributionGroup12736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContributionContext_in_entryRuleContributionContext12772 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContributionContext12782 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_ruleContributionContext12819 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleContributionContext12836 = new BitSet(new long[]{0x0000004000004000L});
+    public static final BitSet FOLLOW_38_in_ruleContributionContext12854 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContributionContext12877 = new BitSet(new long[]{0x0000000040004000L});
+    public static final BitSet FOLLOW_30_in_ruleContributionContext12890 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContributionContext12913 = new BitSet(new long[]{0x0000000040004000L});
+    public static final BitSet FOLLOW_14_in_ruleContributionContext12929 = new BitSet(new long[]{0x0010000000008010L});
+    public static final BitSet FOLLOW_ruleMetadata_in_ruleContributionContext12995 = new BitSet(new long[]{0x0010000000008010L});
+    public static final BitSet FOLLOW_ruleContributionChange_in_ruleContributionContext13071 = new BitSet(new long[]{0x0010000000008010L});
+    public static final BitSet FOLLOW_15_in_ruleContributionContext13124 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContributionChange_in_entryRuleContributionChange13160 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContributionChange13170 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleContributionChange13218 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleContributionChange13230 = new BitSet(new long[]{0x8000000000004040L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleContributionType_in_ruleContributionChange13254 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionChange13277 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleContributionChange13295 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_ruleContributionChange13315 = new BitSet(new long[]{0x0000070000000000L});
+    public static final BitSet FOLLOW_ruleContributionRange_in_ruleContributionChange13336 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleContributionChange13348 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContributionRange_in_entryRuleContributionRange13386 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContributionRange13396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleContributionRange13478 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleContributionRange13490 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionRange13507 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleContributionRange13524 = new BitSet(new long[]{0x0000070000000002L});
+    public static final BitSet FOLLOW_41_in_ruleContributionRange13592 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleContributionRange13604 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionRange13621 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleContributionRange13638 = new BitSet(new long[]{0x0000070000000002L});
+    public static final BitSet FOLLOW_42_in_ruleContributionRange13706 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleContributionRange13718 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_QUALITATIVEVALUE_in_ruleContributionRange13735 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleContributionRange13752 = new BitSet(new long[]{0x0000070000000002L});
+    public static final BitSet FOLLOW_ruleMetadata_in_entryRuleMetadata13834 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMetadata13844 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_ruleMetadata13881 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleMetadata13898 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleMetadata13915 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleMetadata13932 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleMetadata13949 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComment_in_entryRuleComment13985 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleComment13995 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_ruleComment14032 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleComment14049 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleComment14066 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIndicatorGroup_in_entryRuleIndicatorGroup14102 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIndicatorGroup14112 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_ruleIndicatorGroup14149 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleIndicatorGroup14166 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleIndicatorGroup14183 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleIndicatorGroup14206 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_30_in_ruleIndicatorGroup14219 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleIndicatorGroup14242 = new BitSet(new long[]{0x0000000040020000L});
+    public static final BitSet FOLLOW_17_in_ruleIndicatorGroup14256 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_entryRuleQualifiedName14293 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQualifiedName14304 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName14344 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_55_in_ruleQualifiedName14363 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleQualifiedName14378 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_56_in_ruleImportanceType14439 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_ruleImportanceType14456 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_ruleImportanceType14473 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_ruleImportanceType14490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_ruleDecompositionType14535 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_ruleDecompositionType14552 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_62_in_ruleDecompositionType14569 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_ruleContributionType14614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_ruleContributionType14631 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_ruleContributionType14648 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_ruleContributionType14665 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_ruleContributionType14682 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_ruleContributionType14699 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_ruleContributionType14716 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_ruleQualitativeLabel14761 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_ruleQualitativeLabel14778 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_ruleQualitativeLabel14795 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_ruleQualitativeLabel14812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_ruleQualitativeLabel14829 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_ruleQualitativeLabel14846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_ruleQualitativeLabel14863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_75_in_ruleColor14908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_76_in_ruleColor14925 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_77_in_ruleColor14942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_78_in_ruleColor14959 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_79_in_ruleColor14976 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_80_in_ruleColor14993 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_81_in_ruleColor15010 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_82_in_ruleColor15027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_ruleColor15044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_84_in_ruleColor15061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_85_in_ruleColor15078 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_86_in_ruleColor15095 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_87_in_ruleColor15112 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_88_in_ruleColor15129 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_89_in_ruleColor15146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_90_in_ruleColor15163 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_91_in_ruleBoolean15212 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_92_in_ruleBoolean15229 = new BitSet(new long[]{0x0000000000000002L});
 
 }

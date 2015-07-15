@@ -217,7 +217,8 @@ NormalElementLink:
 ;
 
 NormalLink:
-	src = [GRLElement | QualifiedName] type = [LinkType | QualifiedName] dest += [GRLElement | QualifiedName] (',' dest += [GRLElement | QualifiedName])* ';'
+//	src = [GRLElement | QualifiedName] type = [LinkType | QualifiedName] dest += [GRLElement | QualifiedName] (',' dest += [GRLElement | QualifiedName])* ';'
+src = [GRLElement] type = [LinkType ] dest += [GRLElement ] (',' dest += [GRLElement])* ';'
 ;
 
 //Question:

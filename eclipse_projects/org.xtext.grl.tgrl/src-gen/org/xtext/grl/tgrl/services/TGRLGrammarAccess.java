@@ -1794,70 +1794,70 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cSrcAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final CrossReference cSrcGRLElementCrossReference_0_0 = (CrossReference)cSrcAssignment_0.eContents().get(0);
-		private final RuleCall cSrcGRLElementQualifiedNameParserRuleCall_0_0_1 = (RuleCall)cSrcGRLElementCrossReference_0_0.eContents().get(1);
+		private final RuleCall cSrcGRLElementIDTerminalRuleCall_0_0_1 = (RuleCall)cSrcGRLElementCrossReference_0_0.eContents().get(1);
 		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final CrossReference cTypeLinkTypeCrossReference_1_0 = (CrossReference)cTypeAssignment_1.eContents().get(0);
-		private final RuleCall cTypeLinkTypeQualifiedNameParserRuleCall_1_0_1 = (RuleCall)cTypeLinkTypeCrossReference_1_0.eContents().get(1);
+		private final RuleCall cTypeLinkTypeIDTerminalRuleCall_1_0_1 = (RuleCall)cTypeLinkTypeCrossReference_1_0.eContents().get(1);
 		private final Assignment cDestAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final CrossReference cDestGRLElementCrossReference_2_0 = (CrossReference)cDestAssignment_2.eContents().get(0);
-		private final RuleCall cDestGRLElementQualifiedNameParserRuleCall_2_0_1 = (RuleCall)cDestGRLElementCrossReference_2_0.eContents().get(1);
+		private final RuleCall cDestGRLElementIDTerminalRuleCall_2_0_1 = (RuleCall)cDestGRLElementCrossReference_2_0.eContents().get(1);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cDestAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final CrossReference cDestGRLElementCrossReference_3_1_0 = (CrossReference)cDestAssignment_3_1.eContents().get(0);
-		private final RuleCall cDestGRLElementQualifiedNameParserRuleCall_3_1_0_1 = (RuleCall)cDestGRLElementCrossReference_3_1_0.eContents().get(1);
+		private final RuleCall cDestGRLElementIDTerminalRuleCall_3_1_0_1 = (RuleCall)cDestGRLElementCrossReference_3_1_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//NormalLink:
-		//	src=[GRLElement|QualifiedName] type=[LinkType|QualifiedName] dest+=[GRLElement|QualifiedName] (","
-		//	dest+=[GRLElement|QualifiedName])* ";";
+		//NormalLink: //	src = [GRLElement | QualifiedName] type = [LinkType | QualifiedName] dest += [GRLElement | QualifiedName] (',' dest += [GRLElement | QualifiedName])* ';'
+		//	src=[GRLElement] type=[LinkType] dest+=[GRLElement] ("," dest+=[GRLElement])* ";";
 		public ParserRule getRule() { return rule; }
 
-		//src=[GRLElement|QualifiedName] type=[LinkType|QualifiedName] dest+=[GRLElement|QualifiedName] (","
-		//dest+=[GRLElement|QualifiedName])* ";"
+		////	src = [GRLElement | QualifiedName] type = [LinkType | QualifiedName] dest += [GRLElement | QualifiedName] (',' dest += [GRLElement | QualifiedName])* ';'
+		//src=[GRLElement] type=[LinkType] dest+=[GRLElement] ("," dest+=[GRLElement])* ";"
 		public Group getGroup() { return cGroup; }
 
-		//src=[GRLElement|QualifiedName]
+		////	src = [GRLElement | QualifiedName] type = [LinkType | QualifiedName] dest += [GRLElement | QualifiedName] (',' dest += [GRLElement | QualifiedName])* ';'
+		//src=[GRLElement]
 		public Assignment getSrcAssignment_0() { return cSrcAssignment_0; }
 
-		//[GRLElement|QualifiedName]
+		//[GRLElement]
 		public CrossReference getSrcGRLElementCrossReference_0_0() { return cSrcGRLElementCrossReference_0_0; }
 
-		//QualifiedName
-		public RuleCall getSrcGRLElementQualifiedNameParserRuleCall_0_0_1() { return cSrcGRLElementQualifiedNameParserRuleCall_0_0_1; }
+		//ID
+		public RuleCall getSrcGRLElementIDTerminalRuleCall_0_0_1() { return cSrcGRLElementIDTerminalRuleCall_0_0_1; }
 
-		//type=[LinkType|QualifiedName]
+		//type=[LinkType]
 		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
 
-		//[LinkType|QualifiedName]
+		//[LinkType]
 		public CrossReference getTypeLinkTypeCrossReference_1_0() { return cTypeLinkTypeCrossReference_1_0; }
 
-		//QualifiedName
-		public RuleCall getTypeLinkTypeQualifiedNameParserRuleCall_1_0_1() { return cTypeLinkTypeQualifiedNameParserRuleCall_1_0_1; }
+		//ID
+		public RuleCall getTypeLinkTypeIDTerminalRuleCall_1_0_1() { return cTypeLinkTypeIDTerminalRuleCall_1_0_1; }
 
-		//dest+=[GRLElement|QualifiedName]
+		//dest+=[GRLElement]
 		public Assignment getDestAssignment_2() { return cDestAssignment_2; }
 
-		//[GRLElement|QualifiedName]
+		//[GRLElement]
 		public CrossReference getDestGRLElementCrossReference_2_0() { return cDestGRLElementCrossReference_2_0; }
 
-		//QualifiedName
-		public RuleCall getDestGRLElementQualifiedNameParserRuleCall_2_0_1() { return cDestGRLElementQualifiedNameParserRuleCall_2_0_1; }
+		//ID
+		public RuleCall getDestGRLElementIDTerminalRuleCall_2_0_1() { return cDestGRLElementIDTerminalRuleCall_2_0_1; }
 
-		//("," dest+=[GRLElement|QualifiedName])*
+		//("," dest+=[GRLElement])*
 		public Group getGroup_3() { return cGroup_3; }
 
 		//","
 		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
 
-		//dest+=[GRLElement|QualifiedName]
+		//dest+=[GRLElement]
 		public Assignment getDestAssignment_3_1() { return cDestAssignment_3_1; }
 
-		//[GRLElement|QualifiedName]
+		//[GRLElement]
 		public CrossReference getDestGRLElementCrossReference_3_1_0() { return cDestGRLElementCrossReference_3_1_0; }
 
-		//QualifiedName
-		public RuleCall getDestGRLElementQualifiedNameParserRuleCall_3_1_0_1() { return cDestGRLElementQualifiedNameParserRuleCall_3_1_0_1; }
+		//ID
+		public RuleCall getDestGRLElementIDTerminalRuleCall_3_1_0_1() { return cDestGRLElementIDTerminalRuleCall_3_1_0_1; }
 
 		//";"
 		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
@@ -4558,9 +4558,8 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		return getNormalElementLinkAccess().getRule();
 	}
 
-	//NormalLink:
-	//	src=[GRLElement|QualifiedName] type=[LinkType|QualifiedName] dest+=[GRLElement|QualifiedName] (","
-	//	dest+=[GRLElement|QualifiedName])* ";";
+	//NormalLink: //	src = [GRLElement | QualifiedName] type = [LinkType | QualifiedName] dest += [GRLElement | QualifiedName] (',' dest += [GRLElement | QualifiedName])* ';'
+	//	src=[GRLElement] type=[LinkType] dest+=[GRLElement] ("," dest+=[GRLElement])* ";";
 	public NormalLinkElements getNormalLinkAccess() {
 		return pNormalLink;
 	}

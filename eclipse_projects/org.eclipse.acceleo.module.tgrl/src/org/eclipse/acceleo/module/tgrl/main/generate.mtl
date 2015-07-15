@@ -26,7 +26,7 @@
 
 [comment]*****************************************Actor**********************************************[/comment]
 [for (actor : Actor | grlSpec.grlElements->selectByKind(Actor))]
-	<actors [getValidName(actor)/] id="[id/]" description="[description/]" [getImportance(actor)/] [getImportanceQuantitative(actor) /] contRefs="[id/]R"[if (metaData->size()>0)]>
+	<actors [getValidName(actor)/] id="[id/]" description="[description/]" [getImportance(actor)/] [getColor(actor)/] [getImportanceQuantitative(actor) /] contRefs="[id/]R"[if (metaData->size()>0)]>
 	[PrintMetaData(metaData)/]
 	</actors>
 	[else]/>		

@@ -2946,12 +2946,10 @@ ruleNormalLink returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getNormalLinkRule());
 	        }
         }
-		{ 
-	        newCompositeNode(grammarAccess.getNormalLinkAccess().getSrcGRLElementCrossReference_0_0()); 
-	    }
-		ruleQualifiedName		{ 
-	        afterParserOrEnumRuleCall();
-	    }
+	otherlv_0=RULE_ID
+	{
+		newLeafNode(otherlv_0, grammarAccess.getNormalLinkAccess().getSrcGRLElementCrossReference_0_0()); 
+	}
 
 )
 )(
@@ -2961,12 +2959,10 @@ ruleNormalLink returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getNormalLinkRule());
 	        }
         }
-		{ 
-	        newCompositeNode(grammarAccess.getNormalLinkAccess().getTypeLinkTypeCrossReference_1_0()); 
-	    }
-		ruleQualifiedName		{ 
-	        afterParserOrEnumRuleCall();
-	    }
+	otherlv_1=RULE_ID
+	{
+		newLeafNode(otherlv_1, grammarAccess.getNormalLinkAccess().getTypeLinkTypeCrossReference_1_0()); 
+	}
 
 )
 )(
@@ -2976,12 +2972,10 @@ ruleNormalLink returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getNormalLinkRule());
 	        }
         }
-		{ 
-	        newCompositeNode(grammarAccess.getNormalLinkAccess().getDestGRLElementCrossReference_2_0()); 
-	    }
-		ruleQualifiedName		{ 
-	        afterParserOrEnumRuleCall();
-	    }
+	otherlv_2=RULE_ID
+	{
+		newLeafNode(otherlv_2, grammarAccess.getNormalLinkAccess().getDestGRLElementCrossReference_2_0()); 
+	}
 
 )
 )(	otherlv_3=',' 
@@ -2995,12 +2989,10 @@ ruleNormalLink returns [EObject current=null]
 	            $current = createModelElement(grammarAccess.getNormalLinkRule());
 	        }
         }
-		{ 
-	        newCompositeNode(grammarAccess.getNormalLinkAccess().getDestGRLElementCrossReference_3_1_0()); 
-	    }
-		ruleQualifiedName		{ 
-	        afterParserOrEnumRuleCall();
-	    }
+	otherlv_4=RULE_ID
+	{
+		newLeafNode(otherlv_4, grammarAccess.getNormalLinkAccess().getDestGRLElementCrossReference_3_1_0()); 
+	}
 
 )
 ))*	otherlv_5=';' 
