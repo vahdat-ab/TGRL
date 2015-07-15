@@ -207,3 +207,14 @@ contribution="[contribution.toString().toUpperFirst()/]" [if (inContributionEnd.
 [template public getValidName (element : Actor) post (trim()) ]
 [if (element.label.toString()='')]name="[element.name/]" [else]name="[element.label/]" [/if]
 [/template]
+
+
+[template public ApplyURNLink (grlSpec : GRLSpecification ,inGRLElement : GRLElement, inModel : Model) ]
+[ApplyURNLinkFrom(grlSpec, inGRLElement, inModel)/] [ApplyURNLinkTo(grlSpec, inGRLElement, inModel)/] 
+[/template]
+[template public ApplyURNLinkFrom (grlSpec : GRLSpecification ,inGRLElement : GRLElement, inModel : Model) ]
+fromLinks="[for (normalLink : NormalLink | getAllElementLinks(grlSpec,inModel)->selectByKind(NormalLink))][let baseIndex : Integer = i-2][if (normalLink.src.id=inGRLElement.id)][for (grlElementDest : GRLElement |normalLink.dest)]//@urnLinks.[i+baseIndex/] [/for][/if][/let][/for]" 
+[/template]
+[template public ApplyURNLinkTo (grlSpec : GRLSpecification ,inGRLElement : GRLElement, inModel : Model) ]
+toLinks="[for (normalLink : NormalLink | getAllElementLinks(grlSpec,inModel)->selectByKind(NormalLink))][let baseIndex : Integer = i-2][for (grlElementDest : GRLElement |normalLink.dest)][if (grlElementDest.id=inGRLElement.id)]//@urnLinks.[i+baseIndex/] [/if][/for][/let][/for]" 
+[/template]

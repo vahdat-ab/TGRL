@@ -34,7 +34,7 @@
 [/for]
 [comment]*****************************************Intentional Elements**********************************************[/comment]
 [for (intentionalElement : IntentionalElement | getAllSuperIntentionalElements(aModel)->selectByKind(IntentionalElement))]
-	<intElements [getValidName(intentionalElement)/] id="[id/]" description="[description/]" [getColor(intentionalElement)/] decompositionType = "[decompositionType.toString().toUpperFirst()/]" [getImportance(intentionalElement)/] [getImportanceQuantitative(intentionalElement)/] [getType(intentionalElement)/] [getLinkSrc(grlSpec,aModel, intentionalElement)/] [getLinksDest(grlSpec,aModel, intentionalElement)/] refs="[id/]R"[if (metaData->size()>0)]>
+	<intElements [getValidName(intentionalElement)/] id="[id/]" description="[description/]" [getColor(intentionalElement)/] decompositionType = "[decompositionType.toString().toUpperFirst()/]" [getImportance(intentionalElement)/] [getImportanceQuantitative(intentionalElement)/] [getType(intentionalElement)/] [getLinkSrc(grlSpec,aModel, intentionalElement)/] [getLinksDest(grlSpec,aModel, intentionalElement)/] [ApplyURNLink(grlSpec, intentionalElement, aModel)/] refs="[id/]R"[if (metaData->size()>0)]>
 	[PrintMetaData(metaData)/]
 	</intElements>
 	[else]/>		
@@ -116,7 +116,7 @@
 [/for]
 [comment]*****************************************************ElementLink*****************************************[/comment]
 [for (actor : Actor | grlSpec.grlElements->selectByKind(Actor))]
-      <contRefs xsi:type="grl:ActorRef" name="ActorRef[id/]R" id="[id/]R" [getNodes(actor)/] width="200" height="200" contDef="[id/]">
+      <contRefs xsi:type="grl:ActorRef" name="ActorRef[id/]R" id="[id/]R" [getNodes(actor)/] [ApplyURNLink(grlSpec, actor, aModel)/] width="200" height="200" contDef="[id/]">
         <label/>
       </contRefs>
 [/for]
@@ -125,7 +125,15 @@
 [/for]
     </specDiagrams>
   </urndef>
+[for (elementLink : ElementLink | getAllElementLinks(aModel)->selectByKind(NormalLink))]
+	[for (grlElementDest : GRLElement |elementLink.oclAsType(NormalLink).dest)]	
+	<urnLinks type="[elementLink.oclAsType(NormalLink).type.name/]" fromElem="[elementLink.oclAsType(NormalLink).src.id/]" toElem="[grlElementDest.id/]"/>
+    [/for]
+[/for]
   <metadata name="_Use0to100EvaluationRange" value="false"/>
+[for (linkType : LinkType | grlSpec.grlElements->selectByType(LinkType))]
+  <metadata name="UrnLinkType" value="[name/]"/>
+[/for]
 </urn:URNspec>
 [/file]
 
