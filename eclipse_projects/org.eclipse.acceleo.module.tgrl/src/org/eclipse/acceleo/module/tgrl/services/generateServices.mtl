@@ -3,9 +3,9 @@
 [import org::eclipse::acceleo::module::tgrl::java::services::generateModelFeatures /]
 
 [template public getLinkSrc(grlSpec : GRLSpecification , inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
-linksDest="[for (elementLink : ElementLink | getAllElementLinks(grlSpec,inModel).oclAsType(ElementLink))]
+linksSrc="[for (elementLink : ElementLink | getAllElementLinks(grlSpec,inModel).oclAsType(ElementLink))]
 	[if (elementLink.oclIsTypeOf(NormalDecomposition))]
-[if (elementLink.oclAsType(NormalDecomposition).src=inIntentionalElement)][for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)][end.id/]L [/for][/if]
+[for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)][if (findSuperIntentionalElement(grlSpec,inModel, end.destName).name=inIntentionalElement.name)][end.id/]L [/if][/for]
 	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
 [if (elementLink.oclAsType(NormalContribution).src=inIntentionalElement)][for (end : ContributionEnd |elementLink.oclAsType(NormalContribution).dest)][end.id/]L [/for][/if]
 	[elseif (elementLink.oclIsTypeOf(NormalDependency))]
@@ -14,9 +14,9 @@ linksDest="[for (elementLink : ElementLink | getAllElementLinks(grlSpec,inModel)
 [/template]
 
 [template public getLinksDest(grlSpec : GRLSpecification, inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
-linksSrc="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(ElementLink))]
+linksDest="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(ElementLink))]
 	[if (elementLink.oclIsTypeOf(NormalDecomposition))]
-[for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)][if (findSuperIntentionalElement(grlSpec,inModel, end.destName).name=inIntentionalElement.name)][end.id/]L [/if][/for]
+[if (elementLink.oclAsType(NormalDecomposition).src=inIntentionalElement)][for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)][end.id/]L [/for][/if]
 	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
 [for (end : ContributionEnd |elementLink.oclAsType(NormalContribution).dest)][if (findSuperIntentionalElement(grlSpec,inModel, end.destName).name=inIntentionalElement.name)][end.id/]L [/if][/for]
 	[elseif (elementLink.oclIsTypeOf(NormalDependency))]
@@ -26,9 +26,9 @@ linksSrc="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsTyp
 
 
 [template public getSucc(grlSpec : GRLSpecification, inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
-pred="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(ElementLink))]
+succ="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(ElementLink))]
 	[if (elementLink.oclIsTypeOf(NormalDecomposition))]
-[if (elementLink.oclAsType(NormalDecomposition).src=inIntentionalElement)][for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)]//@urndef/@specDiagrams.0/@connections.[end.id/] [/for][/if]
+[for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)][if (findSuperIntentionalElement(grlSpec,inModel, end.destName).name=inIntentionalElement.name)]//@urndef/@specDiagrams.0/@connections.[end.id/] [/if][/for]
 	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
 [if (elementLink.oclAsType(NormalContribution).src=inIntentionalElement)][for (end : ContributionEnd |elementLink.oclAsType(NormalContribution).dest)]//@urndef/@specDiagrams.0/@connections.[end.id/] [/for][/if]
 	[elseif (elementLink.oclIsTypeOf(NormalDependency))]
@@ -37,9 +37,9 @@ pred="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(El
 [/template]
 
 [template public getPred(grlSpec : GRLSpecification,inModel : Model ,inIntentionalElement : IntentionalElement) post(trim())]
-succ="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(ElementLink))]
+pred="[for (elementLink : ElementLink | getAllElementLinks(inModel).oclAsType(ElementLink))]
 	[if (elementLink.oclIsTypeOf(NormalDecomposition))]
-[for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)][if (findSuperIntentionalElement(grlSpec,inModel, end.destName).name=inIntentionalElement.name)]//@urndef/@specDiagrams.0/@connections.[end.id/] [/if][/for]
+[if (elementLink.oclAsType(NormalDecomposition).src=inIntentionalElement)][for (end : DecompositionEnd |elementLink.oclAsType(NormalDecomposition).dest)]//@urndef/@specDiagrams.0/@connections.[end.id/] [/for][/if]
 	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
 [for (end : ContributionEnd |elementLink.oclAsType(NormalContribution).dest)][if (findSuperIntentionalElement(grlSpec,inModel, end.destName).name=inIntentionalElement.name)]//@urndef/@specDiagrams.0/@connections.[end.id/] [/if][/for]
 	[elseif (elementLink.oclIsTypeOf(NormalDependency))]
