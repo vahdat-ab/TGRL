@@ -147,12 +147,12 @@ filled="true" fillColor="255,255,160" [/if]
 
 [template public getName(inSuperIntentionalElement : SuperIntentionalElement) post(trim())]
 [if (label='')]
-[name/][else][label/]
+[HTMLCodeExchange(name.oclAsType(String))/][else][HTMLCodeExchange(label.oclAsType(String))/]
 [/if]
 [/template]
 [template public PrintMetaData(inMetadata : Set(Metadata)) post(trim())]
 [for (metadata : Metadata | inMetadata)]
-<metadata name="[name/]" value="[value/]"/>
+<metadata name="[name/]" value="[HTMLCodeExchange(value.oclAsType(String))/]"/>
 [/for]
 [/template]
 
@@ -201,11 +201,11 @@ contribution="[contribution.toString().toUpperFirst()/]" [if (inContributionEnd.
 [/template]
 
 [template public getValidName (element : SuperIntentionalElement) post (trim()) ]
-[if (element.label.toString()='')]name="[element.name/]" [else]name="[element.label/]" [/if]
+[if (element.label.toString()='')]name="[ HTMLCodeExchange(element.name.oclAsType(String))/]" [else]name="[ HTMLCodeExchange(element.label.oclAsType(String))/]" [/if]
 [/template]
 
 [template public getValidName (element : Actor) post (trim()) ]
-[if (element.label.toString()='')]name="[element.name/]" [else]name="[element.label/]" [/if]
+[if (element.label.toString()='')]name="[ HTMLCodeExchange(element.name.oclAsType(String))/]" [else]name="[HTMLCodeExchange(element.label.oclAsType(String))/]" [/if]
 [/template]
 
 
@@ -217,4 +217,9 @@ fromLinks="[for (normalLink : NormalLink | getAllElementLinks(grlSpec,inModel)->
 [/template]
 [template public ApplyURNLinkTo (grlSpec : GRLSpecification ,inGRLElement : GRLElement, inModel : Model) ]
 toLinks="[for (normalLink : NormalLink | getAllElementLinks(grlSpec,inModel)->selectByKind(NormalLink))][let baseIndex : Integer = i-2][for (grlElementDest : GRLElement |normalLink.dest)][if (grlElementDest.id=inGRLElement.id)]//@urnLinks.[i+baseIndex/] [/if][/for][/let][/for]" 
+[/template]
+
+
+[template public HTMLCodeExchange (value:String) ]
+[value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')/]
 [/template]

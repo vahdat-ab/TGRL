@@ -59,10 +59,10 @@
 [comment]*****************************************ElementLink**********************************************[/comment]
 [comment]*****************************************Strategy**********************************************[/comment]
 [for (strategtGroup : StrategyGroup	 | grlSpec.grlElements->selectByType(StrategyGroup))]
-	<groups name="[name/]" id="[id/]" [getIncludedStrategies(strategtGroup)/]/>
+	<groups name="[HTMLCodeExchange(name.oclAsType(String))/]" id="[id/]" [getIncludedStrategies(strategtGroup)/]/>
 [/for]
 [for (eStrategy : EvaluationStrategy	 | grlSpec.grlElements->selectByType(EvaluationStrategy))]
-	<strategies name="[name/]" id="[id/]" [getIncludedStrategies(eStrategy)/] [getParentStrategies(grlSpec,aModel,eStrategy)/]/>	
+	<strategies name="[HTMLCodeExchange(name.oclAsType(String))/]" id="[id/]" [getIncludedStrategies(eStrategy)/] [getParentStrategies(grlSpec,aModel,eStrategy)/]/>	
 [/for]
 [comment]*****************************************Strategy**********************************************[/comment]
     <impactModel/>
@@ -71,10 +71,10 @@
     <indicatorGroup name="Quality" id="9" isRedesignCategory="true"/>
     <indicatorGroup name="Flexibility" id="10" isRedesignCategory="true"/>
 	[for (qMapping : QualitativeMapping | getAllQualitativeMappings(aModel).oclAsType(QualitativeMapping))]
-	<KPIConversion xsi:type="grl.kpimodel:QualitativeMappings" name="[name/]" id="[id/]">
+	<KPIConversion xsi:type="grl.kpimodel:QualitativeMappings" name="[HTMLCodeExchange(name.oclAsType(String))/]" id="[id/]">
 	[PrintMetaData(metaData)/]
 	[for (mapping : Mapping | mappings)]
-		<mapping realWorldLabel="[mapping.name/]" evaluation="[evaluation/]" qualitativeEvaluation="[qualitativeEvaluation.toString().toUpperFirst()/]" exceeds="[exceeds/]"/>
+		<mapping realWorldLabel="[HTMLCodeExchange(mapping.name.oclAsType(String))/]" evaluation="[evaluation/]" qualitativeEvaluation="[qualitativeEvaluation.toString().toUpperFirst()/]" exceeds="[exceeds/]"/>
 	[/for]    
     </KPIConversion>
 	[/for]
@@ -121,7 +121,7 @@
       </contRefs>
 [/for]
 [for (grlcomment : Comment | grlSpec.grlElements->selectByKind(Comment))]
-	<comments description="[content/]" x="10" y="10" width="200" height="100" fillColor="255,255,200"/>
+	<comments description="[HTMLCodeExchange(content.oclAsType(String))/]" x="10" y="10" width="200" height="100" fillColor="255,255,200"/>
 [/for]
     </specDiagrams>
   </urndef>
