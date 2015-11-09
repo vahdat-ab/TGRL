@@ -223,3 +223,23 @@ toLinks="[for (normalLink : NormalLink | getAllElementLinks(grlSpec,inModel)->se
 [template public HTMLCodeExchange (value:String) ]
 [value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')/]
 [/template]
+
+[template public PrintEvaluation (aEvaluationStrategy : EvaluationStrategy) ]
+[for (ev : Evaluation | aEvaluationStrategy.evaluations)]
+<evaluations evaluation="[getQualitativeValue(ev)/]" intElement="[intentionalElement.id/]">
+        <kpiEvalValueSet/>
+</evaluations>	
+[/for]
+[/template]
+
+[template public getQualitativeValue (aEvaluation : Evaluation)  post (trim()) ]
+[if (evaluation->isEmpty())]
+[if (qualitativeEvaluation.toString().equalsIgnoreCase('satisfied'))]100
+[elseif (qualitativeEvaluation.toString().equalsIgnoreCase('weaklysatisfied'))]50
+[elseif (qualitativeEvaluation.toString().equalsIgnoreCase('none'))]0
+[elseif (qualitativeEvaluation.toString().equalsIgnoreCase('weaklydenied'))]-50
+[elseif (qualitativeEvaluation.toString().equalsIgnoreCase('denied'))]-100
+[elseif (qualitativeEvaluation.toString().equalsIgnoreCase('conflict'))]-101
+[elseif (qualitativeEvaluation.toString().equalsIgnoreCase('unknown'))]-101
+[/if][else][evaluation/][/if]
+[/template]

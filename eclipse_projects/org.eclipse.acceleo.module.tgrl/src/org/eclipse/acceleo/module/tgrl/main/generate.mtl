@@ -62,7 +62,12 @@
 	<groups name="[HTMLCodeExchange(name.oclAsType(String))/]" id="[id/]" [getIncludedStrategies(strategtGroup)/]/>
 [/for]
 [for (eStrategy : EvaluationStrategy	 | grlSpec.grlElements->selectByType(EvaluationStrategy))]
-	<strategies name="[HTMLCodeExchange(name.oclAsType(String))/]" id="[id/]" [getIncludedStrategies(eStrategy)/] [getParentStrategies(grlSpec,aModel,eStrategy)/]/>	
+	<strategies name="[HTMLCodeExchange(name.oclAsType(String))/]" id="[id/]" [getIncludedStrategies(eStrategy)/] [getParentStrategies(grlSpec,aModel,eStrategy)/] [if ( metaData->size()>0 or evaluations->size()>0)]>
+	[PrintMetaData(metaData)/]
+	[PrintEvaluation(eStrategy)/]	
+	</strategies>
+	[else]/>	
+	[/if]	
 [/for]
 [comment]*****************************************Strategy**********************************************[/comment]
     <impactModel/>
@@ -141,4 +146,3 @@
 [comment] End of the For command [/comment]
 [/for]
 [/template]
-

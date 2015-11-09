@@ -3,5 +3,6 @@
 
 [query public getCurrentDate(anOclAny: OclAny) : String
 	= invoke('org.eclipse.acceleo.module.tgrl.java.services.GeneralFeatures', 'getCurrentDate()', Sequence{})
+
 /]
 
