@@ -164,12 +164,37 @@ filled="true" fillColor="255,255,160" [/if]
 [if (strategies->size()>0)] strategies="[for (eStrategy : EvaluationStrategy | strategies)][eStrategy.id/] [/for]"[/if]
 [/template]
 
+[template public getIncludedContributions (aContributionGroup : ContributionGroup) ]
+[if (contribs->size()>0)] contribs="[for (contributionC : ContributionContext | contribs)][contributionC.id/] [/for]"[/if]
+[/template]
+
 [template public getIncludedStrategies (aEvaluationStrategy : EvaluationStrategy) post (trim()) ]
 [if (superStrategies->size()>0)] includedStrategies="[for (eStrategy : EvaluationStrategy | superStrategies)][eStrategy.id/] [/for]"[/if]
 [/template]
 
+[template public getIncludedContributions (aContributionContext : ContributionContext) ]
+[if (superContributionContexts->size()>0)] includedContexts="[for (ContributionC : ContributionContext | superContributionContexts)][ContributionC.id/] [/for]"[/if]
+[/template]
+
+[template private getRawContributionGroups (grlSpec : GRLSpecification, aContributionContext : ContributionContext)  post (trim())]
+[for (contributionGroup : ContributionGroup	 | grlSpec.grlElements->selectByType(ContributionGroup))]
+[for (ContributionC : ContributionContext | contributionGroup.contribs)]
+[if (ContributionC.name=aContributionContext.name)][contributionGroup.id /] [/if]
+[/for]
+[/for]
+[/template]
+
+[template public getContributionGroups (grlSpec : GRLSpecification, aContributionContext : ContributionContext)  post (trim())]
+[let value : String = getRawContributionGroups(grlSpec,aContributionContext).toString()][if (value='')]2[else][value/][/if][/let]
+[/template]
+
 [template public getParentStrategies (grlSpec : GRLSpecification,inModel : Model ,aEvaluationStrategy : EvaluationStrategy) ]
 [if (getAllParentStrategis(inModel,aEvaluationStrategy)->size()>0)] parentStrategies="[for (eStrategy : EvaluationStrategy | getAllParentStrategis(inModel,aEvaluationStrategy).oclAsType(EvaluationStrategy))][eStrategy.id/] [/for]"[/if]
+[/template]
+
+
+[template public getParentContributions (grlSpec : GRLSpecification,inModel : Model ,aContributionContext : ContributionContext) ]
+[if (getAllParentContributionContexts(inModel,aContributionContext)->size()>0)] parentContexts="[for (ContributionC : ContributionContext | getAllParentContributionContexts(inModel,aContributionContext).oclAsType(ContributionContext))][ContributionC.id/] [/for]"[/if]
 [/template]
 
 [template public getImportance (inGRLElement : GRLElement) post (trim()) ]
@@ -232,6 +257,10 @@ toLinks="[for (normalLink : NormalLink | getAllElementLinks(grlSpec,inModel)->se
 [/for]
 [/template]
 
+[template public PrintChanges (aContributionContext : ContributionContext) ]
+
+[/template]
+
 [template public getQualitativeValue (aEvaluation : Evaluation)  post (trim()) ]
 [if (evaluation->isEmpty())]
 [if (qualitativeEvaluation.toString().equalsIgnoreCase('satisfied'))]100
@@ -243,3 +272,17 @@ toLinks="[for (normalLink : NormalLink | getAllElementLinks(grlSpec,inModel)->se
 [elseif (qualitativeEvaluation.toString().equalsIgnoreCase('unknown'))]-101
 [/if][else][evaluation/][/if]
 [/template]
+
+[template public getUngroupedStrategies (grlSpec : GRLSpecification) post (trim()) ]
+[for (eStrategy : EvaluationStrategy | grlSpec.grlElements->selectByType(EvaluationStrategy))]
+[for (sg : StrategyGroup | grlSpec.grlElements->selectByType(StrategyGroup))][if (not sg.strategies->exists(name=eStrategy.name))][eStrategy.id/][/if][/for]
+[/for]
+[/template]
+
+
+[template public getUngroupedContributions(grlSpec : GRLSpecification) ]
+[for (ContributionC : ContributionContext | grlSpec.grlElements->selectByType(ContributionContext))]
+[for (cg : ContributionGroup | grlSpec.grlElements->selectByType(ContributionGroup))][if (not cg.contribs->exists(name=ContributionC.name))][ContributionC.id/] [/if][/for]
+[/for]
+[/template]
+

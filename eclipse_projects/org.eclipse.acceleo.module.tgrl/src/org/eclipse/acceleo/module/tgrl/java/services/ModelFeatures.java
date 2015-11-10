@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.xtext.grl.tgrl.tGRL.Actor;
+import org.xtext.grl.tgrl.tGRL.ContributionContext;
 import org.xtext.grl.tgrl.tGRL.ContributionEnd;
 import org.xtext.grl.tgrl.tGRL.DecompositionEnd;
 import org.xtext.grl.tgrl.tGRL.DependencyEnd;
@@ -88,6 +89,22 @@ public class ModelFeatures {
 					for (EvaluationStrategy evaluationStrategy : ((EvaluationStrategy)grlElement1).getSuperStrategies()) {
 						if (evaluationStrategy.equals(inEvaluationStrategy)){
 							output.add((EvaluationStrategy)grlElement1);
+						}
+					}
+				} 
+			}		
+//		}
+		return output;
+	}
+
+	public List<ContributionContext> getAllParentContributionContexts(GRLSpecification grlspec,Model inModel,ContributionContext inEvaluationContext){
+		List<ContributionContext> output = new ArrayList<ContributionContext>();
+//		for (GRLSpecification grlspec : inModel.getGRLspecifications()) {
+			for (GRLElement grlElement1 : grlspec.getGrlElements()) {
+				if (grlElement1 instanceof ContributionContext) {
+					for (ContributionContext evaluationContext : ((ContributionContext)grlElement1).getSuperContributionContexts()) {
+						if (evaluationContext.equals(inEvaluationContext)){
+							output.add((ContributionContext)grlElement1);
 						}
 					}
 				} 

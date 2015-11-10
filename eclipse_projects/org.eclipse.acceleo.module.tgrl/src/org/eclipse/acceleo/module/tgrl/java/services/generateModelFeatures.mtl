@@ -17,6 +17,10 @@
 	= invoke('org.eclipse.acceleo.module.tgrl.java.services.ModelFeatures', 'getAllParentStrategis(org.xtext.grl.tgrl.tGRL.GRLSpecification, org.xtext.grl.tgrl.tGRL.Model, org.xtext.grl.tgrl.tGRL.EvaluationStrategy)', Sequence{arg0, arg1, arg2})
 /]
 
+[query public getAllParentContributionContexts(arg0 : GRLSpecification, arg1 : Model, arg2 : ContributionContext) : Sequence(OclAny)
+	= invoke('org.eclipse.acceleo.module.tgrl.java.services.ModelFeatures', 'getAllParentContributionContexts(org.xtext.grl.tgrl.tGRL.GRLSpecification, org.xtext.grl.tgrl.tGRL.Model, org.xtext.grl.tgrl.tGRL.ContributionContext)', Sequence{arg0, arg1, arg2})
+/]
+
 [query public getAllElementLinksFromIntentionalElement(arg0 : IntentionalElement) : Sequence(OclAny)
 	= invoke('org.eclipse.acceleo.module.tgrl.java.services.ModelFeatures', 'getAllElementLinksFromIntentionalElement(org.xtext.grl.tgrl.tGRL.IntentionalElement)', Sequence{arg0})
 /]

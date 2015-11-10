@@ -1,0 +1,14 @@
+grl GRLModel1 {
+	softGoal S1;
+	softGoal S2;
+	contribution C1{
+		
+	}
+	contribution C2{
+		
+	}
+	contribution C3 extends C2{
+		
+	}
+	contributionGroup CG1 includes C3;
+}

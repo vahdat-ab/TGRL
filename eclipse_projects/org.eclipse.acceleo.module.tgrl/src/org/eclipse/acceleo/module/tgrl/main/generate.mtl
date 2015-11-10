@@ -48,7 +48,7 @@
     [/for]
 	[elseif (elementLink.oclIsTypeOf(NormalContribution))]
 	[for (end : ContributionEnd |elementLink.oclAsType(NormalContribution).dest)]	
-	<links xsi:type="grl:Contribution" name="" [comment]description="[description/]"[/comment]  id="[end.id/]L" refs="//@urndef/@specDiagrams.0/@connections.[end.id/]" dest="[end.destName.id/]" src="[elementLink.oclAsType(NormalContribution).src.id/]" [getContributionType(end)/] [getQuantitativeContribution(end)/]/>
+	<links xsi:type="grl:Contribution" name="[name/]" [comment]description="[description/]"[/comment]  id="[end.id/]L" refs="//@urndef/@specDiagrams.0/@connections.[end.id/]" dest="[end.destName.id/]" src="[elementLink.oclAsType(NormalContribution).src.id/]" [getContributionType(end)/] [getQuantitativeContribution(end)/]/>
     [/for]
 	[elseif (elementLink.oclIsTypeOf(NormalDependency))]
 	[for (end : DependencyEnd |elementLink.oclAsType(NormalDependency).dest)]	
@@ -58,9 +58,11 @@
 [/for]
 [comment]*****************************************ElementLink**********************************************[/comment]
 [comment]*****************************************Strategy**********************************************[/comment]
+<groups name="default" id="1" strategies="[getUngroupedStrategies().trim()/]"/>
 [for (strategtGroup : StrategyGroup	 | grlSpec.grlElements->selectByType(StrategyGroup))]
 	<groups name="[HTMLCodeExchange(name.oclAsType(String))/]" id="[id/]" [getIncludedStrategies(strategtGroup)/]/>
 [/for]
+
 [for (eStrategy : EvaluationStrategy	 | grlSpec.grlElements->selectByType(EvaluationStrategy))]
 	<strategies name="[HTMLCodeExchange(name.oclAsType(String))/]" id="[id/]" [getIncludedStrategies(eStrategy)/] [getParentStrategies(grlSpec,aModel,eStrategy)/] [if ( metaData->size()>0 or evaluations->size()>0)]>
 	[PrintMetaData(metaData)/]
@@ -69,7 +71,25 @@
 	[else]/>	
 	[/if]	
 [/for]
+
 [comment]*****************************************Strategy**********************************************[/comment]
+[comment]*****************************************Contribution**********************************************[/comment]
+<contributionGroups name="default" id="2" contribs="[getUngroupedContributions().trim()/]"/>
+[for (contributionGroup : ContributionGroup	 | grlSpec.grlElements->selectByType(ContributionGroup))]
+	<contributionGroups name="[HTMLCodeExchange(name.oclAsType(String))/]" id="[id/]" [getIncludedContributions(contributionGroup)/]/>
+[/for]
+
+[for (contributionC : ContributionContext	 | grlSpec.grlElements->selectByType(ContributionContext))]
+	<contributionContexts name="[HTMLCodeExchange(name.oclAsType(String))/]" id="[id/]" [getIncludedContributions(contributionC)/] [getParentContributions(grlSpec,aModel,contributionC)/] groups="[getContributionGroups(grlSpec,contributionC).trim()/]" [if ( metaData->size()>0 or changes->size()>0)]>
+	[PrintMetaData(metaData)/]
+	[PrintChanges(contributionC)/]	
+	</contributionContexts>
+	[else]/>	
+	[/if]	
+[/for]
+
+[comment]*****************************************Contribution**********************************************[/comment]
+
     <impactModel/>
     <indicatorGroup name="Time" id="7" isRedesignCategory="true"/>
     <indicatorGroup name="Cost" id="8" isRedesignCategory="true"/>

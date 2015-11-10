@@ -1,4 +1,4 @@
-grl www{
+grl GRLModel1 {
 	softGoal SG1;
 	softGoal SG2;
 	strategy S1 {
@@ -8,5 +8,4 @@ grl www{
 	strategy S3;
 	strategy  S4 extends S3;
 	strategyGroup SGG1 includes S4;
-	
 }
