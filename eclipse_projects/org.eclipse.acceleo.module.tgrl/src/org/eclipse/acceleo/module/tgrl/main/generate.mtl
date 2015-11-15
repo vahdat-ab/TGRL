@@ -64,7 +64,7 @@
 [/for]
 
 [for (eStrategy : EvaluationStrategy	 | grlSpec.grlElements->selectByType(EvaluationStrategy))]
-	<strategies name="[HTMLCodeExchange(name.oclAsType(String))/]" id="[id/]" [getIncludedStrategies(eStrategy)/] [getParentStrategies(grlSpec,aModel,eStrategy)/] [if ( metaData->size()>0 or evaluations->size()>0)]>
+	<strategies name="[HTMLCodeExchange(name.oclAsType(String))/]" id="[id/]" [getIncludedStrategies(eStrategy)/] [getParentStrategies(grlSpec,aModel,eStrategy)/]  [if ( metaData->size()>0 or evaluations->size()>0)]>
 	[PrintMetaData(metaData)/]
 	[PrintEvaluation(eStrategy)/]	
 	</strategies>
@@ -89,7 +89,6 @@
 [/for]
 
 [comment]*****************************************Contribution**********************************************[/comment]
-
     <impactModel/>
     <indicatorGroup name="Time" id="7" isRedesignCategory="true"/>
     <indicatorGroup name="Cost" id="8" isRedesignCategory="true"/>

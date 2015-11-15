@@ -253,6 +253,7 @@ toLinks="[for (normalLink : NormalLink | getAllElementLinks(grlSpec,inModel)->se
 [for (ev : Evaluation | aEvaluationStrategy.evaluations)]
 <evaluations evaluation="[getQualitativeValue(ev)/]" intElement="[intentionalElement.id/]">
         <kpiEvalValueSet/>
+		[if (evalRange <> null)]<evalRange start="[evalRange.start/]" end="[evalRange.end/]" step="[evalRange.step/]"/>[/if]
 </evaluations>	
 [/for]
 [/template]

@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalTGRLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_QUALITATIVEVALUE", "RULE_DOUBLE", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'grl'", "'{'", "'}'", "'actor'", "';'", "'name'", "'='", "'importance'", "'description'", "'color'", "'softGoal'", "'decompositionType'", "'goal'", "'task'", "'resource'", "'indicator'", "'belief'", "','", "'dependsOn'", "'contributesTo'", "'decomposedBy'", "'link'", "'strategyGroup'", "'includes'", "'strategy'", "'extends'", "'exceeds'", "'start'", "'end'", "'step'", "'target'", "'threshold'", "'worst'", "'eval'", "'unit'", "'qualeval'", "'qualitativeMapping'", "'contributionGroup'", "'contribution'", "'metadata'", "'comment'", "'indicatorGroup'", "'.'", "'none'", "'high'", "'medium'", "'low'", "'and'", "'or'", "'xor'", "'help'", "'make'", "'somePositive'", "'unknown'", "'someNegative'", "'hurt'", "'break'", "'denied'", "'weaklyDenied'", "'weaklySatisfied'", "'satisfied'", "'conflict'", "'white'", "'black'", "'blue'", "'green'", "'cyan'", "'red'", "'purple'", "'yellow'", "'gray'", "'lightGray'", "'lightBlue'", "'lightGreen'", "'lightCray'", "'lightRed'", "'lightPurple'", "'lightYellow'", "'false'", "'true'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_QUALITATIVEVALUE", "RULE_DOUBLE", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'grl'", "'{'", "'}'", "'actor'", "';'", "'name'", "'='", "'importance'", "'description'", "'color'", "'softGoal'", "'decompositionType'", "'goal'", "'task'", "'resource'", "'indicator'", "'belief'", "','", "'dependsOn'", "'contributesTo'", "'decomposedBy'", "'link'", "'strategyGroup'", "'includes'", "'strategy'", "'extends'", "'exceeds'", "'start'", "'end'", "'step'", "'target'", "'threshold'", "'worst'", "'eval'", "'unit'", "'qualeval'", "'qualitativeMapping'", "'contributionGroup'", "'contribution'", "'metadata'", "'comment'", "'indicatorGroup'", "'.'", "'none'", "'high'", "'medium'", "'low'", "'and'", "'or'", "'xor'", "'help'", "'make'", "'somePositive'", "'unknown'", "'someNegative'", "'hurt'", "'break'", "'weaklyDenied'", "'weaklySatisfied'", "'satisfied'", "'conflict'", "'denied'", "'white'", "'black'", "'blue'", "'green'", "'cyan'", "'red'", "'purple'", "'yellow'", "'gray'", "'lightGray'", "'lightBlue'", "'lightGreen'", "'lightCray'", "'lightRed'", "'lightPurple'", "'lightYellow'", "'false'", "'true'"
     };
     public static final int T__50=50;
     public static final int T__59=59;
@@ -15231,7 +15231,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualitativeLabel"
-    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5947:1: ruleQualitativeLabel returns [Enumerator current=null] : ( (enumLiteral_0= 'denied' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'none' ) ) ;
+    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5947:1: ruleQualitativeLabel returns [Enumerator current=null] : ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'denied' ) ) ;
     public final Enumerator ruleQualitativeLabel() throws RecognitionException {
         Enumerator current = null;
 
@@ -15245,33 +15245,33 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5949:28: ( ( (enumLiteral_0= 'denied' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'none' ) ) )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5950:1: ( (enumLiteral_0= 'denied' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'none' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5949:28: ( ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'denied' ) ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5950:1: ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'denied' ) )
             {
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5950:1: ( (enumLiteral_0= 'denied' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'none' ) )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5950:1: ( (enumLiteral_0= 'none' ) | (enumLiteral_1= 'weaklyDenied' ) | (enumLiteral_2= 'weaklySatisfied' ) | (enumLiteral_3= 'satisfied' ) | (enumLiteral_4= 'conflict' ) | (enumLiteral_5= 'unknown' ) | (enumLiteral_6= 'denied' ) )
             int alt90=7;
             switch ( input.LA(1) ) {
-            case 70:
+            case 56:
                 {
                 alt90=1;
                 }
                 break;
-            case 71:
+            case 70:
                 {
                 alt90=2;
                 }
                 break;
-            case 72:
+            case 71:
                 {
                 alt90=3;
                 }
                 break;
-            case 73:
+            case 72:
                 {
                 alt90=4;
                 }
                 break;
-            case 74:
+            case 73:
                 {
                 alt90=5;
                 }
@@ -15281,7 +15281,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                 alt90=6;
                 }
                 break;
-            case 56:
+            case 74:
                 {
                 alt90=7;
                 }
@@ -15295,15 +15295,15 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
 
             switch (alt90) {
                 case 1 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5950:2: (enumLiteral_0= 'denied' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5950:2: (enumLiteral_0= 'none' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5950:2: (enumLiteral_0= 'denied' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5950:4: enumLiteral_0= 'denied'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5950:2: (enumLiteral_0= 'none' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5950:4: enumLiteral_0= 'none'
                     {
-                    enumLiteral_0=(Token)match(input,70,FOLLOW_70_in_ruleQualitativeLabel14761); 
+                    enumLiteral_0=(Token)match(input,56,FOLLOW_56_in_ruleQualitativeLabel14761); 
 
-                            current = grammarAccess.getQualitativeLabelAccess().getDeniedEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_0, grammarAccess.getQualitativeLabelAccess().getDeniedEnumLiteralDeclaration_0()); 
+                            current = grammarAccess.getQualitativeLabelAccess().getNoneEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_0, grammarAccess.getQualitativeLabelAccess().getNoneEnumLiteralDeclaration_0()); 
                         
 
                     }
@@ -15317,7 +15317,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5956:6: (enumLiteral_1= 'weaklyDenied' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5956:8: enumLiteral_1= 'weaklyDenied'
                     {
-                    enumLiteral_1=(Token)match(input,71,FOLLOW_71_in_ruleQualitativeLabel14778); 
+                    enumLiteral_1=(Token)match(input,70,FOLLOW_70_in_ruleQualitativeLabel14778); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getWeaklyDeniedEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getQualitativeLabelAccess().getWeaklyDeniedEnumLiteralDeclaration_1()); 
@@ -15334,7 +15334,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5962:6: (enumLiteral_2= 'weaklySatisfied' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5962:8: enumLiteral_2= 'weaklySatisfied'
                     {
-                    enumLiteral_2=(Token)match(input,72,FOLLOW_72_in_ruleQualitativeLabel14795); 
+                    enumLiteral_2=(Token)match(input,71,FOLLOW_71_in_ruleQualitativeLabel14795); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getWeaklySatisfiedEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getQualitativeLabelAccess().getWeaklySatisfiedEnumLiteralDeclaration_2()); 
@@ -15351,7 +15351,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5968:6: (enumLiteral_3= 'satisfied' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5968:8: enumLiteral_3= 'satisfied'
                     {
-                    enumLiteral_3=(Token)match(input,73,FOLLOW_73_in_ruleQualitativeLabel14812); 
+                    enumLiteral_3=(Token)match(input,72,FOLLOW_72_in_ruleQualitativeLabel14812); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getSatisfiedEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getQualitativeLabelAccess().getSatisfiedEnumLiteralDeclaration_3()); 
@@ -15368,7 +15368,7 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5974:6: (enumLiteral_4= 'conflict' )
                     // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5974:8: enumLiteral_4= 'conflict'
                     {
-                    enumLiteral_4=(Token)match(input,74,FOLLOW_74_in_ruleQualitativeLabel14829); 
+                    enumLiteral_4=(Token)match(input,73,FOLLOW_73_in_ruleQualitativeLabel14829); 
 
                             current = grammarAccess.getQualitativeLabelAccess().getConflictEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getQualitativeLabelAccess().getConflictEnumLiteralDeclaration_4()); 
@@ -15397,15 +15397,15 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5986:6: (enumLiteral_6= 'none' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5986:6: (enumLiteral_6= 'denied' )
                     {
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5986:6: (enumLiteral_6= 'none' )
-                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5986:8: enumLiteral_6= 'none'
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5986:6: (enumLiteral_6= 'denied' )
+                    // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:5986:8: enumLiteral_6= 'denied'
                     {
-                    enumLiteral_6=(Token)match(input,56,FOLLOW_56_in_ruleQualitativeLabel14863); 
+                    enumLiteral_6=(Token)match(input,74,FOLLOW_74_in_ruleQualitativeLabel14863); 
 
-                            current = grammarAccess.getQualitativeLabelAccess().getNoneEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_6, grammarAccess.getQualitativeLabelAccess().getNoneEnumLiteralDeclaration_6()); 
+                            current = grammarAccess.getQualitativeLabelAccess().getDeniedEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_6, grammarAccess.getQualitativeLabelAccess().getDeniedEnumLiteralDeclaration_6()); 
                         
 
                     }
@@ -16958,13 +16958,13 @@ public class InternalTGRLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_67_in_ruleContributionType14682 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_68_in_ruleContributionType14699 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_69_in_ruleContributionType14716 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_ruleQualitativeLabel14761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_ruleQualitativeLabel14778 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_72_in_ruleQualitativeLabel14795 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_ruleQualitativeLabel14812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_ruleQualitativeLabel14829 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_ruleQualitativeLabel14761 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_ruleQualitativeLabel14778 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_ruleQualitativeLabel14795 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_ruleQualitativeLabel14812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_ruleQualitativeLabel14829 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_66_in_ruleQualitativeLabel14846 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_ruleQualitativeLabel14863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_ruleQualitativeLabel14863 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_75_in_ruleColor14908 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_76_in_ruleColor14925 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_77_in_ruleColor14942 = new BitSet(new long[]{0x0000000000000002L});

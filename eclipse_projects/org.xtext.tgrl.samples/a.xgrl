@@ -1,0 +1,20 @@
+grl A{
+	softGoal S1{
+		decompositionType =xor;
+	}
+	softGoal S2;
+	softGoal S3;
+	S1 decomposedBy S2,S3;
+	strategy ES {
+//		S1 = {
+//			start = 10;
+//			end = 100;
+//			step =5;
+//		}
+		S1=100;
+		S2 = 50;
+		S3 = 25;
+		
+	}
+	strategyGroup SG includes ES;
+}

@@ -3865,8 +3865,8 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	public class QualitativeLabelElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "QualitativeLabel");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cDeniedEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cDeniedDeniedKeyword_0_0 = (Keyword)cDeniedEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cNoneEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cNoneNoneKeyword_0_0 = (Keyword)cNoneEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cWeaklyDeniedEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cWeaklyDeniedWeaklyDeniedKeyword_1_0 = (Keyword)cWeaklyDeniedEnumLiteralDeclaration_1.eContents().get(0);
 		private final EnumLiteralDeclaration cWeaklySatisfiedEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
@@ -3877,21 +3877,21 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cConflictConflictKeyword_4_0 = (Keyword)cConflictEnumLiteralDeclaration_4.eContents().get(0);
 		private final EnumLiteralDeclaration cUnknownEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
 		private final Keyword cUnknownUnknownKeyword_5_0 = (Keyword)cUnknownEnumLiteralDeclaration_5.eContents().get(0);
-		private final EnumLiteralDeclaration cNoneEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
-		private final Keyword cNoneNoneKeyword_6_0 = (Keyword)cNoneEnumLiteralDeclaration_6.eContents().get(0);
+		private final EnumLiteralDeclaration cDeniedEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
+		private final Keyword cDeniedDeniedKeyword_6_0 = (Keyword)cDeniedEnumLiteralDeclaration_6.eContents().get(0);
 		
 		//enum QualitativeLabel:
-		//	denied | weaklyDenied | weaklySatisfied | satisfied | conflict | unknown | none;
+		//	none | weaklyDenied | weaklySatisfied | satisfied | conflict | unknown | denied;
 		public EnumRule getRule() { return rule; }
 
-		//denied | weaklyDenied | weaklySatisfied | satisfied | conflict | unknown | none
+		//none | weaklyDenied | weaklySatisfied | satisfied | conflict | unknown | denied
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//denied
-		public EnumLiteralDeclaration getDeniedEnumLiteralDeclaration_0() { return cDeniedEnumLiteralDeclaration_0; }
+		//none
+		public EnumLiteralDeclaration getNoneEnumLiteralDeclaration_0() { return cNoneEnumLiteralDeclaration_0; }
 
-		//"denied"
-		public Keyword getDeniedDeniedKeyword_0_0() { return cDeniedDeniedKeyword_0_0; }
+		//"none"
+		public Keyword getNoneNoneKeyword_0_0() { return cNoneNoneKeyword_0_0; }
 
 		//weaklyDenied
 		public EnumLiteralDeclaration getWeaklyDeniedEnumLiteralDeclaration_1() { return cWeaklyDeniedEnumLiteralDeclaration_1; }
@@ -3923,11 +3923,11 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 		//"unknown"
 		public Keyword getUnknownUnknownKeyword_5_0() { return cUnknownUnknownKeyword_5_0; }
 
-		//none
-		public EnumLiteralDeclaration getNoneEnumLiteralDeclaration_6() { return cNoneEnumLiteralDeclaration_6; }
+		//denied
+		public EnumLiteralDeclaration getDeniedEnumLiteralDeclaration_6() { return cDeniedEnumLiteralDeclaration_6; }
 
-		//"none"
-		public Keyword getNoneNoneKeyword_6_0() { return cNoneNoneKeyword_6_0; }
+		//"denied"
+		public Keyword getDeniedDeniedKeyword_6_0() { return cDeniedDeniedKeyword_6_0; }
 	}
 
 	public class ColorElements extends AbstractEnumRuleElementFinder {
@@ -4927,7 +4927,7 @@ public class TGRLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum QualitativeLabel:
-	//	denied | weaklyDenied | weaklySatisfied | satisfied | conflict | unknown | none;
+	//	none | weaklyDenied | weaklySatisfied | satisfied | conflict | unknown | denied;
 	public QualitativeLabelElements getQualitativeLabelAccess() {
 		return unknownRuleQualitativeLabel;
 	}

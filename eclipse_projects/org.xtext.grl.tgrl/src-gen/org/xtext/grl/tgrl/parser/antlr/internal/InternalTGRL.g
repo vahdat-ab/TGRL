@@ -5947,10 +5947,10 @@ ruleContributionType returns [Enumerator current=null]
 ruleQualitativeLabel returns [Enumerator current=null] 
     @init { enterRule(); }
     @after { leaveRule(); }:
-((	enumLiteral_0='denied' 
+((	enumLiteral_0='none' 
 	{
-        $current = grammarAccess.getQualitativeLabelAccess().getDeniedEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_0, grammarAccess.getQualitativeLabelAccess().getDeniedEnumLiteralDeclaration_0()); 
+        $current = grammarAccess.getQualitativeLabelAccess().getNoneEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getQualitativeLabelAccess().getNoneEnumLiteralDeclaration_0()); 
     }
 )
     |(	enumLiteral_1='weaklyDenied' 
@@ -5983,10 +5983,10 @@ ruleQualitativeLabel returns [Enumerator current=null]
         newLeafNode(enumLiteral_5, grammarAccess.getQualitativeLabelAccess().getUnknownEnumLiteralDeclaration_5()); 
     }
 )
-    |(	enumLiteral_6='none' 
+    |(	enumLiteral_6='denied' 
 	{
-        $current = grammarAccess.getQualitativeLabelAccess().getNoneEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_6, grammarAccess.getQualitativeLabelAccess().getNoneEnumLiteralDeclaration_6()); 
+        $current = grammarAccess.getQualitativeLabelAccess().getDeniedEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_6, grammarAccess.getQualitativeLabelAccess().getDeniedEnumLiteralDeclaration_6()); 
     }
 ));
 

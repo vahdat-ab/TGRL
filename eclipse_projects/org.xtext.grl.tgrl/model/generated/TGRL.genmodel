@@ -28,13 +28,13 @@
       <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//ContributionType/break"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="TGRL.ecore#//QualitativeLabel">
-      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/denied"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/none"/>
       <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/weaklyDenied"/>
       <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/weaklySatisfied"/>
       <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/satisfied"/>
       <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/conflict"/>
       <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/unknown"/>
-      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/none"/>
+      <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//QualitativeLabel/denied"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="TGRL.ecore#//Color">
       <genEnumLiterals ecoreEnumLiteral="TGRL.ecore#//Color/white"/>

@@ -57,7 +57,7 @@ public class EvaluationImpl extends GRLElementImpl implements Evaluation
    * @generated
    * @ordered
    */
-  protected static final QualitativeLabel QUALITATIVE_EVALUATION_EDEFAULT = QualitativeLabel.DENIED;
+  protected static final QualitativeLabel QUALITATIVE_EVALUATION_EDEFAULT = QualitativeLabel.NONE;
 
   /**
    * The cached value of the '{@link #getQualitativeEvaluation() <em>Qualitative Evaluation</em>}' attribute.

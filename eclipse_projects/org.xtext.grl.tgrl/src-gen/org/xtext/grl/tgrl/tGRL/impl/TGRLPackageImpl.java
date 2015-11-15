@@ -2448,13 +2448,13 @@ public class TGRLPackageImpl extends EPackageImpl implements TGRLPackage
     addEEnumLiteral(contributionTypeEEnum, ContributionType.BREAK);
 
     initEEnum(qualitativeLabelEEnum, QualitativeLabel.class, "QualitativeLabel");
-    addEEnumLiteral(qualitativeLabelEEnum, QualitativeLabel.DENIED);
+    addEEnumLiteral(qualitativeLabelEEnum, QualitativeLabel.NONE);
     addEEnumLiteral(qualitativeLabelEEnum, QualitativeLabel.WEAKLY_DENIED);
     addEEnumLiteral(qualitativeLabelEEnum, QualitativeLabel.WEAKLY_SATISFIED);
     addEEnumLiteral(qualitativeLabelEEnum, QualitativeLabel.SATISFIED);
     addEEnumLiteral(qualitativeLabelEEnum, QualitativeLabel.CONFLICT);
     addEEnumLiteral(qualitativeLabelEEnum, QualitativeLabel.UNKNOWN);
-    addEEnumLiteral(qualitativeLabelEEnum, QualitativeLabel.NONE);
+    addEEnumLiteral(qualitativeLabelEEnum, QualitativeLabel.DENIED);
 
     initEEnum(colorEEnum, Color.class, "Color");
     addEEnumLiteral(colorEEnum, Color.WHITE);

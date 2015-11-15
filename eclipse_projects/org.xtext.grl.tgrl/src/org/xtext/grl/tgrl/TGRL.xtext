@@ -448,9 +448,9 @@ enum ContributionType:
 ;
 
 enum QualitativeLabel:
-	denied | weaklyDenied |
+	none | weaklyDenied |
 	weaklySatisfied  | satisfied |
-	conflict | unknown | none
+	conflict | unknown | denied 
 ;
 enum Color:
 	white|black|blue|green|cyan|red|purple|yellow|gray|lightGray|lightBlue|lightGreen|lightCray|lightRed|lightPurple|lightYellow

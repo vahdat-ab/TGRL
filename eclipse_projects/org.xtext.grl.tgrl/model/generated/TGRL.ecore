@@ -226,13 +226,13 @@
     <eLiterals name="break" value="6" literal="break"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="QualitativeLabel">
-    <eLiterals name="denied" literal="denied"/>
+    <eLiterals name="none" literal="none"/>
     <eLiterals name="weaklyDenied" value="1" literal="weaklyDenied"/>
     <eLiterals name="weaklySatisfied" value="2" literal="weaklySatisfied"/>
     <eLiterals name="satisfied" value="3" literal="satisfied"/>
     <eLiterals name="conflict" value="4" literal="conflict"/>
     <eLiterals name="unknown" value="5" literal="unknown"/>
-    <eLiterals name="none" value="6" literal="none"/>
+    <eLiterals name="denied" value="6" literal="denied"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Color">
     <eLiterals name="white" literal="white"/>

@@ -1312,10 +1312,10 @@ public class InternalTGRLLexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:68:7: ( 'denied' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:68:9: 'denied'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:68:7: ( 'weaklyDenied' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:68:9: 'weaklyDenied'
             {
-            match("denied"); 
+            match("weaklyDenied"); 
 
 
             }
@@ -1333,10 +1333,10 @@ public class InternalTGRLLexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:69:7: ( 'weaklyDenied' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:69:9: 'weaklyDenied'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:69:7: ( 'weaklySatisfied' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:69:9: 'weaklySatisfied'
             {
-            match("weaklyDenied"); 
+            match("weaklySatisfied"); 
 
 
             }
@@ -1354,10 +1354,10 @@ public class InternalTGRLLexer extends Lexer {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:70:7: ( 'weaklySatisfied' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:70:9: 'weaklySatisfied'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:70:7: ( 'satisfied' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:70:9: 'satisfied'
             {
-            match("weaklySatisfied"); 
+            match("satisfied"); 
 
 
             }
@@ -1375,10 +1375,10 @@ public class InternalTGRLLexer extends Lexer {
         try {
             int _type = T__73;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:71:7: ( 'satisfied' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:71:9: 'satisfied'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:71:7: ( 'conflict' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:71:9: 'conflict'
             {
-            match("satisfied"); 
+            match("conflict"); 
 
 
             }
@@ -1396,10 +1396,10 @@ public class InternalTGRLLexer extends Lexer {
         try {
             int _type = T__74;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:72:7: ( 'conflict' )
-            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:72:9: 'conflict'
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:72:7: ( 'denied' )
+            // ../org.xtext.grl.tgrl/src-gen/org/xtext/grl/tgrl/parser/antlr/internal/InternalTGRL.g:72:9: 'denied'
             {
-            match("conflict"); 
+            match("denied"); 
 
 
             }
@@ -3208,16 +3208,16 @@ public class InternalTGRLLexer extends Lexer {
         "\1\36\1\uffff\1\16\2\uffff\1\120\4\uffff\1\101\1\26\3\uffff\1\42"+
         "\3\uffff\1\43\5\uffff\1\64\1\55\1\63\1\70\3\uffff\1\102\1\4\7\uffff"+
         "\1\12\7\uffff\1\34\5\uffff\1\71\1\100\10\uffff\1\41\1\uffff\1\77"+
-        "\7\uffff\1\117\6\uffff\1\72\10\uffff\1\37\2\uffff\1\21\16\uffff"+
+        "\7\uffff\1\117\6\uffff\1\76\10\uffff\1\37\2\uffff\1\21\16\uffff"+
         "\1\56\1\105\1\106\10\uffff\1\51\16\uffff\1\32\1\33\2\uffff\1\66"+
-        "\5\uffff\1\30\5\uffff\1\76\1\13\3\uffff\1\31\2\uffff\1\17\4\uffff"+
+        "\5\uffff\1\30\5\uffff\1\75\1\13\3\uffff\1\31\2\uffff\1\17\4\uffff"+
         "\1\114\4\uffff\1\44\1\uffff\1\50\2\uffff\1\20\3\uffff\1\23\5\uffff"+
-        "\1\75\1\40\1\110\1\uffff\1\111\1\113\5\uffff\1\10\11\uffff\1\112"+
+        "\1\74\1\40\1\110\1\uffff\1\111\1\113\5\uffff\1\10\11\uffff\1\112"+
         "\6\uffff\1\11\7\uffff\1\115\1\116\5\uffff\1\25\2\uffff\1\47\1\65"+
-        "\1\67\1\uffff\1\73\4\uffff\1\24\1\uffff\1\27\2\uffff\1\52\6\uffff"+
-        "\1\74\4\uffff\1\14\1\46\1\uffff\1\45";
+        "\1\67\1\uffff\1\72\4\uffff\1\24\1\uffff\1\27\2\uffff\1\52\6\uffff"+
+        "\1\73\4\uffff\1\14\1\46\1\uffff\1\45";
     static final String DFA16_specialS =
-        "\1\2\41\uffff\1\0\1\1\u01cf\uffff}>";
+        "\1\0\41\uffff\1\1\1\2\u01cf\uffff}>";
     static final String[] DFA16_transitionS = {
             "\11\46\2\45\2\46\1\45\22\46\1\45\1\46\1\42\4\46\1\43\3\46\1"+
             "\36\1\17\1\36\1\26\1\44\1\37\1\35\10\37\1\46\1\5\1\46\1\7\3"+
@@ -3765,26 +3765,6 @@ public class InternalTGRLLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA16_34 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA16_34>='\u0000' && LA16_34<='\uFFFF')) ) {s = 91;}
-
-                        else s = 38;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA16_35 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA16_35>='\u0000' && LA16_35<='\uFFFF')) ) {s = 91;}
-
-                        else s = 38;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA16_0 = input.LA(1);
 
                         s = -1;
@@ -3863,6 +3843,26 @@ public class InternalTGRLLexer extends Lexer {
                         else if ( ((LA16_0>='\t' && LA16_0<='\n')||LA16_0=='\r'||LA16_0==' ') ) {s = 37;}
 
                         else if ( ((LA16_0>='\u0000' && LA16_0<='\b')||(LA16_0>='\u000B' && LA16_0<='\f')||(LA16_0>='\u000E' && LA16_0<='\u001F')||LA16_0=='!'||(LA16_0>='#' && LA16_0<='&')||(LA16_0>='(' && LA16_0<='*')||LA16_0==':'||LA16_0=='<'||(LA16_0>='>' && LA16_0<='@')||(LA16_0>='[' && LA16_0<=']')||LA16_0=='`'||LA16_0=='|'||(LA16_0>='~' && LA16_0<='\uFFFF')) ) {s = 38;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA16_34 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA16_34>='\u0000' && LA16_34<='\uFFFF')) ) {s = 91;}
+
+                        else s = 38;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA16_35 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA16_35>='\u0000' && LA16_35<='\uFFFF')) ) {s = 91;}
+
+                        else s = 38;
 
                         if ( s>=0 ) return s;
                         break;

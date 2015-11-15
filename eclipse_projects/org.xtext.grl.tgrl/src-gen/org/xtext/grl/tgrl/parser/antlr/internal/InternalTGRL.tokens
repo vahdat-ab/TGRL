@@ -10,14 +10,14 @@
 'break'=69
 'color'=22
 'comment'=53
-'conflict'=74
+'conflict'=73
 'contributesTo'=32
 'contribution'=51
 'contributionGroup'=50
 'cyan'=79
 'decomposedBy'=33
 'decompositionType'=24
-'denied'=70
+'denied'=74
 'dependsOn'=31
 'description'=21
 'end'=41
@@ -56,7 +56,7 @@
 'qualitativeMapping'=49
 'red'=80
 'resource'=27
-'satisfied'=73
+'satisfied'=72
 'softGoal'=23
 'someNegative'=67
 'somePositive'=65
@@ -70,8 +70,8 @@
 'true'=92
 'unit'=47
 'unknown'=66
-'weaklyDenied'=71
-'weaklySatisfied'=72
+'weaklyDenied'=70
+'weaklySatisfied'=71
 'white'=75
 'worst'=45
 'xor'=62

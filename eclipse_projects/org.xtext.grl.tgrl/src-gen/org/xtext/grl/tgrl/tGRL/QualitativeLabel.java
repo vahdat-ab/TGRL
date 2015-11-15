@@ -20,14 +20,14 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum QualitativeLabel implements Enumerator
 {
   /**
-   * The '<em><b>Denied</b></em>' literal object.
+   * The '<em><b>None</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #DENIED_VALUE
+   * @see #NONE_VALUE
    * @generated
    * @ordered
    */
-  DENIED(0, "denied", "denied"),
+  NONE(0, "none", "none"),
 
   /**
    * The '<em><b>Weakly Denied</b></em>' literal object.
@@ -80,29 +80,29 @@ public enum QualitativeLabel implements Enumerator
   UNKNOWN(5, "unknown", "unknown"),
 
   /**
-   * The '<em><b>None</b></em>' literal object.
+   * The '<em><b>Denied</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #NONE_VALUE
+   * @see #DENIED_VALUE
    * @generated
    * @ordered
    */
-  NONE(6, "none", "none");
+  DENIED(6, "denied", "denied");
 
   /**
-   * The '<em><b>Denied</b></em>' literal value.
+   * The '<em><b>None</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>Denied</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>None</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #DENIED
-   * @model name="denied"
+   * @see #NONE
+   * @model name="none"
    * @generated
    * @ordered
    */
-  public static final int DENIED_VALUE = 0;
+  public static final int NONE_VALUE = 0;
 
   /**
    * The '<em><b>Weakly Denied</b></em>' literal value.
@@ -180,19 +180,19 @@ public enum QualitativeLabel implements Enumerator
   public static final int UNKNOWN_VALUE = 5;
 
   /**
-   * The '<em><b>None</b></em>' literal value.
+   * The '<em><b>Denied</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of '<em><b>None</b></em>' literal object isn't clear,
+   * If the meaning of '<em><b>Denied</b></em>' literal object isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @see #NONE
-   * @model name="none"
+   * @see #DENIED
+   * @model name="denied"
    * @generated
    * @ordered
    */
-  public static final int NONE_VALUE = 6;
+  public static final int DENIED_VALUE = 6;
 
   /**
    * An array of all the '<em><b>Qualitative Label</b></em>' enumerators.
@@ -203,13 +203,13 @@ public enum QualitativeLabel implements Enumerator
   private static final QualitativeLabel[] VALUES_ARRAY =
     new QualitativeLabel[]
     {
-      DENIED,
+      NONE,
       WEAKLY_DENIED,
       WEAKLY_SATISFIED,
       SATISFIED,
       CONFLICT,
       UNKNOWN,
-      NONE,
+      DENIED,
     };
 
   /**
@@ -268,13 +268,13 @@ public enum QualitativeLabel implements Enumerator
   {
     switch (value)
     {
-      case DENIED_VALUE: return DENIED;
+      case NONE_VALUE: return NONE;
       case WEAKLY_DENIED_VALUE: return WEAKLY_DENIED;
       case WEAKLY_SATISFIED_VALUE: return WEAKLY_SATISFIED;
       case SATISFIED_VALUE: return SATISFIED;
       case CONFLICT_VALUE: return CONFLICT;
       case UNKNOWN_VALUE: return UNKNOWN;
-      case NONE_VALUE: return NONE;
+      case DENIED_VALUE: return DENIED;
     }
     return null;
   }
