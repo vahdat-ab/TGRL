@@ -11,7 +11,7 @@ Acceleo: https://www.eclipse.org/acceleo/
 
 You can watch the full tutorial [here](https://youtu.be/VSAMiAW1Rks) regarding how to install *TGRL* and required plugins, create a simple textual model, and generate *jUCMNav* graphical model.
 
-Information about the tools and reseach based on TGRL can be find [here](https://github.com/vahdat-ab/TGRL/wiki/Tools-and-Research-based-on-TGRL)
+Information about the tools and reseach based on TGRL can be found [here](https://github.com/vahdat-ab/TGRL/wiki/Tools-and-Research-based-on-TGRL)
 
 This project has started at the University of Ottawa by:
 Mr. Vahdat Abdelzad, Prof. Daniel Amyot, and Prof. Timothy C. Lethbridge.
