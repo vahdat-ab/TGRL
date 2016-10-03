@@ -9,7 +9,7 @@ The plugins need two packages including *Xtext* and *Acceleo* so as to be able t
 Xtext:  https://www.eclipse.org/Xtext/   
 Acceleo: https://www.eclipse.org/acceleo/
 
-You can watch the full tutorial [here](https://youtu.be/VSAMiAW1Rks) regarding how to install *TGRL* and required plugins, create a simple textual model, and generate *jUCMNav* graphical model.
+You can watch the full tutorial [here](https://youtu.be/VSAMiAW1Rks) regarding how to install *TGRL* and required plugins, create a simple textual model, and generate a *jUCMNav* graphical model.
 
 Information about the tools and reseach based on TGRL can be found [here](https://github.com/vahdat-ab/TGRL/wiki/Tools-and-Research-based-on-TGRL)
 
